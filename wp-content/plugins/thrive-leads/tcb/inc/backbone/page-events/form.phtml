@@ -1,0 +1,55 @@
+<# if ( this.can_add_events() ) { #>
+<div class="form-state state-default tcb-text-right" style="display: none">
+	<button type="button" class="tve-button continue medium green click" data-fn="add_event">
+		<?php echo __( 'Add event', 'thrive-cb' ) ?>
+	</button>
+</div>
+<# } #>
+<# if ( this.model ) { #>
+	<div class="form-state state-trigger" style="display: none">
+		<div class="tcb-subtitle-steps">
+			<span class="subtitle step"><?php echo __( 'Step 1:', 'thrive-cb' ) ?></span>
+			<span class="subtitle"><?php echo __( 'Select your Trigger', 'thrive-cb' ) ?></span>
+		</div>
+		<div class="control-grid left-align" id="form-triggers">
+			<# _.each( this.get_triggers(), function( trigger, key ) { #>
+				<div class="evt-trigger click form-select-item<#=this.model.t == key ? ' selected' : ''#>" data-fn="item_select" data-field="t" data-item="<#=key#>">
+					<#= TVE.icon( trigger.icon ) #>
+					<div class="trigger-name"><#= trigger.label #></div>
+					<span class="tcb-modal-check">
+						<?php tcb_icon( 'check-regular' ); ?>
+					</span>
+				</div>
+			<# }, this ) #>
+		</div>
+		<div id="trigger-settings" class=""></div>
+		<div class="control-grid form-step-action tcb-modal-footer p-0 mt-20">
+			<button type="button" class="tcb-left tve-button text-only click pl-0" data-fn="trigger_cancel"><?php echo __( 'Cancel', 'thrive-cb' ) ?></button>
+			<button type="button" style="display: none" class="tcb-right tve-button continue medium green click white-text" data-fn="trigger_continue"><?php echo __( 'Continue', 'thrive-cb' ) ?></button>
+		</div>
+
+	</div>
+	<div class="form-state state-action" style="display: none">
+		<div class="tcb-subtitle-steps">
+			<span class="subtitle step"><?php echo __( 'Step 2:', 'thrive-cb' ) ?></span>
+			<span class="subtitle"><?php echo __( 'Set the action for the trigger', 'thrive-cb' ) ?></span>
+		</div>
+
+		<div class="control-grid left-align" id="form-actions">
+			<# _.each( this.get_actions(), function( action, key ) { #>
+				<div class="item-box evt-trigger click tcb-text-center form-select-item<#=this.model.a == key ? ' selected' : ''#><#= action.disabled ? ' tve-disabled' : '' #>" data-fn="item_select" data-field="a" data-item="<#=key#>"<#= action.disabled ? ' title="<?php echo __( 'This is only available if you have Thrive Leads installed and activated', 'thrive-cb' ) ?>"' : ''#>>
+					<#= TVE.icon( action.icon ) #>
+					<div class="trigger-name"><#= action.label #></div>
+					<span class="tcb-modal-check">
+						<?php tcb_icon( 'check-regular' ); ?>
+					</span>
+				</div>
+			<# }, this ) #>
+		</div>
+		<div id="action-settings"></div>
+		<div class="control-grid form-step-action tcb-modal-footer p-0 mt-20">
+			<button type="button" class="tcb-left tve-button text-only click pl-0" data-fn="action_cancel"><?php echo __( 'Back', 'thrive-cb' ) ?></button>
+			<button type="button" style="display: none" class="tcb-right tve-button continue medium click tcb-modal-save" data-fn="action_continue"><?php echo __( 'Save', 'thrive-cb' ) ?></button>
+		</div>
+	</div>
+<# } #>

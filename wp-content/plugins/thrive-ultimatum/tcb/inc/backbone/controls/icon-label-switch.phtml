@@ -1,0 +1,13 @@
+	<# if ( model.get( 'icon' ) ) { #>
+			<span class="click" data-fn="trigger_click"><#= model.get('icon') #></span>
+	<# } #>
+		<span class="click switch-label" data-fn="trigger_click"><#= model.get('device') #></span>
+		<div class="tcb-switch">
+			<label>
+				<# if ( model.get('switch_label') ) { #>
+					<span class="tcb-device-switch-label"><?php echo __( 'Visible', 'thrive-cb' ); ?></span>
+				<# } #>
+				<input class="change" data-fn="clicked" type="checkbox" checked>
+				<span class="tcb-lever"></span>
+			</label>
+		</div>

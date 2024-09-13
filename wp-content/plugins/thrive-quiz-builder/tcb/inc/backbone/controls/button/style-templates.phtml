@@ -1,0 +1,10 @@
+<div class="button-category-label full-width"><?php echo strtoupper( __( 'Saved Templates', 'thrive-cb' ) ); ?></div>
+<style><#=media_css #></style>
+<# _.each( items, function ( template, k ) { #>
+<div class="button-item template-button-item">
+	<div class="tve-select-item click" data-value="tcb-saved-button-template-<#=template['id'] #>" data-fn="select">
+		<#=template['content'].replace('href', 'data-href').replace('tcb-button-icon', 'tcb-button-icon tcb-hidden') #>
+		<p><#=template.label#></p>
+	</div>
+</div>
+<# }); #>

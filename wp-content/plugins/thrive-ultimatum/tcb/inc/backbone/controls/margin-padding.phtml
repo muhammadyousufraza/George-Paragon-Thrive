@@ -1,0 +1,55 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-visual-editor
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+<div class="layout-title-holder">
+	<div class="control-grid">
+		<span class="title">
+			<?php echo __( 'Margins & Padding', 'thrive-cb' ); ?>
+		</span>
+		<span class="sub-title">
+			<?php echo __( '(Click + Drag)', 'thrive-cb' ); ?>
+		</span>
+	</div>
+</div>
+
+<div class="wrapper-trapez">
+	<div class="trapez mare sus handle reverse top" data-dir="top" data-style="margin"></div>
+	<input class="tve-input top change input keyup" data-fn-keyup="keyup" data-side="top" data-fn="change" data-fn-input="change" value="0" data-style="margin" tabindex="900">
+	<div class="trapez mare jos handle bottom" data-dir="bottom" data-style="margin"></div>
+	<input class="tve-input bottom change input keyup" data-fn-keyup="keyup" data-side="bottom" data-fn="change" data-fn-input="change" value="0" data-style="margin" tabindex="902">
+	<div class="trapez mare stanga handle reverse left" data-dir="left" data-style="margin"></div>
+	<input class="tve-input left change input keyup" data-fn-keyup="keyup" data-side="left" data-fn="change" data-fn-input="change" value="0" data-style="margin" tabindex="903">
+	<div class="trapez mare dreapta handle right" data-dir="right" data-style="margin"></div>
+	<input class="tve-input right change input keyup" data-fn-keyup="keyup" data-side="right" data-fn="change" data-fn-input="change" value="0" data-style="margin" tabindex="901">
+	<div class="trapez mic sus handle top" data-dir="top" data-style="padding"></div>
+	<input class="tve-input top change input keyup" data-fn-keyup="keyup" data-side="top" data-fn="change" data-fn-input="change" value="0" data-style="padding" tabindex="904">
+	<div class="trapez mic jos handle reverse bottom" data-dir="bottom" data-style="padding"></div>
+	<input class="tve-input bottom change input keyup" data-fn-keyup="keyup" data-side="bottom" data-fn="change" data-fn-input="change" value="0" data-style="padding" tabindex="906">
+	<div class="trapez mic stanga handle left" data-dir="left" data-style="padding"></div>
+	<input class="tve-input left change input keyup" data-fn-keyup="keyup" data-side="left" data-fn="change" data-fn-input="change" value="0" data-style="padding" tabindex="907">
+	<div class="trapez mic dreapta handle reverse right" data-dir="right" data-style="padding"></div>
+	<input class="tve-input right change input keyup" data-fn-keyup="keyup" data-side="right" data-fn="change" data-fn-input="change" value="0" data-style="padding" tabindex="905">
+	<div class="middle-control flex-mid">
+		<div class="click link flex-mid" data-fn="linkInput">
+			<?php tcb_icon( 'unlock-light' ); ?>
+			<?php tcb_icon( 'lock-light' ); ?>
+		</div>
+		<span class="input-um click" tabindex="910" data-fn="toggleUm">px</span>
+		<div class="um-wrapper">
+			<span class="tve-input-um mousedown active" data-fn="umChange" data-value="px">px</span>
+			<span class="tve-input-um mousedown" data-fn="umChange" data-value="em">em</span>
+			<span class="tve-input-um mousedown" data-fn="umChange" data-value="%">%</span>
+		</div>
+	</div>
+</div>
+<div class="info-text orange error-details">
+	<p class="m-0 p-0"><?php echo __( 'The value entered is not valid. Please try again.', 'thrive-cb' ); ?></p>
+</div>

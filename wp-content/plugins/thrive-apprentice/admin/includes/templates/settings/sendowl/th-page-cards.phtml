@@ -1,0 +1,21 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-university
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div class="tva-colored-card tva-thankyou-type-static click" data-type="static" data-fn="click">
+	<?php tva_get_svg_icon( 'tyou-one' ); ?>
+	<p><?php echo __( 'Show a static confirmation page for all products', 'thrive-apprentice' ) ?></p>
+</div>
+
+<div class="tva-colored-card tva-thankyou-type-redirect click" data-type="redirect" data-fn="click">
+	<?php tva_get_svg_icon( 'tyou-three' ); ?>
+	<p><?php echo __( 'Redirect the user to the start of the purchased course', 'thrive-apprentice' ) ?></p>
+</div>

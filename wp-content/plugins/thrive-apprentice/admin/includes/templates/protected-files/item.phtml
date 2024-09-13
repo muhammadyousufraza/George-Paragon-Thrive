@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<span class="click" data-fn="editFile"><#= this.getFileIcon() #></span>
+<div class="tva-flex tva-flex-column tva-flex-one click" data-fn="editFile">
+	<span><#= this.model.get('post_title') #></span>
+	<div class="tva-flex tva-protected-file-item-details">
+		<span><#= TVA.Utils.ucFirst(this.model.get('file_type')) #>&nbsp;<?php echo __( 'File', 'thrive-apprentice' ); ?></span>
+		<span>
+			<# if(this.model.getNumberOfProducts() > 0){ #>
+			<?php echo __( 'Included in', 'thrive-apprentice' ); ?>&nbsp;<div class="tva-included-counter"></div>
+			<# }else{ #>
+			<?php echo sprintf( __( 'Not included in any product. This file will only be accessible if you <a href="javascript:void(0);" %s>assign it to a product</a> or when added as resources in lessons.', 'thrive-apprentice' ), 'class="click"' ); ?>
+			<# } #>
+		</span>
+		<# if(this.model.getNumberOfProducts() > 0){ #>
+		<span><?php echo __( 'Downloaded', 'thrive-apprentice' ); ?>&nbsp;<div class="tva-download-counter"></div></span>
+		<# } #>
+	</div>
+</div>
+<div class="tva-flex tva-protected-file-item-action-buttons">
+	<a href="javascript:void(0);" class="click" data-fn="shareFile">
+		<?php tva_get_svg_icon( 'share' ); ?>
+	</a>
+	<a href="<#= this.model.get('admin_download') #>" target="_blank">
+		<?php tva_get_svg_icon( 'download' ); ?>
+	</a>
+	<a href="javascript:void(0);" class="click" data-fn="editFile">
+		<?php tva_get_svg_icon( 'pencil-custom' ); ?>
+	</a>
+	<a href="javascript:void(0);" class="click" data-fn="removeFile">
+		<?php tva_get_svg_icon( 'trash-1' ); ?>
+	</a>
+</div>
+<# if(this.shouldShowTooltip){ #>
+<div class="tva-share-tooltip ttd-wizard ttd-tooltip persistent">
+	<div class="tva-tooltip-close click" data-fn="closeTooltip"><?php tva_get_svg_icon( 'cross' ); ?></div>
+	<p class="tt-message tt-message-title mt-5 mb-0"><?php echo esc_html__( 'Share your file', 'thrive-apprentice' ); ?></p>
+	<p class="tt-message mt-5 mb-10"><?php echo esc_html__( 'To learn how to display protected files in your content and courses press the share icon.', 'thrive-apprentice' ); ?></p>
+	<div class="ui-tt-arrow bottom"></div>
+</div>
+<# } #>

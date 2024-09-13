@@ -1,0 +1,31 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+
+<div class="tva-flex mb-5 tva-align-center tva-space-between tva-mega-tooltip-box">
+	<label for="upload-folder-url"><?php echo esc_html__( 'Folder URL', 'thrive-apprentice' ); ?></label>
+	<div class="tva-info-icon tva-relative tva-tooltip-parent tva-mega-tooltip">
+		<?php tva_get_svg_icon( 'info-solid' ); ?>
+		<div class="tva-custom-tooltip tva-settings-folder-url">
+			<p class="mt-0 mb-10"><?php esc_html_e( 'Insert the full URL of the folder that you wish to upload the files to', 'thrive-apprentice' ); ?></p>
+			<p class="mt-10">
+				<a href="https://help.thrivethemes.com/en/articles/8154726-how-to-manage-assessment-upload-settings-in-thrive-apprentice" target="_blank" rel="noopener"><?php esc_html_e( 'How to find the folder URL', 'thrive-apprentice' ); ?></a>
+			</p>
+		</div>
+	</div>
+</div>
+<div>
+	<input id="upload-folder-url" data-bind="folder_full_link" type="text" value="<#- model.get('folder_full_link') #>">
+</div>
+<div class="tva-flex mt-10 tva-hide">
+	<input class="click" type="checkbox" id="upload-create-folders" data-bind="upload_create_folders">
+	<label class="normal-label mb-0" for="upload-create-folders"><?php esc_html_e( 'Automatically create a folder per assessment', 'thrive-apprentice' ); ?></label>
+</div>

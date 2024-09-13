@@ -1,0 +1,39 @@
+<h5 class="mt-0 tva-label-section-title"><?php esc_html_e( 'Labels & translations', 'thrive-apprentice' ); ?></h5>
+<div class="tva-flex tva-align-center mb-20 tva-space-between">
+	<h1 class="tva-main-heading"><?php esc_html_e( 'Access restrictions', 'thrive-apprentice' ) ?></h1>
+	<a href="javascript:void(0)" class="tva-btn tva-btn-blue click" data-fn="add">
+		<?php tva_get_svg_icon( 'add-btn' ); ?>
+		<?php esc_html_e( 'Add label', 'thrive-apprentice' ); ?></a>
+</div>
+
+<h5 class="mt-0 tva-label-section-title">
+	<?php esc_html_e( 'Access restriction labels', 'thrive-apprentice' ); ?>
+	<div class="tva-info-icon tva-relative tva-tooltip-parent tva-mega-tooltip">
+		<?php tva_get_svg_icon( 'info-solid' ); ?>
+		<div class="tva-custom-tooltip tva-tt-labels">
+			<p class="mt-0 mb-10"><strong><?php esc_html_e( 'Labels show the access restrictions on a course', 'thrive-apprentice' ); ?></strong></p>
+			<p><?php esc_html_e( 'Labels help the user to understand which courses they:', 'thrive-apprentice' ); ?></p>
+			<ul class="m-0">
+				<li><?php esc_html_e( 'are unable to access', 'thrive-apprentice' ); ?></li>
+				<li><?php esc_html_e( 'have access to but haven’t started', 'thrive-apprentice' ); ?></li>
+				<li><?php esc_html_e( 'have already started', 'thrive-apprentice' ); ?></li>
+				<li><?php esc_html_e( 'have finished', 'thrive-apprentice' ); ?></li>
+			</ul>
+			<p class="mt-10"><?php esc_html_e( 'Labels switch depending on the situation.', 'thrive-apprentice' ); ?></p>
+			<p class="mt-10"><?php esc_html_e( 'For example, a user that doesn’t have access to a course might see the label “Premium course”, whereas a user that has already purchased the course might see the label “Not started yet”.', 'thrive-apprentice' ); ?></p>
+			<p class="mt-10">
+				<a href="https://help.thrivethemes.com/en/articles/4698649-how-to-use-the-dynamic-access-restriction-labels-in-thrive-apprentice" target="_blank" rel="noopener"><?php esc_html_e( 'Learn more about course labels', 'thrive-apprentice' ); ?></a>
+			</p>
+		</div>
+	</div>
+</h5>
+<div class="tva-labels-grid mt-5"></div>
+
+<section class="tva-label-switch mt-30 mb-30">
+	<label class="tva-slide-checkbox mb-10">
+		<span class="tva-label-section-title mr-10" style="width:auto"><?php esc_html_e( 'Switch labels depending on user status', 'thrive-apprentice' ); ?></span>
+		<input type="checkbox" class="change" data-fn="toggleLabelsSection"<#=this.settings.get('switch_labels') ? ' checked' : ''#>>
+		<span class="lever ml-0"></span>
+	</label>
+	<div class="tva-user-contexts<#=this.settings.get('switch_labels') ? ' tva-expanded' : ''#>"></div>
+</section>

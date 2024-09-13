@@ -1,0 +1,32 @@
+<div class="tqb-flow-report-title">
+	<div class="tvd-row tvd-collapse">
+		<div class="tvd-col tvd-s12">
+			<h3 class="tvd-title"><?php echo __( 'Completion Report', 'thrive-quiz-builder' ) ?></h3>
+
+			<# if( item.get('since') ) { #>
+				<div class="tqb-flow-report-since">
+					<p class="tvd-subtitle"><#= item.get('since').text #>
+						<span><#= item.get('since').date #></span>
+					</p>
+				</div>
+			<# } #>
+
+		</div>
+	</div>
+</div>
+
+<div id="tqb-chart-container"></div>
+<div class="tve-chart-overlay" style="display: none">
+    <div class="tvd-card tvd-small tvd-white tvd-valign-wrapper">
+        <div class="tvd-card-content tvd-valign tvd-center-align">
+            <h3><?php echo __( 'No Test Data (Yet)', 'thrive-quiz-builder' ); ?></h3>
+            <p>
+                <?php echo __( 'Here you will see a graph of conversion data as the test progresses.<br/> Currently there is no data to display.', 'thrive-quiz-builder' ); ?>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="tvd-v-spacer vs-2"></div>
+<div class="tqb-table-container"></div>
+
+

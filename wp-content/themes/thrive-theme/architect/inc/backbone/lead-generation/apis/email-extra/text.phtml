@@ -1,0 +1,8 @@
+<div>
+	<div class="label"><#= inputData.label #></div>
+	<input type="text" class="<#= inputData.classes #>" value="<#= value #>" placeholder="<#= inputData.placeholder #>"
+		   data-fn="setVal" data-fn-focusout="onFocusout" data-elem-attr="<#= inputData.id #>">
+	<div class="info-text orange error-details email-err-box tcb-hide">
+		<p class="m-0 p-0 email-err" data-elem-msg="<#= inputData.id #>"></p>
+	</div>
+</div>

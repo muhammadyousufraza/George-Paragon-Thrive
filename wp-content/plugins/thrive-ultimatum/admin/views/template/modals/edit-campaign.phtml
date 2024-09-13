@@ -1,0 +1,38 @@
+<div class="tvd-modal-content">
+	<h3 class="tvd-modal-title">
+		<?php echo __( 'Campaign settings', 'thrive-ult' ) ?>
+		<?php tve_ult_video( '990MWdzuLh0' ) ?>
+	</h3>
+	<p><?php echo __( "Events on timeline may be affected by the campaign's duration.", 'thrive-ult' ) ?></p>
+
+	<div class="control-grid">
+		<?php foreach ( TVE_Ult_Const::campaign_types_details() as $type => $prop_type ) : ?>
+			<div class="tvu-campaign-selector" data-type="<?php echo $type; ?>">
+				<div class="tvu-xsmall-card tvd-tooltipped tvd-card tvd-white tvd-pointer tvd-center-align <#= (model.get('type') === '<?php echo $type; ?>')? 'tvu-selected-design':'' #>"
+					 data-position="top" data-tooltip="<?php echo $prop_type['tooltip'] ?>">
+					<div class="tvd-card-content">
+						<img width="80"
+							 src="<?php echo TVE_Ult_Const::plugin_url( 'admin/img/' . $prop_type['image'] ); ?>"/>
+						<p><strong><?php echo $prop_type['name'] ?></strong></p>
+					</div>
+				</div>
+			</div>
+		<?php endforeach; ?>
+	</div>
+
+	<div id="tvu-campaign-type-options"></div>
+</div>
+<div class="tvd-modal-footer control-grid">
+	<div>
+		<a href="javascript:void(0)"
+		   class="tvd-btn-flat tvd-btn-flat-secondary tvd-btn-flat-dark tvd-waves-effect tvd-modal-close">
+			<?php echo __( 'Cancel', 'thrive-ult' ) ?>
+		</a>
+	</div>
+	<div>
+		<a href="javascript:void(0)"
+		   class="tvd-btn tvd-btn-green tvd-waves-light tvd-right tvu-save-campaign-type tvd-modal-submit">
+			<?php echo __( 'Save', 'thrive-ult' ) ?>
+		</a>
+	</div>
+</div>

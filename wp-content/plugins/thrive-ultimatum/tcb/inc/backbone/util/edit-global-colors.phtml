@@ -1,0 +1,85 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Ovidiu
+ * Date: 7/25/2018
+ * Time: 10:26 AM
+ */
+?>
+
+<div id="active_color_details">
+	<div class="tcb-favorites-steps control-grid tcb-favorites-step-1" data-step="1">
+		<div class="tcb-global-color-preview"></div>
+		<span class="tcb-global-color-label tcb-truncate t-50"><#= text #></span>
+		<span class="click tcb-global-color-icon" data-fn="make_global" data-tooltip="<?php echo __( 'Make it global', 'thrive-cb' ); ?>">
+			<?php tcb_icon( 'globe-regular' ); ?>
+		</span>
+		<span class="click tcb-global-color-icon" data-fn="remove_favorite" data-tooltip="<?php echo __( 'Remove favorite', 'thrive-cb' ); ?>">
+			<?php tcb_icon( 'star-solid' ); ?>
+		</span>
+	</div>
+	<?php //Edit view: 2 ?>
+	<div class="tcb-favorites-steps control-grid tcb-favorites-step-2" data-step="2">
+		<div class="tcb-global-color-preview"></div>
+
+		<# if(!enable_edit_color && !enable_unlink) { #>
+		<span class="tcb-global-color-label tcb-truncate t-70"><#= text #></span>
+		<# } else { #>
+		<span class="tcb-global-color-label tcb-truncate t-50"><#= text #></span>
+		<# } #>
+
+		<div class="shared-styles-actions ml-5" data-state="1">
+			<# if(enable_edit_color) { #>
+			<a href="javascript:void(0)" class="click click-icon" data-fn="go_to_state" data-state="31" data-tooltip="<#= edit_tip #>">
+				<?php tcb_icon( 'edit' ); ?>
+			</a>
+			<# } #>
+
+			<# if(enable_unlink) { #>
+			<a href="javascript:void(0)" class="click click-icon" data-fn="unlink_global" data-side="top" data-tooltip="<#= unlink_tip #>">
+				<?php tcb_icon( 'unlink-regular' ); ?>
+			</a>
+			<# } #>
+
+			<a href="javascript:void(0)" class="click click-icon" data-fn="toggle_more_options">
+				<?php tcb_icon( 'ellipsis-v-regular' ); ?>
+			</a>
+		</div>
+		<ul class="global-colors-drop-content tcb-hide">
+			<li class="click click-icon" data-fn="go_to_state" data-state="32">
+				<a href="javascript:void(0)"><?php echo __( 'Rename', 'thrive-cb' ) ?></a>
+			</li>
+			<# if(enable_remove_color) { #>
+			<li class="click click-icon" data-fn="go_to_state" data-state="33">
+				<a href="javascript:void(0)"><?php echo __( 'Delete', 'thrive-cb' ) ?></a>
+			</li>
+			<# } #>
+		</ul>
+
+	</div>
+	<?php //Edit - Color: 31 ?>
+	<div class="tcb-favorites-steps control-grid tcb-favorites-step-31" data-step="31">
+		<div class="tcb-global-color-preview"></div>
+		<span class="tcb-global-color-label tcb-truncate t-50"><#= text #></span>
+		<span class="click tcb-global-color-icon" data-fn="update_global" data-tooltip="<#= update_tip #>"><?php tcb_icon( 'check-regular' ); ?></span>
+		<span class="click tcb-global-color-icon" data-fn="undo_global" data-tooltip="<#= undo_tip #>"><?php tcb_icon( 'times-regular' ); ?></span>
+	</div>
+
+	<?php //Edit - Name: 32 ?>
+	<div class="tcb-favorites-steps control-grid tcb-favorites-step-32" data-step="32">
+		<div class="tcb-global-color-preview"></div>
+		<input type="text" id="tcb_global_color_name" value="<#= text #>"/>
+		<span class="click tcb-global-color-icon" data-fn="update_global"><?php tcb_icon( 'check-regular' ); ?></span>
+		<span class="click tcb-global-color-icon" data-fn="undo_global"><?php tcb_icon( 'times-regular' ); ?></span>
+	</div>
+	<?php //Remove: 33 ?>
+	<div class="tcb-favorites-steps control-grid tcb-favorites-step-33" data-step="33">
+		<div class="warning">
+			<?php echo __( 'Are you sure?', 'thrive-cb' ); ?>
+		</div>
+		<div class="remove-buttons">
+			<div class="click" data-fn="remove_global"><?php echo __( 'YES', 'thrive-cb' ); ?></div>
+			<div class="click" data-fn="go_to_state" data-state="2"><?php echo __( 'NO', 'thrive-cb' ); ?></div>
+		</div>
+	</div>
+</div>

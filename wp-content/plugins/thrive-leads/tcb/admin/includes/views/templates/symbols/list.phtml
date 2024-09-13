@@ -1,0 +1,10 @@
+<# if ( length === 0 ) { #>
+<div class="sym-no-sym tcb-masonry-item">
+	<p><?php echo __( 'You have no symbols added in this category. You can either create a new symbol or move an existing symbol to this category.' ); ?></p>
+	<button class="sym-button open-create-modal"><?php echo __( 'Create New Symbol', 'thrive-cb' ); ?></button>
+</div>
+<# } else { #>
+<div class="sym-add-item open-create-modal tcb-masonry-item">
+	<div><a class="sym-icon sym-plus"></a><?php echo __( 'Create New Symbol', 'thrive-cb' ); ?></div>
+</div>
+<# } #>

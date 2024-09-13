@@ -1,0 +1,43 @@
+<hr class="mt-10">
+<div class="control-grid full-width switch">
+	<label><?php esc_html_e( 'Send uploaded file(s) to', 'thrive-cb' ); ?></label>
+	<# if ( _.isEmpty( apis ) ) { #>
+	<div class="info-text orange mt-0">
+		<p class="mt-0 mb-5"><strong><?php esc_html_e( 'No file hosting integrations enabled', 'thrive-cb' ); ?></strong></p>
+		<?php $link = sprintf( '<a href="%s" class="blue-text" style="display: inline" target="_blank">%s</a>', admin_url( 'admin.php?page=tve_dash_api_connect' ), __( 'API connections dashboard', 'thrive-cb' ) ); ?>
+		<?php echo sprintf( __( 'Connect to file hosting services like Dropbox or Google Drive through the %s', 'thrive-cb' ), $link ); ?>
+	</div>
+	<# } else { #>
+	<div class="tcb-relative">
+		<select id="file-service" class="settings settings-file" data-field="api">
+			<option selected disabled></option>
+			<# _.each( apis, function( api, key ) { #>
+			<option value="<#-key#>" data-image="<#=api.logo#>"
+			<#= key === settings.api ? ' selected' : '' #>><#-api.name#></option>
+			<#} ) #>
+		</select>
+		<span class="lg-api-select-arrow select2-arrow"><?php tcb_icon( 'a_down' ); ?></span>
+	</div>
+	<# } #>
+</div>
+<# if ( !_.isEmpty( apis ) ) { #>
+<div class="file-api-options<#= !settings.api ? ' tcb-hide' : ''#>"">
+	<div class="control-grid full-width align-stretch folder-url"<#= settings.api === 'dropbox' ? ' style="display: none"' : '' #>>
+		<label>
+			<?php esc_html_e( 'Folder URL', 'thrive-cb' ); ?>
+			<span data-paneltlt-hover class="tve-cb-img-info ml-5 tcb-right" data-template="controls/lead-generation/tooltips/file-folder"><?php tcb_icon( 'info-circle-solid' ); ?></span>
+		</label>
+		<input type="text" class="settings settings-file" data-field="folder" value="<#- settings.folder #>">
+	</div>
+	<div id="file-upload-dropbox-chooser" class="dropbox-chooser control-grid full-width"<#= settings.api !== 'dropbox' ? ' style="display: none"' : '' #>>
+		<label><?php esc_html_e( 'Destination folder', 'thrive-cb' ); ?></label>
+	</div>
+	<div class="control-grid mb-0 full-width align-stretch">
+		<label>
+			<?php esc_html_e( 'Filename', 'thrive-cb' ); ?>
+			<span data-paneltlt-hover class="tve-cb-img-info ml-5 tcb-right" data-template="controls/lead-generation/tooltips/file-name"><?php tcb_icon( 'info-circle-solid' ); ?></span>
+		</label>
+		<input type="text" class="settings settings-file" data-field="name" value="<#- settings.name #>" placeholder="<?php esc_attr_e( 'Specify filename. E.g. CV_Upload', 'thrive-cb' ); ?>">
+	</div>
+</div>
+<# } #>

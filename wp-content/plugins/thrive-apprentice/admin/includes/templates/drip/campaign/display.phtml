@@ -1,0 +1,170 @@
+<div class="mt-25 mb-10 tva-flex tva-drip-assign-notice tva-align-center tva-space-between">
+	<a href="javascript:void(0)" class="tva-back click" data-fn="back"><?php esc_html_e( 'Back to drip campaigns', 'thrive-apprentice' ); ?></a>
+	<div class="tva-flex tva-align-center">
+		<?php tva_get_svg_icon( 'info-circle_light', 'mr-5' ); ?>
+		<p>
+			<?php echo esc_html__( 'To activate a drip schedule, assign it to a product in the Products tab.', 'thrive-apprentice' ) ?>
+			<a class="tvd-underline" href="http://help.thrivethemes.com/en/articles/5727555-creating-a-drip-schedule"
+			   target="_blank" rel="noopener"><?php echo esc_html__( 'Learn more', 'thrive-apprentice' ) ?></a>.
+		</p>
+	</div>
+</div>
+<# if(!model.get('new_weekly_logic')) { #>
+<div class="mt-25 mb-10 tva-flex tva-drip-warning tva-drip-warning-blue tva-new-drip-weekly-logic">
+	<div class="tva-drip-warning__icon"><?php tva_get_svg_icon( 'info' ); ?></div>
+	<div class="tva-drip-warning__text">
+		<div><strong><?php echo esc_html__( 'Heads up, there is an important change to your Thrive Apprentice Drip campaigns', 'thrive-apprentice' ); ?></strong></div>
+		<div><?php echo esc_html__( 'We have updated the way that systematically unlocked drip campaigns are calculated and this may affect your campaigns.', 'thrive-apprentice' ); ?></div>
+		<div>
+			<a target="_blank" rel="noopener" href="https://help.thrivethemes.com/en/articles/8804157-understanding-the-new-drip-behavior-in-thrive-apprentice"><?php echo esc_html__( 'Read this article'); ?></a>
+			<?php echo esc_html__( 'to understand how this change is likely to affect you and your customers. You will have until April 2024 to make any changes needed.', 'thrive-apprentice' ); ?>
+		</div>
+		<div class="mt-10 tva-flex tva-flex-row" style="gap:10px;">
+			<button class="click tva-btn tva-btn-blue" data-fn="newWeeklyLogicConfirmThisCampaign" data-campaign-id="<#-this.model.get('id')#>">
+				<?php esc_html_e( 'Confirm for this campaign', 'thrive-apprentice' ); ?>
+			</button>
+			<button class="click tva-btn tva-btn-blue" data-fn="newWeeklyLogicConfirmAll" data-campaign-id="<#-this.model.get('id')#>">
+				<?php esc_html_e( 'Confirm for all campaigns', 'thrive-apprentice' ); ?>
+			</button>
+		</div>
+	</div>
+</div>
+<# } #>
+<div class="tva-drip-campaign-top">
+	<div class="tva-flex tva-align-center tva-space-between tva-drip-header">
+		<div class="tva-flex tva-align-center">
+			<div class="tva-campaign-name">
+				<div><span><#- this.model.get('post_title') #></span></div>
+			</div>
+			<span class="tva-campaign-name-edit click" data-fn="renameCampaign" data-campaign-id="<#-this.model.get('id')#>"><?php tva_get_svg_icon( 'pen_light' ); ?></span>
+		</div>
+		<button class="click tva-drip-template" data-fn="openCampaignModal" data-campaign-id="<#-this.model.get('id')#>">
+			<?php tva_get_svg_icon( 'wand' ); ?>
+			<?php esc_html_e( 'Restart wizard', 'thrive-apprentice' ); ?>
+		</button>
+	</div>
+	<div class="tva-campaign-header">
+		<div class="tva-drip-campaign-summary tva-drip-card p-15">
+			<div class="tva-summary-items">
+				<div class="tva-summary-trigger">
+					<div class="tva-card-title"><?php esc_html_e( 'Triggered by', 'thrive-apprentice' ); ?></div>
+					<div class="mt-10 tva-flex tva-align-center">
+						<#= this.model.getTriggerIcon() #>
+						<span class="tva-s-text"><#- this.model.getTriggerSummary() #></span>
+					</div>
+				</div>
+				<div class="tva-summary-arrow">
+					<div class="tva-card-title">&nbsp;</div>
+					<div class="mt-10 tva-flex tva-align-center tva-arrow">
+						<div class="tva-brdr"></div>
+						<?php tva_get_svg_icon( 'caret-down_solid' ); ?>
+					</div>
+				</div>
+				<div class="tva-summary-schedule">
+					<div class="tva-card-title"><?php esc_html_e( 'Schedule', 'thrive-apprentice' ); ?></div>
+					<div class="mt-10 tva-flex tva-align-center">
+						<#= this.model.getScheduleIcon() #>
+						<span class="tva-s-text"><#= this.model.getScheduleSummary() #></span>
+					</div>
+				</div>
+			</div>
+			<button class="click tva-drip-modify" data-fn="openCampaignModal" data-step="1" data-campaign-id="<#-this.model.get('id')#>">
+				<?php tva_get_svg_icon( 'pen_light' ); ?>
+			</button>
+		</div>
+		<div class="tva-drip-campaign-behaviour tva-drip-card p-15">
+			<div class="tva-card-content">
+				<div class="tva-grid mt-5 tvd-switch">
+					<?php tva_get_svg_icon( 'sequential', 'tva-main-color' ); ?>
+					<label>
+						<?php esc_html_e( 'Force users to complete course in order', 'thrive-apprentice' ); ?>
+						<input id="tva-drip-force-unlock-order" type="checkbox" class="click" data-fn="forceOrderChanged" data-campaign-id="<#-this.model.get('id')#>" <#= this.model.get('force_unlock_order') ? 'checked="checked"' : '' #>>
+						<span class="tvd-lever ml-10"></span>
+					</label>
+				</div>
+			</div>
+			<div class="tva-card-content">
+				<div class="tva-grid mt-10 tvd-switch">
+					<?php tva_get_svg_icon( 'icon-eye', 'ta-icon-eye tva-main-color' ); ?>
+					<label>
+						<?php esc_html_e( 'Show locked content in lesson lists', 'thrive-apprentice' ); ?>
+						<input id="tva-drip-display-locked" type="checkbox" class="click" data-fn="visibilityChanged" data-campaign-id="<#-this.model.get('id')#>" <#= this.model.get('display_locked') ? 'checked' : '' #>>
+						<span class="tvd-lever ml-10"></span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<# if ( ! this.course.hasPublishedContent() ) { #>
+<div class="tva-drip-warning">
+	<div class="tva-drip-warning__icon"><?php tva_get_svg_icon( 'info' ); ?></div>
+	<div class="tva-drip-warning__text">
+		<?php esc_html_e( 'This course does not have any published content!', 'thrive-apprentice' ); ?>
+		<?php
+		echo sprintf(
+			esc_html__( "You can create/publish your course content from the %scontent tab%s.", 'thrive-apprentice' ),
+			'<a href="javascript:void(0)" class="click" data-fn="openContentTab">',
+			'</a>'
+		);
+		?>
+	</div>
+</div>
+<# } else if ( this.course.getModulesAndLessons( false, true ).length !== this.course.getModulesAndLessons( false, false ).length ) { #>
+<div class="tva-drip-warning">
+	<div class="tva-drip-warning__icon"><?php tva_get_svg_icon( 'info-circle_light' ); ?></div>
+	<div class="tva-drip-warning__text">
+		<strong><?php esc_html_e( 'Missing lesson / module?', 'thrive-apprentice' ); ?></strong><br>
+		<?php esc_html_e( 'It seems this course has some unpublished content. The drip campaign only applies to PUBLISHED modules and lessons from your course.', 'thrive-apprentice' ); ?>
+		<br>
+		<?php
+		echo sprintf(
+			esc_html__( "Head over to the %scontent tab%s and publish anything that's missing.", 'thrive-apprentice' ),
+			'<a href="javascript:void(0)" class="click" data-fn="openContentTab">',
+			'</a>'
+		);
+		?>
+	</div>
+</div>
+<# } #>
+
+<# if ( publishedContent.length ) { #>
+<div class="tva-drip-structure-header">
+	<div class="tva-col-names">
+		<?php esc_html_e( 'Campaign schedule', 'thrive-apprentice' ); ?>
+	</div>
+	<div class="tva-col-conditions">
+		<?php esc_html_e( 'Unlock options', 'thrive-apprentice' ); ?>
+		<div class="tva-tooltip-parent">
+			<div class="ml-5 tva-info-icon"><?php tva_get_svg_icon( 'info-solid' ); ?>
+				<div class="tva-custom-tooltip tva-tooltip-inherited">
+					<?php esc_html_e( "Set the conditions a user must meet in order to unlock their content. Click the lesson or module below to add custom options.", 'thrive-apprentice' ); ?>
+					<a href="https://help.thrivethemes.com/en/articles/5727615-setting-up-the-unlock-conditions" target="_blank" rel="noopener"><?php echo esc_html__( 'Learn more', 'thrive-apprentice' ); ?></a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="tva-col-restriction">
+		<?php esc_html_e( 'Restriction behavior', 'thrive-apprentice' ); ?>
+		<div class="tva-tooltip-parent">
+			<div class="ml-5 tva-info-icon"><?php tva_get_svg_icon( 'info-solid' ); ?>
+				<div class="tva-custom-tooltip tva-tooltip-inherited tva-tooltip-right">
+					<?php esc_html_e( "Customize the messaging that is displayed on lessons or modules when a user has not yet met the drip conditions.", 'thrive-apprentice' ); ?>
+					<a href="https://help.thrivethemes.com/en/articles/5727555-using-the-drip-campaign-templates-in-thrive-apprentice#h_3503fbab89" target="_blank" rel="noopener"><?php echo esc_html__( 'Learn more', 'thrive-apprentice' ); ?></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<# _.each( publishedContent, function( item ) { #>
+<#= this.renderCourseItem( item ) #>
+<# }, this ) #>
+<# } #>
+<div class="tva-campaign-tooltip ttd-wizard ttd-tooltip persistent">
+	<p class="tt-message"><?php echo esc_html__( 'You can manually add drip unlock conditions to any lesson or module by clicking on the status button.', 'thrive-apprentice' ); ?></p>
+	<div class="ui-tooltip-action">
+		<button class="ttd-tooltip-dismiss click" data-fn="hideTooltip" type="button"><?php echo esc_html__( 'GOT IT', 'thrive-apprentice' ); ?></button>
+	</div>
+	<div class="ui-tt-arrow bottom"></div>
+</div>

@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @var $is_parent_allowed bool
+ * @var $lesson            TVA_Lesson
+ */
+
+$learned_lessons = tva_get_learned_lessons();
+
+$done = ( isset( $learned_lessons[ $lesson->course_id ] )
+          && array_key_exists( $lesson->ID, $learned_lessons[ $lesson->course_id ] ) ) ? 'done' : '';
+
+$excluded   = get_term_meta( $lesson->course_id, 'tva_excluded', true );
+$has_access = tva_access_manager()->has_access_to_object( $lesson->get_the_post() );
+?>
+
+<div class="tva-cm-lesson <?php echo $done; ?> tva_main_color">
+
+	<?php
+	echo tva_get_file_contents(
+		'inc/views/private-label.phtml',
+		[
+			'post'              => $lesson,
+			'allowed'           => $has_access,
+			'is_parent_allowed' => $is_parent_allowed,
+		]
+	);
+	?>
+
+	<div class="tva-cm-icons">
+		<?php if ( isset( $learned_lessons[ $lesson->course_id ] ) && array_key_exists( $lesson->ID, $learned_lessons[ $lesson->course_id ] ) ) : ?>
+			<?php echo tva_get_svg_icon( 'lesson-completed', '', true ); ?>
+		<?php endif; ?>
+		<?php echo tva_get_svg_icon( 'sym-two', '', true ); ?>
+	</div>
+
+	<h3>
+		<a href="<?php echo get_permalink( $lesson->ID ) ?>" class="tva-lesson-title tva_lesson_headline tva_main_color">
+			<?php echo $lesson->post_title ?>
+		</a>
+	</h3>
+
+	<?php if ( $lesson->post_excerpt ) : ?>
+		<div class="tva-cm-description">
+			<div class="tva_paragraph">
+				<?php echo $lesson->post_excerpt; ?>
+			</div>
+		</div>
+	<?php endif; ?>
+
+</div>

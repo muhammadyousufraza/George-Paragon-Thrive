@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-modal-step" data-step="0">
+	<div class="tvd-modal-content">
+		<div class="tva-flex tva-space-center mt-45 mb-45" style="gap: 30px;">
+			<div class="tva-protected-files-help-card tva-flex tva-flex-column tva-align-center">
+				<div class="tva-protected-files-help-icon-aura"><?php tva_get_svg_icon( 'file-alt_light' ); ?></div>
+				<span class="mt-15"><?php echo __( 'How to add protected files', 'thrive-apprentice' ) ?></span>
+				<strong><?php echo __( 'to pages or posts', 'thrive-apprentice' ) ?></strong>
+				<a href="javascript:void(0);" class="tva-btn tva-btn-blue pl-30 pr-30 click mt-30" data-fn="jumpToStep" data-step="1"><?php echo esc_html__( 'Learn how', 'thrive-apprentice' ) ?></a>
+			</div>
+			<div class="tva-protected-files-help-card tva-flex tva-flex-column tva-align-center">
+				<div class="tva-protected-files-help-icon-aura"><?php tva_get_svg_icon( 'graduation-cap' ); ?></div>
+				<span class="mt-15"><?php echo __( 'How to add protected files', 'thrive-apprentice' ) ?></span>
+				<strong><?php echo __( 'as Lesson Resources', 'thrive-apprentice' ) ?></strong>
+				<a href="javascript:void(0);" class="tva-btn tva-btn-blue pl-30 pr-30 click mt-30" data-fn="jumpToStep" data-step="2"><?php echo esc_html__( 'Learn how', 'thrive-apprentice' ) ?></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="tva-modal-step" data-step="1">
+	<div class="tvd-modal-content">
+		<?php include __DIR__ . '/parts/help-part-posts.phtml'; ?>
+	</div>
+</div>
+<div class="tva-modal-step" data-step="2">
+	<div class="tvd-modal-content">
+		<?php include __DIR__ . '/parts/help-part-resources.phtml'; ?>
+	</div>
+</div>

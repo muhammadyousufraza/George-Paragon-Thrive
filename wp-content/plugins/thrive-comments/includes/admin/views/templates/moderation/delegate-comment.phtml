@@ -1,0 +1,36 @@
+<div class="tvd-modal-content tcm-delegate-reply">
+	<div class="tcm-modal-header">
+		<h2><?php echo __( 'Delegate reply to', Thrive_Comments_Constants::T ); ?></h2>
+	</div>
+
+	<div class="tcm-modal-body">
+
+		<div class="moderators-container">
+			<div class="moderators-list">
+
+				<# var counter = 0; #>
+				<# _.each( ThriveComments.tcm_moderators, function( user ) { #>
+				<div id="<#= user.ID #>" class="moderation-doe" tabindex="<#= counter++ #>" data-name="<#= user.display_name #>">
+					<div style="background-image:url('<#=user.avatar #>')" class="md-bg"></div>
+					<div>
+						<h4><#=user.display_name #></h4>
+						<# _.each( user.roles, function( role ) { #>
+						<span class="role"><#= role #></span>
+						<# } ) #>
+					</div>
+				</div>
+				<# } ) #>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div class="tcm-btm">
+		<a href="javascript:void(0)" class="tvd-btn-flat tvd-btn-flat-secondary tvd-btn-flat-dark tvd-modal-close tvd-waves-effect tcm-back-btn"><?php echo __( 'Back', Thrive_Comments_Constants::T ) ?></a>
+		<a href="javascript:void(0)" class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green tvd-modal-close tvd-right tvd-modal-submit tcm-delegate"><?php echo __( 'Delegate', Thrive_Comments_Constants::T ) ?></a>
+	</div>
+
+</div>
+
+

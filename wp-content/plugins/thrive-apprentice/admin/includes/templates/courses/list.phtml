@@ -1,0 +1,26 @@
+<div class="tva-flex tva-flex-row tva-space-between mr-25 mb-45">
+	<h1 class="tva-main-heading"><?php echo __( 'Courses', 'thrive-apprentice' ) ?></h1>
+	<div>
+		<button class="tva-btn tva-btn-blue click" data-fn="addCourse">
+			<?php tva_get_svg_icon( 'add-btn' ); ?>
+			<?php echo __( 'Add course', 'thrive-apprentice' ) ?>
+		</button>
+	</div>
+</div>
+
+<div class="tva-flex tva-flex-row tva-space-between mr-25 mb-35">
+	<div class="tva-filter-status tva-flex tva-flex-row" style="gap: 10px;"></div>
+	<div class="tva-flex tva-flex-row" style="gap:10px;">
+		<div class="tva-filter-search"></div>
+		<div class="tva-filter-topic tva-courses-filter"></div>
+	</div>
+</div>
+
+<div id="tva-one-published-course-notice" style="display: none;">
+	<p>
+		<strong><?php echo __( 'Notice: ', 'thrive-apprentice' ); ?></strong>
+		<?php echo __( 'You only have one course published. When your users will visit your Courses page they will be redirected directly to this course. This option can be changed from Thrive Apprentice Settings > General Settings', 'thrive-apprentice' ); ?>
+	</p>
+</div>
+<div id="tva-courses"></div>
+<div class="tva-pagination"></div>

@@ -1,0 +1,9 @@
+<p class="show-when">
+	<label for="edit-menu-item-show-<?php echo $data['item_id']; ?>"><?php echo __( 'Show when', 'thrive-cb' ) ?><br>
+		<select class="tcb-show-when" name="tcb_show_when[<?php echo $data['item_id']; ?>]" id="edit-menu-item-show-<?php echo $data['item_id']; ?>">
+			<option <?php echo empty( $data['item']->tcb_show_when ) || $data['item']->tcb_show_when === 'always' ? 'selected="selected"' : '' ?> value="always"><?php echo __( 'Always', 'thrive-cb' ) ?></option>
+			<option <?php echo ! empty( $data['item']->tcb_show_when ) && $data['item']->tcb_show_when === 'loggedout' ? 'selected="selected"' : '' ?> value="loggedout"><?php echo __( 'Logged out', 'thrive-cb' ) ?></option>
+			<option <?php echo ! empty( $data['item']->tcb_show_when ) && $data['item']->tcb_show_when === 'loggedin' ? 'selected="selected"' : '' ?> value="loggedin"><?php echo __( 'Logged in', 'thrive-cb' ) ?></option>
+		</select>
+	</label>
+</p>

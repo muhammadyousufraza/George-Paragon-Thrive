@@ -1,0 +1,111 @@
+.inside.thrive-architect {
+    background-color: #f8f8f8;
+    background-image: url("images/dash-admin-logo.png");
+    padding: 90px 0;
+    margin: 5px !important;
+    min-height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    white-space: normal;
+}
+
+/*Save space on smaller displays*/
+
+@media (max-width: 1400px) {
+    .inside.thrive-architect {
+        padding: 10px 0;
+    }
+}
+
+.inside.thrive-architect p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+    line-height: 2em;
+}
+
+#wpbody .thrive-architect-edit-link {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    color: #FFF;
+    padding-left: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.inside.thrive-architect .tcb-disable {
+    color: #666;
+    font-size: 16px;
+}
+
+.inside.thrive-architect .tcb-revert {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    font-size: 16px;
+    color: #666;
+    text-decoration: underline;
+}
+
+.thrive-architect-edit-link.thrive-architect-edit-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.thrive-architect-edit-link:focus, .thrive-architect-edit-link:hover, .thrive-architect-edit-link:active {
+    outline: none;
+    color: #FFF;
+    box-shadow: none;
+}
+
+.thrive-architect-edit-link:hover {
+    box-shadow: rgba(83, 83, 83, 0.4) 0px 0px 12px 0px;
+}
+
+.thrive-architect-admin-text {
+    background: #2e8c00;
+    padding: 5px 25px;
+    position: relative;
+    font-size: 14px;
+    line-height: 30px;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.thrive-architect-admin-text::before {
+    content: '';
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 50px solid #434344;
+}
+
+.thrive-architect-admin-icon-holder {
+    position: absolute;
+    background: #434344;
+    left: 0;
+    top: 0;
+    padding: 5px 10px;
+    box-sizing: border-box;
+
+}
+
+.thrive-architect-admin-icon {
+    background: url('images/thrive-architect-logo-white.png') no-repeat 0 0;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+.tve-license-warning .thrive-architect-admin-icon {
+    background: url('../../thrive-dashboard/css/images/circle-orange-transparent.png') 0 center / 30px no-repeat;
+}
+
+.tve-license-warning-red .thrive-architect-admin-icon {
+    background: url('../../thrive-dashboard/css/images/circle-red-transparent.png') 0 center / 30px no-repeat;
+}

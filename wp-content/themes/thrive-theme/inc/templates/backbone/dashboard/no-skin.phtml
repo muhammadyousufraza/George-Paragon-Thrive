@@ -1,0 +1,15 @@
+<div class="ttd-no-skin ttd-wizard">
+	<?php echo Thrive_Utils::return_part( '/integrations/wizard/views/placeholder-header.php' ); ?>
+	<?php echo Thrive_Utils::return_part( '/integrations/wizard/views/placeholder-structure-post.php', [ 'preview_posts' => 3 ] ); ?>
+
+	<div class="ttd-inner-no-skin">
+
+		<img class="ttd-wizard-splash" src="<?php echo THEME_URL . '/inc/assets/images/wizard/splash.png' ?>" width="108" height="103" alt="Wizard Splash">
+		<h2 class="ttd-wizard-title mt-40"><?php echo __( 'Welcome to Thrive Theme Builder', 'thrive-theme' ); ?></h2>
+		<button type="button" data-fn="openModal" class="ttd-btn click fill blue mt-40">
+			<?php Thrive_Views::svg_icon( 'modal-icon-cloud' ); ?>
+			<?php echo __( 'Download and Activate Theme', 'thrive-theme' ); ?>
+		</button>
+
+	</div>
+</div>

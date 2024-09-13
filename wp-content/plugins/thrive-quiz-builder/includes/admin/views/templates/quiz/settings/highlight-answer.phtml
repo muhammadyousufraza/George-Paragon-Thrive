@@ -1,0 +1,26 @@
+<div class="tqb-highlight-options">
+	<p class="tqb-mpbt">
+		<?php echo __( 'After the visitor has responded to the question, what should happen?', 'thrive-quiz-builder' ) ?>
+	</p>
+
+	<div class="tvd-options">
+		<input class="tqb-highlight-answer tqb-radio-option" id="tqb-load-next-question" type="radio" data-attr="load_next_question"
+		<#= model.get( 'load_next_question' ) === 1 ? 'checked' : '' #> />
+		<label class="tqb-mr35" for="tqb-load-next-question">
+			<?php echo __( 'Load next question', 'thrive-quiz-builder' ) ?>
+		</label>
+
+		<input class="tqb-highlight-answer tqb-radio-option" id="tqb-highlight-correct-answer" type="radio" data-attr="highlight_answer"
+		<#= model.get( 'highlight_answer' ) === 1 ? 'checked' : '' #> />
+		<label for="tqb-highlight-correct-answer" class="tqb-mr35">
+			<?php echo __( 'Highlight correct answer', 'thrive-quiz-builder' ) ?>
+		</label>
+
+		<input class="tqb-highlight-answer tqb-radio-option" id="tqb-highlight-and-feedback" type="radio" data-attr="highlight_and_show_feedback"
+		<#= model.get( 'highlight_and_show_feedback' ) === 1 ? 'checked' : '' #> />
+		<label for="tqb-highlight-and-feedback">
+			<?php echo __( 'Highlight and provide feedback on answer', 'thrive-quiz-builder' ) ?>
+		</label>
+	</div>
+
+</div>

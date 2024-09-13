@@ -1,0 +1,26 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+
+<div class="tva-date-info">
+	<p>
+		<?php echo __( 'Your website timezone is set to', 'thrive-apprentice' ); ?>
+		<b><#- `UTC${offset}` #></b>
+		<?php echo __( 'and current local time is', 'thrive-apprentice' ); ?>
+		<b><#- local #></b>.
+		<?php
+		echo sprintf(
+			'<a href="%s" target="_blank">%s</a>',
+			get_admin_url( null, 'options-general.php' ),
+			__( 'Change this here', 'thrive-apprentice' )
+		);
+		?>
+</div>

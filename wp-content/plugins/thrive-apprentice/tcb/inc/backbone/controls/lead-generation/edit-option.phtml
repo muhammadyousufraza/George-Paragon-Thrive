@@ -1,0 +1,22 @@
+<div class="control-grid">
+	<div class="label"><?php echo __( 'Label', 'thrive-cb' ); ?></div>
+	<div class="input">
+		<input type="text" class="change input" data-fn="changeLabel" value="<#= this.model.get('label') #>">
+	</div>
+</div>
+<div class="control-grid">
+	<div class="label">
+		<label class="tcb-checkbox">
+			<input type="checkbox" <#= this.model.get('labelAsValue')?' checked' : ''#> class="change" data-fn="changeLabelAsValue"/>
+			<span><?php echo __( 'Use label as value', 'thrive-cb' ) ?></span>
+		</label>
+	</div>
+</div>
+<div class="control-grid tve-lg-option-value-input <#= this.model.get('labelAsValue')? 'tcb-hide':'' #>">
+	<div class="label"><?php echo __( 'Value', 'thrive-cb' ); ?></div>
+	<div class="input">
+		<input type="text" class="change input" data-fn="changeValue" value="<#= this.model.get('value') #>">
+	</div>
+</div>
+<div class="control-grid tve-edit-option-default-switch">
+</div>

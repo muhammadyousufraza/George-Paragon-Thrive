@@ -1,0 +1,43 @@
+<div class="ls-optimization-wrapper">
+	<div class="page-content grey">
+		<div class="page-title">
+			<?php echo __( 'Asset optimization finished!', 'thrive-cb' ); ?>
+			<div class="page-subtitle"><#= optimizationTime #></div>
+		</div>
+		<div class="page-text-wrapper">
+			<div class="optimization-results-wrapper">
+				<div class="optimization-result">
+					<div class="result-wrapper success">
+						<span class="big-icon success"></span>
+						<div class="result-description">
+							<div class="number"><#= optimizedItems #></div>
+							<div class="description"><?php echo __( 'optimized assets', 'thrive-cb' ); ?></div>
+						</div>
+					</div>
+				</div>
+				<# if(failedItems > 0) { #>
+				<div class="optimization-result">
+					<div class="result-wrapper fail">
+						<span class="big-icon fail"></span>
+						<div class="result-description">
+							<div class="number"><#= failedItems #></div>
+							<div class="description"><?php echo __( 'failed to optimize*', 'thrive-cb' ); ?></div>
+						</div>
+					</div>
+					<button class="link-text show-failed"><?php echo __( '*View entire failed list', 'thrive-cb' ); ?></button>
+				</div>
+				<# } #>
+			</div>
+			<div class="failed-items"></div>
+			<div class="page-button-wrapper">
+				<div class="divider"></div>
+				<div class="button-description normal">
+					<?php echo __( 'Return to the control panel to enable optimized asset loading on your site', 'thrive-cb' ); ?>
+				</div>
+				<button class="lightspeed-button blue-color go-to-home">
+					<?php echo __( 'Go to control panel', 'thrive-cb' ); ?>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,105 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+
+$breadcrumbs_config = array(
+	array(
+		'title' => __( 'Quick Start Guide', 'thrive-apprentice' ),
+	),
+);
+
+$guide_items = array(
+	array(
+		'new_tab'     => false,
+		'img_link'    => TVA_Const::plugin_url( 'admin/img/lesson-image1.png' ),
+		'title'       => __( 'Create a Product in SendOwl', 'thrive-apprentice' ),
+		'text'        => __( 'Create the product your customers will buy in your SendOwl Account', 'thrive-apprentice' ),
+		'button_text' => __( 'Create a product in SendOwl', 'thrive-apprentice' ),
+		'button_link' => '#settings/sendowl/create-product',
+	),
+	array(
+		'new_tab'     => false,
+		'img_link'    => TVA_Const::plugin_url( 'admin/img/lesson-image4.png' ),
+		'title'       => __( 'Complete your Checkout Settings', 'thrive-apprentice' ),
+		'text'        => __( 'Create the Checkout and the Thank You pages that your customers will be redirected to when making a purchase', 'thrive-apprentice' ),
+		'button_text' => __( 'Checkout page settings', 'thrive-apprentice' ),
+		'button_link' => '#settings/sendowl/checkout',
+	),
+	array(
+		'new_tab'     => false,
+		'img_link'    => TVA_Const::plugin_url( 'admin/img/lesson-image5.png' ),
+		'title'       => __( 'Create your Sales Page with Purchase Links', 'thrive-apprentice' ),
+		'text'        => __( 'Create sales pages where you can include purchase links for your products', 'thrive-apprentice' ),
+		'button_text' => __( 'Create your sales page', 'thrive-apprentice' ),
+		'button_link' => '#settings/sendowl/links',
+	),
+	array(
+		'new_tab'     => false,
+		'img_link'    => TVA_Const::plugin_url( 'admin/img/lesson-image6.png' ),
+		'title'       => __( 'Set up your API Account Keys', 'thrive-apprentice' ),
+		'text'        => __( 'Make sure the incoming payments are registered and the orders you receive are valid.', 'thrive-apprentice' ),
+		'button_text' => __( 'Set up your API Account Keys', 'thrive-apprentice' ),
+		'button_link' => '#settings/sendowl/integration',
+	),
+	array(
+		'new_tab'     => false,
+		'img_link'    => TVA_Const::plugin_url( 'admin/img/lesson-image.png' ),
+		'title'       => __( 'Build a Course in Thrive Apprentice', 'thrive-apprentice' ),
+		'text'        => __( 'Create the course that you\'re going to sell in Thrive Apprentice', 'thrive-apprentice' ),
+		'button_text' => __( 'Learn how to create your first course', 'thrive-apprentice' ),
+		'button_link' => '#courses/add-new-course',
+	),
+	array(
+		'new_tab'     => true,
+		'img_link'    => TVA_Const::plugin_url( 'admin/img/lesson-image3.png' ),
+		'title'       => __( 'Assign Access to your Course', 'thrive-apprentice' ),
+		'text'        => __( 'Set up Thrive Apprentice so that your customers will get access to their product immediately after purchase', 'thrive-apprentice' ),
+		'button_text' => __( 'How to Assign Access Rules', 'thrive-apprentice' ),
+		'button_link' => 'https://thrivethemes.com/tkb_item/how-to-assign-access-to-your-course-set-up-the-sendowl-protection-options/',
+	),
+	array(
+		'new_tab'     => false,
+		'img_link'    => TVA_Const::plugin_url( 'admin/img/lesson-image2.png' ),
+		'title'       => __( 'Set up the SendOwl Listener', 'thrive-apprentice' ),
+		'text'        => __( 'Make sure that SendOwl and Thrive Apprentice can talk to each other', 'thrive-apprentice' ),
+		'button_text' => __( 'Set up the Listener', 'thrive-apprentice' ),
+		'button_link' => '#settings/sendowl/integration',
+	),
+);
+?>
+<div class="tva-flex tva-flex-row mb-30">
+	<h1 class="tva-main-heading"><?php echo __( 'Quick Start Guide', 'thrive-apprentice' ); ?></h1>
+</div>
+<?php include 'breadcrumbs.phtml'; ?>
+<div class="mt-10">
+	<?php foreach ( $guide_items as $index => $guide_item ) : ?>
+		<?php $number = $index + 1; ?>
+		<# var completed = this.model.get('step<?php echo $number; ?>Completed'); #>
+		<div class="tva-flex tva-card tva-so-guide-card tva-flex-row <#= completed ? 'tva-quick-start-step-completed': '' #>" style="min-height: 85px;">
+			<div class="tva-sendowl-guide-item-logo" style="background-image: url('<?php echo $guide_item['img_link']; ?>')"></div>
+			<div class="text">
+				<div class="tva-flex tva-flex-row">
+					<h3><span><?php echo $number; ?>.</span><?php echo $guide_item['title']; ?></h3>
+					<# if(completed) { #>
+					<span class="completed"><?php tva_get_svg_icon( 'check' ); ?><?php echo __( 'Completed', 'thrive-apprentice' ); ?></span>
+					<# } #>
+				</div>
+				<div class="tva-flex tva-flex-row">
+					<p>
+						<?php echo $guide_item['text']; ?>
+					</p>
+				</div>
+			</div>
+			<div class="buttons">
+				<a class="tva-btn tva-btn-blue" <?php echo $guide_item['new_tab'] ? 'target="_blank"' : ''; ?> href="<?php echo $guide_item['button_link']; ?>"><?php echo $guide_item['button_text']; ?></a>
+			</div>
+		</div>
+	<?php endforeach; ?>
+</div>

@@ -1,0 +1,113 @@
+@media (min-width: 300px) {
+    #login {
+        border-radius: 6px;
+        padding: 30px !important;
+        margin-top: 20px !important;
+        background-color: rgba(241, 241, 241, 0.75) !important;
+    }
+
+    #login form {
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 16px 0px;
+        border-radius: 5px;
+        overflow: auto;
+        padding: 30px !important;
+        background-color: rgb(255, 255, 255) !important;
+    }
+
+    #login .wp-pwd .wp-hide-pw {
+        top: 6px;
+    }
+
+    #login form .input {
+        border: none;
+        --tve-font-size: 24px;
+        padding: 10px 2.5rem 10px 10px !important;
+        background-color: rgb(246, 246, 246) !important;
+        background-image: none !important;
+    }
+
+    :not(#tve) body p, :not(#tve) body li, :not(#tve) body blockquote, :not(#tve) body address, :not(#tve) body .tcb-plain-text, :not(#tve) body label {
+        font-weight: var(--tve-font-weight, var(--g-regular-weight, normal));
+        font-family: var(--tve-font-family, Arial, Helvetica, sans-serif);
+        line-height: var(--tve-line-height, 1.5em);
+    }
+
+    body {
+        --tve-font-weight: var(--g-regular-weight, normal);
+        --tve-font-family: Arial, Helvetica, sans-serif;
+        --tve-line-height: 1.5em;
+        background-image: linear-gradient(rgb(241, 241, 241) 0%, rgba(241, 241, 241, 0) 52%) !important;
+        background-size: auto !important;
+        background-position: 50% 50% !important;
+        background-attachment: scroll !important;
+        background-repeat: no-repeat !important;
+        justify-content: center;
+    }
+
+    #wp-submit {
+        box-shadow: none;
+        border: none;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+
+    :not(#tve) #login form div label, #login form p:not(.forgetmenot) label {
+        text-transform: var(--tve-text-transform, uppercase);
+        font-size: var(--tve-font-size, 10px);
+        color: var(--tve-color, rgb(119, 119, 119));
+    }
+
+    #login form div label, #login form p:not(.forgetmenot) label {
+        letter-spacing: var(--tve-letter-spacing, 1px);
+        padding-bottom: 0px !important;
+        padding-top: 0px !important;
+        margin-bottom: 7px !important;
+    }
+
+    :not(#tve) #login form .input {
+        font-size: var(--tve-font-size, 24px);
+    }
+
+    p a {
+        text-align: left;
+    }
+
+    #login form .forgetmenot {
+        margin-top: 9px !important;
+        --tve-color: rgb(119, 119, 119);
+        --tve-text-transform: uppercase;
+        --tve-font-size: 10px;
+        --tve-letter-spacing: 1px;
+    }
+
+    :not(#tve) .login #backtoblog a, .login #nav a {
+        color: var(--tve-color, rgb(85, 93, 102));
+    }
+
+    #login > h1 > a {
+        padding-top: 0px !important;
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+}
+
+@media (max-width: 1023px) {
+    #login {
+        float: none;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 30px !important;
+        margin-top: 20px !important;
+        padding-top: 10px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    #login {
+        margin-top: 10px !important;
+        padding-top: 20px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}

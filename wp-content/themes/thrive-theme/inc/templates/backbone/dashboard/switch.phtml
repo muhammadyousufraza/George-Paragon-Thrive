@@ -1,0 +1,7 @@
+<div class="ttd-toggle-container">
+	<label class="ttd-small-switch">
+		<button class="ttd-switch-input<#= this.model.get('disabled') ? '':' click'#>" data-fn="toggle" data-checked="<#= this.model.get('checked') ? 1 : 0 #>"></button>
+		<span class="ttd-switch-label" data-on="<#= this.model.get('on-label') #>" data-off="<#= this.model.get('off-label') #>"></span>
+		<span class="ttd-switch-handle"></span>
+	</label>
+</div>

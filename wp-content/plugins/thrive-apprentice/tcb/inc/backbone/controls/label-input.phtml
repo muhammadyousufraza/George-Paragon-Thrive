@@ -1,0 +1,13 @@
+<div class="control-grid<#=this.getExtraClass()#>">
+	<# if ( this.model.config.label ) { #>
+	<div class="label">
+		<#= this.get_config('label') #>
+		<# if ( this.model.config.tooltip ) { #>
+		<span class="click" data-tooltip="<#- this.model.config.tooltip #>" data-side="<#- this.model.config.tooltip_side #>"><?php tcb_icon( 'info-circle-solid' ); ?></span>
+		<# } #>
+	</div>
+	<# } #>
+	<div class="input">
+		<input type="text" class="tve-input-control input change" data-fn-input="onInput" placeholder="<#= this.get_config('placeholder', '') #>" data-fn="changed" <#= this.get_config('extra_attrs', '') #>/>
+	</div>
+</div>

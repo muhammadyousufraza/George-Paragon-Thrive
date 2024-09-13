@@ -1,0 +1,43 @@
+<div class="tvd-am-container-header">
+	<h3 class="tvd-am-container-title"><?php echo esc_html__( 'User Access Manager', 'thrive-dash' ); ?></h3>
+	<div class="tvd-am-buttons-wrapper">
+		<a class="tvd-am-view-users click" target="_blank">
+			<?php dashboard_icon( 'users' ); ?>
+			<span><?php echo esc_html__( 'VIEW USERS', 'thrive-dash' ); ?></span>
+		</a>
+		<button class="tvd-am-reset-defaults click">
+			<?php dashboard_icon( 'sync-alt' ); ?>
+			<span><?php echo esc_html__( 'RESET DEFAULTS', 'thrive-dash' ); ?></span>
+		</button>
+	</div>
+</div>
+
+<div class="tvd-am-container-info">
+	<?php echo esc_html__( 'Edit which user roles have access to Thrive Themes plugins by enabling or disabling the checkboxes below.', 'thrive-dash' ); ?></div>
+</div>
+
+<h3 class="tvd-am-container-role"></h3>
+
+<div class="tvd-am-container-sections">
+	<div class="tvd-am-section-wrapper tvd-am-products-cap-wrapper">
+		<div class="tvd-am-section-header">
+			<div class="tvd-am-section-title"><?php echo esc_html__( 'Products', 'thrive-dash' ); ?></div>
+			<div class="tvd-am-section-functionality"><?php echo esc_html__( 'HAS ACCESS', 'thrive-dash' ); ?></div>
+		</div>
+		<div class="tvd-am-section-content tvd-am-products-cap-content"></div>
+	</div>
+	<div class="tvd-am-section-wrapper tvd-am-functionality-wrapper">
+		<div class="tvd-am-section-header">
+			<div class="tvd-am-section-title"><?php echo esc_html__( 'Functionality', 'thrive-dash' ); ?></div>
+			<div class="tvd-am-section-functionality"><?php echo esc_html__( 'SETTING', 'thrive-dash' ); ?></div>
+		</div>
+		<div class="tvd-am-section-content tvd-am-functionality-content"></div>
+	</div>
+
+	<div id="tvd-back-td" class="tvd-col tvd-m6">
+		<a href="
+	<?php echo admin_url( 'admin.php?page=tve_dash_section' ); ?>" class="tvd-waves-effect tvd-waves-light tvd-btn-small tvd-btn-gray">
+			<?php echo __( 'Back To Dashboard', 'thrive-dash' ); ?>
+		</a>
+	</div>
+</div>

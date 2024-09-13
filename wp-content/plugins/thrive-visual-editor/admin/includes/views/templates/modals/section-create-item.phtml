@@ -1,0 +1,6 @@
+<div class="tcb-modal-tab-elem" data-id="<#= item.get('id') #>" data-type="symbol" data-cloud="<# if ( ! item.get('from_cloud') ) { #>0<# } else { #>1<# } #>">
+	<span class="tcb-modal-tab-item-title">
+		<#= ( item.get('title') )? item.get('title').rendered : item.get('post_title') #>
+	</span>
+	<div class="tcb-modal-tab-image" style="background-image: url('<#= item.get('thumb').url #>');"></div>
+</div>

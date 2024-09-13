@@ -1,0 +1,125 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+/**
+ * Allows the system to disable editing the skin wizard
+ * Used in ThriveApprentice to disable wizard on the builder website
+ *
+ * @param bool $allow_access
+ */
+$allow_access_wizard = \TVA\TTB\Check::is_end_user_site();
+?>
+<div class="tva-skin-item-header">
+	<h1 class="tva-main-heading"><?php esc_html_e( 'Thrive Apprentice Designs', 'thrive-apprentice' ); ?></h1>
+	<button class="tva-skin-edit-btn-back click" data-fn="back"><?php tva_get_svg_icon( 'angle-down' ); ?><?php esc_html_e( 'Back', 'thrive-apprentice' ); ?></button>
+</div>
+
+<div class="tva-skin-item-screen-grid">
+	<div class="tva-flex tva-skin-item-screen-card tva-skin-item-screen-card-top">
+		<div class="tva-skin-thumb" style="background-image: url('<#- model.get('thumb') #>')"></div>
+		<div class="tva-skin-info">
+			<div class="tva-skin-c-editing"><?php esc_html_e( 'Currently editing', 'thrive-apprentice' ); ?></div>
+			<div>
+				<div class="tva-flex tva-flex-inline tva-skin-name"><span><#- model.get('name') #></span></div>
+				<div class="tva-flex tva-flex-inline tva-skin-edit ml-5 click" data-fn="rename"><?php tva_get_svg_icon( 'pen_light' ); ?></div>
+			</div>
+
+			<div class="tva-skin-item-active-label"></div>
+			<button data-fn="publish" class="click mt-40 tva-btn tva-btn-green tva-skin-not-publish-display"><?php esc_html_e( 'Publish school design', 'thrive-apprentice' ); ?></button>
+			<a target="_blank" href="<#= TVA.indexPageModel.previewUrl({tva_skin_id: model.getId()}) #>" class="tva-skin-preview-link medium mt-10 tva-skin-not-publish-display">
+				<span><?php echo esc_html__( 'Preview school design', 'thrive-apprentice' ); ?></span>
+			</a>
+		</div>
+	</div>
+	<div class="tva-skin-item-screen-card tva-skin-item-screen-card-wizard tva-flex-grow">
+		<div class="tva-flex">
+			<div class="tva-skin-item-screen-card-icon-holder">
+				<?php tva_get_svg_icon( 'wiz-wand' ); ?>
+			</div>
+			<div>
+				<h5><?php esc_html_e( 'School quick start wizard', 'thrive-apprentice' ); ?></h5>
+				<p><?php esc_html_e( 'Get your new school design up and running in a few quick steps', 'thrive-apprentice' ); ?></p>
+				<div class="mt-5">
+					<?php if ( $allow_access_wizard ) : ?>
+						<a href="#design/<#-model.getId()#>/wizard" class="click tva-btn tva-btn-blue"><?php esc_html_e( 'Start wizard', 'thrive-apprentice' ); ?></a>
+					<?php else: ?>
+						<a href="javascript:void(0);" class="click tva-btn tva-btn-blue tva-disabled"><?php esc_html_e( 'Wizard not available', 'thrive-apprentice' ); ?></a>
+					<?php endif; ?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tva-skin-item-screen-card tva-skin-item-screen-card-templates tva-flex-grow">
+		<div class="tva-flex">
+			<div class="tva-skin-item-screen-card-icon-holder">
+				<?php tva_get_svg_icon( 'templates-mng' ); ?>
+			</div>
+			<div>
+				<h5><?php esc_html_e( 'Template editor', 'thrive-apprentice' ); ?></h5>
+				<p><?php esc_html_e( 'Visually design your course, module and lesson templates', 'thrive-apprentice' ); ?></p>
+				<div class="mt-5"><a href="#design/<#- model.getId() #>/skin-templates" class="click tva-btn tva-btn-blue"><?php esc_html_e( 'Manage templates', 'thrive-apprentice' ); ?></a></div>
+			</div>
+		</div>
+	</div>
+	<div class="tva-skin-item-typography" id="tva-typography">
+		<div class="tva-skin-item-screen-card tva-skin-item-screen-card-typography tva-flex-grow tva-flex">
+			<div class="tva-skin-item-screen-card-icon-holder">
+				<?php tva_get_svg_icon( 'skin-typography' ); ?>
+			</div>
+			<div class="ttd-typography">
+				<h5><?php esc_html_e( 'Typography', 'thrive-apprentice' ); ?></h5>
+				<div class="tvd-switch tvd-tooltipped"
+					 data-position="top"
+					 data-tooltip="<?php echo __( 'If you have Thrive Theme Builder activated and this toggle enabled, 
+					 changing your theme typography will also update Thrive Apprentice. By disabling this toggle, 
+					 you can set unique typography just for your online school without affecting the rest of your website.', 'thrive-apprentice' ) ?>">
+					<label class="tva-slide-checkbox <#= parseInt(TVA.theme_active) === 0 ? ' tva-inactive' : '' #>">
+						<span class="settings-checkbox-label">
+							<?php esc_html_e( 'Inherit typography settings from Thrive Theme Builder', 'thrive-apprentice' ); ?>
+							<?php tva_get_svg_icon( 'info-circle_light' ); ?>
+						</span>
+						<input type="checkbox" class="change" data-fn="changeInheritTypography"<#=model.inheritTypography() && parseInt(TVA.theme_active) === 1 ? ' checked' : ''#> <#= parseInt(TVA.theme_active) === 0 ? ' disabled' : '' #>>
+						<span class="lever"></span>
+					</label>
+				</div>
+				<div class="ttd-typography-block loader-absolute small mt-15"
+				<#=model.inheritTypography() && parseInt(TVA.theme_active) === 1 ? ' style="display: none"' : '' #>>
+				<div class="ttd-typography-main">
+					<div class="ttd-typography-top">
+
+						<span class="active-status active"><?php esc_html_e( 'Currently Active', 'thrive-apprentice' ); ?></span>
+
+						<button class="height-toggle click" data-fn="toggleTypography">
+							<span class="text"><?php esc_html_e( 'Expand', 'thrive-apprentice' ); ?></span>
+							<?php Thrive_Views::svg_icon( 'caret-down-double' ); ?>
+						</button>
+					</div>
+					<div id="ttd-typography-block-<#=model.getId()#>>" class="ttd-typography-content" style="height: 1269.45px;">
+						<iframe src="<#=model.getTypographyPreviewUrl() #>" loading="lazy" class="typography-frame"></iframe>
+					</div>
+				</div>
+				<div class="ttd-typography-footer">
+					<div class="ttd-typography-title">
+						<div class="typography-name"><?php esc_html_e( 'Default school typography', 'thrive-apprentice' ); ?></div>
+					</div>
+
+					<button class="click" data-fn="resetTypography">
+						<?php esc_html_e( 'Reset', 'thrive-apprentice' ); ?>
+					</button>
+
+					<a class="tva-btn tva-btn-blue" href="<#=model.deepGet('typography.edit_url')#>" target="_blank" rel="opener">
+						<?php esc_html_e( 'Edit', 'thrive-apprentice' ); ?>
+					</a>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

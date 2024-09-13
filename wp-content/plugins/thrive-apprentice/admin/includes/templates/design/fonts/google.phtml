@@ -1,0 +1,32 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div>
+	<label for="tva-fonts-select" class="settings-label"><?php echo __( 'Font family', 'thrive-apprentice' ) ?> </label>
+	<select class="tva-fonts-select change" id="tva-fonts-select" data-fn="changeFont"></select>
+</div>
+
+<div class="tva-flex tva-flex-one">
+	<div>
+		<label for="tva-regular-select" class="settings-label"><?php echo __( 'Regular', 'thrive-apprentice' ) ?> </label>
+		<select class="change" data-fn="changeFontProperty" data-template-font-prop="font_regular" id="tva-regular-select"></select>
+	</div>
+
+	<div class="tva-bold-holder ml-10">
+		<label for="tva-bold-select" class="settings-label"><?php echo __( 'Bold', 'thrive-apprentice' ) ?> </label>
+		<select class="change" data-fn="changeFontProperty" data-template-font-prop="font_bold" id="tva-bold-select"></select>
+	</div>
+</div>
+
+<div>
+	<label for="tva-charset-select" class="settings-label"><?php echo __( 'Charset', 'thrive-apprentice' ) ?> </label>
+	<select class="change" data-fn="changeFontProperty" data-template-font-prop="font_charset" id="tva-charset-select"></select>
+</div>

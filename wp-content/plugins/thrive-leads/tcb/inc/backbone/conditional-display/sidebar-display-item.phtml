@@ -1,0 +1,8 @@
+<li class="cdg-display-item<#= isVisible ? '' : ' not-visible'#>" data-display-key="<#= displayKey #>" data-display-group="<#= groupKey #>">
+	<button class="click cdg-display" data-display-key="<#= displayKey #>" data-display-group="<#= groupKey #>" data-fn="<#= isVisible ? 'locateElement' : 'setDisplayActive'#>">
+		<#= displayName #>
+
+		<#= isVisible ? TVE.icon( 'crosshairs-regular' ):'' #>
+	</button>
+	<ul class="nested-cdg"><#= nestedGroups #></ul>
+</li>

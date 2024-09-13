@@ -1,0 +1,156 @@
+<p class="grey m-0"><?php echo __( 'What type of evergreen countdown would you like?', 'thrive-ult' ) ?></p>
+
+<div class="control-grid mb-0">
+	<select class="tvu-real-time tvd-select2">
+		<option value="absolute"><?php echo __( 'Absolute - the countdown duration is exactly the same for every user', 'thrive-ult' ) ?></option>
+		<option value="realistic"
+		<#= item.real == 1 ? 'selected' : '' #> >
+		<?php echo __( 'Minimum duration - the countdown ends at a specified time of day after the minimum duration is met', 'thrive-ult' ) ?>
+		</option>
+	</select>
+</div>
+
+<p class="grey tvu-duration-label-realistic mt-0 control-grid flex-start <#= item.real == 1 ? '' : 'hidden' #>">
+	<?php echo __( 'Set minimum countdown duration', 'thrive-ult' ) ?>
+	<a href="https://thrivethemes.com/tkb_item/how-to-use-the-absolute-and-minimum-duration-options-when-creating-an-evergreen-campaign/" class="tvd-icon-info-gray tvd-tooltipped"
+	   data-position="top" data-tooltip="<?php echo __( 'Learn more about this option', 'thrive-ult' ) ?>" target="_blank"></a>
+</p>
+
+<p class="grey tvu-duration-label-absolute mt-0 <#= item.real == 1 ? 'hidden' : '' #>">
+	<?php echo __( 'Set countdown duration', 'thrive-ult' ) ?>
+</p>
+
+<div class="control-grid flex-start pb-0">
+	<div class="tvd-input-field mr-30">
+		<input id="tvu-evergreen-days" class="tvu-evergreen-duration" maxlength="3" type="text" value="<#= item.days_duration #>" data-field="days_duration">
+		<label for="tvu-evergreen-days">
+			<?php echo __( 'Days', 'thrive-ult' ) ?>
+		</label>
+	</div>
+	<div class="tvd-input-field mr-30">
+		<input id="tvu-evergreen-hours" class="tvu-evergreen-duration" maxlength="3" type="text" value="<#= item.hours_duration #>" data-field="hours_duration">
+		<label for="tvu-evergreen-hours">
+			<?php echo __( 'Hours', 'thrive-ult' ) ?>
+		</label>
+	</div>
+	<div class="tvd-input-field mr-30">
+		<input id="tvu-evergreen-minutes" class="tvu-evergreen-duration" maxlength="3" type="text" value="<#= item.minutes_duration #>" data-field="minutes_duration">
+		<label for="tvu-evergreen-minutes">
+			<?php echo __( 'Minutes', 'thrive-ult' ) ?>
+		</label>
+	</div>
+	<div class="tvd-input-field">
+		<input id="tvu-evergreen-seconds" class="tvu-evergreen-duration" maxlength="3" type="text" value="<#= item.seconds_duration  #>" data-field="seconds_duration">
+		<label for="tvu-evergreen-seconds">
+			<?php echo __( 'Seconds', 'thrive-ult' ) ?>
+		</label>
+	</div>
+</div>
+
+<div class="tvu-real-time-wrapper tvd-margin-bottom control-grid wrap flex-start m-0 p-0"<#= item.real == 1 ? '' : ' style="display: none"' #>>
+
+<p class="grey fill mb-0"><?php echo __( "What time should the countdown end after the minimum duration is met?", 'thrive-ult' ) ?></p>
+
+<div class="control-grid">
+	<div class="tvd-input-field timepicker-append-to tvd-input-field-medium tvd-no-padding-left">
+		<input id="tvu-real-time" type="text" class="tvd-no-focus tvd-no-margin w-75"
+			   value="<#= item.realtime ? item.realtime : '' #>" data-field="real_time">
+	</div>
+	<p class="tvd-inline-block tvd-vertical-align ml-20 mb-0 mt-0">
+		<?php echo __( "o'clock. ", 'thrive-ult' ) ?>
+	</p>
+</div>
+
+<div class="control-grid ml-20">
+	<p class="tvd-inline-block tvd-vertical-align tvd-inline-block tvd-vertical-align mr-20 mt-0 mb-0">
+		<?php echo __( 'Timezone:', 'thrive-ult' ) ?>
+	</p>
+	<div class="tvd-input-field mt-0 mb-0 mr-20 w-175">
+		<select id="tvu-evergreen-gmt-offset" class="tvd-select2" name="gmt_offset" aria-describedby="timezone-description">
+			<?php echo wp_timezone_choice( get_user_locale() ); ?>
+		</select>
+	</div>
+	<p class="tvd-inline-block tvd-vertical-align tvd-no-margin gray-text tvd-small-text">
+		<?php echo __( 'Universal time is: ', 'thrive-ult' ) ?>
+		<?php echo date( 'Y-m-d h-i-s' ) ?>
+	</p>
+</div>
+</div>
+
+<div class="control-grid flex-start pb-0 mt-10">
+	<div class="control-grid flex-start w-200 mr-30">
+		<span class="tvd-no-margin grey"><?php echo __( 'Activate Lockdown?', 'thrive-ult' ) ?></span>
+		<span class="tvd-icon-info-gray tvd-tooltipped" data-position="top" data-tooltip="<?php echo __( 'Lockdown campaigns are more secure and work by restricting access to email subscribers only', 'thrive-ult' ) ?>"></span>
+	</div>
+	<div class="tvd-switch pb-20">
+		<label>
+			<?php echo __( 'NO', 'thrive-ult' ) ?>
+			<input class="tvu-lockdown-switch" <#= !lockdown == 1 ? '' : 'checked' #> type="checkbox">
+			<span class="tvd-lever"></span>
+			<?php echo __( 'YES', 'thrive-ult' ) ?>
+		</label>
+	</div>
+</div>
+
+<div class="control-grid flex-start pb-0">
+	<div class="control-grid flex-start w-200 mr-30">
+		<span class="tvd-no-margin grey"><?php echo __( 'Repeat this campaign?', 'thrive-ult' ) ?></span>
+		<span class="tvd-icon-info-gray tvd-tooltipped" data-position="top" data-tooltip="<?php echo __( 'Optionally restart the campaign after the initial promotion period has ended. This allows you to reopen the offer for a limited period as a final attempt to convert anyone who missed the initial promotion window', 'thrive-ult' ) ?>"></span>
+	</div>
+	<div class="tvd-switch pb-20">
+		<label>
+			<?php echo __( 'NO', 'thrive-ult' ) ?>
+			<input class="tvu-repeat-switch" <#= item.evergreen_repeat == 1 ? 'checked' : '' #> type="checkbox">
+			<span id="tvu-repeat-campaign-switch" class="tvd-lever"></span>
+			<?php echo __( 'YES', 'thrive-ult' ) ?>
+		</label>
+	</div>
+</div>
+
+<div class="tvu-gray-box tvu-repeat-wrapper tvd-margin-bottom"<#= item.evergreen_repeat == 1 ? '' : ' style="display: none"' #>>
+<p class="tvd-inline-block tvd-vertical-align tvd-no-margin">
+	<?php echo __( "Show this campaign again after", 'thrive-ult' ) ?>
+</p>
+<div class="tvd-input-field tvd-inline-block tvd-input-field-small">
+	<input id="tvu-evergreen-expire" class="tvd-no-margin" maxlength="5" type="text"
+		   value="<#= item.end && typeof item.end !== 'object' ? item.end : '' #>" data-field="end">
+</div>
+<p class="tvd-inline-block tvd-vertical-align tvd-no-margin">
+	<?php echo __( 'days.', 'thrive-ult' ) ?>
+</p>
+</div>
+
+<div class="tvd-v-spacer"></div>
+
+<p class="grey m-0"><?php echo __( 'When should the countdown start', 'thrive-ult' ) ?></p>
+
+<div class="control-grid pb-5">
+	<select class="tvu-evergreen-settings tvd-select2">
+		<# if(collection instanceof ThriveUlt.collections.LeadGroupsCollection) { #>
+		<option value="conversion"
+		<#= item.trigger.type == 'conversion' ? 'selected' : '' #>><?php echo __( 'When a lead generation form is submitted', 'thrive-ult' ) ?></option>
+		<# } #>
+		<# if(lockdown == 1) { #>
+		<option value="promotion"
+		<#= item.trigger.type == 'promotion' ? 'selected' : '' #>><?php echo __( 'Visit to promotion page', 'thrive-ult' ) ?></option>
+		<option value="webhook"
+		<#= item.trigger.type == 'webhook' ? 'selected' : '' #>><?php echo __( '3rd party event', 'thrive-ult' ); ?></option>
+		<# } else { #>
+		<option value="first"
+		<#= item.trigger.type == 'first' ? 'selected' : '' #>><?php echo __( 'First visit to site', 'thrive-ult' ) ?></option>
+		<option value="url"
+		<#= item.trigger.type == 'url' ? 'selected' : '' #>><?php echo __( 'Visit to a specific page', 'thrive-ult' ) ?></option>
+		<# } #>
+	</select>
+
+</div>
+
+<div id="tvu-trigger-description" class="tvd-small-text tvu-campaign-trigger-description grey"></div>
+<div id="tvu-evergreen-settings"></div>
+
+<div class="tvu-evergreen-linked">
+	<p>
+		<strong><?php echo __( "This campaign will automatically start when a conversion event of the following campaigns are met", 'thrive-ult' ); ?>
+			: </strong></p>
+	<div class="tvu-evergreen-linked-to"></div>
+</div>

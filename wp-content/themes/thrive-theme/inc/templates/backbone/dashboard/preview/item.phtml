@@ -1,0 +1,10 @@
+<div class="ttd-preview-skin-item-template <# if ( this.model.get( 'preview_open' ) ) { #>ttd-preview-open<# } #> <# if ( this.model.isActive() ) { #>active<# } #> click" data-fn="changeSkinPreview">
+	<span class="ttd-active-mark"><?php echo __( 'Active', 'thrive-theme' ); ?></span>
+	<# if ( this.model.get( 'preview_open' ) ) { #>
+	<span class="ttd-preview-mark"><?php echo __( 'Preview Open', 'thrive-theme' ); ?></span>
+	<# } #>
+	<div class="ttd-preview-skin-item-name"><#= this.model.get('name') #></div>
+	<div class="ttd-action-buttons">
+		<div class="click" data-fn="changeSkinPreview"><?php echo __( 'Preview', 'thrive-theme' ); ?></div>
+	</div>
+</div>

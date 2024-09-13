@@ -1,0 +1,18 @@
+<# if ( this.state.get( 'step' ) === 'input' ) { #>
+<div class="tva-list-input"><#= this.renderInput() #></div>
+<div class="tva-add-check click btn-save" data-fn="save">
+	<svg class="tva-svg-icon ta-check">
+		<use xlink:href="#ta-check"></use>
+	</svg>
+	<#= this.str.save #>
+</div>
+<# } #>
+
+<# if ( this.state.get( 'step' ) === 'default' ) { #>
+<div class="tva-add-plus click btn-show-input" data-fn="showInput">
+	<svg class="tva-svg-icon ta-plus-circle">
+		<use xlink:href="#ta-plus-circle"></use>
+	</svg>
+	<#= this.str.title #>
+</div>
+<# } #>

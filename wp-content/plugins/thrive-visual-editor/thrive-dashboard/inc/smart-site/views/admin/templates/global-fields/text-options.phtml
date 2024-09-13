@@ -1,0 +1,29 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div class="tvd-tss-field-data">
+	<label for="tvd-tss-field-name" ><?php echo __( 'Field Name', 'thrive-dash' ) ?> *</label>
+	<div class="tvd-input-field">
+		<input id="tvd-tss-field-name" autocomplete="text" class="input-change <#= model.get( 'default_field' )? 'tvd-disabled tvd-no-focus' : '' #>" type="text" value="<#= model.get('name') #>"
+			   data-field="name"
+			   placeholder="<?php echo __( 'Company name', 'thrive-dash' ) ?>">
+		<label></label>
+	</div>
+</div>
+
+<div class="tvd-tss-field-data">
+	<label for="tvd-tss-field-text"><?php echo __( 'Text', 'thrive-dash' ) ?> *</label>
+	<div class="tvd-input-field">
+		<input id="tvd-tss-field-text" autocomplete="text-input" class="input-change" type="text" value="<#= model.get('data').text ? model.get('data').text : '' #>" data-field="data_text" placeholder="<?php echo __( 'e.g WidgetCorp', 'thrive-dash' ) ?>">
+		<label></label>
+	</div>
+</div>

@@ -1,0 +1,37 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div class="tvd-tss-field-data">
+	<label for="tvd-tss-field-name"><?php echo __( 'Field Name', 'thrive-dash' ) ?> *</label>
+	<div class="tvd-input-field">
+		<input id="tvd-tss-field-name" autocomplete="link" class="input-change <#= model.get( 'default_field' )? 'tvd-disabled tvd-no-focus' : '' #>" type="text" value="<#= model.get('name') #>"
+			   data-field="name"
+			   placeholder="<?php echo __( 'Company website', 'thrive-dash' ) ?>">
+		<label></label>
+	</div>
+</div>
+
+<div class="tvd-tss-field-data">
+	<label for="tvd-tss-field-text"><?php echo __( 'Link Text', 'thrive-dash' ) ?> *</label>
+	<div class="tvd-input-field">
+		<input id="tvd-tss-field-text" autocomplete="link-input" class="input-change" type="text" value="<#= model.get('data').text ? model.get('data').text : '' #>" data-field="data_text" placeholder="<?php echo __( 'e.g Thrive Themes', 'thrive-dash' ) ?>">
+		<label></label>
+	</div>
+</div>
+
+<div class="tvd-tss-field-data">
+	<label for="tvd-tss-field-url"><?php echo __( 'Link URL', 'thrive-dash' ) ?> *</label>
+	<div class="tvd-input-field">
+		<input id="tvd-tss-field-url" autocomplete="url" class="input-change" type="text" value="<#= model.get('data').url ? model.get('data').url : '' #>" data-field="data_url" placeholder="<?php echo __( 'e.g thrivethemes.com', 'thrive-dash' ) ?>">
+		<label></label>
+	</div>
+</div>

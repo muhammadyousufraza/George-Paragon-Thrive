@@ -1,0 +1,27 @@
+<div class="tcm-deleted-comment clear-this tc-green-class">
+	<div class="moderation-img no-image" data-email-hash="<#= comment.get('email_hash') #>" data-social-avatar="<#= comment.get('social_avatar') #>" style="background-image: url(<#= comment.get('author_avatar_urls') #>);"></div>
+	<div class="deleted-text">
+		<#= text #>
+		<# if ( comment.get('undo-action') ) { #>
+		<a href="#" data-key="z" class="undo-action"><?php echo __( 'Undo', Thrive_Comments_Constants::T ); ?></a>
+		<# } else { #>
+		<a href="#" data-key="x" class="expand-action"><?php echo __( 'Expand', Thrive_Comments_Constants::T ) . '.'; ?></a>
+		<# } #>
+	</div>
+
+	<div class="tcm-moderation-right-message">
+		<div class="tcm-pending-save">
+			<span class="tcm-text"><?php echo __( 'Pending' ); ?>&nbsp;&hellip;</span>
+
+			<div class="tcm-pending-error tcm-icon-red tooltip-elem">
+				<span class="tooltiptext error-holder"></span>
+				<span class="tcm-error-icon"><?php echo __( 'Error' ); ?></span>
+			</div>
+
+			<span class="tcm-check">
+				<?php tcah()->tcm_icon( 'moderation-status-check', 'tcm-moderation-status-check' ); ?>
+			</span>
+		</div>
+	</div>
+
+</div>

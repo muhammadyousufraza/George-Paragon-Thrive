@@ -1,0 +1,18 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+<div class="tvd-tss-list-item <#= model.get( 'just_added' ) ? 'tve-tss-just-added':'' #>">
+    <i class="tvd-tss-icon"><#= model.get('icon') #></i>
+    <span class="tvd-tss-label"><#= model.get('name') #></span>
+    <span class="tvd-tss-value"><#= Object.entries(model.get('formated_data')).length === 0 ? '<span class="unset">Not Set</span>' : model.get('formated_data') #></span>
+    <a class="tvd-tss-edit-field tvd-tss-icon" href="javascript:void(0)"><?php echo dashboard_icon( 'edit-new' ) ?></a>
+    <a class="tvd-tss-delete-field tvd-tss-icon <#= model.get('default_field')? 'tvd-disabled':'' #>" href="javascript:void(0)"><?php echo dashboard_icon( 'trash-new' ) ?></a>
+</div>

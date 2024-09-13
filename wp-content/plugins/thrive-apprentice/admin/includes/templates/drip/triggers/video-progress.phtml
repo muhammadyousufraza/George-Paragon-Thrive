@@ -1,0 +1,14 @@
+<div class="tva-drip-content">
+	<div class="tva-opt tva-drip-video-progress">
+		<div class="tva-label">
+			<?php esc_html_e( 'Video lesson to be watched to completion', 'thrive-apprentice' ); ?>
+			<span class="tva-info-icon tva-relative tva-tooltip-parent tva-mega-tooltip">
+				<?php tva_get_svg_icon( 'info-solid' ); ?>
+				<div class="tva-custom-tooltip">
+					<?php echo __( 'This rule will expect the "featured video" on the lesson to be watched', 'thrive-apprentice' ); ?>
+				</div>
+			</span>
+		</div>
+		<select id="tva-drip-video-dropdown" data-bind="object_id"></select>
+	</div>
+</div>

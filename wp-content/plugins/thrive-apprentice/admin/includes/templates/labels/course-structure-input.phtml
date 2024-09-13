@@ -1,0 +1,18 @@
+<div class="tva-context-title"><#=this.contextTitle#></div>
+
+<div class="tva-label-input-container">
+	<# if( this.model.get('singular') ) { #>
+	<input data-label-type="singular" data-model-id="tva-edit-<#=this.model.cid#>" data-fn="editing" type="text" value="<#- this.model.get('singular') #>" class="tva-title-events">
+	<# } else { #>
+	<span class="tva-line"></span>
+	<# } #>
+</div>
+
+<div class="tva-label-input-container">
+	<# if( this.model.get('plural') ) { #>
+	<input data-label-type="plural" data-model-id="tva-edit-<#=this.model.cid#>" data-fn="editing" type="text" value="<#- this.model.get('plural') #>" class="tva-title-events">
+	<# } else { #>
+	<span class="tva-line"></span>
+	<# } #>
+</div>
+

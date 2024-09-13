@@ -1,0 +1,49 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tcb-modal-content sym-admin-modal">
+	<span class="tcb-modal-title">
+		<#= title #>
+	</span>
+	<div class="error-container"></div>
+
+	<p class="tcb-modal-description">
+		<#= description #>
+	</p>
+
+	<div class="save-container">
+
+		<div class="tvd-input-field">
+			<input type="text" class="content-title" name="title" placeholder="<#= placeholder #>">
+		</div>
+
+		<# if ( is_symbol && show_category ) { #>
+			<div class="tvd-input-field align-left category-container">
+				<label class="tcb-symbol-check" for="add_category">
+					<input id="add_category" type="checkbox" class="" name="add_category">
+					<span class="checkmark"></span>
+					<?php echo __( 'Add symbol to a category', 'thrive-cb' ); ?>
+				</label>
+
+				<div class="category_selection" style="display: none;">
+					<div class="">
+						<select id="tcb-save-template-categ-suggest"></select>
+						<input type="hidden" id="tcb-save-template-category-id" value=""/>
+					</div>
+				</div>
+			</div>
+		<# } #>
+	</div>
+
+	<div class="tcb-modal-footer">
+		<button type="button" class="tvd-modal-close">
+			<?php echo __( 'Cancel', 'thrive-cb' ) ?>
+		</button>
+
+		<a class="tvd-submit tvd-modal-save tvd-right" href="#" target="_blank" >
+			<#= save_text #>
+		</a>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+<div class="tqb-redirect-status-<#= item.get('status') #> tqb-redirect-cats">
+	<div class="">
+		<span class="tqb-redirect-link-status"><#= item.get('result_name') #></span>
+	</div>
+	<div class="">
+		<select>
+			<option value="local"><?php echo __( 'Redirect to content on site', 'thrive-quiz-builder' ) ?></option>
+			<option value="external"><?php echo __( 'Redirect to external URL', 'thrive-quiz-builder' ) ?></option>
+		</select>
+	</div>
+	<div class="">
+		<a class="tqb-redirect-link-target" href="<#= item.get('link') #>" target="_blank">
+			<#= item.get('type') === 'local' ? item.get('post_title') : item.get('link') #>
+		</a>
+		<a class="tqb-edit-redirect-link tvd-icon-pencil" href="javascript:void(0)"></a>
+		<input type="text" class="tqb-link-target" style="display: none">
+	</div>
+</div>

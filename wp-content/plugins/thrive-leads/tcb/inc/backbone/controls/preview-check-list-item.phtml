@@ -1,0 +1,36 @@
+<#if(typeof no_item !== 'undefined' && no_item){#>
+<div class="list-no-items tcb-text-center"><?php echo __( 'None', 'thrive-cb' ) ?></div>
+<#} else {#>
+<div class="preview-list-item preview-check-item tcb-relative <#= ! item.get('checked') ? 'preview-check-item-disabled' : ''#>"
+	 data-fn="item_click" data-key="<#=item.get('key')#>" data-index="<#=item.index#>" data-label="<#=item.get('label')#>"  <#= item.get('fieldType') ? ' data-type="' + item.get('fieldType') + '"' : ''#>>
+<a href="javascript:void(0)" class="item-icon <#= item.get('icon_click') ? ' click' : ''#>" data-fn="iconClick" data-index="<#=item.index#>">
+	<#=item.get('icon')#>
+</a>
+<div class="preview-list-sort-handle col-sep"><?php tcb_icon( 'dots2' ); ?></div>
+<div class="preview-list-check">
+	<label class="tcb-checkbox">
+		<input type="checkbox" class="change" data-value="<#=item.get('key')#>" data-index="<#=item.index#>" data-fn="item_toggle" <#=item.get('checked') === true ? 'checked' : ''#>> <span></span>
+	</label>
+</div>
+<div class="item-label tcb-truncate"><#=item.get('label')#></div>
+
+<# if (settings_icon = view.get_config( 'marked', false ) && item.get(view.get_config( 'marked_field', false )) ) { #>
+<a href="javascript:void(0)" data-side="top" data-tooltip="<#= view.get_config( 'marking_text', false ) #>"
+   data-index="<#=item.index#>">
+	<#=TVE.icon( view.get_config( 'marking_icon', false ) )#>
+</a>
+<# } #>
+<# if (settings_icon = view.get_config( 'settings_icon', false )) { #>
+<a href="javascript:void(0)" data-side="left" data-tooltip="<?php esc_attr_e( 'Edit', 'thrive-cb' ) ?>" class="action-edit click" data-fn="item_click"
+   data-index="<#=item.index#>">
+	<#=TVE.icon(settings_icon)#>
+</a>
+<# } #>
+<# if (clone_icon = view.get_config( 'clone_icon', false )) { #>
+<a href="javascript:void(0)" data-tooltip="<?php esc_attr_e( 'Duplicate', 'thrive-cb' ) ?>" class="action-clone click" data-fn="item_duplicate"
+   data-index="<#=item.index#>">
+	<#=TVE.icon(clone_icon)#>
+</a>
+<# } #>
+</div>
+<#}#>

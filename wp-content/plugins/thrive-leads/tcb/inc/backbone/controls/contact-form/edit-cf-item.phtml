@@ -1,0 +1,72 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Ovidiu
+ * Date: 5/8/2018
+ * Time: 8:50 AM
+ */
+$captcha_api = Thrive_Dash_List_Manager::credentials( 'recaptcha' );
+?>
+
+<div class="control-grid">
+	<div class="label">
+		<?php echo __( 'Field Type', 'thrive-cb' ); ?>
+	</div>
+	<div class="input">
+		<select class="change tcb-cf-item-type" data-fn="change_setting" data-setting="type"></select>
+	</div>
+</div>
+<div class="tcb-edit-item-category" id="text">
+	<div class="control-grid">
+		<div class="label">
+			<?php echo __( 'Label', 'thrive-cb' ); ?>
+		</div>
+		<div class="input">
+			<input type="text" class="change input tcb-cf-item-label" data-fn="change_setting" data-fn-input="change_setting" data-setting="label"/>
+		</div>
+	</div>
+	<div class="control-grid">
+		<div class="label">
+			<?php echo __( 'Placeholder', 'thrive-cb' ); ?>
+		</div>
+		<div class="input">
+			<input type="text" class="change input tcb-cf-item-placeholder" data-fn="change_setting" data-fn-input="change_setting" data-setting="placeholder"/>
+		</div>
+	</div>
+	<div class="control-grid no-space">
+		<div class="label">
+			<label class="tcb-checkbox"><input type="checkbox" class="change tcb-cf-item-required" data-fn="change_setting" data-setting="required"/><span><?php echo __( 'Required', 'thrive-cb' ) ?></span></label>
+		</div>
+	</div>
+</div>
+<div class="tcb-edit-item-category" id="recaptcha">
+	<?php if ( ! empty( $captcha_api ) ) : ?>
+		<div class="control-grid">
+			<div class="label">
+				<?php echo __( 'Size', 'thrive-cb' ); ?>
+			</div>
+			<div class="input">
+				<select class="change tcb-cf-item-recaptcha_size" data-fn="change_setting" data-setting="recaptcha_size">
+					<option value="normal"><?php echo __( 'Normal', 'thrive-cb' ); ?></option>
+					<option value="compact"><?php echo __( 'Compact', 'thrive-cb' ); ?></option>
+				</select>
+			</div>
+		</div>
+		<div class="control-grid">
+			<div class="label">
+				<?php echo __( 'Style', 'thrive-cb' ); ?>
+			</div>
+			<div class="input">
+				<select class="change tcb-cf-item-recaptcha_style" data-fn="change_setting" data-setting="recaptcha_style">
+					<option value="light"><?php echo __( 'Light', 'thrive-cb' ); ?></option>
+					<option value="dark"><?php echo __( 'Dark', 'thrive-cb' ); ?></option>
+				</select>
+			</div>
+		</div>
+	<?php else : ?>
+		<div class="control-grid">
+			<div class="blue-text"><?php tcb_icon( 'info' ); ?></div>
+			<span><?php echo sprintf( __( 'You can’t add a Recaptcha field because you don’t have a Google API connection available. For more info %s .', 'thrive-cb' ), '<a style="color: #6cafec !important;" target="_blank" href="' . admin_url( 'admin.php?page=tve_dash_api_connect' ) . '">click here</a>' ); ?></span>
+		</div>
+	<?php endif; ?>
+</div>

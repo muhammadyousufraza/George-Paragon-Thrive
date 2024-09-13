@@ -1,0 +1,30 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-university
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+<div class="tva-create-state tva-create-state-wizard">
+	<div class="tva-login-box">
+		<h4 class="mb-15"><?php echo __( 'Create a new page', 'thrive-apprentice' ) ?></h4>
+
+		<div class="tva-create-title">
+			<input placeholder="<?php echo __( 'Page title', 'thrive-apprentice' ) ?>" class="tvd-save input" type="text" data-fn="onInput" data-field="title">
+
+			<button class="tva-save-btn click" data-fn="onSave">
+				<?php echo __( 'Add page', 'thrive-apprentice' ) ?>
+			</button>
+		</div>
+
+	</div>
+
+	<button class="tva-empty-btn mt-10 click" data-fn="onCancel">
+		<?php tva_get_svg_icon( 'plus-circle' ); ?>
+		<?php echo __( 'Or choose an existing page', 'thrive-apprentice' ) ?>
+	</button>
+</div>

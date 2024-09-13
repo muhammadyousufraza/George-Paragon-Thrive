@@ -1,0 +1,71 @@
+<div id="tqb-filter-reports-modal" class="tqb-modal-step tqb-filter-reports-modal">
+	<div class="tvd-modal-content">
+		<h3 class="tvd-modal-title">
+			<?php echo __( 'Filter reports', 'thrive-quiz-builder' ); ?>
+		</h3>
+
+		<div class="tqb-filter-reports-inner">
+		<div class="tvd-col tvd-s6 tvd-m4 tqb-custom-filter">
+			<div class="mb-10 tvd-row"><?php echo __( 'Quiz started between', 'thrive-quiz-builder' ); ?></div>
+			<div class="tvd-row tqb-st-end-state">
+				<div class="tqb-txt-label"><?php echo __( 'From', 'thrive-quiz-builder' ); ?></div>
+				<input type="text" id="tqb-report-date-started" class="tvd-no-focus"/>
+				<span class="mr-10 tvd-icon-calendar start-date-calendar calendar-trigger-icon" data-activates="#tqb-report-start-date"></span>
+
+				<div class="tqb-txt-label"><?php echo __( 'To', 'thrive-quiz-builder' ); ?></div>
+				<input type="text" id="tqb-report-date-finished" class="tvd-no-focus"/>
+				<span class="tvd-icon-calendar end-date-calendar calendar-trigger-icon" data-activates="#tqb-report-end-date"></span>
+			</div>
+		</div>
+		<hr>
+
+		<div class="tvd-col tvd-s6 tvd-m4 tqb-progress-filter">
+			<div class="mb-10 tvd-row"><?php echo __( 'Quiz progress', 'thrive-quiz-builder' ); ?></div>
+			<div class="tvd-row">
+				<input type="radio" id="tqb-in-all-radio" class="tqb-filter-report-input" value="all" name="tqb_progress_status" data-bind="progress"/>
+				<label for="tqb-in-all-radio"><?php echo __( 'All', 'thrive-quiz-builder' ); ?></label>
+
+				<input type="radio" id="tqb-in-progress-radio" class="tqb-filter-report-input" value="in_progress" name="tqb_progress_status" data-bind="progress"/>
+				<label for="tqb-in-progress-radio"><?php echo __( 'In progress', 'thrive-quiz-builder' ); ?></label>
+
+				<input type="radio" id="tqb-in-completed-radio" class="tqb-filter-report-input" value="completed" name="tqb_progress_status" data-bind="progress"/>
+				<label for="tqb-in-completed-radio"><?php echo __( 'Completed', 'thrive-quiz-builder' ); ?></label>
+			</div>
+		</div>
+
+		<# if ( quizModel.get('type') !== ThriveQuizB.data.quiz_types.survey ) { #>
+		<hr>
+		<div class="tvd-col tvd-s6 tvd-m4 tqb-result-filter" data-tooltip="<?php echo esc_attr('Quiz result is available only when filtering through completed quizzes.'); ?>" data-position="top">
+			<div class="mb-10 tvd-row"><?php echo __( 'Quiz result', 'thrive-quiz-builder' ); ?></div>
+
+			<# if ( this.resultIsWithinRage() ) { #>
+			<div class="tvd-row tqb-numeric-result">
+				<div class="tqb-nb-label"><?php echo __( 'Between', 'thrive-quiz-builder' ); ?></div>
+				<input id="tqb-low-nb" type="number" data-bind="result_min" min="<#= this.results.get('min') #>" max="<#= this.results.get('max') #>" class="tvd-no-focus tqb-filter-report-input"/>
+				<# if ( quizModel.get('type') === ThriveQuizB.data.quiz_types.percentage ) { #>
+					<span class="tqb-percentage-icon">%</span>
+				<# } #>
+				<div class="ml-10 tqb-nb-label"><?php echo __( 'and', 'thrive-quiz-builder' ); ?></div>
+				<input id="tqb-high-nb" type="number" data-bind="result_max" min="<#= this.results.get('min') #>" max="<#= this.results.get('max') #>" class="tvd-no-focus tqb-filter-report-input"/>
+				<# if ( quizModel.get('type') === ThriveQuizB.data.quiz_types.percentage ) { #>
+					<span class="tqb-percentage-icon">%</span>
+				<# } #>
+			</div>
+			<# } else { #>
+			<div class="tvd-row tqb-category-result">
+				<# quizModel.get('results').each( ( category ) => { #>
+				<input id="<#=category.get('id')#>" class="tqb-category-checkbox tvd-no-focus" type="checkbox" <#= this.categories && this.categories.includes(category.get('text')) ?'checked': '' #> data-text="<#=category.get('text')#>"/>
+				<label for="<#=category.get('id')#>"><#=category.get('text')#></label>
+				<# } ) #>
+			</div>
+			<# } #>
+		</div>
+		<# } #>
+		</div>
+
+		<div class="tqb-filter-modal-footer">
+			<button type="button" class="click tva-modal-btn tvd-modal-close"><?php echo __( 'Cancel', 'thrive-quiz-builder' ); ?></button>
+			<button type="button" class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-purple tvd-full-btn click tvd-modal-submit" data-fn="save"><?php echo __( 'Save', 'thrive-quiz-builder' ) ?></button>
+		</div>
+	</div>
+</div>

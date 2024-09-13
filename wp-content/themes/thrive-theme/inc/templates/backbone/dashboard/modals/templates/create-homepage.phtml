@@ -1,0 +1,24 @@
+<div class="modal-sidebar">
+	<div class="ttd-modal-sidebar-icon" data-icon="singular">
+		<?php Thrive_Views::svg_icon( 'homepage-modal' ); ?>
+		<p><?php echo __( 'Homepage templates allow you to create unique designs for your homepage without affecting the rest of your site.', 'thrive-theme' ); ?></p>
+	</div>
+</div>
+<div class="modal-options">
+
+	<div class="modal-user-actions">
+		<h3>
+			<?php echo __( 'Your Template Name', 'thrive-theme' ); ?>
+		</h3>
+
+		<label class="default-text" for="homepage-template-name"><?php echo __( 'New Template Name', 'thrive-theme' ); ?></label>
+		<input type="text" id="homepage-template-name" placeholder="<?php echo __( 'My New Template', 'thrive-theme' ); ?>" class="keyup" data-fn="keyup">
+		<div class="ttd-error-message" style="display: none;">
+			<?php echo __( 'Please specify the name of your template.', 'thrive-theme' ) ?>
+		</div>
+	</div>
+
+	<div class="modal-buttons">
+		<button class="click normal-button" data-fn="save"><?php echo __( 'Finish', 'thrive-theme' ); ?></button>
+	</div>
+</div>

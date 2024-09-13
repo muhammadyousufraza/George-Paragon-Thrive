@@ -1,0 +1,101 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+/**
+ * Types of import
+ */
+$import_types = TVA_Customer_Manager::get_import_types();
+?>
+<div class="tva-modal-step" data-step="0">
+	<div class="tvd-modal-content">
+		<h3 class="tvd-modal-title"><?php echo __( 'Bulk member import', 'thrive-apprentice' ); ?></h3>
+		<p class="mt-0 mb-15"><?php echo __( 'Choose the import method:', 'thrive-apprentice' ); ?></p>
+		<div class="tva-flex tva-flex-row tva-space-center mb-15">
+			<?php foreach ( $import_types as $type ): ?>
+				<div class="click tva-i-card" data-fn="jumpToStep" data-step="<?php echo $type['step']; ?>">
+					<?php tva_get_svg_icon( $type['icon'] ); ?>
+					<p><?php echo $type['text']; ?></p>
+				</div>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</div>
+<div class="tva-modal-step" data-step="1">
+	<div class="tvd-modal-content">
+		<h3 class="tvd-modal-title"><?php echo __( 'Import member list', 'thrive-apprentice' ); ?></h3>
+		<p class="mt-0 mb-15 tva-flex tva-space-between">
+			<span><?php echo __( 'Drop the file to be uploaded below.', 'thrive-apprentice' ) ?></span>
+			<span class="tva-flex tva-align-center">
+				<?php tva_get_svg_icon( 'info' ); ?>&nbsp;
+				<?php echo __( 'To learn how to create this file', 'thrive-apprentice' ) ?>&nbsp;
+				<a href="https://thrivethemes.com/tkb_item/where-to-find-the-list-of-customers-in-sendowl/" target="_blank" rel="noopener"><?php echo __( 'click here', 'thrive-apprentice' ) ?></a>
+			</span>
+		</p>
+		<div class="tva-drop-file-elem">
+			<span class="tva-file-upload-trigger">
+				<?php tva_get_svg_icon( 'paperclip-1' ); ?><?php echo __( 'Add file ', 'thrive-apprentice' ); ?>
+			</span>
+			<?php echo __( 'or drop files here', 'thrive-apprentice' ) ?>
+			<span class="tva-file-upload-trigger" id="tva-file-name"></span>
+		</div>
+
+		<div class="tva-flex tva-flex-row tva-space-between mt-30">
+			<button type="button" class="click tva-modal-btn tva-modal-btn-back" data-fn="jumpToStep" data-step="0"><?php echo __( 'Back', 'thrive-apprentice' ); ?></button>
+			<button type="button" class="click tva-modal-btn tva-modal-btn-green" data-fn="jumpToStep" data-step="3"><?php echo __( 'Continue', 'thrive-apprentice' ); ?></button>
+		</div>
+	</div>
+</div>
+<div class="tva-modal-step" data-step="2">
+	<div class="tvd-modal-content">
+
+		<h3 class="tvd-modal-title"><?php echo __( 'Bulk add members', 'thrive-apprentice' ); ?></h3>
+		<p class="mt-0 mb-15"><?php echo __( 'Add the name and email address of each member, separated by a coma. One member per line.', 'thrive-apprentice' ); ?></p>
+		<textarea id="tva-list-import" placeholder="<?php echo esc_html__( 'Jane Doe, janedoe@gmail.com,' . "\r\n" . 'John Doe, johndoe@gmail.com', 'thrive-apprentice' ); ?>"></textarea>
+		<div class="tva-flex tva-flex-row tva-space-between margin-top-30">
+			<button type="button" class="click tva-modal-btn tva-modal-btn-back" data-fn="jumpToStep" data-step="0"><?php echo __( 'Back', 'thrive-apprentice' ); ?></button>
+			<button type="button" class="click tva-modal-btn tva-modal-btn-green" data-fn="jumpToStep" data-step="3"><?php echo __( 'Continue', 'thrive-apprentice' ); ?></button>
+		</div>
+	</div>
+</div>
+<div class="tva-modal-step" data-step="3">
+	<div class="tvd-modal-content">
+		<h3 class="tvd-modal-title"><?php echo __( 'Import member list', 'thrive-apprentice' ); ?></h3>
+
+		<div class="tvd-modal-overflow">
+			<div class="mt-0 mb-15 tva-flex tva-space-between">
+				<p class="mt-0 mb-0"><?php echo __( 'Validate your list and choose product access', 'thrive-apprentice' ); ?></p>
+				<p class="mt-0 mb-0" id="tva-csv-customer-stats"></p>
+			</div>
+			<table class="tva-csv-customers-list mb-30">
+				<thead>
+				<tr>
+					<th><?php echo __( 'Member name', 'thrive-apprentice' ); ?></th>
+					<th>
+						<?php echo __( 'Email address', 'thrive-apprentice' ); ?>
+						<span class="click toggle" data-fn="toggleTable">
+							<i><?php tva_get_svg_icon( 'angle-right' ); ?></i>
+						</span>
+					</th>
+				</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+			<p class="tvd-modal-subtitle-text mb-10"><?php echo esc_html__( 'Give users access to the following:', 'thrive-apprentice' ); ?></p>
+			<div id="tva-add-customer-courses-list" class="tva-modal-new-box"></div>
+		</div>
+
+		<?php include dirname( dirname( __FILE__ ) ) . '/utils/customers/notify.phtml'; ?>
+
+		<div class="tva-flex tva-flex-row tva-space-between margin-top-10">
+			<button type="button" class="click tva-modal-btn tva-modal-btn-back" data-fn="goToPreviouslyStep"><?php echo __( 'Back', 'thrive-apprentice' ); ?></button>
+			<button type="button" class="click tva-modal-btn tva-modal-btn-green" data-fn="save"><?php echo __( 'Save', 'thrive-apprentice' ); ?></button>
+		</div>
+	</div>
+</div>

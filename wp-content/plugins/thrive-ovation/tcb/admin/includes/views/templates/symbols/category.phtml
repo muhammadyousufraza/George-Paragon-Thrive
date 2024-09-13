@@ -1,0 +1,11 @@
+<div class="category-name">
+	<span class="cat-name"><#= category.get('name') #></span>
+	<# if ( category.get('term_id') !== 0 ) { #>
+
+		<a data-tooltip="<?php _e( 'Change Name', 'thrive-cb' ); ?>" data-position="top" class="tvd-tooltipped tvd-icon-pencil sym-cat-pen sym-pen edit-category-name"></a>
+
+		<a data-tooltip="<?php _e( 'Delete Category', 'thrive-cb' ); ?>" data-position="left" class="tvd-tooltipped sym-icon sym-delete delete-category">
+			<?php echo tcb_admin_icon( 'delete' ); ?>
+		</a>
+	<# } #>
+</div>

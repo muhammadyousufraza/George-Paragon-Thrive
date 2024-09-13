@@ -1,0 +1,45 @@
+<span class="items-per-page-selector">
+	<span class="pagination-text">
+		<?php echo esc_html__( 'Rows per page', 'thrive-ovation' ); ?>
+	</span>
+	<input type="number" value="<#= this.itemsPerPage #>" class="input" min="0" max="1000" data-fn="onInputChange"/>
+</span>
+<span class="testimonials-pagination-inner">
+	<button class="pagination-button first-page-arrow click" data-fn="openFirstPage">
+		<?php tcb_icon( 'angle-double-left' ); ?>
+	</button>
+	<button class="pagination-button prev-page-arrow click" data-fn="openPrevPage">
+		<?php tcb_icon( 'angle-left' ); ?>
+	</button>
+	<button class="pagination-button click" data-fn="openFirstPage">
+		1
+	</button>
+
+	<button class="pagination-button pagination-left-dots disabled">
+		...
+	</button>
+
+	<button class="pagination-button click" data-fn="openPrevPage">
+		<#= this.currentPage - 1 #>
+	</button>
+	<button class="pagination-button pagination-current disabled" style="background-color: #ffffff">
+		<#= this.currentPage #>
+	</button>
+	<button class="pagination-button click" data-fn="openNextPage">
+		<#= this.currentPage + 1 #>
+	</button>
+
+	<button class="pagination-button pagination-right-dots disabled">
+		...
+	</button>
+
+	<button class="pagination-button click" data-fn="openLastPage">
+		<#= this.lastPage #>
+	</button>
+	<button class=" pagination-button next-page-arrow click" data-fn="openNextPage">
+		<?php tcb_icon( 'angle-right' ); ?>
+	</button>
+	<button class="pagination-button last-page-arrow click" data-fn="openLastPage">
+		<?php tcb_icon( 'angle-double-right' ); ?>
+	</button>
+</span>

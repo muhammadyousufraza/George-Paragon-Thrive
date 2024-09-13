@@ -1,0 +1,15 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<li>
+	<input class="tva-email-trigger click" data-fn="saveTrigger" <#- checked ? 'checked' : ''#> type="checkbox" id="<#- model.get('slug') #>" name="<#- model.get('slug') #>">
+	<label for="<#- model.get('slug') #>"><#- model.get('description') #></label>
+</li>

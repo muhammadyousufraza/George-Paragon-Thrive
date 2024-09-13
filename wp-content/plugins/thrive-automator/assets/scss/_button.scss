@@ -1,0 +1,198 @@
+/**
+BUTTON
+ */
+.tap-button {
+  @extend .tap-flex;
+  box-sizing: border-box;
+  background-color: var(--tap-primary);
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 15px;
+  max-width: fit-content;
+  min-width: fit-content;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &.tap-button--loading {
+    .tap-button-text {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -30px;
+        width: 20px;
+        height: 20px;
+        background-image: url("../images/spinner.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &.icon-right {
+    flex-direction: row-reverse;
+
+    .tap-icon-wrapper {
+      margin-right: 0;
+      margin-left: 5px;
+    }
+  }
+
+  &:hover {
+    background-color: var(--tap-primary-darker);
+  }
+
+  &.tap-button--clean {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .tap-icon-wrapper {
+    --tap-icon-size: 13px;
+    margin-right: 5px;
+  }
+
+  &--status {
+    @extend .tap-button;
+    padding: 5px 10px;
+    width: 75px;
+    max-width: 75px;
+    border: 1px solid var(--tap-primary);
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    .tap-button-text {
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    &.tap-button--inactive {
+      background-color: #8e959b;
+      border: 1px solid #8e959b;
+    }
+
+  }
+
+  &--save {
+    @extend .tap-button;
+    background-color: #43b0a7;
+    font-weight: 500;
+
+    &:hover {
+      background-color: #358d86;
+    }
+
+    &.tap-disabled {
+      pointer-events: all;
+      background-color: #c0cad1;
+      opacity: 0.5;
+      color: #444648;
+    }
+  }
+
+  &--rounded {
+    @extend .tap-button;
+    border-radius: 20px;
+  }
+
+  &--upper {
+    @extend .tap-button;
+
+    .tap-button-text {
+      text-transform: uppercase;
+    }
+  }
+
+  &--ghost {
+    @extend .tap-button;
+    color: var(--tap-primary);
+    background-color: transparent;
+    border: 1px solid var(--tap-primary);
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:not(.tap-button--clean):hover {
+      background-color: var(--tap-primary);
+      color: #fff;
+    }
+  }
+
+  &--no-border {
+    @extend .tap-button--ghost;
+    border: none;
+  }
+
+  &--grey {
+    color: #999eaa !important;
+    border-color: #999eaa;
+
+    &.tap-button--ghost {
+      &:not(.tap-button--clean):hover {
+        background-color: #999eaa !important;
+        color: #fff !important;
+      }
+    }
+  }
+
+  &--white {
+    color: #fff !important;
+    border-color: #fff;
+
+    &.tap-button--ghost {
+      &:not(.tap-button--clean):hover {
+        background-color: #999eaa !important;
+        color: #fff !important;
+      }
+    }
+  }
+
+  &--bold {
+    font-weight: bold;
+  }
+
+  &--delete {
+    @extend .tap-button;
+    color: var(--tap-delete) !important;
+    border-color: var(--tap-delete);
+
+    .tap-icon-wrapper {
+      color: var(--tap-delete) !important;
+    }
+
+    &.tap-button--ghost {
+
+      &:not(.tap-button--clean):hover {
+        .tap-icon-wrapper {
+          color: #fff !important;
+        }
+
+        background-color: var(--tap-delete) !important;
+        color: #fff !important;
+      }
+    }
+  }
+}
+
+.tap-download-link {
+  display: block;
+  border-radius: 3px;
+  border: solid 1px var(--tap-primary);
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--tap-primary) !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

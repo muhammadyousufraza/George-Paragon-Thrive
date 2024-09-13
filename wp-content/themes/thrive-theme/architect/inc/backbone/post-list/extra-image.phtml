@@ -1,0 +1,22 @@
+<?php $sizes = TCB_Post_List_Featured_Image::filter_available_sizes(); ?>
+<div class="tve-background-image-type"></div>
+<label class = "image-label"><?php echo __( 'Image', 'thrive-cb' ) ?></label>
+<div class="control-grid wrap full-width">
+	<div class="bg-static-image full-width" data-state="static">
+		<div class="image-picker-wrapper"></div>
+	</div>
+	<div class="tve-advanced-controls p-5 pt-0 full-width" data-state="dynamic">
+		<div class="bg-dynamic-image full-width">
+			<label><?php echo __( 'Dynamic source', 'thrive-cb' ); ?></label>
+			<select class="dynamic-image-select change" data-fn="dynamicImageChanged"></select>
+		</div>
+		<div class="bg-dynamic-image mt-5 size-select full-width">
+			<label><?php echo __( 'Image size', 'thrive-cb' ); ?></label>
+			<select class="dynamic-image-size-select change" data-fn="dynamicImageSizeChanged">
+				<?php foreach ( $sizes as $key => $size ): ?>
+					<option value="<?php echo $key ?>"><?php echo $size ?></option>
+				<?php endforeach; ?>
+			</select>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,64 @@
+<div class="ttd-wizard-clip placeholder fw clip-logo">
+	<p class="ttd-wizard-desc mb-20 f-22"><?php echo esc_html__( 'Upload a logo for your site', 'thrive-theme' ); ?></p>
+	<div class="ttb-logos-setup">
+
+		<# if( (this.model.get( 'isSet' )) ) { #>
+		<div class="ttb-mega-tooltip">
+			<div class="ttb-custom-tooltip">
+				<p class="mb-5"><?php echo __( 'You can customize your logo separately for dark/light backgrounds for better visibility' ); ?></p>
+				<a class="ttb-mega-tooltip-acknowledge"><?php echo __( 'GOT IT' ) ?></a>
+				<div class="mt-5 logo-default" style="background-image: url('<#= this.model.get( 'preview_src' ) #>')"></div>
+			</div>
+		</div>
+
+		<span class="ttb-logos-text"><?php echo __( 'Preview your logo on different backgrounds', 'thrive-theme' ); ?></span>
+
+		<div class="ttb-logos-container">
+			<div class="click loader-absolute logo-button logo-dark"
+				 data-fn="openMedia" style="background-image: url('<#= this.model.get( 'dark_src' ) #>')">
+				<button class="edit-logo click" style="display: none;">
+					<?php Thrive_Views::svg_icon( 'logo-edit' ); ?>
+					<?php echo __( 'Edit dark logo', 'thrive-theme' ); ?>
+				</button>
+				<span class="ttd-logo-recommended-size-text"
+					  style="display: none;"><?php echo __( 'Recommended size: 250x40px', 'thrive-theme' ); ?></span>
+				<div class="edit-logo-pen">
+					<?php Thrive_Views::svg_icon( 'logo-edit', 'ttb-20-box' ); ?>
+				</div>
+			</div>
+			<div class="click loader-absolute logo-button logo-light"
+				 data-fn="openMedia" style="background-image: url('<#= this.model.get( 'light_src' ) #>')">
+				<button class="edit-logo click" style="display: none;">
+					<?php Thrive_Views::svg_icon( 'logo-edit' ); ?>
+					<?php echo __( 'Edit light logo', 'thrive-theme' ); ?>
+				</button>
+				<span class="ttd-logo-recommended-size-text"
+					  style="display: none;"><?php echo __( 'Recommended size: 250x40px', 'thrive-theme' ); ?></span>
+				<div class="edit-logo-pen">
+					<?php Thrive_Views::svg_icon( 'logo-edit', 'ttb-20-box' ); ?>
+				</div>
+			</div>
+		</div>
+
+		<# } else { #>
+		<button class="click loader-absolute logo-button logo-default"
+				data-fn="openMedia" style="background-image: url('<#= this.model.get( 'preview_src' ) #>')"></button>
+		<div class="upload-text">
+            <span class="upload-logo-text click" data-fn="openMedia">
+                <?php Thrive_Views::svg_icon( 'upload' ); ?>
+                <?php echo __( 'Upload your own logo', 'thrive-theme' ); ?>
+            </span>
+		</div>
+		<span class="ttd-logo-recommended-size-text"><?php echo __( 'Recommended size: 250x40px', 'thrive-theme' ); ?></span>
+		<# } #>
+
+	</div>
+
+	<button class="click ttd-btn click fill blue mt-20" data-fn="nextStep">
+		<#=this.wizard.getContinueLabel()#>
+		<# if( this.wizard.hasNextStep() ) { #>
+		<?php Thrive_Views::svg_icon( 'chevron-right' ); ?>
+		<span class="step-no"><#=this.wizard.getNextAvailableStepIndex() + 1#></span>
+		<# } #>
+	</button>
+</div>

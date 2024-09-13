@@ -1,0 +1,607 @@
+.tap-aut-preview-container {
+  cursor: pointer;
+  position: relative;
+  background: #fff;
+  margin: 10px 5px;
+  padding: 15px;
+  border-radius: 4px;
+  min-height: 60px;
+  box-sizing: border-box;
+  border-left: 6px solid #8e959b;
+
+  &.tap-aut-published {
+    border-left: 6px solid var(--tap-primary);
+  }
+
+  &.loader {
+    opacity: 0.3;
+  }
+
+  .tap-checkbox-wrapper {
+    --tap-checkbox-size: 14px;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 9px 0 rgba(23, 28, 33, 0.1);
+
+    .tap-auto-actions {
+      visibility: visible;
+    }
+
+    .tap-inline-input-container {
+      .tap-icon-wrapper {
+        visibility: visible;
+      }
+    }
+  }
+
+  .tap-inline-input-container {
+    .tap-icon-wrapper {
+      visibility: hidden;
+    }
+  }
+
+  .tap-auto-config {
+    width: 300px;
+    justify-content: space-evenly;
+  }
+
+  .tap-auto-actions {
+    visibility: hidden;
+
+    .tap-icon-wrapper {
+      --tap-icon-size: 14px;
+      color: var(--tap-text-color);
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .tap-aut-functions {
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+}
+
+.tap-actions-popover {
+  width: 120px;
+  padding: 10px;
+
+  hr {
+    width: 100%;
+    height: 1px;
+    background-color: #f0f3f3;
+    border: none !important;
+  }
+
+  .tap-button {
+    color: var(--tap-text-color);
+    padding-left: 0;
+    min-width: 100%;
+    justify-content: flex-start;
+
+    &:not(.tap-button--delete) {
+      .tap-icon-wrapper {
+        color: #c0cad1;
+      }
+    }
+
+    .tap-icon-wrapper {
+      --tap-icon-size: 14px;
+      margin-right: 12px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.tap-create-aut-container {
+
+  &.tap-loader {
+    &:before {
+      background-size: auto;
+    }
+  }
+
+  .tap-automation-header {
+    flex: 0 1 5%;
+    padding: 20px 35px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+
+    > div:nth-of-type(2) {
+      cursor: pointer;
+    }
+
+    .tap-automation-name {
+      font-size: 22px;
+      flex: 1;
+      padding-right: 10px;
+
+      input {
+        font-size: 14px;
+        width: 100%;
+      }
+
+      .tap-inline-input-container {
+        .tap-icon-wrapper {
+          margin-left: 15px;
+          --tap-icon-size: 15px;
+        }
+      }
+    }
+  }
+
+  .tap-automations-steps {
+    flex: 0 1 85%;
+    overflow: auto;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+
+    &.no-triggers {
+      opacity: 0;
+    }
+  }
+
+  .tap-automation-footer {
+    flex: 0 1 10%;
+    width: 100%;
+    padding: 20px 35px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+
+    .tap-button-cancel {
+      padding: 10px 35px;
+    }
+  }
+
+}
+
+:not(#_s) {
+  .tap-aut-status {
+    .tap-button {
+      width: 95px;
+      max-width: 95px;
+    }
+
+    .tap-button--ghost {
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    & > :first-child {
+      &.tap-button--ghost {
+        &:hover {
+          background-color: var(--tap-primary) !important;
+          border-color: var(--tap-primary);
+        }
+      }
+
+      border-right: none;
+      border-top-right-radius: unset;
+      border-bottom-right-radius: unset;
+    }
+
+    & > :last-child {
+      &:not(.tap-button--ghost) {
+        background-color: #8e959b;
+        color: #fff !important;
+      }
+
+      border-left: none;
+      border-top-left-radius: unset;
+      border-bottom-left-radius: unset;
+    }
+  }
+}
+
+.tap-screen-header {
+  font-size: 20px;
+  color: var(--tap-text-color-sec);
+}
+
+.tap-saved-automations {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 35px;
+  max-width: var(--tap-aut-width);
+  height: inherit;
+  margin: 0 auto;
+
+  .tap-saved-actions {
+    padding: 0 20px;
+    margin: 25px 0 25px 6px;
+    color: var(--tap-placeholder);
+
+    .tap-checkbox-wrapper {
+      --tap-checkbox-size: 14px;
+      margin: 0;
+      padding: 5px 0;
+
+      input:checked ~ .tap-checkmark {
+        border: none;
+        background-color: var(--tap-primary);
+      }
+
+      .tap-checkmark {
+        margin: 0;
+        border: 1px solid var(--tap-placeholder);
+      }
+    }
+
+    .tap-icon-wrapper {
+      --tap-icon-size: 14px;
+      cursor: pointer;
+    }
+  }
+}
+
+.tap-no-automations-wrapper {
+  width: 100%;
+  min-height: calc(100vh - 150px);
+
+  .tap-no-automations-content {
+    width: 30%;
+
+    h1 {
+      font-size: 22px;
+      color: var(--tap-primary);
+      margin-bottom: 20px;
+      margin-top: -30px;
+      font-weight: 500;
+    }
+
+    > span {
+      font-size: 14px;
+      line-height: 1.5em;
+      text-align: center;
+      color: #879198;
+    }
+
+    a {
+      margin-top: 5px;
+      margin-bottom: 15px;
+      color: var(--tap-primary);
+      text-decoration: none !important;
+
+      &:hover {
+        color: var(--tap-primary-dark);
+      }
+    }
+
+    .tap-button {
+      margin-top: 50px;
+      padding: 10px 25px;
+    }
+
+    .tap-icon-wrapper {
+      margin-top: -150px;
+      --tap-icon-size: 224px;
+    }
+  }
+}
+
+
+.tap-aut-header {
+  padding: 0 15px;
+  margin: 10px 5px;
+  color: #626466;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+
+.tap-col {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0 1% 0 0;
+  flex-wrap: wrap;
+  width: 50%;
+
+  &:last-of-type {
+    margin: 0;
+  }
+
+  &.nowrap {
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  &--auto {
+    @extend .tap-col;
+    width: fit-content;
+  }
+
+  .tap-data-logo {
+    .tap-icon-wrapper {
+      --tap-icon-size: 20px;
+    }
+
+    .tap-logo-img {
+      img {
+        max-width: 20px;
+      }
+    }
+  }
+
+  .tap-aut-name {
+    margin: 0;
+    color: var(--tap-text-color);
+    font-size: 14px;
+    width: 98%;
+
+    .tap-inline-input-container {
+      width: inherit;
+
+      input {
+        border-left: none !important;
+        border-right: none !important;
+        border-top: none !important;
+        border-radius: unset !important;
+        padding: 0;
+        color: var(--tap-text-color);
+        font-size: 14px;
+        width: inherit;
+      }
+    }
+  }
+
+  &--2 {
+    @extend .tap-col;
+    width: 2%;
+
+    .tap-checkbox-wrapper {
+      margin: 0;
+    }
+  }
+
+  &--3 {
+    @extend .tap-col;
+    width: 3%;
+  }
+
+  &--5 {
+    @extend .tap-col;
+    width: 5%;
+  }
+
+  &--10 {
+    @extend .tap-col;
+    width: 10%;
+  }
+
+  &--15 {
+    @extend .tap-col;
+    width: 15%;
+  }
+
+  &--20 {
+    @extend .tap-col;
+    width: 20%;
+  }
+
+  &--28 {
+    @extend .tap-col;
+    width: 28%;
+  }
+
+  &--45 {
+    @extend .tap-col;
+    width: 45%;
+  }
+
+  &--40 {
+    @extend .tap-col;
+    width: 40%;
+  }
+
+  &--70 {
+    @extend .tap-col;
+    width: 70%;
+  }
+
+  &--90 {
+    @extend .tap-col;
+    width: 90%;
+  }
+}
+
+.tap-aut-item-preview {
+  &:last-of-type {
+    > .tap-icon-wrapper {
+      display: none;
+    }
+  }
+
+  > .tap-icon-wrapper {
+    --tap-icon-size: 11px;
+    color: #646b74;
+  }
+
+  .tap-aut-trigger {
+    padding: 7px;
+    position: relative;
+
+    .tap-aut-count {
+      @extend .tap-flex;
+      top: 0;
+      right: 0;
+      position: absolute;
+      font-size: 10px;
+      color: #fff;
+      background-color: var(--tap-primary-light);
+      border-radius: 50%;
+      padding: 2px 5px;
+      max-width: fit-content;
+      text-align: center;
+      min-width: 16px;
+      height: 16px;
+      box-sizing: border-box;
+    }
+  }
+}
+
+
+.tap-aut-trigger {
+  display: flex;
+  padding: 7px;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .tap-data-logo {
+    .tap-icon-wrapper {
+      color: var(--tap-primary-light);
+    }
+  }
+
+  &:last-of-type {
+    > .tap-icon-wrapper {
+      display: none;
+    }
+  }
+
+  > .tap-icon-wrapper {
+    --tap-icon-size: 11px;
+    margin-left: 10px;
+    color: #646b74;
+  }
+}
+
+.tap-aut-action {
+  @extend .tap-aut-trigger;
+
+  .tap-data-logo {
+    .tap-icon-wrapper {
+      color: var(--tap-action-color);
+
+      &.tap-icon-filter {
+        color: var(--tap-filter-color);
+      }
+
+      &.tap-icon-delay {
+        color: var(--tap-delay-color);
+      }
+    }
+  }
+}
+
+.tap-filter-heading {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.11px;
+  color: var(--tap-text-color-sec);
+  margin: 5px 0;
+}
+
+.tap-filter-apps {
+  margin-bottom: 30px;
+}
+
+.tap-filter-item {
+  cursor: pointer;
+  margin: 1px 0;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(238, 238, 238, 0.56);
+
+  &:hover {
+    background-color: rgba(163, 37, 102, 0.05);
+  }
+
+  &.all-filter {
+    border-radius: 5px;
+    margin: 0 0 20px 0;
+  }
+
+  &:first-of-type {
+    border-radius: 5px 5px 0 0;
+  }
+
+  &:last-of-type {
+    border-radius: 0 0 5px 5px;
+  }
+
+  .tap-filter-item-name {
+    letter-spacing: -0.11px;
+    color: #626466;
+    font-size: 14px;
+  }
+
+  .tap-filter-item-number {
+    @extend .tap-flex;
+    font-size: 15px;
+    min-width: 21px;
+    height: 21px;
+    text-align: center;
+    padding: 0 5px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-sizing: border-box;
+    color: #626466;
+  }
+
+  &.tap-filter-publish {
+    .tap-filter-item-number {
+      background-color: var(--tap-primary);
+      color: #fff !important;
+    }
+  }
+
+  &.tap-filter-draft {
+    .tap-filter-item-number {
+      background-color: var(--tap-placeholder);
+      color: #fff !important;
+    }
+  }
+
+  &.tap-filter-active {
+    background-color: rgba(163, 37, 102, 0.15);
+
+    .tap-filter-item-name {
+      color: var(--tap-primary-dark);
+      font-weight: 500;
+    }
+
+    .tap-filter-item-number {
+      font-weight: 500;
+      color: var(--tap-primary);
+    }
+  }
+}
+
+
+.tap-sidebar-title {
+  padding: 15px;
+  color: var(--tap-text-color-sec);
+  font-size: 14px;
+  text-align: center;
+}
+
+.tap-separator {
+  background-color: #d8d8d8;
+  width: 100%;
+  min-height: 1px;
+  max-height: 1px;
+  margin: 10px 0;
+}
+
+.tap-vert-separator {
+  @extend .tap-separator;
+  transform: rotate(90deg);
+}
+
+
+.a.tcb-button-link {
+  overflow: unset !important;
+  -webkit-mask: none !important;
+}

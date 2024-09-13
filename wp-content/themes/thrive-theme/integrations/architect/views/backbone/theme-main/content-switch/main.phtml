@@ -1,0 +1,34 @@
+<div id="thrive-theme-switch-content">
+	<div class="switch-content-menu click" data-fn="open_dropdown">
+		<span><?php echo __( 'Content: ', 'thrive-theme' ); ?></span>
+		<span id="switch-content-selected"><?php echo __( 'Choose Content', 'thrive-theme' ); ?></span>
+	</div>
+
+	<div id="switch-content-dropdown"
+	<#= view.hasWebsiteContent() ? '' : ' style="min-height:0"' #>>
+	<div
+	<#= view.isDemoContentVisible() ? '' : 'style="display:none"' #>>
+	<button class="demo-content-button click" data-fn="demo_content"> <?php echo __( 'Demo Content', 'thrive-theme' ); ?></button>
+	<div class="switch-content-separator"><span><?php echo __( 'OR', 'thrive-theme' ); ?></span></div>
+</div>
+<div>
+	<div class="switch-content-info"><?php echo __( 'Your Website Content', 'thrive-theme' ); ?></div>
+	<# if ( view.hasWebsiteContent() ) { #>
+
+	<div class="content-switch-search-container">
+		<input class="content-switch-input input" data-fn="content_search" placeholder="<?php echo __( 'Search', 'thrive-theme' ); ?>"/>
+		<span class="content-switch-icon click" data-fn="clear_input"></span>
+	</div>
+	<ul id="switch-content-select"></ul>
+	<div class="list-button"></div>
+
+	<# } else { #>
+
+	<div class="switch-content-no-data pb-10 pl-5 pr-5">
+		<div class="info-text orange"><?php esc_html_e( 'No content found for this template', 'thrive-theme' ); ?></div>
+	</div>
+
+	<# } #>
+</div>
+</div>
+</div>

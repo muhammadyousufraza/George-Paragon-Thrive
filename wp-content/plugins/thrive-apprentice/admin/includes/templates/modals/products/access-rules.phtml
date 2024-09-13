@@ -1,0 +1,55 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+
+<div class="tvd-rule-modal-step">
+	<div class="tvd-modal-content">
+		<h3 class="tvd-modal-title"><#= this.title #></h3>
+		<div class="tva-access-rules">
+			<label for="tva-rule-title" class="tva-section-title"><?php echo __( 'Rule title', 'thrive-apprentice' ); ?></label>
+			<input id="tva-rule-title" type="text" class="tva-rule-title-events" value="<#= model.get( 'title' ) #>" <#= this.defaults.includes( this.scope ) ? 'disabled' : '' #>>
+			<div class="tva-section-title mt-30"><?php echo __( 'Conditions', 'thrive-apprentice' ); ?></div>
+
+			<# if ( ! this.defaults.includes( this.scope ) ) { #>
+			<div class="tva-rule-conditions"></div>
+			<div class="tva-add-rule-conditions">
+				<?php tva_get_svg_icon( 'plus_light' ); ?>
+				<a href="javascript:void(0);" class="click" data-fn="addCondition">
+					<?php echo __( 'Add rule conditions', 'thrive-apprentice' ) ?>
+				</a>
+			</div>
+			<# } else { #>
+			<div class="tva-rule-conditions tva-rule-default"></div>
+			<# } #>
+		</div>
+		<div class="tvd-content-sets-footer tva-flex tva-align-center tva-space-between mt-40">
+			<button type="button" class="click tva-modal-btn tva-modal-btn-close" data-fn="close"><?php echo __( 'Cancel', 'thrive-apprentice' ); ?></button>
+			<# if ( this.singleStep ) { #>
+			<button type="button" class="click tva-modal-btn tva-modal-btn-green" data-fn="save"><?php echo __( 'Save', 'thrive-apprentice' ) ?></button>
+			<# } else { #>
+			<button type="button" class="click tva-modal-btn tva-modal-btn-green" data-fn="next"><?php echo __( 'Next', 'thrive-apprentice' ) ?></button>
+			<# } #>
+		</div>
+	</div>
+</div>
+
+<div class="tvd-rule-modal-step">
+	<div class="tvd-modal-content">
+		<h3 class="tvd-modal-title"><?php echo esc_html__( 'Edit access behaviour', 'thrive-apprentice' ); ?></h3>
+
+		<div class="tva-content-restriction"></div>
+
+		<div class="tvd-content-sets-footer tva-flex tva-align-center tva-space-between mt-40">
+			<button type="button" class="click tva-modal-btn tva-modal-btn-close" data-fn="close"><?php echo __( 'Cancel', 'thrive-apprentice' ); ?></button>
+			<button type="button" class="click tva-modal-btn tva-modal-btn-green" data-fn="save"><?php echo __( 'Save', 'thrive-apprentice' ) ?></button>
+		</div>
+	</div>
+</div>

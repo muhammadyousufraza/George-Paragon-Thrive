@@ -1,0 +1,30 @@
+<div class="tcb-events-summary">
+	<span class="tcb-modal-description"><?php echo __( 'Existing Events', 'thrive-cb' ) ?></span>
+	<div class="event-collection control-grid mt-10">
+		<# _.each( dataStore.events, function( evt, index ) { #>
+		<div class="action-wrapper">
+			<div class="evt-trigger tcb-text-center item-box mr-30">
+				<#= TVE.icon( dataStore.triggers[ evt.t ].icon ) #>
+				<div class="trigger-name"><#= dataStore.triggers[ evt.t ].label #></div>
+			</div>
+
+			<div class="item-box evt-action mr-30">
+				<#= view.render_action_preview( evt ) #>
+			</div>
+
+			<div class="event-row-actions">
+				<span class="click" title="<?php echo __( 'Edit', 'thrive-cb' ) ?>" data-fn="edit_event" data-index="<#=index#>"><?php tcb_icon( 'edit' ) ?></span>
+				<span class="click" title="<?php echo __( 'Delete', 'thrive-cb' ) ?>" data-fn="open_delete_confirmation" data-index="<#=index#>"><?php tcb_icon( 'trash' ) ?></span>
+			</div>
+			<div class="delete-confirmation-wrapper" style="display: none">
+				<span><?php echo __( 'Are you sure you want to delete this page event? ', 'thrive-cb' ) ?></span>
+				<div class="buttons-wrapper">
+					<button class="click" data-fn="close_delete_confirmation"><?php echo __( 'No, cancel', 'thrive-cb' ) ?></button>
+					<button class="click" data-fn="delete_event"><?php echo __( 'Yes, delete', 'thrive-cb' ) ?></button>
+				</div>
+			</div>
+		</div>
+		<# }, view ) #>
+	</div>
+</div>
+

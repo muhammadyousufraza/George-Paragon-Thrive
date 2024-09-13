@@ -1,0 +1,57 @@
+.tap-suite-apps-body #wpadminbar,
+.tap-suite-apps-body #adminmenumain,
+.tap-suite-apps-body #wpfooter,
+.tap-suite-apps-body .notice,
+.tap-suite-apps-body .tvd-header,
+.tap-suite-apps-body .tvd-connections-footer {
+    display: none !important;
+}
+
+.tap-suite-apps-body #wpcontent {
+    margin-left: 0;
+}
+
+:not(#_s) .tap-notice-hidden {
+    display: none !important;
+}
+
+.tap-suite-notice {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-left: 4px solid #a32566;
+    padding: 15px 25px !important;
+}
+
+.tap-suite-notice img {
+    max-width: 53px;
+    margin-right: 40px;
+}
+
+.tap-suite-notice p {
+    font-size: 14px;
+    color: #434343;
+}
+
+.tap-suite-notice p span {
+    color: #a32566;
+}
+
+.tap-suite-notice .tap-go-suite {
+    border-radius: 3px;
+    background-color: #a32666 !important;
+    padding: 5px 30px !important;
+    border: none !important;
+    outline: none !important;
+    margin-left: auto;
+    margin-right: 50px;
+    color: #fff !important;
+}
+
+.tap-suite-notice .tap-go-suite:hover {
+    opacity: 0.8;
+}
+
+.tap-notice-dismiss {
+    text-decoration: none !important;
+}

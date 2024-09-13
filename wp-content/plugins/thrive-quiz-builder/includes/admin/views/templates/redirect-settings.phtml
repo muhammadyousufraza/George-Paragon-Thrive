@@ -1,0 +1,91 @@
+<div class="tvd-row">
+	<div class="tvd-col tvd-s9">
+		<div class="tqb-edit-title-align">
+			<h3 class="tqb-quiz-title">
+				<?php echo __( 'Redirect Settings', 'thrive-quiz-builder' ); ?>&nbsp;&nbsp;&nbsp;
+				<a href="javascript:void(0);" class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-purple tvd-btn-small tqb-add-new-link"><?php echo __( 'Add New', 'thrive-quiz-builder' ) ?></a>
+			</h3>
+		</div>
+	</div>
+	<div class="tvd-col tqb-redirect-status tvd-s3">
+		<span class="tqb-quiz-ready-status"><?php echo __( 'Redirect status:', 'thrive-quiz-builder' ); ?></span>
+		<span class="tqb-quiz-ready" style="display: none">
+			<?php echo __( 'Quiz Ready', 'thrive-quiz-builder' ); ?>
+		</span>
+		<span class="tqb-quiz-not-ready" style="display: none">
+			<?php echo __( 'Quiz Not Ready', 'thrive-quiz-builder' ); ?>
+			<span style="display: <#= item.get('quiz_type') === 'personality' ? 'none' : 'inline-block' #>" class="tvd-tooltipped tqb-quiz-not-ready-icon" data-position="left" data-tooltip="<?php echo __( "Some results that the user can receive don't have a redirect set. Make sure all possible results contain a redirect.", 'thrive-quiz-builder' ) ?>"></span>
+			<span style="display: <#= item.get('quiz_type') === 'personality' ? 'inline-block' : 'none' #>" class="tvd-tooltipped tqb-quiz-not-ready-icon" data-position="left" data-tooltip="<?php echo __( "Some categories don't have a redirect URL specified.", 'thrive-quiz-builder' ) ?>"></span>
+		</span>
+	</div>
+</div>
+
+<div class="tvd-row" id="tqb-results-wrapper">
+	<div class="tvd-col tvd-s12">
+		<span style="display: <#= item.get('results').length ? 'none' : 'inline'  #>;"><?php echo __( 'Minimum Result:' ) ?> <#= item.get('minimum_result') #></span>
+		<span style="display: <#= item.get('results').length ? 'none' : 'inline'  #>;"><?php echo __( 'Maximum Result:' ) ?> <#= item.get('maximum_result') #></span>
+		<span style="display: <#= item.get('results').length ? 'inline' : 'none'  #>;"><?php echo __( 'Number of category results:' ) ?> <#= item.get('results').length #></span>
+	</div>
+</div>
+
+<div id="tgb-redirect-links" class="tvd-row">
+	<div id="tqb-redirect-links-header" class="tvd-col tvd-s12" style="display: none;">
+		<div>
+			<div class=""><?php echo __( 'Lower Bound', 'thrive-quiz-builder' ); ?></div>
+			<div class=""><?php echo __( 'Upper Bound', 'thrive-quiz-builder' ); ?></div>
+			<div class=""><?php echo __( 'Action', 'thrive-quiz-builder' ); ?></div>
+			<div class=""><?php echo __( 'Target', 'thrive-quiz-builder' ); ?></div>
+		</div>
+	</div>
+	<div id="tqb-redirect-links"></div>
+	<div id="tqb-no-redirect-links" class="tvd-col tvd-s12">
+		<p>
+			<?php echo sprintf(
+				__( "You don't have any Redirect created yet. Click \"Add New\" Button to create one. Also, make sure all possible results contain a redirect. %s" ),
+				'<a target="_blank" href="https://thrivethemes.com/tkb_item/how-to-add-redirect-settings-to-a-quiz/">' .
+				__( "Learn more", 'thrive-quiz-builder' ) .
+				'</a>' ) ?>
+		</p>
+	</div>
+</div>
+
+<div class="tvd-row tqb-redirect-options">
+	<div class="tvd-col tvd-s6">
+
+		<input id="tqb-display-message" type="checkbox" data-bind="display_message" <#= this.model.get('display_message') ? 'checked' : '' #>>
+		<label for="tqb-display-message"><?php echo __( 'Display redirect Message', 'thrive-quiz-builder' ) ?></label>
+
+		<div class="tvd-row" id="tqb-message-wrapper"></div>
+	</div>
+
+	<div class="tvd-col tvd-s6">
+
+		<input id="tqb-forward-results" type="checkbox" data-bind="forward_results" <#= this.model.get('forward_results') ? 'checked' : '' #>>
+		<label for="tqb-forward-results"><?php echo __( 'Forward results to URL', 'thrive-quiz-builder' ) ?></label>
+
+		<div id="tqb-redirect-params-wrapper" class="tvd-row">
+			<div class="tvd-col tvd-s12">
+				<p>
+					<?php echo __( 'The following URL parameters will be forwarded.', 'thrive-quiz-builder' ); ?>
+					<a target="_blank" href="https://thrivethemes.com/tkb_item/how-does-the-forward-results-to-url-option-work-in-thrive-quiz-builder/">
+						<?php echo __( 'What does this mean?', 'thrive-quiz-builder' ) ?>
+					</a>
+				</p>
+				<ul>
+					<li><?php echo __( 'Name', 'thrive-quiz-builder' ); ?>: tqb_name</li>
+					<li><?php echo __( 'Email address', 'thrive-quiz-builder' ); ?>: tqb_email</li>
+					<li><?php echo __( 'The obtained quiz result', 'thrive-quiz-builder' ); ?>: tqb_quiz_result</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="tvd-row">
+	<div class="tvd-col tvd-s6">
+		<a href="#dashboard/quiz/<#= item.get('post_parent') #>" class="tvd-btn-flat tvd-btn-flat-primary tvd-btn-flat-dark tvd-waves-effect">
+			&laquo; <?php echo __( 'Back to Quiz', 'thrive-quiz-builder' ) ?>
+		</a>
+	</div>
+</div>
+<div class="tvd-v-spacer vs-2"></div>

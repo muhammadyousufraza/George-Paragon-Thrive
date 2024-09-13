@@ -1,0 +1,24 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-theme
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+
+<div class="ttd-video-thumbnail-type tcb-hidden">
+	<label class="ttd-video-thumbnail-title mb-5"><?php echo __( 'Video Thumbnail', 'thrive-theme' ) ?></label>
+
+	<div class="control-grid no-space">
+		<label><?php echo __( 'Type', 'thrive-theme' ) ?></label>
+		<select class="v-thumbnail-type input" data-fn-input="dynamicThumbnailInput">
+			<option value="static"><?php echo __( 'Static Image', 'thrive-theme' ) ?></option>
+			<option value="dynamic"><?php echo __( 'Featured Image', 'thrive-theme' ) ?></option>
+			<option value="none"><?php echo __( 'No Image', 'thrive-theme' ) ?></option>
+		</select>
+	</div>
+</div>

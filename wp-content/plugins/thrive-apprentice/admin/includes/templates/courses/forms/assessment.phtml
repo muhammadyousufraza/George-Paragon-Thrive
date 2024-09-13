@@ -1,0 +1,91 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-university
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+<h3 class="tvd-modal-title"><?php echo esc_html__( 'Add Assessment', 'thrive-apprentice' ); ?></h3>
+
+<div class="tva-modal-b-inner">
+
+	<div class="tva-flex mb-30">
+		<div class="tvd-input-field tva-flex-one mr-20">
+			<input id="tva-lesson-title" data-bind="post_title" value="<#= model.get('post_title') #>" type="text" placeholder="<?php echo esc_html__( 'Assessment Title', 'thrive-apprentice' ); ?>">
+			<label>&nbsp;</label>
+		</div>
+
+		<div class="ta-flex-250">
+			<select name="tva-assessment-type" id="tva-assessment-type" data-bind="assessment_type"></select>
+		</div>
+	</div>
+
+	<div class="tva-details-label">
+		<label class="course-label"><?php echo esc_html__( 'URL', 'thrive-apprentice' ); ?></label>
+		<div>
+			<label for="tva-assessment-slug"><?php echo get_site_url() . '/course/'; ?></label>
+			<input id="tva-assessment-slug" class="tva-course-item-slug" data-bind="post_name" type="text" value="<#= model.get('post_name') #>">
+			<input type="hidden" value="<?php echo get_site_url() . '/course/'; ?><#- model.get('post_name') #>"/>
+			<button class="tva-zclip">&nbsp;
+				<span class="tva-custom-tooltip"><?php echo esc_attr( __( 'Copy', 'thrive-apprentice' ) ); ?></span>
+			</button>
+		</div>
+	</div>
+
+	<div class="tva-flex tva-align-center mt-30">
+		<label class="course-label">
+			<?php echo esc_html__( 'Assessment summary', 'thrive-apprentice' ); ?>
+		</label>
+		<i class="tvd-tooltipped" data-position="top" data-tooltip="<?php echo esc_attr__( 'This will be displayed on the course overview page', 'thrive-apprentice' ); ?>">
+			<?php tva_get_svg_icon( 'info-circle_strong' ); ?>
+		</i>
+	</div>
+
+	<div class="textarea-box">
+		<textarea name="tva-assessment-description" id="tva-assessment-description" data-bind="post_excerpt"><#= TVE_Dash.escapeHTML( model.get( 'post_excerpt' ) ) #></textarea>
+	</div>
+
+	<div class="tva-flex tva-align-center tva-space-between mt-30 mb-30">
+		<span class="tva-details-title">
+			<?php echo esc_html__( 'Allow users comment on this assessment', 'thrive-apprentice' ); ?>
+		</span>
+
+		<div class="ta-flex-320">
+			<select data-bind="comment_status" id="tva-comment-status">
+				<option value="closed"><?php echo esc_html__( 'No', 'thrive-apprentice' ); ?></option>
+				<option value="open"><?php echo esc_html__( 'Yes', 'thrive-apprentice' ); ?></option>
+			</select>
+		</div>
+	</div>
+
+	<div class="tva-flex tva-align-center tva-space-between mt-30 mb-30">
+			<span class="tva-details-title">
+				<?php echo esc_html__( 'Give users free access to this content?', 'thrive-apprentice' ); ?>
+				<div class="tva-info-icon tva-relative tva-tooltip-parent">
+					<?php tva_get_svg_icon( 'info-solid' ); ?>
+					<div class="tva-custom-tooltip tva-tooltip-modal">
+						<p><?php esc_html_e( "Access restrictions are inherited from the parent product.  However, you can override these access restrictions and give users free access to your course content.", 'thrive-apprentice' ); ?></p>
+						<p><?php esc_html_e( 'This can be useful, for example, if you have a premium course but want to offer some lessons or modules for free as a teaser.  You’d set the access restrictions for the product, but make specific content free.', 'thrive-apprentice' ); ?></p>
+					</div>
+				</div>
+			</span>
+		<div class="ta-flex-320">
+			<select data-bind="freemium" id="tva-freemium">
+				<option value="inherit"><?php echo esc_html__( 'Inherit access restrictions from product', 'thrive-apprentice' ); ?></option>
+				<option value="free-for-logged"><?php echo esc_html__( 'Free for logged in users (require registration)', 'thrive-apprentice' ); ?></option>
+				<option value="free"><?php echo esc_html__( 'Free for all users (no registration required)', 'thrive-apprentice' ); ?></option>
+			</select>
+		</div>
+	</div>
+
+	<div id="tva-assessment-options">
+		<div id="tva-assessment-upload-options">
+			<label class="course-label"><?php echo esc_html__( 'Would you like to add a custom assessment cover image?', 'thrive-apprentice' ); ?></label>
+			<div id="tva-assessment-image" class="tva-details-thumb tva-details-cover"></div>
+		</div>
+	</div>
+</div>

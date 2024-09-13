@@ -1,0 +1,13 @@
+<# if( prev ) { #>
+<a class="click" data-fn="previousPage" href="javascript:void(0);"><?php tva_get_svg_icon( 'angle-double-left' ); ?></a>
+<# } else { #>
+<span><?php tva_get_svg_icon( 'angle-double-left' ); ?></span>
+<# } #>
+
+<#= currentPage #> <?php echo esc_html__( 'out of', 'thrive-apprentice' ) ?> <#= totalPages #>
+
+<# if( next ) { #>
+<a class="click" data-fn="nextPage" href="javascript:void(0);"><?php tva_get_svg_icon( 'angle-double-right' ); ?></a>
+<# } else { #>
+<span><?php tva_get_svg_icon( 'angle-double-right' ); ?></span>
+<# } #>

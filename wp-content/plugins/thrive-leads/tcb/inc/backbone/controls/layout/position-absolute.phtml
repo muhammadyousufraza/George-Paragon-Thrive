@@ -1,0 +1,29 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-visual-editor
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+	<div class="button-group-holder">
+		<div class="tve-btn-group">
+			<span class="position click tve-btn" data-fn="positionChange" data-value="top|left"><#= TVE.icon('pos_top_left') #></span>
+			<span class="position click tve-btn" data-fn="positionChange" data-value="top|right"><#= TVE.icon('pos_top_right') #></span>
+			<span class="position click tve-btn" data-fn="positionChange" data-value="bottom|right"><#= TVE.icon('pos_bot_right') #></span>
+			<span class="position click tve-btn" data-fn="positionChange" data-value="bottom|left"><#= TVE.icon('pos_bot_left') #></span>
+		</div>
+	</div>
+
+	<div class="toggle-position">
+		<div class="vertical">
+			<div class="tve-control input-small"></div>
+		</div>
+		<div class="horizontal pl-5">
+			<div class="tve-control input-small"></div>
+		</div>
+	</div>

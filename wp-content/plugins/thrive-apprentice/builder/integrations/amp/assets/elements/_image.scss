@@ -1,0 +1,31 @@
+.wp-caption-text {
+  .fr-wrapper {
+    position: static;
+  }
+}
+
+.tve_image_caption {
+  &:not(.tcb-mm-image.tve-tab-image) {
+    height: auto !important;
+  }
+
+  .tve_image {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+:not(#s) .tve_image_caption {
+  padding: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.tcb-post-author-picture {
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: auto;
+  width: 240px;
+  overflow: hidden;
+}

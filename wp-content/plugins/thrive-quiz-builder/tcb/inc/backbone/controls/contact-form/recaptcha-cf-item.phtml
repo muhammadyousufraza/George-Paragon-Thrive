@@ -1,0 +1,17 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Ovidiu
+ * Date: 6/5/2018
+ * Time: 11:27 AM
+ */
+
+$captcha_api = Thrive_Dash_List_Manager::credentials( 'recaptcha' );
+if ( ! empty( $captcha_api ) ) :
+	?>
+	<div class="tve-cf-item">
+		<div class="thrv-cf-input-wrapper" data-type="g-recaptcha-response">
+			<div class="g-recaptcha tve-captcha-container" data-site-key="<?php echo $captcha_api['site_key']; ?>" data-theme="<#= theme #>" data-type="image" data-size="<#= size #>"></div>
+		</div>
+	</div>
+<?php endif; ?>

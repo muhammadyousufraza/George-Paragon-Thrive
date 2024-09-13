@@ -1,0 +1,45 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-theme
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+
+?>
+
+<div class="thrive-no-post-content-notice">
+	<div class="thrive-no-post-content-inner">
+
+		<h2><?php echo esc_html__( 'The Content of this page Cannot be Edited', 'thrive-theme' ); ?></h2>
+
+		<div class="thrive-no-post-content-text">
+			<div>
+
+				<p>
+					<?php echo esc_html__( 'Unfortunately, the content of this page cannot be edited.', 'thrive-theme' ); ?>
+				</p>
+
+				<p>
+					<?php echo esc_html__( 'You are unable to edit the content of this page because the "Post Content" attached to this page’s template cannot be loaded properly. A possible cause for this can be a third party plugin, or WordPress shortcodes.', 'thrive-theme' ); ?>
+				</p>
+
+				<p>
+					<?php
+					$link_html = '<a href="https://thrivethemes.com/tkb_item/why-cant-i-edit-the-content-of-my-page/" target="_blank">' . esc_html__( 'Click here', 'thrive-theme' ) . '</a>';
+					?>
+
+					<?php echo sprintf( esc_html__( "%s for more details and for information on how this can be escalated to our team.", 'thrive-theme' ), $link_html ); ?>
+				</p>
+			</div>
+
+			<div class="thrive-no-post-content-icon">
+				<?php tcb_icon( 'post-content', false, 'sidebar', '' ); ?>
+				<span class="title"><?php echo esc_html__( 'Post Content', 'thrive-theme' ); ?></span>
+			</div>
+		</div>
+	</div>
+</div>

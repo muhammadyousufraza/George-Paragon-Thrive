@@ -1,0 +1,57 @@
+<div class="tva-flex tva-page-white-header pb-0">
+	<div class="tva-boxed-container">
+		<div class="tva-flex tva-space-between tva-align-center">
+			<div>
+				<div>
+					<h1 class="tva-main-heading"><?php echo __( 'Assessments', 'thrive-apprentice' ) ?></h1>
+				</div>
+				<div class="tva-flex mt-10 mb-10">
+					<p class="settings-p-main m-0 p-0">
+						<?php echo __( 'Manage, grade and overview your students assessments.', 'thrive-apprentice' ) ?>
+					</p>
+				</div>
+			</div>
+			<div>
+				<button class="tva-empty-btn tva-empty-btn-blue click pl-20 pr-20 tva-flex tva-align-center click" data-fn="openHelpLightbox">
+					<span><?php echo __( 'Help', 'thrive-apprentice' ) ?></span>
+					<?php tva_get_svg_icon( 'question' ); ?>
+				</button>
+			</div>
+		</div>
+		<div class="tva-flex tva-space-between tva-align-center">
+			<div class="tva-assessment-filters tva-flex mb-10">
+				<div class="tve-af-search">
+					<?php Thrive_Views::svg_icon( 't-search' ); ?>
+					<input class="tve-af-search input" data-fn="onSearch" type="text" placeholder="<?php echo __( 'Search', 'thrive-apprentice' ); ?>">
+				</div>
+			</div>
+		</div>
+		<div class="tva-user-assessment-tabs tva-tabs">
+			<ul class="tva-tabs-ul tva-flex">
+				<li class="tva-tab click" data-fn="switchTab" data-tab="pending"><span class="tva-counter-pending"></span> <span><?php echo __( 'Pending', 'thrive-apprentice' ); ?></span></li>
+				<li class="tva-tab click" data-fn="switchTab" data-tab="passed"><span class="tva-counter-passed"></span> <span><?php echo __( 'Passed', 'thrive-apprentice' ); ?></span></li>
+				<li class="tva-tab click" data-fn="switchTab" data-tab="failed"><span class="tva-counter-failed"></span> <span><?php echo __( 'Failed', 'thrive-apprentice' ); ?></span></li>
+				<li class="tva-tab click" data-fn="switchTab" data-tab="all"><span class="tva-counter-all"></span> <span><?php echo __( 'All', 'thrive-apprentice' ); ?></span></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="tva-user-assessment-gray">
+	<div class="tva-boxed-container">
+		<div class="tva-inbox-content tva-flex">
+			<div class="tva-no-assessments">
+				<img alt="No assessments" src="<?php echo TVA_Const::plugin_url( 'admin/includes/assets/img/assessments/no-assessments@2x.png' ); ?>" height="50">
+				<p><?php echo __( 'Currently there aren’t any submitted assessments', 'thrive-apprentice' ); ?></p>
+			</div>
+			<div class="tva-no-status-assessments tva-hide">
+				<img alt="No assessments" src="<?php echo TVA_Const::plugin_url( 'admin/includes/assets/img/assessments/no-assessments@2x.png' ); ?>" height="50">
+				<p></p>
+			</div>
+			<div class="tva-tab-content" data-tab="pending"></div>
+			<div class="tva-tab-content" data-tab="passed"></div>
+			<div class="tva-tab-content" data-tab="failed"></div>
+			<div class="tva-tab-content" data-tab="all"></div>
+			<div class="tva-assessment-history"></div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,22 @@
+<#
+const inputLabel = input.label ? utils.updatePostTypeLabel(input.label): '';
+const phoneOption = input.available_for[0] == 2;
+const emailOption = input.available_for[0] == 3;
+#>
+
+<#if(input.type == 'input'){#>
+<label for="fr-dropdown-list-<#= key #>" class="tcb-shortcode-input"><#= inputLabel #></label>
+<input type="text" name="<#= key #>" class="fr-custom-input <#= input.info? '': 'fr-input-line' #>" id="fr-dropdown-list-<#= key #>" value="<#= selectedValue? selectedValue:input.value #>"/>
+<#}#>
+
+<#if(input.type == 'checkbox'){#>
+<label class="tcb-checkbox  <#= input.info? '': 'fr-input-line' #>">
+	<input type="checkbox" name="<#= key #>" class="fr-custom-input" <#= selectedValue? 'checked="checked"' : '' #> value="1">
+	<span><#= input.label #></span>
+</label>
+<#if(phoneOption || emailOption){#>
+<span class="click tcb-call-info ml-5" data-type="help" data-url="email_phone_dynamic_links" data-link="http://help.thrivethemes.com/en/articles/7150618-how-to-add-a-phone-or-email-dynamic-link" data-fn="openInstructionsLightbox">
+		<?php tcb_icon( 'info-circle-solid' ); ?>
+		</span>
+<#}#>
+<#}#>

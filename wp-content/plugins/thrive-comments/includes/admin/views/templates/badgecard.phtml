@@ -1,0 +1,19 @@
+<div class="tcm_badge" data-id="<#= this.model.get('id') #>">
+	<#
+	var image_url = this.model.get('image_url');
+	if(image_url.indexOf('all_badges.svg') !== -1){
+	#>
+
+	<svg class="tcm-badge-svg">
+		<use xlink:href="<#= image_url #>"/>
+	</svg>
+	<#}else{#>
+	<span class="tcm-badge-img" style="background-image: url('<#= image_url #>')"></span>
+	<#}#>
+	<span title="<#= this.model.get('name') #>" class="tcm_badge_title tvd-truncate" data-name="<#= this.model.get('name') #>"><#= this.model.get('name') #></span>
+	<span style="background-image: url();" class="tcm_badge_short_description" data-awarded="<#= this.model.get('awarded') #>" data-reaches="<#= this.model.get('reaches') #>"><#= this.model.get('reaches') #> <#= this.model.get('awarded_text') #></span>
+	<div class="tcm-link-controls">
+		<span class="tcm-icon-trash-o tcm-delete-badge-button"></span>
+		<span class="tcm-icon-mode_edit tcm-edit-badge-button"></span>
+	</div>
+</div>

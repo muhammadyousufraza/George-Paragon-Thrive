@@ -1,0 +1,69 @@
+<?php if ( TD_TTW_Connection::is_debug_mode() ) : ?>
+	<?php
+	$urls = array(
+		'local'    => 'http://local.thrivethemes.com',
+		'live'     => 'https://thrivethemes.com',
+		'staging1' => 'https://staging.thrivethemes.com',
+		'staging2' => 'https://staging2.thrivethemes.com',
+		'staging3' => 'https://staging3.thrivethemes.com',
+		'staging5' => 'https://staging-ttw.com',
+		'hetzner'  => 'https://staging-hetz.thrivethemes.com',
+	);
+	?>
+	<h2>Debug mode: ON</h2>
+	<ul>
+		<li>
+			<label for="tpm-debug-server">Hit server</label>:
+			<select id="tpm-debug-server">
+				<?php foreach ( $urls as $name => $url ) : ?>
+					<option <?php echo $url === TD_TTW_Connection::get_ttw_url() ? 'selected="selected"' : '' ?>
+						value="<?php echo $url ?>"><?php echo $name ?></option>
+				<?php endforeach; ?>
+			</select>
+		</li>
+	</ul>
+
+	<ul>
+		<li>
+			<b>TTW URL</b>:
+			<a href="<?php echo TD_TTW_Connection::get_ttw_url() ?>"
+			   target="_blank"><?php echo TD_TTW_Connection::get_ttw_url() ?></a>
+		</li>
+		<li>
+			<p><strong>License details fetched from TTW:</strong></p>
+			<pre>
+				<?php foreach ( TD_TTW_User_Licenses::get_instance()->get_all() as $license ) : ?>
+					<?php print_r( $license->get_data() ); ?>
+				<?php endforeach; ?>
+			</pre>
+		</li>
+		<li>
+			<b>OLD way thrive_license</b>: <?php echo var_export( get_option( 'thrive_license', array() ), true ) ?>
+		</li>
+		<li>
+			<b>NEW way tpm_licenses used</b>: <?php echo var_export( get_option( 'tpm_licenses', array() ), true ) ?>
+		</li>
+		<li>
+			<b>TPM Token</b> <?php echo get_option( 'tpm_token', 'not_set' ) ?>
+		</li>
+	</ul>
+<?php endif; ?>
+
+
+<script type="text/javascript">
+
+	( function ( $ ) {
+
+		$( function () {
+
+			var $list = $( '#tpm-debug-server' );
+
+			$list.change( function () {
+				window.location = '<?php echo TD_TTW_Update_Manager::get_instance()->get_admin_url() ?>' + '&td_action=set_url&url=' + this.value;
+			} );
+		} );
+
+
+	} )( jQuery );
+
+</script>

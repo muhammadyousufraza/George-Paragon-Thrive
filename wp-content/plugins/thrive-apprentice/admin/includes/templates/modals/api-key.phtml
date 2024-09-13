@@ -1,0 +1,43 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tvd-modal-content">
+	<h3 class="tvd-modal-title"><?php echo __( 'Add new API key', 'thrive-apprentice' ); ?></h3>
+	<div class="tva-flex tva-api-modal-row mb-20">
+		<div>
+			<label for="tva-token-name"><?php echo esc_html__( 'Name', 'thrive-apprentice' ); ?></label>
+		</div>
+		<div class="last">
+			<input id="tva-token-name" class="input" data-fn="changeFiled" type="text" data-field="name" value="<#= model.get('name') #>" placeholder="<?php echo esc_html__( 'Give your API key a name', 'thrive-apprentice' ); ?>&hellip;">
+		</div>
+	</div>
+	<div class="tva-flex tva-api-modal-row mb-20">
+		<div>
+			<label for="tva-token-key"><?php echo esc_html__( 'Key', 'thrive-apprentice' ); ?></label>
+		</div>
+		<div class="last">
+			<input id="tva-token-key" type="text" readonly value="<#= model.get('key') #>">
+			<button class="tva-zclip">&nbsp;
+				<span class="tva-custom-tooltip"><?php echo esc_attr( __( 'Copy', 'thrive-apprentice' ) ); ?></span>
+			</button>
+		</div>
+	</div>
+	<div class="tva-flex tva-flex-row mb-20 tvd-switch">
+		<label class="tva-slide-checkbox">
+			<span class="checkbox-label"><?php echo esc_html__( 'Active', 'thrive-apprentice' ); ?></span>
+			<input id="tva-active-token" type="checkbox" class="click" data-field="status" data-fn="changeFiled" <#= parseInt(model.get('status')) === 1 ? 'checked' : '' #>>
+			<span class="lever"></span>
+		</label>
+	</div>
+	<div class="tva-flex tva-flex-row tva-flex-end">
+		<button type="button" class="click tva-modal-btn tva-modal-btn-green" data-fn="save"><?php echo __( 'Save', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>

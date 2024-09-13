@@ -1,0 +1,14 @@
+<?php $support_link = '<a href="https://thrivethemes.com/support/" title="Support Forum">Support Forum</a>' ?>
+<div class="symbols-error message-inline">
+	<div class="tcb-notification">
+		<div class="tcb-notification-icon tcb-notification-icon-error">
+			<?php tcb_icon( 'close2' ) ?>
+		</div>
+		<div class="tcb-notification-content">
+			<div>
+				<?php echo sprintf( __( 'An error was encountered while fetching data for the symbols. Please contact our %s and provide the following error message:', 'thrive-cb' ), $support_link ) ?>
+				<pre><#= error_message #></pre>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+<p>
+	<strong>
+		<?php
+		echo sprintf(
+			__( 'There is a new version of %s available. %s', 'thrive-dash' ),
+			$name,
+			sprintf(
+				'<a class="%s" aria-label="%s" href="%s">' . __( 'View version %s details', 'thrive-dash' ) . '</a>.',
+				'thickbox open-plugin-details-modal',
+				$name,
+				$details_url,
+				$version
+			)
+		)
+		?>
+	</strong>
+</p>

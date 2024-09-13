@@ -1,0 +1,32 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div class="tvd-tss-fields-content">
+	<div class="tvd-tss-fixed-top">
+		<h3><?php _e('Global Fields', 'thrive-dash') ?></h3>
+		<a href="javascript:void(0)" class="tvd-tss-add-new-field"><span><?php _e('Add Field', 'thrive-dash') ?></span></a>
+	</div>
+
+	<div>
+		<p>
+			<?php _e('Add global information that can be used in many places on your site. Your company address, for example', 'thrive-dash') ?>
+		</p>
+		<a href="https://thrivethemes.com/tkb_item/how-to-use-the-global-fields-feature/" target="_blank" class="tvd-tss-wizard-button">
+			<?php echo dashboard_icon( 'question-circle' ) ?>
+			<span>
+				<?php _e('Show me how Global Fields Work', 'thrive-dash') ?>
+			</span>
+		</a>
+	</div>
+
+    <ul class="tvd-tss-groups-wrapper tvd-collapsible tvd-expandable" data-collapsible="" data-easing="easeInOutQuart" data-duration="500"></ul>
+</div>

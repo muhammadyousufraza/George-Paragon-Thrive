@@ -1,0 +1,18 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-flex tva-flex-row tva-flex-end mt-20 mb-30 tvd-switch">
+	<label class="tva-slide-checkbox">
+		<span class="checkbox-label"><?php echo esc_html__( 'Notify user by email', 'thrive-apprentice' ); ?></span>
+		<input id="tva-notify-user" type="checkbox" class="click" data-fn="notifyUser">
+		<span class="lever"></span>
+	</label>
+</div>

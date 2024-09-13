@@ -1,0 +1,13 @@
+<div class="tva-card tva-customer-card tva-card-small click mb-10" data-fn="viewUser" data-id="<#= model.get('ID') #>">
+	<div class="tva-flex tva-align-center">
+		<div class="tva-customer-avatar mr-10" style="background-image: url(<#= model.get('avatar_url') #>)"></div>
+		<div class="tva-customer-name"><#= model.get('display_name') #></div>
+	</div>
+	<div class="tva-customer-email"><#= model.get('user_email') #></div>
+	<div class="tva-customer-enrolled"><#= model.get('enrolled') #></div>
+	<div class="tva-customer-seen"><#= model.get('last_seen') #></div>
+	<div class="tva-flex tva-align-center tva-space-between">
+		<div class="tva-customer-courses"><#= model.get('published_courses_count') #></div>
+		<?php tva_get_svg_icon( 'arrow-circle-right' ) ?>
+	</div>
+</div>

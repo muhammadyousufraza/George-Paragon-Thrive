@@ -1,0 +1,284 @@
+.tap-selected-triggers {
+
+  > .tap-flex--column {
+    width: 100%;
+  }
+
+  .is-preview {
+    .tap-trigger-data {
+      .tap-trigger-image {
+        .tap-logo-img {
+          img {
+            max-width: 18px;
+          }
+        }
+
+        .tap-icon-wrapper {
+          --tap-icon-size: 25px;
+        }
+      }
+
+      .tap-trigger-name {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .tap-trigger-data {
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+
+    .tap-toggle-icon {
+      .tap-icon-wrapper {
+        --tap-icon-size: 13px;
+      }
+    }
+
+    &.is-active {
+      .tap-toggle-icon {
+        .tap-icon-wrapper {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .tap-trigger-image {
+      flex: 0.1;
+      align-self: flex-start;
+
+      .tap-icon-wrapper {
+        --tap-icon-size: 33px;
+        color: var(--tap-primary-light);
+      }
+
+      .tap-logo-img {
+        img {
+          max-width: 20px;
+        }
+      }
+    }
+
+    .tap-trigger-name {
+      color: var(--tap-heading-color);
+      flex: 1;
+      font-size: 16px;
+      font-weight: 500;
+      align-items: flex-start;
+    }
+
+    .tap-trigger-description {
+      z-index: 11;
+      margin-left: 10px;
+
+      .tap-icon-wrapper {
+        --tap-icon-size: 12px;
+      }
+    }
+
+    .tap-icon-wrapper {
+      cursor: pointer;
+      --tap-icon-size: 8px;
+      color: var(--tap-placeholder);
+    }
+  }
+}
+
+.tap-expand-apps {
+  font-size: 13px;
+  color: #cf2591;
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: auto;
+  max-width: fit-content;
+  user-select: none;
+}
+
+.tap-field-description {
+  margin-left: 10px;
+  cursor: pointer;
+
+  .tap-icon-wrapper {
+    --tap-icon-size: 12px;
+    color: var(--tap-placeholder);
+  }
+}
+
+.tap-trigger-fields, .tap-trigger-item {
+  width: 100%;
+  position: relative;
+
+  &.is-preview:not(:last-of-type) {
+    border-bottom: 1px solid rgba(192, 202, 209, 0.2);
+  }
+
+  &.tap-loader--card {
+    &:not(.is-active) {
+      &:before {
+        background-size: contain;
+      }
+    }
+
+    &::before {
+      border-radius: 4px;
+    }
+  }
+}
+
+.tap-trigger-settings-info {
+  .tap-icon-wrapper {
+    --tap-icon-size: 12px;
+  }
+}
+
+.tap-trigger-fields {
+  box-sizing: border-box;
+}
+
+.tap-trigger-item:not(.is-preview) {
+  border-radius: 4px;
+  border: solid 1px rgba(231, 236, 240, 0.8);
+}
+
+.tap-trigger-action {
+  .tap-icon-wrapper {
+    --tap-icon-size: 12px !important;
+  }
+}
+
+.tap-trigger-apps {
+  align-items: stretch !important;
+  flex-wrap: wrap;
+  column-gap: 13px;
+
+  .tap-app-logo {
+    color: var(--tap-primary-light);
+  }
+}
+
+.tap-trigger-options {
+  font-weight: 500;
+
+  .tap-icon-lock {
+    --tap-icon-size: 12px !important;
+    color: var(--tap-text-color-sec) !important;
+  }
+
+  .tap-toggle-title {
+    font-size: 15px;
+
+    .tap-data-logo {
+      color: var(--tap-primary-light);
+
+      .tap-icon-wrapper {
+        --tap-icon-size: 30px !important;
+      }
+
+      .tap-logo-img {
+        max-width: 25px !important;
+      }
+    }
+  }
+
+  .tap-dynamic-item {
+    .tap-icon-wrapper {
+      color: var(--tap-primary-light);
+    }
+
+    .tap-icon-lock {
+      --tap-icon-size: 20px !important;
+    }
+  }
+}
+
+.tap-action-options {
+  @extend .tap-trigger-options;
+
+  .tap-toggle-title {
+    .tap-data-logo {
+      color: var(--tap-action-color);
+    }
+  }
+
+  .tap-dynamic-item {
+    .tap-icon-wrapper {
+      color: var(--tap-action-color);
+    }
+  }
+}
+
+
+.tap-trigger-dynamic:not(:empty) {
+  @extend .tap-grey-container;
+}
+
+.tap-trigger-limitations {
+  width: 50px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #e892c8;
+  color: #fff;
+  font-size: 12px;
+  box-sizing: border-box;
+
+  .tap-icon-wrapper {
+    color: #fff !important;
+    --tap-icon-size: 12px !important;
+
+    &.tap-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.tap-trigger-settings-icon {
+  background-color: var(--tap-primary-light);
+  color: #fff;
+  height: 18px;
+  position: absolute;
+  top: -18px;
+  left: 81px;
+  cursor: pointer;
+  border-radius: 0 2px 0 0;
+
+  .tap-icon-wrapper {
+    --tap-icon-size: 12px;
+  }
+}
+
+.tap-trigger-settings {
+  .tap-ts-execution {
+    width: 230px;
+
+    &.with-number {
+      width: 150px;
+    }
+  }
+
+  .tap-ts-execution-number {
+    width: 70px;
+  }
+
+  .tap-ts-rule {
+    width: 230px;
+  }
+
+  .tap-ts-moment, .tap-ts-subject, .tap-ts-moment-number {
+    width: 110px;
+  }
+
+  .tap-ts-message {
+    height: 36px;
+    font-size: 14px;
+    color: var(--tap-text-color);
+  }
+}
+
+.tap-trigger-message {
+  font-size: 13px;
+  width: 100%;
+  color: var(--tap-text-color-sec);
+  padding: 10px 0;
+}
+

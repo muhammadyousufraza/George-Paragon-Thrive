@@ -1,0 +1,45 @@
+<div class="tvo-col tvo-s2">
+	<span class="tvo-q-label">
+		<?php echo __( 'Question', 'thrive-ovation' ); ?> <#= index + 1 #>
+	</span>
+	<a href="javascript:void(0)" class="tvo-remove-question tvo-right tvo-f-icon tvo-red-text">
+		<span class="tvo-f-icon-trash"></span>
+	</a>
+</div>
+
+<div class="tvo-col tvo-s9">
+	<input class="tve_lightbox_input tvo-question-input" value="<#= question #>">
+	<a href="javascript:void(0)" class="tvo-show-placeholder" <#= config.placeholders[index] !=''? 'style="display: none"' : '' #>>
+	+ <?php echo __( 'Add placeholder text', 'thrive-ovation' ); ?>
+	</a>
+</div>
+
+<div class="tvo-col tvo-s1">
+	<div class="tve_lightbox_input_holder tve_lightbox_no_label">
+		<input id="tvo_question_req_<#= index + 1 #>" class="tvo-required" type="checkbox" <#= config.questions_required[index]== 1 ? 'checked' : '' #>>
+		<label for="tvo_question_req_<#= index + 1 #>"></label>
+	</div>
+</div>
+
+<div class="tvo-col tvo-s12 tvo-row tvo-placeholder" <#= config.placeholders[index]== '' ? 'style="display: none"' : '' #>>
+
+<div class="tvo-col tvo-s2">
+			<span class="tvo-p-label">
+				<?php echo __( 'Placeholder', 'thrive-ovation' ); ?> <#= index + 1 #>
+			</span>
+	<a href="javascript:void(0)" class="tvo-remove-placeholder tvo-right tvo-f-icon tvo-red-text">
+		<span class="tvo-f-icon-trash"></span>
+	</a>
+</div>
+<div class="tvo-col tvo-s9">
+	<span class="tvo-placeholder-connect">L</span>
+	<input class="tve_lightbox_input tvo-placeholder-input"
+		<#= config.placeholders[index]=='' ?
+				'placeholder="<?php echo __( 'Enter your placeholder text here', 'thrive-ovation' ); ?>"' :
+				'value="'+config.placeholders[index]+'"'
+				#>">
+</div>
+
+<div class="tvo-col tvo-s1"></div>
+
+</div>

@@ -1,0 +1,35 @@
+<div class="tvu-campaign-option tvu-campaign-absolute">
+	<p class="grey m-0"><?php echo __( 'Fixed Dates Campaign', 'thrive-ult' ) ?></p>
+	<p><?php echo __( 'Tell us when you would like the new offer to start and end', 'thrive-ult' ) ?></p>
+	<div class="tvd-row tvd-collapse">
+		<div class="tvd-col tvd-s6 tvd-m3">
+			<div class="tvd-input-field tvd-timepicker-left">
+				<input id="tvu-start-date" type="text" class="tvd-no-focus tvd-no-margin-bottom" value="<#= item.start && item.start.date ? item.start.date : '' #>" data-field="start_date">
+				<label <#= item.start && item.start.date ? 'class="tvd-active"' : '' #> for="tvu-start-date"><?php echo __( 'Start Date', 'thrive-ult' ) ?></label>
+			</div>
+		</div>
+		<div class="tvd-col tvd-s6 tvd-m3">
+			<div class="tvd-input-field timepicker-append-to">
+				<input id="tvu-start-hour" type="text" class="tvd-no-focus tvd-no-margin-bottom" value="<#= item.start && item.start.time ? item.start.time : '' #>" data-field="start_time">
+				<label <#= item.start && item.start.time ? 'class="tvd-active"' : '' #> for="tvu-start-hour"><?php echo __( 'Start Hour', 'thrive-ult' ) ?></label>
+			</div>
+		</div>
+		<div class="tvd-col tvd-s6 tvd-m3">
+			<div class="tvd-input-field tvd-timepicker-left">
+				<input id="tvu-end-date" type="text" class="tvd-no-focus tvd-no-margin-bottom" value="<#= item.end && item.end.time ? item.end.date : '' #>" data-field="end_date">
+				<label <#= item.end && item.end.date ? 'class="tvd-active"' : '' #> for="tvu-end-date"><?php echo __( 'End Date', 'thrive-ult' ) ?></label>
+			</div>
+		</div>
+		<div class="tvd-col tvd-s6 tvd-m3">
+			<div class="tvd-input-field timepicker-append-to">
+				<input id="tvu-end-hour" type="text" class="tvd-no-focus tvd-no-margin-bottom" value="<#= item.end && item.end.time ? item.end.time : '' #>" data-field="end_time">
+				<label <#= item.end && item.end.time ? 'class="tvd-active"' : '' #> for="tvu-end-hour"><?php echo __( 'End Hour', 'thrive-ult' ) ?></label>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div>
+	<p class="mb-0" style="font-style: italic;"><?php echo __( 'Your current timezone settings are: ', 'thrive-ult' ) ?> <strong class="tu-timezone"><#= ThriveUlt.globals.settings.get('timezone') ? ThriveUlt.globals.settings.get('timezone') : '<?php __( 'Not Set', 'thrive-ult' ) ?>' #></strong>. <?php echo __( 'Local time is ', 'thrive-ult' ) ?> <strong
+				class="tu-time"><?php echo tve_ult_current_time( 'Y-m-d H:i' ); ?></strong>, <?php echo __( 'see ', 'thrive-ult' ) ?><?php echo __( ' Date & Time Settings', 'thrive-ult' ) ?></p>
+</div>

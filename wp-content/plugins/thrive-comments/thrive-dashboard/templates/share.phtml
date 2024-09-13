@@ -1,0 +1,45 @@
+<div id="tvd-modal1" class="tvd-modal tvd-share-modal">
+	<div class="tvd-modal-content tvd-center-align">
+		<?php $current_screen = get_current_screen(); ?>
+		<div id="fb-root"></div>
+		<?php
+		$url = 'https://thrivethemes.com/';
+		$fb  = tve_dash_get_thrivethemes_shares( 'facebook' );
+		?>
+
+		<span class="tvd-icon-heart tvd-share-icon"></span>
+		<div class="tvd-v-spacer"></div>
+		<h2>
+			<?php echo __( 'Share the Love', 'thrive-dash' ) ?>
+		</h2>
+		<div class="tvd-v-spacer"></div>
+		<p>
+			<?php echo __( 'Love Thrive Themes? Help Us Spread the Word!', 'thrive-dash' ) ?>
+		</p>
+		<div class="share-thrive">
+			<a class="tvd-share tvd-share-facebook"
+			   href="http://www.facebook.com/share.php?u=<?php echo $url ?>&title=''"
+			   onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=500');return false;">
+				<span class="tvd-share-item">
+					<span class="tvd-share-count-icon"></span>
+					<span
+							class="tvd-share-count-text"><?php echo __( 'SHARE', 'thrive-dash' ) ?></span>
+				</span>
+				<?php if ( ! empty( $fb ) ) : ?>
+					<span class="tvd-share-count"><?php echo $fb; ?></span>
+				<?php endif ?>
+			</a>
+			<a class="tvd-share tvd-share-twitter"
+			   href="http://twitter.com/intent/tweet?status=WordPress themes for startups and business builders <?php echo $url; ?>"
+			   onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=500');return false;">
+				<span class="tvd-share-item">
+					<span class="tvd-share-count-icon"></span>
+					<span class="tvd-share-count-text"><?php echo __( 'TWEET', 'thrive-dash' ) ?></span>
+				</span>
+			</a>
+		</div>
+	</div>
+	<a class="tvd-modal-action tvd-modal-close tvd-modal-close-x" href="javascript:void(0)">
+		<i class="tvd-icon-close2"></i>
+	</a>
+</div>

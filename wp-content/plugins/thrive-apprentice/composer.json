@@ -1,0 +1,33 @@
+{
+  "name": "thrivethemes/thrive-apprentice",
+  "description": "Thrive Apprentice Plugin",
+  "license": "ThriveThemes",
+  "require": {
+    "stripe/stripe-php": "^v13.7.0"
+  },
+  "autoload": {
+    "files": [
+      "class-tva-const.php",
+      "inc/functions.php",
+      "inc/global-functions.php",
+      "inc/hooks.php",
+      "inc/helpers.php",
+      "inc/compat.php",
+      "tcb-bridge/tcb-hooks.php",
+      "inc/drip/init.php",
+      "inc/drip/helper.php",
+      "ttb-bridge/global-functions.php"
+    ],
+    "classmap": [
+      "inc",
+      "database",
+      "tqb-bridge/classes",
+      "ttb-bridge/classes",
+      "tcb-bridge/classes",
+      "tcb-bridge/editor-elements/certificate",
+      "tcb-bridge/editor-elements/assessment",
+      "tcb-bridge/rest",
+      "tcb-bridge/classes/course/shortcodes"
+    ]
+  }
+}

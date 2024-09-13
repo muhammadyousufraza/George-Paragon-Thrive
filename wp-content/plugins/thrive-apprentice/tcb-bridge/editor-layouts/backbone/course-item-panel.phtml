@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-course-item-panel">
+	<select class="change tva-select-courses" data-fn="selectCourse" style="margin-bottom: 10px;">
+		<option class="tva-option-placeholder" value="" disabled selected><?php echo __( 'Please select a course', 'thrive-apprentice' ); ?></option>
+	</select>
+	<select class="change tva-select-course-items" data-fn="selectCourseItem">
+		<option class="tva-option-placeholder" value="" disabled selected><?php echo __( 'Please select a course item', 'thrive-apprentice' ); ?></option>
+	</select>
+</div>

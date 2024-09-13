@@ -1,0 +1,24 @@
+<div class="tcb-conditional-display-title">
+	<span class="tcb-conditional-title-text"><?php echo esc_html__( 'Display conditions', 'thrive-cb' ); ?></span>
+	<span><?php echo esc_html__( 'for', 'thrive-cb' ); ?></span>
+	<span class="tcb-conditional-current-display"></span>
+</div>
+
+<div class="tcb-conditional-display-setting-select-container">
+	<div class="tcb-conditional-display-select"></div>
+</div>
+
+<div class="tcb-condition-set-list"></div>
+
+<div class="tcb-condition-set-action-buttons" style="display:flex;flex-direction:row;">
+	<button class="tcb-condition-new-set click green-text" data-fn="addSet">
+		<?php tcb_icon( 'plus-regular' );
+		echo esc_html__( 'New condition set', 'thrive-cb' ); ?>
+	</button>
+	<button class="tcb-condition-select-existing-set green-text">
+		<?php tcb_icon( 'search-regular' );
+		echo esc_html__( 'Select an existing condition set', 'thrive-cb' ); ?>
+		<div class="tcb-condition-select-arrow"></div>
+		<div class="tcb-condition-set-select2-container"></div>
+	</button>
+</div>

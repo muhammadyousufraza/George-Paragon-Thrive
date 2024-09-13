@@ -1,0 +1,43 @@
+<div class="image-picker-wrapper"></div>
+<div class="control-grid">
+	<div>
+		<label><?php echo __( 'Image display', 'thrive-cb' ) ?></label>
+		<select id="bg-image-prop" class="change" data-fn="prop">
+			<option value="size:auto"><?php echo __( 'Default', 'thrive-cb' ) ?></option>
+			<option value="size:cover"><?php echo __( 'Cover', 'thrive-cb' ) ?></option>
+			<option value="size:contain"><?php echo __( 'Contain', 'thrive-cb' ) ?></option>
+			<option value="size:percentage"><?php echo __( 'Percentage', 'thrive-cb' ) ?></option>
+		</select>
+	</div>
+	<div class="tve-scale-fit">
+		<div class="bg-image-position-area tcb-disabled">
+			<div class="bg-image-control click" data-fn="set_position" data-value="0%:0%" style="position: absolute; top:-3px; left: -3px;"></div>
+			<div class="bg-image-control click" data-fn="set_position" data-value="50%:0%" style="position: absolute; top:-4px; left: 45%;"></div>
+			<div class="bg-image-control click" data-fn="set_position" data-value="100%:0%" style="position: absolute; top:-3px; right: -3px;"></div>
+			<div class="bg-image-control click" data-fn="set_position" data-value="0%:50%" style="position: absolute; top:45%; left: -4px;"></div>
+			<div class="bg-image-control click" data-fn="set_position" data-value="50%:50%" style="position: absolute; top:45%; left: 45%;"></div>
+			<div class="bg-image-control click" data-fn="set_position" data-value="100%:50%" style="position: absolute; top:45%; right: -4px;"></div>
+			<div class="bg-image-control click" data-fn="set_position" data-value="0%:100%" style="position: absolute; bottom: -3px; left: -3px;"></div>
+			<div class="bg-image-control click" data-fn="set_position" data-value="50%:100%" style="position: absolute; bottom: -4px; left: 45%;"></div>
+			<div class="bg-image-control click" data-fn="set_position" data-value="100%:100%" style="position: absolute; bottom:-3px; right: -3px;"></div>
+		</div>
+	</div>
+</div>
+<div class="control-grid tve-background-image-repeat tcb-hidden">
+	<div>
+		<label><?php echo __( 'Repeat', 'thrive-cb' ) ?></label>
+		<select id="bg-image-repeat-prop" class="change" data-fn="prop">
+			<option value="repeat:no-repeat"><?php echo __( 'No repeat', 'thrive-cb' ) ?></option>
+			<option value="repeat:repeat-y"><?php echo __( 'Repeat vertically', 'thrive-cb' ) ?></option>
+			<option value="repeat:repeat-x"><?php echo __( 'Repeat horizontally', 'thrive-cb' ) ?></option>
+			<option value="repeat:repeat"><?php echo __( 'Repeat both', 'thrive-cb' ) ?></option>
+		</select>
+	</div>
+</div>
+<div class="tve-image-size-percentages">
+	<div class="drop-panel-control tve-image-width tve-control"></div>
+	<div class="drop-panel-control tve-image-height tve-control"></div>
+</div>
+<div class="control-grid p-0 tve-static-background-image-control">
+	<label class="tcb-checkbox"><input type="checkbox" class="change" id="bg-static" data-fn="static" value="1"><span><?php echo __( 'Static background image', 'thrive-cb' ) ?></span></label>
+</div>

@@ -1,0 +1,128 @@
+<?php use TVA\Buy_Now\Generic; ?>
+
+<h5 class="tva-section-title"><#= this.title #></h5>
+<div class="tva-input-width">
+	<select class="tva-section-option change" data-fn="fieldChanged" data-field="option">
+		<# _.each( this.options(), function( opt, key ) {#>
+		<option value="<#=key#>"
+		<#=this.model.get('option') === key ? ' selected' : ''#>><#=opt#></option>
+		<#}, this ) #>
+	</select>
+</div>
+<!-- Deprecated warnings -->
+<# if (this.model.get('option') === 'show_login_form') { #>
+<div class="tva-deprecation-warning tva-err-card click mt-10" onclick="this.classList.toggle('tva-expanded')">
+	<strong><?php esc_html_e( 'This setting is deprecated as of February 2021', 'thrive-apprentice' ); ?></strong>
+	<div class="tva-warning-icon tva-flex-mid"><?php tva_get_svg_icon( 'angle-down' ); ?></div>
+	<div class="tva-warning-content">
+		<div class="mt-5 mb-5">
+			<?php esc_html_e( 'The login form is deprecated because it’s not visually editable.', 'thrive-apprentice' ); ?><br>
+		</div>
+		<?php esc_html_e( 'Select one of the other restricted content behaviors from the dropdown menu above for full visual editing control over what’s displayed if a user tries to access content that they don’t have access to.', 'thrive-apprentice' ); ?>
+	</div>
+</div>
+<# } #>
+<# if (this.model.get('option') === 'message') { #>
+<div class="tva-deprecation-warning tva-err-card click mt-10" onclick="this.classList.toggle('tva-expanded')">
+	<strong><?php esc_html_e( 'This setting is deprecated as of February 2021', 'thrive-apprentice' ); ?></strong>
+	<div class="tva-warning-icon tva-flex-mid"><?php tva_get_svg_icon( 'angle-down' ); ?></div>
+	<div class="tva-warning-content">
+		<div class="mt-5 mb-5">
+			<?php esc_html_e( 'The login form is deprecated because it’s not visually editable.', 'thrive-apprentice' ); ?><br>
+		</div>
+		<?php esc_html_e( 'Select one of the other restricted content behaviors from the dropdown menu above for full visual editing control over what’s displayed if a user tries to access content that they don’t have access to.', 'thrive-apprentice' ); ?>
+	</div>
+</div>
+<# } #>
+<# if (this.model.get('option') === 'buy_action') { #>
+<div class="tva-flex tva-align-center mt-10">
+	<select class="change" data-fn="fieldChanged" data-field="buy_action.provider">
+		<option value=""><?php esc_html_e( 'Select a provider', 'thrive-apprentice' ); ?></option>
+		<?php foreach ( Generic::get_integrations() as $key => $label ): ?>
+			<option value="<?php echo $key; ?>" <#= this.model.deepGet('buy_action.provider') === "<?php echo $key; ?>" ? ' selected' : ''#>><?php echo $label; ?></option>
+		<?php endforeach; ?>
+	</select>
+</div>
+<# } #>
+<div class="tva-restriction-options">
+	<!-- Redirect to login/reg page options -->
+	<# if ( this.model.get('option') === 'redirect_login' ) { #>
+	<# if ( ! this.hasLoginRegistrationPage() ) { #>
+	<div class="tva-deprecation-warning tva-notice-card mt-10">
+		<#if (this.course) { #>
+		<?php echo sprintf( __( 'You haven’t configured a login / registration page yet.%sConfigure your login / registration page in the %ssettings panel%s', 'thrive-apprentice' ), '<br>', '<a target="_blank" href="' . admin_url( 'admin.php?page=thrive_apprentice#settings/access-restriction' ) . '">', '</a>' ); ?>
+		<# } else { #>
+		<?php echo sprintf( __( 'You haven’t configured a login / registration page yet.%sConfigure your login / registration page in the settings panel above', 'thrive-apprentice' ), '<br>' ); ?>
+		<# } #>
+	</div>
+	<# } #>
+	<div class="tva-section-title mt-30">
+		<?php esc_html_e( 'Default state of form', 'thrive-apprentice' ); ?>
+	</div>
+	<div class="tva-flex tva-align-center mt-5">
+		<div>
+			<input class="change" name="login_form_state[<#-this.scope#>]" id="tva-<#=this.scope#>-login-state-0" data-fn="fieldChanged" data-field="redirect_login.state" type="radio" value="login"<#=this.model.deepGet('redirect_login.state') === 'login' ? ' checked' : ''#>>
+			<label for="tva-<#-this.scope#>-login-state-0"><?php esc_html_e( 'Login', 'thrive-apprentice' ); ?></label>
+		</div>
+		<div class="ml-20">
+			<input class="change" name="login_form_state[<#-this.scope#>]" id="tva-<#=this.scope#>-login-state-1" data-fn="fieldChanged" data-field="redirect_login.state" type="radio" value="register"<#=this.model.deepGet('redirect_login.state') === 'register' ? ' checked' : ''#>>
+			<label for="tva-<#-this.scope#>-login-state-1"><?php esc_html_e( 'Register', 'thrive-apprentice' ); ?></label>
+		</div>
+	</div>
+	<label class="tva-slide-checkbox mt-30 tva-input-width tva-flex tva-space-between">
+		<span class="tva-section-title tva-label-section-title mr-10 mb-0" style="width:auto">
+			<?php esc_html_e( 'Redirect user to content they were trying to access after login', 'thrive-apprentice' ); ?>
+		</span>
+		<input type="checkbox" class="change" data-fn="fieldChanged" data-field="redirect_login.content_redirect"<#=this.model.deepGet('redirect_login.content_redirect') ? ' checked' : ''#>>
+		<span class="lever ml-0"></span>
+	</label>
+	<# } else if ( this.model.get('option') === 'redirect_custom' ) { #>
+	<div class="tva-custom-redirect mt-30"></div> <!-- custom redirect options -->
+	<# } else if ( this.model.get('option') === 'content' ) { #>
+	<h5 class="tva-section-title mt-30">
+		<?php esc_html_e( 'Page title settings', 'thrive-apprentice' ); ?>
+		<div class="tva-info-icon tva-tooltip-parent">
+			<?php tva_get_svg_icon( 'info-solid' ); ?>
+			<div class="tva-custom-tooltip tva-tooltip-inherited"><?php echo esc_attr( __( 'Your custom content block will display beneath the page title. You can choose to change that title or hide it when users do not have access.', 'thrive-apprentice' ) ); ?></div>
+		</div>
+	</h5>
+
+	<div class="inner-box">
+		<div class="tva-flex tva-align-center mt-5">
+			<div>
+				<input class="change" name="title[<#-this.scope#>]" id="tva-<#=this.scope#>-0" data-fn="fieldChanged" data-field="content.title" type="radio" value="__original"<#=this.model.deepGet('content.title') === '__original' ? ' checked' : ''#>>
+				<label for="tva-<#-this.scope#>-0"><?php esc_html_e( 'Display original title', 'thrive-apprentice' ); ?></label>
+			</div>
+			<div class="ml-20">
+				<input class="change" name="title[<#-this.scope#>]" id="tva-<#=this.scope#>-1" data-fn="fieldChanged" data-field="content.title" type="radio" value=""<#=!['__original', '__hide'].includes( this.model.deepGet('content.title') ) ? ' checked' : ''#>>
+				<label for="tva-<#-this.scope#>-1"><?php esc_html_e( 'Display custom title', 'thrive-apprentice' ); ?></label>
+			</div>
+			<div class="ml-20">
+				<input class="change" name="title[<#-this.scope#>]" id="tva-<#=this.scope#>-2" data-fn="fieldChanged" data-field="content.title" type="radio" value="__hide"<#=this.model.deepGet('content.title') === '__hide' ? ' checked' : ''#>>
+				<label for="tva-<#-this.scope#>-2"><?php esc_html_e( 'Hide title', 'thrive-apprentice' ); ?></label>
+			</div>
+		</div>
+		<# if ( !['__original', '__hide'].includes( this.model.deepGet('content.title') ) ) { #>
+		<div class="tva-title-input mt-15"><input type="text" placeholder="<?php esc_attr_e( 'Enter new title to be displayed...', 'thrive-apprentice' ); ?>" class="change tva-input-width" value="<#-this.model.deepGet('content.title')#>" data-fn="fieldChanged" data-field="content.title"></div>
+		<# } #>
+		<hr class="tva-sep mt-20">
+		<h5 class="tva-section-title mt-20"><?php esc_html_e( 'Preview or edit your restricted content page', 'thrive-apprentice' ); ?></h5>
+		<div class="tva-flex tva-align-center tva-action-bar tva-input-width">
+			<a class="tva-page-option tva-flex-mid" href="<#= this.model.deepGet('content.post.preview_url') #>" target="_blank">
+				<?php tva_get_svg_icon( 'eye_light', 'mr-10 tva-view' ); ?>
+				<?php echo __( 'View', 'thrive-apprentice' ) ?>
+			</a>
+			<a class="tva-page-option tva-flex-mid tva-edit-page-with-tar ml-5" href="<#= this.model.deepGet('content.post.edit_url') #>" target="_blank">
+				<?php tva_get_svg_icon( 'tar-icon', 'mr-10 tva-tar' ); ?>
+				<#- TVA.t.settings_tab.login_page.edit_post #>
+			</a>
+		</div>
+	</div>
+
+	<# } else if ( this.model.get('option') === 'message' ) { #>
+	<div class="mt-30">
+		<textarea name="tva_restriction_message" id="tva-restriction-<#-this.scope#>" class="tva-restriction-message"><#=this.model.get('message') || ''#></textarea>
+	</div>
+	<# } #>
+</div>
+<div class="tva-loader"></div>

@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tve-advanced-controls extend-grey tcb-relative mt-5">
+	<div class="dropdown-header" data-prop="advanced">
+		<span><?php echo esc_html__( 'Apprentice options', 'thrive-apprentice' ); ?></span>
+	</div>
+	<div class="dropdown-content pt-0">
+		<div class="info-text orange mb-10" style="display: none;">
+			<span><?php echo esc_html__( 'Your quiz has been modified. Please confirm your quiz requirements for the lesson to be completed.', 'thrive-apprentice' ); ?></span>
+		</div>
+		<div class="tve-control" data-view="ControlMarkComplete"></div>
+		<div class="tva-tqb-extra-controls"></div>
+	</div>
+</div>

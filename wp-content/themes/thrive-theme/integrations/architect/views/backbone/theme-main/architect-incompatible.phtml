@@ -1,0 +1,30 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-theme
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="thrive-no-post-content-notice">
+	<div class="thrive-no-post-content-inner">
+		<div class="architect-incompatible">
+			<div class="content">
+				<div class="content-icons">
+					<span class="ttb-icon"></span>
+					<span class="plus-icon"></span>
+					<span class="tar-icon"></span>
+				</div>
+				<p>
+					<?php echo __( "It looks like you have Thrive Architect installed, but it's not compatible with this version of Thrive Theme Builder. Thrive Theme Builder uses Thrive Architect to edit various pieces of content. To be able to use these features, please make sure you have the latest versions by clicking on the following link and updating", 'thrive-theme' ); ?>
+					<strong><#= needsUpdate #></strong>
+				</p>
+				<a href="<?php echo admin_url( 'update-core.php?force-check=1' ); ?>"><?php echo __( 'WordPress Updates', 'thrive-theme' ) ?></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="thrive-architect-incompatible-overlay"></div>

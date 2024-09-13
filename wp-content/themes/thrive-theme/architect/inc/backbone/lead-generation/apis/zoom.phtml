@@ -1,0 +1,32 @@
+<# var zoom_extra = api.get( 'extra_settings' ) #>
+<# var zoom_users =  ( !! zoom_extra && !! zoom_extra.users ) ? zoom_extra.users : '' #>
+<# if ( zoom_users.length > 0 ) { #>
+<div id="thrive-api-zoom-users" class="api-field" style="position: relative;">
+    <div class="field-description"><?php echo __( 'Select user:', 'thrive-cb' ) ?></div>
+    <select class="tve-api-extra" id="thrive-api-zoom-users-select" name="users">
+        <# _.each( zoom_users, function( user ) { #>
+            <#= TVE.tpl( 'util/option', { value: user.id, selected: false, text: user.name} ) #>
+        <# } ) #>
+    </select>
+</div>
+<# } #>
+
+<div class="api-field tve-zoom-api-wrapper">
+    <div class="field-description">
+		<?php echo __( 'Select user\'s webinar', 'thrive-cb' ); ?>
+    </div>
+
+    <div class="control-grid">
+		<select id="tve-zoom-webinar-select" class="api-list change tve-zoom-webinar-select" data-fn="setupChange" data-name="list">
+			<# if ( api.get( 'lists' ).length == 0 ) { #>
+				<#= TVE.tpl( 'util/option', { value:0, selected: true, text: '<?php echo __( 'No webinars found', 'thrive-cb' ); ?>' } ) #>
+			<# } #>
+
+			<# _.each( api.get( 'lists' ), function( item ) { #>
+				<#= TVE.tpl( 'util/option', {value:item.id, selected: ( api.getConfig('list') == item.id ), text: item.name} ) #>
+			<# } ) #>
+		</select>
+
+		<span class="click tve-refresh-api-list" data-fn="forceGet" data-tooltip="<?php echo __( 'Refresh', 'thrive-cb' ); ?>" data-side="top"> <?php tcb_icon( 'redo-regular' ) ?></span>
+    </div>
+</div>

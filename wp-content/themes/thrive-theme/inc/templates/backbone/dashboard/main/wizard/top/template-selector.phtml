@@ -1,0 +1,57 @@
+<div class="ttd-d-flex ttd-wizard-selector mouseenter" data-fn="dismissTooltipOnMouseenter">
+	<div class="ttd-wizard-dropdown" id="ttd-wizard-page-selector" style="display: none">
+		<div class="d-input-holder">
+			<input type="text" class="" id="d-search" placeholder="<?php echo esc_attr__( 'Search', 'thrive-theme' ); ?>">
+			<?php Thrive_Views::svg_icon( 'search', 'd-search-default' ); ?>
+		</div>
+		<div class="d-results-holder">
+		</div>
+		<div class="d-load-more">
+			<span class="click d-loaded" data-fn="loadMore"><?php echo esc_html__( 'Load More', 'thrive-theme' ); ?></span>
+			<span class="d-loading"><?php echo esc_html__( 'Loading', 'thrive-theme' ); ?></span>
+		</div>
+	</div>
+	<# if ( this.model.hasDemoContent() ) { #>
+	<div class="ttd-demo-content-switch-container">
+
+		<div class="ttd-demo-content-switch"></div>
+
+		<div class="margin-left-10">
+			<# if(this.model.usesDemoContent() || !this.model.hasRealContent()) { #>
+			<span><?php echo esc_html__( 'Display demo content', 'thrive-theme' ); ?></span>
+			<# } else { #>
+			<span><?php echo esc_html__( 'Display real content', 'thrive-theme' ); ?></span>
+			<# } #>
+			<span class="info-icon"></span>
+
+			<div id="ttd-demo-tooltip" class="ttd-wizard ttd-tooltip persistent">
+				<p class="mt-5 tt-message">
+					<?php echo esc_html__( "You don't have real content for this step. You can use the demo content to see how the template will look like with real content.", 'thrive-theme' ) ?>
+				</p>
+				<div class="ui-tt-arrow top"></div>
+			</div>
+		</div>
+	</div>
+	<# } #>
+	<# if ( this.model.hasSelectorDropdown() ) { #>
+	<a href="javascript:void(0)" class="click selector-drop" data-fn="selectorClick">
+		<span class="s-label"><#=this.model.getPreviewTemplateTitle()#></span>
+		<?php Thrive_Views::svg_icon( 'chevron-down' ); ?>
+	</a>
+	<# } #>
+	<?php /* different states for the completed steps, yey ... :( */ ?>
+	<# if ( this.model.isStepCompleted() && ! this.model.hasStepChanges() ) { #>
+	<a href="javascript:void(0)" class="selector-btn step-selected">
+		<?php Thrive_Views::svg_icon( 'check_medium' ); ?>
+		<?php echo esc_html__( 'Selected', 'thrive-theme' ); ?>
+	</a>
+	<# } else { #>
+	<a href="javascript:void(0)" class="selector-btn click<#=this.model.canContinue() ? '' : ' disabled' #>" data-fn="clickSaveTemplate">
+		<#= this.model.getContinueLabel() #>
+		<# if( this.model.hasNextStep() ) { #>
+		<?php Thrive_Views::svg_icon( 'chevron-right' ); ?>
+		<span class="step-no"><#=this.model.getNextAvailableStepIndex() + 1#></span>
+		<# } #>
+	</a>
+	<# } #>
+</div>

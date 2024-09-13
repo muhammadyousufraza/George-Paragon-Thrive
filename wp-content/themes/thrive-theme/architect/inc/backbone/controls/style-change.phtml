@@ -1,0 +1,30 @@
+<div class="control-grid <#=this.get_config( 'size' )#>">
+	<div class="label"><#=this.get_config( 'label' )#></div>
+	<# if (! this.get_config('preview')) { #>
+	<div class="input">
+		<# if(this.get_config( 'hasDelete' )){#>
+		<span href="javascript:void(0)" class="click style-input dots" data-fn="on_click">
+			<span class="value <#= this.get_config( 'truncate', true ) ? 'tcb-truncate t-80' : '' #>"><#=this.get_config( 'label_none', <?php echo json_encode( __( 'None', 'thrive-cb' ) ); ?> )#></span>
+			<div>
+				<a href="javascript:void(0)" class="click" data-fn="on_click">
+					<?php tcb_icon( 'pen-regular' ); ?>
+				</a>
+				<a href="javascript:void(0)" class="click" data-fn="onRemove">
+					<?php tcb_icon( 'delete' ); ?>
+				</a>
+			</div>
+		</span>
+		<#} else {#>
+		<a href="javascript:void(0)" class="click style-input dots" data-fn="on_click">
+			<span class="value <#= this.get_config( 'truncate', true ) ? 'tcb-truncate t-80' : '' #>"><#=this.get_config( 'label_none', <?php echo json_encode( __( 'None', 'thrive-cb' ) ); ?> )#></span>
+			<?php tcb_icon( 'pen-regular' ); ?>
+		</a>
+		<#}#>
+	</div>
+	<# } else { #>
+		<div class=" input">
+			<a href="javascript:void(0)" class="click style-input preview-item" data-fn="on_click">
+			</a>
+		</div>
+	<# } #>
+</div>

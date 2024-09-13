@@ -1,0 +1,9 @@
+Aug 31 2024 16:44:11
+{"type":32,"message":"PHP Startup: Unable to load dynamic library 'sqlite3.so' (tried: \/opt\/alt\/php74\/usr\/lib64\/php\/modules\/sqlite3.so (\/opt\/alt\/php74\/usr\/lib64\/php\/modules\/sqlite3.so: cannot open shared object file: No such file or directory), \/opt\/alt\/php74\/usr\/lib64\/php\/modules\/sqlite3.so.so (\/opt\/alt\/php74\/usr\/lib64\/php\/modules\/sqlite3.so.so: cannot open shared object file: No such file or directory))","file":"Unknown","line":0}
+
+Aug 31 2024 16:44:35
+{"type":32,"message":"PHP Startup: Unable to load dynamic library 'sqlite3.so' (tried: \/opt\/alt\/php74\/usr\/lib64\/php\/modules\/sqlite3.so (\/opt\/alt\/php74\/usr\/lib64\/php\/modules\/sqlite3.so: cannot open shared object file: No such file or directory), \/opt\/alt\/php74\/usr\/lib64\/php\/modules\/sqlite3.so.so (\/opt\/alt\/php74\/usr\/lib64\/php\/modules\/sqlite3.so.so: cannot open shared object file: No such file or directory))","file":"Unknown","line":0}
+
+Aug 31 2024 16:44:47
+{"type":32,"message":"PHP Startup: Unable to load dynamic library 'sqlite3.so' (tried: \/opt\/alt\/php74\/usr\/lib64\/php\/modules\/sqlite3.so (\/opt\/alt\/php74\/usr\/lib64\/php\/modules\/sqlite3.so: cannot open shared object file: No such file or directory), \/opt\/alt\/php74\/usr\/lib64\/php\/modules\/sqlite3.so.so (\/opt\/alt\/php74\/usr\/lib64\/php\/modules\/sqlite3.so.so: cannot open shared object file: No such file or directory))","file":"Unknown","line":0}
+

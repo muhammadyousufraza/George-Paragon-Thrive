@@ -1,0 +1,52 @@
+<# var ontraport_extra = api.get( 'extra_settings' ) #>
+<# var ontraport_sequences =  ( !! ontraport_extra && !! ontraport_extra.sequences ) ? ontraport_extra.sequences : '' #>
+<div class="api-field">
+
+	<div class="control-grid">
+		<div class="tve-btn-group" style="width: 100%">
+			<div class="tve-ontraport-type tvd-ontraport-campaigns tve-btn btn-text" data-type="campaigns">
+				<?php echo __( 'Campaigns', 'thrive-cb' ); ?>
+			</div>
+			<div class="tve-ontraport-type tvd-ontraport-sequences tve-btn btn-text" data-type="sequences">
+				<?php echo __( 'Sequences', 'thrive-cb' ); ?>
+			</div>
+		</div>
+		<div>
+			<span class="click tve-refresh-api-list" data-fn="forceGet" data-tooltip="<?php echo __( 'Refresh', 'thrive-cb' ); ?>" data-side="top"> <?php tcb_icon( 'redo-regular' ) ?></span>
+		</div>
+	</div>
+
+	<div class="control-grid">
+		<div class="full-width">
+			<div id="thrive-api-ontraport-campaigns" class="tve-ontraport" style="display: none;">
+				<div class="field-description">
+					<?php echo __( 'Select campaign', 'thrive-cb' ) ?>
+				</div>
+				<select id="thrive-api-ontraport-campaigns-select" class="api-list tvd-ontraport-change  change tve-api-extra <# if ( api.get( 'lists' ).length == 0 ) { #>tcb-disabled<# } #>" name="campaigns" data-fn="setupChange" data-name="list">
+					<# if ( api.get( 'lists' ).length == 0 ) { #>
+					<#= TVE.tpl( 'util/option', { value:"", selected: true, text: <?php echo json_encode( __( 'No campaigns found', 'thrive-cb' ) ); ?> } ) #>
+					<# } else { #>
+					<# _.each( api.get( 'lists' ), function( item ) { #>
+					<#= TVE.tpl( 'util/option', {value:item.id, selected: ( api.getConfig('list') == item.id ), text: item.name} ) #>
+					<# } ) #>
+					<# } #>
+				</select>
+			</div>
+			<div id="thrive-api-ontraport-sequences" class="tve-ontraport" style="display: none;">
+				<div class="field-description">
+					<?php echo __( 'Select sequence', 'thrive-cb' ); ?>
+				</div>
+				<select id="thrive-api-ontraport-sequences-select" class="api-list tvd-ontraport-change change tve-ontraport-sequence-select <# if ( ontraport_sequences.length == 0 ) { #>tcb-disabled<# } #>" data-fn="setupChange" data-name="list">
+					<# if ( ! ontraport_sequences || ontraport_sequences.length == 0 ) { #>
+					<#= TVE.tpl( 'util/option', { value:"", selected: true, text: <?php echo json_encode( __( 'No sequences found', 'thrive-cb' ) ); ?> } ) #>
+					<# } else { #>
+					<# _.each( ontraport_sequences, function( sequence ) { #>
+					<#= TVE.tpl( 'util/option', { value: sequence.id, selected: ( api.getConfig('list') == sequence.id ), text: sequence.name } ) #>
+					<# } ) #>
+					<# } #>
+				</select>
+			</div>
+
+		</div>
+	</div>
+</div>

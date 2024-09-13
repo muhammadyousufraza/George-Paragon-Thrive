@@ -1,0 +1,41 @@
+<div class="tve-c-modal-sidebar">
+
+	<div class="tve-c-modal-search">
+		<?php Thrive_Views::svg_icon( 't-search' ); ?>
+		<input class="tve-c-modal-search-input input" data-fn="onSearch" type="text" placeholder="<?php echo __( 'Search', 'thrive-theme' ); ?>">
+	</div>
+
+	<div class="tve-c-modal-filters">
+		<span id="dropdown-filter-label"><?php echo __( 'Filter templates', 'thrive-theme' ); ?></span>
+		<div class="tve-c-modal-select-filter"></div>
+		<div class="tve-c-modal-radio-filter"></div>
+	</div>
+
+</div>
+
+<div class="tve-c-modal-content">
+
+	<div class="tve-c-modal-title">
+		<# if(this.modalTitle().trim().length) { #>
+		<h3 class="tve-c-modal-title"><#- this.modalTitle() #></h3>
+		<# } #>
+
+		<button class="click back" data-fn="back">
+			<?php Thrive_Views::svg_icon( 'back' ); ?>
+			<?php echo __( 'BACK to previous step', 'thrive-theme' ); ?>
+		</button>
+
+		<button class="click refresh" data-fn="refreshItems">
+			<?php Thrive_Views::svg_icon( 'refresh' ); ?>
+			<?php echo __( 'Refresh from cloud', 'thrive-theme' ); ?>
+		</button>
+	</div>
+
+	<div class="tve-c-modal-items-wrapper">
+		<div class="tve-c-modal-items"></div>
+	</div>
+
+	<div class="tve-c-modal-footer">
+		<button class="click blue-modal-button" data-fn="createTemplate"><?php echo __( 'Create Template', 'thrive-theme' ); ?></button>
+	</div>
+</div>

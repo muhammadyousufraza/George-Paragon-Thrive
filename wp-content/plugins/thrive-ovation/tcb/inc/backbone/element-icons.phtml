@@ -1,0 +1,21 @@
+<div id="tcb-el-name" class="cont"></div>
+<div class="tcb-icons-left cont">
+	<# _.forEach( leftIcons, icon => { #>
+		<#= icon.html #>
+	<# }) #>
+</div>
+<div class="tcb-icons-right cont">
+	<?php
+	/**
+	 * Allow other icons to be inserted here
+	 */
+	do_action( 'tcb_element_right_icons' );
+	?>
+	<div class="tve-drag-handle no-blur -v tcb-i" draggable="true">
+		<?php tcb_icon( 'move', false, 'editor' ); ?>
+	</div>
+	<# _.forEach( rightIcons, icon => { #>
+		<#= icon.html #>
+	<# }) #>
+	<div class="tve-menu-icon-container"></div>
+</div>

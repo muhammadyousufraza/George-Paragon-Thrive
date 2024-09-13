@@ -1,0 +1,39 @@
+<div class="tcb-modal-content tcb-move-symbol">
+
+	<span class="tcb-modal-title">
+		<?php echo __( 'Move template to other category', 'thrive-cb' ) ?>
+	</span>
+
+	<p class="tcb-modal-description">
+		<?php echo __( 'Select from the dropdown bellow where do you want to move ', 'thrive-cb' ) ?>
+	</p>
+
+	<div class="save-container">
+		<div>
+			<label for="tcb-move-input"><?php echo __( 'Current Category ', 'thrive-cb' ) ?></label>
+			<input type="text" name="tcb-move-input" readonly="readonly" value="<#= model.get('name') #>">
+		</div>
+		<div>
+			<label for="tcb-admin-t-categ-combo" class="tcb-admin-t-categ-combo-label"><?php echo __( 'Select New Category ', 'thrive-cb' ) ?></label>
+			<select id="tcb-admin-t-categ-combo">
+				<#
+					TVE_Admin.globals.templates.each(function(tmodel, index) {
+				#>
+				<option value="<#= tmodel.get('id') #>"><#= tmodel.get('name') #></option>
+				<#
+					});
+				#>
+			</select>
+		</div>
+	</div>
+
+	<div class="tvd-modal-footer tcb-move-template-footer">
+		<button type="button" class="tvd-modal-close">
+			<?php echo __( 'Cancel', 'thrive-cb' ) ?>
+		</button>
+
+		<button type="button" class="tvd-submit tvd-modal-submit tvd-right">
+			<?php echo __( 'Save', 'thrive-cb' ) ?>
+		</button>
+	</div>
+</div>

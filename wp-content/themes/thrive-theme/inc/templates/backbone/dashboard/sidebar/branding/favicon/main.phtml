@@ -1,0 +1,20 @@
+<h2 class="ttd-sidebar-branding-header click" data-fn="toggle_dropdown">
+	<span class=""><?php echo __( 'Favicon', 'thrive-theme' ); ?></span>
+	<span class="dropdown-arrow"></span>
+</h2>
+
+<div class="ttd-sidebar-branding-block ttd-favicon-block">
+	<div class="ttd-favicon-column-1">
+		<button class="click favicon-preview-button" data-fn="openMedia"></button>
+	</div>
+	<div class="ttd-favicon-column-2">
+		<button class="click ttd-favicon-change ttd-favicon-button" data-fn="openMedia">
+			<span class="ttd-favicon-op-icon"><?php Thrive_Views::svg_icon( 'favicon-change' ); ?></span>
+			<span><?php echo __( 'Change favicon', 'thrive-theme' ); ?></span>
+		</button>
+		<button class="click ttd-favicon-reset ttd-favicon-button" style="<#= this.shouldHideReset() ? 'display:none' : '' #>" data-fn="resetFavicon">
+			<span class="ttd-favicon-op-icon"><?php Thrive_Views::svg_icon( 'favicon-reset' ); ?></span>
+			<span><?php echo __( 'Reset favicon', 'thrive-theme' ); ?></span>
+		</button>
+	</div>
+</div>

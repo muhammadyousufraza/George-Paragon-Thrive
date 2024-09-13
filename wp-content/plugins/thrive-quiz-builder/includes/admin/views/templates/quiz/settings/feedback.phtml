@@ -1,0 +1,50 @@
+<div class="tqb-feedback-settings">
+
+	<p class="tqb-mpbt tqb-feedback-text">
+		<# if( model.get( 'highlight_and_show_feedback' ) == 1) { #>
+		<?php echo __( 'How long should the highlight and feedback be displayed for?', 'thrive-quiz-builder' ) ?>
+		<# }else{ #>
+		<?php echo __( 'How long should the highlight be displayed for?', 'thrive-quiz-builder' ) ?>
+		<# } #>
+	</p>
+
+	<div class="tqb-options tqb-feedback-options">
+		<input class="tqb-display-feedback tqb-radio-option" id="tqb-checkbox-seconds" type="radio" data-attr="display_feedback"
+		<#= model.get( 'display_feedback' ) === 1 ? 'checked' : '' #> />
+		<label for="tqb-checkbox-seconds"></label>
+
+		<input type="text" id="tqb-feedback-time" value="<#= model.get( 'display_feedback_time' ) #>" data-bind="display_feedback_time">
+		<label for="tqb-checkbox-seconds" class="tqb-mr35 tqb-feedback-seconds"><?php echo __( ' seconds', 'thrive-quiz-builder' ) ?></label>
+
+		<input class="tqb-press-next tqb-radio-option" id="tqb-checkbox-press-next" type="radio" data-attr="press_next"
+		<#= model.get( 'press_next' ) === 1 ? 'checked' : '' #> />
+		<label class="tqb-mr60" for="tqb-checkbox-press-next">
+			<?php echo __( 'Until the user presses the Next button', 'thrive-quiz-builder' ) ?>
+		</label>
+	</div>
+
+	<div class="tqb-navigation-options-wrapper tqb-tooltip-parent" >
+		<div class="tqb-custom-tooltip tqb-tooltip-inherited">
+			<?php echo esc_attr( __( 'Quiz navigation is not available when answers given by the user are highlighted.', 'thrive-quiz-builder' ) ); ?>
+			<a href="https://help.thrivethemes.com/en/articles/6984191-quiz-navigation-in-thrive-quiz-builder" target="_blank" rel="noopener"><?php esc_html_e( 'Learn more', 'thrive-quiz-builder' ); ?></a>
+		</div>
+		<div class="tqb-navigation-options tqb-disabled">
+			<p class="tqb-mpbt tqb-mt0">
+				<?php echo __( 'Allow users to go back and revisit previous questions?', 'thrive-quiz-builder' ) ?>
+			</p>
+
+			<div class="tqb-options">
+				<div class="tvd-switch">
+					<label>
+						<input id="tqb-nav-buttons" type="checkbox" data-bind="nav_buttons" <#= model.get( 'nav_buttons' ) === true ? 'checked' : '' #>>
+						<span class="tqb-ml3 tvd-lever"></span>
+					</label>
+					<label for="tqb-nav-buttons" class="tqb-mr30">
+						<?php echo __( 'Display navigation buttons', 'thrive-quiz-builder' ) ?>
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

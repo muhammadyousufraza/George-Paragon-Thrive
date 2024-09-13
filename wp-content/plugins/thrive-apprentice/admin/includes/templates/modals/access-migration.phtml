@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-modal-step" data-step="0">
+	<div class="tvd-modal-content">
+		<div class="tva-flex tva-flex-column mb-20"
+		">
+		<h3 class="tvd-modal-title"><?php echo __( 'Welcome to Thrive Apprentice Reporting!', 'thrive-apprentice' ); ?></h3>
+		<p><?php echo __( 'Thrive Apprentice now comes with a detailed reporting engine, where you can discover how your members are interacting with your online courses.', 'thrive-apprentice' ); ?></p>
+		<p><?php echo __( 'To use this feature, Thrive Apprentice will need to perform a quick migration on your existing member database into a format that can be indexed easily for reporting. Nothing will change on your website.', 'thrive-apprentice' ); ?></p>
+		<p><?php echo __( 'When you’re ready, click the button below. It should only take a few seconds per product in Thrive Apprentice.', 'thrive-apprentice' ); ?></p>
+	</div>
+
+	<div class="tva-flex tva-flex-column">
+		<button type="button" data-fn="jumpToStep" data-step="1" class="tvd-modal-submit click tvd-right tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green"><?php esc_html_e( 'Migrate', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>
+</div>
+<div class="tva-modal-step" data-step="1">
+	<div class="tvd-modal-content">
+		<div class="tva-flex tva-flex-column mb-20"
+		">
+		<h3 class="tvd-modal-title"><?php echo __( 'Welcome to Thrive Apprentice Reporting!', 'thrive-apprentice' ); ?></h3>
+		<p><?php echo __( 'We are now migrating your member database into a report-friendly format. Please do not close this window.', 'thrive-apprentice' ); ?></p>
+	</div>
+	<div id="tva-access-migrate-products" class="tva-modal-b-inner tva-flex tva-flex-column mb-20" style="max-height: 400px;"></div>
+	<div class="tva-flex tva-flex-column">
+		<button type="button" disabled="disabled" class="tvd-btn"><?php esc_html_e( 'MIGRATION IN PROGRESS…', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>
+</div>

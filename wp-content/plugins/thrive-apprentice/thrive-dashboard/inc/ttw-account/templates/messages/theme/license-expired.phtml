@@ -1,0 +1,27 @@
+<p>
+	<strong>
+		<?php
+		echo sprintf(
+			__( 'License expired - there is a new version of %s available but your license must be %s to update. %s', 'thrive-dash' ),
+			$name,
+			sprintf(
+				'<a target="_blank" href="%s">%s</a>',
+				'https://thrivethemes.com/themebuilder/',
+				__( 'renewed', 'thrive-dash' )
+			),
+			sprintf(
+				'<a class="%s" aria-label="%s" href="%s">' . __( 'View version %s details', 'thrive-dash' ) . '</a>.',
+				'thickbox open-plugin-details-modal',
+				$name,
+				$details_url,
+				$version
+			)
+		)
+		?>
+	</strong>
+	<?php if ( isset( $recheck_url ) ) : ?>
+		<a class="ttw-cla" href="<?php echo $recheck_url; ?>">
+			<?php echo __( 'Check license again', 'thrive-dash' ); ?>
+		</a>
+	<?php endif; ?>
+</p>

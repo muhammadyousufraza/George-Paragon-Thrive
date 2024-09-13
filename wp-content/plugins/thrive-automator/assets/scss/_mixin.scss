@@ -1,0 +1,31 @@
+@mixin sticky_notice() {
+    font-family: Rubik, sans-serif;
+    transform: translateX(-50%);
+    left: 50%;
+    position: fixed;
+    z-index: 999999;
+    line-height: 2.4em;
+}
+
+@mixin scrollbars() {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    &::-webkit-scrollbar {
+        width: 14px;
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        height: 23px;
+        border: 4px solid rgba(0, 0, 0, 0);
+        background-clip: padding-box;
+        -webkit-border-radius: 7px;
+        background-color: rgba(0, 0, 0, 0.15);
+        -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+    }
+}

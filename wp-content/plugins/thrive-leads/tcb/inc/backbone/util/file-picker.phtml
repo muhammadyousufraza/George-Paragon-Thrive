@@ -1,0 +1,25 @@
+<#if(!this.selection||!this.selection.title){#>
+	<a class="image-picker control-grid pb-0 click" data-fn="open_media">
+		<div class="fixed-65 mr-5 preview">
+			<?php tcb_icon( 'bk-img' ) ?>
+		</div>
+		<span class="fill">
+			<#=this.labels.choose#>
+		</span>
+		<span href="javascript:void(0)" class="image-edit mr-5" data-tooltip="<?php echo __( 'Choose image', 'thrive-cb' ) ?>">
+			<?php tcb_icon( 'exchange-regular' ) ?>
+		</span>
+	</a>
+<#}#>
+<#if(this.selection&&this.selection.title){#>
+	<a class="control-grid pb-0 mb-10 image-picker click" data-fn="open_media">
+		<#=this.preview_icon()#>&nbsp;
+		<div class="tcb-truncate fill ml-5">
+			<#=this.selection.title#>
+		</div>
+		<span href="javascript:void(0)" class="image-edit mr-5" data-tooltip="<?php echo __( 'Replace Image', 'thrive-cb' ) ?>">
+			<?php tcb_icon( 'exchange-regular' ) ?>
+		</span>
+	</a>
+	<hr>
+<#}#>

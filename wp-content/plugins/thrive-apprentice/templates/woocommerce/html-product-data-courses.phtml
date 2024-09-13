@@ -1,0 +1,23 @@
+<?php
+/**
+ * The marketplace suggestions tab HTML in the product tabs
+ *
+ * @package WooCommerce\Classes
+ * @since   3.6.0
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+?>
+<div id="tva-courses" class="panel woocommerce_options_panel hidden">
+	<div class="options_group">
+		<p class="form-field">
+			<label for="tva-search"><?php echo __( 'Select products:', 'thrive-apprentice' ); ?></label>
+			<span class="tva-cb-drop">
+				<input class="short" id="tva-search" autocomplete="off" type="text" placeholder="<?php echo __( 'Enter name...', 'thrive-apprentice' ); ?>"/>
+			</span>
+		</p>
+	</div>
+</div>

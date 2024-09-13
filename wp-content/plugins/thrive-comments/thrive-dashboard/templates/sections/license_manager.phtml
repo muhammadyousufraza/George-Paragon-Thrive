@@ -1,0 +1,127 @@
+<?php require_once( TVE_DASH_PATH . '/templates/header.phtml' ); ?>
+<div class="tvd-container">
+	<h3 class="tvd-section-title"><?php echo __( 'Thrive product licenses', 'thrive-dash' ); ?></h3>
+
+	<div class="tvd-row">
+		<div class="tvd-col tvd-s12 tvd-m6 tvd-offset-m4">
+			<div class="tvd-card tvd-white" data-state="form">
+				<div class="tvd-card-content">
+					<h2 class="tvd-card-title">
+						<?php echo __( 'Enter your license details:', 'thrive-dash' ); ?>
+					</h2>
+
+					<div class="tvd-v-spacer vs-2"></div>
+					<form id="license_manager_form" method="post">
+						<div class="tvd-input-field">
+							<input type="email" id="email" name="email" value=""/>
+							<label for="email"><?php echo __( 'Email address', 'thrive-dash' ) ?></label>
+						</div>
+						<div class="tvd-input-field">
+							<input type="text" name="license" id="license" value=""/>
+							<label for="license"><?php echo __( 'License key', 'thrive-dash' ) ?></label>
+						</div>
+						<div class="tvd-v-spacer vs-2"></div>
+						<button class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-blue tvd-full-btn"
+								type="submit"><?php echo __( 'Activate License', 'thrive-dash' ) ?></button>
+						<div class="tvd-v-spacer vs-2"></div>
+						<p class="tvd-center-align"><?php echo __( 'Need help finding your license key?', 'thrive-dash' ) ?></p>
+						<p class="tvd-center-align tvd-open-video" data-source="VwFChgdiIa0">
+							<a>
+								<?php echo __( 'Click here', 'thrive-dash' ) ?>
+							</a>
+						</p>
+					</form>
+				</div>
+			</div>
+
+			<div class="tvd-card tvd-orange tvd-medium" data-state="error" style="display: none">
+				<div class="tvd-card-content">
+					<h2 class="tvd-card-title">
+						<?php echo __( "Sorry, we weren't able to validate your license.", 'thrive-dash' ) ?>
+					</h2>
+
+					<p class="tvd-center tvd-card-spacer">
+						<strong><?php echo __( "Reason:", 'thrive-dash' ) ?></strong>
+						<span id="tvd-license-error"></span>
+					</p>
+					<p class="tvd-center-align"><?php echo sprintf( __( "To resolve this problem, please %s and try entering it again", 'thrive-dash' ), "<strong>" . __( "check your license key", 'thrive-dash' ) . "</strong>" ) ?></p>
+
+					<div class="tvd-v-spacer vs-2"></div>
+
+					<div class="tvd-row">
+						<div class="tvd-col tvd-s12 tvd-center-align">
+							<a class="tvd-license-manager-retry tvd-btn-flat tvd-btn-flat-primary tvd-btn-flat-light tvd-waves-effect"
+							   href="javascript:void(0)"><?php echo __( "Retry", 'thrive-dash' ) ?></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tvd-card tvd-green" data-state="success" style="display: none">
+				<div class="tvd-card-content">
+					<div class="tvd-center-align">
+						<i class="tvd-icon-check tvd-icon-large"></i>
+					</div>
+					<h2 class="tvd-card-title">
+						<?php echo __( 'Success!', 'thrive-dash' ) ?>
+					</h2>
+
+					<table class="tvd-bordered">
+						<tr>
+							<td><?php echo __( "Product:", 'thrive-dash' ) ?></td>
+							<td><span id="tvd-license-name"></span></td>
+						</tr>
+						<tr>
+							<td><?php echo __( "Licenses used:", 'thrive-dash' ) ?></td>
+							<td><span id="tvd-license-uses"></span></td>
+						</tr>
+						<tr>
+							<td><?php echo __( "License type:", 'thrive-dash' ) ?></td>
+							<td><span id="tvd-license-type"></span></td>
+						</tr>
+					</table>
+
+					<div class="tvd-v-spacer vs-2"></div>
+
+					<div class="tvd-row">
+						<div class="tvd-col tvd-s12 tvd-m6">
+							<a class="tvd-license-manager-new tvd-btn-flat tvd-btn-flat-secondary tvd-btn-flat-light tvd-waves-effect"
+							   href="javascript:void(0)"><?php echo __( "New License", 'thrive-dash' ) ?></a>
+						</div>
+						<div class="tvd-col tvd-s12 tvd-m6">
+							<?php if ( ! empty( $return_url ) ) : ?>
+								<a class="tvd-btn-flat tvd-btn-flat-primary tvd-btn-flat-light tvd-waves-effect"
+								   href="<?php echo $return_url; ?>">
+									<?php echo __( "Go Back", 'thrive-dash' ) ?>
+								</a>
+							<?php else : ?>
+								<a class="tvd-btn-flat tvd-btn-flat-primary tvd-btn-flat-light tvd-waves-effect"
+								   href="<?php echo admin_url( 'admin.php?page=tve_dash_section' ); ?>">
+									<?php echo __( "Go To Dashboard", 'thrive-dash' ) ?>
+								</a>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="tvd-row">
+		<?php if ( ! empty( $products ) ) : ?>
+			<?php /** @var $product TVE_Dash_Product_Abstract */ ?>
+			<?php foreach ( $products as $product ) : ?>
+				<div class="tvd-col tvd-s12 tvd-m6 tvd-offset-m4">
+					<div class="tvd-card tvd-green  tvd-card-notice">
+						<div class="tvd-card-content tvd-card-content-small">
+							<i class="tvd-icon-check tvd-left"></i>
+							<p>
+								<strong><?php echo __( "Active:", 'thrive-dash' ) ?></strong> <?php echo $product->get_title() ?>
+							</p>
+						</div>
+					</div>
+				</div>
+			<?php endforeach; ?>
+		<?php endif; ?>
+	</div>
+</div>

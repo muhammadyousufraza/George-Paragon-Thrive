@@ -1,0 +1,97 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+use TVA\Reporting\Main;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="apprentice-dashboard-container">
+	<div class="apprentice-top-section">
+		<div>
+			<h2 class="mt-0">
+				<?php echo esc_html__( 'Progress and drop-off rate', 'thrive-apprentice' ); ?>
+			</h2>
+
+			<div class="apprentice-dashboard-wrapper no-focus">
+				<?php Main::render_report( 'tve_reporting_filter', 'courses_filter' ); ?>
+				<?php Main::render_report( 'tve_reporting_filter', 'users_filter' ); ?>
+				<?php Main::render_report( 'tve_reporting_filter', 'date_filter' ); ?>
+			</div>
+		</div>
+	</div>
+
+	<div class="apprentice-info mb-20">
+		<span class="tva-info-icon text-blue">
+			<?php tva_get_svg_icon( 'info-circle_light' ); ?>
+		</span>
+		<span class="apprentice-info-text can-truncate">
+			<?php echo esc_html__( 'The average progress chart shows how much of your course content members have completed over the selected date range and how that percentage changes over time. The drop-off rate chart shows the completion rates on each sequential lesson in a course. Hover over the drop-off rate chart to identify the lessons that lead members to lose interest in your course. Both of these reports only include data for members active during the selected time period. Choose ‘All time’ to see total completion rates, or a specific date range to see how members active during that time increased their progress.', 'thrive-apprentice' ); ?>
+		</span>
+		<span class="apprentice-info-button text-blue click" data-fn="toggleShowMore">
+			<span><?php echo esc_html__( 'View more', 'thrive-apprentice' ); ?></span>
+			<span><?php echo esc_html__( 'View less', 'thrive-apprentice' ); ?></span>
+		</span>
+	</div>
+
+	<div class="apprentice-dashboard-wrapper">
+		<div class="col-3-8">
+			<?php Main::render_report( 'tve_reporting_card', 'course_progress', 'abacus', [
+				'has-chart'             => 0,
+				'report-size'           => 'lg',
+				'report-title'          => __( 'Average progress', 'thrive-apprentice' ),
+				'has-date-comparison'   => 1,
+				'report-global-filters' => 'date',
+				'report-expanded-view'  => '',
+			] ); ?>
+		</div>
+
+		<div class="col-5-8">
+			<?php Main::render_report( 'tve_reporting_chart', 'course_progress', 'arrow-clock', [
+				'report-title'          => __( 'Average progress over time', 'thrive-apprentice' ),
+				'report-global-filters' => 'date',
+				'report-expanded-view'  => '',
+			] ); ?>
+		</div>
+	</div>
+
+	<div class="apprentice-dashboard-wrapper">
+		<div class="col-8-8">
+			<?php Main::render_report( 'tve_reporting_chart', 'lesson_completion', 'circle-x', [
+				'report-data-type'     => 'completion_rate',
+				'report-group-by'      => 'course_id,lesson_id',
+				'report-expanded-view' => '',
+				'chart-config'         => [
+					'type'       => 'line',
+					'has-legend' => 1,
+					'cumulative' => 0,
+				],
+			] ); ?>
+		</div>
+	</div>
+
+	<div class="apprentice-dashboard-wrapper">
+		<div class="col-8-8">
+			<?php Main::render_report( 'tve_reporting_table', 'course_progress', 'info', [
+				'report-title'              => __( 'Details', 'thrive-apprentice' ),
+				'report-global-filters'     => 'date',
+				'report-expanded-view'      => '',
+				'has-pagination'            => 1,
+				'report-items-per-page'     => 10,
+				'report-restrict-order-by'  => 'progress',
+				'report-table-columns'      => 'date,user_id,course_id,lesson_id,progress',
+				'report-group-by'           => 'user_id,course_id,lesson_id',
+				'report-order-by'           => 'date',
+				'report-order-by-direction' => 'desc',
+				'report-has-export'         => 1,
+				'export-title'              => esc_html__( 'Course progress', 'thrive-apprentice' ),
+			] ); ?>
+		</div>
+	</div>
+</div>

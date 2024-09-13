@@ -1,0 +1,14 @@
+<div class="ttd-wizard-woo-header-footer-box fw ttd-wizard-clip clip-menu placeholder">
+	<div class="ttd-wizard-hf-cart"><?php Thrive_Views::svg_icon( 'wizard-woo-hf-cart' ); ?></div>
+	<div class="ttd-wizard-woo-hf-title-container">
+		<p class="ttd-wizard-woo-hf-title mt-10"><?php echo __( 'Shop ', 'thrive-theme' ); ?><#= this.type #></p>
+		<div class="ttd-wizard-hf-arrow-container"><?php Thrive_Views::svg_icon( 'wizard-woo-hf-arrow' ); ?></div>
+	</div>
+	<p class="ttd-wizard-woo-hf-desc mt-10"><?php echo __( 'Choose an e-commerce ', 'thrive-theme' ); ?><#= this.type #><?php echo __( ' from the dropdown', 'thrive-theme' ); ?></p>
+
+	<div class="ttd-menu-or"><span><?php echo __( 'or', 'thrive-theme' ); ?></span></div>
+
+	<button class="ttd-finish-button ttd-btn click fill blue mt-15 loader-absolute small" data-templates='1'
+			data-fn="chooseDefault"><?php echo __( 'Use my default ', 'thrive-theme' ); ?><#= this.type #>
+	</button>
+</div>

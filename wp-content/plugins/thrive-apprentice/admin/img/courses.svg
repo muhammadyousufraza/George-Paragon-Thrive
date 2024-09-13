@@ -1,0 +1,41 @@
+<svg width="124" height="137" viewBox="0 0 124 137" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <ellipse id="a" cx="61.884" cy="62.198" rx="61.884" ry="62.198"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#D8D8D8" d="M12.938 21.875h49.219v107.188H12.938z"/>
+        <use fill="#FFF" xlink:href="#a"/>
+        <use fill-opacity=".15" fill="#142FBF" xlink:href="#a"/>
+        <path d="m12 20.781 39.136.194a10 10 0 0 1 8.053 4.139L62 29l.156 105.54-56.74.376L5.215 29h7.721L12 20.781zM111.92 21H73.026a10 10 0 0 0-7.357 3.228l-3.379 3.67.007 106.642 56.741.376V29.6h-7.118V21z" fill="#FFF"/>
+        <path fill="#FFF" d="M97.387 99.331h20.335v35.585H97.387z"/>
+        <path fill="#142FBF" fill-rule="nonzero" opacity=".8" d="M28 55h19v-2H28zM70 31h33v-2H70zM70 36h33v-2H70zM70 41h33v-2H70zM70 46h33v-2H70zM70 51h33v-2H70zM70 56h33v-2H70zM70 61h33v-2H70z"/>
+        <g fill="#142FBF" fill-rule="nonzero" opacity=".8">
+            <path d="M70 66h13.125v-2H70zM70 71h13.125v-2H70zM70 76h13.125v-2H70zM70 81h13v-2H70z"/>
+        </g>
+        <g fill="#142FBF" fill-rule="nonzero" opacity=".8">
+            <path d="M21 61h33v-2H21zM21 66h33v-2H21zM21 71h33v-2H21zM21 76h33v-2H21zM21 86h33v-2H21zM21 81h33v-2H21zM21 91h16v-2H21z"/>
+        </g>
+        <path fill="#142FBF" fill-rule="nonzero" opacity=".8" d="M70 86h33v-2H70zM70 91h33v-2H70z"/>
+        <rect stroke="#4359CC" stroke-width="2" fill-opacity=".3" fill="#142FBF" x="22" y="30" width="31" height="19" rx="1"/>
+        <rect stroke="#4359CC" stroke-width="2" fill-opacity=".3" fill="#142FBF" x="87" y="65" width="15" height="15" rx="1"/>
+        <path d="M13.013 91.004V24.022a2 2 0 0 1 2-2h36.996a8 8 0 0 1 6.392 3.188L62.007 30h0v61.004M5 90.148V32a2 2 0 0 1 2-2h4.027M119.038 90.034V32a2 2 0 0 0-2-2h-4.067 0M111.013 90.999l-.04-66.977a2.004 2.004 0 0 0-2-2H72.49a8 8 0 0 0-5.871 2.566l-2.92 3.156h0l-.599.695" stroke-opacity=".8" stroke="#142FBF" stroke-width="2" stroke-linecap="square"/>
+        <g transform="translate(97 99)" stroke="#0F214A" stroke-opacity=".8" stroke-width="2">
+            <rect width="22" height="37" rx="11"/>
+            <path d="M1 14h20M11 6v4"/>
+        </g>
+        <path d="m95.114 98.997-88.068.046a2 2 0 0 0-1.999 1.997l-.041 32.955a2 2 0 0 0 2 2.002l86.997.003" stroke-opacity=".8" stroke="#0F214A" stroke-width="2"/>
+        <g fill="#0F214A" fill-opacity=".8">
+            <path d="M12 105h2v2h-2zM20 105h2v2h-2zM28 105h2v2h-2zM36 105h2v2h-2zM44 105h2v2h-2zM52 105h2v2h-2zM60 105h2v2h-2zM68 105h2v2h-2zM76 105h2v2h-2zM84 105h2v2h-2z"/>
+        </g>
+        <g fill="#0F214A" fill-opacity=".8">
+            <path d="M12 121h2v2h-2zM20 121h2v2h-2zM28 121h2v2h-2zM36 121h2v2h-2zM44 121h2v2h-2zM52 121h2v2h-2zM60 121h2v2h-2zM68 121h2v2h-2zM76 121h2v2h-2zM84 121h2v2h-2z"/>
+        </g>
+        <g fill="#0F214A" fill-opacity=".8">
+            <path d="M16 113h2v2h-2zM24 113h2v2h-2zM32 113h2v2h-2zM40 113h2v2h-2zM48 113h2v2h-2zM56 113h2v2h-2zM64 113h2v2h-2zM72 113h2v2h-2zM80 113h2v2h-2zM88 113h2v2h-2z"/>
+        </g>
+        <g fill="#0F214A" fill-opacity=".8">
+            <path d="M16 129h2v2h-2zM24 129h2v2h-2zM32 129h2v2h-2z"/>
+        </g>
+        <path stroke-opacity=".8" stroke="#0F214A" stroke-width="2" d="M40 130h46"/>
+    </g>
+</svg>

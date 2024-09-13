@@ -1,0 +1,44 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Ovidiu
+ * Date: 6/29/2018
+ * Time: 4:08 PM
+ */
+?>
+<#if(typeof no_item !== 'undefined' && no_item){#>
+<div class="list-no-items tcb-text-center"><?php echo __( 'None', 'thrive-cb' ) ?></div>
+<#} else {#>
+<div class="preview-toggle-list-item tcb-relative" data-index="<#=item.index#>">
+	<div class="preview-toggle-list-controls">
+		<div class="tcb-relative item-label">
+			<div class="preview-toggle-list-sort-handle clearfix">
+				<span class="col-sep tcb-left"></span>
+				<span class="col-sep tcb-left ml-5"></span>
+			</div>
+			<# if(false === item.get('hide_content')){ #>
+				<span><#=item.get('label').substring( 0, 20 )#></span>
+			<# }else{ #>
+				<span class="click" data-fn="item_toggle" data-index="<#=item.index#>" data-hidden="<#= item.get('hide_content') #>"><u><#=item.get('label').substring( 0, 20 )#></u></span>
+			<# } #>
+		</div>
+		<div class="clearfix">
+			<div class="tcb-right">
+				<span data-offset="10" data-tooltip="<?php esc_attr_e( 'Edit', 'thrive-cb' ) ?>" class="click" data-fn="item_click" data-index="<#=item.index#>">
+						<?php tcb_icon( 'edit' ); ?>
+				</span>
+				<span data-offset="10" data-tooltip="<?php esc_attr_e( 'Duplicate', 'thrive-cb' ) ?>" class="click" data-fn="item_duplicate" data-index="<#=item.index#>">
+						<?php tcb_icon( 'duplicate' ); ?>
+				</span>
+				<span data-offset="10" data-tooltip="<?php esc_attr_e( 'Remove', 'thrive-cb' ) ?>" class="click" data-fn="item_remove" data-index="<#=item.index#>">
+						<?php tcb_icon( 'trash' ); ?>
+				</span>
+				<span class="click tcb-preview-toggle-list-handle<#=(false === item.get('hide_content'))?' disabled': '' #>" data-fn="item_toggle" data-index="<#=item.index#>" data-hidden="<#= item.get('hide_content') #>">
+					<#=view.content_hidden_icon #>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="<# if( item.get('hide_content') ) { #> tcb-hidden <# } #> preview-toggle-list-content" data-index="<#=item.index#>"></div>
+</div>
+<#}#>

@@ -1,0 +1,26 @@
+<?php $is_ttb_active = tve_dash_is_ttb_active() ?>
+<div class="<?php echo $is_ttb_active ? '' : 'inherit-typography' ?>" <?php echo $is_ttb_active ? '' : 'data-paneltlt-hover data-fn="openTooltip"' ?>>
+	<div class="tve-inherit-typography <?php echo $is_ttb_active ? '' : 'tcb-disabled' ?>"></div>
+</div>
+<div id="settings" class="tcb-relative <?php echo $is_ttb_active ? 'tcb-hidden' : '' ?>">
+	<div class="state-lp-settings state settings">
+		<hr>
+		<div class="list">
+			<a href="#" class="click s-setting" data-fn="toggleThemeCss" data-do="disable">
+				<span class="s-name"><?php echo esc_html__( 'Disable Theme CSS', 'thrive-cb' ); ?></span>
+				<?php echo tcb_icon( 'toggle-off-regular' ); ?>
+			</a>
+			<a href="#" class="click s-setting tcb-disabled" data-fn="toggleThemeCss" data-do="enable">
+				<span class="s-name"><?php echo esc_html__( 'Enable Theme CSS', 'thrive-cb' ); ?></span>
+				<?php echo tcb_icon( 'toggle-on-regular' ); ?>
+			</a>
+		</div>
+	</div>
+</div>
+<?php if ( tcb_editor()->is_landing_page() ) : ?>
+	<div class="p-texts center-text <?php echo tve_dash_is_ttb_active() ? 'typography-button' : '' ?>" <?php echo tve_dash_is_ttb_active() ? 'data-fn="openTooltip"' : '' ?>>
+		<button class="style-input lp-typography-button tve-button click  " data-fn="f:main.sidebar_extra.settings.landingPageFonts">
+			<?php echo esc_html__( 'Edit landing page typography', 'thrive-cb' ); ?>
+		</button>
+	</div>
+<?php endif; ?>

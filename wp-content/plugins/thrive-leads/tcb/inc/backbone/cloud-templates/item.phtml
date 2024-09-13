@@ -1,0 +1,19 @@
+<div class="template-item <#=item.locked ? ' locked' : ''#>">
+	<div class="template-wrapper click<#=selected ? ' active' : ''#>" data-id="<#= item.id #>" data-fn="dom_select">
+		<div class="template-thumbnail" style="background-image: url('<#= item.thumb #>')">
+			<# if ( item.locked ) { #>
+			<span class="locked-star">
+				<?php tcb_icon( 'star' ) ?>
+			</span>
+			<div class="template-locked-text">
+				<p><?php echo __( 'Available in the full version of Thrive Architect', 'thrive-cb' ); ?></p>
+				<a href="https://thrivethemes.com/architect/upgrade/?utm_campaign=tarc-upgrade&utm_medium=tarc-lite&utm_source=ttb-ui&utm_content=tarc-element&utm_term=ttb-customer" title="Thrive Architect" target="_blank"><?php echo __( 'Upgrade', 'thrive-cb' ); ?></a>
+			</div>
+			<# } #>
+		</div>
+		<div class="template-name">
+			<#= item.name #>
+		</div>
+		<div class="selected"></div>
+	</div>
+</div>

@@ -1,0 +1,160 @@
+/**
+    DATEPICKER
+ */
+:not(#_s) {
+  .tap-datepicker {
+    border-radius: 4px;
+    border: var(--tap-input-border);
+    width: fit-content;
+    --vdp-bg-color: #ffffff;
+    --vdp-text-color: #000000;
+    --vdp-box-shadow: 0 4px 10px 0 rgba(128, 144, 160, 0.1), 0 0 1px 0 rgba(128, 144, 160, 0.81);
+    --vdp-border-radius: 3px;
+    --vdp-heading-size: 2.5em;
+    --vdp-heading-weight: bold;
+    --vdp-heading-hover-color: #eeeeee;
+    --vdp-arrow-color: currentColor;
+    --vdp-elem-color: currentColor;
+    --vdp-disabled-color: #d5d9e0;
+    --vdp-hover-color: #ffffff;
+    --vdp-hover-bg-color: var(--tap-primary);
+    --vdp-selected-color: #ffffff;
+    --vdp-selected-bg-color: var(--tap-primary);
+    --vdp-elem-font-size: 0.8em;
+    --vdp-elem-border-radius: 3px;
+    --vdp-divider-color: #d5d9e0;
+
+    .v3dp__popout {
+      z-index: 99;
+    }
+
+    .v3dp__elements button span {
+      line-height: 1.9em !important;
+    }
+
+    & > * {
+      padding: 10px;
+      max-height: 34px;
+      box-sizing: border-box;
+    }
+
+    & > .v3dp__datepicker {
+      padding: 8px 10px;
+    }
+
+
+    input {
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+      font-size: 14px;
+      background: transparent !important;
+      min-height: unset !important;
+      padding: 0 !important;
+      max-width: 80px;
+      text-align: center;
+    }
+
+    .tap-icon-wrapper {
+      cursor: pointer;
+      box-sizing: content-box;
+      --tap-icon-size: 14px !important;
+      color: #89939a;
+      border-left: var(--tap-input-border);
+      background-color: var(--tap-light-bg);
+    }
+  }
+}
+
+/**
+  TOOLTIPS
+ */
+:not(#_) {
+  .v-popper--theme-tooltip:not(.v-popper--theme-automator) {
+    display: none !important;
+  }
+
+  .v-popper--theme-automator_menu_tooltip {
+    z-index: 9999999;
+
+    .v-popper__inner {
+      padding: 0;
+    }
+
+    .v-popper__arrow {
+      border-width: 10px 10px 10px 0;
+      left: -10px;
+    }
+  }
+
+  .v-popper--theme-automator .v-popper__inner {
+    font-family: Roboto, sans-serif;
+    background: var(--tap-primary-dark);
+    max-width: 250px;
+  }
+
+  .v-popper--theme-automator .v-popper__arrow {
+    border-color: var(--tap-primary-dark);
+  }
+
+  .v-popper--theme-automator_dropdown .v-popper__inner {
+    padding: 0;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .v-popper--theme-automator_dropdown.v-popper__popper--shown {
+    box-shadow: 0 4px 9px 0 rgba(23, 28, 33, 0.1);
+  }
+
+  .v-popper__popper.v-popper--theme-automator_html_tooltip {
+    font-family: Roboto, sans-serif;
+
+    .tap-notification-popover {
+      max-width: 230px;
+    }
+
+    .v-popper__inner {
+      background: transparent;
+      border-radius: 6px;
+      padding: 7px 12px 6px;
+      color: #fff;
+      background: var(--tap-primary-dark);
+      font-size: 14px;
+
+      a {
+        color: #fff !important;
+        text-decoration: underline !important;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .v-popper__arrow {
+      border-color: var(--tap-primary-dark);
+    }
+  }
+
+  .v-popper--theme-automator_dynamic_data, .v-popper--theme-automator_toggle_data {
+    .v-popper__arrow {
+      display: none;
+    }
+  }
+
+  .tap-filter-col--full, .tap-autocomplete-field, .tap-select-field, .tap-trigger-select, .tap-step-autocomplete {
+    & > .v-popper--theme-automator_dynamic_data, .v-popper--theme-automator_toggle_data {
+      width: 100% !important;
+    }
+  }
+
+  .tap-field-generator {
+    .v-popper--theme-automator_toggle_data {
+      cursor: pointer;
+    }
+  }
+
+  .v-popper--theme-automator_toggle_data.v-popper__popper--shown {
+    background: #fff;
+  }
+}

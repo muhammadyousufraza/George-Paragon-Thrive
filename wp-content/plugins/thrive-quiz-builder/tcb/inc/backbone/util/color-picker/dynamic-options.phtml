@@ -1,0 +1,17 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-visual-editor
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="label-hidden dynamic-color-control">
+	<div class="tve-btn-group input btn-tabs">
+		<div class="tve-control tve-btn click fs-13" data-fn="activateColorSet" data-set="default"><?php echo __( 'My Colors', 'thrive-cb' ); ?></div>
+		<div class="tve-control tve-btn click fs-13" data-fn="activateColorSet" data-set="dynamic"><?php tcb_icon( 'database-regular' ); ?>&nbsp;<?php echo __( 'Dynamic Colors', 'thrive-cb' ); ?></div>
+	</div>
+</div>

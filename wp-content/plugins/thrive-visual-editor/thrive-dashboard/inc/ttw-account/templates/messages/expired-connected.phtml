@@ -1,0 +1,25 @@
+<div class="notice notice-warning is-dismissible">
+	<p>
+		<?php
+		echo sprintf(
+			__( 'Your %s license has expired! ', 'thrive-dash' ),
+			$membership_name
+		);
+		echo sprintf(
+			sprintf(
+				__( 'Please %s to get the latest plugin and security updates. ', 'thrive-dash' ),
+				sprintf(
+					'<a href="%s" target="_blank">%s</a>',
+					TD_TTW_Update_Manager::SUITE_URL,
+					__( 'renew your license', 'thrive-dash' )
+				)
+			)
+		);
+		echo sprintf(
+			'<a href="%s" target="_blank">%s</a>',
+			TD_TTW_User_Licenses::get_instance()->get_recheck_url(),
+			__( 'Check license again', 'thrive-dash' )
+		);
+		?>
+	</p>
+</div>

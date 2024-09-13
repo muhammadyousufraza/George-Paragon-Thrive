@@ -1,0 +1,6 @@
+<button data-url="<#= model.get('url') #>" data-preview_url="<#= model.get('preview_url') #>" data-fn="select_content" class="content-select-el click">
+	<#= model.get('prepend_html') || ''#>
+	<span>
+		<#= model.get('title') #> <# if (typeof model.get('count') !== 'undefined' ) { print('(' + model.get('count') +')') } #>
+	</span>
+</button>

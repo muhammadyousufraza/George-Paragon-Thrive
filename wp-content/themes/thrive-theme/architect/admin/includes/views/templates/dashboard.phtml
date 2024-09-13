@@ -1,0 +1,19 @@
+<div class="tcb-tabs-container">
+	<div class="tcb-header-tabs">
+		<div class="tab-item active" data-content="ct" data-tab="templates"><?php echo __( 'Content Templates', 'thrive-cb' ); ?></div>
+		<div class="tab-item" data-content="symbol" data-tab="symbol"><?php echo __( 'Symbols & Blocks', 'thrive-cb' ); ?></div>
+		<div class="tab-item" data-content="notifications" data-tab="notifications"><?php echo __( 'Notification Toasts', 'thrive-cb' ); ?></div>
+		<div class="tab-item" data-content="headers" data-tab="templates"><?php echo __( 'Headers', 'thrive-cb' ); ?></div>
+		<div class="tab-item" data-content="footers" data-tab="templates"><?php echo __( 'Footers', 'thrive-cb' ); ?></div>
+	</div>
+	<div class="tabs-content">
+		<div class="tcb-tab-content ct-content active" data-content="ct"></div>
+		<div class="tcb-tab-content symbols-content" data-content="symbol"></div>
+		<div class="tcb-tab-content notifications-content" data-content="notifications"></div>
+		<div class="tcb-tab-content headers-content" data-content="headers"></div>
+		<div class="tcb-tab-content footers-content" data-content="footers"></div>
+	</div>
+	<div id="tve-page-loader">
+		<?php tcb_template( 'loading-spinner.php' ); ?>
+	</div>
+</div>

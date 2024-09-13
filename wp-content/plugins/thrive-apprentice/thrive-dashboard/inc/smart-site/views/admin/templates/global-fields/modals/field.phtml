@@ -1,0 +1,89 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div class="tvd-tss-modal-header">
+	<h3 class="tvd-modal-title">
+		<# if( model.get('type') ){ #>
+			<?php echo __( 'Edit Field', 'thrive-dash' ) ?>
+		<# } else{ #>
+			<?php echo __( 'Add Field', 'thrive-dash' ) ?>
+		<# } #>
+	</h3>
+</div>
+
+<div class="tvd-modal-content tvd-tss-add">
+	<div class="tvd-tss-group-wrapper">
+		<p><?php _e( 'Which Group should this Global Field be added to?', 'thrive-dash' ) ?> *</p>
+		<div class="tvd-input-field">
+			<div id="tvd-tss-group-name" data-field="group_id" class="tvd-complex-dropdown-trigger <#= Number( model.get( 'is_default' ) ) ? 'tvd-disabled' : '' #>">
+				<# if( group.get('name') ){ #>
+					<#= group.get('name') #>
+				<# } else{ #>
+					<?php echo __( 'Select the field group', 'thrive-dash' ) ?>
+				<# } #>
+			</div>
+			<label></label>
+		</div>
+		<div class="tvd-select-group-dropdown tvd-complex-dropdown-content tvd-hide">
+			<div class="tvd-global-field-group-list"></div>
+			<div id="tvd-add-new-group" class="tvd-add-new-group">
+				<p>
+					<span><?php dashboard_icon( 'plus-circle-regular' ); ?></span>
+					<span><?php echo __( 'Add New Group', 'thrive-dash' ) ?></span>
+				</p>
+			</div>
+
+			<div id="tvd-input-new-group" class="tvd-save-new-group tvd-hide">
+				<div class="tvd-input-field">
+					<input id="tvd-add-group" data-field="name" type="text" value="" placeholder="Complete the group name">
+					<label></label>
+				</div>
+
+				<div class="tvd-add-new-group" id="tvd-save-new-group">
+					<p>
+						<span><?php dashboard_icon( 'check-light' ); ?></span>
+						<span><?php echo __( 'Save Group', 'thrive-dash' ) ?></span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tvd-tss-field-wrapper">
+		<p><?php _e( 'What type of field is this?', 'thrive-dash' ) ?> *</p>
+		<div class="tvd-input-field">
+			<div id="tvd-tss-field-type" data-field="type"
+			     class=" tvd-complex-dropdown-trigger <#= model.get( 'default_field' )? 'tvd-disabled tvd-no-focus' : '' #>">
+				<# if( model.get('type') ){ #>
+					<i><#= SmartSite.data.fieldTypes[model.get('type')].icon #></i>
+					<span><#= SmartSite.utils.get_field_type_name( parseInt( model.get('type') ) ) #></span>
+				<# } else{ #>
+					<?php echo __( 'Select the field type', 'thrive-dash' ) ?>
+				<# } #>
+			</div>
+		</div>
+		<div class="tvd-select-type-dropdown tvd-complex-dropdown-content tvd-hide">
+			<div class="tvd-global-field-type-list"></div>
+		</div>
+	</div>
+	<div class="tvd-tss-field-data-wrapper"></div>
+</div>
+
+<div class="tvd-tss-modal-footer">
+	<div class="tvd-tss-flex">
+		<button class="tvd-btn-flat tvd-btn-flat-secondary tvd-btn-flat-dark tvd-waves-effect tvd-modal-close">
+			<?php echo __( 'Cancel', 'thrive-dash' ) ?>
+		</button>
+		<button class="tvd-btn tvd-btn-green tvd-waves-light tvd-right tvd-modal-submit tvd-tss-save-field" id="tvd-tss-save-field">
+			<?php echo __( 'Save', 'thrive-dash' ) ?>
+		</button>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <title><?php echo $data['title'] ?> </title>
+    <style type="text/css">
+        .st1{fill:none;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;}
+    </style>
+    <rect x="13.8" y="12.9" stroke="none" width="7.2" height="1"/>
+    <rect x="13.8" y="14.8" stroke="none" width="4.3" height="1"/>
+    <polygon stroke="none" points="13.8,11.9 21,11.9 21,10.9 14.1,10.9 13.8,11.6 "/>
+    <polygon stroke="none" points="21,9 14.9,9 14.5,10 21,10 "/>
+    <line class="st1" x1="15.1" y1="7.9" x2="11.3" y2="16.8"/>
+    <path stroke="none" d="M10.3,11.6V9.8c0-0.3-0.3-0.5-0.5-0.5H3.6c-0.3,0-0.5,0.2-0.5,0.5v5.2c0,0.3,0.3,0.5,0.5,0.5h6.2
+	c0.3,0,0.5-0.3,0.5-0.5v-1.8l1.9,1.9l0.2-0.5v-5L10.3,11.6z"/>
+</svg>

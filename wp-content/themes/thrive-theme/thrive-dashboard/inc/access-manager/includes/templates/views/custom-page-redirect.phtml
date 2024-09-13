@@ -1,0 +1,22 @@
+<div class="custom-redirect-select-wrapper tvd-page-selector" style="display:none;">
+	<div id="custom-page-info">
+		<p>
+			<?php echo __( 'Select a page using the field below. If no page is selected this setting will not remain active.', 'thrive-dash' ); ?>
+		</p>
+	</div>
+	<select id="tvd-am-custom-redirect"></select>
+	<div class="custom-page-options">
+		<span class="custom-page-title"></span>
+		<a class="view-page" target="_blank"><span class="tvd-icon-eye"></span><?php echo __( 'View', 'thrive-dash' ) ?></a>
+		<span class="tvd-sep"></span>
+		<button class="click open-remove-options"><span class="tvd-icon-delete"></span><?php echo __( 'Remove page', 'thrive-dash' ) ?></button>
+	</div>
+</div>
+<div class="custom-redirect-remove-page-wrapper" style="display: none">
+	<?php echo __( 'Are you sure you want to remove this login redirect page?', 'thrive-dash' ) ?>
+	<div class="remove-page-options">
+		<button class="click keep-page"><?php echo __( 'Keep this page', 'thrive-dash' ) ?></button>
+		<button class="click remove-page"><?php echo __( 'Remove this page', 'thrive-dash' ) ?></button>
+	</div>
+</div>
+

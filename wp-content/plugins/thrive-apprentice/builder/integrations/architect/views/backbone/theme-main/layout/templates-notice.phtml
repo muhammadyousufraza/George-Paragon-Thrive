@@ -1,0 +1,29 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-theme
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+
+?>
+
+<div class="info-text bigger border orange white-bg mb-5">
+	<span><?php echo __( "You are editing a layout that's used by ", 'thrive-theme' ); ?></span>
+	<br>
+	<span class="layout-templates-tooltip-link mouseenter mouseleave" data-fn="showTemplatesTooltip">
+		<span class="number-of-templates"></span>
+		<?php echo __( 'other templates.', 'thrive-theme' ); ?>
+	</span>
+	<span>
+		<?php echo __( ' Changes you make to this layout will be applied across all templates.', 'thrive-theme' ); ?>
+	</span>
+</div>
+
+<div class="layout-templates-tooltip mouseleave" data-fn="hideTemplatesTooltip">
+	<span class="layout-templates-close click" data-fn="hideTemplatesTooltip">x</span>
+	<ul></ul>
+</div>

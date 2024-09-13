@@ -1,0 +1,30 @@
+<div class="clearfix tge-answer-no-image">
+
+	<div class="tge-gray tge-lighten-4">
+	<span class="tge-sort-handle tvd-move">
+		<span class="tvd-icon-handle"></span>
+	</span>
+	</div>
+
+	<div class="clearfix">
+		<div class="tge-answer-prop tvd-no-margin">
+			<div class="clearfix">
+				<div class="tvd-input-field">
+					<input class="tge-answer-text" id="tge-qf-answer-<#= item.cid #>" data-bind="text" type="text" value="<#= _.escape(item.get('text')) #>">
+					<label for="tge-qf-answer-<#= item.cid #>"><?php echo __( 'Answer', 'thrive-graph-editor' ) ?></label>
+				</div>
+			</div>
+
+			<div class="tge-points-column"></div>
+
+			<div class="tge-tags-column"></div>
+			<div class="tge-feedback-column"></div>
+
+		</div>
+	</div>
+
+	<div class="tvd-center-align tge-gray-text">
+		<span class="tvd-icon-trash-o tvd-pointer" data-id="<#= item.cid #>"></span>
+	</div>
+
+</div>

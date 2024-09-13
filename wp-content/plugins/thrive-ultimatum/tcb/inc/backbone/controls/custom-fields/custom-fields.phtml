@@ -1,0 +1,40 @@
+<div class="tve-custom-fields-tabs"></div>
+<div class="tve-advanced-controls custom-fields-state p-10 mb-5" data-state="dynamic">
+	<div class="mb-10 dynamic-fields-options">
+		<label><?php echo __( 'Dynamic source', 'thrive-cb' ); ?></label>
+		<select data-fn="selectDynamicField" class="change"></select>
+	</div>
+	<div class="custom-fields-options">
+		<label><?php echo __( 'Custom source', 'thrive-cb' ); ?></label>
+		<select data-fn="selectCustomField" class="change"></select>
+	</div>
+	<div class="custom-fields-extra-options">
+		<div class="rating-options">
+			<label><?php echo __( 'Max rating', 'thrive-cb' ); ?></label>
+			<select class="rating-max change" data-fn="changeRatingMax"></select>
+		</div>
+	</div>
+</div>
+<div class="tve-advanced-controls custom-fields-more-options mb-10" hidden style="margin-top: -5px">
+	<div class="dropdown-header" data-prop="advanced">
+		<span>
+			<?php echo __( 'More options', 'thrive-cb' ); ?>
+		</span>
+	</div>
+
+	<div class="dropdown-content pt-0">
+		<label><?php echo __( 'If not available', 'thrive-cb' ); ?><span class="acf-image-placeholder-tooltip click tve-cb-img-info ml-5" data-fn="openTooltip"><?php tcb_icon( 'info-circle-solid' ); ?></span></label>
+		<select class="custom-fields-placeholder-options change mb-5" data-fn="selectPlaceholder">
+			<option value="hide"><?php echo __( 'Hide element', 'thrive-cb' ); ?></option>
+			<option value="replace"><?php echo __( 'Show default', 'thrive-cb' ); ?></option>
+		</select>
+		<div class="custom-fields-placeholder-input">
+			<label><?php echo __( 'Default', 'thrive-cb' ); ?></label>
+			<input type="number" class="tve-input input change width-input has-um" data-fn-input="onNumberInput">
+			<div class="audio-picker-input"></div>
+			<div class="responsivevideo-picker-input"></div>
+			<div class="image-picker-input"></div>
+			<input type="text" class="tve-input input change width-input has-um" data-fn-input="onTextInput">
+		</div>
+	</div>
+</div>

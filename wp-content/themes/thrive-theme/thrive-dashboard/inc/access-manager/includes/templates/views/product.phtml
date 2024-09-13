@@ -1,0 +1,14 @@
+<div class="tvd-am-item-wrapper tvd-am-product-wrapper">
+	<div class="tvd-am-item-icon tvd-am-product-icon">
+		<img src="<#= model.getLogo() #>" alt="" class="tvd-responsive-img">
+	</div>
+	<div class="tvd-am-item-title tvd-am-product-title">
+		<#= model.getName() #>
+	</div>
+	<div class="tvd-am-product-cap-wrapper">
+		<button class="tvd-am-product-cap click tvd-am-<#= canUse #> tvd-am<#= isEditable #>" data-cap="<#= model.getProductCapability() #>">
+			<?php dashboard_icon( '<#= canUse.concat(isEditable)#>' ); ?>
+			<div class="tvd-am-product-cap-tooltip"></div>
+		</button>
+	</div>
+</div>

@@ -1,0 +1,96 @@
+<div class="tva-boxed-container">
+	<div class="tva-details-card mt-20 mb-20 pb-20">
+
+	<div id="tva-course-details-slug"></div>
+
+	<div class="tva-flex tva-flex-one mt-30">
+		<div class="tva-details-texts mr-30">
+			<div>
+				<label class="course-label"><?php echo esc_html__( 'Course overview', 'thrive-apprentice' ); ?></label>
+				<div class="tva-details-overview" id="tva-course-description">
+					<?php tva_get_svg_icon( 'course-overview' ); ?>
+					<p><?php echo esc_html__( "Give users an overview of what's included in your course" ) ?></p>
+					<div class="align">
+						<a class="tva-page-option tva-flex-mid" href="<#- model.get( 'preview_url' ) #>" target="_blank" id="tva-view-course-page">
+							<?php tva_get_svg_icon( 'eye_light', 'mr-10' ); ?>
+							<?php echo __( 'View', 'thrive-apprentice' ) ?>
+						</a>
+						<a class="tva-page-option tva-flex-mid tva-edit-page-with-tar" href="<#= model.get('overview_post').get('edit_url') #>" target="_blank">
+							<?php tva_get_svg_icon( 'tar-icon', 'mr-10 tva-tar' ); ?>
+							<#- TVA.t.settings_tab.login_page.edit_post #>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<label class="course-label" for="tva-course-excerpt"><?php echo __( 'Course summary', 'thrive-apprentice' ); ?></label>
+				<i class="tvd-tooltipped" data-position="top" data-tooltip="<?php echo __( 'Your summary will display on course lists and course overview.', 'thrive-apprentice' ); ?>">
+					<?php tva_get_svg_icon( 'info-circle_strong' ); ?>
+				</i>
+				<textarea id="tva-course-excerpt" placeholder="<?php echo __( 'Write a short summary of your course here', 'thrive-apprentice' ); ?>" data-bind="excerpt"><#= model.get('excerpt') #></textarea>
+			</div>
+		</div>
+		<div>
+			<label class="course-label"><?php echo esc_html__( 'Cover Image', 'thrive-apprentice' ); ?></label>
+			<div id="tva-course-image" class="tva-details-thumb tva-details-cover"></div>
+		</div>
+	</div>
+</div>
+
+	<div class="tva-details-bottom">
+	<div class="tva-details-card item mr-20">
+		<div class="tva-details-title">
+			<?php echo esc_html__( 'Author settings', 'thrive-apprentice' ); ?>
+		</div>
+
+		<div class="tva-flex tva-space-between tva-top-border tva-details-bio" id="tva-author-settings">
+			<div id="tva-author-avatar" class="tva-details-thumb tva-details-avatar"></div>
+
+			<div>
+				<label for="tva-course-author-bio" class="course-label"><?php echo esc_html__( 'Teacher biography', 'thrive-apprentice' ); ?></label>
+				<select id="tva-course-author-bio" class="change" data-fn="onAuthorDropdownChange">
+					<option value="wordpress_bio"><?php echo esc_html__( 'WordPress user bio', 'thrive-apprentice' ); ?></option>
+					<option value="custom_bio"><?php echo esc_html__( 'Custom bio for this course', 'thrive-apprentice' ); ?></option>
+				</select>
+			</div>
+
+			<div id="tva-course-author-description-wrapper" class="mt-25" style="display: none">
+				<label for="tva-course-author-description" class="course-label"><?php echo esc_html__( 'Teacher description' ); ?></label>
+				<div class="textarea-box">
+					<textarea id="tva-course-author-description"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="tva-details-card item">
+		<div class="tva-flex tva-space-between tva-details-video">
+			<span class="tva-details-title"><?php echo esc_html__( 'Allow comments for this course', 'thrive-apprentice' ); ?></span>
+
+			<div class="tvd-switch">
+				<label>
+					<input data-bind="allows_comments" type="checkbox" <#= model.get('allows_comments') ? 'checked="checked"' : '' #>>
+					<span class="tvd-lever"></span>
+				</label>
+			</div>
+		</div>
+
+		<div class="tva-flex tva-space-between tva-top-border tva-details-video">
+			<div class="contain">
+				<span class="tva-details-title"><?php echo esc_html__( 'Add video description', 'thrive-apprentice' ); ?></span>
+				<p class="text mt-10 mb-0"><?php echo esc_html__( 'The video will be added under the title of the course and it won’t replace the cover image. You can still add a course description along side the video.', 'thrive-apprentice' ) ?></p>
+			</div>
+
+			<div class="tvd-switch">
+				<label>
+					<input data-bind="has_video" type="checkbox" <#= model.get('has_video') ? 'checked="checked"' : '' #>>
+					<span class="tvd-lever"></span>
+				</label>
+			</div>
+
+			<div class="" id="tva-course-video-settings" style="display: none"></div>
+		</div>
+	</div>
+</div>
+</div>

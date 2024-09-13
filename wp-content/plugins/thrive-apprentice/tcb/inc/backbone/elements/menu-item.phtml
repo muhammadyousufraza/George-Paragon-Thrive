@@ -1,0 +1,28 @@
+<li class="menu-item menu-item-<#=item.id#><#=(item.children && item.children.length) ? ' menu-item-has-children' : '' #> <#= item.display_classes ? item.display_classes: ''#> lvl-<#=level#>" data-id="<#=item.id#>"<#=item.old_id ? ' id="' + item.old_id + '"' : ''#>>
+<a class="menu-item menu-item-<#=item.id#>-a menu-item-<#=item.id#> <#= item['data-dynamic-link'] ? 'tve-dynamic-link' : '' #>" href="<#=item.href||''#>"
+<#=(item.target ? ' target="' + item.target + '"' : '')#>
+<#=(item.rel ? ' rel="' + item.rel + '"' : '')#>
+<#=(item['jump-animation'] ? ' jump-animation="' + item['jump-animation'] + '"' : '')#>
+<#=(item['data-shortcode-id'] ? ' data-shortcode-id="' + item['data-shortcode-id'] + '"' : '')#>
+<#=(item['data-dynamic-link'] ? ' data-dynamic-link="' + item['data-dynamic-link'] + '"' : '')#>
+<#=(item['data-custom-redirect'] ? ' data-custom-redirect="' + item['data-custom-redirect'] + '"' : '')#>>
+<# if ( config.type === 'mega' && level === 1 ) { #><span class="tcb-mm-text"><# } #><span class="tve-disabled-text-inner"><#= item.shortcode ? item.shortcode : item.label#></span><#if (item.children && item.children.length) { #><span class="tve-item-dropdown-trigger"><#=dropdown_icon#></span><#}#></span></a>
+
+<# if ( config.type === 'mega' && level === 1 && menuDescriptions[ item.id ] ) { #><#= menuDescriptions[ item.id ] #><# } #>
+
+<#if (item.children && item.children.length) { #>
+<# if ( config.type === 'mega' && level === 0 ) { #>
+<div class="tcb-mega-drop">
+	<div class="tcb-mega-drop-inner thrv_wrapper menu-item-<#=item.id#>-drop"><#}#>
+
+		<ul class="<#=type === 'regular' ? 'sub-menu ' : '' #>menu-item-<#=item.id#>-ul">
+			<#_.each(item.children, function( item ) {#>
+			<#=item_template( {item:item,config:config,item_template:item_template,dropdown_icon:dropdown_icon,level:level+1,type:type,menuDescriptions:menuDescriptions} )#>
+			<#} ) #>
+		</ul>
+
+		<# if ( config.type === 'mega' && level === 0 ) { #>
+	</div>
+</div><#}#>
+<# } #>
+</li>

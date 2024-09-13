@@ -1,0 +1,63 @@
+<div class="tcb-performance-optimizations mt-10"></div>
+
+<div class="tcb-adjustable-size"></div>
+
+<div id="tcb-adjust" class="v-settings mb-10">
+	<label>
+		<?php echo __( 'Player Size Preset', 'thrive-cb' ); ?>
+	</label>
+
+	<select class="select change" data-fn="size_changed">
+		<# this.sizes.forEach( size => { #>
+		<option value="<#= size #>">
+			<#= size #>
+		</option>
+		<# }) #>
+	</select>
+
+	<div class="tcb-custom-adjust-size pt-20">
+		<div class="control-grid fluid-input tcb-custom-adjust-size">
+			<div class="tve-adjust-width no-space input-small fill mr-5" data-adjust="Width"></div>
+			<div class="tve-adjust-height no-space input-small fill" data-adjust="Height"></div>
+		</div>
+
+		<div class="tve-adjust-custom-ratio"></div>
+	</div>
+
+</div>
+
+
+<div class="tcb-custom-aspect"></div>
+
+<div id="tcb-custom-aspect" class="v-settings mb-10">
+	<label>
+		<?php echo __( 'Aspect Size Presets', 'thrive-cb' ); ?>
+	</label>
+
+	<select id="tcb-aspect-ratio" class="select change white-bg" data-fn="aspect_changed">
+		<# this.aspects.forEach( size => { #>
+		<option value="<#= size #>">
+			<#= size #>
+		</option>
+		<# }) #>
+	</select>
+
+	<label class="mt-10">
+		<?php echo __( 'Aspect Orientation', 'thrive-cb' ); ?>
+	</label>
+
+	<select id="tcb-aspect-orientation" class="select change white-bg" data-fn="aspect_changed">
+		<# this.orientations.forEach( size => { #>
+		<option value="<#= size #>">
+			<#= size #>
+		</option>
+		<# }) #>
+	</select>
+</div>
+
+
+<div class="tcb-custom-time"></div>
+
+<div id="tcb-custom-start-end-time" class="v-settings mb-10"></div>
+
+<div class="tcb-anonymize-view"></div>

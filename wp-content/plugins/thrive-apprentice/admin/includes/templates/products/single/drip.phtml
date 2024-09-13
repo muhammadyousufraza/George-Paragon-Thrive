@@ -1,0 +1,29 @@
+<div class="tva-products-drip">
+	<div class="tva-flex tva-flex-row tva-space-between ">
+		<h1 class="tva-main-heading">
+			<span class="tva-product-subheading"><#= model.get( 'name' ) #></span>
+			<?php echo __( 'Drip feed course content', 'thrive-apprentice' ) ?>
+	</div>
+	<# if(!TVA.visualEditingEnabled) { #>
+	<?php include dirname( __FILE__ ) . '/legacy-design-warning.php'; ?>
+	<# } #>
+	<div class="tva-product-heading-buttons mb-45">
+		<a class="tva-back" href="#products"><?php echo esc_attr__( 'Back to dashboard', 'thrive-apprentice' ) ?></a>
+		<#= this.getBackLink() #>
+	</div>
+	<p>
+		<?php echo esc_html__( 'Assign a drip feed schedule to any of the courses included in this product', 'thrive-apprentice' ); ?>
+		<a href="http://help.thrivethemes.com/en/articles/5727555-creating-a-drip-schedule" target="_blank" rel="noopener"><?php echo esc_html__( 'Learn more about this feature', 'thrive-apprentice' ); ?></a>
+	</p>
+	<div id="tva-drip-courses-list" class="tva-drip-list">
+		<div class="tva-list-item-header">
+			<div class="pl-30">
+				<?php echo __( 'Course name', 'thrive-apprentice' ) ?>
+			</div>
+			<div>
+				<?php echo __( 'Drip feed schedule', 'thrive-apprentice' ) ?>
+			</div>
+		</div>
+	</div>
+	<div class="tva-drip-courses-empty"></div>
+</div>

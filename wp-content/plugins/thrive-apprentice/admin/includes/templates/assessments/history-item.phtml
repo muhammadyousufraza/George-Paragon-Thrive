@@ -1,0 +1,5 @@
+<div class="tva-assessment-history-item click" data-fn="previewItem" data-id="<#- ID #>">
+	<span class="tva-assessment-history-counter"><#= displayIndex #></span> Submitted - <#= date #>
+	<div class="tva-assessment-status tva-assessment-<#= status.replace('completed_','').replace('_assessment','') #>"><#= TVA.assessments.status_label[status] #></div>
+	<?php tva_get_svg_icon( 'angle-right' ); ?>
+</div>

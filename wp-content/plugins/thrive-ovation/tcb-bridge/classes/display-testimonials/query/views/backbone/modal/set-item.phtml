@@ -1,0 +1,45 @@
+<span class="set-name-container">
+	<span class="set-label"><#= this.model.get( 'label' ) #></span>
+	<span class="set-edit click" data-fn="showRename"><?php tcb_icon( 'pen-regular' ); ?></span>
+	<span class="set-rename click" data-fn="renameSet"><?php tcb_icon( 'check-light' ); ?></span>
+</span>
+
+<div class="set-icon-wrapper">
+	<span class="set-icon <#= this.model.getType() #>"></span>
+</div>
+
+<span class="set-count">
+	<#= this.model.getCount() #> 	<?php echo esc_html__( 'testimonials', 'thrive-ovation' ); ?>
+</span>
+
+<span class="set-actions">
+	<button class="action-item click" data-fn="viewSet" data-position="top"
+			data-tooltip="<?php echo __( 'View', 'thrive-ovation' ); ?>">
+		<?php tcb_icon( 'eye-light' ); ?>
+	</button>
+	<button class="action-item click" data-fn="loadSet">
+		<?php echo esc_html__( 'load', 'thrive-ovation' ); ?>
+	</button>
+	<span class="the-divider"></span>
+	<button class="action-item click" data-fn="editSet">
+		<?php tcb_icon( 'pen-regular' ); ?>
+	</button>
+	<button class="action-item click" data-fn="toggleDeleteSet">
+		<?php tcb_icon( 'trash-light' ); ?>
+	</button>
+	<button class="action-item click" data-fn="overwriteSet">
+		<?php echo esc_html__( 'overwrite', 'thrive-ovation' ); ?>
+	</button>
+</span>
+
+<span class="delete-container">
+	<?php echo esc_html__( 'You are about to delete a testimonial set. Do you want to continue?', 'thrive-ovation' ); ?>
+	<span class="buttons-wrapper">
+		<button class="cancel-delete click" data-fn="toggleDeleteSet">
+			<?php echo esc_html__( 'No, cancel', 'thrive-ovation' ); ?>
+		</button>
+		<button class="apply-delete click" data-fn="deleteSet">
+			<?php echo esc_html__( 'Yes, delete', 'thrive-ovation' ); ?>
+		</button>
+	</span>
+</span>

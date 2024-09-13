@@ -1,0 +1,25 @@
+<div class="tvd-v-spacer"></div>
+<div class="tvd-input-field">
+	<input id="tvu-specific-url" type="text" value="" data-field="post_search">
+	<label for="tvu-specific-url"><?php echo __( 'Search for content on site', 'thrive-ult' ) ?></label>
+</div>
+<div class="control-grid flex-start pb-0">
+	<div class="control-grid flex-start w-200 mr-30">
+		<span class="tvd-no-margin grey"><?php echo __( 'Redirect when expired?', 'thrive-ult' ) ?></span>
+		<span class="tvd-icon-info-gray tvd-tooltipped" data-position="top" data-tooltip="<?php echo __( 'Activate this toggle to set a cookie on each visitor who lands on the promotion page for the first time. This allows you to redirect the visitors to a different page if they land on the promotion page after the cookie has expired.', 'thrive-ult' ) ?>"></span>
+	</div>
+	<div class="tvd-switch pb-20">
+		<label>
+			<?php echo __( 'NO', 'thrive-ult' ) ?>
+			<input class="tvu-redirect-switch" <#= settings.redirect == 1 ? 'checked' : '' #> type="checkbox">
+			<span id="tvu-repeat-campaign-switch" class="tvd-lever"></span>
+			<?php echo __( 'YES', 'thrive-ult' ) ?>
+		</label>
+	</div>
+</div>
+
+<div class="tvd-input-field tvd-redirect-input" <#= settings.redirect == 1 ? '' : ' style="display: none"' #>>
+	<input id="tvu-redirect-url" type="text" value="" data-field="post_search_redirect">
+	<label for="tvu-redirect-url"><?php echo __( 'Search for content on site', 'thrive-ult' ) ?></label>
+</div>
+

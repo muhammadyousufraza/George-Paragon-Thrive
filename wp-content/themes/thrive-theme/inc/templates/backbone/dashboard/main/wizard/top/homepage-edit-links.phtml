@@ -1,0 +1,14 @@
+<# if ( this.model.homepageState.get( 'type' ) === 'template' || this.model.deepGet('settings.homepage.is_landing_page') ) { #>
+<a href="<#=this.getEditLink('tar') #>" class="ttd-wizard-edit-link" target="_blank"
+   title="<?php echo esc_attr__( 'Edit with Thrive Architect', 'thrive-theme' ); ?>">
+	<?php echo esc_html__( 'Edit with', 'thrive-theme' ); ?>
+	<?php Thrive_Views::svg_icon( 'tar' ); ?>
+</a>
+<# } #>
+<# if ( this.model.homepageState.get( 'type' ) === 'page' && ! this.model.deepGet('settings.homepage.is_landing_page') ) { #>
+<a href="<#=this.getEditLink('ttb') #>" class="ttd-wizard-edit-link blue" target="_blank"
+   title="<?php echo esc_attr__( 'Edit with Theme Builder', 'thrive-theme' ); ?>">
+	<?php echo esc_html__( 'Edit with', 'thrive-theme' ); ?>
+	<?php Thrive_Views::svg_icon( 'builder-logo' ); ?>
+</a>
+<# } #>

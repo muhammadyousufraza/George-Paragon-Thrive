@@ -1,0 +1,16 @@
+<div class="tvd-switch">
+	<div class="label-text">
+		<div class="text">
+			<?php echo __( 'Display optimized assets on the front end of your site ', 'thrive-cb' ); ?>
+		</div>
+		<span class="info-icon"></span>
+		<div class="info-tooltip" style="display:none">
+				<?php echo __( 'After your optimized code has been prepared, you can enable or disable it in one click with this toggle. When disabled, your website will fall back to loading the assets it did before optimization. You may need to analyze your site again before enabling.', 'thrive-cb' ); ?>
+		</div>
+	</div>
+	<label>
+		<input type="checkbox" class="tvd-toggle-input toggle-lightspeed" <#= isEnabled ? 'checked': '' #>>
+		<span class="tvd-lever"></span>
+	</label>
+</div>
+

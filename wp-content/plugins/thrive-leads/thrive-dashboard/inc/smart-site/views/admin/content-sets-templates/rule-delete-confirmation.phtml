@@ -1,0 +1,18 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tvd-rule-delete">
+	<div><?php echo esc_html__( 'Are you sure you want  to delete this rule? This cannot be undone.', 'thrive-dash' ); ?></div>
+	<div>
+		<a href="javascript:void(0);" class="click" data-fn="cancel"><?php echo esc_html__( 'No, cancel', 'thrive-dash' ); ?></a>
+		<a href="javascript:void(0);" class="click" data-fn="confirm"><?php echo esc_html__( 'Yes, delete', 'thrive-dash' ); ?></a>
+	</div>
+</div>

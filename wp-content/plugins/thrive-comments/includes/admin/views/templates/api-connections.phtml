@@ -1,0 +1,82 @@
+<div class="tve-form-add-new-connection">
+	<p class="notification-label">
+		<?php echo __( 'Notification email delivery: ', Thrive_Comments_Constants::T ) ?>
+
+		<# if ( ! ThriveComments.email_services.length ) { #>
+		<span class="tooltipelem tcm-icon-information">
+			<span class="tooltiptext"><?php echo __( 'You need to setup a 3rd-party system for sending notifications by email.', Thrive_Comments_Constants::T ) ?></span>
+		</span>
+		<# } #>
+	</p>
+
+	<# _.each( ThriveComments.email_services, function( connection ) { #>
+	<div class="tcm-notification-card">
+
+		<span class="connection-img"><img class="tve-asset-connection-img" src="<#= connection.image #>"></span>
+		<span class="connection-title"><#= connection.title #></span>
+
+		<div class="tcm-config-field">
+			<div class="tvd-switch">
+				<label>
+					<?php echo __( 'Off', Thrive_Comments_Constants::T ); ?>
+					<input type="checkbox" id="email_service" class="tcm-email-checkbox" data-type="checkbox" data-setting="<#= connection.key #>"
+					<# if ( connection.active ) { #> checked
+					<# } #> >
+					<span class="tvd-lever"></span>
+					<?php echo __( 'On', Thrive_Comments_Constants::T ); ?>
+				</label>
+			</div>
+			<p class="<# if ( connection.active ) { #> active <# } #> tcm-service-label"> <?php echo __( 'Connected - Active', Thrive_Comments_Constants::T ) ?></p>
+			<p class="tcm-inactive-service-label"> <?php echo __( 'Connected - Inactive', Thrive_Comments_Constants::T ) ?></p>
+		</div>
+
+		<a class="button-link icon-pen tcm-icon-pencil" target="_blank" href="<?php echo admin_url( 'admin.php?page=tve_dash_api_connect#tve_new_api' ); ?>"> </a>
+
+	</div>
+
+	<# } ) #>
+
+	<div class="add-new-area">
+		<a class="button-link tcm-icon-add_circle" target="_blank" href="<?php echo admin_url( 'admin.php?page=tve_dash_api_connect#tve_new_api' ); ?>">
+			<?php echo __( 'Add new', Thrive_Comments_Constants::T ) ?>
+		</a>
+	</div>
+
+	<p class="notification-label">
+		<?php echo __( 'Customize notification messages', Thrive_Comments_Constants::T ) ?>
+	</p>
+
+	<div class="tcm-rounded-holder">
+		<p class="tvd-truncate tcm-ccn">
+			<?php echo __( 'Customize Comment Notification', Thrive_Comments_Constants::T ); ?>
+		</p>
+		<div class="tcm-link-controls">
+			<span class="tcm-icon-mode_edit" id="comment-notification-modal"></span>
+		</div>
+	</div>
+
+	<div class="tcm-rounded-holder">
+		<p class="tvd-truncate">
+			<?php echo __( 'Customize Post Notification', Thrive_Comments_Constants::T ); ?>
+		</p>
+		<div class="tcm-link-controls">
+			<span class="tcm-icon-mode_edit" id="post-notification-modal"></span>
+		</div>
+	</div>
+
+	<div class="tcm-config-field tcm-extra-styling">
+		<label for="tcm_moderators_notifications">
+			<?php echo __( 'Moderators receive notifications when someone replies to their comment', Thrive_Comments_Constants::T ); ?>
+		</label>
+		<div class="tvd-switch">
+			<label>
+				<?php echo __( 'Off', Thrive_Comments_Constants::T ); ?>
+				<input type="checkbox" id="tcm_moderators_notifications" data-type="checkbox" data-setting="tcm_moderators_notifications" class="tcm-checkbox" <# if ( collection.get('tcm_moderators_notifications').get('value')) { #> checked
+				<# } #>/>
+				<span class="tvd-lever"></span>
+				<?php echo __( 'On', Thrive_Comments_Constants::T ); ?>
+			</label>
+		</div>
+	</div>
+
+</div>

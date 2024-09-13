@@ -1,0 +1,268 @@
+<# var accent_color = collection.get('tcm_color_picker_value').get('value') || '#03a9f4'; #>
+<div id="thrive-comments" class="tcm-live-preview">
+	<div class="tcm-comments-list">
+		<div class="tcm-comment-item tcm-main-parent">
+			<div class="tcm-comment-content level-0">
+				<div class="tcm-comment-header">
+					<# if ( collection.get('gravatar_active').get('value')) { #>
+					<div class="tcm-comment-author-img" style="background-image: url(<#= collection.get( 'tcm_default_picture' ).get( 'value' )#>)"></div>
+					<# } #>
+					<div class="tcm-author-content">
+						<div class="tcm-user-info">
+							<div class="tcm-comment-author-name">
+								<strong>
+									<?php echo __( 'Unregistered User', Thrive_Comments_Constants::T ); ?>
+								</strong>
+							</div>
+							<# if ( collection.get('comment_date').get('value') == 1) { #>
+							<div class="tcm-date-container">
+								<span> <?php echo date_i18n( get_option( 'date_format' ), time() ); ?> </span>
+							</div>
+							<# } #>
+							<# if ( collection.get('comment_date').get('value') == 2) { #>
+							<div class="tcm-date-container">
+							<span>
+							<?php echo __( 'two days ago', Thrive_Comments_Constants::T ); ?>
+							</span>
+							</div>
+							<# } #>
+						</div>
+					</div>
+				</div>
+
+				<div class="tcm-comment-text">
+					<?php echo __( 'Very interesting! Where can I subscribe?', Thrive_Comments_Constants::T ); ?>
+				</div>
+
+				<div class="clearfix">
+					<div class="tcm-left">
+
+						<#if ( collection.get( 'tcm_vote_type' ).get('value') != 'no_vote' ){#>
+						<div class="tcm-voting-container">
+		                <span>
+		                    <#= ThriveComments.util.render_label('vote') #>
+		                </span>
+							<div class="tcm-voting-input tcm-upvote " data-type="upvote">
+								<span class="tcm-icon-thumb_up"></span>
+								<span class="tcm-votes-count"><#= 2 #></span>
+							</div>
+							<# if ( collection.get( 'tcm_vote_type' ).get('value') != 'up_only' ){#>
+							<div class="tcm-voting-input tcm-downvote " data-type="downvote">
+								<span class="tcm-icon-thumb_down"></span>
+								<span class="tcm-votes-count"><#= 1 #> </span>
+							</div>
+							<# } #>
+						</div>
+						<# } #>
+
+						<# if ( collection.get('share_individual_comments').get('value')) { #>
+						<div class="tcm-dropdown tcm-share-dropdown">
+						<span class="tcm-toggle-button">
+
+						<#= ThriveComments.util.render_label('share') #>
+						<span class="svg-arrow-down">
+							<?php tcah()->tcm_icon( 'bulk-action-arrow', 'bulk-action-arrow-svg' ); ?>
+						</span>
+						</span>
+						</div>
+						<# } #>
+					</div>
+
+					<div class="tcm-reply-container">
+						<button class="tcm-reply-btn tcm-right tvd-truncate" data-id="539" data-level="0"
+								style="color:<#= accent_color #>;border-color:<#= accent_color #>" type="submit">
+							<span class="preview-arrow" style="fill:<#= accent_color #>">
+								<?php tcah()->tcm_icon( 'reply-preview' ); ?>
+							</span>
+							<#= ThriveComments.util.render_label('reply_to_user', 'Unregistered User') #>
+						</button>
+						<div class="clear"></div>
+						<div class="tcm-create-comment-fields"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="tcm-comment-item tcm-post-author">
+				<span>
+						<?php tcah()->tcm_icon( 'author-icon', 'author-icon-svg' ); ?>
+				</span>
+				<div class="tcm-comment-content level-1">
+					<div class="tcm-comment-header">
+						<# if ( collection.get('gravatar_active').get('value')) { #>
+						<div class="tcm-comment-author-img" style="background-image: url(<?php echo get_site_url(); ?>/wp-content/plugins/thrive-comments/assets/images/avatar_03.png)"></div>
+						<# } #>
+						<div class="tcm-author-content">
+							<div class="tcm-user-info">
+								<div class="tcm-comment-author-name">
+									<strong style="color:<#= accent_color #>">
+										<?php echo __( 'Author', Thrive_Comments_Constants::T ); ?>
+									</strong>
+								</div>
+								<# if ( collection.get('comment_date').get('value') == 1) { #>
+								<div class="tcm-date-container">
+									<span> <?php echo date_i18n( get_option( 'date_format' ), time() ); ?> </span>
+								</div>
+								<# } #>
+								<# if ( collection.get('comment_date').get('value') == 2) { #>
+								<div class="tcm-date-container">
+									<span> <?php echo __( 'two days ago', Thrive_Comments_Constants::T ); ?></span>
+								</div>
+								<# } #>
+							</div>
+						</div>
+					</div>
+
+					<div class="tcm-comment-text">
+						<?php echo __( 'I\'m glad you liked it!', Thrive_Comments_Constants::T ); ?>
+					</div>
+
+					<div class="clearfix">
+
+						<div class="tcm-left">
+							<#if ( collection.get( 'tcm_vote_type' ).get('value') != 'no_vote' ){#>
+							<div class="tcm-voting-container">
+								 <span>
+								 <#= ThriveComments.util.render_label('vote') #>
+								</span>
+								<div class="tcm-voting-input tcm-upvote " data-type="upvote">
+									<span class="tcm-icon-thumb_up"></span>
+									<span class="tcm-votes-count"><#= 2 #></span>
+								</div>
+								<# if ( collection.get( 'tcm_vote_type' ).get('value') != 'up_only' ){#>
+								<div class="tcm-voting-input tcm-downvote " data-type="downvote">
+									<span class="tcm-icon-thumb_down"></span>
+									<span class="tcm-votes-count"><#= 1 #> </span>
+								</div>
+								<# } #>
+							</div>
+							<# } #>
+							<# if ( collection.get('share_individual_comments').get('value')) { #>
+							<div class="tcm-dropdown tcm-share-dropdown">
+							<span class="tcm-toggle-button">
+								<#= ThriveComments.util.render_label('share') #>
+								<span class="svg-arrow-down">
+									<?php tcah()->tcm_icon( 'bulk-action-arrow', 'bulk-action-arrow-svg' ); ?>
+								</span>
+							</span>
+							</div>
+							<# } #>
+						</div>
+
+						<div class="tcm-reply-container">
+							<button class="tcm-reply-btn tcm-right tvd-truncate" data-id="540" data-level="1"
+									style="color:<#= accent_color #>;border-color:<#= accent_color #>" type="submit">
+							<span class="preview-arrow" style="fill:<#= accent_color #>">
+								<?php tcah()->tcm_icon( 'reply-preview' ); ?>
+							</span>
+								<#= ThriveComments.util.render_label('reply_to_user', 'Author') #>
+							</button>
+							<div class="clear"></div>
+							<div class="tcm-create-comment-fields"></div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="tcm-comment-item tcm-main-parent">
+			<div class="tcm-comment-content level-0">
+				<div class="tcm-comment-header">
+					<# if ( collection.get('gravatar_active').get('value')) { #>
+					<div class="tcm-comment-author-img" style="background-image: url(<?php echo get_site_url(); ?>/wp-content/plugins/thrive-comments/assets/images/avatar_02.png)"></div>
+					<# } #>
+					<div class="tcm-author-content">
+						<div class="tcm-user-info">
+							<div class="tcm-comment-author-name">
+								<strong>
+									<?php echo __( 'Registered User', Thrive_Comments_Constants::T ); ?>
+								</strong>
+							</div>
+
+							<# if ( collection.get('comment_date').get('value') == 1) { #>
+							<div class="tcm-date-container">
+								<span> <?php echo date_i18n( get_option( 'date_format' ), time() ); ?> </span>
+							</div>
+							<# } #>
+							<# if ( collection.get('comment_date').get('value') == 2) { #>
+							<div class="tcm-date-container">
+								<span><?php echo __( 'one day ago', Thrive_Comments_Constants::T ); ?></span>
+							</div>
+							<# } #>
+						</div>
+					</div>
+				</div>
+
+				<div class="tcm-comment-text">
+					<?php echo __( 'Another great post! Keep up the good work!', Thrive_Comments_Constants::T ); ?>
+				</div>
+
+				<div class="clearfix">
+					<div class="tcm-left">
+
+						<#if ( collection.get( 'tcm_vote_type' ).get('value') != 'no_vote' ){#>
+						<div class="tcm-voting-container">
+		                <span>
+		                    <#= ThriveComments.util.render_label('vote') #>
+		                </span>
+							<div class="tcm-voting-input tcm-upvote " data-type="upvote">
+								<span class="tcm-icon-thumb_up"></span>
+								<span class="tcm-votes-count"><#= 2 #></span>
+							</div>
+							<# if ( collection.get( 'tcm_vote_type' ).get('value') != 'up_only' ){#>
+							<div class="tcm-voting-input tcm-downvote " data-type="downvote">
+								<span class="tcm-icon-thumb_down"></span>
+								<span class="tcm-votes-count"><#= 1 #> </span>
+							</div>
+							<# } #>
+						</div>
+						<# } #>
+
+						<# if ( collection.get('share_individual_comments').get('value')) { #>
+						<div class="tcm-dropdown tcm-share-dropdown">
+								<span class="tcm-toggle-button">
+									<#= ThriveComments.util.render_label('share') #>
+									<span class="svg-arrow-down">
+										<?php tcah()->tcm_icon( 'bulk-action-arrow', 'bulk-action-arrow-svg' ); ?>
+									</span>
+								</span>
+						</div>
+						<# } #>
+					</div>
+
+					<div class="tcm-reply-container">
+						<button class="tcm-reply-btn tcm-right tvd-truncate" data-id="541" data-level="0"
+								style="color:<#= accent_color #>;border-color:<#= accent_color #>" type="submit">
+							<span class="preview-arrow" style="fill:<#= accent_color #>">
+								<?php tcah()->tcm_icon( 'reply-preview' ); ?>
+							</span>
+							<#= ThriveComments.util.render_label('reply_to_user', 'Registered User') #>
+						</button>
+						<div class="clear"></div>
+						<div class="tcm-create-comment-fields"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<div class="tcm-lazy-comments">
+		<# if ( collection.get('powered_by').get('value')) { #>
+		<div class="tcm-powered-by">
+			<a href="javascript:void(0)" title="Powered by Thrive Comments">
+
+				<span class="tcm-footer-logo">
+				<?php tcmh()->tcm_icon( 'logo-footer', 'logo-footer-svg' ); ?>
+				</span>
+
+				<span>
+					<?php echo __( 'Powered by ', Thrive_Comments_Constants::T ); ?>
+				</span>
+				<span>
+					<?php echo __( 'Thrive Comments', Thrive_Comments_Constants::T ); ?>
+				</span>
+			</a>
+		</div>
+		<# } #>
+		<div class="clear"></div>
+	</div>
+</div>

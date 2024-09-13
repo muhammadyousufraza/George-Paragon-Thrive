@@ -1,0 +1,26 @@
+<div class="tcb-tooltip <#= extraClass #>">
+	<# if(icon) { #>
+	<span class="tcb-tooltip-icon mr-15"><?php tcb_icon( '<#= icon #>' ); ?></span>
+	<# } #>
+	<div class="tcb-tooltip-text">
+		<p class="text-green tcb-text-uppercase mb-5">
+			<#= title #>
+		</p>
+		<p class="tcb-tooltip-info mb-10">
+			<#= info #>
+		</p>
+		<div class="tcb-tooltip-buttons">
+			<a href="#" class="tcb-button-dismiss click" data-fn="dismiss">
+				<?php echo esc_html__( 'GOT IT', 'thrive-cb' ); ?>
+			</a>
+			<a href="<#= learnMoreLink #>" target="_blank" class="tcb-button-more">
+				<?php echo __( 'Learn more', 'thrive-cb' ); ?>
+			</a>
+		</div>
+	</div>
+	<# if(tooltipImage){ #>
+	<div class="tooltip-image" style="background-image: url('<#= tooltipImage #>')"></div>
+	<# } else if(type.startsWith("tooltip") && type.endsWith("section")){#>
+	<div class="tooltip-image" style="background-image: url('<?php echo tve_editor_css( 'images/section-templates.png' ) ?>')"></div>
+	<# } #>
+</div>

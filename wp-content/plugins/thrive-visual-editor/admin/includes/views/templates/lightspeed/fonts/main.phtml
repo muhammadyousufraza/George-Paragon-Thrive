@@ -1,0 +1,46 @@
+<div class="ls-view-title"><?php echo __( 'Font Settings', 'thrive-cb' ); ?></div>
+
+<div class="ls-fonts-wrapper">
+	<div class="ls-option-item<#= canOptimizeFonts ? '' : ' ls-disabled-item' #>">
+		<input type="checkbox"
+			   id="ls-enable-optimization-checkbox"
+			   data-key="<?php echo \TCB\Lightspeed\Fonts::ENABLE_FONTS_OPTIMIZATION; ?>"
+			   class="noUi-target noUi-ltr noUi-horizontal noUi-background ls-setting-input" <#= <?php echo TCB\Lightspeed\Fonts::ENABLE_FONTS_OPTIMIZATION ?> ? 'checked': '' #>>
+		<label for="ls-enable-optimization-checkbox">
+			<?php echo __( 'Enable Google Fonts Optimization', 'thrive-cb' ); ?>
+		</label>
+		<p class="ls-setting-info">
+			<?php echo __( 'Improves Google Fonts performance and combines multiple font requests for better Core Web Vital results.', 'thrive-cb' ); ?>
+			<a target="_blank" href="http://help.thrivethemes.com/en/articles/5448042-configuring-the-font-settings-in-project-lightspeed#h_31067c257a"><?php echo __( 'Learn more', 'thrive-cb' ); ?></a>
+		</p>
+	</div>
+	<div class="ls-option-item<#= canLoadFontsAsync ? '' : ' ls-disabled-item' #>">
+		<input type="checkbox"
+			   id="ls-enable-async-fonts-checkbox"
+			   data-key="<?php echo \TCB\Lightspeed\Fonts::ENABLE_ASYNC_FONTS_LOAD; ?>"
+			   class="noUi-target noUi-ltr noUi-horizontal noUi-background ls-setting-input" <#= <?php echo TCB\Lightspeed\Fonts::ENABLE_ASYNC_FONTS_LOAD ?> ? 'checked': '' #>>
+		<label for="ls-enable-async-fonts-checkbox">
+			<?php echo __( 'Load Google Fonts Asynchronously', 'thrive-cb' ); ?>
+		</label>
+		<p class="ls-setting-info">
+			<?php echo __( 'Tells the browser to preload Google Fonts in the background, this can improve Core Web Vitals in some cases.', 'thrive-cb' ); ?>
+			<a target="_blank" href="http://help.thrivethemes.com/en/articles/5448042-configuring-the-font-settings-in-project-lightspeed#h_31067c257a/"><?php echo __( 'Learn more', 'thrive-cb' ); ?></a>
+		</p>
+	</div>
+
+	<div class="ls-option-item">
+		<input type="checkbox"
+			   id="ls-disable-google-fonts-checkbox"
+			   data-key="<?php echo \TCB\Lightspeed\Fonts::DISABLE_GOOGLE_FONTS; ?>"
+			   class="noUi-target noUi-ltr noUi-horizontal noUi-background ls-setting-input" <#= <?php echo TCB\Lightspeed\Fonts::DISABLE_GOOGLE_FONTS ?> ? 'checked': '' #>>
+		<label for="ls-disable-google-fonts-checkbox">
+			<?php echo __( 'Disable all Google Fonts loaded by Thrive on your website.', 'thrive-cb' ); ?>
+		</label>
+		<p class="ls-setting-info">
+			<?php echo __( 'Prevent any Google font from loading in a page.', 'thrive-cb' ); ?>
+			<a target="_blank" href="http://help.thrivethemes.com/en/articles/5448042-configuring-the-font-settings-in-project-lightspeed#h_ac726f97ee">
+				<?php echo __( 'Learn more', 'thrive-cb' ); ?>
+			</a>
+		</p>
+	</div>
+</div>

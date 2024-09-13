@@ -1,0 +1,11 @@
+.tve_editor_page .tve-smash-balloon,
+.tve_editor_page .tve-smash-balloon * {
+	pointer-events: none;
+}
+
+.tve-smash-balloon__inner {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: #969fa6;
+	text-align: center;
+}

@@ -1,0 +1,38 @@
+<div id="thrive-theme-switch-content">
+	<div class="switch-content-menu click" data-fn="open_dropdown">
+		<?php echo __( 'Content: ', 'thrive-theme' ); ?>
+		<span id="switch-content-selected"><?php echo __( 'Choose Content', 'thrive-theme' ); ?></span>
+	</div>
+
+	<div id="switch-content-dropdown" class="archive-base">
+		<div
+		<#= view.isDemoContentVisible() ? '' : 'style="display:none"' #>>
+		<button class="demo-content-button click" data-fn="demo_content"> <?php echo __( 'Demo Content', 'thrive-theme' ); ?></button>
+		<div class="switch-content-separator"><span><?php echo __( 'OR', 'thrive-theme' ); ?></span></div>
+	</div>
+	<div class="website-content">
+		<span class="content-switch-menu-back click" style="display: none;" data-fn="close_custom_archive"></span>
+		<div class="switch-content-info"><?php echo __( 'Your Website Content', 'thrive-theme' ); ?></div>
+		<div class="content-switch-search-container">
+			<input class="content-switch-input input" data-fn="content_search" placeholder="<?php echo __( 'Search', 'thrive-theme' ); ?>"/>
+			<span class="content-switch-icon click" data-fn="clear_input"></span>
+		</div>
+
+		<ul class="switch-content-subarchives">
+			<# _.each( custom_archives, ( archive ) => { #>
+			<# if ( ! archive.has_template ) { #>
+			<li>
+				<button class="content-switch-archive-title clearfix click" data-fn="open_custom_archive" data-custom_archive="<#= archive.key #>">
+							<span> <#= archive.display_name #> (<#=archive.count #>)
+								<span class="dropdown-arrow clearfix"></span>
+							</span>
+				</button>
+			</li>
+			<# } #>
+			<# } ); #>
+		</ul>
+		<ul id="switch-content-select" style="display: none;"></ul>
+		<div class="list-button"></div>
+	</div>
+</div>
+</div>

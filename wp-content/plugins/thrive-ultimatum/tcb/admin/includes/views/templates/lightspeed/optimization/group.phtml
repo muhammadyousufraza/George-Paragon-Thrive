@@ -1,0 +1,12 @@
+<div class="text-paragraph <#= status === 'running' ? 'optimizing':''  #>">
+	<# if(status === 'optimized') { #>
+	<span class="small-icon success"></span>
+	<# } else if(status === 'running') { #>
+	<span class="spinner is-active"></span>
+	<# } else if(status === 'fail') { #>
+	<span class="small-icon fail"></span>
+	<# } else { #>
+	<span class="waiting"></span>
+	<# } #>
+	<#= items.where( {optimized: true} ).length #> of <#= items.length #>&nbsp;<strong><#= label #></strong>&nbsp;have been optimized.
+</div>

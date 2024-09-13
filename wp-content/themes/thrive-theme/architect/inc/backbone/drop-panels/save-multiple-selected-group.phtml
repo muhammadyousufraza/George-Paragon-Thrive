@@ -1,0 +1,28 @@
+<div class="tve-group-drop-panel">
+	<div class="control-grid full-width">
+		<div class="input">
+			<input type="text" class="tve-group-name keyup" data-fn-keyup="onKey" value="<#= name #>" placeholder="Group name">
+		</div>
+	</div>
+	<div class="control-grid">
+		<div class="tve-different-type-elements">
+			<div class="tve-element-count"><span><#= numberOfItems #></span> selected items</div>
+			<# _.forEach(elementTypes, element => { #>
+			<div class="tve-element-preview">
+				<div class="tve-elements-info">
+				<span class="tve-element-icon">
+					<#= TVE.icon( TVE.Elements[element ? element.type : 'text' ].icon ) #>
+				</span>
+					<span class="tve-element-name">
+					<#= TVE.Elements[element ? element.type : 'text' ].name #>
+				</span>
+				</div>
+				<span class="tve-remove-element-from-group click" data-fn="removeFromGroup" data-index="<#= element ? element.index : 0 #>">
+					<#= TVE.icon( 'times-regular' ) #>
+				</span>
+			</div>
+			<# }) #>
+		</div>
+
+	</div>
+</div>

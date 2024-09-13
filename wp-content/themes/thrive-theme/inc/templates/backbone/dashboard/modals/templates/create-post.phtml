@@ -1,0 +1,55 @@
+<div class="modal-sidebar">
+	<div class="ttd-modal-sidebar-icon" data-icon="singular">
+		<?php Thrive_Views::svg_icon( 'blog-template-color' ); ?>
+		<p><?php echo __( 'Blog post templates determine the design of individual blog posts.', 'thrive-theme' ); ?></p>
+	</div>
+
+	<div class="ttd-modal-sidebar-icon" data-icon="list">
+		<?php Thrive_Views::svg_icon( 'archive-template-color' ); ?>
+		<p><?php echo __( 'List templates determine the design of post lists.', 'thrive-theme' ); ?></p>
+	</div>
+
+</div>
+<div class="modal-options">
+	<div class="singular-step step">
+		<h3 class="modal-title">
+			<?php echo __( 'Enable post format template', 'thrive-theme' ); ?>
+		</h3>
+
+		<p><?php echo __( 'Choose the format you want this template to have', 'thrive-theme' ); ?></p>
+
+		<div id="post-formats-select">
+			<fieldset>
+				<legend class="screen-reader-text"><?php echo __( 'Post Formats', 'thrive-theme' ); ?></legend>
+
+				<input type="radio" name="post_format" class="post-format" id="post-format-standard" value="<?php echo THRIVE_STANDARD_POST_FORMAT ?>">
+				<label for="post-format-standard" class="post-format-icon post-format-standard"><?php echo __( 'Standard', 'thrive-theme' ); ?></label>
+
+				<?php foreach ( Thrive_Theme::post_formats() as $key => $format ) : ?>
+					<br>
+					<input type="radio" name="post_format" class="post-format" id="post-format-<?php echo $format; ?>" value="<?php echo $format; ?>">
+					<label for="post-format-<?php echo $format; ?>" class="post-format-icon post-format-<?php echo $format ?>"><?php echo ucfirst( $format ); ?></label>
+				<?php endforeach; ?>
+			</fieldset>
+		</div>
+
+		<div class="modal-buttons">
+			<button class="click normal-button" data-fn="singularSave"><?php echo __( 'Save', 'thrive-theme' ); ?></button>
+		</div>
+	</div>
+
+	<div class="list-step step">
+		<h3><?php echo __( 'Create a List Template', 'thrive-theme' ); ?></h3>
+		<p><?php echo __( 'What will this archive/list display?', 'thrive-theme' ); ?></p>
+
+		<div class="modal-user-actions">
+			<div class="ttd-template-primary ttd-drop-down"></div>
+			<div class="ttd-template-secondary ttd-drop-down"></div>
+			<div class="ttd-template-variable ttd-drop-down"></div>
+		</div>
+
+		<div class="modal-buttons">
+			<button class="click normal-button" data-fn="listTemplateSave"><?php echo __( 'Finish', 'thrive-theme' ); ?></button>
+		</div>
+	</div>
+</div>

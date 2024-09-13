@@ -1,0 +1,56 @@
+#tve_cpanel {
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+#tve-page-loader {
+    display: none !important;
+}
+
+#tcb-frame-container {
+    top: auto;
+    height: calc(100% - 500px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+.tcb-modals {
+    display: none;
+}
+
+#sidebar-top, #sidebar-right, #sidebar-bottom {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+#qunit {
+    width: 100%;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+iframe {
+    height: 600px;
+}
+
+#qunit-tests .qunit-assert-list li.fail > span.test-message,
+#qunit-tests .qunit-assert-list li.fail {
+    color: #bd0e0e;
+}
+
+.running #qunit-tests .qunit-assert-list {
+    display: none;
+}
+
+#tcb-edit-mode-button {
+    display: none !important;
+}
+
+.tcb-tooltip-container {
+    display: none !important;
+}

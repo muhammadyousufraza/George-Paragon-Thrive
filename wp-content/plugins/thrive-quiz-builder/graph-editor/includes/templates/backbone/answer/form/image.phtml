@@ -1,0 +1,38 @@
+<div class="clearfix tge-answer-has-image">
+
+	<div class="tvd-center-align tge-gray tge-lighten-4">
+	<span class="tge-sort-handle tvd-move">
+		<span class="tvd-icon-handle"></span>
+	</span>
+	</div>
+
+	<div class="clearfix">
+		<div class="tvd-no-margin">
+
+			<div class="tge-image-loader"></div>
+
+			<div class="tge-answer-prop">
+				<div class="tge-answer-wrapper">
+					<div class="clearfix tge-description">
+						<div class="tvd-input-field">
+							<input class="tge-answer-text" id="tge-qf-answer-<#= item.cid #>" data-bind="text" type="text" value="<#= _.escape(item.get('text')) #>">
+							<label for="tge-qf-answer-<#= item.cid #>"><?php echo __( 'Optional description', 'thrive-graph-editor' ) ?></label>
+						</div>
+					</div>
+
+					<div class="clearfix tge-points-column"></div>
+
+					<div class="clearfix tge-tags-column"></div>
+
+					<div class="clearfix tge-feedback-column"></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="tvd-center-align tge-gray-text">
+		<span class="tvd-icon-trash-o tvd-pointer" data-id="<#= item.cid #>"></span>
+	</div>
+
+</div>

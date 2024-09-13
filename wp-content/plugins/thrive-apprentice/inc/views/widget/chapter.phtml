@@ -1,0 +1,26 @@
+<?php
+/**
+ * @var $chapter TVA_Chapter
+ * @var $this    TVA_Shortcodes
+ */
+
+$done = tva_is_chapter_completed( $chapter ) ? 'done' : '';
+?>
+<div class="tva-chapter-lessons <?php echo $done; ?> ">
+
+	<?php tva_get_svg_icon( 'sym-dot', '' ); ?>
+	<?php tva_get_svg_icon( 'green-check', '' ); ?>
+	<h3 class="tva-chapter-title" data-id="<?php echo $chapter->ID; ?>">
+		<?php echo $chapter->post_title; ?>
+		<span class="tva-collapsible-pointer">
+		<?php tva_get_svg_icon( 'collapsible-minus', '' ) ?>
+		<?php tva_get_svg_icon( 'collapsible-plus', '' ); ?>
+		</span>
+	</h3>
+
+	<div class="tva-lessons-wrapper">
+		<?php foreach ( $chapter->get_visible_lessons() as $lesson ): ?>
+			<?php echo $this->tva_render_lesson( $lesson ); ?>
+		<?php endforeach; ?>
+	</div>
+</div>

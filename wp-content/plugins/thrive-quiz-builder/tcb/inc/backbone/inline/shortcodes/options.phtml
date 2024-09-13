@@ -1,0 +1,11 @@
+<select class="fr-input-line" id="fr-dropdown-shortcode-list">
+	<option value="" disabled selected><?php echo __( 'Select an option', 'thrive-cb' ); ?></option>
+	<# _.each(shortcodes, shortcode => { #>
+
+	<option value="<#= shortcode.value #>"
+			data-name="<#= shortcode.option #>"
+			data-extra-key="<#= shortcode.extra_param ? shortcode.extra_param : '' #>">
+		<#= utils.updatePostTypeLabel(shortcode.option) #>
+	</option>
+	<# }); #>
+</select>

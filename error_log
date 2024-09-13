@@ -1,0 +1,10 @@
+[18-Jul-2024 14:11:48 UTC] Cron unschedule event error for hook: tpm_cron_hook, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"tpm_interval","args":[],"interval":86400}
+[30-Jul-2024 08:43:51 UTC] PHP Warning:  Creating default object from empty value in /home/redcbltt/public_html/thrive/wp-content/plugins/thrive-product-manager/thrive-product-manager.php on line 765
+[30-Jul-2024 08:43:51 UTC] PHP Warning:  Creating default object from empty value in /home/redcbltt/public_html/thrive/wp-content/plugins/thrive-leads/inc/hooks.php on line 3104
+[30-Jul-2024 08:43:52 UTC] PHP Warning:  Creating default object from empty value in /home/redcbltt/public_html/thrive/wp-content/plugins/thrive-ultimatum/inc/functions.php on line 636
+[30-Jul-2024 08:43:53 UTC] PHP Warning:  Creating default object from empty value in /home/redcbltt/public_html/thrive/wp-content/plugins/thrive-ovation/inc/functions.php on line 52
+[30-Jul-2024 08:43:54 UTC] PHP Warning:  Creating default object from empty value in /home/redcbltt/public_html/thrive/wp-content/plugins/thrive-quiz-builder/thrive-quiz-builder.php on line 1558
+[30-Jul-2024 08:43:55 UTC] PHP Warning:  Creating default object from empty value in /home/redcbltt/public_html/thrive/wp-content/plugins/thrive-apprentice/inc/functions.php on line 256
+[30-Jul-2024 08:43:55 UTC] PHP Warning:  Creating default object from empty value in /home/redcbltt/public_html/thrive/wp-content/plugins/thrive-visual-editor/thrive-visual-editor.php on line 461
+[30-Jul-2024 08:43:56 UTC] PHP Warning:  Creating default object from empty value in /home/redcbltt/public_html/thrive/wp-content/plugins/thrive-comments/thrive-comments.php on line 143
+[30-Jul-2024 08:43:57 UTC] PHP Warning:  Creating default object from empty value in /home/redcbltt/public_html/thrive/wp-content/plugins/thrive-ab-page-testing/includes/class-thrive-ab.php on line 360

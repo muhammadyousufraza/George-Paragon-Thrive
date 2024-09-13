@@ -1,0 +1,9 @@
+<div class="tcb-social-network-container control-grid wrap">
+	<# _.each( networks, function ( network, k ) { #>
+	<span class="tcb-social-network-wrapper click" data-fn="itemToggle" data-value="<#= k #>">
+			<#= TVE.icon(k.replace('_share',''),'svg', 'sidebar','tcb-preview-network') #>
+			<input type="checkbox" class="s-network" value="<#= k #>">
+			<span> <#= network #> </span>
+		</span>
+	<# }); #>
+</div>

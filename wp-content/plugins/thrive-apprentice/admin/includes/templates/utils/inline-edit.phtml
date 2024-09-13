@@ -1,0 +1,5 @@
+<# if ( ! this.model.get('editing') ) { #>
+<span title="<#= this.model.get('text') #>" class="tva-inline-edit-text"><#- this.model.get('text') #></span>
+<# } else { #>
+<input id="tva-edit-<#=this.model.cid#>" type="text" value="<#- this.model.get('text') #>" class="tva-title-events tva-inline-edit-input">
+<# } #>

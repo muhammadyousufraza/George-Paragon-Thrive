@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<a href="javascript:void(0);" class="click mb-30 tva-protected-files-help-modal-back" data-fn="jumpToStep" data-step="0"><?php tva_get_svg_icon( 'long-arrow-left_solid' ); ?><span><?php echo __( 'Back', 'thrive-apprentice' ) ?></span></a>
+
+<div class="tva-protected-files-scroll">
+	<div class="tva-flex tva-align-center" style="gap: 10px;">
+		<div class="tva-protected-files-help-icon-aura"><?php tva_get_svg_icon( 'file-alt_light' ); ?></div>
+		<span class="tva-fs-20"><?php echo __( 'How to display protected files ', 'thrive-apprentice' ) ?><strong><?php echo __( 'in pages or posts', 'thrive-apprentice' ) ?></strong></span>
+	</div>
+	<div class="tva-flex mt-25">
+		<span class="tva-fs-20"><strong><?php echo __( 'Add protected files as buttons', 'thrive-apprentice' ) ?></strong></span>
+	</div>
+	<div class="tva-flex mt-25">
+		<div><img alt="Help Posts 1" src="<?php echo TVA_Const::plugin_url( 'admin/includes/assets/img/protected-files/help-posts-1.png' ); ?>"></div>
+		<div class="tva-flex tva-flex-column">
+			<span><?php echo __( 'Open your page or post with Thrive Architect. Add or Select a button.', 'thrive-apprentice' ) ?></span>
+			<strong class="mt-20"><?php echo __( 'Activate the Dynamic link, select protected file and choose your protected file name.', 'thrive-apprentice' ) ?></strong>
+			<div class="mt-20">
+				<img alt="Help Posts 2" src="<?php echo TVA_Const::plugin_url( 'admin/includes/assets/img/protected-files/help-posts-2.png' ); ?>">
+			</div>
+		</div>
+	</div>
+	<div class="tva-flex">
+		<span class="tva-fs-20"><strong><?php echo __( 'Add protected files as text links', 'thrive-apprentice' ) ?></strong></span>
+	</div>
+	<div class="tva-flex mt-20">
+		<span><?php echo __( 'Open your page or post with Thrive Architect. Select a text element in your page or post.', 'thrive-apprentice' ) ?></span>
+	</div>
+	<div class="tva-flex mt-10">
+		<span><strong><?php echo __( 'In the floating text toolbar, go to link settings and activate the Dynamic link.', 'thrive-apprentice' ) ?></strong></span>
+	</div>
+	<div class="tva-flex">
+		<span><strong><?php echo __( 'Select protected file and choose your protected file name.', 'thrive-apprentice' ) ?></strong></span>
+	</div>
+	<div class="tva-flex mt-10">
+		<img alt="Help Posts 3" src="<?php echo TVA_Const::plugin_url( 'admin/includes/assets/img/protected-files/help-posts-3.png' ); ?>">
+	</div>
+</div>
+
+<div class="tva-flex tva-space-around mt-20">
+	<a rel="noopener" href="https://help.thrivethemes.com/en/articles/6972728-how-to-protect-files-and-grant-access-for-customers-or-students#h_f2d0667acb" target="_blank" class="tva-btn tva-btn-blue pl-30 pr-30"><?php echo __( 'Read the full guide', 'thrive-apprentice' ) ?></a>
+</div>

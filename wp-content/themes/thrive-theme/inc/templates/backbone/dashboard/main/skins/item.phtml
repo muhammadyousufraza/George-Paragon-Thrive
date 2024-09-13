@@ -1,0 +1,32 @@
+<div class="ttd-skin-card-upper">
+	<span class="ttd-skin-name"><#= this.model.get('name') #></span>
+	<span class="ttd-skin-checkmark click" data-fn="saveName">
+		<?php Thrive_Views::svg_icon( 'check' ); ?>
+	</span>
+	<div class="ttd-skin-status"><#= this.model.getStatusLabel() #></div>
+</div>
+
+<div class="ttd-skin-card-preview" style="background-image:url(<#= this.model.getPreviewThumbnail() #>);">
+	<div class="ttd-skin-card-actions">
+
+		<button class="ttd-skin-card-action ttd-skin-activate click" data-fn="makeActive">
+			<?php echo __( 'Activate', 'thrive-theme' ); ?>
+		</button>
+
+		<button class="ttd-skin-card-action ttd-skin-duplicate click" data-fn="duplicateSkin">
+			<?php echo __( 'Duplicate', 'thrive-theme' ); ?>
+		</button>
+
+		<button class="ttd-skin-card-action click" data-fn="exportSkin">
+			<?php echo __( 'Export', 'thrive-theme' ); ?>
+		</button>
+
+		<button class="ttd-skin-card-action click" data-fn="openPreview">
+			<?php echo __( 'Preview', 'thrive-theme' ); ?>
+		</button>
+
+		<button class="ttd-skin-card-action ttd-dropdown-dots click" data-fn="showOptionsTooltip">
+			<?php Thrive_Views::svg_icon( 'icon-three-dots' ); ?>
+		</button>
+	</div>
+</div>

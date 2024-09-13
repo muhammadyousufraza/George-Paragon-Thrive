@@ -1,0 +1,22 @@
+<div class="ttd-tooltip ttd-homepage-confirmation-tooltip">
+
+	<?php Thrive_Views::svg_icon( 'exclamation-circle' ); ?>
+
+	<p class="ttd-tooltip-confirmation-text">
+		<?php echo esc_attr__( 'Choosing a new homepage will permanently replace the one you had before', 'thrive-theme' ); ?>
+	</p>
+
+	<span class="ttd-tooltip-confirmation-subtext">
+		<?php echo esc_attr__( 'Are you sure you want to continue?', 'thrive-theme' ); ?>
+	</span>
+
+	<div class="ttd-tooltip-buttons">
+		<button class="ttd-normal-button blue-button click" data-fn="saveTemplate">
+			<?php echo esc_attr__( 'Yes, replace my homepage', 'thrive-theme' ); ?>
+		</button>
+
+		<button class="ttd-normal-button blue-button click" data-fn="closeConfirmation">
+			<?php echo esc_attr__( 'No, keep my initial homepage', 'thrive-theme' ); ?>
+		</button>
+	</div>
+</div>

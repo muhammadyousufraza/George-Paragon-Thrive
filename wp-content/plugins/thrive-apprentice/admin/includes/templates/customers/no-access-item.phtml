@@ -1,0 +1,11 @@
+<div class="tva-no-access-set">
+	<span>
+		<b><#= model.get('display_name') #></b>
+		<span>(<#= model.get('user_email') #>)</span>
+		<?php echo esc_html__( "doesn't currently have any access rights", 'thrive-apprentice' ) ?>
+	</span>
+	<a href="javascript:void(0);" class="click tva-btn tva-btn-blue mt-10" data-fn="jumpToStep" data-step="1">
+		<?php tva_get_svg_icon( 'add-btn' ); ?>
+		<?php echo __( 'Add', 'thrive-apprentice' ) ?>
+	</a>
+</div>

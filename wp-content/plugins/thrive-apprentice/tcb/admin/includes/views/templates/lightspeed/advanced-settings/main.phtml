@@ -1,0 +1,84 @@
+<div class="ls-view-title"><?php echo __( 'Advanced Settings', 'thrive-cb' ); ?></div>
+
+<div class="ls-advanced-settings-wrapper">
+	<p class="ls-advanced-setting-info">
+		<?php echo __( 'These optimization settings apply to WordPress core or 3rd party assets and may affect 3rd party plugin or theme functionality. Please make sure to thoroughly test your website after activating them.', 'thrive-cb' ); ?>
+	</p>
+	<?php if ( class_exists( '\TCB\Lightspeed\Gutenberg', false ) ): ?>
+		<div class="ls-advanced-gutenberg-settings">
+			<p class="ls-advanced-setting-disable-gutenberg">
+				<?php echo __( 'Disable loading Gutenberg scripts and styles on content where we can detect that it\'s not being used', 'thrive-cb' ); ?>
+			</p>
+			<div class="ls-option-item">
+				<input type="checkbox"
+					   id="ls-disable-gutenberg-lp-checkbox"
+					   data-key="<?php echo \TCB\Lightspeed\Gutenberg::DISABLE_GUTENBERG_LP; ?>"
+					   class="noUi-target noUi-ltr noUi-horizontal noUi-background ls-advanced-setting-input"
+				<#= <?php echo TCB\Lightspeed\Gutenberg::DISABLE_GUTENBERG_LP ?> ? 'checked': '' #>>
+				<label for="ls-disable-gutenberg-lp-checkbox">
+					<?php echo __( 'Disable on Thrive Landing Pages', 'thrive-cb' ); ?>
+				</label>
+			</div>
+			<?php if ( tve_dash_is_ttb_active() ): ?>
+				<div class="ls-option-item">
+					<input type="checkbox"
+						   id="ls-disable-gutenberg-content-checkbox"
+						   data-key="<?php echo \TCB\Lightspeed\Gutenberg::DISABLE_GUTENBERG; ?>"
+						   class="noUi-target noUi-ltr noUi-horizontal noUi-background ls-advanced-setting-input"
+					<#= <?php echo TCB\Lightspeed\Gutenberg::DISABLE_GUTENBERG ?> ? 'checked': '' #>>
+					<label for="ls-disable-gutenberg-content-checkbox">
+						<?php echo __( 'Disable on all content that uses a Thrive Theme Builder template', 'thrive-cb' ); ?>
+					</label>
+				</div>
+			<?php endif; ?>
+		</div>
+	<?php endif; ?>
+	<?php if ( \TCB\Integrations\WooCommerce\Main::active() ): ?>
+		<div class="ls-advanced-woocommerce-settings">
+			<p class="ls-advanced-setting-disable-woocommerce">
+				<?php echo __( 'Disable loading WooCommerce scripts and styles on content where we can detect that it\'s not being used', 'thrive-cb' ); ?>
+			</p>
+			<div class="ls-option-item">
+				<input type="checkbox"
+					   id="ls-disable-woocommerce-lp-checkbox"
+					   data-key="<?php echo \TCB\Lightspeed\Woocommerce::DISABLE_WOOCOMMERCE_LP; ?>"
+					   class="noUi-target noUi-ltr noUi-horizontal noUi-background ls-advanced-setting-input"
+				<#= <?php echo TCB\Lightspeed\Woocommerce::DISABLE_WOOCOMMERCE_LP ?> ? 'checked': '' #>>
+				<label for="ls-disable-woocommerce-lp-checkbox">
+					<?php echo __( 'Disable on Thrive Landing Pages', 'thrive-cb' ); ?>
+				</label>
+			</div>
+			<?php if ( tve_dash_is_ttb_active() ): ?>
+				<div class="ls-option-item">
+					<input type="checkbox"
+						   id="ls-disable-woocommerce-content-checkbox"
+						   data-key="<?php echo \TCB\Lightspeed\Woocommerce::DISABLE_WOOCOMMERCE; ?>"
+						   class="noUi-target noUi-ltr noUi-horizontal noUi-background ls-advanced-setting-input"
+					<#= <?php echo TCB\Lightspeed\Woocommerce::DISABLE_WOOCOMMERCE ?> ? 'checked': '' #> >
+					<label for="ls-disable-woocommerce-content-checkbox">
+						<?php echo __( 'Disable on all content that uses a Thrive Theme Builder template', 'thrive-cb' ); ?>
+					</label>
+				</div>
+			<?php endif; ?>
+		</div>
+	<?php endif; ?>
+	<div class="ls-advanced-emoji-settings">
+		<p class="ls-advanced-setting-disable-emoji">
+			<?php echo __( 'Disable emojis', 'thrive-cb' ); ?>
+		</p>
+		<div class="ls-option-item">
+			<input type="checkbox"
+				   id="ls-disable-emoji-lp-checkbox"
+				   data-key="<?php echo \TCB\Lightspeed\Emoji::DISABLE_EMOJI; ?>"
+				   class="noUi-target noUi-ltr noUi-horizontal noUi-background ls-advanced-setting-input"
+			<#= <?php echo TCB\Lightspeed\Emoji::DISABLE_EMOJI ?> ? 'checked': '' #>>
+			<label for="ls-disable-emoji-lp-checkbox">
+				<?php echo __( 'Prevent WordPress from automatically loading emojis in your pages.', 'thrive-cb' ); ?>
+			</label>
+		</div>
+	</div>
+	<a class="ls-save-advanced-settings tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green" style="width:300px;"><?php echo __( 'Save', 'thrive-cb' ); ?> </a>
+	<div class="page-content" style="width:300px; ">
+		<div class="progress-bar-wrapper" style="display: none;"></div>
+	</div>
+</div>

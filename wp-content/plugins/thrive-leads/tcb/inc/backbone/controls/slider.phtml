@@ -1,0 +1,27 @@
+<# var um_list = this.get_config( 'um' ); #>
+<div class="control-grid slider wrap <#=this.model.config.class #>">
+	<div class="label full-width">
+		<span class="slider-label"><#= this.model.config.label || this.model.config.name || this.el.dataset.name#></span>
+		<# if ( this.model.config.info ) { #>
+		<span class="click tve-slider-info" data-fn="openTooltip" <#=this.model.config.info_hover ? 'data-paneltlt-hover' : ''#> ><?php tcb_icon( 'info-circle-solid' ); ?></span>
+		<# } #>
+	</div>
+	<div class="fill mr-20">
+		<input type="range" class="tve-slider input change focusin focusout" data-fn-change="onChange" data-fn-input="onInput" min="<#= this.model.config.min #>"
+			   max="<#= this.model.config.max #>" value="<#= this.model.config.default #>" data-fn-focusin="onFocus" data-fn-focusout="onBlur"/>
+	</div>
+	<# if (!this.model.config.hide_input) { #>
+	<div class="slider-input <#=this.model.config.input_disabled ? 'tve-disabled' : ''#>">
+		<# if (um_list.length) { #>
+		<span class="input-um<#=um_list.length > 1 ? ' click' : ''#> <#=this.model.config.um_disabled ? 'tve-disabled' : ''#>"<#=um_list.length > 1 ? ' tabindex="2"' : ''#>><#= um_list[0] || '' #></span>
+		<# } #>
+		<input type="text" class="tve-input input change focusin focusout width-input<#=this.model.config.um.length ? ' has-um' : ''#>" data-fn-change="onChange" data-fn-input="onInput"
+			   value="<#= this.model.config.default #>" data-fn-focusin="onFocus" data-fn-focusout="onBlur">
+		<div class="um-wrapper">
+			<# if(this.model.config.um.length>1) { _.each(this.model.config.um, function(um, index) { #>
+			<span class="tve-input-um mousedown <#= index==0?'active':'' #>" data-fn="umChange" data-value="<#= um #>"><#= um #></span>
+			<# }); } #>
+		</div>
+	</div>
+	<# } #>
+</div>

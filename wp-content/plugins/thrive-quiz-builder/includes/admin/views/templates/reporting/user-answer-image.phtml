@@ -1,0 +1,3 @@
+<div class="tqb-user-question-answer <#= item.get('chosen')? 'tqb-selected-answer':'' #>">
+	<img class="<# if ( item.get('text') != '' ) { #>tvd-tooltipped<# } #>" data-tooltip="<#= item.get('text') #>" data-position="top" src="<#= item.get_thumb_url() #>" alt="<#= item.get('text') #>"/>
+</div>

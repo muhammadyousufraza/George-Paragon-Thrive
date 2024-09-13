@@ -1,0 +1,14 @@
+<div class="ttd-wizard-clip placeholder clip-logo clip-color">
+	<p class="ttd-wizard-desc mb-20 f-22"><?php echo esc_html__( 'What is your main brand colour?', 'thrive-theme' ); ?></p>
+
+	<div id="wizard-step-color-palette" class="ttd-brand-color"></div>
+	<div id="wizard-spectrum-container"></div>
+
+	<button class="click ttd-btn click fill blue mt-20" data-fn="clickNext">
+		<#=this.wizard.getContinueLabel()#>
+		<# if( this.wizard.hasNextStep() ) { #>
+		<?php Thrive_Views::svg_icon( 'chevron-right' ); ?>
+		<span class="step-no"><#=this.wizard.getNextAvailableStepIndex() + 1#></span>
+		<# } #>
+	</button>
+</div>

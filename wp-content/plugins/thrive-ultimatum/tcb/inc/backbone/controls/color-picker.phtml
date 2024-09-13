@@ -1,0 +1,23 @@
+<# if ( this.model.config.flat || ( this.model.config.options && this.model.config.options.flat ) ) { #>
+<div class="color-picker-control"><input type="text" class="color-picker"></div>
+<# } else { #>
+<div class="color-picker-control control-grid<#=this.getExtraClass()#>">
+	<# if(this.model.config.label || this.model.config.label_icon ) { #>
+	<div class="color-picker-label label">
+		<#= this.model.config.label_icon ? TVE.icon( this.model.config.label_icon ) : this.model.config.label #>
+		<# if ( this.model.config.info ) { #>
+		<span class="click tve-color-info"> <?php tcb_icon( 'info-circle-solid' ); ?></span>
+		<# } #>
+	</div>
+	<# } #>
+
+	<div class="color-picker-input control-grid input p-0">
+		<div class="input">
+			<input type="text" class="color-picker">
+			<div class="color-input-container">
+				<input type="text" class="color-input" disabled placeholder="None">
+			</div>
+		</div>
+	</div>
+</div>
+<# } #>

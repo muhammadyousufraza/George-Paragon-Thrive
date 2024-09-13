@@ -1,0 +1,16 @@
+<p class="grey m-0 mb-5"><?php echo __( 'Click to copy the webhook URL' ) ?></p>
+<div class="tvd-copy-row control-grid tvd-webhook p-20">
+	<div class="tvd-col p-0 tvd-webhook-link">
+		<div class="tvd-input-field">
+			<input id="tu-webhook-genreated-url" class="tvd-no-focus tu-webhook-generated-url m-0" type="text" value="<#= url #>">
+		</div>
+	</div>
+	<div class="tvd-col p-0">
+		<a class="tve-copy-to-clipboard tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-blue" href="javascript:void(0)">
+			<span class="tvd-copy-text"><?php echo __( 'Copy', 'thrive-ult' ) ?></span>
+		</a>
+	</div>
+</div>
+<a href="<#= kb_article #>" target="_blank">
+	<p class="help-link m-0 mt-10 tvu-btn-flat"><?php echo __( 'Click here for help with incoming webhooks', 'thrive-ult' ) ?></p>
+</a>

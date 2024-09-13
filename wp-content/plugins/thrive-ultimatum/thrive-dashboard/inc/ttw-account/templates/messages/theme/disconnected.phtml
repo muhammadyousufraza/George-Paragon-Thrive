@@ -1,0 +1,22 @@
+<p>
+	<strong>
+		<?php
+		echo sprintf(
+			__( 'Connection lost - there is a new version of %s available but your thrivethemes.com account must be %s in order to update. %s', 'thrive-dash' ),
+			$name,
+			sprintf(
+				'<a href="%s">%s</a>',
+				'admin.php?page=tve_dash_ttw_account',
+				__( 'connected', 'thrive-dash' )
+			),
+			sprintf(
+				'<a class="%s" aria-label="%s" href="%s">' . __( 'View version %s details', 'thrive-dash' ) . '</a>.',
+				'thickbox open-plugin-details-modal',
+				$name,
+				$details_url,
+				$version
+			)
+		)
+		?>
+	</strong>
+</p>

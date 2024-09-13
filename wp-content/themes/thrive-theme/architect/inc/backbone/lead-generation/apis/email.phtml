@@ -1,0 +1,21 @@
+<div class="api-field">
+	<div class="tve-email-providers">
+		<div class="label">
+			<?php echo __( 'Email delivery service', 'thrive-cb' ); ?>
+			<span data-paneltlt-hover class="tve-cb-img-info ml-5 tcb-email-tooltip"><?php tcb_icon( 'info-circle-solid' ); ?></span>
+		</div>
+
+		<div class="tcb-relative tve-providers-select">
+			<select id="lg-email-service" class="tve-select change" data-fn="selectEmailProvider"></select>
+			<span class="select2-arrow"><?php tcb_icon( 'a_down' ); ?></span>
+		</div>
+	</div>
+	<?php if ( ! function_exists( 'wp_mail_smtp' ) ) : ?>
+	<div class="info-text orange mt-0 tve-own-site-warning">
+		<?php $link = sprintf( '<a href="%s" class="blue-text" style="display: inline" target="_blank">%s</a>', 'https://wpmailsmtp.com', __( 'WP Mail SMTP', 'thrive-cb' ) ); ?>
+		<?php $other_link = sprintf( '<a href="%s" class="blue-text" style="display: inline" target="_blank">%s</a>', 'https://www.wpbeginner.com/plugins/how-to-set-up-wp-mail-smtp-with-any-host-ultimate-guide/', __( 'Learn more here', 'thrive-cb' ) ); ?>
+		<?php echo sprintf( __( 'Using the default WordPress mailer is known to result in low delivery rates. We strongly recommend using %s and/or a transactional email service.  %s', 'thrive-cb' ), $link, $other_link ); ?>
+	</div>
+	<?php endif; ?>
+	<div class="tve-email-settings"></div>
+</div>

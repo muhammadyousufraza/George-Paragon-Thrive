@@ -1,0 +1,25 @@
+<span class="hyper-span"><?php echo __( 'Insert / edit hyperlink', Thrive_Comments_Constants::T ); ?></span>
+
+<div id="hyperlink-error" class="tcm-red" hidden>
+	<?php echo __( 'Invalid URL', Thrive_Comments_Constants::T ); ?>
+</div>
+
+<input class="tcm_hyperlink tcm-autocomplete small-text tcm-keyword-input" data-type="text" id="tcm_hyperlink_url" data-setting="value" placeholder="Paste a link or search" type="text" data-flag="">
+<select id="approve_post_id" class=" tvd-browser-default" style="display: none;"></select>
+<input id="tcm_hyperlink_text" type="text" placeholder="Insert text" value="<#= selected_text.toString() #>">
+
+<input id="hyperlink-new-tab" class="filled-in tcm-keyword-input" data-type="checkbox" type="checkbox" name="hyperlink-new-tab" data-setting="new_tab">
+<label class="checkbox-no-follow" for="hyperlink-new-tab">
+	<?php echo __( 'Open link in new tab', Thrive_Comments_Constants::T ); ?>
+</label>
+<input id="hyperlink-no-follow" class="filled-in tcm-keyword-input" data-type="checkbox" type="checkbox" name="keyword_no_follow" data-setting="no_follow">
+<label style="margin-bottom: 15px;" class="checkbox-no-follow" for="hyperlink-no-follow">
+	<?php echo __( 'No-follow link', Thrive_Comments_Constants::T ); ?>
+</label>
+
+<button class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-flat hyperlink-close tcm-discard-changes" href="javascript:void(0);">
+	<?php echo __( 'CANCEL', Thrive_Comments_Constants::T ); ?>
+</button>
+<button class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green hyperlink-save tvd-right" href="javascript:void(0);" disabled>
+	<?php echo __( 'SAVE', Thrive_Comments_Constants::T ); ?>
+</button>

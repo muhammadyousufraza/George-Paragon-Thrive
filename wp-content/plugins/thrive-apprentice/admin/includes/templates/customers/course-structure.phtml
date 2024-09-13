@@ -1,0 +1,74 @@
+<div class="tva-course-top-info">
+	<div class="tva-cc-inner">
+		<div class="tva-course-desc">
+			<# if ( this.courseModel.get( 'cover_image' ) ) { #>
+			<div class="tva-course-img" style="background-image: url('<#= this.courseModel.get('cover_image') #>')"></div>
+			<# } else { #>
+			<div class="tva-course-img"></div>
+			<# } #>
+			<div class="tva-course-extra">
+				<div class="tva-course-extra-title"><#= this.courseModel.get('name') #></div>
+				<div class="tva-course-activity">
+					<# if ( this.model.getCourseData( 'enrollment_dates', this.courseID ) ) { #>
+						<span><?php esc_html_e( 'Enrolled date', 'thrive-apprentice' ) ?>: <#= this.model.getCourseData( 'enrollment_dates', this.courseID ) #></span>
+					<# } #>
+					<# if ( this.model.getCourseData( 'activity', this.courseID ) ) { #>
+						<span><?php esc_html_e( 'Last activity', 'thrive-apprentice' ) ?>: <#= this.model.getCourseData( 'activity', this.courseID ) #></span>
+					<# } #>
+				</div>
+			</div>
+		</div>
+		<div class="tva-course-top-right">
+			<div class="tva-cc-progress-inner">
+				<span class="tva-cc-progressbar<#=this.courseProgress === '100%' ? ' completed' : '' #>">
+					<span class="tva-progress-dark"><#= this.courseProgress #></span>
+					<span class="tva-progress-line" style="width: <#= this.courseProgress #>;">
+						<span class="tva-progress-light"><#= this.courseProgress #></span>
+					</span>
+				</span>
+			</div>
+
+			<a href="#reports/courses/main?user_id=<#=this.id#>&course_id=<#=this.courseID#>" class="tva-link-btn click">
+				<?php tva_get_svg_icon( 'bar-stats' ); ?>
+				<?php esc_html_e( 'View course activity report', 'thrive-apprentice' ); ?>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="tva-cc-inner">
+
+	<div class="tva-course-mass-actions">
+		<label class="tva-label" for="tva-check-all">
+			<input type="checkbox" class="tva-checkbox" id="tva-check-all">
+			<?php esc_html_e( 'Select all', 'thrive-apprentice' ); ?>
+		</label>
+
+		<button class="tva-tooltip-parent tva-mass-action click" data-fn="massAction" data-action="complete">
+			<?php echo tva_get_svg_icon( 'check-circle_light' ); ?>
+			<?php esc_html_e( 'Mark as complete', 'thrive-apprentice' ) ?>
+			<div class="tva-custom-tooltip"><?php esc_html_e( 'Unlock and mark content as complete for this member', 'thrive-apprentice' ); ?></div>
+		</button>
+
+		<button class="tva-tooltip-parent tva-mass-action click" data-fn="massAction" data-action="unlock">
+			<?php echo tva_get_svg_icon( 'unlock-alt_light' ); ?>
+			<?php esc_html_e( 'Unlock content', 'thrive-apprentice' ) ?>
+			<div class="tva-custom-tooltip"><?php esc_html_e( 'Unlock lessons for this member', 'thrive-apprentice' ); ?></div>
+		</button>
+
+		<button class="tva-tooltip-parent tva-mass-action click" data-fn="massAction" data-action="reset">
+			<?php echo tva_get_svg_icon( 'times_light' ); ?>
+			<?php esc_html_e( 'Reset status', 'thrive-apprentice' ) ?>
+			<div class="tva-custom-tooltip"><?php esc_html_e( 'Reset progress', 'thrive-apprentice' ); ?></div>
+		</button>
+	</div>
+
+	<div class="tva-simple-table-header tva-customer-course-header">
+		<div class="tva-customer-courses-header"><?php esc_html_e( 'Content', 'thrive-apprentice' ) ?></div>
+		<div class="tva-header-status"><?php esc_html_e( 'Status', 'thrive-apprentice' ) ?></div>
+		<div class="tva-header-started"><?php esc_html_e( 'Date started', 'thrive-apprentice' ) ?></div>
+		<div class="tva-header-completed"><?php esc_html_e( 'Date completed', 'thrive-apprentice' ) ?></div>
+	</div>
+
+	<div class="tva-cc-container-inner"></div>
+</div>

@@ -1,0 +1,35 @@
+<div class="tvd-modal-content">
+	<div class="tvd-row">
+		<div class="tvd-col tvd-s12">
+			<h3 class="tvd-title">
+				<?php echo __( 'Settings', 'thrive-quiz-builder' ); ?>
+			</h3>
+		</div>
+	</div>
+	<div class="tvd-v-spacer vs-2"></div>
+	<div class="tvd-row tvd-collapse">
+		<div class="tvd-col tvd-s8">
+			<span><?php echo __( 'Display "Powered by Quiz Builder"', 'thrive-quiz-builder' ); ?></span>
+		</div>
+		<div class="tvd-col tvd-s4">
+			<div class="tvd-switch">
+				<label for="tqb_promotion_badge">
+					<?php echo __( 'Off', 'thrive-quiz-builder' ); ?>
+					<input type="checkbox" class="tqb-setting-checkbox"
+						   id="tqb_promotion_badge"
+						   value="1"
+						   data-key="tqb_promotion_badge" <# if(model.get('tqb_promotion_badge') == 1) {#> checked="checked" <# }#>>
+					<span class="tvd-lever"></span>
+					<?php echo __( 'On', 'thrive-quiz-builder' ); ?>
+				</label>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="tvd-modal-footer">
+	<div class="tvd-row">
+		<div class="tvd-col tvd-s12">
+			<a href="javascript:void(0);" class="tvd-waves-effect tvd-modal-submit tvd-waves-light tvd-btn tvd-btn-green tvd-right"><?php echo __( 'Save', 'thrive-quiz-builder' ); ?></a>
+		</div>
+	</div>
+</div>

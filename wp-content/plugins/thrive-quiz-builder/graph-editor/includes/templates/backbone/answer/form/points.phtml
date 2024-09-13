@@ -1,0 +1,6 @@
+<div class="tvd-input-field">
+	<input id="tge-qf-points-<#= item.cid #>" data-bind="points" type="text" maxlength="6" value="<#= item.get('points') #>">
+	<label for="tge-qf-points-<#= item.cid #>">
+		<#= TGE_Editor.quiz.quiz_type === 'personality' ? 'Weight' : 'Points' #>
+	</label>
+</div>

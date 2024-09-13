@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div>
+	<label><#- model.get('label') #></label>
+	<input type="range" class="input" data-fn="sliderInput" value="<#= model.get( 'value' ) #>" min="<#- model.get('min') #>" max="<#- model.get('max') #>"/>
+</div>
+<div>
+	<input type="number" class="input" data-fn="sliderInput" value="<#= model.get( 'value' ) #>" min="<#- model.get('min') #>" max="<#- model.get('max') #>" oninput="validity.valid||(value=<#= model.get('min') #>);"/>
+</div>

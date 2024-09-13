@@ -1,0 +1,32 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+
+$breadcrumbs_config = array(
+	array(
+		'title' => __( 'Quick Start Guide', 'thrive-apprentice' ),
+		'route' => 'sendowl/quick-start',
+	),
+	array(
+		'title' => __( 'SendOwl Checkout', 'thrive-apprentice' ),
+	),
+);
+
+?>
+
+<div class="tva-flex tva-flex-row mb-30">
+	<h1 class="tva-main-heading"><?php echo __( 'SendOwl Checkout', 'thrive-apprentice' ); ?></h1>
+</div>
+
+<?php include 'breadcrumbs.phtml'; ?>
+
+<div class="tva-so-checkout">
+	<div class="tva-page-container"></div>
+</div>

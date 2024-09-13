@@ -1,0 +1,326 @@
+# Copyright (C) 2024 Thrive Image Editor
+# This file is distributed under the same license as the Thrive Image Editor package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Thrive Image Editor\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Econdig: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Project-Id-Version: Thrive Image Editor\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../includes/classes/class-tie-ajax-controller.php:89
+msgid "Method %s not implemented"
+msgstr ""
+
+#: ../includes/classes/class-tie-ajax-controller.php:105
+msgid "Image Post could not be saved"
+msgstr ""
+
+#: ../includes/classes/class-tie-ajax-controller.php:118
+msgid "Invalid parameter"
+msgstr ""
+
+#: ../includes/classes/class-tie-ajax-controller.php:129
+msgid "Image Post could not be deleted"
+msgstr ""
+
+#: ../includes/classes/class-tie-ajax-controller.php:136
+msgid "Bad request"
+msgstr ""
+
+#: ../includes/classes/class-tie-ajax.php:64
+msgid "Badge content empty"
+msgstr ""
+
+#: ../includes/classes/class-tie-ajax.php:74
+msgid "Badge could not be saved"
+msgstr ""
+
+#: ../includes/classes/class-tie-ajax.php:79
+msgid "Badge saved"
+msgstr ""
+
+#: ../includes/classes/class-tie-ajax.php:118
+msgid "All changes saved!"
+msgstr ""
+
+#: ../includes/classes/class-tie-ajax.php:123
+msgid "Changes could not be saved!"
+msgstr ""
+
+#: ../includes/classes/class-tie-editor.php:171, ../includes/templates/control-panel.php:125
+msgid "Copy"
+msgstr ""
+
+#: ../includes/classes/class-tie-editor.php:172
+msgid "Saving..."
+msgstr ""
+
+#: ../includes/classes/class-tie-editor.php:173, ../includes/templates/control-panel.php:152
+msgid "Your changes are auto-saved"
+msgstr ""
+
+#: ../includes/classes/class-tie-editor.php:174
+msgid "Replace Image"
+msgstr ""
+
+#: ../includes/classes/class-tie-editor.php:175
+msgid "Select Background Image"
+msgstr ""
+
+#: ../includes/classes/class-tie-editor.php:177
+msgid "Choose background image"
+msgstr ""
+
+#: ../includes/classes/class-tie-editor.php:179
+msgid "Please choose an image."
+msgstr ""
+
+#: ../includes/classes/class-tie-editor.php:180
+msgid "No image to remove, you have to to choose one before."
+msgstr ""
+
+#: ../includes/classes/class-tie-editor.php:181
+msgid "Enter your text here..."
+msgstr ""
+
+#: ../includes/classes/class-tie-editor.php:182
+msgid "Changes saved"
+msgstr ""
+
+#: ../includes/classes/class-tie-editor.php:183
+msgid "Invalid width, accepted value is between 100 and 1200"
+msgstr ""
+
+#: ../includes/classes/class-tie-editor.php:184
+msgid "Invalid height, accepted value is between 100 and 1200"
+msgstr ""
+
+#: ../includes/classes/class-tie-editor.php:185
+msgid "Please select a template"
+msgstr ""
+
+#: ../includes/classes/class-tie-editor.php:187
+msgid "choose"
+msgstr ""
+
+#: ../includes/layouts/editor.php:88
+msgid "Social Share Badge Template you would like to use"
+msgstr ""
+
+#: ../includes/layouts/editor.php:101, ../includes/layouts/editor.php:122, ../includes/layouts/editor.php:295
+msgid "Cancel"
+msgstr ""
+
+#: ../includes/layouts/editor.php:107
+msgid "Choose Template"
+msgstr ""
+
+#: ../includes/layouts/editor.php:126
+msgid "Delete"
+msgstr ""
+
+#: ../includes/layouts/editor.php:150
+msgid "Generate Random Result"
+msgstr ""
+
+#: ../includes/layouts/editor.php:156
+msgid "Please make sure that your website is set as HTTPS (Wordpress Address - URL & Site Address -URL) from Wordpress - General Settings"
+msgstr ""
+
+#: ../includes/layouts/editor.php:169
+msgid "Resize"
+msgstr ""
+
+#: ../includes/layouts/editor.php:176
+msgid "Width"
+msgstr ""
+
+#: ../includes/layouts/editor.php:183
+msgid "Height"
+msgstr ""
+
+#: ../includes/layouts/editor.php:194
+msgid "Close"
+msgstr ""
+
+#: ../includes/layouts/editor.php:200, ../includes/layouts/editor.php:301
+msgid "Save"
+msgstr ""
+
+#: ../includes/layouts/editor.php:210
+msgid "Background image crop position"
+msgstr ""
+
+#: ../includes/layouts/editor.php:214
+msgid "Drag the image to place it on your canvas. Use the corners handlers to resize your image."
+msgstr ""
+
+#: ../includes/layouts/editor.php:218
+msgid "Help"
+msgstr ""
+
+#: ../includes/layouts/editor.php:225
+msgid "Align Image to Canvas"
+msgstr ""
+
+#: ../includes/layouts/editor.php:246
+msgid "Image Size"
+msgstr ""
+
+#: ../includes/layouts/editor.php:261
+msgid "Start Dragging to move your image on the canvas"
+msgstr ""
+
+#: ../includes/layouts/editor.php:265
+msgid "Resize the image by dragging the corners"
+msgstr ""
+
+#: ../includes/layouts/editor.php:269
+msgid "Got it, let's go"
+msgstr ""
+
+#: ../includes/layouts/editor.php:274
+msgid "Canvas size: %s X %s"
+msgstr ""
+
+#: ../includes/layouts/editor.php:327
+msgid "Text formatting"
+msgstr ""
+
+#: ../includes/layouts/editor.php:331
+msgid "Text style"
+msgstr ""
+
+#: ../includes/layouts/editor.php:359
+msgid "Text align"
+msgstr ""
+
+#: ../includes/layouts/editor.php:378
+msgid "Text color"
+msgstr ""
+
+#: ../includes/layouts/editor.php:383
+msgid "Background color"
+msgstr ""
+
+#: ../includes/layouts/editor.php:390
+msgid "Font face"
+msgstr ""
+
+#: ../includes/layouts/editor.php:392
+msgid "- Select Font -"
+msgstr ""
+
+#: ../includes/layouts/editor.php:397
+msgid "Font size"
+msgstr ""
+
+#: ../includes/layouts/editor.php:416
+msgid "Line height"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:24
+msgid "Simple Content Elements"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:29
+msgid "Paragraph/Text"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:33
+msgid "Canvas Properties"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:36
+msgid "Color Overlay"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:40
+msgid "Color"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:51
+msgid "Opacity"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:67
+msgid "Background Image"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:74
+msgid "Size & Position"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:98
+msgid "Canvas Size"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:104
+msgid "Set Custom Dimensions"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:107
+msgid "Use default size"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:112
+msgid "Dynamic result"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:139
+msgid "Save and generate the image."
+msgstr ""
+
+#: ../includes/templates/control-panel.php:141
+msgid "Save & Exit"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:147
+msgid "Preview"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:161
+msgid "Undo"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:167
+msgid "Redo"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:173
+msgid "Templates"
+msgstr ""
+
+#: ../includes/templates/images/a-blank/_config.php:19
+msgid "Blank Template"
+msgstr ""
+
+#: ../includes/templates/images/architectural/_config.php:20
+msgid "Architectural"
+msgstr ""
+
+#: ../includes/templates/images/dynamic/_config.php:21
+msgid "Dynamic"
+msgstr ""
+
+#: ../includes/templates/images/green-style/_config.php:20
+msgid "Green Style"
+msgstr ""
+
+#: ../includes/templates/images/influential/_config.php:20
+msgid "Influential"
+msgstr ""
+
+#: ../includes/templates/images/stylish/_config.php:19
+msgid "Stylish"
+msgstr ""

@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-quiz-builder
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tqb-result-redirect">
+	<h3><#= this.model.get('completed_quiz_label') #></h3>
+	<# if(this.model.get('retake_quiz')) { #>
+	<a href="javascript:void(0);" class="tqb-restart-quiz tve-dynamic-link" data-dynamic-link="tqb_quiz_options" data-shortcode-id="restart_quiz"><#= this.model.get('retake_quiz_label') #></a>
+	<# } #>
+	<a href="javascript:void(0);" class="tqb-show-results"><#= this.model.get('results_label') #></a>
+</div>

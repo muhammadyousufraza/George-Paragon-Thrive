@@ -1,0 +1,44 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: dan bilauca
+ * Date: 12-Mar-19
+ * Time: 09:05 AM
+ */
+
+/**
+ * @var $this   TVA_Shortcodes
+ * @var $module TVA_Module
+ * @var $done   string
+ * @var $icon   string
+ */
+?>
+<div class="tva-list-items <?php echo $done; ?>">
+	<h2 class="<?php echo $module->get_visible_chapters_count() ? 'tva_main_color' : ''; ?>" data-id="<?php echo $module->ID; ?>">
+		<a href="<?php echo get_permalink( $module->ID ) ?>">
+			<?php echo $module->post_title ?>
+		</a>
+		<span class="tva-collapsible-pointer">
+			<?php tva_get_svg_icon( 'collapsible-minus' ); ?>
+			<?php tva_get_svg_icon( 'collapsible-plus' ); ?>
+		</span>
+	</h2>
+
+	<?php echo $icon; ?>
+
+	<?php if ( ! empty( $module->get_visible_chapters() ) ) : ?>
+
+		<?php foreach ( $module->get_visible_chapters() as $chapter ): ?>
+			<?php echo $this->tva_render_chapter( $chapter ); ?>
+		<?php endforeach; ?>
+
+	<?php elseif ( ! empty( $module->get_visible_lessons() ) ) : ?>
+
+		<div class="tva-lessons-wrapper">
+			<?php foreach ( $module->get_visible_lessons() as $lesson ): ?>
+				<?php echo $this->tva_render_lesson( $lesson ); ?>
+			<?php endforeach; ?>
+		</div>
+
+	<?php endif; ?>
+</div>

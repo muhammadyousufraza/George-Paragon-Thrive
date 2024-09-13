@@ -1,0 +1,13 @@
+<div class="tva-submission-student-image"><img src="<#= author_avatar #>" alt="<?php echo __( 'Author avatar', 'thrive-apprentice' ); ?>"></div>
+<div class="tva-submission-student-name"><#- author #></div>
+<div class="tva-assessment-title">
+	<?php tva_get_svg_icon( "assessment-<#- type #>" ); ?>
+	<#- assessment.post_title #>
+</div>
+<div class="tva-assessment-attempts tva-hide">
+	<button class="click" data-fn="showHistory">
+		<?php esc_html_e( 'All attempts', 'thrive-apprentice' ) ?>
+		<span class="tva-assessment-attempts-number"></span>
+	</button>
+	<?php tva_get_svg_icon( 'angle-right' ); ?>
+</div>

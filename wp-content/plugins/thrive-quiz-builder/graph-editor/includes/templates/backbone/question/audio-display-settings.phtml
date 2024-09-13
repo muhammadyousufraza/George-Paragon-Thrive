@@ -1,0 +1,26 @@
+<div class="tvd-input-field mb-20">
+	<div class="tge-source-col-elem">
+		<div id="tge-display-url-source" class="tge-display-url-source"></div>
+	</div>
+</div>
+
+<div class="tvd-input-field mb-20 tge-display-settings-url8">
+	<div class="tvd-input-field">
+		<input type="text" id="tge-display-settings-url" class="tge-display-settings-url" data-bind="url" value="<#= item.get('url')#>">
+		<label for="tge-display-settings-url" data-error="<?php echo __( 'Invalid URL', 'thrive-graph-editor' ) ?>" class="tge-media-url-name"><#= item.getUrlPlaceholder() #></label>
+	</div>
+	<div class="tge-select-media-video <#= 'custom' === item.get('audio_source') ? '' : 'tvd-hiddendiv' #>">
+		<span><?php echo __( 'Select file', 'thrive-graph-editor' ) ?></span>
+	</div>
+	<div class="tge-select-media-video-err"></div>
+</div>
+
+<div class="tvd-input-field mb-20 tge-display-style-container"></div>
+
+<div class="tge-display-options-container">
+	<div id="tge-display-video-options" class="tge-display-options">
+		<span><?php echo __( 'Advanced', 'thrive-graph-editor' ) ?></span>
+		<div class="tge-vopts-selected-elem <#= '' === this.model.get( 'url' ) ? 'tge-options-disabled' : '' #>"><?php echo __( 'Audio Options', 'thrive-graph-editor' ) ?></div>
+	</div>
+	<div class="tge-display-options-data tvd-hiddendiv"></div>
+</div>

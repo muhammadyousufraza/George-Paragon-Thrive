@@ -1,0 +1,31 @@
+<div class="thrive-colors-palette-config" style="display: none !important"><#=colorConfig#></div>
+<div class="thrive-shortcode-config" style="display:none"><#=shortcode.getHTML(config)#></div>
+<div class="thrive-shortcode-html tve-custom-menu-type thrive-shortcode-html-editable tve_clearfix">
+
+	<a class="tve-m-trigger" href="#">
+		<# if( isMenuSwitch ){ #>
+			<#= $triggerHtml #>
+		<# } else { #>
+			<div class="thrv_wrapper thrv_icon tcb-icon-open"><#=trigger_icon.open#></div>
+			<div class="thrv_wrapper thrv_icon tcb-icon-close"><#=trigger_icon.close#></div>
+		<# } #>
+	</a>
+
+	<# const hasExtraContent = hamburgerExtraContent.before.trim().length > 0 || hamburgerExtraContent.after.trim().length > 0 #>
+
+	<# if(hasExtraContent) { #>
+	<div class="tve-ham-wrap">
+		<#= hamburgerExtraContent.before #>
+		<# } #>
+		<ul id="<#=config.uuid#>" class="tve_w_menu <#= dir #>">
+			<#_.each(items, function( item ) {#>
+			<#=item_template( {item:item,config:config,item_template:item_template,dropdown_icon:dropdown_icon,level:0,type:type,menuDescriptions:menuDescriptions} )#>
+			<#} ) #>
+		</ul>
+
+		<# if(hasExtraContent) { #>
+		<#= hamburgerExtraContent.after #>
+	</div>
+	<# } #>
+	<div class="tcb-menu-overlay"></div>
+</div>

@@ -1,0 +1,59 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div class="tva-modal-step">
+	<div class="tvd-modal-content">
+		<h3 class="tvd-modal-title"><?php echo __( 'Edit member', 'thrive-apprentice' ) ?></h3>
+
+		<div id="tva-user-access-text" class="tva-flex tva-align-center tva-space-between mb-15 tva-relative">
+			<p class="mb-0">
+				<b><#= model.get('display_name') #></b>
+				<span>(<#= model.get('user_email') #>)</span>
+				<span><?php echo esc_html__( 'has access to the following Apprentice products:' ); ?></span>
+			</p>
+
+			<a href="javascript:void(0);" id="tva-add-access-item" class="click tva-btn tva-btn-blue" data-fn="jumpToStep" data-step="1">
+				<?php echo tva_get_svg_icon( 'add-btn' ) ?>
+				<?php echo esc_html__( 'Add access', 'thrive-apprentice' ); ?>
+			</a>
+		</div>
+
+		<div id="tva-customer-items-wrapper" class="tvd-modal-access-box mb-50">
+			<div id="tva-customer-items">
+				<div id="tva-customer-items-header">
+					<span class="tva-items-flex-one"><?php echo esc_html__( 'Product name', 'thrive-apprentice' ); ?></span>
+					<span class="tva-items-flex-two"><?php echo esc_html__( 'Access type', 'thrive-apprentice' ); ?></span>
+					<span class="tva-items-flex-three"><?php echo esc_html__( 'Source', 'thrive-apprentice' ); ?></span>
+					<span class="tva-items-flex-four"><?php echo esc_html__( 'Date', 'thrive-apprentice' ); ?></span>
+				</div>
+				<div id="tva-customer-items-list"></div>
+			</div>
+		</div>
+		<div class="tva-flex tva-flex-row tva-flex-end">
+			<button type="button" class="click tva-modal-btn tva-modal-btn-gray tvd-modal-close"><?php echo __( 'Close', 'thrive-apprentice' ) ?></button>
+		</div>
+	</div>
+</div>
+
+<div class="tva-modal-step">
+	<div class="tvd-modal-content">
+		<h3 class="tvd-modal-title"><?php echo __( 'Edit member', 'thrive-apprentice' ) ?></h3>
+
+		<div class="mb-15">
+			<p class="mb-0">
+				<b><#= model.get('display_name') #></b>
+				<span>(<#= model.get('user_email') #>)</span>
+				<span><?php echo esc_html__( 'has access to the following Apprentice products:', 'thrive-apprentice' ); ?></span>
+			</p>
+		</div>
+
+		<div id="tva-customer-courses" class="tva-modal-new-box mb-50"></div>
+		<div class="tva-flex tva-flex-row tva-space-between mt-30">
+			<button type="button" class="click tva-modal-btn tva-modal-btn-back" data-fn="jumpToStep" data-step="0"><?php echo esc_html__( 'Back', 'thrive-apprentice' ); ?></button>
+			<button type="button" class="click tva-modal-btn tva-modal-btn-green" data-fn="save"><?php echo esc_html__( 'Save', 'thrive-apprentice' ); ?></button>
+		</div>
+	</div>
+</div>

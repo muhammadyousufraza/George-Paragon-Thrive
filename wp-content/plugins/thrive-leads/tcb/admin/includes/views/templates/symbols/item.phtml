@@ -1,0 +1,23 @@
+<div class="symbol-item modal-item" data-id="<#= item.get('id') #>">
+	<div class="sym-title-area">
+		<span class="symbol-title">
+			<span class="symbol-title-text"><#= item.get('title').rendered #></span>
+			<a data-tooltip="<?php _e( 'Change Name', 'thrive-cb' ); ?>" data-position="top" class="tvd-tooltipped tvd-icon-pencil sym-pen"></a>
+		</span>
+
+		<div class="sym-right-icons">
+			<a data-tooltip="<?php _e( 'Move to another Category', 'thrive-cb' ); ?>" data-position="top" class="tvd-tooltipped sym-icon sym-move">
+				<?php echo tcb_admin_icon( 'move-symbol' ); ?>
+			</a>
+			<a data-tooltip="<?php _e( 'Make a Copy', 'thrive-cb' ); ?>" data-position="top" class="tvd-tooltipped sym-icon sym-duplicate">
+				<?php echo tcb_admin_icon( 'duplicate' ); ?>
+			</a>
+			<a data-tooltip="<?php _e( 'Delete Symbol', 'thrive-cb' ); ?>" data-position="top" class="tvd-tooltipped sym-icon sym-delete">
+				<?php echo tcb_admin_icon( 'delete' ); ?>
+			</a>
+		</div>
+	</div>
+	<div style="background-image: url('<#= item.get('thumb').url #>');" class="sym-image edit-symbol" data-height="<#= item.get('thumb').h #>" data-width="<#= item.get('thumb').w #>">
+		<button><?php _e( 'Edit Symbol', 'thrive-cb' ); ?></button>
+	</div>
+</div>

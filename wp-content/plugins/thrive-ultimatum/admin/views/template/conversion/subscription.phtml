@@ -1,0 +1,22 @@
+<# if(collection.length == 0) { #>
+<div class="tvu-no-conversion-posts"><?php echo __( "No Lead Groups defined", 'thrive-ult' ); ?></div>
+<# } else { #>
+<h4><?php echo __( 'User subscribes to Lead Groups', 'thrive-ult' ) ?>:</h4>
+<div class="tvu-conversion-leads-checkboxes tvd-row"></div>
+<div class="tvd-v-spacer"></div>
+<# } #>
+
+<# if(thriveBoxes.length == 0) { #>
+<div class="tvu-no-conversion-posts"><?php echo __( "No ThriveBoxes defined", 'thrive-ult' ); ?></div>
+<# } else { #>
+<h4><?php echo __( 'User subscribes to ThriveBoxes', 'thrive-ult' ) ?>:</h4>
+<div class="tvu-conversion-thrivebox-checkboxes tvd-row"></div>
+<# } #>
+
+<# if(shortcodes.length == 0) { #>
+<div class="tvu-no-conversion-posts"><?php echo __( "No Shortcodes defined", 'thrive-ult' ); ?></div>
+<# } else { #>
+<h4><?php echo __( 'User subscribes to Shortcodes', 'thrive-ult' ) ?>:</h4>
+<div class="tvu-conversion-shortcodes-checkboxes tvd-row"></div>
+<# } #>
+

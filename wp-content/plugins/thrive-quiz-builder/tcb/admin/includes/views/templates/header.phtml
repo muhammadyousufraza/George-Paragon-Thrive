@@ -1,0 +1,24 @@
+<div class="tcb-header <#= header.class #>">
+	<nav id="tcb-nav">
+		<# if ( header.class !== '' ) { #>
+			<div class="tcb-sym-left">
+				<span><?php echo __( 'Global Elements', 'thrive-cb' ) ?></span>
+			</div>
+		<# } #>
+
+		<div class="tvd-left">
+			<a href="<?php echo admin_url( 'admin.php?page=tcb_admin_dashboard' ) ?>" title="<?php echo __( 'Thrive Architect Home', 'thrive-cb' ) ?>">
+				<img src="<#= header.admin_logo_url #>"/>
+			</a>
+		</div>
+		<ul class="tvd-right">
+			<li>
+				<a id="tvd-share-modal" class="tvd-modal-trigger" href="#tvd-modal1"
+				   data-overlay_class="tvd-white-bg" data-opacity=".95">
+					<span class="tvd-icon-heart"></span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+<?php include TVE_DASH_PATH . '/templates/share.phtml'; ?>

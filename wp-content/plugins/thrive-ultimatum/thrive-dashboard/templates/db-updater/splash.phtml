@@ -1,0 +1,39 @@
+<?php /** @var \TD\DB_Updater\Updater $update_handler */ ?>
+<div class="td-update">
+	<div class="td-content">
+		<?php $update_handler->output_welcome_message(); ?>
+		<div class="td-error" id="td-error-message" style="display: none"></div>
+		<div class="btn-action">
+			<button class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green db-update-start fm">
+				<i class="tvd-icon-spinner mdi-pulse tvd-icon-medium"></i>
+				<span>Start upgrade</span>
+			</button>
+			<a href="<?php echo $update_handler->get_dashboard_url(); ?>" style="display: none" class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green td-finished">
+				<?php echo esc_html__( 'Finished! Click here to resume opening ' . $update_handler->get_product_name(), 'thrive-dashboard' ); ?>
+			</a>
+			<div class="td-error" style="display: none">
+				<button style="display: none" class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green td-error td-reload">
+					<?php echo esc_html__( 'Try Again', 'thrive-dashboard' ); ?>
+				</button>
+			</div>
+			<div class="step-progress hide-start">
+				<div class="progress-top">
+					<label for="td-progress">Overall progress:</label>
+					<progress id="td-progress" max="100" value="0"> 0%</progress>
+				</div>
+				<div class="progress-bottom gray-text text-lighten-1" id="td-speed-details"></div>
+			</div>
+		</div>
+		<div class="td-update-out hide-start">
+			<pre></pre>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	jQuery( function ( $ ) {
+		var updater = new TVE_Dash.views.DbUpdater( {
+			el: $( '.td-update' )[ 0 ],
+			updater: <?php echo json_encode( tve_dash_get_updater_key( $update_handler ) ); ?>
+		} );
+	} );
+</script>

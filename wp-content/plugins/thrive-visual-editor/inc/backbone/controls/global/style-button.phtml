@@ -1,0 +1,23 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Ovidiu
+ * Date: 10/8/2018
+ * Time: 5:42 PM
+ */
+
+/**
+ * Used in:
+ * editor/js/main/views/controls/global/style-panel.js
+ */
+?>
+<div class="thrv_wrapper thrv-button <#= cls #>">
+	<a href="javascript:void(0);" class="tcb-button-link">
+		<span class="tcb-button-texts"><span class="tcb-button-text thrv-inline-text <#= cls #>-prtext">
+			<?php echo __( 'Button', 'thrive-cb' ); ?></span>
+		</span>
+	</a>
+</div>
+<# if(text.length > 0){ #>
+<p><#= text #></p>
+<# } #>

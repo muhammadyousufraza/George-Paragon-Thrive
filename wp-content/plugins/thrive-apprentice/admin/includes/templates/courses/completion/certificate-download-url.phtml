@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div>
+	<label><?php echo esc_html__( 'Certificate download link', 'thrive-apprentice' ); ?></label>
+	<p class="text mt-10 mb-10"><?php echo sprintf( esc_html__( 'Certificates can be downloaded from the course completion page, if it is enabled. You can also provide the direct link below to auto-download a certificate. %s', 'thrive-apprentice' ), '<a href="https://help.thrivethemes.com/en/articles/6700501-how-to-add-and-use-a-download-certificate-button-on-a-course-completion-certificate" target="_blank">Learn more</a>' ); ?></p>
+</div>
+<div class="tva-copy-input">
+	<input type="text" class="tva-certificate-download-url" disabled/>
+	<input type="hidden" class="tva-certificate-download-url"/>
+	<button class="tva-zclip">&nbsp;
+		<span class="tva-custom-tooltip"><?php echo esc_attr( __( 'Copy', 'thrive-apprentice' ) ); ?></span>
+	</button>
+</div>

@@ -1,0 +1,25 @@
+<div class="tvd-settings-item <?= $setting['multiple'] === true ? 'wrap-options' : '' ?>">
+	<div class="tvd-settings-label">
+		<?php if ( ( $setting['multiple'] && empty( $key ) ) || ! $setting['multiple'] ): ?>
+			<?php echo $setting['label']; ?>
+		<?php else: ?>
+			&nbsp;
+		<?php endif; ?>
+
+	</div>
+	<div class="tvd-input-field">
+		<input type="<?php echo $setting['type']; ?>" class="<?php echo $setting['class']; ?>" id="<?php echo $setting['id']; ?>" value="<?php echo esc_attr( $value ); ?>">
+		<label for="<?php echo $setting['id']; ?>" data-success="<?php echo $setting['data-success']; ?>" data-error="<?php echo $setting['data-error']; ?>">&nbsp</label>
+	</div>
+
+	<div class="tvd-input-actions">
+		<?php if ( ( $setting['multiple'] && empty( $key ) ) || ! $setting['multiple'] ): ?>
+			<a class='tvd-save-option'><span></span></a>
+			<?php if ( $setting['multiple'] ): ?>
+				<span class='tvd-add-option'><span>+</span><?php echo __( "Add new", 'thrive-dash' ); ?> </span>
+			<?php endif; ?>
+		<?php else: ?>
+			<a class='tvd-waves-effect tvd-waves-light tvd-btn-small tvd-btn-red tvd-delete-option'></a>
+		<?php endif; ?>
+	</div>
+</div>

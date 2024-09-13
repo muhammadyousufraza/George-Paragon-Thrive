@@ -1,0 +1,44 @@
+<# _.each(shortcode.input, function(input, key) { #>
+
+<#
+const inputLabel = input.label ? utils.updatePostTypeLabel(input.label): '';
+let selectedOption, selectedValue = false;
+
+	if ( selectedData.configOptions ) {
+		selectedOption = selectedData.configOptions.find( config => config.key === key );
+		selectedValue = typeof selectedOption === 'undefined' ? false : selectedOption.value;
+	}
+#>
+
+<#if(input.type == 'select'){#>
+<label for="fr-dropdown-list-<#= key #>" class="tcb-select-label"><#= inputLabel #> </label>
+<select name="<#= key #>" class="fr-custom-input <#= input.info? '': 'fr-input-line' #>" id="fr-dropdown-list-<#= key #>">
+	<# _.each(input.value, function(option, option_key) { #>
+	<option value="<#= option_key #>"
+	<#= selectedValue == option_key? 'selected="selected"':'' #><#= input.value_type? 'data-type="'+input.value_type[option_key]+'"':'' #>>
+	<#= input.labels && input.labels[ option ] ? TVE.trimStringAfterWidth(input.labels[ option ]) : TVE.trimStringAfterWidth(option) #>
+	</option>
+	<# }); #>
+</select>
+<#}#>
+
+<#if(input.type == 'input'){#>
+<label for="fr-dropdown-list-<#= key #>" class="tcb-shortcode-input"><#= inputLabel #></label>
+<input type="text" name="<#= key #>" class="fr-custom-input <#= input.info? '': 'fr-input-line' #>" id="fr-dropdown-list-<#= key #>" value="<#= selectedValue? selectedValue:input.value #>"/>
+<#}#>
+
+<#if(input.type == 'hidden'){#>
+<input type="hidden" name="<#= key #>" class="fr-custom-input <#= input.info? '': 'fr-input-line' #>" id="fr-dropdown-list-<#= key #>" value="<#= selectedValue? selectedValue:input.value #>"/>
+<#}#>
+
+<#if(input.type == 'checkbox'){#>
+<label class="tcb-checkbox fr-dropdown-list-<#= key #> <#= input.info? '': 'fr-input-line' #> mr-10">
+	<input type="checkbox" name="<#= key #>" class="fr-custom-input" <#= parseInt(selectedValue) || ( isNew && input.value) ? 'checked="checked"' : '' #> value="1">
+	<span><#= inputLabel #></span>
+</label>
+<#= input.disable_br ? '':'<br>' #>
+<#}#>
+
+<# }); #>
+
+<div class="tve-custom-input-extra-options"></div>

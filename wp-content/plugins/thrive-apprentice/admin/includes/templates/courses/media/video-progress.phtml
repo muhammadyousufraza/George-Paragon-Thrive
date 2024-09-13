@@ -1,0 +1,15 @@
+<div class="mt-20" id="tva-video-progress-options">
+	<div class="tvd-switch ml-15 mt-25">
+		<label>
+			<span><?php echo __( 'Use video watch progress to control the "mark as complete" action', 'thrive-apprentice' ); ?></span>
+			<input id="tva-watch-progress-toggle" type="checkbox" data-bind="progress_enabled">
+			<span class="tvd-lever"></span>
+		</label>
+	</div>
+	<div class="ml-15 mt-30 mb-25">
+		<label>
+			<span><?php echo __( 'Required progress (100% means watched to the end)', 'thrive-apprentice' ); ?></span>
+			<input type="number" min="0" max="100" value="100" data-bind="progress_percentage">
+		</label>
+	</div>
+</div>

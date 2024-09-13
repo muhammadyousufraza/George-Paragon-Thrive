@@ -1,0 +1,264 @@
+.tap-filter-card, .tap-trigger-conditions {
+  .tap-filter-wrapper {
+    box-sizing: border-box;
+    padding: 0 5px;
+  }
+
+  .tap-filter-wrapper, .tap-condition-wrapper {
+    position: relative;
+    width: 100%;
+
+    .tap-filter-and {
+      font-size: 12px;
+      font-weight: 500;
+      color: #a9b2bb;
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+      border: solid 1px #f5f5f5;
+      padding: 2px 8px;
+      margin-bottom: 10px;
+      margin-top: -1px;
+    }
+
+    .tap-filter-delete {
+      z-index: 5;
+      color: var(--tap-placeholder);
+      position: absolute;
+      right: 0;
+      top: 4px;
+      cursor: pointer;
+
+      &.first-filter {
+        top: 20px;
+      }
+
+      &:hover {
+        color: #444648;
+      }
+    }
+  }
+
+  .tap-icon-wrapper {
+    --tap-icon-size: 8px !important;
+  }
+
+  .tap-checkbox-filter {
+    .tap-checkbox-wrapper {
+      --tap-checkbox-size: 14px;
+
+      .tap-checkmark {
+
+        &:after {
+          border-width: 0 1px 1px 0;
+        }
+      }
+    }
+  }
+
+  .tap-radio-filter {
+    .tap-radio-wrapper {
+      --tap-radio-size: 14px;
+    }
+  }
+
+  .tap-date-col {
+    width: auto;
+    margin-left: 0;
+  }
+
+  .tap-time-col {
+
+    .tap-input-container {
+      max-width: 75px;
+      margin-right: 10px;
+    }
+
+    a {
+      min-width: fit-content;
+    }
+  }
+
+  .tap-date-input-col {
+    margin-left: 0;
+  }
+
+  .tap-filter-items {
+    margin-bottom: 15px;
+  }
+}
+
+.tap-operation {
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: var(--tap-input-border);
+  color: var(--tap-text-color);
+  cursor: default;
+
+  &--center {
+    @extend .tap-operation;
+    text-align: center;
+  }
+}
+
+
+.tap-filter-col {
+  box-sizing: border-box;
+  width: 230px;
+  margin: 0 0 10px 10px;
+  align-self: flex-start;
+  font-size: 15px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  ::placeholder {
+    font-size: 12px;
+  }
+
+  &--square {
+    @extend .tap-filter-col;
+    width: 36px;
+    height: 36px;
+    padding: 8px 10px;
+  }
+
+  &--full {
+    @extend .tap-filter-col;
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  &--45 {
+    @extend .tap-filter-col;
+    width: 207px;
+  }
+
+  &--33 {
+    @extend .tap-filter-col;
+    width: 150px;
+  }
+
+  &--15 {
+    @extend .tap-filter-col;
+    width: 70px;
+  }
+
+  &--20 {
+    @extend .tap-filter-col;
+    width: 100px;
+  }
+}
+
+.tap-delay {
+  width: 100%;
+
+  :first-child {
+    margin-left: 0;
+  }
+}
+
+.tap-filter-error {
+  display: none;
+  color: var(--tap-delete);
+  font-size: 12px;
+  margin: 3px 0;
+}
+
+.tap-show-errors {
+  .tap-checkbox-filter {
+    &.tap-error {
+      .tap-checkmark {
+        border-color: var(--tap-delete);
+      }
+    }
+  }
+
+  .tap-filter-error {
+    display: block;
+  }
+
+  .tap-error {
+    .tap-input-container, .select2.select2-container--thrive-automator, .tap-tags-container .tap-tags-input, &.tap-textarea-field textarea {
+      border: solid 1px var(--tap-delete) !important;
+    }
+
+    .tap-key-pair {
+      .tap-input-container {
+        border: var(--tap-input-border) !important;
+
+        &.no-value {
+          border: solid 1px var(--tap-delete) !important;
+        }
+      }
+    }
+  }
+}
+
+.tap-filter-separator {
+  @extend .tap-flex--column;
+  position: relative;
+
+  .tap-separator {
+    margin: 0;
+    background-color: #f5f5f5;
+  }
+}
+
+.tap-trigger-conditions {
+  @extend .tap-grey-container;
+
+  .tap-filter-separator {
+    .tap-separator {
+      background-color: #fff;
+    }
+  }
+
+  .tap-filter-and {
+    border-color: #fff !important;
+  }
+
+  :not(#_s) {
+    .tap-operation, .tap-input-container, .select2.select2-container--thrive-automator, .tap-operation--center, .tap-datepicker, .tap-datepicker > .tap-icon-wrapper, .tap-checkmark {
+      background-color: #fff !important;
+    }
+  }
+
+  .tap-new-condition {
+    border-top: 1px solid #fff;
+    position: relative;
+
+    .tap-button {
+      padding: 9px 15px;
+    }
+  }
+
+  .tap-input-container {
+    input {
+      background-color: transparent !important;
+    }
+  }
+
+  .tap-filter-delete {
+    right: 8px;
+    opacity: 0.5;
+  }
+
+  .first-filter {
+    right: 0 !important;
+    top: 5px !important;
+  }
+
+  .select2 textarea {
+    background-color: transparent !important;
+  }
+}
+
+.tap-trigger-condition-info {
+  color: var(--tap-heading-color);
+  font-size: 13px;
+}

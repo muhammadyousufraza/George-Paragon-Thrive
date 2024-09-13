@@ -1,0 +1,7 @@
+<select class="tva-assessment-grade-value">
+	<option value=""><?php esc_html_e( 'Select grade', 'thrive-apprentice' ) ?></option>
+	<option value="<?php echo \TVA\Assessments\Grading\PassFail::PASSING_GRADE ?>"
+	<#= grade === 'pass' ? 'selected' : ' ' #>>Pass</option>
+	<option value="<?php echo \TVA\Assessments\Grading\PassFail::FAILING_GRADE ?>"
+	<#= grade === 'fail' ? 'selected' : ' ' #>>Fail</option>
+</select>

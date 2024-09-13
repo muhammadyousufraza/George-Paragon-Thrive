@@ -1,0 +1,42 @@
+.thrv-numbered_list {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  .tcb-numbered-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      &.thrv-numbered-list-v2 {
+        padding: 5px;
+
+        div.tcb-numbered-list-number {
+          padding: 0;
+        }
+      }
+
+      div.tcb-numbered-list-number {
+        min-width: 25px;
+        margin: 0;
+        padding: 10px;
+        box-sizing: content-box;
+      }
+    }
+  }
+}
+
+.tcb-numbered-list-text, .tcb-numbered-list-index {
+  display: block;
+  z-index: 0;
+  line-height: 2.3em;
+}
+
+.tcb-numbered-list-index {
+  text-align: center;
+}
+
+.tcb-numbered-list-number {
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,10 @@
+<div class="label">
+	<#= inputData.label #>
+	<# if ( inputData.tooltip ) { #>
+		<span data-paneltlt-hover class="tve-cb-img-info ml-5 tcb-message-tooltip"><?php tcb_icon( 'info-circle-solid' ); ?></span>
+	<# } #>
+</div>
+<textarea rows="3" class="<#= inputData.classes #>" data-fn="setVal" data-fn-focusout="onFocusout" data-elem-attr="<#= inputData.id #>"><#= value #></textarea>
+<div class="info-text orange error-details email-err-box tcb-hide">
+	<p class="m-0 p-0 email-err" data-elem-msg="<#= inputData.id #>"></p>
+</div>

@@ -1,0 +1,107 @@
+<?php
+
+use TVA\Stripe\Connection_V2;
+use TVA\Stripe\Credentials;
+use TVA\Stripe\Hooks;
+use TVA\Stripe\Settings;
+
+$connection = Connection_V2::get_instance();
+$is_legacy  = Hooks::is_legacy();
+$account_id = Credentials::get_account_id();
+$has_key    = (bool) ( $connection->get_api_key() || $connection->get_test_key() );
+?>
+
+<div class="tva-stripe-settings-header">
+	<h1 class="tva-main-heading">Stripe</h1>
+	<?php if ( ! $account_id ): ?>
+		<p class="tva-stripe-tag m-0 tva-stripe-tag-not-connected"><?php echo __( 'Not Connected', 'thrive-apprentice' ); ?></p>
+	<?php elseif ( $is_legacy ): ?>
+		<p class="tva-stripe-tag m-0 tva-stripe-tag-reconnect"><?php echo __( 'Reconnection Needed', 'thrive-apprentice' ); ?></p>
+	<?php else: ?>
+		<p class="tva-stripe-tag m-0 tva-stripe-tag-connected"><?php echo __( 'Connected', 'thrive-apprentice' ); ?></p>
+	<?php endif; ?>
+</div>
+
+<?php if ( $is_legacy ): ?>
+	<?php include __DIR__ . '/../stripe/v1-notice.php'; ?>
+<?php endif; ?>
+<?php if ( ! $account_id ): ?>
+	<div class="tva-stripe-connect-wrapper tva-flex">
+		<div class="tva-stripe-connect tva-flex">
+			<div class="tva-stripe-connect-icons">
+				<?php tva_get_svg_icon( 'circle-stripe' ); ?>
+				<?php tva_get_svg_icon( 'arrows-right-left' ); ?>
+				<?php tva_get_svg_icon( 'circle-apprentice' ); ?></div>
+			<h3><?php echo __( 'Stripe is not connected', 'thrive-apprentice' ); ?></h3>
+			<p><?php echo __( 'Connect your stripe account with Thrive to manage payments. You can connect to Live & Test accounts for payments.', 'thrive-apprentice' ) ?> <a href="" target="_blank"><?php echo __( 'Learn more', 'thrive-apprentice' ); ?></a></p>
+			<button class="tva-btn tva-btn-blue click mt-20" data-fn="createAccount" data-type="live"><?php echo __( 'Connect Stripe', 'thrive-apprentice' ); ?></button>
+		</div>
+	</div>
+<?php else: ?>
+	<p class="settings-p-main mt-15 mb-15"><?php echo __( 'Control your Stripe connection below', 'thrive-apprentice' ); ?></p>
+	<div class="tva-stripe-settings-wrapper">
+		<div class="tva-general-settings-card mb-20">
+			<h5 class="mb-20"><?php echo __( 'Default options', 'thrive-apprentice' ); ?></h5>
+			<div class="tvd-switch mb-10">
+				<label class="tva-slide-checkbox">
+					<span class="settings-checkbox-label"><?php echo esc_html__( 'Allow coupons at checkout', 'thrive-apprentice' ); ?></span>
+					<input type="checkbox" class="click" data-fn="changeSetting" data-setting="<?php echo Settings::ALLOW_CHECKOUT_COUPONS_OPTIONS; ?>" <?php echo( (int) Settings::get_setting( Settings::ALLOW_CHECKOUT_COUPONS_OPTIONS, false ) ? 'checked' : '' ) ?>>
+					<span class="lever"></span>
+				</label>
+			</div>
+			<hr>
+			<div class="tvd-switch mt-10">
+				<label class="tva-slide-checkbox">
+					<span class="settings-checkbox-label"><?php echo esc_html__( 'Automatically set “display buy button” when connecting a Stripe product ', 'thrive-apprentice' ); ?></span>
+					<input type="checkbox" class="click" data-fn="changeSetting" data-setting="<?php echo Settings::AUTO_DISPLAY_BUY_BUTTON_OPTIONS; ?>" <?php echo( (int) Settings::get_setting( Settings::AUTO_DISPLAY_BUY_BUTTON_OPTIONS, false ) ? 'checked' : '' ) ?>>
+					<span class="lever"></span>
+				</label>
+			</div>
+		</div>
+		<p class="settings-p-main mt-15 mb-15"><?php echo __( 'Your Stripe connections:', 'thrive-apprentice' ); ?></p>
+		<div class="tva-general-settings-card mb-20">
+			<div class="tva-stripe-connection-count">
+				<div class="tva-stripe-connection-count-card">
+					<div class="tva-stripe-connection-count-info">
+						<div class="tva-stripe-connection-count-icon ml-25 mt-25">
+							<?php tva_get_svg_icon( 'dollar-sign' ); ?>
+						</div>
+						<div class="tva-stripe-connection-count-number">
+							<h4><?php echo __( 'Live Mode', 'thrive-apprentice' ); ?></h4>
+							<p class="m-0"><span><?php echo Hooks::get_protected_products_count(); ?></span><?php echo __( ' Apprentice Products Connected', 'thrive-apprentice' ); ?> <?php tva_get_svg_icon( 'check-circle-green' ); ?></p>
+						</div>
+					</div>
+					<div class="tva-stripe-connection-count-notice">
+						<p class="m-0"><?php echo __( 'Live Stripe Connections enable real money transactions to protect your Apprentice Products.' ); ?><a href="" target="_blank" class="ml-5"><?php echo __( 'Learn more', 'thrive-apprentice' ); ?></a></p>
+					</div>
+				</div>
+				<div class="tva-stripe-connection-count-card">
+					<div class="tva-stripe-connection-count-info">
+						<div class="tva-stripe-connection-count-icon ml-25 mt-25">
+							<?php tva_get_svg_icon( 'experiment' ); ?>
+						</div>
+						<div class="tva-stripe-connection-count-number">
+							<h4><?php echo __( 'Test Mode', 'thrive-apprentice' ); ?></h4>
+							<p class="m-0"><span><?php echo Hooks::get_protected_products_count( false ); ?></span><?php echo __( ' Apprentice Products Connected', 'thrive-apprentice' ); ?> <?php tva_get_svg_icon( 'check-circle-green' ); ?></p>
+						</div>
+					</div>
+					<div class="tva-stripe-connection-count-notice">
+						<p class="m-0"><?php echo __( 'Test Stripe Connections enable test transactions to protect your Apprentice Products. You can use this for testing purposes.' ); ?><a href="" target="_blank" class="ml-5"><?php echo __( 'Learn more', 'thrive-apprentice' ); ?></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tva-general-settings-card tva-hide mb-20">
+			<h5 class="mb-20"><?php echo __( 'Stripe Environment Bulk Switch', 'thrive-apprentice' ); ?></h5>
+			<div class="tva-flex">
+				<button class="tva-btn tva-btn-blue click" type="button" data-fn="modeSwitch" data-from="live" data-to="test"><?php echo __( 'Switch all to test', 'thrive-apprentice' ) ?></button>
+				<p class="m-0 ml-15 mr-15"><?php echo __( 'or', 'thrive-apprentice' ); ?></p>
+				<button class="tva-btn tva-btn-blue click" type="button" data-fn="modeSwitch" data-from="test" data-to="live"><?php echo __( 'Switch all to live', 'thrive-apprentice' ) ?></button>
+			</div>
+		</div>
+		<div class="tva-stripe-disconnect click" data-fn="confirmDisconnect">
+			<?php tva_get_svg_icon( 'forbidden' ); ?>
+			<p class="m-0"><?php echo __( 'Disconnect Stripe', 'thrive-apprentice' ); ?></p>
+		</div>
+	</div>
+<?php endif; ?>

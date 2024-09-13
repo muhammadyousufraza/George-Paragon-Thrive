@@ -1,0 +1,25 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div class="tvd-collapsible-header tvd-active">
+	<span><#= model.get('name') #></span>
+	<span class="tvd-tss-edit-group tvd-tss-group-action"><?php echo dashboard_icon( 'edit-new' ) ?></span>
+	<span class="tvd-tss-delete-group tvd-tss-group-action"><?php echo dashboard_icon( 'trash-new' ) ?></span>
+	<span class="tvd-tss-hl"></span>
+    <a class="tvd-tss-expand"  href="javascript:void(0)"><i class="tvd-icon-expanded"></i></a>
+</div>
+
+<div class="tvd-collapsible-body">
+	<div class="tvd-collapsible-body-content">
+        <ul class="tvd-tss-fields-wrapper"></ul>
+	</div>
+</div>

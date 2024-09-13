@@ -1,0 +1,31 @@
+<div class="tvd-input-field">
+	<input name="source" data-bind="source" type="text" value="<#= model.get('source') #>" placeholder="<?php echo esc_html__( 'Url', 'thrive-apprentice' ); ?>">
+	<label>&nbsp;</label>
+</div>
+
+<div class="tva-details-youtube mt-15">
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="show-related" type="checkbox" id="tva-youtube-option-show-related-<#= model.cid #>">
+		<label for="tva-youtube-option-show-related-<#= model.cid #>"><?php echo esc_html__( 'Optimize related videos', 'thrive-apprentice' ) ?></label>
+	</div>
+
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="hide-logo" type="checkbox" id="tva-youtube-option-hide-logo-<#= model.cid #>">
+		<label for="tva-youtube-option-hide-logo-<#= model.cid #>"><?php echo esc_html__( 'Auto-hide YouTube logo', 'thrive-apprentice' ) ?></label>
+	</div>
+
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="hide-controls" type="checkbox" id="tva-youtube-option-hide-controls-<#= model.cid #>">
+		<label for="tva-youtube-option-hide-controls-<#= model.cid #>"><?php echo esc_html__( 'Auto-hide Player Controls', 'thrive-apprentice' ) ?></label>
+	</div>
+
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="autoplay" type="checkbox" id="tva-youtube-option-autoplay-<#= model.cid #>">
+		<label for="tva-youtube-option-autoplay-<#= model.cid #>"><?php echo esc_html__( 'Autoplay', 'thrive-apprentice' ) ?></label>
+	</div>
+
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="hide-full-screen" type="checkbox" id="tva-youtube-option-hide-full-screen-<#= model.cid #>">
+		<label for="tva-youtube-option-hide-full-screen-<#= model.cid #>"><?php echo esc_html__( 'Hide Full-Screen Button', 'thrive-apprentice' ) ?></label>
+	</div>
+</div>

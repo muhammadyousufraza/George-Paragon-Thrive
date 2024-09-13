@@ -1,0 +1,47 @@
+<div class="tvd-col tvd-s6">
+	<div class="tvd-row">
+		<div class="tvd-col tvd-s12">
+			<input data-bind="subject" type="text" name="tva-email-subject" id="tva-email-subject" value="<#= model.get('subject') #>">
+		</div>
+	</div>
+	<div class="tvd-row">
+		<div class="tvd-col tvd-s12">
+			<textarea data-bind="body" style="height:200px" name="tva-email-body" id="tva-email-body" cols="30" rows="10"><#- model.get('body') #></textarea>
+		</div>
+	</div>
+	<div class="tvd-row tvd-flex-row">
+		<div class="tvd-col tvd-s2">
+			<?php echo esc_html__( 'Add shortcode', 'thrive-apprentice' ); ?>
+		</div>
+		<div class="tvd-col tvd-s7">
+			<select name="tva-email-shortcodes" id="tva-email-shortcodes">
+				<option value=""><?php echo esc_html__( 'Select shortcode', 'thrive-apprentice' ); ?></option>
+			</select>
+		</div>
+		<div class="tvd-col tvd-s3">
+			<a id="tva-insert-email-shortcode" class="tva-et-button fullwidth" href="javascript:void(0)">
+				<?php echo esc_html__( 'Insert shortcode', 'thrive-apprentice' ) ?>
+			</a>
+		</div>
+	</div>
+	<div class="tvd-row">
+		<div class="tvd-col tvd-s12">
+			<h3><?php echo esc_html__( 'Email triggers', 'thrive-apprentice' ) ?></h3>
+			<ul id="tva-email-triggers-wrapper"></ul>
+		</div>
+	</div>
+	<div class="tvd-row">
+		<div class="tvd-col tvd-s12">
+			<a id="tva-save-email-template" class="tva-et-button" href="javascript:void(0)">
+				<?php echo esc_html__( 'Save template', 'thrive-apprentice' ) ?>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="tvd-col tvd-info-col tvd-s6">
+	<h3 class="tooltip-h3"><?php echo esc_html__( 'Email details', 'thrive-apprentice' ); ?></h3>
+	<p><?php echo esc_html__( 'This email is sent to new customers that have either purchased a course or signed up for a free course.', 'thrive-apprentice' ); ?></p>
+	<p><?php echo esc_html__( 'The email typically includes login details that customers can use to access their account.', 'thrive-apprentice' ); ?></p>
+	<p><?php echo esc_html__( 'This email is only triggered when the account is created.  Repeat purchases through the same user account will not trigger the email.', 'thrive-apprentice' ) ?></p>
+	<p><b><?php echo esc_html__( 'Login Button and Login Link shortcodes will link to the page set under Apprentice -> Display -> Edit Login Page', 'thrive-apprentice' ) ?></b></p>
+</div>

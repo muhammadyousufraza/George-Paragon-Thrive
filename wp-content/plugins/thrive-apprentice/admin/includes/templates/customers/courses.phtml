@@ -1,0 +1,20 @@
+<div class="tva-cc-inner tva-cc-inner-<#= status #>">
+	<div class="tva-simple-table-header tva-customer-courses-header mt-40">
+		<div class="tva-header-courses">
+			<# if ( status === 'publish' ) { #>
+			<?php esc_html_e( 'Courses', 'thrive-apprentice' ) ?></div>
+			<# } else { #>
+				<?php esc_html_e( 'Unpublished courses', 'thrive-apprentice' ) ?></div>
+			<# } #>
+		<div class="tva-header-enrolled click" data-order="desc" data-courses="<#= status #>" data-fn="reorder">
+			<?php esc_html_e( 'Enrolled date', 'thrive-apprentice' ) ?>
+			<?php tva_get_svg_icon( 'long-arrow-left_solid' ) ?>
+		</div>
+		<div class="tva-header-status"><?php esc_html_e( 'Status', 'thrive-apprentice' ) ?></div>
+		<div class="tva-header-certificate"><?php esc_html_e( 'Certificate', 'thrive-apprentice' ) ?></div>
+		<div class="tva-header-progress"><?php esc_html_e( 'Progress', 'thrive-apprentice' ) ?></div>
+		<div class="tva-header-activity"><?php esc_html_e( 'Last activity', 'thrive-apprentice' ) ?></div>
+	</div>
+
+	<div class="tva-cc-container-inner"></div>
+</div>

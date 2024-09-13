@@ -1,0 +1,24 @@
+<?php
+/** @var TD_TTW_Connection $this */
+/** @var string $login_url */
+$login_url = TD_TTW_Connection::get_instance()->get_login_url();
+?>
+<div class="td-connect-screen">
+	<div>
+		<h2><?php echo __( 'Connect to ThriveThemes.com to receive updates.', 'thrive-dash' ) ?></h2>
+		<p><?php echo __( 'Click on the button below to be taken to Thrive Themes and simply log into your account to access product updates', 'thrive-dash' ) ?></p>
+		<p><?php echo __( 'Make sure that you use the same username and password that used when signing up at ThriveThemes.com', 'thrive-dash' ) ?></p>
+
+		<hr class="td-le-rule"/>
+
+		<a class="td-login" href="<?php echo $login_url; ?>">
+			<?php echo __( 'Log into my account', 'thrive-dash' ) ?>
+		</a>
+
+		<p>
+			<a href="http://help.thrivethemes.com/en/articles/4957014-having-trouble-logging-into-your-thrive-themes-account/"
+			   target="_blank"><?php echo __( "I'm having difficulties.", 'thrive-dash' ) ?></a>
+		</p>
+
+	</div>
+</div>

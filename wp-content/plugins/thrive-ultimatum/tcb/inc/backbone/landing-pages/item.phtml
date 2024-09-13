@@ -1,0 +1,54 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-visual-editor
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+$spinner_gif = tve_editor_css( 'images/loading-spinner.gif' );
+?>
+
+<div class="lp-template-item modal-item <#- active ? 'selected': ''#>" data-key="<#- key #>" data-cloud="<#- cloud #>" data-uid="<#= uid || ''#>" data-id="<#= id || '' #>">
+	<div class="tcb-relative">
+		<div class="lp-template-title mb-10">
+			<span class="lp-set-title"><#= name #></span>
+			<# if(moreOptions){ #>
+			<span class="click" data-fn="toggleMoreOptions">
+				<?php tcb_icon( 'three-dots' ); ?>
+			</span>
+			<div class="lp-more-options-panel">
+				<a href="javascript:void(0);" class="click" data-fn="openDeleteWarning"><?php echo __( 'Delete', 'thrive-cb' ); ?></a>
+			</div>
+			<# } #>
+			<span class="lp-check-icon">
+				<?php tcb_icon( 'check-light' ); ?>
+			</span>
+		</div>
+		<div class="lp-template-wrapper click" data-fn="<#- fn #>">
+			<# if ( is_from_pack ) { #>
+			<div class="design-pack-label"><?php echo esc_html__( 'Design Pack', 'thrive-cb' ); ?></div>
+			<# } #>
+			<# if(locked) { #>
+			<a href="https://thrivethemes.com/architect/upgrade/?utm_campaign=tarc-upgrade&utm_medium=tarc-lite&utm_source=ttb-ui&utm_content=tarc-element&utm_term=ttb-customer" title="Thrive Architect" target="_blank">
+				<div class="template-locked-text">
+					<p>
+						<?php echo __( 'Upgrade to Access ', 'thrive-cb' ); ?>
+					</p>
+					<p class="mb-10">
+						<?php echo __( 'Upgrade to the full version of Thrive Architect to unlock all landing page sets ', 'thrive-cb' ); ?>
+					</p>
+					<button>
+						<?php echo __( 'Upgrade', 'thrive-cb' ); ?>
+					</button>
+				</div>
+			</a>
+			<# } #>
+			<div class="lazy-loading">
+				<img class="tve-lazy-img" src="<?php echo $spinner_gif; ?>" data-src="<#- url #>" data-ratio="<#- parseFloat(parseInt(h) / parseInt(w)).toFixed(3) #>"/>
+			</div>
+		</div>
+	</div>
+</div>

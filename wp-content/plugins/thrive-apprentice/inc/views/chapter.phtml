@@ -1,0 +1,65 @@
+<?php
+/**
+ * @var $is_parent_allowed bool
+ * @var $done              string
+ * @var $chapter           WP_Post|TVA_Chapter
+ * @var $allowed
+ */
+$done              = tva_is_chapter_completed( $chapter ) ? 'done' : '';
+$excluded          = get_term_meta( $chapter->course_id, 'tva_excluded', true );
+$published_lessons = $chapter->get_published_lessons();
+$visible_lessons   = $chapter->get_visible_lessons();
+$first_lesson      = $published_lessons[0];
+$allowed           = tva_access_manager()->has_access_to_object( $first_lesson->get_the_post() );
+$labels            = TVA_Dynamic_Labels::get( 'course_structure' );
+$template          = TVA_Setting::get( 'template' );
+
+if ( ( is_user_logged_in() && ! empty( $visible_lessons ) ) || ! is_user_logged_in() ) : ?>
+
+	<div class="tva-cm-chapter <?php echo $done ?>" id="tva-chapter-<?php echo $chapter->ID ?>">
+
+		<?php
+		echo tva_get_file_contents(
+			'inc/views/private-label.phtml',
+			[
+				'post'              => $chapter,
+				'allowed'           => $allowed,
+				'is_parent_allowed' => $is_parent_allowed,
+			]
+		);
+		?>
+
+		<span class="tva-cm-icon ">
+		<?php echo tva_get_svg_icon( 'sym-dot', '', true ) ?>
+		<?php echo tva_get_svg_icon( 'green-check', '', true ); ?>
+	</span>
+
+		<h2 class="tva_chapter_headline"><?php echo $chapter->post_title; ?>
+			<span class="tva-collapsible-pointer">
+			<?php echo $chapter->get_published_lessons_count() . ' ';
+			if ( 1 === $chapter->get_published_lessons_count() ) {
+				echo isset( $labels['course_lesson']['singular'] ) ? $labels['course_lesson']['singular'] : $template['course_lesson'];
+			} else {
+				echo isset( $labels['course_lesson']['plural'] ) ? $labels['course_lesson']['plural'] : $template['course_lessons'];
+			} ?>
+			<?php tva_get_svg_icon( 'collapsible-minus' ); ?>
+			<?php tva_get_svg_icon( 'collapsible-plus' ); ?>
+		</span>
+		</h2>
+
+		<?php if ( is_user_logged_in() ) { ?>
+			<div class="tve-lessons-wrapper">
+				<?php foreach ( $chapter->get_visible_lessons() as $lesson ) : ?>
+					<?php echo tva_generate_lesson_html( $lesson, $allowed ); ?>
+				<?php endforeach; ?>
+			</div>
+		<?php } else { ?>
+			<div class="tve-lessons-wrapper">
+				<?php foreach ( $chapter->get_published_lessons() as $lesson ) : ?>
+					<?php echo tva_generate_lesson_html( $lesson, $allowed ); ?>
+				<?php endforeach; ?>
+			</div>
+		<?php } ?>
+	</div>
+
+<?php endif; ?>

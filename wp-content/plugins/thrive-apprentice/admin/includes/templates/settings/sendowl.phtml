@@ -1,0 +1,56 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+
+$cards = array(
+	array(
+		'icon'        => 'map-signs_light',
+		'title'       => esc_html__( 'Start Here', 'thrive-apprentice' ),
+		'description' => esc_html__( 'Not sure where to begin? Follow our quick start guide and sell your first product within an hour', 'thrive-apprentice' ),
+		'btn_text'    => esc_html__( 'Quick Start Guide', 'thrive-apprentice' ),
+		'btn_link'    => 'quick-start',
+	),
+	array(
+		'icon'        => 'shopping-cart_light',
+		'title'       => esc_html__( 'Checkout Settings', 'thrive-apprentice' ),
+		'description' => esc_html__( 'Set up the checkout page your customers will see when purchasing', 'thrive-apprentice' ),
+		'btn_text'    => esc_html__( 'Checkout Settings', 'thrive-apprentice' ),
+		'btn_link'    => 'checkout',
+	),
+	array(
+		'icon'        => 'puzzle-piece_light',
+		'title'       => esc_html__( 'Integration Settings', 'thrive-apprentice' ),
+		'description' => esc_html__( 'Set up the SendOwl Listener', 'thrive-apprentice' ),
+		'btn_text'    => esc_html__( 'Integrate with SendOwl', 'thrive-apprentice' ),
+		'btn_link'    => 'integration',
+	),
+	array(
+		'icon'        => 'link_light',
+		'title'       => esc_html__( 'Purchase Links', 'thrive-apprentice' ),
+		'description' => esc_html__( 'Get Purchase links for each of your SendOwl products', 'thrive-apprentice' ),
+		'btn_text'    => esc_html__( 'Get Purchase Links', 'thrive-apprentice' ),
+		'btn_link'    => 'links',
+	),
+);
+?>
+<div class="tva-flex tva-flex-row mb-30">
+	<h1 class="tva-main-heading"><?php echo esc_html__( 'SendOwl settings', 'thrive-apprentice' ); ?></h1>
+</div>
+
+<div class="tva-flex tva-sendowl-cards">
+	<?php foreach ( $cards as $card ) : ?>
+		<div class="tva-card tva-sendowl-card">
+			<?php tva_get_svg_icon( $card['icon'] ); ?>
+			<h3><?php echo $card['title']; ?></h3>
+			<p><?php echo $card['description']; ?></p>
+			<button data-route="#settings/sendowl/<?php echo $card['btn_link']; ?>" class="tva-btn tva-btn-blue click" data-fn="changeSendOwlView"><?php echo $card['btn_text']; ?></button>
+		</div>
+	<?php endforeach; ?>
+</div>

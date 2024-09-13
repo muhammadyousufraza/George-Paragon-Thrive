@@ -1,0 +1,16 @@
+<div class="tvd-modal-content">
+	<h3 class="tvd-modal-title"><?php esc_html_e( 'Are you sure you want to proceed?', 'thrive-apprentice' ); ?></h3>
+
+	<p><?php esc_html_e( 'Updating this expiry will affect all users who have already purchased it.', 'thrive-apprentice' ); ?></p>
+
+</div>
+<div class="tva-modal-footer">
+	<button type="button" class="tva-modal-btn tvd-modal-close"><?php esc_html_e( 'No', 'thrive-apprentice' ); ?></button>
+	<button type="button" class="tva-modal-btn click" data-fn="confirm"><?php esc_html_e( 'Yes', 'thrive-apprentice' ); ?></button>
+</div>
+<div class="tva-modal-notice">
+	<?php tva_get_svg_icon( 'info-circle_light' ); ?>
+	<div class="ml-10">
+		<span><?php esc_html_e( 'Please create a new product and set the desired expiry if you do not want this change to affect existing members.', 'thrive-apprentice' ); ?></span>
+	</div>
+</div>

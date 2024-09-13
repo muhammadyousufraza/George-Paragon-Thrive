@@ -1,0 +1,52 @@
+<div class="tva-course-card click" data-fn="courseDetails" data-id="<#= course.get('id') #>">
+	<div class="tva-course-bar">
+		<span class="tva-course-topic tvd-truncate"><#= topic.get('title') #></span>
+		<# if(course.get('status') !== 'future') { #>
+		<div class="tva-tooltip-parent">
+			<span class="tva-course-status-select"></span>
+			<span class="tva-custom-tooltip"><?php echo esc_attr( __( 'Course status', 'thrive-apprentice' ) ); ?></span>
+		</div>
+		<# } #>
+	</div>
+	<div class="tva-course-hidden">
+		<span class="tva-course-handle">
+			<?php tva_get_svg_icon( 'arrows-1' ); ?>
+			<span class="tva-custom-tooltip"><?php echo esc_attr( __( 'Drag and drop to reorder', 'thrive-apprentice' ) ); ?></span>
+		</span>
+
+		<span class="click" data-fn="duplicateCourse" data-id="<#= course.get('id') #>">
+			<span class="tva-course-duplicate"></span>
+			<span class="tva-custom-tooltip"><?php echo esc_attr__( 'Duplicate course', 'thrive-apprentice' ); ?></span>
+		</span>
+
+		<span class="click" data-fn="deleteCourse" data-id="<#= course.get('id') #>">
+			<?php tva_get_svg_icon( 'trash-1' ); ?>
+			<span class="tva-custom-tooltip"><?php echo esc_attr( __( 'Delete course', 'thrive-apprentice' ) ); ?></span>
+		</span>
+
+		<a class="click" href="<#= course.get('preview_url') #>" target="_blank" data-fn="previewCourse">
+			<?php tva_get_svg_icon( 'eye-1' ); ?>
+			<span class="tva-custom-tooltip"><?php echo esc_attr( __( 'Preview course', 'thrive-apprentice' ) ); ?></span>
+		</a>
+	</div>
+	<div class="tva-course-header" style="background-color: <#= topic.get('color') #>">
+		<# if(course.get('cover_image')) { #>
+		<div class="tva-course-thumbnail" style="background-image: url('<#= course.get('cover_image') #>')">&nbsp;</div>
+		<# } #>
+	</div>
+	<div class="tva-course-icon">
+		<# if(topic.get('icon_type') === 'svg_icon') { #>
+		<#= topic.get('svg_icon') #>
+		<# } else { #>
+		<div class="tva-img" style="background-image: url('<#= topic.get('icon') #>')">&nbsp;</div>
+		<# } #>
+	</div>
+	<div class="tva-course-name">
+		<a href="#courses/<#= course.get('id') #>"><#= course.get('name') #></a>
+	</div>
+	<div class="tva-course-counter"><#= course.getItemsCount() #></div><!-- placeholder -->
+	<div class="tva-course-details">
+		<span class="access"><#= course.get('is_private') ? TVA.t.LoggedInUsers : TVA.t.Public #></span>
+		<span class="enrolled"><#= course.get('is_private') ? TVE_Dash.sprintf(TVA.t.EnrolledUsers, course.get('enrolled_users') + '') : TVE_Dash.sprintf(TVA.t.Views, course.get('conversions') + '') #></span>
+	</div>
+</div>

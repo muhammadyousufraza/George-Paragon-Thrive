@@ -1,0 +1,21 @@
+<div class="tvd-input-field">
+	<input name="source" data-bind="source" type="text" value="<#= model.get('source') #>" placeholder="<?php echo esc_html__( 'Url', 'thrive-apprentice' ); ?>">
+	<label>&nbsp;</label>
+</div>
+
+<div class="tva-details-wistia mt-15">
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="hide-controls" type="checkbox" id="tva-wistia-option-hide-controls-<#= model.cid #>">
+		<label for="tva-wistia-option-hide-controls-<#= model.cid #>"><?php echo esc_html__( 'Auto-hide Player Controls', 'thrive-apprentice' ) ?></label>
+	</div>
+
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="autoplay" type="checkbox" id="tva-wistia-option-autoplay-<#= model.cid #>">
+		<label for="tva-wistia-option-autoplay-<#= model.cid #>"><?php echo esc_html__( 'Autoplay', 'thrive-apprentice' ) ?></label>
+	</div>
+
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="hide-full-screen" type="checkbox" id="tva-wistia-option-hide-full-screen-<#= model.cid #>">
+		<label for="tva-wistia-option-hide-full-screen-<#= model.cid #>"><?php echo esc_html__( 'Hide Full-Screen Button', 'thrive-apprentice' ) ?></label>
+	</div>
+</div>

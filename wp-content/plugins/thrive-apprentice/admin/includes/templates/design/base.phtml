@@ -1,0 +1,31 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+
+<div class="tva-preview-switch tva-flex tva-align-center tva-space-between">
+	<div>
+		<h1 class="tva-main-heading"><?php echo __( 'Template', 'thrive-apprentice' ) ?></h1>
+		<a href="#design" class="tva-skin-edit-btn-back self-center">
+			<?php tva_get_svg_icon( 'angle-down' ); ?>
+			<?php echo __( 'Back to designs dashboard', 'thrive-apprentice' ); ?>
+		</a>
+	</div>
+
+	<div class="tva-preview-right tva-flex">
+		<# if (published && published.length > 0 ) { #>
+		<button id="tva-preview-demo" class="tva-preview-btn left click" data-fn="setActivePreview" data-preview="0"><?php echo __( 'Demo', 'thrive-apprentice' ) ?></button>
+		<button id="tva-preview-live" class="tva-preview-btn right click" data-fn="setActivePreview" data-preview="1"><?php echo __( 'Live', 'thrive-apprentice' ) ?></button>
+		<# } #>
+	</div>
+</div>
+
+<div class="tva-options-container" id="tva-options-container"></div>
+<div class="tva-template-container"></div>

@@ -1,0 +1,64 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div class="tvd-tss-field-data">
+	<label for="tvd-tss-field-name"><?php echo __( 'Field Name', 'thrive-dash' ) ?> *</label>
+	<div class="tvd-input-field">
+		<input id="tvd-tss-field-name" autocomplete="address" class="input-change <#= model.get( 'default_field' )? 'tvd-disabled tvd-no-focus' : '' #>" type="text" value="<#= model.get('name') #>"
+			   data-field="name"
+			   placeholder="<?php echo __( 'Company Address', 'thrive-dash' ) ?>">
+		<label></label>
+	</div>
+</div>
+
+<div class="tvd-tss-field-data">
+	<label for="tvd-tss-field-address1"><?php echo __( 'Address line 1', 'thrive-dash' ) ?> *</label>
+	<div class="tvd-input-field">
+		<input id="tvd-tss-field-address1" autocomplete="address1-input" class="input-change" type="text" value="<#= model.get('data').address1 ? model.get('data').address1 : '' #>" data-field="data_address1" placeholder="e.g. Stevenage Rd">
+		<label></label>
+	</div>
+</div>
+<div class="tvd-tss-field-data">
+	<label for="tvd-tss-field-address2" id="tvd-tss-not-required"><?php echo __( 'Address line 2', 'thrive-dash' ) ?></label>
+	<div class="tvd-input-field">
+		<input id="tvd-tss-field-address2" autocomplete="address2-input" class="input-change" type="text" value="<#= model.get('data').address2 ? model.get('data').address2 : '' #>" data-field="data_address2" placeholder="e.g. Fulham">
+		<label></label>
+	</div>
+</div>
+<div class="tvd-tss-field-data">
+	<label  for="tvd-tss-field-city"><?php echo __( 'City', 'thrive-dash' ) ?></label>
+	<div class="tvd-input-field">
+		<input id="tvd-tss-field-city" autocomplete="city-input" class="input-change" type="text" value="<#= model.get('data').city ? model.get('data').city : '' #>" data-field="data_city" placeholder="e.g. London">
+		<label></label>
+	</div>
+</div>
+<div class="tvd-tss-field-data">
+	<label for="tvd-tss-field-state"><?php echo __( 'County / State', 'thrive-dash' ) ?></label>
+	<div class="tvd-input-field">
+		<input id="tvd-tss-field-state" autocomplete="state-input" class="input-change" type="text" value="<#= model.get('data').state ? model.get('data').state : '' #>" data-field="data_state" placeholder="e.g. SW6">
+		<label></label>
+	</div>
+</div>
+<div class="tvd-tss-field-data">
+	<label for="tvd-tss-field-zip"><?php echo __( 'Zip / Postal Code', 'thrive-dash' ) ?></label>
+	<div class="tvd-input-field">
+		<input id="tvd-tss-field-zip" autocomplete="zip-input" class="input-change" type="text" value="<#= model.get('data').zip ? model.get('data').zip : '' #>" data-field="data_zip" placeholder="e.g. 6HH">
+		<label></label>
+	</div>
+</div>
+<div class="tvd-tss-field-data">
+	<label for="tvd-tss-field-country"><?php echo __( 'Country', 'thrive-dash' ) ?></label>
+	<div class="tvd-input-field">
+		<input id="tvd-tss-field-country" autocomplete="country-input" class="input-change" type="text" value="<#= model.get('data').country ? model.get('data').country : '' #>" data-field="data_country" placeholder="e.g. UK">
+		<label></label>
+	</div>
+</div>

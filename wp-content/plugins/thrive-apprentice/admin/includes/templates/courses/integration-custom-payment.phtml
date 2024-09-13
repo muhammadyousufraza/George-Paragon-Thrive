@@ -1,0 +1,18 @@
+<div class="tva-rule-header pt-15 pb-15 click" data-fn="toggleItemsList">
+	<div class="tva-rule-img <#= model.get('slug') #>">&nbsp;</div>
+
+	<div class="tva-rule-title text"><#= model.get('label') #></div>
+	<div class="tva-course-integration-label"></div>
+
+	<div class="tva-rule-status tva-integration-status"></div>
+	<div class="tva-rule-toggle">
+		<span class="tva-arrow-icon">&nbsp;</span>
+	</div>
+</div>
+<div class="tva-rule-items tva-top-border tva-course-integration-items-wrapper" style="display: none">
+	<p class="tva-custom-payment-label m-0"><?php echo __( 'Attach a custom payment link to this product. This can be a link to a sales page or an external payment service.', 'thrive-apprentice' ); ?> <a href="<https://help.thrivethemes.com/en/articles/8420129-how-to-link-thrive-apprentice-to-an-external-checkout-or-sales-page-using-custom-payment-links>" target="_blank" rel="noopener"><?php echo __( 'Learn more.', 'thrive-apprentice' ); ?></a></p>
+	<div class="tva-flex-one mt-10 tvd-input-field">
+		<input id="tva-custom-payment-url" class="change" data-fn="changeUrl" type="text" placeholder="<?php echo esc_html__( 'Payment URL', 'thrive-apprentice' ); ?>">
+		<label class="tvd-active" data-error="<?php echo esc_attr__( 'You need to add a valid URL link', 'thrive-apprentice' ) ?>">&nbsp;</label>
+	</div>
+</div>

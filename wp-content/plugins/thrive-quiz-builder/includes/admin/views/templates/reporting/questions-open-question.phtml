@@ -1,0 +1,58 @@
+<div class="tqb-questions-report-question-box">
+	<div class="tqb-question-text">
+		<#= item.get('text') #>
+	</div>
+	<div class="tvd-row tqb-oeq-rep-ct">
+		<div class="tvd-col tvd-s12 tqb-answers-box"></div>
+	</div>
+	<# if( item.get('views_counted') ) { #>
+	<div class="tvd-row tqb-bottom-reports">
+		<div class="tvd-col tvd-s12">
+			<ul class="tvd-collection tvd-with-header">
+				<li class="tvd-collection-item">
+					<div class="tvd-row">
+						<div class="tvd-col tvd-s3">
+							<div class="tvd-truncate-on-small">
+								<?php
+								$csv_url = add_query_arg(
+									array(
+										'page'   => 'tqb_admin_dashboard',
+										'action' => 'tqb_question_cvs',
+									),
+									admin_url( 'admin.php' )
+								);
+								?>
+								<a class="tvd-truncate-on-small-el tqb-csv-download" href="<?php echo $csv_url ?>">
+									<?php echo __( 'Download to CSV', 'thrive-quiz-builder' ); ?>
+								</a>
+							</div>
+						</div>
+						<div class="tvd-col tvd-s3">
+							<div class="tvd-truncate-on-small" id="tqb-reporting-visitors" data-popup="<?php echo __( 'Visitors', 'thrive-quiz-builder' ); ?>">
+								<h5 class="tvd-truncate-on-small-el">
+									<#= item.get('views') #> <?php echo __( 'Visitors', 'thrive-quiz-builder' ); ?>
+								</h5>
+							</div>
+						</div>
+						<div class="tvd-col tvd-s3">
+							<div class="tvd-truncate-on-small" id="tqb-reporting-answers" data-popup="<?php echo __( 'Answers', 'thrive-quiz-builder' ); ?>">
+								<h5 class="tvd-truncate-on-small-el">
+									<#= item.get('total') #> <?php echo __( 'Answers', 'thrive-quiz-builder' ); ?>
+								</h5>
+							</div>
+						</div>
+						<div class="tvd-col tvd-s3">
+							<div class="tvd-truncate-on-small" id="tqb-reporting-drop-off" data-popup="<?php echo __( 'Drop Offs', 'thrive-quiz-builder' ); ?>">
+								<h5 class="tvd-truncate-on-small-el">
+									<#= item.get('views')-item.get('total') #> <?php echo __( 'Drop Offs', 'thrive-quiz-builder' ); ?> ( <#=
+									item.get('views')==0? 0:((item.get('views')-item.get('total'))*100/item.get('views')).toFixed(2) #> % )
+								</h5>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<# } #>
+</div>

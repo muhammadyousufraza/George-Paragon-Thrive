@@ -1,0 +1,107 @@
+.thrv-button, .thrv-button-group-item {
+  display: table;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.thrv_wrapper {
+    padding: 0;
+  }
+}
+
+.tcb-with-icon {
+  &:not(.tcb-flip) .tcb-button-texts {
+    padding-left: 15px;
+  }
+
+  &.tcb-flip {
+    .tcb-button-icon {
+      padding-left: 15px;
+    }
+  }
+
+  .tcb-button-icon {
+    display: block;
+
+    .thrv_wrapper.thrv_icon {
+      margin: 0;
+    }
+  }
+}
+
+a.tcb-button-link {
+  background-color: #1abc9c;
+  padding: 12px 15px;
+  font-size: 18px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  line-height: 1.2em;
+
+  &:hover {
+    background-color: #15a288;
+  }
+
+  .tcb-flip & {
+    flex-direction: row-reverse;
+  }
+
+  .thrv-button &, .thrv-button-group-item & {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  /* Prevent custom icons to inherit text styles */
+  .tcb-button-icon {
+    .tve_sc_icon {
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+    }
+  }
+}
+
+span.tcb-button-texts {
+  color: inherit;
+  display: block;
+  flex: 1 1 auto;
+  -webkit-flex: 1;
+  position: relative;
+
+  > span {
+    display: block;
+    padding: 0;
+  }
+
+  .tcb-with-divider:not(.tcb-flip) & {
+    padding-left: 20px;
+
+    &:before {
+      display: block;
+    }
+  }
+}
+
+span.tcb-button-icon {
+  display: none;
+  font-size: 1em;
+  line-height: 0;
+  position: relative;
+  color: inherit;
+
+  .tcb-with-divider.tcb-flip & {
+    padding-left: 20px;
+
+    &:before {
+      display: block;
+      left: 5px;
+    }
+  }
+
+  .tcb-icon {
+    height: 1em;
+  }
+}

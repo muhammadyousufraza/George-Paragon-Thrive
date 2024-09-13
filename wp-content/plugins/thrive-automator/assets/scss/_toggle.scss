@@ -1,0 +1,174 @@
+.tap-toggle-item {
+  --tap-toggle-height: 250px;
+  --tap-toggle-duration: 0.15s;
+
+  .tap-toggle-heading {
+    width: 100%;
+    cursor: pointer;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    background-color: rgba(241, 241, 241, 0.5);
+
+    .tap-icon-wrapper {
+      --tap-icon-size: 8px;
+    }
+
+    &.is-active {
+      .tap-toggle-icon {
+        .tap-icon-wrapper {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .tap-toggle-content-item, .tap-toggle-heading {
+    .tap-data-logo {
+      .tap-icon-wrapper {
+        --tap-icon-size: 20px;
+      }
+    }
+
+    .tap-logo-img {
+      img {
+        max-width: 20px;
+      }
+    }
+  }
+
+  .tap-toggle-enter-active {
+    transition-duration: var(--tap-toggle-duration);
+    transition-timing-function: ease-in;
+  }
+
+  .tap-toggle-leave-active {
+    transition-duration: var(--tap-toggle-duration);
+    transition-timing-function: ease-out;
+  }
+
+  .tap-toggle-enter-to, .tap-toggle-leave-from {
+    max-height: var(--tap-toggle-height);
+    overflow: hidden;
+  }
+
+  .tap-toggle-enter-from, .tap-toggle-leave-to {
+    overflow: hidden;
+    max-height: 0;
+  }
+}
+
+
+.tap-select-filter-search {
+  max-width: 200px;
+}
+
+.tap-dynamic-data {
+  width: 250px;
+  border-radius: 4px;
+  border: solid 1px #cdd3d8;
+  background-color: #fff;
+  color: var(--tap-text-color-sec);
+
+  &.tap-select-filter-dropdown {
+    max-width: 200px;
+  }
+
+  &.tap-filter-dropdown {
+    width: 468px !important;
+
+    .tap-dynamic-data-items {
+      max-height: Max(35vh, 260px);
+    }
+  }
+
+  &.tap-field-dropdown {
+    width: 478px !important;
+
+    &.tap-trigger-dropdown {
+      width: 468px !important;
+    }
+
+    .tap-dynamic-data-items {
+      max-height: Max(40vh, 260px);
+    }
+  }
+
+  &.tap-dynamic-autocomplete {
+    width: 478px;
+  }
+
+  &.tap-action-options {
+    .tap-dynamic-data-items {
+      max-height: Max(40vh, 260px);
+    }
+  }
+
+  &.tap-shortcodes {
+    .tap-dynamic-data-items {
+      max-height: Max(35vh, 260px);
+    }
+  }
+
+  .tap-dynamic-data-items {
+    overflow: auto;
+    max-height: Max(55vh, 260px);
+  }
+
+  .tap-dynamic-search {
+    padding: 10px;
+
+    .tap-search-wrapper {
+      margin: 0;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .tap-dynamic-item {
+    box-sizing: border-box;
+    padding: 15px 10px 15px 20px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 15px;
+
+    &:hover {
+      background-color: var(--tap-light-bg);
+    }
+  }
+
+  .tap-no-data {
+    padding: 10px;
+    color: var(--tap-text-color-sec);
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+.tap-toggle-item-count {
+  color: var(--tap-placeholder);
+  font-size: 15px;
+}
+
+.tap-dynamic-data-trigger {
+  cursor: pointer;
+  color: var(--tap-placeholder);
+  box-sizing: border-box;
+  height: 36px;
+  width: 36px;
+
+  &:hover {
+    color: var(--tap-text-color-sec);
+  }
+
+  .tap-icon-wrapper {
+    --tap-icon-size: 14px;
+  }
+
+  p {
+    margin: 0;
+  }
+}

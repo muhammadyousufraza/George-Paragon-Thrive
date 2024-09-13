@@ -1,0 +1,58 @@
+<# if ( card.function ) { #>
+<button class="click ttd-start-card <#= card.extra_class #>" data-fn="<#= card.function #>">
+	<# } else {#>
+	<a class="ttd-start-card <#= card.extra_class #>" href="<#= card.link #>">
+		<# } #>
+		<div class="ttd-start-card-wrapper">
+			<div class="ttd-start-card-main">
+				<# if ( card.image ){ #>
+				<img src="<#= card.image #>" class="tcb-start-current-theme-image" alt="Current Theme">
+				<# } #>
+				<# if ( card.icon ){ #>
+				<div class="ttd-start-card-icon">
+					<#= TTD.utils.icon(card.icon) #>
+				</div>
+				<# } #>
+				<div class="ttd-start-card-content">
+
+					<div class="ttd-start-card-title">
+						<#= card.title #>
+					</div>
+
+					<# if ( card.key && card.key === 'current' ){ #>
+					<div class="ttd-start-current-theme-name">
+						<#= TTD.objects.collections.skins.getActiveSkin().get('name') #>
+					</div>
+					<# } #>
+
+					<# if ( card.description){ #>
+					<span class="ttd-start-card-description">
+				<#= card.description #>
+			</span>
+					<# } #>
+
+					<span class="ttd-normal-button ttd-start-card-button <#= card.button_class #>">
+				<# if ( card.button_text ) {
+					 if ( card.button_dynamic ) { #>
+						<# if(TTD.CONST.wizard.data.done) { #>
+							<?php echo __( 'Open Wizard', 'thrive-theme' ) ?>
+						<# } else {#>
+							<?php echo __( 'Start Wizard', 'thrive-theme' ) ?>
+						<# } #>
+					<# } else {  #>
+					<span class="ttd-button-text">
+						<#= card.button_text #>
+					</span>
+				<# }} #>
+				<#= TTD.utils.icon('arrow-circle-right') #>
+			</span>
+				</div>
+			</div>
+		</div>
+
+		<# if ( card.function) { #>
+</button>
+<# } else { #>
+</a>
+<# } #>
+

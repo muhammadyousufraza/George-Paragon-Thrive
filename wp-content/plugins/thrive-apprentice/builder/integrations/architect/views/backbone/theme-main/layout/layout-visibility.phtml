@@ -1,0 +1,40 @@
+<div class="layout-visibility-settings">
+	<button class="layout-options-title click" data-fn="toggleDropdown">
+		<?php echo __( 'Layout and Visibility', 'thrive-theme' ); ?>
+
+		<span>
+			<?php tcb_icon( 'cog-light' ) ?>
+			<?php tcb_icon( 'times-regular' ) ?>
+		</span>
+	</button>
+
+	<div class="layout-dropdown">
+		<# this.getHiddenSections().forEach( section => { #>
+		<div class="layout-elem">
+			<#= section #>
+			<button class="click" data-fn="showSection" data-section="<#= section #>">
+				<?php tcb_icon( 'eye-light-slash' ) ?>
+				<?php echo __( 'Hidden', 'thrive-theme' ); ?>
+			</button>
+		</div>
+		<# }) #>
+
+		<h3 class="layout-section-title"><?php echo __( 'Content and Sidebar Layout', 'thrive-theme' ); ?>:</h3>
+
+		<div class="layout-inner-box">
+			<div class="layout-select"></div>
+
+			<button class="layout-inner-options-title click" data-fn="toggleInnerDropdown">
+				<?php echo __( 'Layout Options', 'thrive-theme' ); ?>
+
+				<?php tcb_icon( 'chevron-down-regular' ) ?>
+				<?php tcb_icon( 'times-regular' ) ?>
+			</button>
+
+			<div class="inner-dropdown">
+				<button class="click" data-fn="updateLayout"><?php echo __( 'Update Layout', 'thrive-theme' ); ?></button>
+				<button class="click" data-fn="openLayoutCreate"><?php echo __( 'Save New Layout', 'thrive-theme' ); ?></button>
+			</div>
+		</div>
+	</div>
+</div>

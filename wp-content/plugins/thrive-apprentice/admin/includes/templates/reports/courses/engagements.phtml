@@ -1,0 +1,85 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+use TVA\Reporting\Main;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="apprentice-dashboard-container">
+	<div class="apprentice-top-section">
+		<div>
+			<h2 class="mt-0">
+				<?php echo esc_html__( 'Engagements', 'thrive-apprentice' ); ?>
+			</h2>
+
+			<div class="apprentice-dashboard-wrapper no-focus">
+				<?php Main::render_report( 'tve_reporting_filter', 'courses_filter' ); ?>
+				<?php Main::render_report( 'tve_reporting_filter', 'engagements_filter' ); ?>
+				<?php Main::render_report( 'tve_reporting_filter', 'date_filter' ); ?>
+			</div>
+		</div>
+	</div>
+
+	<div class="apprentice-info mb-20">
+		<span class="tva-info-icon text-blue">
+			<?php tva_get_svg_icon( 'info-circle_light' ); ?>
+		</span>
+		<span class="apprentice-info-text can-truncate">
+			<?php echo esc_html__( 'Engagements are activities such as enrolling in a course, completing a lesson, commenting on a course, and more. Use this chart to see that your learners remain engaged and active.', 'thrive-apprentice' ); ?>
+		</span>
+		<span class="apprentice-info-button text-blue click" data-fn="toggleShowMore">
+			<span><?php echo esc_html__( 'View more', 'thrive-apprentice' ); ?></span>
+			<span><?php echo esc_html__( 'View less', 'thrive-apprentice' ); ?></span>
+		</span>
+	</div>
+
+	<div class="apprentice-dashboard-wrapper">
+		<div class="col-3-8">
+			<?php Main::render_report( 'tve_reporting_card', 'engagements', 'abacus', [
+				'report-size'           => 'lg',
+				'report-title'          => __( 'Count', 'thrive-apprentice' ),
+				'has-date-comparison'   => 1,
+				'report-global-filters' => 'date',
+				'report-expanded-view'  => '',
+			] ); ?>
+		</div>
+
+		<div class="col-5-8">
+			<?php Main::render_report( 'tve_reporting_chart', 'engagements', 'arrow-clock', [
+				'report-title'          => __( 'Over time', 'thrive-apprentice' ),
+				'report-global-filters' => 'date',
+				'report-expanded-view'  => '',
+				'chart-config'          => [
+					'cumulative-toggle' => 1,
+				],
+			] ); ?>
+
+		</div>
+	</div>
+
+	<div class="apprentice-dashboard-wrapper">
+		<div class="col-8-8">
+			<?php Main::render_report( 'tve_reporting_table', 'engagements', 'info', [
+				'report-title'              => __( 'Details', 'thrive-apprentice' ),
+				'report-global-filters'     => 'date',
+				'report-expanded-view'      => '',
+				'has-pagination'            => 1,
+				'report-items-per-page'     => 10,
+				'report-data-type'          => 'table',
+				'report-restrict-order-by'  => 'engagement_type',
+				'report-table-columns'      => 'date,user_id,engagement_type',
+				'report-order-by'           => 'date',
+				'report-order-by-direction' => 'desc',
+				'report-has-export'         => 1,
+				'export-title'              => esc_html__( 'Engagements', 'thrive-apprentice' ),
+			] ); ?>
+		</div>
+	</div>
+</div>

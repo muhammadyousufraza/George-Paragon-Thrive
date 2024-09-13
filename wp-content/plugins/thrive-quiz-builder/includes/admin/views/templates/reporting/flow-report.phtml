@@ -1,0 +1,61 @@
+<div class="tqb-flow-report-title-holder">
+
+	<div class="tqb-flow-report-title">
+			<h3 class="tvd-title"><?php echo __( 'Flow Report', 'thrive-quiz-builder' ) ?></h3>
+	</div>
+	<# if( item.get('since') ) { #>
+		<div class="tqb-flow-report-since">
+			<p class="tvd-subtitle"><#= item.get('since').text #><span><#= item.get('since').date #></span></p>
+		</div>
+
+	<# } #>
+
+</div>
+
+<div class="tqb-flow-report-container">
+	<div class="tqb-flow-report-splash "></div>
+	<div class="tqb-flow-report-qna "></div>
+	<div class="tqb-flow-report-optin "></div>
+	<div class="tqb-flow-report-results "></div>
+</div>
+
+<div class="tqb-flow-report-conclusion">
+
+	<div class="tqb-flow-report-title-holder">
+		<p><?php echo __( 'Summary', 'thrive-quiz-builder' ) ?></p>
+	</div>
+
+	<div class="tqb-flow-report-content">
+		<div id="tqb-quiz-completions">
+			<p>
+				<#= item.get('completions') #>
+			</p>
+			<p>
+				<?php echo __( 'Quiz Completions', 'thrive-quiz-builder' ) ?>
+			</p>
+			<p>
+				<#= ( item.get('users') && item.get('users') !=='0' ) ? ( ( item.get('completions') * 100 ) / item.get('users') ).toFixed(2): 0 #>% <?php echo __( 'of Visitors', 'thrive-quiz-builder' ) ?>
+			</p>
+		</div>
+		<div id="tqb-quiz-shares">
+			<p>
+				<#= item.get('results_social_shares') ? item.get('results_social_shares') : 0 #>
+			</p>
+			<p>
+				<?php echo __( 'Social shares', 'thrive-quiz-builder' ) ?>
+			</p>
+			<p>
+				<#= ( item.get('users') && item.get('users') !=='0' ) ? ( ( item.get('results_social_shares') * 100 ) / item.get('users') ).toFixed(2): 0 #>% <?php echo __( 'of Visitors', 'thrive-quiz-builder' ) ?>
+			</p>
+		</div>
+		<div id="tqb-quiz-conversions">
+			<p>
+				<#= item.get('users')? ( Number( item.get('results_subscribers') ) + Number( item.get('optin_subscribers') ) ): 0  #>
+			</p>
+			<p>
+				<?php echo __( 'Subscriptions', 'thrive-quiz-builder' ) ?>
+			</p>
+			<p><#= ( item.get('users') && item.get('users') !=='0' ) ? ( ( ( Number( item.get('results_subscribers') ) + Number( item.get('optin_subscribers') ) ) * 100 ) / item.get('users') ).toFixed(2): 0 #>% <?php echo __( 'of Visitors', 'thrive-quiz-builder' ) ?></p>
+		</div>
+	</div>
+</div>

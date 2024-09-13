@@ -1,0 +1,49 @@
+<div class="tve-modal-content instance-options menu-options step1">
+	<span class="tcb-modal-title"><?php echo __( 'What type of menu would you like to build?', 'thrive-cb' ); ?></span>
+	<div class="flex-mid space-between tcb-modal-content">
+		<a href="#" class="menu-type p-10 click<#=this.model.get('type')==='regular' ? ' selected' : ''#>" data-fn="selectOption" data-attr="type" data-value="regular">
+			<span><?php echo __( 'Standard Dropdown Menu', 'thrive-cb' ); ?></span>
+			<img src="<?php echo tve_editor_css( 'images/custom-menu-thumbs/standard.jpg' ) ?>" alt="">
+		</a>
+		<a href="#" class="menu-type p-10 click<#=this.model.get('type')==='mega' ? ' selected' : ''#>" data-fn="selectOption" data-attr="type" data-value="mega">
+			<span><?php echo __( 'Simple Mega Menu', 'thrive-cb' ); ?></span>
+			<img src="<?php echo tve_editor_css( 'images/custom-menu-thumbs/megamenu.png' ) ?>" alt="">
+		</a>
+	</div>
+	<div class="flex-end flex tcb-modal-footer goto-2" style="visibility: hidden">
+		<button type="button" class="tve-button medium green click white-text" data-fn="step2">
+			<#=this.hasWordpressMenus() ? <?php echo json_encode( __( 'Continue', 'thrive-cb' ) ); ?> : <?php echo json_encode( __( 'Select Template', 'thrive-cb' ) ); ?>#>
+		</button>
+	</div>
+</div>
+
+<div class="tve-modal-content instance-options menu-options step2" style="display: none">
+	<span class="tcb-modal-title"><?php echo __( 'What menu source would you like to use?', 'thrive-cb' ); ?></span>
+	<div class="flex-mid space-around tcb-modal-content">
+		<a href="#" class="item option click<#=this.model.get('source')==='custom' ? ' selected' : ''#>" data-fn="selectOption" data-attr="source" data-value="custom">
+			<?php tcb_icon( 'plus-circle-regular' ) ?>
+			<p class="mt-20"><?php echo __( 'Create a Custom Menu', 'thrive-cb' ); ?></p>
+		</a>
+		<a href="#" class="item option click<#=this.model.get('source')==='wp' ? ' selected' : ''#>" data-fn="selectOption" data-attr="source" data-value="wp">
+			<?php tcb_icon( 'wordpress-brands' ) ?>
+			<p class="mt-20"><?php echo __( 'Use a WordPress Menu', 'thrive-cb' ); ?></p>
+		</a>
+	</div>
+	<div class="flex-mid space-between tcb-modal-footer">
+		<button type="button" class="tve-button medium grey white-text click" data-fn="step1">
+			<?php echo __( 'Back', 'thrive-cb' ); ?>
+		</button>
+		<div class="wp" style="display: none">
+			<select class="change choose-menu" data-fn="selectOption" data-attr="menu_id">
+				<option disabled selected><?php echo __( 'Choose a WordPress Menu', 'thrive-cb' ); ?></option>
+				<#_.each(this.menus, function(item){#>
+				<option value="<#=item.value#>"
+				<#=item.value==this.model.get('menu_id') ? ' selected' : ''#>><#=item.name#></option>
+				<#}, this)#>
+			</select>
+		</div>
+		<button type="button" class="tve-button medium green click white-text goto-3" data-fn="done" style="display: none">
+			<?php echo __( 'Select Template', 'thrive-cb' ); ?>
+		</button>
+	</div>
+</div>

@@ -1,0 +1,162 @@
+<div class="tvd-row tvd-collapse">
+	<div class="tvd-col tvd-s12">
+		<h3 class="tvd-title"><?php echo __( 'Users report', 'thrive-quiz-builder' ) ?></h3>
+		<# if( item.get('since') ) { #>
+		<div class="tqb-flow-report-since">
+			<p class="tvd-subtitle"><#= item.get('since').text #>
+				<span><#= item.get('since').date #></span>
+			</p>
+		</div>
+		<# } #>
+	</div>
+</div>
+<div class="tqb-users-list-table">
+	<div class="tqb-users-list-buttons">
+		<button class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-purple tvd-full-btn tqb-filter-reports">
+			<?php echo __( 'Filter reports', 'thrive-quiz-builder' ) ?>
+		</button>
+		<button style="display: <#= this.model.tqb_filters ? 'inline;': 'none;' #>" class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-gray tvd-full-btn tqb-reset-filter-reports">
+			<?php echo __( 'Reset filters', 'thrive-quiz-builder' ) ?>
+		</button>
+	</div>
+	<table class="tqb-users-report-table tvd-collection tvd-with-header tvd-not-fixed-table">
+		<thead>
+		<tr class="tvd-collection-header ">
+			<td class="tqb-users-list-item">
+				<h5>
+					<?php echo __( 'Item', 'thrive-quiz-builder' ) ?>
+				</h5>
+			</td>
+			<td>
+				<h5>
+					<?php echo __( 'User name', 'thrive-quiz-builder' ) ?>
+				</h5>
+			</td>
+			<td class="tqb-users-list-date">
+				<h5>
+					<?php echo __( 'E-mail address', 'thrive-quiz-builder' ) ?>
+				</h5>
+			</td>
+			<td class="tqb-users-list-connection">
+				<h5>
+					<?php echo __( 'Started', 'thrive-quiz-builder' ) ?>
+				</h5>
+			</td>
+			<td class="tqb-users-list-connection">
+				<h5>
+					<?php echo __( 'Ended', 'thrive-quiz-builder' ) ?>
+				</h5>
+			</td>
+			<td>
+				<h5>
+					<?php echo __( 'Progress', 'thrive-quiz-builder' ) ?>
+				</h5>
+			</td>
+			<td>
+				<h5>
+					<?php echo __( 'Tries', 'thrive-quiz-builder' ) ?>
+				</h5>
+			</td>
+			<td>
+				<h5>
+					<?php echo __( 'Result', 'thrive-quiz-builder' ) ?>
+				</h5>
+			</td>
+			<td>
+				<h5>
+					<?php echo __( 'Badge', 'thrive-quiz-builder' ) ?>
+				</h5>
+			</td>
+			<td>
+				<h5>
+					<?php echo __( 'Answers', 'thrive-quiz-builder' ) ?>
+				</h5>
+			</td>
+		</tr>
+		</thead>
+		<# if(item.get('total_items') != 0) { #>
+		<tbody class="tqb-users-list-table-content">
+
+		</tbody>
+		<# } else { #>
+		<tbody class="tqb-users-list-table-content">
+		<tr>
+			<td colspan="10">
+				<div class="tvd-center-align tvd-s6">
+					<h5>
+						<span><?php echo __( 'No user reports found', 'thrive-quiz-builder' ) ?></span>
+					</h5>
+				</div>
+			</td>
+		</tr>
+		</tbody>
+		<# } #>
+		<tfoot>
+		<tr class="tvd-collection-item">
+			<td>
+				<div class="tvd-left tvd-s12">
+					<h5>
+						<span class="tqb-users-list-item-number"><#= item.get('total_items') #></span>
+						<span><?php echo __( 'items', 'thrive-quiz-builder' ) ?></span>
+					</h5>
+				</div>
+			</td>
+			<td colspan="2">
+				<div class="tvd-right">
+					<div class="tqb-users-report-jump">
+						<p class="tvd-inline-block tvd-small-text tvd-no-margin">
+							<strong>
+								<?php echo __( 'Jump to page', 'thrive-quiz-builder' ) ?>
+							</strong>
+						</p>
+						<div class="tvd-input-field tvd-inline-block">
+							<input class="tvd-jump-to-page tvd-no-margin tvd-input-field-small" type="text" name="current_page"
+								   data-error="<?php echo __( 'Page doesn\'t exist', 'thrive-quiz-builder' ) ?>"
+								   id="tqb-current-page-input">
+						</div>
+						<a class="tqb-jump-to-page-button tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-blue tvd-btn-small tvd-margin-left-small"
+						   href="javascript:void(0)" tabindex="1"><?php echo __( 'Go', 'thrive-quiz-builder' ) ?></a>
+					</div>
+				</div>
+			</td>
+			<td colspan="2">
+				<div class="tvd-pagination-container tqb-users-report-pagination">
+					<p class="tvd-inline-block tvd-small-text">
+						<strong>
+							<?php echo __( 'Page', 'thrive-quiz-builder' ) ?>
+							<span class="tqb-users-list-current-page"><#= item.get('current_page') #></span>&nbsp;
+							<?php echo __( 'of', 'thrive-quiz-builder' ) ?>&nbsp;
+							<span class="tqb-users-list-total-pages"><#= item.get('total_pages') #></span>
+						</strong>
+					</p>
+					<a class="tqb-previous-page tvd-text-gray tvd-margin-left" href="javascript:void(0)"><span
+								class="tvd-icon-chevron-left"></span></a>
+					<a class="tqb-next-page tvd-text-gray tvd-margin-left" href="javascript:void(0)"><span
+								class="tvd-icon-chevron-right2"></span></a>
+				</div>
+			</td>
+			<td colspan="6">
+				<div class="tvd-right">
+					<p class="tvd-inline-block tvd-small-text tvd-no-margin">
+						<strong>
+							<?php echo __( 'Rows per page', 'thrive-quiz-builder' ) ?>
+						</strong>
+					</p>
+					<div class="tvd-input-field tvd-inline-block tvd-input-field-small tvd-no-margin">
+						<select class="" id="tqb-user-per-page" tabindex="-1"
+								aria-hidden="true">
+							<option value="5">5</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+						</select>
+					</div>
+					<span class="tvd-inline-block tvd-margin-left"></span>
+				</div>
+			</td>
+		</tr>
+		</tfoot>
+	</table>
+</div>
+
+

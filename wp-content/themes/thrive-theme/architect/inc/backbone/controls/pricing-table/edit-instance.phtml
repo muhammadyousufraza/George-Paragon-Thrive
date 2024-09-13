@@ -1,0 +1,21 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Ovidiu
+ * Date: 7/2/2018
+ * Time: 3:02 PM
+ */
+?>
+<div class="row pt-5">
+	<div class="col-xs-12">
+		<label for="price-instance-label"><?php echo __( 'Instance Name', 'thrive-cb' ); ?></label>
+	</div>
+	<div class="col-xs-12">
+		<input type="text" id="price-instance-label" class="change input" data-fn="change_setting" data-fn-input="input_setting" data-setting="label"/>
+	</div>
+	<div class="row mt-10 ml-5 instance-default-setting-container">
+		<div class="col-xs-12">
+			<label class="tcb-checkbox"><input type="checkbox" class="change" data-fn="change_setting" data-setting="is_default"/><span><?php echo __( 'Make this the default instance', 'thrive-cb' ) ?></span></label>
+		</div>
+	</div>
+</div>

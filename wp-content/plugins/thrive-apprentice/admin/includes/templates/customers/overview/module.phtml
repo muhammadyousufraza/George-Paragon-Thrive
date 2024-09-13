@@ -1,0 +1,47 @@
+<div class="tva-card tva-customer-card tva-c-course-container mb-10">
+	<div class="tva-c-course-grid-top">
+		<div class="tva-cc-title pl-10">
+			<input type="checkbox" class="tva-section-select" data-level="module" data-item-id="<#= this.module.get('ID') #>">
+			<div>
+				<#= this.module.get( 'post_title' ) #>
+				<span><?php esc_html_e( 'Module', 'thrive-apprentice' ); ?>&nbsp;<#= this.currentModuleIndex #></span>
+			</div>
+		</div>
+		<div class="tva-cc-status">
+			<# if ( this.locked ) { #>
+
+			<# if (this.courseLocked === true ) { #>
+			<div class="tva-tooltip-parent">
+				<button class="tva-drip-status-btn locked" disabled>
+					<div class="tva-drip-status-btn-icon"><?php tva_get_svg_icon( 'lock-alt_light' ); ?></div>
+					<div class="tva-drip-status-btn-text"><?php echo __( 'Locked', 'thrive-apprentice' ); ?></div>
+				</button>
+				<div class="tva-custom-tooltip"><?php echo __( 'Courses locked with a drip campaign starting in the future<br>cannot be unlocked manually. Once the start date<br>is met, you can edit their access here.', 'thrive-apprentice' ); ?></div>
+			</div>
+			<# } else { #>
+			<button class="tva-drip-status-btn locked click" data-id="<#= this.module.get('ID') #>" data-fn="unlockItem">
+				<div class="tva-drip-status-btn-icon"><?php tva_get_svg_icon( 'lock-alt_light' ); ?></div>
+				<div class="tva-drip-status-btn-text"><?php echo __( 'Locked', 'thrive-apprentice' ); ?></div>
+			</button>
+			<# } #>
+
+			<# } else if ( this.progress == '100%' ) { #>
+			<button class="tva-cc-status-btn tva-status-completed"><?php echo esc_attr__( 'Completed', 'thrive-apprentice' ) ?></button>
+			<# } else if ( this.moduleStart ) { #>
+			<button class="tva-cc-status-btn tva-status-progress"><?php echo esc_attr__( 'Started', 'thrive-apprentice' ) ?></button>
+			<# } else { #>
+			<button class="tva-cc-status-btn tva-status-green">
+				<div class="tva-status-green-icon">
+					<?php tva_get_svg_icon( 'unlock-alt_light' ); ?>
+				</div>
+				<div class="tva-status-green-text">
+					<?php echo esc_attr__( 'Unlocked', 'thrive-apprentice' ) ?>
+				</div>
+			</button>
+			<# } #>
+		</div>
+		<div class="tva-cc-date"><span<#= ! this.moduleStart ? ' class="no-activity"' : '' #>><#= this.moduleStart ? this.moduleStart : '-' #></span></div>
+		<div class="tva-cc-date"><span<#= ! this.moduleFinish ? ' class="no-activity"' : '' #>><#= this.moduleFinish ? this.moduleFinish : '-' #></span></div>
+	</div>
+	<div class="tva-c-course-elems"></div>
+</div>

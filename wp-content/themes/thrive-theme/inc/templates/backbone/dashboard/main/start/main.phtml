@@ -1,0 +1,21 @@
+<!--Actual Template of the Page-->
+<div class="ttd-start-main">
+	<div class="ttd-start-columns-header">
+		<div class="ttd-start-ttb-logo">
+			<?php Thrive_Views::svg_icon( 'start-theme-builder' ); ?>
+		</div>
+		<div class="ttd-start-user-greeting">
+			<?php echo __( 'Hello, ' . wp_get_current_user()->display_name . '!', 'thrive-theme' ); ?>
+		</div>
+	</div>
+	<?php echo tvd_get_individual_plugin_license_message( new Thrive_Theme_Product(), true ); ?>
+	<div class="ttd-start-columns-content">
+		<# TTD.CONST.dashboard_card_columns.forEach(column => {#>
+		<div class="<#= column.class #>">
+			<# column.items.forEach(card => { #>
+			<#= TTD.utils.tpl( 'dashboard/main/start/card')({card: card}) #>
+			<#})#>
+		</div>
+		<# }) #>
+	</div>
+</div>

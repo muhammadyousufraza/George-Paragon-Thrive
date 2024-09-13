@@ -1,0 +1,71 @@
+<div class="tqb-progress-fc">
+	<div class="tqb-progress-font">
+		<label for="tqb_progress_font_size"><?php echo __( 'Font size', 'thrive-graph-editor' ) ?></label>
+		<div>
+			<input type="number" value="<#= model.get( 'font_size' ) #>" data-bind="font_size" id="tqb_progress_font_size">
+			<span class="tqb-pixel">px</span>
+		</div>
+	</div>
+	<div class="tqb-progress-percent tvd-input-field">
+		<span class="tqb-progress-label"><?php echo __( 'Type', 'thrive-graph-editor' ) ?></span>
+		<select name="progress_type" id="tqb-progress-bar-type">
+			<option value="percentage_completed"><?php echo __( 'Percent completed', 'thrive-graph-editor' ); ?></option>
+			<option value="percentage_remaining"><?php echo __( 'Percentage remaining', 'thrive-graph-editor' ); ?></option>
+		</select>
+	</div>
+
+	<div class="tqb-progress-percent tvd-input-field">
+		<span class="tqb-progress-label"><?php echo __( 'Position', 'thrive-graph-editor' ) ?></span>
+		<select name="progress_position" id="tqb-progress-bar-position">
+			<option value="position_top"><?php echo __( 'Above question', 'thrive-graph-editor' ); ?></option>
+			<option value="position_bottom"><?php echo __( 'Below question', 'thrive-graph-editor' ); ?></option>
+		</select>
+	</div>
+
+	<div class="tqb-progress-completed">
+		<label for="tqb_progress_label"><?php echo __( 'Label', 'thrive-graph-editor' ) ?></label>
+		<div class="tqb-per-c">
+			<span class="tqb-default-percentage"><#= model.getPercentToDisplay() #>%</span>
+			<input type="text" data-bind="label_text" id="tqb_progress_label" value="<#= model.get( 'label_text' ) #>">
+		</div>
+	</div>
+</div>
+
+<div class="tqb-progress-sc">
+	<div class="tqb-progress-fill">
+		<label><?php echo __( 'Fill', 'thrive-graph-editor' ) ?></label>
+		<div class="tqb-color-selector-container">
+			<input type="text" id="tqb-color-fill-overlay" value="<#= model.get( 'fill_color' ) #>">
+			<div class="tqb-color-code-holder">
+				<input type="text" readonly class="tqb-color-code" id="tqb-fill-overlay-code" value="<#= model.get( 'fill_color' ) #>">
+			</div>
+		</div>
+	</div>
+	<div class="tqb-progress-next">
+		<label><?php echo __( 'Next step', 'thrive-graph-editor' ) ?></label>
+		<div class="tqb-color-selector-container">
+			<input type="text" id="tqb-color-next-step-overlay" value="<#= model.get( 'next_step_color' ) #>">
+			<div class="tqb-color-code-holder">
+				<input type="text" readonly class="tqb-color-code" id="tqb-color-overlay-code" value="<#= model.get( 'next_step_color' ) #>">
+			</div>
+		</div>
+	</div>
+	<div class="tqb-progress-bg">
+		<label><?php echo __( 'Background', 'thrive-graph-editor' ) ?></label>
+		<div class="tqb-color-selector-container">
+			<input type="text" id="tqb-color-background-overlay" value="<#= model.get( 'background_color' ) #>">
+			<div class="tqb-color-code-holder">
+				<input type="text" readonly class="tqb-color-code" id="tqb-background-color-code" value="<#= model.get( 'background_color' ) #>">
+			</div>
+		</div>
+	</div>
+	<div class="tqb-progress-label">
+		<label><?php echo __( 'Label', 'thrive-graph-editor' ) ?></label>
+		<div class="tqb-color-selector-container">
+			<input type="text" id="tqb-color-label-overlay" value="<#= model.get( 'label_color' ) #>">
+			<div class="tqb-color-code-holder">
+				<input type="text" readonly class="tqb-color-code" id="tqb-color-label-code" value="<#= model.get( 'label_color' ) #>">
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,6 @@
+<a class="tva-add-main-btn click" data-fn="openAddItemModal" data-type="<#= courseItemType #>" href="javascript:void(0)">
+	<# if ( courseItemType === 'assessment' ) { #>
+		<span class="tva-new-badge"><?php echo __( 'New', 'thrive-apprentice' ) ?></span>
+	<# } #>
+	<?php tva_get_svg_icon( 'plus_light' ); ?> <#= label #>
+</a>

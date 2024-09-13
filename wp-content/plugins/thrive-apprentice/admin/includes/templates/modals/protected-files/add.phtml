@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-flex">
+	<h3 class="tva-protected-files-title"><?php echo __( 'Add a protected file', 'thrive-apprentice' ); ?></h3>
+</div>
+<div class="tva-protected-files-scroll">
+	<div class="tva-flex tva-flex-column">
+		<span class="tva-protected-files-label"><?php echo __( 'File title', 'thrive-apprentice' ); ?></span>
+		<input type="text" class="tva-protected-file-label" placeholder="<?php echo __( 'Label your file', 'thrive-apprentice' ); ?>"/>
+	</div>
+	<div class="tva-flex tva-flex-column mt-10">
+		<span class="mt-20 tva-protected-files-label"><?php echo __( 'Access to this file is protected by:', 'thrive-apprentice' ); ?></span>
+		<div class="tva-flex tva-protected-file-product-row">
+			<div>
+				<select data-placeholder="<?php echo __( 'Select one or more products', 'thrive-apprentice' ); ?>" class="tvd-browser-default change" data-fn="productAccessChanged"></select>
+			</div>
+			<a href="<?php echo admin_url( 'admin.php?page=thrive_apprentice#products' ); ?>" rel="noopener" target="_blank" class="tva-btn">
+				<?php tva_get_svg_icon( 'icon-products' ); ?>
+				<?php echo __( 'Manage Products', 'thrive-apprentice' ) ?>
+			</a>
+		</div>
+	</div>
+	<div class="tva-flex tva-protected-file-product-warning mt-5">
+		<?php tva_get_svg_icon( 'info-solid' ); ?>
+		<span><?php echo __( 'Currently, this file is not protected by any product. Protected files are only accessible through products or when added as resources in lessons.', 'thrive-apprentice' ); ?></span>
+	</div>
+	<div class="tva-flex tva-flex-column mt-10">
+		<span class="tva-protected-files-label"><?php echo __( 'File:', 'thrive-apprentice' ); ?></span>
+		<div class="tva-protected-file-upload-wrapper"></div>
+		<div class="tva-protected-file-upload-list"></div>
+	</div>
+</div>
+<div class="tva-flex tva-flex-end mt-20 tva-protected-files-modal-footer">
+	<button class="tva-btn tva-btn-blue click save-with-loader" data-fn="save">
+		<img width="15px" alt="Spinner" data-state="saving" src="<?php echo TVA_Const::plugin_url( 'admin/img/loading-spinner.gif' ); ?>"/>
+		<span data-state="save"><?php echo __( 'Save', 'thrive-apprentice' ); ?></span>
+		<span data-state="saving"><?php echo __( 'Saving', 'thrive-apprentice' ); ?></span>
+	</button>
+</div>

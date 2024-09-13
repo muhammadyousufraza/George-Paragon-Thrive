@@ -1,0 +1,16 @@
+<button class="layout-inner-options-title dropdown-hide click" data-fn="hideSelect">
+	<?php tcb_icon( 'arrow-left-light' ) ?>
+	<?php echo __( 'Load a Layout', 'thrive-theme' ); ?>
+</button>
+
+<div class="tve-beautiful-select">
+	<# this.options().forEach( option => { #>
+	<#= TVE.tpl( 'theme-main/controls/beautiful-select-option' )( { classes: 'tve-option',
+	fn: 'onClick',
+	value: option.value,
+	icon: this.getOptionIcon(option.value),
+	name: option.name,
+	dropDownIcon: false
+	}) #>
+	<# }); #>
+</div>

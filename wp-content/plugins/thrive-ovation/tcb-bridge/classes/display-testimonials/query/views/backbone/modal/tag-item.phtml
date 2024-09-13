@@ -1,0 +1,13 @@
+<label class="checkbox-wrapper">
+	<input type="checkbox" class="click" data-fn="tagCheckboxChanged" <#= this.model.get('selected') ? 'checked' : '' #>>
+	<span class="tap-checkmark"></span>
+	<span class="tap-checkbox-label"></span>
+</label>
+
+<span class="tag-name click" data-fn="tagCheckboxChanged">
+	<#= this.model.get('label') #>
+</span>
+
+<span class="tag-count click" data-fn="tagCheckboxChanged">
+	( <#= this.model.get('count') #> 	<?php echo esc_html__( 'testimonials', 'thrive-ovation' ); ?> )
+</span>

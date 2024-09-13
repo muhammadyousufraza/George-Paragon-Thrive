@@ -1,0 +1,89 @@
+<div class="tve-lg-field-data">
+	<div class="control-grid tve-lg-field-type">
+		<div class="label">
+			<?php echo __( 'Field type', 'thrive-cb' ); ?>
+		</div>
+		<div class="input">
+			<select class="change tve-lg-field-type-select" data-fn="changeType"></select>
+		</div>
+	</div>
+	<div class="tcb-edit-item-category">
+		<div class="control-grid tve-lg-name">
+			<div class="label">
+				<span class="input-label label"><?php echo __( 'Name', 'thrive-cb' ); ?></span>
+				<span class="click tve-field-name-info" data-fn="openFieldNameTooltip" data-paneltlt-hover><?php tcb_icon( 'info-circle-solid' ); ?></span>
+			</div>
+			<div class="input">
+				<input type="text" class="change input tve-lg-field-name" data-fn="changeFieldName"/>
+			</div>
+		</div>
+		<div class="control-grid tve-lg-name-error p-5 mb-5">
+		</div>
+		<div class="control-grid tve-lg-placeholder">
+			<div class="label">
+				<?php echo __( 'Placeholder', 'thrive-cb' ); ?>
+			</div>
+			<div class="input">
+				<input type="text" class="change input tve-lg-field-placeholder" data-fn="changePlaceholder"/>
+			</div>
+		</div>
+		<div class="control-grid switch">
+			<div class="fill">
+				<span class="switch-label"><?php echo __( 'Required', 'thrive-cb' ) ?></span>
+			</div>
+			<div class="tcb-switch tcb-text-right">
+				<label>
+					<input type="checkbox" class="change tve-lg-field-required" data-fn="changeRequired"/>
+					<span class="tcb-lever"></span>
+				</label>
+			</div>
+		</div>
+		<div class="control-grid switch settings-label">
+			<div class="fill">
+				<span><?php echo __( 'Show label', 'thrive-cb' ) ?></span>
+			</div>
+			<div class="tcb-switch tcb-text-right">
+				<label>
+					<input type="checkbox" class="change tve-lg-field-label" data-fn="changeLabel"/>
+					<span class="tcb-lever"></span>
+				</label>
+			</div>
+		</div>
+		<div class="control-grid tve-lg-value">
+			<div class="label">
+				<?php echo __( 'Value', 'thrive-cb' ); ?>
+			</div>
+			<div class="input">
+				<input type="text" class="input tve-lg-field-gdpr-value" />
+			</div>
+		</div>
+		<div class="control-toggle control-consent"></div>
+	</div>
+	<div class="custom-field-settings"></div>
+	<div class="tcb-field-mapping wrap">
+		<div class="tcb-field-mapping-controls control-grid hr-top pt-10">
+			<p class="tcb-f-mapping-title">
+				<?php echo __( 'Custom fields', 'thrive-cb' ); ?>
+			</p>
+			<a href="#" class="click" data-fn="refreshFields">
+			<span>
+				<?php tcb_icon( 'redo-regular' ) ?>
+			</span>
+				<span>
+				<?php echo __( 'Refresh list', 'thrive-cb' ); ?>
+			</span>
+			</a>
+		</div>
+		<div id="tcb-apis-fields-mapping"></div>
+	</div>
+	<p id="tcb-field-mapping-unsupported" class="mt-0 hr-top pt-10">
+		<?php echo __( 'Custom fields (unavailable)', 'thrive-cb' ); ?>
+
+		<span data-paneltlt-hover class="tve-cb-img-info ml-5 tcb-unav-field-mapping-tooltip"><?php tcb_icon( 'info-circle-solid' ); ?></span>
+	</p>
+</div>
+<div class="info-text grey-text sep-bottom pb-5 consent-info" style="display:none;">
+	<span>
+		<?php echo __( 'The old format of GDPR checkbox can not be edited, please remove it and re-add it', 'thrive-cb' ); ?>
+	</span>
+</div>

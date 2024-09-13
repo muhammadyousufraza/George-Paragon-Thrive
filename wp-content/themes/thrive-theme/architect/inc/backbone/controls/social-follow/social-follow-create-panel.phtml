@@ -1,0 +1,29 @@
+<div class="drop-panel panel-light">
+	<div class="link-option-panel">
+		<span class="label"><?php echo __( 'Custom Networks', 'thrive-cb' ) ?></span>
+		<div class="tcb-network-separator">
+			<hr>
+		</div>
+		<div class="tcb-network-icon-picker"></div>
+		<hr>
+		<div data-tab="static" class="static-option">
+			<label><?php echo __( 'Social Name', 'thrive-cb' ) ?></label>
+			<div>
+				<input class="tcb-network-name" type="text" class="text" value="">
+			</div>
+			<label><?php echo __( 'URL', 'thrive-cb' ) ?></label>
+			<div>
+				<input class="tcb-network-url" type="text" class="text" value="">
+			</div>
+		</div>
+		<div class="tcb-flex space-between mt-10">
+			<div class="elem-link-newtab"></div>
+			<div class="elem-link-nofollow"></div>
+		</div>
+	</div>
+	<div class="action-buttons control-grid">
+		<div data-fn="onCancel" class="click tve-button drop-panel-action btn-cancel"><?php echo __( 'Cancel', 'thrive-cb' ) ?></div>
+		<div data-fn="onApply" class="click tve-button drop-panel-action btn-apply"><?php echo __( 'Apply', 'thrive-cb' ) ?></div>
+	</div>
+	<div class="tcb-panel-arrow"></div>
+</div>

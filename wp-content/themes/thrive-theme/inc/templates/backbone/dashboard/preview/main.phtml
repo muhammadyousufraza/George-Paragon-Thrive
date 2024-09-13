@@ -1,0 +1,25 @@
+<div class="preview-content">
+	<div class="preview-bar">
+		<div class="ttd-preview-info-container"></div>
+		<div class="ttd-preview-skins-drop-sidebar">
+			<div class="ttd-preview-active-skin-container"></div>
+			<div class="ttd-preview-skins-list-content"></div>
+		</div>
+		<div class="ttd-preview-activate">
+			<# if ( ! this.model.isActive() ) { #>
+			<button class="ttd-activate-skin-btn click" data-fn="activateSkin"><?php echo __( 'Activate', 'thrive-theme' ); ?></button>
+			<# } #>
+		</div>
+		<div class="ttd-preview-right-buttons">
+			<button class="click ttd-hide-sidebar" data-fn="toggleToolbar"><?php Thrive_Views::svg_icon( 'skin-bar-toggle' ); ?><?php echo __( 'Hide Toolbar', 'thrive-theme' ); ?></button>
+			<button class="click ttd-close-preview" data-fn="close"><?php echo __( 'Close Preview', 'thrive-theme' ); ?></button>
+		</div>
+	</div>
+</div>
+<div class="ttd-preview-right-buttons ttd-buttons-fixed">
+	<button class="click ttd-hide-sidebar" data-fn="toggleToolbar"><?php Thrive_Views::svg_icon( 'skin-bar-toggle' ); ?><?php echo __( 'Show Toolbar', 'thrive-theme' ); ?></button>
+	<button class="click ttd-close-preview" data-fn="close"><?php echo __( 'Close Preview', 'thrive-theme' ); ?></button>
+</div>
+<div class="ttd-site-preview-container ttd-loading">
+	<iframe class="ttd-site-preview" src="<?php echo add_query_arg( [ THRIVE_NO_BAR => 1 ], home_url() ); ?>"></iframe>
+</div>

@@ -1,0 +1,25 @@
+<div class="ttd-sidebar-tab ttd-sidebar-wizard ttd-wizard">
+	<div class="scrollbar-inner">
+		<div class="sidebar-title">
+			<h3><?php esc_html_e( 'Editing', 'thrive-apprentice' ); ?> <#=this.skin.get('name')#></h3>
+			<a href="#design/<#=this.skin.getId()#>"><?php tva_get_svg_icon( 'angle-down' ); ?><?php esc_html_e( 'Back to dashboard', 'thrive-apprentice' ); ?></a>
+		</div>
+		<h2 class="mt-20 mb-20"><?php echo __( 'School Wizard', 'thrive-apprentice' ); ?></h2>
+		<hr class="mr-10 mb-10 ml-10">
+		<# _.each( this.model.sections, function( section ) { #>
+		<div class="wizard-section collapsible">
+			<a class="wizard-section-title toggle-collapse click" data-fn="toggleCollapse" href="javascript:void(0)">
+				<#=section.sidebarLabel#>
+				<span class="flex-mid collpse-icon"><?php echo Thrive_Views::svg_icon( 'chevron-down' ); ?></span>
+			</a>
+			<div class="section-steps" id="wizard-section-<#=section.id#>"></div>
+		</div>
+		<# }, this ) #>
+		<hr class="mt-10 mr-10 ml-10">
+		<h2 class="mt-20 mb-10"><?php echo esc_html__( 'Restart Wizard', 'thrive-apprentice' ); ?></h2>
+		<p class="p-step-1"><?php echo esc_html__( 'Go to the 1st step and resume the settings', 'thrive-apprentice' ); ?></p>
+		<div class="tva-flex-mid">
+			<button class="reset-wiz-btn click mb-30" data-fn="restart"><?php echo esc_html__( 'Restart the Wizard', 'thrive-apprentice' ); ?></button>
+		</div>
+	</div>
+</div>

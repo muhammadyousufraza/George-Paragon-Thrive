@@ -1,0 +1,50 @@
+<div class="tvd-row tvd-no-margin tvd-valign-wrapper">
+	<div class="tvd-col tvd-s12 tvd-m9 tvd-valign tqb-structure-item-card">
+		<div class="tqb-structure-item-card-actions">
+
+			<# if ( ! item.get( 'has_running_test' ) ) { #>
+
+				<# if(item.get('type') === 'results'){ #>
+					<a data-source="<?php echo Thrive_Quiz_Builder::VIDEO_PAGE_RESULTS; ?>" style="padding: 5px;" class='tvd-open-video'><span class='tvd-icon-play tqb-purple-icon'></span></a>
+					<a data-source="<?php echo Thrive_Quiz_Builder::VIDEO_PAGE_REDIRECT; ?>" style="padding: 5px;" class='tvd-open-video'><span class='tvd-icon-play tqb-purple-icon'></span></a>
+				<# } #>
+
+				<# if ( ! item.get( 'mandatory' ) ) { #>
+					<span class="tvd-icon-trash-o tvd-pointer tvd-inline-block tvd-right tqb-structure-item-card-delete"></span>
+				<# } #>
+			<# } #>
+
+			<a href="javascript:void(0);" class="tqb-add-form" style="display: none" id="tqb-results-tooltip">
+				<div class="tvd-tooltip-visible tvd-fixed-bottom tvd-normalize tqb-wizard-tooltip">
+					<span class="page"></span>
+				</div>
+			</a>
+
+		</div>
+		<div class="tqb-structure-item-icon page">
+			<?php tqb_get_svg_icon( 'directions_light' ); ?>
+		</div>
+		<h3 class="tvd-card-title tqb-res-header tvd-truncate">
+			<# if ( ! item.get( 'has_running_test' ) && item.get( 'quiz_type' ) !== 'survey' ) { #>
+				<select id="tqb-result-types"></select>
+			<# } else { #>
+				<#= item.get('name') #>
+			<# } #>
+		</h3>
+		<div class="tqb-edit-button-overlay">
+			<# if ( ! item.get( 'has_running_test' ) ) { #>
+				<a href="javascript:void(0);" class="tqb-add-form tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-purple tvd-btn-small">
+					<?php echo __( 'Manage', 'thrive-quiz-builder' ) ?>
+				</a>
+			<# } else { #>
+				<a class="tqb-view-test tvd-btn-icon tvd-btn-icon-purple" href="javascript:void(0)">
+					<span class="tvd-icon-view"></span><span class="tvd-on-large-and-down"><?php echo __( 'View Test', 'thrive-quiz-builder' ) ?></span>
+				</a>
+			<# } #>
+		</div>
+	</div>
+	<div class="tvd-col tvd-s12 tvd-m3 tvd-valign tqb-structure-item-separator"
+		<#= item.get('last') ? 'style="display: none;"':'' #> >
+		<span class="tvd-icon-chevron-right2"></span>
+	</div>
+</div>

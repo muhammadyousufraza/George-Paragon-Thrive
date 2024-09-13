@@ -1,0 +1,44 @@
+<div class="tvd-row">
+	<div class="tvd-col tvd-m3 tqb-answers-info">
+		<#= startItem #> to <#= stopItem #> of <#= totalItems #> answers
+	</div>
+	<div class="tvd-col tvd-m6 tqb-nav-center">
+
+		<# if( prev ) {#>
+		<a href="javascript:void(0)" class="tqb-previous" data-page="<#= currentPage - 1 #>"> < </a>
+		<# } else { #>
+		<span> < </span>
+		<# } #>
+
+		<# for ( var i in pages ) { #>
+		<# if( currentPage === pages[i] ) { #>
+		<span class="tqb-current"><#= pages[i] #></span>
+		<# } else { #>
+		<a href="javascript:void(0)" class="tqb-page" data-page="<#= pages[i] #>"><#= pages[i] #></a>
+		<# } #>
+		<# } #>
+
+		<# if( next ) {#>
+		<a href="javascript:void(0)" class="tqb-next" data-page="<#= currentPage + 1 #>"> > </a>
+		<# } else { #>
+		<span> > </span>
+		<# } #>
+	</div>
+	<div class="tvd-col tvd-m3">
+		<div class="tvd-input-field">
+			<select class="tqb-perPage">
+				<option value="5"
+				<#= perPage === 5 ? 'selected="selected"' : '' #> ><?php echo __( sprintf( '%s answers', 5 ), 'thrive-quiz-builder' ) ?></option>;
+				<option value="10"
+				<#= perPage === 10 ? 'selected="selected"' : '' #> ><?php echo __( sprintf( '%s answers', 10 ), 'thrive-quiz-builder' ) ?></option>
+				<option value="20"
+				<#= perPage === 20 ? 'selected="selected"' : '' #> ><?php echo __( sprintf( '%s answers', 20 ), 'thrive-quiz-builder' ) ?></option>
+				<option value="50"
+				<#= perPage === 50 ? 'selected="selected"' : '' #> ><?php echo __( sprintf( '%s answers', 50 ), 'thrive-quiz-builder' ) ?></option>
+				<option value="all"
+				<#= perPage === totalItems ? 'selected="selected"' : '' #> ><?php echo __( 'All answers', 'thrive-quiz-builder' ) ?></option>
+			</select>
+			<label for=""><?php echo __( 'Show', 'thrive-quiz-builder' ) ?></label>
+		</div>
+	</div>
+</div>

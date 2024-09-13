@@ -1,0 +1,68 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-flex tva-flex-row tva-space-between">
+	<div class="tva-label-section-title tva-email-template-section-title">
+		<?php esc_html_e( 'Email delivery service', 'thrive-apprentice' ); ?>
+		<div class="tva-info-icon tva-relative tva-tooltip-parent tva-mega-tooltip">
+			<?php tva_get_svg_icon( 'info-solid' ); ?>
+
+			<?php if ( function_exists( 'wp_mail_smtp' ) ) : ?>
+				<div class="tva-custom-tooltip tva-tt-dark p-15 mt-50">
+					<p class="mb-0 mt-0">
+						<a href="https://www.wpbeginner.com/plugins/how-to-set-up-wp-mail-smtp-with-any-host-ultimate-guide/" target="_blank"><?php echo __( 'WP Mail SMTP is set as the default service', 'thrive-apprentice' ) ?></a>
+						<?php echo __( 'to ensure better deliverability than the WordPress mailer. You can select any other service like SendGrid, Brevo, etc.', 'thrive-apprentice' ); ?>
+						<a href="//help.thrivethemes.com/en/collections/2541842-general#api-connections" target="_blank"><?php echo __( 'Learn more', 'thrive-apprentice' ) ?></a>
+					</p>
+				</div>
+			<?php else : ?>
+				<div class="tva-custom-tooltip tva-tt-dark p-15 mt-50">
+					<p class="mb-0 mt-0">
+						<?php esc_html_e( 'You can optionally choose to integrate with an email delivery service such as PostMark or SendGrid for increased deliverability. Otherwise emails will be sent directly from your server.', 'thrive-apprentice' ); ?>
+					</p>
+				</div>
+			<?php endif; ?>
+
+		</div>
+	</div>
+</div>
+<div class="tva-flex tva-flex-row mt-20 mb-30 tva-email-template-section-sel">
+	<select id="tva-email-apis" class="change" data-fn="selectApiConnection"></select>
+</div>
+<?php if ( ! function_exists( 'wp_mail_smtp' ) ) : ?>
+<div class="tva-own-site-warning tva-email-template-section-sel">
+	<div class="tva-assessment-settings-notice" style="--tva-assessment-settings-notice-color:#ff9441; --tva-assessment-settings-notice-background: #fff5ec;">
+		<div class="tva-flex tva-flex-row">
+			<?php tva_get_svg_icon( 'info-circle_light' ); ?>
+			<div class="tva-flex tva-flex-column ml-15 tva-space-center">
+						<span>
+							<?php echo __( 'Using the default WordPress mailer is known to result in low delivery rates. We strongly recommend using', 'thrive-apprentice' ); ?>
+						<a href="<?php echo 'https://wpmailsmtp.com'; ?>" rel="noopener" target="_blank"><?php echo __( 'WP Mail SMTP', 'thrive-apprentice' ); ?></a>
+							<?php echo __( 'and/or a transactional email service.', 'thrive-apprentice' ); ?>
+						</span>
+						<span>
+							<a href="https://www.wpbeginner.com/plugins/how-to-set-up-wp-mail-smtp-with-any-host-ultimate-guide/" rel="noopener" target="_blank"><?php echo __( 'Learn more here', 'thrive-apprentice' ); ?></a>
+						</span>
+			</div>
+		</div>
+	</div>
+</div>
+<?php endif; ?>
+
+<div class="tva-flex tva-flex-row tva-space-between mt-20">
+	<h1 class="tva-main-heading"><?php echo __( 'Email templates', 'thrive-apprentice' ); ?></h1>
+</div>
+<div class="tva-email-templates-filter tva-flex tva-flex-row tva-space-between mt-20">
+	<select id="email-template" class="change" data-fn="renderEmailTemplate">
+		<option value=""><?php echo esc_html__( 'Select email template', 'thrive-apprentice' ); ?></option>
+	</select>
+</div>
+<div class="mt-10" id="tva-email-template-form-wrapper"></div>

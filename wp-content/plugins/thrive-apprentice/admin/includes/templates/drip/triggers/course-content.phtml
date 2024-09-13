@@ -1,0 +1,19 @@
+<div class="tva-drip-content">
+	<div class="tva-opt">
+		<div class="tva-label"><?php esc_html_e( 'Content to be completed', 'thrive-apprentice' ); ?></div>
+		<select id="tva-content-types" data-bind="type"></select>
+		<div class="tva-course-content-module-tooltip ttd-wizard ttd-tooltip persistent">
+			<p class="tt-message">
+				<?php tva_get_svg_icon( 'info-circle_strong' ); ?>
+				<?php echo esc_html__( 'A module is considered to be complete when all the lessons inside the module are marked as completed', 'thrive-apprentice' ); ?></p>
+			<div class="ui-tooltip-action">
+				<button class="ttd-tooltip-dismiss click" data-fn="hideTooltip" type="button"><?php echo esc_html__( 'GOT IT', 'thrive-apprentice' ); ?></button>
+			</div>
+			<div class="ui-tt-arrow top"></div>
+		</div>
+	</div>
+</div>
+<div class="tva-search-wrapper">
+	<select id="tva-search-content"></select>
+</div>
+

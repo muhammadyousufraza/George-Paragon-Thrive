@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-flex tva-align-center tva-space-between">
+	<span><#= name #></span>
+	<# if(id) { #>
+	<a href="javascript:void(0);" class="click tva-flex tva-align-center" data-fn="removeFileItem" data-id="<#= id #>"><?php tva_get_svg_icon( 'times-circle_light' ); ?></a>
+	<# } #>
+</div>
+<# if(id) { #>
+<div class="tva-flex tva-protected-files-upload-progress">
+	<div class="tva-protected-files-upload-progress-bar"></div>
+</div>
+<# } #>

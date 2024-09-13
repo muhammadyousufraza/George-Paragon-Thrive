@@ -1,0 +1,15 @@
+<p class="grey m-0"><?php echo __( 'Campaign is triggered when', 'thrive-ult' ) ?></p>
+<div class="control-grid pb-5">
+	<select class="tvu-fluentcrm-trigger-dropdown tvd-select2">
+		<option value="tags"><?php echo __( 'Contact is added to tags', 'thrive-ult' ) ?></option>
+	</select>
+</div>
+
+<p class="grey m-0"><?php echo __( 'Which tags should trigger the countdown', 'thrive-ult' ) ?></p>
+<div class="tvu-trigger-tags-select-multiple control-grid pb-5">
+	<select id="tvu-fluentcrm-trigger-tags" multiple="multiple"></select>
+</div>
+
+<a href="<#= kb_article #>" target="_blank">
+	<p class="help-link m-0 mt-10 tvu-btn-flat"><?php echo __( 'Click here for help with incoming webhooks', 'thrive-ult' ) ?></p>
+</a>

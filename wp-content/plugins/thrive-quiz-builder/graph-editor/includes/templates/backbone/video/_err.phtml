@@ -1,0 +1,9 @@
+<# var style = item.get('video_style'); #>
+<# var new_question = parseInt( item.get('new_question') ); #>
+<div class="tge-video-form tge-video-style-<#= 0 === new_question ? style.selected : TGE_Editor.default_video_style #>">
+	<div class="tqb-video-container-responsive tqb-video-empty-err">
+		<div class="tqb-video-empty-err-msg">
+			<#= TVE_Dash.sprintf( TGE_Editor.t.add_valid_video_url, [ TVE_Dash.upperFirst( item.get('source') ) ] ) #>
+		</div>
+	</div>
+</div>

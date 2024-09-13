@@ -1,0 +1,67 @@
+<div class="tvd-modal-content" id="tcm-modal-content">
+	<div class="tcm-modal-header">
+		<h2>
+			<# if ( keyword.get('name') == '' ) { #>
+			<?php echo __( 'Create New Auto-Link', Thrive_Comments_Constants::T ); ?>
+			<# } else { #>
+			<?php echo __( 'Edit New Auto-Link', Thrive_Comments_Constants::T ); ?>
+			<# } #>
+		</h2>
+		<hr>
+	</div>
+
+	<div class="tcm-modal-body">
+		<form class="tcm-modal" id="tcm-submit-labels">
+
+			<div class="clearfix">
+				<div class="tvd-input-field tcm-tags-input tcm-moderation-margin01">
+					<input class="tvd-skip-modal-save" id="" type="text" value="<# if ( typeof keyword !== 'undefined') { #><#=keyword.get('name')#><# } #>" data-bind="tags" placeholder="<?php echo __( 'Add your Keywords here', Thrive_Comments_Constants::T ) ?>">
+				</div>
+				<div id="keyword-error" class="tcm-red" hidden>
+					<?php echo __( 'Please enter the keyword for this auto-link', Thrive_Comments_Constants::T ); ?>
+				</div>
+				<div id="keyword-char-error" class="tcm-red" hidden>
+					<?php echo __( 'The field accepts only alpha-numeric characters', Thrive_Comments_Constants::T ); ?>
+				</div>
+			</div>
+
+			<div class="tvd-input-field tcm-moderation-margin02 tcm-icon-anchor">
+				<label for="tcm_link">
+					<?php echo __( 'Link URL: ', Thrive_Comments_Constants::T ); ?>
+				</label>
+				<input class="tcm_link tcm-autocomplete small-text tcm-keyword-input" data-type="text" id="tcm_link" data-setting="value" placeholder="http://" type="text" value="<# if ( typeof keyword !== 'undefined') { #><#=keyword.get('value')#><# } #>" data-flag="<# if ( typeof keyword !== 'undefined' ) { #><#=keyword.get('post_id')#><# } #>">
+				<select id="approve_post_id" class=" tvd-browser-default" style="display: none;"></select>
+				<div id="link-error" class="tcm-red" hidden>
+					<?php echo __( 'Please enter the full URL you want to link this keyword to', Thrive_Comments_Constants::T ); ?>
+				</div>
+			</div>
+
+			<div class="tvd-input-field tcm-moderation-keywords">
+				<input id="keyword_new_tab" class="filled-in tcm-keyword-input" data-type="checkbox" type="checkbox" name="keyword_new_tab" data-setting="new_tab"
+				<# if ( typeof keyword !== 'undefined' && keyword.get( 'new_tab' ) ) { #> checked
+				<# } #> >
+				<label class="checkbox-no-follow" for="keyword_new_tab">
+					<?php echo __( 'Open link in new tab', Thrive_Comments_Constants::T ); ?>
+				</label>
+			</div>
+
+			<div class="tvd-input-field tcm-moderation-keywords">
+				<input id="keyword_no_follow" class="filled-in tcm-keyword-input" data-type="checkbox" type="checkbox" name="keyword_no_follow" data-setting="no_follow"
+				<# if ( typeof keyword !== 'undefined' && keyword.get( 'no_follow' ) ) { #> checked
+				<# } #> >
+				<label class="checkbox-no-follow" for="keyword_no_follow">
+					<?php echo __( 'No-follow link', Thrive_Comments_Constants::T ); ?>
+				</label>
+			</div>
+
+			<div class="tvd-row">
+				<a class="tvd-waves-effect tvd-btn-flat-dark tvd-btn-flat tvd-btn-flat-secondary tvd-modal-close tcm-discard-changes" href="javascript:void(0);">
+					<?php echo __( 'CANCEL', Thrive_Comments_Constants::T ); ?>
+				</a>
+				<button class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green tcm-save-keyword tvd-right" href="javascript:void(0);">
+					<?php echo __( 'SAVE', Thrive_Comments_Constants::T ); ?>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>

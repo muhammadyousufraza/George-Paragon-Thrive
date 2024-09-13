@@ -1,0 +1,12 @@
+<span class="fill">
+	<input class="input search-template-input change keydown" data-fn="searchTemplate" value="" placeholder="Search"/>
+    <span>
+	    <?php tcb_icon( 'search-regular' ); ?>
+    </span>
+</span>
+<# if(TVE.CONST.post_type === 'post' ) { #>
+<div class="thrive-filter-templates click" data-tooltip="Filters" data-side="top" data-fn="openPostTypesDropdown">
+	<span></span>
+	<div class="post-formats-list-container"></div>
+</div>
+<# } #>

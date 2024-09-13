@@ -1,0 +1,83 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-university
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<h1 class="tva-main-heading mb-30"><?php echo __( 'Login & access restriction', 'thrive-apprentice' ) ?></h1>
+
+<h4 class="tva-section-title">
+	<?php esc_html_e( 'Login & registration page', 'thrive-apprentice' ); ?>
+	<div class="tva-info-icon tva-relative tva-tooltip-parent tva-mega-tooltip">
+		<?php tva_get_svg_icon( 'info-solid' ); ?>
+		<div class="tva-custom-tooltip">
+			<p class="mt-0 mb-10"><strong><?php esc_html_e( 'Set your login and registration page', 'thrive-apprentice' ); ?></strong></p>
+			<p class="mb-5"><?php esc_html_e( "This is the page that you'll direct visitors and existing members to if they want to log into their account or sign up for a new account.", 'thrive-apprentice' ); ?></p>
+			<p class="mb-10"><?php esc_html_e( 'You can either choose an existing page on your site or create a new one. Visually edit the page using Thrive Architect to match your brand.', 'thrive-apprentice' ); ?></p>
+			<p>
+				<a href="https://help.thrivethemes.com/en/articles/4430018-how-to-set-up-the-login-and-registration-page-in-thrive-apprentice" target="_blank" rel="noopener"><?php esc_html_e( 'Learn more about the login and registration page', 'thrive-apprentice' ); ?></a>
+			</p>
+		</div>
+	</div>
+</h4>
+<div class="tva-login-card">
+	<p>
+		<?php echo __( 'On what page would you like your login & registration page to be?', 'thrive-apprentice' ) ?>
+	</p>
+
+	<p class="mb-30">
+		<a href="https://thrivethemes.com/tkb_item/how-to-set-up-the-login-page-in-thrive-apprentice/" target="_blank" rel="noopener"><?php _e( ' Learn more about the login & registration page', 'thrive-apprentice' ); ?></a>
+	</p>
+
+	<div class="tva-login-states-container mt-10"></div>
+</div>
+
+<h4 class="tva-section-title mt-30">
+	<?php esc_html_e( 'Access restriction rules', 'thrive-apprentice' ); ?>
+	<div class="tva-info-icon tva-relative tva-tooltip-parent tva-mega-tooltip">
+		<?php tva_get_svg_icon( 'info-solid' ); ?>
+		<div class="tva-custom-tooltip">
+			<p class="mt-0 mb-10"><strong><?php esc_html_e( "What should happen if a visitor tries to view content that they don't have access to?", 'thrive-apprentice' ); ?></strong></p>
+			<p class="mb-10"><?php esc_html_e( 'Set the access restriction behavior depending on the two contexts:', 'thrive-apprentice' ); ?></p>
+			<p class="mb-10"><em><?php esc_html_e( '1) Guest tries to access a course that is only available to logged in users', 'thrive-apprentice' ); ?></em>
+				<?php esc_html_e( '- this occurs when a non-logged in visitor to your site tries to access any course that is not public.', 'thrive-apprentice' ); ?>
+			</p>
+			<p class="mb-10"><em><?php esc_html_e( '2) User tries to access a course that they don\'t have access to', 'thrive-apprentice' ); ?></em>
+				<?php esc_html_e( '- this occurs when a logged in user tries to access a premium course without purchasing it.', 'thrive-apprentice' ); ?>
+			</p>
+			<p class="mb-10"><?php esc_html_e( 'This allows you to closely control behavior depending on the context.', 'thrive-apprentice' ); ?></p>
+			<p class="mb-10"><?php esc_html_e( 'Note that you can override these settings at course level in the access restrictions tab of each course.', 'thrive-apprentice' ); ?></p>
+			<p class="mb-10">
+				<a href="http://help.thrivethemes.com/en/articles/4870316-how-does-the-restricted-content-option-work-in-thrive-apprentice" target="_blank" rel="noopener"><?php esc_html_e( 'Learn more about restricted content settings', 'thrive-apprentice' ); ?></a>
+			</p>
+		</div>
+	</div>
+</h4>
+<div class="tva-login-card">
+	<p>
+		<?php echo esc_html__( 'Decide what should happen if a user tries to access your product without the necessary permissions.', 'thrive-apprentice' ); ?>
+		<br>
+		<?php echo esc_html__( 'These are global settings that can be overridden at product level if needed.', 'thrive-apprentice' ); ?>
+	</p>
+	<div class="tva-access-restriction-wrapper">
+		<# Object.entries(TVA.accessRestriction.settings).forEach( function ( setting ) { #>
+		<# if ( ! ['custom', 'action_button_display'].includes( setting[0]) ) { #>
+		<div class="tva-flex tva-restriction-card tva-<#= setting[0] #>">
+			<div class="tva-restriction-icon">
+				<?php tva_get_svg_icon( '<#= setting[0] #>' ); ?>
+			</div>
+			<span class="tva-restriction-title"><#= TVA.t.access_rule_select_labels[ setting[0] ] #></span>
+			<span class="tva-open-modal">
+				<?php tva_get_svg_icon( '<#= setting[1].option #>' ); ?>
+				<a href="javascript:void(0)" class="click" data-fn="openRestrictionsModal" data-scope="<#= setting[0] #>"><#= TVA.accessRestriction.options[ setting[1].option ] #></a>
+			</span>
+		</div>
+		<# } } ) #>
+	</div>
+</div>

@@ -1,0 +1,47 @@
+<div id="tvd-modal1" class="tvd-modal">
+	<div class="tvd-modal-content" id="tcm-modal-content">
+		<div class="tcm-modal-header">
+			<a href="#" class="tvd-modal-action tvd-modal-close tvd-modal-close-x">
+				<i class="tvd-icon-close2 tcm-discard-changes"></i>
+			</a>
+			<h2>
+				<?php echo __( 'Customize and translate labels', Thrive_Comments_Constants::T ); ?>
+			</h2>
+			<hr style="margin: 0;">
+		</div>
+
+		<div class="tcm-modal-body">
+			<div class="tcm-modal" id="tcm-submit-labels">
+				<# _.each( labels, function( value, key ) { #>
+				<div class="tvd-row">
+					<div class="tvd-col tvd-s6">
+						<label class="tcm-modal-label" for="tcm-label">
+							<#= value['default'] #>
+						</label>
+					</div>
+					<div class="tvd-col tvd-m6">
+						<input type="text" class="tcm-label tcm-input-label" name='tcm_label' placeholder="<#= value['text'] #>" value="<#= value['text'] #>" data-key="<#= key #>" data-default="<#= value['default'] #>"/>
+					</div>
+				</div>
+				<# } ) #>
+				<div class="tcm-m50"></div>
+
+			</div>
+		</div>
+
+		<div class="tvd-row labels-footer">
+			<hr style="margin: 0 0 20px;">
+			<div class="tvd-col tvd-s12 tvd-m6">
+				<a class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-gray tvd-modal-close tcm-discard-changes" href="javascript:void(0);">
+					<?php echo __( 'CANCEL', Thrive_Comments_Constants::T ); ?>
+				</a>
+			</div>
+			<div class="tvd-col tvd-s12 tvd-m6">
+				<button class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green tvd-modal-close tcm-save-labels tvd-right">
+					<?php echo __( 'SAVE', Thrive_Comments_Constants::T ); ?>
+				</button>
+			</div>
+		</div>
+
+	</div>
+</div>

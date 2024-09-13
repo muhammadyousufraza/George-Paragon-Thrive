@@ -1,0 +1,17 @@
+<# var label_name = display_type ? 'add_image_label_' +  display_type  : 'add_image_label_text' #>
+<div class="tge-image-form">
+	<div class="tge-image-placeholder <#= display_type ? 'tge-placeholder-' + display_type : '' #>"></div>
+
+	<div class="tge-image-overlay"></div>
+
+	<a href="javascript:void(0)" class="tge-add-image <#= display_type ? 'tge-add-image-' + display_type : '' #>">
+		<#= TGE_Editor.t[label_name] #>
+	</a>
+
+	<a class="tge-remove-image tvd-white-text" href="javascript:void(0)">
+		<i class="tvd-icon-trash-o tvd-pointer"></i>
+	</a>
+	<a class="tge-change-image tvd-white-text" href="javascript:void(0)">
+		<?php echo __( 'Change<br/>Image', 'thrive-graph-editor' ) ?>
+	</a>
+</div>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="109" viewBox="0 0 120 109">
+    <defs>
+        <circle id="q8kid4hrpa" cx="54" cy="54.408" r="54"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g transform="translate(-879 -280) translate(278 153) translate(601 127)">
+                        <mask id="imcr56k94b" fill="#fff">
+                            <use xlink:href="#q8kid4hrpa"/>
+                        </mask>
+                        <use fill="#EAEFEF" xlink:href="#q8kid4hrpa"/>
+                        <g stroke-width="2" mask="url(#imcr56k94b)">
+                            <g>
+                                <path fill="#4BB380" fill-opacity=".6" stroke="#368A79" stroke-linejoin="round" d="M57.888 48.226c4.49 1.855 7.418 6.234 7.418 11.091v11.581H0V59.672c0-4.976 3.07-9.435 7.719-11.21 4.703-1.797 9.345-3.118 13.926-3.964 3.11 2.478 7.13 3.971 11.518 3.971 4.467 0 8.55-1.546 11.682-4.102 4.41.802 8.758 2.089 13.043 3.86z" transform="translate(22 39)"/>
+                                <path stroke="#368A79" stroke-linecap="round" d="M51.531 60.714L51.531 68.878M16.327 60.714L16.327 68.878" transform="translate(22 39)"/>
+                                <path fill="#FFF" stroke="#247BA0" stroke-linejoin="round" d="M32.653 40.816C40.343 40.816 50 31.68 50 20.408S42.234 0 32.653 0c-9.58 0-17.347 9.137-17.347 20.408s9.658 20.408 17.347 20.408z" transform="translate(22 39)"/>
+                                <path fill="#D6ECF6" stroke="#247BA0" stroke-linejoin="round" d="M34.362.004c.576.022 5.794.698 10.344 5.543 4.684 4.988 5.422 12.232 5.278 13.277-.145 1.045-10.298 2.986-13.956-5.498-.353-.819-.657-1.604-.917-2.354-.262 2.128-.89 4.173-2.145 5.72-4.406 5.432-17.637 4.958-17.653 4.44-.016-.52-.28-9.108 4.97-15.004C23.997 1.955 27.99.46 30.96.178c1.608-.153 2.923-.09 3.3-.127.024-.03.045-.046.062-.047h.021c.004-.009.01-.008.018 0z" transform="translate(22 39)"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(-879 -280) translate(278 153) translate(601 127) translate(69 4.408)">
+                            <path fill="#ADDE9C" stroke="#368A79" stroke-linejoin="round" stroke-width="2" d="M28.939 0c11.598 0 21 9.402 21 21v.857c0 11.598-9.402 21-21 21h-6.98c-.36 0-.718-.009-1.074-.027l-9.035 9.034c-.39.39-1.024.39-1.414 0-.188-.187-.293-.442-.293-.707V39.265l.003-.043C4.6 35.442.959 29.075.959 21.857V21c0-11.598 9.402-21 21-21h6.98z"/>
+                            <circle cx="12.694" cy="21.429" r="2.551" fill="#368A79"/>
+                            <circle cx="24.939" cy="21.429" r="2.551" fill="#368A79"/>
+                            <circle cx="37.184" cy="21.429" r="2.551" fill="#368A79"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

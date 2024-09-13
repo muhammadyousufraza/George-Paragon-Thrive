@@ -1,0 +1,24 @@
+<div class="thrive-display-testimonials-filter display-testimonial-search">
+	<input type="text" class="input" data-fn="search" placeholder="<?php echo esc_html__( 'Search', 'thrive-ovation' ); ?>"/>
+	<?php tcb_icon( 'search-regular' ); ?>
+</div>
+
+<div class="thrive-display-testimonials-filter display-testimonials-select title-filter"></div>
+<div class="thrive-display-testimonials-filter display-testimonials-select image-filter"></div>
+
+<div class="thrive-display-testimonials-filter display-testimonials-checkbox">
+	<label class="checkbox-wrapper">
+		<input type="checkbox" class="click" data-fn="onCheckboxChange">
+		<span class="tap-checkmark"></span>
+		<span class="tap-checkbox-label"><?php echo esc_html__( 'Word count from', 'thrive-ovation' ); ?></span>
+	</label>
+	<div class="input-container">
+		<input type="number" class="input" min="0" max="1000" data-type="from" data-fn="onInputChange"/>
+		<span style="padding:0 10px"><?php echo esc_html__( 'to', 'thrive-ovation' ); ?></span>
+		<input type="number" class="input" min="0" max="1000" data-type="to" data-fn="onInputChange"/>
+	</div>
+</div>
+
+<div class="thrive-display-testimonials-filter display-testimonials-select2">
+	<select id="thrive-display-testimonials-tags-select"></select>
+</div>

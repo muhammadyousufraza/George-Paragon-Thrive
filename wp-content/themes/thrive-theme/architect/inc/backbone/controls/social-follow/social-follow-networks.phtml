@@ -1,0 +1,15 @@
+<div class="panel-text">
+	<?php echo __( 'Social Networks', 'thrive-cb' ); ?>
+</div>
+
+<div class="tve-style-options" style="padding-left: 10px !important;padding-right: 10px !important;">
+	<div class="tcb-network-container control-grid wrap">
+		<# _.each( networks, function ( network, k ) { #>
+		<span class="tcb-network-wrapper click change" data-fn="item_toggle" data-value="<#= k #>">
+			<#= parseInt(k) ? TVE.icon('link-variant2','svg', 'sidebar', 'tcb-preview-network'):TVE.icon(k,'svg', 'sidebar','tcb-preview-network') #>
+			<span class="tcb-network-label"> <#= network #> </span>
+		</span>
+		<# }); #>
+	</div>
+	<div class="tcb-custom-networks-container pb-20" style="width:100%"></div>
+</div>

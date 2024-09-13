@@ -1,0 +1,51 @@
+<div class="tge-question-settings-inner">
+	<div class="tge-elems-top">
+		<div id="tge-required-switcher">&nbsp;</div>
+
+		<div id="tge-form-size">
+			<span><?php echo __( 'Form size', 'thrive-graph-editor' ) ?></span>
+
+			<input id="tge-form-size-small" name="form_size" data-bind="settings.form_size" type="radio" value="1"/>
+			<label for="tge-form-size-small"><?php echo __( 'Small', 'thrive-graph-editor' ) ?></label>
+
+			<input id="tge-form-size-medium" name="form_size" data-bind="settings.form_size" type="radio" value="4"/>
+			<label for="tge-form-size-medium"><?php echo __( 'Medium', 'thrive-graph-editor' ) ?></label>
+
+			<input id="tge-form-size-large" name="form_size" data-bind="settings.form_size" type="radio" value="7"/>
+			<label for="tge-form-size-large"><?php echo __( 'Large', 'thrive-graph-editor' ) ?></label>
+
+			<input id="tge-form-size-extra-large" name="form_size" data-bind="settings.form_size" type="radio" value="10"/>
+			<label for="tge-form-size-extra-large"><?php echo __( 'Extra large', 'thrive-graph-editor' ) ?></label>
+		</div>
+	</div>
+
+	<div id="tge-answer-limits-container">
+		<div id="tge-question-switcher-settings">&nbsp;</div>
+		<div id="tge-answer-limits">
+
+			<div class="tge-left-container">
+				<span class="tge-aas-labels"><?php echo __( 'Parameters', 'thrive-graph-editor' ) ?></span>
+				<label for="tge-answer-min-limit"><?php echo __( 'Minimum character limit', 'thrive-graph-editor' ) ?></label>
+				<input id="tge-answer-min-limit" class="tvd-validate" name="answer_limits.min.value" data-bind="settings.answer_limits.min.value" type="text" value="<#= settings.get('answer_limits').min.value #>" placeholder="<#= settings.get('answer_limits').min.value #>">
+
+				<label for="tge-answer-max-limit"><?php echo __( 'Maximum character limit', 'thrive-graph-editor' ) ?></label>
+				<input id="tge-answer-max-limit" class="tvd-validate" name="answer_limits.max.value" data-bind="settings.answer_limits.max.value" type="text" value="<#= settings.get('answer_limits').max.value #>" placeholder="<#= settings.get('answer_limits').max.value #>">
+
+				<label for="tge-question-placeholder"><?php echo __( 'Placeholder text', 'thrive-graph-editor' ); ?></label>
+			</div>
+
+			<div class="tge-right-container">
+				<span class="tge-aas-labels"><?php echo __( 'Message displayed', 'thrive-graph-editor' ) ?></span>
+				<input id="answer_limits.min.error_message" class="tvd-validate" name="answer_limits.min.error_message" data-bind="settings.answer_limits.min.error_message" type="text" value="<#= settings.get('answer_limits').min.error_message #>" placeholder="<#= settings.get('answer_limits').min.error_message #>">
+
+				<input id="answer_limits.max.error_message" class="tvd-validate" name="answer_limits.max.error_message" data-bind="settings.answer_limits.max.error_message" type="text" value="<#= settings.get('answer_limits').max.error_message #>" placeholder="<#= settings.get('answer_limits').max.error_message #>">
+
+				<input id="tge-question-placeholder" class="tvd-validate" name="placeholder" data-bind="settings.placeholder" type="text" value="<#= settings.get('placeholder') #>" placeholder="<#= settings.get('placeholder') #>">
+			</div>
+		</div>
+	</div>
+
+	<p class="tge-mb15"><?php echo __( 'Preview', 'thrive-graph-editor' ) ?></p>
+	<textarea id="tge-open-question-preview" rows="<#= settings.get('form_size') #>" placeholder="<#= settings.get('placeholder') #>"></textarea>
+	<p id="tge-min-error_message-preview" class="tge-chars"><#= settings.get('answer_limits').min.error_message #></p>
+</div>

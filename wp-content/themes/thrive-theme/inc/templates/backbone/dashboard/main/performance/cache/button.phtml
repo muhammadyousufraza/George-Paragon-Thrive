@@ -1,0 +1,7 @@
+<a href="#"
+   target="_blank"
+   class="ttd-btn main-btn blue click <#= this.model.get( 'fn' ) === 'install' ? 'empty' : 'fill' #> <#= this.model.get( 'class' ) #>"
+   data-fn="<#= this.model.get( 'fn' ) #>"><#= this.model.get( 'text' ) #><?php Thrive_Views::svg_icon( 'check_light' ); ?></a>
+<# if ( this.plugin.get( 'configured' ) ) { #>
+<button class="ttd-btn blue fill icon-only ttd-right ml-20 click" data-tooltip="<?php echo esc_html__( 'Restore recommended settings', 'thrive-theme' ); ?>" data-fn="showConfirmSettings"><?php Thrive_Views::svg_icon( 'reset-icon' ); ?></button>
+<# } #>

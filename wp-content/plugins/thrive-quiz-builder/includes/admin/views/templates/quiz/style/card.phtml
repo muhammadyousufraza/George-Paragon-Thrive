@@ -1,0 +1,18 @@
+<div class="tvd-card-content tqb-style-image" style="background-image: url('<#= model.get('cover') #>')"></div>
+<div class="tvd-card-action">
+	<div class="tvd-no-margin tvd-valign-wrapper">
+		<div class="tvd-valign tqb-style-options tvd-relative">
+			<p class="tvd-no-margin tqb-quiz-style">Quiz style: <span><#= model.get('name') #></span></p>
+
+			<# if ( ThriveQuizB.qna_quiz_styles.includes( parseInt( model.get('id') ) ) ) { #>
+				<a target="_blank" href="<#= qna_editor_url #>" class="tvd-waves-effect tqb-edit-design tvd-waves-light tvd-btn tvd-btn-purple tvd-btn-small">
+					<?php echo __( 'Edit Design', 'thrive-quiz-builder' ) ?>
+				</a>
+			<# } #>
+
+			<a class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-purple tvd-btn-small tqb-new-button" href="javascript:void(0)">
+				<?php echo __( 'Change', 'thrive-quiz-builder' ) ?>
+			</a>
+		</div>
+	</div>
+</div>

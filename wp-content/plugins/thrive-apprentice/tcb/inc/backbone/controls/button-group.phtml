@@ -1,0 +1,28 @@
+<div class="<#=this.get_css_class()#>button-group-holder control-grid no-space tve-group-<#= (this.model.config.name || '').replace(/ /g,'-') #>">
+	<# if(this.model.config.name) { #><span class="button-group-name label grey-text">
+		<#= this.model.config.name #>
+		<# if ( this.model.config.instructions ) { #>
+			<span class="click" data-type="<#=this.model.config.instructions.type#>" data-url="<#=this.model.config.instructions.url#>" data-link="<#=this.model.config.instructions.link#>" data-fn="openInstructionsLightbox"><#= TVE.icon( this.model.config.instructions.type + "-instructions" ) #></span>
+		<# } #>
+		<# if ( this.model.config.info ) { #>
+			<span class="click tcb-vertical-info" data-paneltlt-hover data-fn="openTooltip" <#= this.model.config.icontooltip ? 'data-tooltip="' + this.model.config.icontooltip + '"' : ''#> <#= this.model.config.iconside ? 'data-side="' + this.model.config.iconside + '"' : ''#>><?php tcb_icon( 'info-circle-solid' ); ?></span>
+	<# } #>
+	</span>
+	<# } #>
+	<div class="items-<#=this.model.config.buttons.length#> input tve-btn-group">
+		<# _.each(this.get_buttons(), function(button) { #>
+		<div class="tve-btn click <#= button.default? 'active default':'' #> <#= button.text=='' || !button.text ?'':'btn-text' #>"
+		<#= button.tooltip ? ' data-tooltip="' + button.tooltip + '"' : ''#> <#= button.tooltip_side ? ' data-side="' + button.tooltip_side + '"' : ''#>
+		<# button.data && _.each(button.data, function(v,k) { #> data-<#= k #>="<#= v #>" <# }); #>
+		data-fn="_click"
+		data-value="<#= button.value #>"<#= button.hidden ? ' style="display:none"' : '' #>>
+		<#= button.icon?TVE.icon(button.icon, 'svg', false, button.icon_cls || ''):'' #>
+		<#= button.text #>
+	</div>
+	<# }); #>
+</div>
+</div>
+<div class="control-grid full-width">
+	<div style="display: none" class="fill tcb-text-right control-summary padding-top-5 w-100"></div>
+	<div style="display: none" class="info-text"><#=this.model.config.info_text || ''#></div>
+</div>

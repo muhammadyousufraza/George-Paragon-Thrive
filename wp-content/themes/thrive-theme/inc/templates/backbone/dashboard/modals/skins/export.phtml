@@ -1,0 +1,16 @@
+<h3><?php echo __( 'Export theme', 'thrive-theme' ); ?></h3>
+
+<div class="modal-user-actions">
+	<div class="ttd-export-name">
+		<label class="default-text" for="export-archive-name"><?php echo __( 'Archive Name', 'thrive-theme' ); ?></label>
+		<input type="text" id="export-archive-name" placeholder="<?php echo __( 'Archive name', 'thrive-theme' ); ?>" class="keyup" data-fn="keyup">
+		<div class="ttd-error-message" style="display: none;">
+			<?php echo sprintf( __( 'Please specify the name of the export archive.', 'thrive-theme' ), '<span class="ttd-secondary-template-type"></span>' ); ?>
+		</div>
+	</div>
+</div>
+
+<div class="ttd-modal-footer">
+	<button class="ttd-left grey click" data-fn="close"><?php echo __( 'Cancel', 'thrive-theme' ); ?></button>
+	<button class="ttd-right blue click" data-fn="export"><?php echo __( 'Export', 'thrive-theme' ); ?></button>
+</div>

@@ -1,0 +1,53 @@
+<div class="tve-link-options flex space-between wrap">
+	<span class="label"><#= this.model.config.label #></span>
+	<div class="tve-link-tabs"></div>
+	<div class="tve-link-boxes">
+		<div data-tab="link" style="display: none;">
+			<div>
+				<div class="tve-static-link control-grid no-space">
+					<div id="tcb-link-search-control" class="fill pt-0"></div>
+					<a href="javascript:void(0)" class="click tve-static-link-settings ml-5" data-fn="open_link_search_settings"><?php tcb_icon( 'settings' ); ?></a>
+				</div>
+				<div class="tcb-flex space-between">
+					<div class="elem-link-newtab"></div>
+					<div class="elem-link-nofollow"></div>
+				</div>
+			</div>
+		</div>
+		<div data-tab="jump" style="display: none;">
+
+			<div class="tve-jump-smooth-anim"></div>
+			<div class="tcb-jump-target-box control-grid">
+				<span><?php echo __( 'Target', 'thrive-cb' ); ?></span>
+				<a id="tcb-jump-target" class="click" data-fn="scrollTo"></a>
+			</div>
+			<div class="tcb-no-target mb-10 mt-5">
+				<span class="info-text"><?php echo __( 'The target element was removed from the page. Please modify the target.', 'thrive-cb' ) ?></span>
+
+			</div>
+			<div id="tcb-jumplink-buttons" class="tcb-flex space-between">
+				<div id="select-target" class="tve-button click" data-fn="selectJumpTarget"><?php echo __( 'Select target', 'thrive-cb' ); ?></div>
+				<div id="remove-target" class="tve-button tve-remove click" data-fn="removeJumpTarget"><?php echo __( 'Remove target', 'thrive-cb' ); ?></div>
+				<div id="modify-target" class="tve-button click" data-fn="modifyJumpTarget"><?php echo __( 'Modify target', 'thrive-cb' ); ?></div>
+			</div>
+
+		</div>
+		<div data-tab="dynamic">
+			<div class="tcb-dynamic-link-select-category mb-5"></div>
+			<div class="tcb-dynamic-link-select"></div>
+			<div class="tve-dynamic-link-shortcode input control-grid no-space" style="display: none">
+				<input type="text" class="tve-input-control" placeholder="<?php esc_attr_e( 'Enter shortcode... [ example ]', 'thrive-cb' ); ?>">
+			</div>
+			<div class="tcb-flex space-between wrap checkboxes-wrapper">
+				<div class="elem-link-newtab"></div>
+				<div class="elem-link-nofollow"></div>
+			</div>
+			<div id="tcb-dynamic-link-buttons" class="tcb-flex space-between">
+				<div id="select-dynamic" class="tve-button click" data-fn="setDynamicLink"><?php echo __( 'Insert', 'thrive-cb' ); ?></div>
+				<div id="remove-dynamic" class="tve-button tve-remove click" data-fn="removeDynamicLink"><?php echo __( 'Remove', 'thrive-cb' ); ?></div>
+				<div id="modify-dynamic" class="tve-button click" data-fn="setDynamicLink"><?php echo __( 'Update', 'thrive-cb' ); ?></div>
+			</div>
+		</div>
+	</div>
+</div>
+

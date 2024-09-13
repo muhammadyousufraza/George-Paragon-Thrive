@@ -1,0 +1,40 @@
+<div class="ttd-typography-main">
+	<div class="ttd-typography-top">
+		<# if(this.model.is_active()) { #>
+		<span class="active-status active"><?php echo __( 'Currently Active', 'thrive-theme' ); ?></span>
+		<# } else { #>
+		<button class="active-status not-active click" data-fn="set_active"><?php echo __( 'Make Active', 'thrive-theme' ); ?></button>
+		<# } #>
+		<button class="height-toggle click" data-fn="toggle">
+			<span class="text"><?php echo __( 'Expand', 'thrive-theme' ); ?></span>
+			<?php Thrive_Views::svg_icon( 'caret-down-double' ); ?>
+		</button>
+	</div>
+	<div id="ttd-typography-block-<#= this.model.get('ID') #>" class="ttd-typography-content">
+		<iframe src="<#=this.model.getPreviewUrl() #>" class="typography-frame" title="Typography Preview"></iframe>
+	</div>
+</div>
+<div class="ttd-typography-footer">
+	<div class="ttd-typography-title">
+		<div class="typography-name click edit" data-fn="name_edit"><#= this.model.get('post_title') #></div>
+		<div class="typography-name state-edit" style="display: none"><input class="keyup change title" type="text" data-fn="save_title" value="<#=this.model.get( 'post_title' )#>"></div>
+		<div class="edit click" data-fn="name_edit"><?php Thrive_Views::svg_icon( 'icon-title-edit' ); ?></div>
+	</div>
+
+	<# if(!this.model.is_active()) { #>
+	<button class="click" data-fn="delete">
+		<?php Thrive_Views::svg_icon( 'template-icon-delete' ); ?>
+		<span class="ttd-icon-label"><?php echo __( 'Remove', 'thrive-theme' ); ?></span>
+	</button>
+	<# } #>
+	<button class="click" data-fn="reset">
+		<?php Thrive_Views::svg_icon( 'template-icon-reset' ); ?>
+		<span class="ttd-icon-label"><?php echo __( 'Reset', 'thrive-theme' ); ?></span>
+	</button>
+
+	<a href="<#= this.model.get('edit_url') #>" target="_blank">
+		<?php Thrive_Views::svg_icon( 'template-icon-edit' ); ?>
+		<span class="ttd-icon-label"><?php echo __( 'Edit', 'thrive-theme' ); ?></span>
+	</a>
+
+</div>

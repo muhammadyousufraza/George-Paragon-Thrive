@@ -1,0 +1,31 @@
+<div class="control-grid switch">
+	<div class="fill">
+		<span class="switch-label"> <?php echo __( 'Link to Social Global Field', 'thrive-theme' ) ?> </span>
+
+	</div>
+	<div class="tcb-switch">
+		<label>
+			<input class="tve-checkbox change" data-fn="changeTab" type="checkbox">
+			<span class="tcb-lever"></span>
+		</label>
+	</div>
+</div>
+
+<div class="link-option-panel">
+	<div class="static-option">
+		<label><?php echo __( 'Target URL', 'thrive-theme' ) ?></label>
+		<div>
+			<input type="text" class="text" value="">
+		</div>
+	</div>
+	<div class="dynamic-option">
+		<div class="info-text grey-text">
+			<span>
+				<?php echo __( 'You can edit this link in the ', 'thrive-theme' ); ?>
+				<a href="<?php echo admin_url( 'admin.php?page=tve_dash_smart_site#global_fields' ); ?>" target="_blank" class="blue-text">
+					<?php echo __( 'Smart Site Dashboard', 'thrive-theme' ); ?>
+				</a>
+			</span>
+		</div>
+	</div>
+</div>

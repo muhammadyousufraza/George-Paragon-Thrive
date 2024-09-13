@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-quiz-builder
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<label for="tqb-allowed-answers-input" class="tqb-tooltip-parent">
+	<?php echo __( 'Maximum selectable answers', 'thrive-graph-editor' ) ?> <i class="tvd-icon-question-circle"></i>
+	<div class="tqb-custom-tooltip tqb-tooltip-inherited">
+		<?php echo esc_attr( __( 'The number limit depends on the number of answers available on each question. When allowing multiple answers, we recommend enabling quiz navigation in Quiz Settings.', 'thrive-graph-editor' ) ); ?>
+		<a href="https://help.thrivethemes.com/en/articles/6823181-set-up-multiple-choice-questions-for-your-quiz-in-thrive-quiz-builder" target="_blank" rel="noopener"><?php esc_html_e( 'Learn more', 'thrive-graph-editor' ); ?></a>
+	</div>
+</label>
+<input id="tqb-allowed-answers-input" class="input" data-fn="input" type="number" min="" max="" onclick="this.select()"/>

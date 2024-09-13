@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+use TVA\Reporting\Main;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="apprentice-dashboard-container">
+	<div class="apprentice-top-section">
+		<div>
+			<h2 class="mt-0">
+				<?php echo esc_html__( 'Latest activity', 'thrive-apprentice' ); ?>
+			</h2>
+
+			<div class="apprentice-dashboard-wrapper no-focus">
+				<?php Main::render_report( 'tve_reporting_filter', 'courses_filter' ); ?>
+				<?php Main::render_report( 'tve_reporting_filter', 'users_filter' ); ?>
+				<?php Main::render_report( 'tve_reporting_filter', 'date_filter' ); ?>
+			</div>
+		</div>
+	</div>
+
+	<div class="apprentice-info mb-20">
+		<span class="tva-info-icon text-blue">
+			<?php tva_get_svg_icon( 'info-circle_light' ); ?>
+		</span>
+		<span class="apprentice-info-text can-truncate">
+			<?php echo esc_html__( 'The latest activity chart displays all events related to members interacting with your content. To only see the activity of a single member, choose them in the members filter at the top of this report.', 'thrive-apprentice' ); ?>
+		</span>
+		<span class="apprentice-info-button text-blue click" data-fn="toggleShowMore">
+			<span><?php echo esc_html__( 'View more', 'thrive-apprentice' ); ?></span>
+			<span><?php echo esc_html__( 'View less', 'thrive-apprentice' ); ?></span>
+		</span>
+	</div>
+
+	<div class="apprentice-dashboard-wrapper lg-card">
+		<div class="col-8-8">
+			<?php Main::render_report(
+				'tve_reporting_timeline',
+				'latest_activity',
+				'info',
+				[
+					'report-title'          => __( 'Details', 'thrive-apprentice' ),
+					'report-items-per-page' => 20,
+					'report-expanded-view'  => '',
+					'has-pagination'        => 1,
+				] ); ?>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,64 @@
+<div class="panel-text">
+	<#= this.model.config.label #>
+</div>
+<div class="<#=this.box_class()#>">
+	<div class="tve-clear-style flex-center m-10 click" data-fn="clearStyle">
+		<?php tcb_icon( 'times-regular' ) ?>
+		<span><?php echo __( 'Clear style', 'thrive-cb' ); ?></span>
+	</div>
+	<div class="tve-icon-style-wrapper">
+		<div class="tve-icon-header flex-center space-evenly">
+			<span><?php echo __( 'Circle', 'thrive-cb' ); ?></span>
+			<span><?php echo __( 'Rounded', 'thrive-cb' ); ?></span>
+			<span><?php echo __( 'Square', 'thrive-cb' ); ?></span>
+		</div>
+		<div class="tve-icon-label flex-center m-10" data-type="outlined">
+			<hr>
+			<span class="mr-10 ml-10"><?php echo __( 'Outlined', 'thrive-cb' ); ?></span>
+			<hr>
+		</div>
+		<div class="tve-icon-style-section">
+			<div class="tve-select-item click tve-icon-style p-5 m-0" data-fn="select" data-value="circle_outlined">
+				<div class="tve-icon-data"></div>
+			</div>
+			<div class="tve-select-item click tve-icon-style p-5 m-0" data-fn="select" data-value="rounded_outlined">
+				<div class="tve-icon-data"></div>
+			</div>
+			<div class="tve-select-item click tve-icon-style p-5 m-0" data-fn="select" data-value="square_outlined">
+				<div class="tve-icon-data"></div>
+			</div>
+		</div>
+		<div class="tve-icon-label flex-center m-10" data-type="shaded">
+			<hr>
+			<span class="mr-10 ml-10"><?php echo __( 'Shaded', 'thrive-cb' ); ?></span>
+			<hr>
+		</div>
+		<div class="tve-icon-style-section">
+			<div class="tve-select-item click tve-icon-style p-5 m-0" data-fn="select" data-value="circle_shaded">
+				<div class="tve-icon-data"></div>
+			</div>
+			<div class="tve-select-item click tve-icon-style p-5 m-0" data-fn="select" data-value="rounded_shaded">
+				<div class="tve-icon-data"></div>
+			</div>
+			<div class="tve-select-item click tve-icon-style p-5 m-0" data-fn="select" data-value="square_shaded">
+				<div class="tve-icon-data"></div>
+			</div>
+		</div>
+		<div class="tve-icon-label flex-center m-10" data-type="inverted">
+			<hr>
+			<span class="mr-10 ml-10"><?php echo __( 'Inverted', 'thrive-cb' ); ?></span>
+			<hr>
+		</div>
+		<div class="tve-icon-style-section mb-10">
+			<div class="tve-select-item click tve-icon-style p-5 m-0" data-fn="select" data-value="circle_inverted">
+				<div class="tve-icon-data"></div>
+			</div>
+			<div class="tve-select-item click tve-icon-style p-5 m-0" data-fn="select" data-value="rounded_inverted">
+				<div class="tve-icon-data"></div>
+			</div>
+			<div class="tve-select-item click tve-icon-style p-5 m-0" data-fn="select" data-value="square_inverted">
+				<div class="tve-icon-data"></div>
+			</div>
+		</div>
+	</div>
+</div>

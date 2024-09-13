@@ -1,0 +1,28 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="click" data-fn="toggleLog">
+	<div>
+		<# if(model.get('type') === 'method') { #>
+		<strong><?php echo __( 'Method ->', 'thrive-apprentice' ); ?> <#- model.get('data') #></strong>
+		<# } else { #>
+		<span><?php echo __( 'Type:', 'thrive-apprentice' ); ?> <#- model.get('type') #>, <?php echo __( 'Identifier:', 'thrive-apprentice' ); ?> <#- model.get('identifier') #> <?php echo __( 'Product:', 'thrive-apprentice' ); ?> <#- model.get('product') #></span>
+		<# } #>
+	</div>
+	<div>
+		<#= model.get('date') #>
+		<# if(model.get('type') !== 'method') { #>
+		<span class="tve-debug-icon tve-debug-slide">
+				<span class="tve-churn-icon-keyboard_arrow_down"></span>
+			</span>
+		<# } #>
+	</div>
+</div>

@@ -1,0 +1,82 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+use TVA\Reporting\Main;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+
+<div class="tva-students-main-top">
+	<div class="tva-students-box">
+		<div class="tva-customers-top mb-10">
+			<h1 class="tva-main-heading"><?php echo __( 'Members', 'thrive-apprentice' ) ?></h1>
+		</div>
+
+		<div class="tva-flex tva-align-center mb-10">
+			<div class="tva-students-subtitle"><?php echo __( 'Engagement Summary', 'thrive-apprentice' ) ?></div>
+			<div class="tva-students-sep ml-10 mr-25"></div>
+			<?php Main::render_report( 'tve_reporting_filter', 'date_filter' ); ?>
+		</div>
+
+		<div class="tva-stat-cards-wrapper tva-space-between">
+			<div class="col-2-8">
+				<?php Main::render_report( 'tve_reporting_card', 'active_members', 'light-bulb' ); ?>
+			</div>
+			<div class="col-2-8">
+				<?php Main::render_report( 'tve_reporting_card', 'new_members', 'users', [ 'report-title' => 'New members' ] ); ?>
+			</div>
+			<div class="col-2-8">
+				<?php Main::render_report( 'tve_reporting_card', 'enrollments', 'arrow-in', [ 'report-title' => 'New enrollments', 'has-chart' => 0 ] ); ?>
+			</div>
+			<div class="col-2-8">
+				<?php Main::render_report( 'tve_reporting_card', 'average_products', 'stat-bars' ); ?>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="tva-students-box">
+	<div class="tva-students-main-info mt-50 mb-20">
+		<?php echo __( 'Member Management', 'thrive-apprentice' ) ?>&nbsp;<span>&bull;&nbsp;<span class="tva-students-total"></span>&nbsp;<?php echo __( 'Total', 'thrive-apprentice' ) ?>&nbsp;<span class="tva-students-label"></span></span>
+	</div>
+
+	<div class="tva-space-between tva-flex">
+		<div id="tva-filters-wrapper" class="mb-10"></div>
+
+		<div>
+			<a href="javascript:void(0);" class="click tva-btn tva-btn-blue mr-10" data-fn="addCustomer">
+				<?php tva_get_svg_icon( 'add-btn' ); ?>
+				<?php echo __( 'Add member', 'thrive-apprentice' ) ?>
+			</a>
+			<a href="javascript:void(0);" class="click tva-btn tva-btn-blue" data-fn="importCustomer">
+				<?php tva_get_svg_icon( 'import-customer' ); ?>
+				<?php echo __( 'Import member', 'thrive-apprentice' ) ?>
+			</a>
+		</div>
+	</div>
+
+	<div class="tva-customers-head tva-flex">
+		<div class="tva-customer-name"><?php echo __( 'Members', 'thrive-apprentice' ) ?></div>
+		<div class="tva-customer-email"><?php echo __( 'Email address', 'thrive-apprentice' ) ?></div>
+		<div class="tva-customer-enrolled click" data-order="desc" data-col="max_created" data-fn="orderBy">
+			<?php echo __( 'Joined', 'thrive-apprentice' ) ?>
+			<?php tva_get_svg_icon( 'long-arrow-left_solid' ) ?>
+		</div>
+		<div class="tva-customer-seen"><?php echo __( 'Last seen', 'thrive-apprentice' ) ?></div>
+		<div class="tva-customer-courses click" data-order="desc" data-col="courses_count" data-fn="orderBy">
+			<?php echo __( 'Courses', 'thrive-apprentice' ) ?>
+			<?php tva_get_svg_icon( 'long-arrow-left_solid' ) ?>
+		</div>
+	</div>
+
+	<div id="tva-customers"></div>
+
+	<div class="tva-pagination tva-flex mt-20"></div>
+</div>

@@ -1,0 +1,95 @@
+<?php
+
+use TCB\Notifications\Main;
+
+$has_saved_custom_content = Main::get_custom_content();
+$display_image            = ! $has_saved_custom_content ? 'display-image' : '';
+$custom_template_id       = Main::get_notification_post_id();
+?>
+
+<div class="notifications-templates-wrapper active-template">
+	<div class="templates-type-wrapper">
+		<div class="templates-type">
+			<span>
+				<?php echo __( 'Currently active template', 'thrive-cb' ) ?>
+			</span>
+		</div>
+	</div>
+	<div class="templates-wrapper">
+		<div class='notifications-previews-wrapper notifications-default' data-id="0">
+			<div class="notifications-info">
+				<div class="notification-title">
+					<?php echo __( 'Default template', 'thrive-cb' ) ?>
+				</div>
+				<span class="info-icon">
+					<div class="info-tooltip" style="display:none">
+						<?php echo __( 'The default template cannot be edited, but will<br>load leaner code on your web pages.', 'thrive-cb' ); ?>
+					</div>
+				</span>
+				<div class="active-badge">
+					<?php echo __( 'Active', 'thrive-cb' ); ?>
+				</div>
+				<button class="activate-notification-template click">
+					<?php echo __( 'Make active', 'thrive-cb' ); ?>
+				</button>
+			</div>
+			<div class='notifications-wrapper'>
+				<div class='notification-wrapper notification-success display-image'></div>
+				<div class='notification-wrapper notification-error display-image'></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="notifications-templates-wrapper inactive-templates <?php echo $has_saved_custom_content ? ' other-templates' : '' ?>">
+	<div class="templates-type-wrapper">
+		<div class="templates-type">
+			<span><?php echo __( $has_saved_custom_content ? 'Other available template ' : 'Inactive templates', 'thrive-cb' ) ?></span>
+			<span class="info-icon">
+				<div class="info-tooltip" style="display:none">
+					<?php echo __( 'To activate a template you must<br>first press Edit and then click Save', 'thrive-cb' ); ?>
+				</div>
+			</span>
+
+		</div>
+	</div>
+	<div class="templates-wrapper">
+		<div class='notifications-previews-wrapper notifications-custom' data-id='<?= $custom_template_id ?>'>
+			<div class="notifications-info">
+				<div class="notification-title">
+					<?php echo __( 'Custom templates', 'thrive-cb' ) ?>
+				</div>
+				<span class="info-icon">
+					<div class="info-tooltip" style="display:none">
+						<?php echo __( 'Custom notification templates can be visually<br>edited to fit your website brand.', 'thrive-cb' ); ?>
+					</div>
+				</span>
+				<div class="active-badge">
+					<?php echo __( 'Active', 'thrive-cb' ); ?>
+				</div>
+				<button class="activate-notification-template click">
+					<?php echo __( 'Make active', 'thrive-cb' ); ?>
+				</button>
+			</div>
+			<div class='notifications-wrapper'>
+				<div class='notification-wrapper notification-success <?= $display_image ?>'>
+					<?php if ( $has_saved_custom_content ) {
+						echo Main::get_notification_content( false, 'success', true, true );
+					} ?>
+				</div>
+				<div class='notification-wrapper notification-warning <?= $display_image ?>'>
+					<?php if ( $has_saved_custom_content ) {
+						echo Main::get_notification_content( false, 'warning', true, true );
+					} ?>
+				</div>
+				<div class='notification-wrapper notification-error <?= $display_image ?>'>
+					<?php if ( $has_saved_custom_content ) {
+						echo Main::get_notification_content( false, 'error', true, true );
+					} ?>
+				</div>
+				<div class='actions-wrapper'>
+					<a class='edit-notifications' href='<#= editLink #>' target="_blank"><?php echo $has_saved_custom_content ? __( 'Edit template', 'thrive-cb' ) : __( 'Edit and activate template', 'thrive-cb' ) ?></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

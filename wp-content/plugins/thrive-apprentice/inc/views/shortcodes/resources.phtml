@@ -1,0 +1,37 @@
+<?php
+/** @var TVA_Lesson $lesson */
+$lesson                  = empty( $data['lesson'] ) ? new TVA_Lesson( get_the_ID() ) : $data['lesson'];
+$class                   = empty( $data['class'] ) ? '' : ' ' . $data['class'];
+$resources               = $lesson->get_resources();
+$settings                = tva_get_settings_manager()->localize_values();
+$resources_label         = isset( $settings['template']['resources_label'] ) ? $settings['template']['resources_label'] : 'Resources';
+$course_structure_labels = TVA_Dynamic_Labels::get( 'course_structure' );
+$resources_label         = isset( $course_structure_labels['course_resources']['plural'] ) ? $course_structure_labels['course_resources']['plural'] : $resources_label;
+$resources_open          = isset( $settings['template']['resources_open'] ) ? $settings['template']['resources_open'] : 'Open';
+$resources_open          = isset( $course_structure_labels['resources_open']['singular'] ) ? $course_structure_labels['resources_open']['singular'] : $resources_open;
+$resources_download      = isset( $settings['template']['resources_download'] ) ? $settings['template']['resources_download'] : 'Download';
+$resources_download      = isset( $course_structure_labels['resources_download']['singular'] ) ? $course_structure_labels['resources_download']['singular'] : $resources_download;
+
+if ( ! empty( $resources ) ) : ?>
+	<div class="tva-template-lesson-resources<?php echo $class; ?>">
+		<h3 class="tva-main-color-forced"><?php echo esc_html( $resources_label ); ?></h3>
+		<?php foreach ( $resources as $resource ) : ?>
+			<?php $url = $resource->get_url(); ?>
+			<?php if ( $url ) : ?>
+				<div class="tva-resource-item">
+					<div class="tva-resource-icon"><?php echo $resource->icon_html(); ?></div>
+					<div class="tva-resource-details">
+						<h5 class="tva-resource-title"><?php echo esc_html( $resource->title ); ?></h5>
+						<div class="tva-resource-summary"><p><?php echo $resource->content; ?></p></div>
+					</div>
+					<div class="tva-resource-get">
+						<?php if ( $resource->is_downloadable() ) : ?>
+							<a rel="noindex nofollow noopener" href="<?php echo esc_attr( $resource->get_download_url() ); ?>" class="tva-resource-download tva-ghost-main-color"><?php echo $resources_download ?></a>
+						<?php endif; ?>
+						<a rel="noindex nofollow noopener" href="<?php echo esc_attr( $url ); ?>" class="tva-resource-open tva-ghost-main-color" target="_blank"><?php echo $resources_open ?></a>
+					</div>
+				</div>
+			<?php endif; ?>
+		<?php endforeach; ?>
+	</div>
+<?php endif;

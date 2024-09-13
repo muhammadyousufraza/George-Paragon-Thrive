@@ -1,0 +1,16 @@
+<div class="clearfix">
+	<span>
+		<?php echo __( 'Tags', 'thrive-graph-editor' ) ?>
+	</span>
+	<div class="tge-tag-tooltip">
+		<i class="tvd-icon-question-circle"></i>
+		<div class="tge-info-tooltip">
+			<?php echo __( 'Visitors who choose this answer will be assigned the following tags.', 'thrive-graph-editor' ) ?>
+		</div>
+	</div>
+</div>
+<div class="clearfix">
+	<div class="tvd-input-field tqb-tags-input">
+		<input class="tvd-skip-modal-save" id="<#= item.cid #>" type="text" value="<#= _.escape(item.get('tags')) #>" data-bind="tags" placeholder="<?php echo __( 'Add your tags here', 'thrive-graph-editor' ) ?>">
+	</div>
+</div>

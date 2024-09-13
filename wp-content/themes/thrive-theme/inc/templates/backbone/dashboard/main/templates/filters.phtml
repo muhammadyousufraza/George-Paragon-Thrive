@@ -1,0 +1,40 @@
+<div class="ttd-dropdown-w-count">
+	<div class="ttd-dwc-active click" data-fn="toggleDropdown">
+		<span class="templates-title"><#= this.model.get( 'title' ) #><?php echo ' ' . __( 'Templates', 'thrive-theme' ) ?></span>
+		<span class="templates-counter"><#= this.model.get('counter') #></span>
+		<?php Thrive_Views::svg_icon( 'angle-down_light' ); ?>
+	</div>
+	<div class="ttd-dwc-drop">
+		<div class="ttd-dwc-elem type-button click <# if ( this.model.get( 'template' ) === 'core' ) { #>active<# } #>" data-fn="mainFilter"
+			 data-template="core">
+			<h3><?php echo __( 'Core Templates', 'thrive-theme' ) ?></h3>
+			<p><?php echo __( "Only show the most basic templates that control your website's look.", 'thrive-theme' ) ?></p>
+		</div>
+		<div class="ttd-dwc-elem type-button click <# if ( this.model.get( 'template' ) === 'homepage' ) { #>active<# } #>" data-fn="mainFilter" data-template="homepage">
+			<h3><?php echo __( 'Homepage Templates', 'thrive-theme' ) ?></h3>
+			<p><?php echo __( 'Show templates specifically for building your homepage.', 'thrive-theme' ) ?></p>
+		</div>
+		<div class="ttd-dwc-elem type-button click <# if ( this.model.get( 'template' ) === 'archive' ) { #>active<# } #>" data-fn="mainFilter"
+			 data-template="archive">
+			<h3><?php echo __( 'Archives', 'thrive-theme' ) ?></h3>
+			<p><?php echo __( 'Only show Archives List Templates.', 'thrive-theme' ) ?></p>
+		</div>
+		<div class="ttd-dwc-elem type-list">
+			<h3><?php echo __( 'Custom Post Templates', 'thrive-theme' ) ?></h3>
+			<p class="ttd-w-sep"><?php echo __( 'Only show templates for these custom posts:', 'thrive-theme' ) ?></p>
+
+			<ul class="ttd-dwc-posts">
+				<li class="click" data-fn="postType" data-post-type="all"><?php echo __( 'All Custom Posts', 'thrive-theme' ) ?></li>
+				<# _.each( this.contentTypes, ( type ) => { #>
+				<li class="click <# if ( type.hideInDropdown ) { #>hide-element<# } #> <# if ( this.model.get( 'post_type' ) === type.key ) { #>active<# } #>" data-fn="postType" data-post-type="<#= type.key #>">
+					<#= type.name #>
+				</li>
+				<# }); #>
+			</ul>
+		</div>
+		<div class="ttd-dwc-elem type-button click <# if ( this.model.get( 'template' ) === 'all' ) { #>active<# } #>" data-fn="mainFilter" data-template="all">
+			<h3><?php echo __( 'All Templates', 'thrive-theme' ) ?></h3>
+			<p><?php echo __( 'All available templates for the active theme.', 'thrive-theme' ) ?></p>
+		</div>
+	</div>
+</div>

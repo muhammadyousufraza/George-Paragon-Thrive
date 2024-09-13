@@ -1,0 +1,256 @@
+<div class="min-comment" style="display: none"></div>
+<div class="tcm-moderation-comment-container">
+	<div class="tcm-moderation-comment <# if ( comment.get('tcm_featured') == 1 ) { #> moderation-badge <# } #> moderation-<#- comment.get('status') #> clear-this" data-comment-id="<#- comment.get('id')#>">
+		<div class="tcm-moderation-left">
+
+			<div class="moderation-header">
+
+				<div>
+					<input type="checkbox" id="<#- comment.get('id') #>" class="tcm-comment-checkbox"/>
+					<label for="<#- comment.get('id') #>"></label>
+				</div>
+
+				<div class="moderation-img no-image" data-email-hash="<#- comment.get('email_hash') #>" data-email="<#- comment.get( 'author_email' ) #>" data-social-avatar="<#- comment.get('social_avatar') #>" data-src="<#- comment.get('author_avatar_urls') #>" style="background-image: url('<#- comment.get('author_avatar_urls') #>');"></div>
+
+				<div class="flex-on-big">
+					<div>
+						<h4>
+							<#- comment.get('author_name')#>
+						</h4>
+
+						<# if ( comment.get('author_email') ) { #>
+						<div class="tooltipelem tcm-icon-envelope">
+							<span class="tooltiptext">
+								<a class="tcm-tooltip-link" href="javascript:void(0)" data-clipboard-text="<#- comment.get('author_email')#>"><#- comment.get('author_email')#></a>
+							</span>
+						</div>
+						<# } #>
+
+						<# if ( comment.get('author_url') ) { #>
+						<div class="tooltipelem tcm-icon-globe">
+							<span class="tooltiptext"><a class="tcm-tooltip-link" href="<#- comment.get('author_url')#>" target="_blank"><#- comment.get('author_url')#></a></span>
+						</div>
+						<# } #>
+
+						<br/>
+						<a href="javascript:void(0)">
+							<#- comment.get('tcm_comments_author_count') #> <?php echo __( 'comments' ); ?>
+						</a>
+						<a href="javascript:void(0)">
+							<#- comment.get('tcm_comments_upvotes') #> <?php echo __( 'upvotes' ); ?>
+						</a>
+						<a href="javascript:void(0)">
+							<#- comment.get('tcm_comments_downvotes') #> <?php echo __( 'downvotes' ); ?>
+						</a>
+					</div>
+
+					<div class="assigned<# if ( comment.get('tcm_needs_reply') == 0 ) { #> and-replied<# } #>">
+						<div class="assigned-to">
+							<# if ( comment.get('tcm_delegate_author') !== 'Unassigned' ) { #>
+							<?php echo __( 'Assigned to ', Thrive_Comments_Constants::T ) ?>
+							<# } #>
+							<#-comment.get('tcm_delegate_author')#> -
+						</div>
+						<a href="#" class="no-reply-needed">
+							<# if ( comment.get('tcm_needs_reply') == 0 ) { #>
+							<?php echo __( 'Replied', Thrive_Comments_Constants::T ) ?>
+							<# } #>
+							<# if ( comment.get('tcm_needs_reply') == 1 ) { #>
+							<?php echo __( 'Reply Needed', Thrive_Comments_Constants::T ) ?>
+							<# } #>
+							<# if ( comment.get('tcm_needs_reply') == 2 ) { #>
+							<?php echo __( 'No Reply Needed', Thrive_Comments_Constants::T ) ?>
+							<# } #>
+						</a>
+
+						<div class="awaiting-moderation">
+							<# if ( comment.get('status') === ThriveComments.const.moderation.unapprove ) { #>
+							<?php echo __( 'Awaiting Moderation', Thrive_Comments_Constants::T ) ?>
+							<# } #>
+						</div>
+					</div>
+					<div style="display: none;" class="replace-after-success"></div>
+				</div>
+
+			</div>
+			<div class="moderation-text">
+				<p>
+					<#= comment.get('content').rendered #>
+				</p>
+			</div>
+			<div class="moderation-footer clear-this">
+				<# if ( comment.get('status') == ThriveComments.const.moderation.unapprove ) { #>
+				<a href="#" class="change-status status-approve tcm-focus-action" data-key="a" data-status="changeApprove" data-value="<#- ThriveComments.const.moderation.approve #>" data-replace="<?php echo __( 'Unapprove', Thrive_Comments_Constants::T ) ?>"><?php echo __( 'Approve', Thrive_Comments_Constants::T ) ?></a>
+				<# } #>
+				<# if ( comment.get('status') == ThriveComments.const.moderation.approve ) { #>
+				<a href="#" class="change-status status-approve tcm-focus-action" data-key="u" data-status="changeApprove" data-value="<#- ThriveComments.const.moderation.unapprove #>" data-replace="<?php echo __( 'Approve', Thrive_Comments_Constants::T ) ?>"><?php echo __( 'Unapprove', Thrive_Comments_Constants::T ) ?></a>
+				<# } #>
+				<# if( comment.get('status') == ThriveComments.const.moderation.approve || comment.get('status') == ThriveComments.const.moderation.unapprove ) { #>
+				<a href="javascript:void(0)" class="edit-status" data-key="e" data-status="editComment" data-value="edit"><?php echo __( 'Edit', Thrive_Comments_Constants::T ) ?></a>
+				<# } #>
+
+				<# if ( comment.get('status') == ThriveComments.const.moderation.approve || comment.get('status') == ThriveComments.const.moderation.unapprove ) { #>
+				<a href="javascript:void(0)" data-key="g" class="delegate-comment" data-stauts="delegateReply"><?php printf( __( 'Dele%sg%sate', Thrive_Comments_Constants::T ), '<span>', '</span>' ); ?></a>
+				<# } #>
+				<# if ( comment.get('status') == ThriveComments.const.moderation.approve || comment.get('status') == ThriveComments.const.moderation.unapprove ) { #>
+				<# if ( comment.get('tcm_needs_reply') == 0 ) { #>
+				<a href="#" class="change-status" data-key="n" data-status="replyNeeded" data-value="1"><?php echo __( 'Needs Reply', Thrive_Comments_Constants::T ) ?></a>
+				<# } #>
+				<# if ( comment.get('tcm_needs_reply') == 1 ) { #>
+				<a href="#" class="change-status" data-key="n" data-status="replyNeeded" data-value="2"><?php echo __( 'No Reply Needed', Thrive_Comments_Constants::T ) ?></a>
+				<# } #>
+				<# if ( comment.get('tcm_needs_reply') == 2 ) { #>
+				<a href="#" class="change-status" data-key="n" data-status="replyNeeded" data-value="1"><?php echo __( 'Needs Reply', Thrive_Comments_Constants::T ) ?></a>
+				<# } #>
+				<# } #>
+				<# if ( comment.get('status') === ThriveComments.const.moderation.trash ) { #>
+				<a href="#" class="change-status" data-key="z" data-status="restoreComment" data-value="<#- ThriveComments.const.moderation.untrash #>"><?php printf( __( 'Restore', Thrive_Comments_Constants::T ), '<span>', '</span>' ); ?></a>
+				<# } #>
+
+				<# if ( comment.get('status') === ThriveComments.const.moderation.trash ) { #>
+				<a href="#" class="change-status" data-key="s" data-status="spamComment" data-value="<#- ThriveComments.const.moderation.spam #>">
+					<?php printf( __( '%sS%spam', Thrive_Comments_Constants::T ), '<span>', '</span>' ); ?></a>
+				<# } #>
+
+				<# if ( comment.get('status') === ThriveComments.const.moderation.spam ) { #>
+				<a href="#" class="change-status" data-key="s" data-status="unspam" data-value="<#- ThriveComments.const.moderation.unspam #>"><?php printf( __( 'Not %sS%spam', Thrive_Comments_Constants::T ), '<span>', '</span>' ); ?></a>
+				<# } #>
+
+				<# if ( comment.get('status') == ThriveComments.const.moderation.spam || comment.get('status') == ThriveComments.const.moderation.trash ) { #>
+				<a href="#" data-key="d" class="delete-comment"><?php echo __( 'Delete permanently', Thrive_Comments_Constants::T ) ?></a>
+				<# } #>
+
+				<# if ( comment.get('status') == ThriveComments.const.moderation.approve || comment.get('status') == ThriveComments.const.moderation.unapprove ) { #>
+				<div class="moderation-dropdown">
+					<a class="tcm-icon-keyboard_arrow_down" href="javascript:void(0);"><?php echo __( 'More', Thrive_Comments_Constants::T ) ?></a>
+					<ul class="inner">
+
+						<# if ( comment.get('status') == ThriveComments.const.moderation.approve || comment.get('status') == ThriveComments.const.moderation.unapprove ) { #>
+						<# if ( comment.get('tcm_featured') == 1 ) { #>
+						<li><a href="#" class="change-status status-featured" data-key="f" data-status="stopFeaturing" data-value="0" data-replace="<?php echo __( 'Featured', Thrive_Comments_Constants::T ) ?>"><?php printf( __( 'Stop %sF%seaturing', Thrive_Comments_Constants::T ), '<span>', '</span>' ); ?></a></li>
+						<# } else { #>
+						<li><a href="#" class="change-status status-featured" data-key="f" data-status="featured" data-value="1" data-replace="<?php printf( __( 'Stop %sF%seaturing', Thrive_Comments_Constants::T ), '<span>', '</span>' ); ?>"><?php echo __( 'Feature', Thrive_Comments_Constants::T ) ?></a></li>
+						<# } #>
+						<# } #>
+
+						<# if ( typeof ThriveOvation !== 'undefined' ) { #>
+						<li class="tvo_comment_section_<#- comment.get('ID') #>">
+							<a href="javascript:void(0);" data-key="t" class="tvo-comment-button">
+								<?php printf( __( 'Save as %sT%sestimonial', Thrive_Comments_Constants::T ), '<span>', '</span>' ); ?>
+							</a>
+						</li>
+						<# } #>
+
+						<# if ( comment.get('status') !== ThriveComments.const.moderation.spam ) { #>
+						<li><a href="#" class="change-status" data-key="s" data-status="spamComment" data-value="<#- ThriveComments.const.moderation.spam #>">
+								<?php printf( __( '%sS%spam', Thrive_Comments_Constants::T ), '<span>', '</span>' ); ?></a></li>
+						<# } #>
+
+						<# if ( comment.get('status') !== ThriveComments.const.moderation.trash ) { #>
+						<li><a href="#" data-key="d" class="change-status" data-status="trashComment" data-value="<#- ThriveComments.const.moderation.trash #>"><?php printf( __( 'Trash', Thrive_Comments_Constants::T ), '<span>', '</span>' ); ?></a></li>
+						<# } #>
+
+					</ul>
+				</div>
+				<# } #>
+				<# if ( comment.get('status') !== ThriveComments.const.moderation.spam && comment.get('status') !== ThriveComments.const.moderation.trash ) { #>
+				<a class="go-right reply-action" data-key="r" href="#"><?php printf( __( '%sR%seply', Thrive_Comments_Constants::T ), '<span>', '</span>' ); ?></a>
+				<# } #>
+			</div>
+
+			<br>
+			<div class="edit-section" hidden>
+				<?php echo __( 'Edit Comment', Thrive_Comments_Constants::T ) ?>
+				<div class="tcm-error-message red-text" hidden></div>
+				<textarea tabindex="1" class='tcm-comment-content' id='' name=""><#= comment.get('content').raw #></textarea>
+
+				<div class="tcm-edit-section-inner">
+					<div class="edit-elem">
+						<?php echo __( 'Name', Thrive_Comments_Constants::T ) ?>
+						<div class="tcm-error-message red-text" hidden></div>
+						<input tabindex="2" class="form-input tcm-edit-name" type="text" name="" value="<#- comment.get('author_name')#>"/>
+					</div>
+					<div class="edit-elem">
+						<?php echo __( 'Email', Thrive_Comments_Constants::T ) ?>
+						<div class="tcm-error-message red-text" hidden></div>
+						<input tabindex="3" class="form-input tcm-edit-email" type="text" name="" value="<#- comment.get('author_email')#>"/>
+					</div>
+					<div class="edit-elem">
+						<?php echo __( 'Website', Thrive_Comments_Constants::T ) ?>
+						<div class="tcm-error-message red-text" hidden></div>
+						<input tabindex="4" class="form-input tcm-edit-website" type="text" name="" value="<#- comment.get('author_url')#>"/>
+					</div>
+				</div>
+
+				<a class="go-left cancel-edit" tabindex="6" data-key="Enter" href="#"><?php echo __( 'Cancel', Thrive_Comments_Constants::T ) ?></a>
+				<a class="go-right save-edit" tabindex="5" data-key="Enter" href="#"><?php echo __( 'Save Changes', Thrive_Comments_Constants::T ) ?></a>
+				<a href="javascript:void(0)" tabindex="7" class="tcm-last-edit-tabindex"></a>
+			</div>
+
+			<div class="reply-section" hidden>
+				<?php echo __( 'Reply to', Thrive_Comments_Constants::T ) ?>
+				<#- comment.get('author_name') #>
+				<div class="tcm-error-message red-text" hidden></div>
+
+				<div class="textarea-container">
+					<textarea tabindex="1" class='tcm-comment-content-reply' id="tcm-comment-content-reply" name="" placeholder="<?php echo __( 'Reply and Approve' ) ?>"></textarea>
+					<ul class="dropelem">
+						<li class="icon tcm-hyperlink" data-setting="reply"></li>
+						<li class="tcm-hyperlink-dropdown"></li>
+					</ul>
+				</div>
+
+				<a class="go-left cancel-reply" tabindex="3" data-key="Enter" href="#"><?php echo __( 'Cancel', Thrive_Comments_Constants::T ) ?></a>
+				<# if ( comment.get('status') == ThriveComments.const.moderation.approve ) { #>
+				<a class="go-right save-reply" tabindex="2" data-key="Enter" href="#"><?php echo __( 'Reply', Thrive_Comments_Constants::T ) ?></a>
+				<# } else { #>
+				<a class="go-right save-reply" tabindex="2" data-key="Enter" href="#"><?php echo __( 'Reply and Approve', Thrive_Comments_Constants::T ) ?></a>
+				<# } #>
+				<a href="javascript:void(0)" tabindex="4" class="tcm-last-tabindex"></a>
+			</div>
+
+		</div>
+		<div class="tcm-moderation-right">
+			<div class="posted-on"><?php echo __( 'Posted at', Thrive_Comments_Constants::T ); ?>&nbsp;<span><#- comment.get('tcm_date_format_hour') #></span>&nbsp;&mdash;&nbsp;<span><#- comment.get('tcm_date_format_day') #></span> <?php echo __( 'on', Thrive_Comments_Constants::T ); ?>:</div>
+			<# if ( comment.get('tcm_comment_post') !== null ) { #>
+			<h3><a class="tooltipelem title-class" href="<#- comment.get('tcm_comment_post').link #>" target="_blank">
+					<#- comment.get('tcm_comment_post').post_title #>
+					<span class="tooltiptext"><?php echo __( 'View Post', Thrive_Comments_Constants::T ); ?></span>
+				</a>
+
+				<a class="tooltipelem icon-pen icon-elem tcm-icon-pencil" target="_blank" href="<#- comment.get('tcm_comment_post').edit_link #>">
+					<span class="tooltiptext"><?php echo __( 'Edit Post', Thrive_Comments_Constants::T ); ?></span>
+				</a>
+				<a class="tooltipelem icon-comment icon-elem filter-by-post tcm-icon-comment" data-post-id="<#- comment.get('tcm_comment_post').ID #>" data-post-title="<#- comment.get('tcm_comment_post').post_title #>" data-term-id="<#- comment.get('tcm_comment_post').term_id #>" href="#">
+					<span class="tooltiptext"><?php echo __( 'View comments for this post only', Thrive_Comments_Constants::T ); ?></span>
+				</a>
+
+			</h3>
+			<div class="by-line"><?php echo __( 'By' ); ?>: <span><#- comment.get('tcm_comment_post').user_display_name #></span></div>
+			<# if ( comment.get('parent') !== 0 && comment.get( 'tcm_parent_comment' ) ) { #>
+
+			<div class="in-reply-to"><?php echo __( 'In reply to', Thrive_Comments_Constants::T ); ?>: <span><#- comment.get('tcm_parent_comment').comment_author #></span></div>
+
+			<div class="main-cont">
+				<# if ( typeof this.model.get( 'parent_excerpt' ) !== 'undefined' ) { #>
+				<p class="tcm-short-content p-disp-block">
+					<#- this.model.get( 'parent_excerpt' ) #>
+				</p>
+				<# } #>
+
+				<p class="<# if ( typeof this.model.get( 'parent_excerpt' ) !== 'undefined' ) { #>p-disp-none<# } #> tcm-parent-all-content">
+					<#= comment.get('tcm_parent_comment').comment_content #>
+				</p>
+
+				<a href="#" class="tcm-icon-keyboard_arrow_down expand-reply <# if ( typeof this.model.get( 'parent_excerpt' ) === 'undefined' ) { #>tvd-hide<# } #>">E<span>x</span>pand reply</a>
+			</div>
+			<# } #>
+			<# } else { #>
+			<div class="tcm-post-no-longer-available">
+				<?php echo __( 'Post No Longer Available', Thrive_Comments_Constants::T ) ?>
+			</div>
+			<# } #>
+		</div>
+	</div>
+</div>
+

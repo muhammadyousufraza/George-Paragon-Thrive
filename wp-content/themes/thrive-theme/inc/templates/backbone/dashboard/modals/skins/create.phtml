@@ -1,0 +1,75 @@
+<div class="modal-sidebar">
+	<div class="ttd-modal-sidebar-icon" data-icon="singular">
+		<?php Thrive_Views::svg_icon( 'add-skin' ); ?>
+		<p><?php echo __( 'Themes define the general look of your website.', 'thrive-theme' ); ?></p>
+	</div>
+	<div class="ttd-down-skin-container">
+		<div class="ttd-down-skin-img"></div>
+		<div class="ttd-down-skin-name"></div>
+	</div>
+</div>
+
+<div class="modal-options">
+	<div class="first-step step">
+		<h3 class="modal-title">
+			<?php echo __( 'Create a New Theme', 'thrive-theme' ); ?>
+		</h3>
+		<p>
+			<span><?php echo __( 'Step 1', 'thrive-theme' ); ?></span> -
+			<?php echo __( 'What type of theme do you want to add ?', 'thrive-theme' ); ?>
+		</p>
+		<ul>
+			<li class="click" data-fn="step" data-step="cloud-items">
+				<?php Thrive_Views::svg_icon( 'modal-icon-cloud' ); ?>
+				<?php echo __( 'Load from the Thrive Cloud', 'thrive-theme' ); ?>
+			</li>
+
+			<li class="click" data-fn="import" data-step="import">
+				<?php Thrive_Views::svg_icon( 'modal-icon-import' ); ?>
+				<?php echo __( 'Import From File', 'thrive-theme' ); ?>
+			</li>
+		</ul>
+	</div>
+	<div class="blank-step step">
+		<h3>
+			<?php echo __( 'Your Theme Name', 'thrive-theme' ); ?>
+		</h3>
+
+		<p>
+			<span><?php echo __( 'Step 2', 'thrive-theme' ); ?></span> -
+			<?php echo __( 'Choose a name for your new theme', 'thrive-theme' ); ?>
+		</p>
+
+		<div class="modal-user-actions">
+			<label class="default-text" for="skin-name"><?php echo __( 'New Theme Name', 'thrive-theme' ); ?></label>
+			<input type="text" id="skin-name" placeholder="<?php echo __( 'My New Theme', 'thrive-theme' ); ?>" class="keyup" data-fn="keyup">
+			<div class="ttd-error-message" style="display: none;">
+				<?php echo __( 'Please specify the name of your new theme.', 'thrive-theme' ) ?>
+			</div>
+		</div>
+
+		<div class="modal-buttons">
+			<button class="click link-button" data-fn="step" data-step="first"><?php echo __( 'Back', 'thrive-theme' ); ?></button>
+			<button class="click normal-button" data-fn="skinSave"><?php echo __( 'Finish', 'thrive-theme' ); ?></button>
+		</div>
+	</div>
+	<div class="import-step step">
+		<h3>
+			<?php echo __( 'Upload a Theme', 'thrive-theme' ); ?>
+		</h3>
+		<p>
+			<span><?php echo __( 'Step 2', 'thrive-theme' ); ?></span> -
+			<?php echo __( 'Choose the theme file you want to upload', 'thrive-theme' ); ?>
+		</p>
+		<div class="modal-buttons">
+			<button class="click link-button" data-fn="step" data-step="first"><?php echo __( 'Back', 'thrive-theme' ); ?></button>
+			<button class="click normal-button" data-fn="upload_file"><?php echo __( 'Upload File', 'thrive-theme' ); ?></button>
+		</div>
+	</div>
+	<div class="cloud-items-step step">
+		<div class="cloud-items-container"></div>
+		<div class="modal-buttons">
+			<button class="click link-button" data-fn="step" data-step="first">&lsaquo; <?php echo __( 'Back', 'thrive-theme' ); ?></button>
+		</div>
+	</div>
+</div>

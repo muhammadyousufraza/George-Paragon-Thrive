@@ -1,0 +1,13 @@
+<# if ( ! this.model.config.hide_name && this.model.config.name) { #>
+<div class="grey-text">
+	<#= this.model.config.name #>
+</div>
+<# } #>
+<label class="tcb-checkbox">
+	<input class="tve-checkbox change" type="checkbox" data-fn="check" <#= this.model.config.name? 'data-name="' + this.model.config.name + '"':'' #> value="<#= this.model.config.value ? this.model.config.value : 1 #>"
+	<#= this.model.config.checked || this.model.config.default ? 'checked' : '' #> >
+	<span class="grey-text"><#= this.model.config.label #></span>
+	<# if ( this.model.config.tooltip ) { #>
+	<p class="click m-0" data-tooltip="<#- this.model.config.tooltip #>" data-side="<#- this.model.config.tooltip_side #>"><?php tcb_icon( 'info-circle-solid' ); ?></p>
+	<# } #>
+</label>

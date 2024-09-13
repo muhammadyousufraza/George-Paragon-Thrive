@@ -1,0 +1,29 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div data-id="<#= model.get('ID') #>">
+	<input type="checkbox" id="<#= model.get('ID') #>_checkbox" value="model.get('ID')" class="click" data-fn="checkboxCheck"/>
+	<label for="<#= model.get('ID') #>_checkbox"><#= model.get('post_title') #></label>
+
+	<div class="tva-options-drop">
+		<button>
+			<?php tva_get_svg_icon( 'adm-lesson-dots' ); ?>
+		</button>
+		<ul class="tva-options-drop-ul tva-drop-wider">
+			<li>
+				<button class="tvd-content-set-edit click" data-fn="edit"><?php echo dashboard_icon( 'edit' ) ?><?php echo esc_html__( 'Edit content', 'thrive-apprentice' ); ?></button>
+			</li>
+			<li>
+				<button class="tvd-content-set-delete click" data-fn="delete"><?php tva_get_svg_icon( 'trash-1' ) ?><?php echo esc_html__( 'Delete content set from site', 'thrive-apprentice' ); ?></button>
+			</li>
+		</ul>
+	</div>
+</div>

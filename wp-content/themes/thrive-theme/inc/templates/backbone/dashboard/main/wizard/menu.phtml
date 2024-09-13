@@ -1,0 +1,53 @@
+<div class="ttd-wizard-menu-box fw ttd-wizard-clip clip-menu placeholder">
+	<div class="ttd-wizard-menu-icon"><?php Thrive_Views::svg_icon( 'wizard-menu-icon' ); ?></div>
+	<p class="ttd-wizard-desc w-300 mt-10 mb-30"><?php echo __( 'Which menus do you want to use in Headers and Footers?', 'thrive-theme' ); ?></p>
+
+	<# if ( this.menus.length ) { #>
+	<div class="ttd-d-flex menu-fixed-width">
+		<div class="ttd-menus-selector ttd-wizard-selector click" data-fn="toggleDropdown">
+			<p class="ttd-wizard-desc wizard-drop-label">
+				<?php echo __( 'Header Menu', 'thrive-theme' ); ?>
+			</p>
+			<span class="selector-drop">
+					<span class="selected-menu" data-target="header"><#= this.activeMenus.header.name #></span>
+					<?php Thrive_Views::svg_icon( 'chevron-down' ); ?>
+					<div class="menu-dropdown">
+						<#_.each( this.menus, function( item ) { #>
+							<span class="click<#= item.extra_class || '' #>" data-fn="selectItem" data-target="header"
+								  data-id="<#= item.id #>"><#= item.name #></span>
+						<#}, this)#>
+					</div>
+				</span>
+		</div>
+
+		<div class="ml-30 ttd-menus-selector ttd-wizard-selector click" data-fn="toggleDropdown">
+			<p class="ttd-wizard-desc wizard-drop-label">
+				<?php echo __( 'Footer Menu', 'thrive-theme' ); ?>
+			</p>
+			<span class="selector-drop">
+					<span class="selected-menu" data-id="<#= this.activeMenus.footer #>" data-target="footer"><#= this.activeMenus.footer.name #></span>
+					<?php Thrive_Views::svg_icon( 'chevron-down' ); ?>
+					<div class="menu-dropdown">
+						<#_.each( this.menus, function( item ) { #>
+							<span class="click<#= item.extra_class || '' #>" data-fn="selectItem" data-target="footer"
+								  data-id="<#= item.id #>"><#= item.name #></span>
+						<#}, this)#>
+					</div>
+				</span>
+		</div>
+	</div>
+	<button class="ttd-choose-menu ttd-btn click fill blue loader-absolute small mt-30 menu-fixed-width"
+			data-fn="finishMenu"><?php echo __( 'Activate Menus on my Site', 'thrive-theme' ) ?></button>
+
+	<# } else { #>
+	<div class="no-menu-notice">
+		<?php echo sprintf( __( 'No WordPress menu %s Go and ' ), '<br>', 'thrive-theme' ); ?>
+		<a href="<?php echo admin_url( 'nav-menus.php' ) ?>" target="_blank"><?php echo __( 'create your first menu', 'thrive-theme' ); ?></a>
+	</div>
+	<# } #>
+
+	<div class="ttd-menu-or"><span><?php echo __( 'or', 'thrive-theme' ); ?></span></div>
+
+	<button class="ttd-finish-button ttd-btn click blue mt-15 loader-absolute small" data-templates='1'
+			data-fn="finishMenu"><?php echo __( 'Continue without Choosing a Menu', 'thrive-theme' ); ?></button>
+</div>

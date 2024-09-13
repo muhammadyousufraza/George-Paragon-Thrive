@@ -1,0 +1,61 @@
+<div class="tva-boxed-container pt-1">
+	<button class="tva-add-content-btn click" data-fn="openAddItemModal"><?php tva_get_svg_icon( 'plus_light' ); ?></button>
+	<div class="tva-mass-actions tva-flex tva-align-center pt-20 pl-20">
+		<label class="tva-label mr-20" for="tva-check-all">
+			<input type="checkbox" class="tva-checkbox" id="tva-check-all">
+			<?php esc_html_e( 'Select all', 'thrive-apprentice' ); ?>
+		</label>
+
+		<div class="tva-options-drop">
+			<a href="javascript:void(0)" class="click tva-mass-action tva-inline-flex-mid mr-20 publish-group" data-fn="massAction" data-action="publish">
+				<?php tva_get_svg_icon( 'publish' ); ?>
+				&nbsp;
+				<?php esc_html_e( 'Publish', 'thrive-apprentice' ); ?>
+				<?php tva_get_svg_icon( 'angle-down' ); ?>
+			</a>
+			<ul class="tva-options-drop-ul tva-drop-bulk">
+				<li>
+					<a class="click tva-mass-action schedule-group" data-fn="massAction" data-action="schedule">
+						<?php echo tva_get_svg_icon( 'schedule' ); ?>
+						<?php echo __( 'Schedule', 'thrive-apprentice' ) ?>
+					</a>
+				</li>
+				<li>
+					<a class="click tva-mass-action reschedule-group" data-fn="massAction" data-action="schedule">
+						<?php echo tva_get_svg_icon( 'reschedule' ); ?>
+						<?php echo __( 'Reschedule', 'thrive-apprentice' ) ?>
+					</a>
+				</li>
+				<li>
+					<a class="click unpublish-group" data-fn="massAction" data-action="unpublish">
+						<?php echo tva_get_svg_icon( 'unpublish' ); ?>
+						<?php echo __( 'Unpublish', 'thrive-apprentice' ) ?>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<a href="javascript:void(0)" class="click tva-mass-action tva-mass-delete tva-inline-flex-mid mr-20" data-fn="massAction" data-action="delete">
+			<?php tva_get_svg_icon( 'trash-1' ); ?>
+			&nbsp;
+			<?php esc_html_e( 'Delete', 'thrive-apprentice' ); ?>
+		</a>
+		<a href="javascript:void(0)" class="click tva-mass-action tva-inline-flex-mid mr-20 module-group" data-fn="structureAction" data-action="moduleGroup">
+			<?php tva_get_svg_icon( 'group' ); ?>
+			&nbsp;
+			<?php esc_html_e( 'Group into a module', 'thrive-apprentice' ); ?>
+		</a>
+		<a href="javascript:void(0)" class="click tva-mass-action tva-inline-flex-mid mr-20 chapter-group" data-fn="structureAction" data-action="chapterGroup">
+			<?php tva_get_svg_icon( 'group' ); ?>
+			&nbsp;
+			<?php esc_html_e( 'Group into a chapter', 'thrive-apprentice' ); ?>
+		</a>
+		<a href="javascript:void(0)" class="click tva-mass-action tva-inline-flex-mid mr-20 mass-move" data-fn="structureAction" data-action="move">
+			<?php tva_get_svg_icon( 'move' ); ?>
+			&nbsp;
+			<?php esc_html_e( 'Move to another course', 'thrive-apprentice' ); ?>
+		</a>
+	</div>
+	<div class="tva-course-items-wrapper"></div>
+	<div id="tva-add-course-level-item-buttons"></div>
+</div>

@@ -1,0 +1,137 @@
+<?php use TVA\TTB\Main; ?>
+<div class="tva-home-container">
+	<div class="tva-home-welcome">
+		<h1 class="tva-home-main-heading"><?php echo sprintf( esc_html__( 'Thrive %s', 'thrive-apprentice' ), '<span>' . esc_html__( 'Apprentice', 'thrive-apprentice' ) . '</span>' ); ?></h1>
+		<h1 class="tva-home-name-heading"><?php echo __( 'Hello, ' . wp_get_current_user()->display_name . '!', 'thrive-apprentice' ) ?></h1>
+	</div>
+	<?php echo tvd_get_individual_plugin_license_message( new TVA_Product(), true ); ?>
+	<div class="tva-home-container-left">
+		<div class="tva-courses-card tva-homepage-card tva-flex tva-flex-row"
+		<# if(!this.shouldShowProductsCard()){ #> style="min-height:460px;" <#} #>>
+		<# if ( TVA.courses.length === 0 ) { #>
+		<div class="tva-homepage-no-courses">
+			<div class="tva-svg-icon"><?php tva_get_svg_icon( 'courses' ); ?></div>
+			<div class="tva-card-content">
+				<h1 class="tva-main-heading"><?php echo __( 'Courses', 'thrive-apprentice' ) ?></h1>
+				<span class="tva-card-text"><?php echo __( 'You don’t have any courses yet', 'thrive-apprentice' ) ?></span><br>
+				<a href="#courses/add-new-course" class="tva-home-button"><?php echo __( 'Create your first course', 'thrive-apprentice' ) ?></a>
+			</div>
+		</div>
+		<# } else { #>
+		<div class="<#= (TVA.courses.length > 2 && TVA.courses.length < 6 ) ? 'tva-homepage-some-courses' : 'tva-homepage-w-courses' #>">
+			<div class="tva-svg-icon">
+				<?php tva_get_svg_icon( 'courses-secondary' ); ?>
+				<?php tva_get_svg_icon( 'courses' ); ?>
+			</div>
+			<div class="tva-card-content">
+				<h1 class="tva-main-heading"><?php echo __( 'Courses', 'thrive-apprentice' ) ?></h1>
+				<span class="tva-card-text"><?php echo __( 'Start sharing your knowledge', 'thrive-apprentice' ) ?></span>
+			</div>
+			<a href="#courses/add-new-course" class="tva-home-button"><?php echo __( 'Add New Course', 'thrive-apprentice' ) ?></a>
+		</div>
+		<div class="tva-courses-list">
+			<# this.courseArray.forEach ( course => { #>
+			<a href="#courses/<#- course.get('id') #>" class="tva-courses-list-item">
+							<span class="tva-home-course-status tva-tooltip-parent">
+								<span class="tva-custom-tooltip"></span>
+							</span>
+				<span class="tva-course-topic">
+								<#= this.icon[ course.get( 'topic' ) ] #>
+							</span>
+				<span class="tva-course-title"><#= course.get('name') #></span>
+				<?php tva_get_svg_icon( 'arrow-circle-right' ) ?>
+			</a>
+			<# }); #>
+		</div>
+		<div class="tva-homepage-extra">
+			<# if ( TVA.courses.length > TVA.home_course_count ) { #>
+			<a href="#courses">
+				<span class="tva-more-courses">+<#= TVA.courses.length - TVA.home_course_count #><?php echo __( ' more courses', 'thrive-apprentice' ) ?></span>
+			</a>
+			<# } #>
+			<a href="#courses" id="tva-all-courses">
+				<?php echo __( 'View all courses', 'thrive-apprentice' ) ?>
+			</a>
+		</div>
+		<# } #>
+	</div>
+
+	<# if ( this.shouldShowProductsCard() ) { #>
+	<a href="#products" class="mt-20 tva-products-card tva-homepage-card tva-flex tva-flex-row">
+		<div class="tva-svg-icon"><?php tva_get_svg_icon( 'products' ); ?></div>
+		<div class="tva-card-content">
+			<h1 class="tva-main-heading"><?php echo __( 'Products and Membership', 'thrive-apprentice' ) ?></h1>
+			<span class="tva-card-text"><?php echo __( 'Specify any combination of content on the site, protect it and sell it as a single product', 'thrive-apprentice' ) ?></span>
+			<?php tva_get_svg_icon( 'arrow-circle-right' ) ?>
+		</div>
+	</a>
+	<# } #>
+	<div class="mt-20 tva-flex tva-flex-row">
+		<a href="javascript:void(0)" class="tva-help-card tva-homepage-card click mr-20" data-fn="helpModal">
+			<div class="tva-svg-icon"><?php tva_get_svg_icon( 'help' ); ?></div>
+			<h1 class="tva-main-heading"><?php echo __( 'Help Corner', 'thrive-apprentice' ) ?></h1>
+			<span class="tva-card-text"><?php echo __( 'Build a better course', 'thrive-apprentice' ) ?></span>
+			<?php tva_get_svg_icon( 'arrow-circle-right' ) ?>
+		</a>
+		<a href="#settings" class="mr-20 tva-home-settings-card tva-homepage-card">
+			<div class="tva-svg-icon"><?php tva_get_svg_icon( 'settings' ); ?></div>
+			<h1 class="tva-main-heading"><?php echo __( 'Settings', 'thrive-apprentice' ) ?></h1>
+			<span class="tva-card-text"><?php echo __( 'General settings, Email settings, API and more ', 'thrive-apprentice' ) ?></span>
+			<?php tva_get_svg_icon( 'arrow-circle-right' ) ?>
+		</a>
+		<a href="#protected-files" class=" tva-home-protected-files-card tva-homepage-card">
+			<div class="tva-svg-icon"><?php tva_get_svg_icon( 'icon-protected-files' ); ?></div>
+			<h1 class="tva-main-heading"><?php echo __( 'Protected files', 'thrive-apprentice' ) ?></h1>
+			<span class="tva-card-text"><?php echo __( 'Securely protect access to files', 'thrive-apprentice' ) ?></span>
+			<?php tva_get_svg_icon( 'arrow-circle-right' ) ?>
+		</a>
+	</div>
+</div>
+
+<div class="tva-home-container-right">
+	<# if ( TVA.courses.length > 2 ) { #>
+	<a href="#products" class="mb-20 tva-products-card tva-homepage-card tva-flex tva-flex-row">
+		<div class="tva-svg-icon"><?php tva_get_svg_icon( 'products' ); ?></div>
+		<div class="tva-card-content">
+			<h1 class="tva-main-heading"><?php echo __( 'Products and Membership', 'thrive-apprentice' ) ?></h1>
+			<span class="tva-card-text"><?php echo __( 'Specify any combination of content on the site, protect it and sell it as a single product', 'thrive-apprentice' ) ?></span>
+			<?php tva_get_svg_icon( 'arrow-circle-right' ) ?>
+		</div>
+	</a>
+	<# } #>
+	<a href="#design" class="mb-20 tva-design-card tva-homepage-card tva-flex tva-flex-row">
+		<div class="tva-svg-icon"><?php tva_get_svg_icon( 'design' ); ?></div>
+		<div class="tva-card-content">
+			<h1 class="tva-main-heading"><?php echo __( 'Design', 'thrive-apprentice' ) ?></h1>
+			<span class="tva-card-text"><?php echo __( 'Customize your skin, templates, brand color and all general typography ', 'thrive-apprentice' ) ?></span>
+			<?php tva_get_svg_icon( 'arrow-circle-right' ) ?>
+		</div>
+	</a>
+	<a href="#members" class="mb-20 tva-customers-card tva-homepage-card tva-flex tva-flex-row">
+		<div class="tva-svg-icon"><?php tva_get_svg_icon( 'customer' ); ?></div>
+		<div class="tva-card-content">
+			<h1 class="tva-main-heading"><?php echo __( 'Members', 'thrive-apprentice' ) ?></h1>
+			<span class="tva-card-text"><?php echo __( 'View more about the members enrolled in your courses', 'thrive-apprentice' ) ?></span>
+			<?php tva_get_svg_icon( 'arrow-circle-right' ) ?>
+		</div>
+	</a>
+	<div class="mt-20 tva-flex tva-flex-row">
+		<a href="#reports" class="mb-20 mr-20 tva-reports-card tva-home-small-card tva-homepage-card">
+			<div class="tva-svg-icon"><?php tva_get_svg_icon( 'reports-home-card' ); ?></div>
+			<h1 class="tva-main-heading"><?php echo __( 'Reports', 'thrive-apprentice' ) ?></h1>
+			<span class="tva-card-text"><?php echo __( 'Reports & trends to gauge the health and outcomes of your site', 'thrive-apprentice' ) ?></span>
+			<?php tva_get_svg_icon( 'arrow-circle-right' ) ?>
+		</a>
+		<?php if ( Main::uses_builder_templates() ): ?>
+			<a href="#assessments" class="mb-20 tva-home-small-card tva-homepage-card">
+				<span class="tva-new-badge"><?php echo __( 'New', 'thrive-apprentice' ) ?></span>
+				<div class="tva-svg-icon"><?php tva_get_svg_icon( 'assessments' ); ?></div>
+				<div class="tva-card-content">
+					<h1 class="tva-main-heading"><?php echo __( 'Assessments', 'thrive-apprentice' ) ?></h1>
+					<span class="tva-card-text"><?php echo __( 'Easily and professionally evaluate your students', 'thrive-apprentice' ) ?></span>
+					<?php tva_get_svg_icon( 'arrow-circle-right' ) ?>
+				</div>
+			</a>
+		<?php endif; ?>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+<div class="display-testimonials-select type-select"></div>
+
+<div class="display-testimonials-select direction-select"></div>
+
+<span class="input-container">
+	<span class="order-text">
+		<?php echo esc_html__( 'Display', 'thrive-ovation' ); ?>
+	</span>
+
+	<div class="thrive-display-testimonials-input display-input">
+		<input type="number" value="<#= this.dataModel.getOrderingOptions('number_of_items') #>" placeholder="0" class="input" data-fn="onOrderInputChange" data-type="number_of_items"/>
+	</div>
+</span>
+
+<span class="input-container offset">
+	<span class="order-text offset-text">
+		<?php echo esc_html__( 'Starting with no', 'thrive-ovation' ); ?>
+	</span>
+	<div class="thrive-display-testimonials-input starting-input">
+		<input type="number" value="<#= this.dataModel.getOrderingOptions('offset') #>" placeholder="0" class="input" data-fn="onOrderInputChange" data-type="offset"/>
+	</div>
+</span>
+
+
+

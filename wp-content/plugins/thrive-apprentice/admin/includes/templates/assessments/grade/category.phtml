@@ -1,0 +1,7 @@
+<# const grades = (assessment.grading_method_data?.pass || []).concat(assessment.grading_method_data?.fail || []) #>
+<select class="tva-assessment-grade-value">
+	<option value=""><?php esc_html_e( 'Select grade', 'thrive-apprentice' ) ?></option>
+	<# grades.forEach(grade =>{ #>
+	<option value="<#= grade.ID #>"><#= grade.name #></option>
+	<# }); #>
+</select>

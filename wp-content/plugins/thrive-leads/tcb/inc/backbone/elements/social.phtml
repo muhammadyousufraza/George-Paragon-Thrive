@@ -1,0 +1,29 @@
+<# if( config.show_count ) { #>
+<div class="tve_s_share_count tve-force-show tve-prevent-content-edit <#=config.style#>">
+	<span class="tve_s_cnt_icon">
+		<#if(config.hasFillIcon && config.hasFillIcon.includes(config.style) ){ #>
+			<#=r.getIcon('share-alt-light',r.$element)#>
+		<# } #>
+		<#if(config.hasFillIcon && config.hasSolidIcon.includes(config.style) ){ #>
+			<#=r.getIcon('share-alt-solid',r.$element)#>
+		<# } #>
+	</span>
+	<span class="thrv_wrapper tve_s_cnt"><#=counts.total.formatted#></span>
+	<span class="thrv_wrapper tve_s_cnt_label"><?php echo __( 'shares', 'thrive-cb' ); ?></span>
+</div>
+<# } #>
+<div class="tve_social_items tve_social_custom tve-prevent-content-edit <#=config.style#> <#=config.button_type#>">
+	<# if ( selected ) { #>
+		<# _.each( selected, function( network ) { #>
+		<div class="thrv_wrapper tve_s_item tve_s_<#=network#> tve_share_item" data-s="<#=network#>" data-href="<#=config.share_url#>" data-label="<#=r.label(network)#>">
+			<a href="javascript:void(0)" class="tve_s_link">
+				<span class="thrv_wrapper tve_s_icon">
+					<#=r.getIcon(network, r.$element)#>
+				</span>
+				<span class="tve_s_text tve-froala"><#=r.label(network)#></span>
+				<span class="tve_s_count"><#=counts[network] || '0' #></span>
+			</a>
+		</div>
+		<# } ) #>
+	<# } #>
+</div>

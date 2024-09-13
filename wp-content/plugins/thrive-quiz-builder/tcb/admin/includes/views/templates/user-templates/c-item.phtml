@@ -1,0 +1,28 @@
+<div class="tvd-row">
+	<div class="tvd-col tvd-s4">
+		<span class="tvd-card-title">
+			<#= model.get('name') #>
+		</span>
+		<# if(_.isNumber( model.get( 'id' ) )){ #>
+			<span data-tooltip="<?php _e( 'Change Text', 'thrive-cb' ); ?>" data-position="top" class="tvd-tooltipped tvd-icon-pencil tvd-pointer tcb-admin-edit-category-name"></span>
+			<# } #>
+	</div>
+	<div class="tvd-col tvd-s8">
+		<# if(_.isNumber( model.get( 'id' ) )){ #>
+			<span data-tooltip="<?php _e( 'Delete Category', 'thrive-cb' ); ?>" data-position="left" class="tvd-tooltipped tcb-admin-delete-category-item">
+				<?php echo tcb_admin_icon( 'delete' ); ?>
+			</span>
+			<# } #>
+	</div>
+</div>
+<# if ( ! collection_length ) { #>
+	<p><?php echo __('You have no templates added in this category. You can either save elements in Architect as Content Templates or move existing templates to this category'); ?></p>
+<# } #>
+<div class="tcb-masonry-grid fill-content tcb-admin-template-t-item"></div>
+
+
+<div class="tvd-row tcb-admin-show-more-less hidden">
+	<div class="tvd-col tvd-s12 tvd-center">
+		<span class="tvd-pointer tcb-admin-show-more-less-btn"><?php echo __( '  Show more templates', 'thrive-cb' ) ?></span>
+	</div>
+</div>

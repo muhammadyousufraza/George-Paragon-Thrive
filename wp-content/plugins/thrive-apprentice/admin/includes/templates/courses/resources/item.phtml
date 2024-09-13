@@ -1,0 +1,80 @@
+<div class="tva-drag-handle tva-flex-mid"><?php tva_get_svg_icon( 'dnd' ); ?></div>
+<div class="tva-res-info pl-55<#=this.model.get('expanded') ? '' : ' click'#>" data-fn="toggleExpanded">
+	<div class="tva-res-icon tva-flex-mid"><#=this.model.getIcon()#></div>
+	<div class="tva-res-header tva-flex tva-align-top tva-space-between">
+		<div class="tva-resource-title">
+			<# if (! this.model.get('editing') ) { #>
+			<span title="<#= this.model.get('title') #>" class=""><#- this.model.get('title') #></span>
+			<span class="click ml-10 tva-topic-edit" data-fn="editing"><?php tva_get_svg_icon( 'pen_light' ); ?></span>
+			<# } else { #>
+			<input id="tva-edit-<#=this.model.cid#>" type="text" value="<#- this.model.get('title') #>" class="tva-title-events">
+			<# } #>
+		</div>
+		<a href="javascript:void(0)" class="tva-resource-remove click tva-hide-collapsed" data-fn="removeClicked" data-index="<#=this.model.$$index#>">
+			<?php tva_get_svg_icon( 'trash-1' ); ?><?php esc_html_e( 'Delete resource', 'thrive-apprentice' ); ?>
+		</a>
+		<a href="javascript:void(0)" class="click tva-collapse-icon" data-fn="toggleExpanded"><?php tva_get_svg_icon( 'caret-down_solid' ); ?></a>
+	</div>
+	<div class="tva-res-settings mr-40">
+		<div class="tva-res-type-container">
+			<div class="tva-res-summary tva-flex tva-align-center">
+				<#=this.model.getSummaryIcon()#>
+				<div class="tva-res-summary-text ml-5"><#=this.model.getSummary()#></div>
+			</div>
+			<div class="tva-res-type tva-hide-collapsed tva-flex">
+				<div class="tva-resource-type">
+					<select class="model-field" data-field="type">
+						<option
+						<#=this.model.get('type') === 'url' ? 'selected ' : ''#>value="url"><?php esc_html_e( 'Link to file / URL', 'thrive-apprentice' ); ?></option>
+						<option
+						<#=this.model.get('type') === 'file' ? 'selected ' : ''#>value="file"><?php esc_html_e( 'Upload file', 'thrive-apprentice' ); ?></option>
+						<option
+						<#=this.model.get('type') === 'content' ? 'selected ' : ''#>value="content"><?php esc_html_e( 'Site content', 'thrive-apprentice' ); ?></option>
+						<option
+						<#=this.model.get('type') === 'protected_file' ? 'selected ' : ''#>value="protected_file"><?php esc_html_e( 'Protected file', 'thrive-apprentice' ); ?></option>
+					</select>
+				</div>
+				<div class="tva-res-type-settings">
+					<# if ( this.model.get('type') === 'url' ) { #>
+					<input type="url" class="model-field" data-field="config.url" value="<#-this.model.deepGet( 'config.url', '' )#>" placeholder="http://">
+					<# } else if ( this.model.get('type') === 'file' ) { #>
+					<# if ( this.model.deepGet('config.attachment') ) { #>
+					<div class="tva-resource-file tva-flex tva-align-center">
+						<a href="<#=this.model.deepGet('config.attachment.url')#>" target="_blank"><#- this.model.deepGet('config.attachment.filename') #></a>
+						<a href="javascript:;" class="click ml-10 tva-resource-file-remove" data-fn="clearConfig"><?php tva_get_svg_icon( 'cross' ); ?></a>
+					</div>
+					<# } else { #>
+					<button class="tva-upload-file click" data-fn="openFilePicker" data-field="config.attachment"><?php esc_html_e( 'Select file or upload new', 'thrive-apprentice' ); ?></button>
+					<# } #>
+					<# } else { #>
+
+					<# if ( this.model.deepGet('config.post') ) { #>
+					<div class="tva-resource-file tva-flex tva-align-center">
+						<a href="<#=this.model.deepGet('config.post.url')#>" target="_blank"><#= this.model.deepGet('config.post.title') #></a>
+						<a href="javascript:;" class="click ml-10 tva-resource-file-remove" data-fn="clearConfig"><?php tva_get_svg_icon( 'cross' ); ?></a>
+					</div>
+					<# } else { #>
+					<input type="text" class="tva-resource-autocomplete" data-field="config.post" placeholder="<?php esc_attr_e( 'Search for a resource on this site', 'thrive-apprentice' ); ?>">
+					<# } #>
+
+					<# } #>
+				</div>
+			</div>
+		</div>
+		<div class="tva-resource-description tva-hide-collapsed">
+			<textarea class="model-field" rows="1" data-field="content" data-silent="1" placeholder="<?php esc_attr_e( 'Description of resource (optional)...', 'thrive-apprentice' ); ?>"><#-this.model.get('content')#></textarea>
+		</div>
+	</div>
+</div>
+<# if ( this.model.get('delete_confirmation') ) { #>
+<div class="tva-res-delete-confirmation tva-flex-mid">
+	<div class="tva-res-delete-message tva-text-center">
+		<p class="mt-0 mb-20"><?php echo sprintf( esc_html__( 'Are you sure you want to delete %s?', 'thrive-apprentice' ), '<strong><#=this.model.get("title")#></strong>' ); ?></p>
+		<p class="mt-0 mb-0">
+			<a href="javascript:;" class="click" data-fn="cancelDelete"><?php esc_html_e( 'No, cancel', 'thrive-apprentice' ); ?></a>
+			&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="javascript:;" class="click delete-final" data-fn="removeClicked" data-index="<#=this.model.$$index#>"><?php esc_html_e( 'Yes, delete', 'thrive-apprentice' ); ?></a>
+		</p>
+	</div>
+</div>
+<# } #>

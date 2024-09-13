@@ -1,0 +1,10 @@
+<div class="control-grid padding-bottom-10 switch-toggle space-between">
+	<a href="javascript:void(0)" class="click left" data-fn="trigger_select" data-value="0"><#= this.model.config.left #></a>
+	<div class="tcb-switch fixed-45">
+		<label>
+			<input class="tve-checkbox change" data-fn="check" type="checkbox"<#=this.model.config.checked ? ' checked' : '' #>>
+			<span class="tcb-lever"></span>
+		</label>
+	</div>
+	<a href="javascript:void(0)" class="click tcb-text-right right" data-fn="trigger_select" data-value="1"><#= this.model.config.right #></a>
+</div>

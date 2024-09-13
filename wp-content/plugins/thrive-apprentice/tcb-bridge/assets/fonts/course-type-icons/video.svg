@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-285 408.9 24 24">
+    <title><?php echo $data['title'] ?> </title>
+    <path d="M-570,817.8h24v24h-24V817.8z"/>
+    <path d="M-268,419.4v-3.5c0-0.6-0.5-1-1-1h-12c-0.5,0-1,0.4-1,1v10c0,0.5,0.5,1,1,1h12c0.5,0,1-0.5,1-1v-3.5l4,4v-11L-268,419.4z"/>
+</svg>

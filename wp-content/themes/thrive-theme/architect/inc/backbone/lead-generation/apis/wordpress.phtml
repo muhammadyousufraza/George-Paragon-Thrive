@@ -1,0 +1,18 @@
+<div class="api-field">
+	<div class="field-description">
+		<?php echo __( 'Choose which role will be granted to new users', 'thrive-cb' ); ?>
+		<span data-paneltlt-hover class="tve-cb-img-info ml-5 tcb-wordpress-tooltip"><?php tcb_icon( 'info-circle-solid' ); ?></span>
+	</div>
+
+	<div class="control-grid">
+		<select class="api-list change" data-fn="setupChange" data-name="list">
+			<# let selected = api.getConfig('list') #>
+			<# selected = selected? selected: 'subscriber' #>
+			<# _.each(api.get('lists'), function(item) { #>
+			<#= TVE.tpl( 'util/option', {value:item.id, selected: (selected==item.id), text: item.name}) #>
+			<# } ) #>
+		</select>
+
+		<span class="click tve-refresh-api-list" data-fn="forceGet" data-tooltip="<?php echo __( 'Refresh', 'thrive-cb' ); ?>" data-side="top"> <?php tcb_icon( 'redo-regular' ) ?></span>
+	</div>
+</div>

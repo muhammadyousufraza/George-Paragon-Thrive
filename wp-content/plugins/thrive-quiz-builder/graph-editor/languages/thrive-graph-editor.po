@@ -1,0 +1,698 @@
+# Copyright (C) 2024 Thrive Graph Editor
+# This file is distributed under the same license as the Thrive Graph Editor package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Thrive Graph Editor\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Econdig: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Project-Id-Version: Thrive Graph Editor\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../database/class-tge-database-manager.php:211
+msgid "There was an error while updating the database tables needed by Thrive Question Editor. Detailed error message: %s. If you continue seeing this message, please contact %s"
+msgstr ""
+
+#: ../database/class-tge-database-manager.php:213
+msgid "Thrive Themes Support"
+msgstr ""
+
+#: ../includes/classes/class-tge-ajax-controller.php:93
+msgid "Method %s not implemented"
+msgstr ""
+
+#: ../includes/classes/class-tge-ajax-controller.php:128
+msgid "Question actions cannot be performed without quiz_id"
+msgstr ""
+
+#: ../includes/classes/class-tge-ajax-controller.php:147
+msgid "No action could be executed on question route"
+msgstr ""
+
+#: ../includes/classes/class-tge-ajax-controller.php:158, ../includes/classes/class-tge-ajax-controller.php:171
+msgid "No action could be executed on connection route"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:207
+msgid "Edit description"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:208
+msgid "Add description"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:209
+msgid "You cannot add a new answer as long as there are answers without image added."
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:210
+msgid "You cannot add a new answer as long as there are answers without text added."
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:211
+msgid "Please select question type"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:212
+msgid "Quiz Start"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:213
+msgid "Question text is required"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:214
+msgid "Answer text required"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:215
+msgid "Answer points required"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:216
+msgid "Answer weight required"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:217
+msgid "Answer points must be a number"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:218
+msgid "Answer weight must be a number"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:219
+msgid "The input must be an integer with max 6 digits."
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:220
+msgid "There are some invalid answers"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:221
+msgid "A question needs at least 1 answer"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:222
+msgid "Answer image is mandatory"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:223
+msgid "Question has been deleted"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:224
+msgid "Question could not be deleted"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:225
+msgid "Please select category"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:226
+msgid "Saving..."
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:227
+msgid "Changes saved"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:228, ../includes/templates/control-panel.php:46
+msgid "All your changes are auto saved"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:229
+msgid "Change Question Type"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:230
+msgid "Edit question"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:231, ../includes/layouts/editor.php:47
+msgid "Minimize"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:232
+msgid "Maximize"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:233
+msgid "Disable attaching tags to answers."
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:234
+msgid "Enable attaching tags to answers."
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:235
+msgid "Attaching tags to answers is now enabled. If your API connection supports it, %s these tags can be sent to your mailing list. For more details %s"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:236
+msgid "Attaching tags to answers is now disabled but the settings are saved for later use."
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:238
+msgid "Select image for your question"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:239
+msgid "Select image for your answer"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:240
+msgid "Select a media file for your question"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:241
+msgid "Only video types are supported."
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:242
+msgid "Please add a valid Youtube URL"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:243
+msgid "Please add a valid Vimeo URL"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:244
+msgid "Please add a valid Wistia URL"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:245
+msgid "Please add a valid Bunny.net Stream URL"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:246
+msgid "Be advised that the “Autoplay” option does not work on video thumbnails"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:247
+msgid "Be advised that the Audio Options are not available for Spotify"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:248, ../includes/templates/backbone/modals/add-question.phtml:12, ../includes/templates/backbone/modals/delete-question.phtml:10, ../includes/templates/backbone/modals/quiz-settings.phtml:20
+msgid "Cancel"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:249
+msgid "File name"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:250
+msgid "URL"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:252
+msgid "Autoplay"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:253
+msgid "Hide logo"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:254
+msgid "Disable playbar"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:255
+msgid "Loop"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:256
+msgid "Show user"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:257
+msgid "Do not show the user"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:258
+msgid "Show artwork"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:259
+msgid "Do not show artwork"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:260
+msgid "Optimize related"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:261
+msgid "Hide controls"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:262
+msgid "Hide full screen"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:263
+msgid "Hide full screen button"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:264, ../includes/templates/backbone/question/type_switcher.phtml:6
+msgid "Text Question"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:265, ../includes/templates/backbone/question/type_switcher.phtml:8
+msgid "Video Question"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:266, ../includes/templates/backbone/question/type_switcher.phtml:10
+msgid "Audio Question"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:267
+msgid "No style"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:268
+msgid "Gray Monitor"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:269
+msgid "Black Monitor"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:270
+msgid "Black Tablet"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:271
+msgid "White Tablet"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:272
+msgid "White Frame"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:273
+msgid "Gray Frame"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:274
+msgid "Dark Frame"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:275
+msgid "Light Frame"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:276
+msgid "Lifted Style 1"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:277
+msgid "Lifted Style 2"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:278
+msgid "Lifted Style 3"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:279
+msgid "Lifted Style 4"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:280
+msgid "Lifted Style 5"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:281
+msgid "Lifted Style 6"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:282
+msgid "YouTube"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:283
+msgid "Vimeo"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:284
+msgid "Wistia"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:285
+msgid "Custom"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:286
+msgid "Bunny.net Stream"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:287
+msgid "Spotify"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:288
+msgid "Soundcloud"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:289
+msgid "Your browser does not support the video tag."
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:290
+msgid "Font size value can't be lower than 10px"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:291
+msgid "Font size value can't be higher than 50px"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:292
+msgid "Please add a valid %s video URL"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:293
+msgid "Please add a valid %s audio URL"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:294
+msgid "Please add a valid %s URL"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:295, ../includes/templates/backbone/image/answer.phtml:7
+msgid "Add Image"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:296
+msgid "Add Video Thumbnail"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:297
+msgid "Scroll settings successfully saved"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:298
+msgid "Responsive"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:299
+msgid "Preload"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:300
+msgid "Muted"
+msgstr ""
+
+#: ../includes/classes/class-tge-editor.php:301
+msgid "Lazy Load"
+msgstr ""
+
+#: ../includes/classes/class-tge-question-manager.php:181
+msgid "Your browser does not support the audio tag."
+msgstr ""
+
+#: ../includes/classes/class-tge-question-manager.php:436
+msgid "Multiple Choice with Buttons"
+msgstr ""
+
+#: ../includes/classes/class-tge-question-manager.php:441
+msgid "Multiple Choice with Images"
+msgstr ""
+
+#: ../includes/classes/class-tge-question-manager.php:446
+msgid "Open Ended Question"
+msgstr ""
+
+#: ../includes/layouts/editor.php:38, ../includes/templates/backbone/modals/add-question.phtml:27
+msgid "Add Question"
+msgstr ""
+
+#: ../includes/layouts/editor.php:46
+msgid "Navigator"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:20, ../includes/templates/backbone/progress/settings.phtml:3
+msgid "Quiz Settings"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:26
+msgid "Your Questions"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:37
+msgid "Save & Exit"
+msgstr ""
+
+#: ../includes/templates/control-panel.php:44
+msgid "Every change you make is automatically saved."
+msgstr ""
+
+#: ../includes/templates/backbone/answer/feedback.phtml:2
+msgid "Whatever you type here will be displayed if the user chooses this answer"
+msgstr ""
+
+#: ../includes/templates/backbone/answer/feedback.phtml:4
+msgid "Feedback"
+msgstr ""
+
+#: ../includes/templates/backbone/answer/tags.phtml:3
+msgid "Tags"
+msgstr ""
+
+#: ../includes/templates/backbone/answer/tags.phtml:8
+msgid "Visitors who choose this answer will be assigned the following tags."
+msgstr ""
+
+#: ../includes/templates/backbone/answer/tags.phtml:14
+msgid "Add your tags here"
+msgstr ""
+
+#: ../includes/templates/backbone/image/answer.phtml:11, ../includes/templates/backbone/image/form.phtml:15
+msgid "Change<br/>Image"
+msgstr ""
+
+#: ../includes/templates/backbone/modals/add-question.phtml:3
+msgid "Select question type"
+msgstr ""
+
+#: ../includes/templates/backbone/modals/add-question.phtml:4
+msgid "Select question type:"
+msgstr ""
+
+#: ../includes/templates/backbone/modals/add-question.phtml:18
+msgid "Continue"
+msgstr ""
+
+#: ../includes/templates/backbone/modals/add-question.phtml:35
+msgid "Back"
+msgstr ""
+
+#: ../includes/templates/backbone/modals/add-question.phtml:41, ../includes/templates/backbone/modals/quiz-settings.phtml:24
+msgid "Save"
+msgstr ""
+
+#: ../includes/templates/backbone/modals/delete-question.phtml:2
+msgid "Delete Question"
+msgstr ""
+
+#: ../includes/templates/backbone/modals/delete-question.phtml:4
+msgid "Are you sure that you want to remove this question? It will be permanently removed."
+msgstr ""
+
+#: ../includes/templates/backbone/modals/delete-question.phtml:14
+msgid "Delete"
+msgstr ""
+
+#: ../includes/templates/backbone/modals/quiz-settings.phtml:2
+msgid "Progress Bar Settings"
+msgstr ""
+
+#: ../includes/templates/backbone/modals/quiz-settings.phtml:7
+msgid "Displaying a progress highlights how many more questions are remaining and can often increase the engagement of your quiz."
+msgstr ""
+
+#: ../includes/templates/backbone/progress/settings.phtml:13
+msgid "Progress bar"
+msgstr ""
+
+#: ../includes/templates/backbone/progress/settings.phtml:18
+msgid "Don't display"
+msgstr ""
+
+#: ../includes/templates/backbone/progress/settings.phtml:23
+msgid "Display"
+msgstr ""
+
+#: ../includes/templates/backbone/question/audio-display-settings.phtml:10, ../includes/templates/backbone/question/video-display-settings.phtml:22
+msgid "Invalid URL"
+msgstr ""
+
+#: ../includes/templates/backbone/question/audio-display-settings.phtml:13, ../includes/templates/backbone/question/video-display-settings.phtml:25
+msgid "Select file"
+msgstr ""
+
+#: ../includes/templates/backbone/question/audio-display-settings.phtml:22, ../includes/templates/backbone/question/video-display-settings.phtml:34
+msgid "Advanced"
+msgstr ""
+
+#: ../includes/templates/backbone/question/audio-display-settings.phtml:23
+msgid "Audio Options"
+msgstr ""
+
+#: ../includes/templates/backbone/question/form-audio.phtml:16, ../includes/templates/backbone/question/form-text.phtml:9, ../includes/templates/backbone/question/form-video.phtml:16, ../includes/templates/backbone/question/form.phtml:10
+msgid "Question text"
+msgstr ""
+
+#: ../includes/templates/backbone/question/form-audio.phtml:24, ../includes/templates/backbone/question/form-text.phtml:17, ../includes/templates/backbone/question/form-video.phtml:24, ../includes/templates/backbone/question/form.phtml:18
+msgid "Add Description"
+msgstr ""
+
+#: ../includes/templates/backbone/question/form-audio.phtml:51, ../includes/templates/backbone/question/form-text.phtml:44, ../includes/templates/backbone/question/form-video.phtml:51, ../includes/templates/backbone/question/form.phtml:45
+msgid "New Answer"
+msgstr ""
+
+#: ../includes/templates/backbone/question/max_allowed_answers.phtml:13
+msgid "Maximum selectable answers"
+msgstr ""
+
+#: ../includes/templates/backbone/question/max_allowed_answers.phtml:15
+msgid "The number limit depends on the number of answers available on each question. When allowing multiple answers, we recommend enabling quiz navigation in Quiz Settings."
+msgstr ""
+
+#: ../includes/templates/backbone/question/max_allowed_answers.phtml:16
+msgid "Learn more"
+msgstr ""
+
+#: ../includes/templates/backbone/question/settings.phtml:6
+msgid "Form size"
+msgstr ""
+
+#: ../includes/templates/backbone/question/settings.phtml:9
+msgid "Small"
+msgstr ""
+
+#: ../includes/templates/backbone/question/settings.phtml:12
+msgid "Medium"
+msgstr ""
+
+#: ../includes/templates/backbone/question/settings.phtml:15
+msgid "Large"
+msgstr ""
+
+#: ../includes/templates/backbone/question/settings.phtml:18
+msgid "Extra large"
+msgstr ""
+
+#: ../includes/templates/backbone/question/settings.phtml:27
+msgid "Parameters"
+msgstr ""
+
+#: ../includes/templates/backbone/question/settings.phtml:28
+msgid "Minimum character limit"
+msgstr ""
+
+#: ../includes/templates/backbone/question/settings.phtml:31
+msgid "Maximum character limit"
+msgstr ""
+
+#: ../includes/templates/backbone/question/settings.phtml:34
+msgid "Placeholder text"
+msgstr ""
+
+#: ../includes/templates/backbone/question/settings.phtml:38
+msgid "Message displayed"
+msgstr ""
+
+#: ../includes/templates/backbone/question/settings.phtml:48, ../includes/templates/backbone/quiz/progress-bar.phtml:3
+msgid "Preview"
+msgstr ""
+
+#: ../includes/templates/backbone/question/video-display-settings.phtml:7
+msgid "Player color"
+msgstr ""
+
+#: ../includes/templates/backbone/question/video-display-settings.phtml:35
+msgid "Display Options"
+msgstr ""
+
+#: ../includes/templates/backbone/question/video-source.phtml:3
+msgid "Source"
+msgstr ""
+
+#: ../includes/templates/backbone/question/video-styles.phtml:3
+msgid "Video style"
+msgstr ""
+
+#: ../includes/templates/backbone/quiz/progress-bar.phtml:5
+msgid "Reset to default"
+msgstr ""
+
+#: ../includes/templates/backbone/quiz/responses.phtml:3
+msgid "None"
+msgstr ""
+
+#: ../includes/templates/backbone/scroll/settings.phtml:3
+msgid "Enable Quiz Scroll"
+msgstr ""
+
+#: ../includes/templates/backbone/answer/form/button.phtml:14
+msgid "Answer"
+msgstr ""
+
+#: ../includes/templates/backbone/answer/form/image.phtml:19
+msgid "Optional description"
+msgstr ""
+
+#: ../includes/templates/backbone/answer/form/right_wrong.phtml:4
+msgid "Correct answer"
+msgstr ""
+
+#: ../includes/templates/backbone/quiz/progress-bar/options.phtml:3
+msgid "Font size"
+msgstr ""
+
+#: ../includes/templates/backbone/quiz/progress-bar/options.phtml:10
+msgid "Type"
+msgstr ""
+
+#: ../includes/templates/backbone/quiz/progress-bar/options.phtml:12
+msgid "Percent completed"
+msgstr ""
+
+#: ../includes/templates/backbone/quiz/progress-bar/options.phtml:13
+msgid "Percentage remaining"
+msgstr ""
+
+#: ../includes/templates/backbone/quiz/progress-bar/options.phtml:18
+msgid "Position"
+msgstr ""
+
+#: ../includes/templates/backbone/quiz/progress-bar/options.phtml:20
+msgid "Above question"
+msgstr ""
+
+#: ../includes/templates/backbone/quiz/progress-bar/options.phtml:21
+msgid "Below question"
+msgstr ""
+
+#: ../includes/templates/backbone/quiz/progress-bar/options.phtml:26, ../includes/templates/backbone/quiz/progress-bar/options.phtml:63
+msgid "Label"
+msgstr ""
+
+#: ../includes/templates/backbone/quiz/progress-bar/options.phtml:36
+msgid "Fill"
+msgstr ""
+
+#: ../includes/templates/backbone/quiz/progress-bar/options.phtml:45
+msgid "Next step"
+msgstr ""
+
+#: ../includes/templates/backbone/quiz/progress-bar/options.phtml:54
+msgid "Background"
+msgstr ""

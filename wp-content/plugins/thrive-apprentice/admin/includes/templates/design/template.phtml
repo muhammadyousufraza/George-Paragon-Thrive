@@ -1,0 +1,103 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+
+}
+?>
+
+<div class="tva-sidebar-wrapper">
+	<h1 class="tva-options-heading new-design">
+		<?php echo __( 'Template settings', 'thrive-apprentice' ) ?>
+	</h1>
+
+	<div class="scrollbar-inner w-118">
+		<div class="pr-5 pl-5 mt-5 mb-10">
+			<div class="tva-settings-card">
+				<div class="tva-settings-card-title">
+					<h3><?php echo __( 'Main color', 'thrive-apprentice' ); ?></h3>
+				</div>
+
+				<div class="tva-settings-card-content">
+					<div class="tva-settings-card-inner">
+						<div class="tva-flex tva-align-center tva-settings-card-color">
+							<label class="settings-label mr-30"><?php echo __( 'Colors', 'thrive-apprentice' ) ?></label>
+							<input id="tva-main-color-select" type="text" value="<#= model.get('template').main_color #>"
+								   name="main_color" class="settings-input color"/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tva-settings-card">
+				<div class="tva-settings-card-title">
+					<h3><?php echo __( 'Logo', 'thrive-apprentice' ); ?></h3>
+				</div>
+
+				<div class="tva-settings-card-content">
+					<div class="tva-settings-card-inner">
+						<div class="mt-10">
+							<input id="tva-logo-type" type="checkbox" class="settings-cb-input click" data-fn="changeLogoType" <#= model.get('template').logo_type ? 'checked="checked"' : '' #>>
+							<label for="tva-logo-type" class="settings-cb-label"><?php echo __( 'Add logo as text', 'thrive-apprentice' ); ?></label>
+						</div>
+
+						<div class="tva-logo-text">
+							<input id="tva-logo-text" type="text" class="input settings-input" data-fn="changeLogoText" placeholder="<?php echo __( 'Add logo as text', 'thrive-apprentice' ); ?>" value="<#= model.get( 'template' ).logo_url #>"/>
+						</div>
+
+						<div class="tva-logo-image">
+							<div class="tva-flex tva-align-center tva-settings-card-logo">
+								<input type="text" readonly="readonly" placeholder="<?php echo __( 'No file selected', 'thrive-apprentice' ); ?>"
+									   class="settings-input settings-logo" value="<#= model.get('template').logo_url #>">
+								<button class="tva-btn tva-btn-blue click" data-fn="changeLogo"><?php echo __( 'Change', 'thrive-apprentice' ); ?></button>
+							</div>
+						</div>
+
+						<div class="tva-flex tva-align-center">
+							<div class="tva-settings-card-range mr-10">
+								<label for="tva_logo_size" class="settings-label"><?php echo __( 'Size', 'thrive-apprentice' ); ?></label>
+								<input type="range" class="input settings-input" data-css-prop="width"
+									   data-fn="sliderInput" id="tva_logo_size" name="logo_size" value="<#= model.get( 'template' ).logo_size #>" min="10" max="600"/>
+							</div>
+							<div class="tva-settings-card-number">
+								<label for="tva_logo_size_input" class="settings-label"><?php echo __( 'px', 'thrive-apprentice' ); ?></label>
+								<input type="number" class="input settings-input" data-css-prop="width"
+									   data-fn="sliderInput" id="tva_logo_size_input" name="logo_size" value="<#= model.get( 'template' ).logo_size #>"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tva-settings-card">
+				<div class="tva-settings-card-title">
+					<h3><?php echo __( 'Font', 'thrive-apprentice' ); ?></h3>
+				</div>
+
+				<div class="tva-settings-card-content">
+					<div class="tva-settings-card-inner">
+						<div>
+							<label for="tva-fonts-source" class="settings-label"><?php echo __( 'Font source', 'thrive-apprentice' ); ?></label>
+							<select id="tva-fonts-source" class="change" data-fn="renderFonts"></select>
+						</div>
+
+						<div id="tva-fonts"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="mt-10 mb-10">
+				<button data-fn="modifySettingsView" data-state="design-legacy/advanced" class="click tva-empty-btn tva-empty-btn-blue small advanced">
+					<?php echo __( 'Advanced settings', 'thrive-apprentice' ); ?>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<?php include dirname( __FILE__ ) . '/save-btn.php'; ?>

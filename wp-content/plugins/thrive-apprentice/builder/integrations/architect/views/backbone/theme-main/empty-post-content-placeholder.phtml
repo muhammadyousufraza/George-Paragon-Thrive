@@ -1,0 +1,23 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-theme
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+
+?>
+
+<div class="theme-empty-post-content-placeholder">
+	<h3>
+		<?php echo sprintf( __( 'The %s you are previewing has no content', 'thrive-theme' ), '<#= contentType #>' ); ?>
+	</h3>
+	<p>
+		<?php echo __( 'You can preview this template with another piece of content by using the content switcher in the upper right corner of the editor.', 'thrive-theme' ); ?>
+	</p>
+
+	<img src="<?php echo THEME_URL . '/inc/assets/images/empty-post-content-placeholder.png'; ?>" alt="" class="tvd-responsive-img">
+</div>

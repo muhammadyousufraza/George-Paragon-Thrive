@@ -1,0 +1,56 @@
+<div class="tva-modal-step" data-step="0">
+	<div class="tvd-modal-content">
+		<h3 class="tvd-modal-title tva-text-center"><?php echo __( 'Choose a Drip Template', 'thrive-apprentice' ); ?></h3>
+
+		<div class="tva-drip-types-container">
+			<div class="tva-blue-bubble-info-text">
+				<p class="tva-bb-question-box"><?php esc_html_e( 'What kind of drip automation would you like to create?', 'thrive-apprentice' ); ?>
+			</div>
+
+			<div class="tva-drip-types">
+				<# _.each( TVA.drip.campaign_types, function( campaign ) { #>
+				<div class="<#=!campaign.disabled ? 'click ' : ' '#>drip-campaign-type<#= this.model.get('type') !== campaign.type ? '' : ' selected' #><#=campaign.disabled ? ' tva-drip-disabled' : ''#>"
+				<#=!campaign.disabled ? ' data-fn="selectType"' : ''#> data-type="<#- campaign.type #>">
+				<div class="tva-drip-campaign-icon">
+					<img alt="<#- campaign.type #>" class="" src="<?php echo TVA_Const::plugin_url( 'admin/includes/assets/img/drip/<#= campaign.type #>@2x.png' ); ?>" width="80">
+				</div>
+				<div class="tva-drip-campaign-title"><#- campaign.label #></div>
+				<div class="mt-10 tva-drip-campaign-description"><#- campaign.desc #></div>
+				<# if ( campaign.type === 'automator' && campaign.disabled ) { #>
+				<div class="mt-10 tva-drip-campaign-disabled"><?php echo __( 'This requires Thrive Automator to be installed and activated', 'thrive-apprentice' ); ?></div>
+				<# } #>
+			</div>
+			<# }, this ) #>
+		</div>
+	</div>
+
+	<div class="tvd-modal-btm tva-flex tva-flex-row tva-space-between">
+		<button type="button" class="click tva-modal-btn tva-modal-btn-fill-gray" data-fn="close"><?php echo __( 'Cancel', 'thrive-apprentice' ); ?></button>
+		<button type="button" class="click tva-modal-btn tva-modal-btn-fill-green<#= this.model.get('type') ? '' : ' tva-disabled' #> tva-next-step" data-fn="typeSelected"><?php echo __( 'Continue', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>
+</div>
+
+<div class="tva-modal-step" data-step="1">
+	<div class="tvd-modal-content">
+		<div class="tva-drip-types-container">
+			<div class="tva-drip-form mb-20"></div>
+		</div>
+		<div class="tvd-modal-btm tva-flex tva-flex-row tva-space-between tva-relative">
+			<button type="button" class="click tva-modal-btn-back tva-campaign-back" data-fn="jumpToStep" data-step="0"><?php echo __( 'Back', 'thrive-apprentice' ); ?></button>
+			<button type="button" class="click tva-modal-btn tva-modal-btn-fill-<#= this.model.get('id') ? 'blue' : 'green' #> tva-btn-save-campaign" data-fn="saveClicked">
+				<#- this.model.get('id') ? <?php echo json_encode( esc_html( 'Reapply drip schedule', 'thrive-apprentice' ) ) ?> : <?php echo json_encode( esc_html( 'Create my campaign', 'thrive-apprentice' ) ) ?> #>
+			</button>
+			<# if ( this.model.get('id') ) { #>
+			<div class="tva-save-warn" style="display: none">
+				<div class="tva-save-warn--text tva-warn-text"><?php esc_html_e( 'Reapplying the drip schedule will overwrite all existing conditions.' ); ?><br><?php esc_html_e( 'All manually added conditions in this schedule will be lost.', 'thrive-apprentice' ); ?></div>
+				<div class="tva-save-warn--action tva-warn-text">
+					<?php esc_html_e( 'Are you sure you want to reapply the drip schedule?', 'thrive-apprentice' ); ?>
+					<button type="button" class="click tva-modal-btn tva-modal-btn-empty" data-fn="save"><?php esc_html_e( 'Yes', 'thrive-apprentice' ); ?></button>
+					<button type="button" class="click tva-modal-btn tva-modal-btn-empty ml-10" data-fn="cancelSave"><?php esc_html_e( 'No, keep existing rules', 'thrive-apprentice' ); ?></button>
+				</div>
+			</div>
+			<# } #>
+		</div>
+	</div>
+</div>

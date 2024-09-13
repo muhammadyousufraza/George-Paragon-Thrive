@@ -1,0 +1,28 @@
+<?php
+/** @var TVA_Author $author_instance */
+/** @var string $title */
+?>
+<div class="tva-about-the-author">
+
+	<?php if ( ! empty( $avatar ) ) : ?>
+		<div class="tva-left">
+			<div class="tva-author-image">
+				<span style="background-image: url( <?php echo $avatar; ?> );" class="tva-jcs-avatar"></span>
+			</div>
+		</div>
+	<?php endif; ?>
+
+	<div class="tva-right">
+		<p class="tva_author"><?php echo $title; ?></p>
+
+		<div class="tva-author-image-name">
+			<span class="tva-author-name"> <?php echo $author_instance->get_user()->display_name; ?> </span>
+		</div>
+	</div>
+
+	<?php if ( ! empty( $bio ) ) : ?>
+		<div class="tva-author-description">
+			<div class="tva_paragraph"><?php echo $bio; ?></div>
+		</div>
+	<?php endif; ?>
+</div>

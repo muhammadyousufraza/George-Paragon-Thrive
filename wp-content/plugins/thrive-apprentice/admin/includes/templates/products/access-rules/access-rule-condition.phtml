@@ -1,0 +1,22 @@
+<# if ( this.model.get('index') > 0 ) { #>
+<span class="tva-and"><?php echo __( 'and', 'thrive-apprentice' ) ?></span>
+<# } #>
+<div class="tva-rule-condition">
+	<# if ( ! this.defaults.includes( this.model.get('scope') ) ) { #>
+	<div class="tva-delete-condition-wrapper">
+		<a href="javascript:void(0);" class="click" data-fn="deleteCondition" data-type="<#= this.model.get('type') #>"><i class="tvd-icon-close2"></i></a>
+	</div>
+	<# } #>
+	<select class="change" data-fn="fieldChanged" <#= this.disabled #> >
+	<# if ( this.model.get('scope') !== 'custom' ) { #>
+	<option value="<#= this.model.get('scope') #>"><#= TVA.t.access_rule_select_labels[ this.model.get('scope') ] #></option>
+	<# } else { #>
+	<option value="" disabled="disabled"><?php esc_html_e( 'Select set of conditions', 'thrive-apprentice' ); ?></option>
+	<# Object.entries( TVA.t.access_rule_select_labels[ this.model.get('scope') ]).forEach(( element ) => { #>
+	<option value="<#= element[0] #>"><#= element[1] #></option>
+	<# } ) #>
+	<# } #>
+	</select>
+
+	<div class="tva-condition-checkbox-list tva-flex tva-flex-wrap"></div>
+</div>

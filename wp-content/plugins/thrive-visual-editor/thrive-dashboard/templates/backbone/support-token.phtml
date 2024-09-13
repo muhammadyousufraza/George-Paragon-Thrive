@@ -1,0 +1,144 @@
+<div class="tva-modal-token-step tvi-step-one">
+    <div class="tvd-modal-content tva-choose-template">
+        <h3 class="tvd-modal-title"><?php echo __( 'Give Our Team Access to Your Site Temporarily', 'thrive-dash' ) ?></h3>
+        <p>
+			<?php echo __( 'You can safely and securely give our team access to your site in order to debug problems that you\'re having.', 'thrive-dash' ) ?>
+            <a href="https://thrivethemes.com/tkb_item/what-are-access-tokens-and-how-do-they-work/" target="_blank" class="tvd-blue-text">
+				<?php echo __( 'How does this work?', 'thrive-dash' ) ?>
+            </a>
+        </p>
+    </div>
+    <div class="tvd-modal-footer">
+        <div class="tvd-row">
+            <div class="tvd-col tvd-s3 tvd-no-margin-left">
+				<?php echo __( 'Give access for', 'thrive-dash' ) ?>
+            </div>
+            <div class="tvd-col tvd-s2 tvd-no-margin-left">
+                <div class="tvd-input-field">
+                    <input type="text" id="tva-access-days" class="tva-access-days tvd-s4" name="tva-access-days" value="<#= this.model.get('valid_days') #>"/>
+                </div>
+            </div>
+            <div class="tvd-col tvd-s3 tvd-no-margin-left">
+				<?php echo __( 'days', 'thrive-dash' ) ?>
+            </div>
+            <div class="tvd-col tvd-s4 tva-personalize-button">
+                <a href="javascript:void(0)"
+                   class="tvd-btn tvd-btn-green tvd-waves-light tvd-right tva-generate-token-data">
+					<?php echo __( 'Go', 'thrive-dash' ) ?>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tva-modal-token-step tvi-step-two">
+    <div class="tvd-modal-content tva-choose-template">
+        <# if ( this.model.get('disabled') ) { #>
+        <div class="tvd-row tvd-collapse tv-dash-token-expired">
+            <p><?php echo __( 'The token is curently not active.', 'thrive-dash' ) ?></p>
+            <p><?php echo __( 'Please generate a new token, or choose a new date until the token will be active.', 'thrive-dash' ) ?></p>
+        </div>
+        <# } else { #>
+        <div class="tvd-row tvd-collapse">
+            <h1><?php echo __( 'Here is your Access Token', 'thrive-dash' ) ?></h1>
+            <p><?php echo __( 'Copy this code and send it to our support team', 'thrive-dash' ) ?></p>
+        </div>
+        <# } #>
+
+        <div class="tvd-row tvd-collapse tvd-copy-row">
+            <div class="tvd-col tvd-s8 tvd-collapse tvd-copy-row">
+                <div class="tvd-input-field">
+                    <input type="text" id="tva-generated-token" class="tva-generated-token tvd-copy" disabled="disabled" name="tva-generated-token"
+                           value="<#= this.model.get('token') #>"/>
+                    <label class="tvd-active" for="tva-generated-token"><?php echo __( 'Token', 'thrive-dash' ) ?></label>
+                </div>
+            </div>
+
+            <div class="tvd-col tvd-s4 tvd-collapse">
+                <div class="tvd-input-field  tvd-margin-left-small tvd-margin-right-small">
+                    <input type="text" id="tva-token-valid" class="tva-token-valid" name="tva-token-valid" placeholder="&nbsp;/  /&nbsp;"
+                           data-value="<#= this.model.get('valid_until') #>" value="<#= this.model.get('valid_until') #>"/>
+                    <label class="tvd-active" for="tva-token-valid"><?php echo __( 'Valid until', 'thrive-dash' ) ?></label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tvd-row tvd-modal-footer">
+        <div class="tvd-row">
+            <# if(this.model.get('has_token')) { #>
+            <div class="tvd-col tvd-s5 tva-personalize-button">
+                <a href="javascript:void(0)"
+                   class="tvd-btn tvd-btn-red tvd-waves-light tvd-left tva-delete-token-ask">
+					<?php echo __( 'Remove access', 'thrive-dash' ) ?>
+                </a>
+            </div>
+            <# } #>
+
+            <div class="tvd-col <#= this.model.get('saved') ? 'tvd-s7' : 'tvd-s12' #>">
+                <div class="tvd-row tvd-collapse tvd-copy-row">
+                    <div class="tvd-no-margin-left">
+                        <div class="tvd-input-field">
+                            <input type="hidden" id="tva-generated-token-hidden" class="tva-generated-token-hidden tvd-copy" disabled="disabled"
+                                   name="tva-generated-token-hidden"
+                                   value="<#= this.model.get('token') #>"/>
+                        </div>
+                    </div>
+
+                    <div class="tvd-col tvd-s12 tvd-right">
+					<span class="">
+						<a class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green tvd-copy-token tva-save-token tvd-right"
+                           href="javascript:void(0)">
+							<span class=""><?php echo __( 'Copy & Close', 'thrive-dash' ) ?></span>
+						</a>
+					</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tva-modal-token-step">
+    <div class="tvd-modal-content">
+        <div class="tvd-row tvd-collapse tv-dash-token-expired">
+            <h3><?php echo __( 'Something went wrong.', 'thrive-dash' ) ?></h3>
+            <p><?php echo __( 'It seems that there\'s a connection problem and the token cannot be generated, if you would like to add your site details manually please click ', 'thrive-dash' ) ?>
+                <a class="tvd-text-green" href="https://thrivethemes.com/members/myaccount/"
+                   target="_blank"><?php echo __( 'here', 'thrive-dash' ) ?></a>.</p>
+        </div>
+    </div>
+
+    <div class="tvd-row tvd-modal-footer">
+        <div class="tvd-row">
+            <div class="tvd-col tvd-s12">
+                <a href="javascript:void(0)"
+                   class="tvd-btn tvd-btn-gray tvd-waves-light tvd-right tvd-modal-close">
+					<?php echo __( 'Close', 'thrive-dash' ) ?>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tva-modal-token-step tvd-card tvd-red tvd-delete-token-card">
+    <div class="tvd-card-content">
+        <h3 class="tvd-margin-top">
+			<?php echo __( 'Are you sure you want to delete the access token?', 'thrive-dash' ) ?>
+        </h3>
+    </div>
+    <div class="tvd-card-action">
+        <div class="tvd-row">
+            <div class="tvd-col tvd-s12 tvd-m6 tvd-no-padding">
+                <a class="tvd-btn-flat tvd-btn-flat-secondary tvd-btn-flat-light tvd-left tvd-delete-token-yes">
+					<?php echo __( 'Yes, delete', 'thrive-dash' ) ?>
+                </a>
+            </div>
+            <div class="tvd-col tvd-s12 tvd-m6 tvd-no-padding">
+                <a class="tvd-btn-flat tvd-btn-flat-primary tvd-btn-flat-light tvd-right tvd-delete-token-no">
+					<?php echo __( 'No, keep it', 'thrive-dash' ) ?>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div>
+	<div class="button-group-holder control-grid">
+		<div class="group-label label">Choose item</div>
+		<div class="tve-btn-group input" style="max-width: 60px;">
+			<div class="btn-inline tve-btn click" data-fn="tabClick" data-tooltip="Static" data-side="top" data-value="static">
+				<?php tcb_icon( 'link' ); ?>
+			</div>
+			<div class="btn-inline tve-btn click" data-fn="tabClick" data-tooltip="Autodetect" data-side="top" data-value="dynamic">
+				<?php tcb_icon( 'database-regular' ); ?>
+			</div>
+		</div>
+	</div>
+	<div class="row course-item-value" data-value="static" style="display: none;">
+		<div class="col-xs-12">
+			<select id="select-course-item-courses" class="change" data-fn="selectCourse"></select>
+		</div>
+		<div class="col-xs-12 mt-10">
+			<select id="select-course-item-items" class="change" data-fn="selectCourseItem"></select>
+		</div>
+	</div>
+	<div class="row course-item-value" data-value="dynamic" style="display: none;">
+		<div class="col-xs-12">
+			<div class="auto-detect-label tcb-text-center">Auto detect</div>
+		</div>
+	</div>
+</div>

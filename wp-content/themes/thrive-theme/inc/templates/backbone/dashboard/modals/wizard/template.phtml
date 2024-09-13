@@ -1,0 +1,15 @@
+<div class="<#=itemClass#> click" data-fn="clickSelect" data-title="<#= item.post_title #>" data-id="<#= item.id #>" data-source="<#= item.source #>" data-uid="<#= item.uid || '' #>">
+	<div class="tpl-title-container">
+		<span class="tpl-title mb-5"><#= item.post_title #></span><?php Thrive_Views::svg_icon( 'check_light', 'icon-check' ); ?>
+	</div>
+	<div class="item-thumb lazy-loading">
+		<# if ( item.thumb && item.thumb.url ) { #>
+		<img class="tve-lazy-img" src="<?php echo tve_editor_url() . '/editor/css/images/loading-spinner.gif' ?>" alt="Spinner" data-src="<#= item.thumb.url #>"
+			 data-ratio="<#= parseFloat(parseInt(item.thumb.h) / parseInt(item.thumb.w)).toFixed(3) #>"/>
+		<# } else { #>
+		<div class="ttd-default-icon">
+			<#= model.getTemplateDefaultIcon() #>
+		</div>
+		<# } #>
+	</div>
+</div>

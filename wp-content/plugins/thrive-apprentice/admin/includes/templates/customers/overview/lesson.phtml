@@ -1,0 +1,57 @@
+<div class="tva-card tva-customer-card tva-card-small tva-c-course-grid-elem<#= this.lesson.get('freemium') !== 'inherit' ? ' tva-free-lesson' : '' #>">
+	<div class="tva-cc-title">
+			<input type="checkbox" <#= this.moduleLocked && this.lesson.get('freemium') === 'inherit' ? 'disabled' : '' #> class="tva-section-select" data-level="lesson" data-item-id="<#= this.lesson.get('ID') #>">
+		<div>
+			<#= this.lesson.get( 'post_title' ) #>
+			<span class="variation"><#= this.lesson.get( 'lesson_type' ) #>&nbsp;<?php echo __( 'lesson', 'thrive-apprentice' ); ?></span>
+		</div>
+	</div>
+	<div class="tva-cc-status">
+		<# if ( this.locked === true ) { #>
+
+		<# if ( this.courseLocked ) { #>
+		<div class="tva-tooltip-parent">
+			<button class="tva-drip-status-btn locked" disabled>
+				<div class="tva-drip-status-btn-icon"><?php tva_get_svg_icon( 'lock-alt_light' ); ?></div>
+				<div class="tva-drip-status-btn-text"><?php echo __( 'Locked', 'thrive-apprentice' ); ?></div>
+			</button>
+			<div class="tva-custom-tooltip"><?php echo __( 'Courses locked with a drip campaign starting in the future<br>cannot be unlocked manually. Once the start date<br>is met, you can edit their access here.', 'thrive-apprentice' ); ?></div>
+		</div>
+		<# } else { #>
+		<button class="tva-drip-status-btn locked click" data-id="<#= this.lesson.get('ID') #>" data-fn="unlockItem">
+			<div class="tva-drip-status-btn-icon"><?php tva_get_svg_icon( 'lock-alt_light' ); ?></div>
+			<div class="tva-drip-status-btn-text"><?php echo __( 'Locked', 'thrive-apprentice' ); ?></div>
+		</button>
+		<# } #>
+
+		<# } else if ( this.moduleLocked && this.lesson.get('freemium') === 'inherit' ) { #>
+		<button class="tva-cc-status-btn tva-status-green">
+			<div class="tva-status-green-icon">
+				<?php tva_get_svg_icon( 'drip-icon-inherited' ); ?>
+			</div>
+			<div class="tva-status-green-text">
+				<?php echo esc_attr__( 'Inherited', 'thrive-apprentice' ) ?>
+			</div>
+		</button>
+
+		<# } else if ( this.completed ) { #>
+		<button class="tva-cc-status-btn tva-status-completed"><?php echo esc_attr__( 'Completed', 'thrive-apprentice' ) ?></button>
+		<# } else if ( this.lessonStart && ! this.lessonComplete ) { #>
+		<button class="tva-cc-status-btn tva-status-progress"><?php echo esc_attr__( 'Started', 'thrive-apprentice' ) ?></button>
+		<# } else { #>
+		<button class="tva-cc-status-btn tva-status-green">
+			<div class="tva-status-green-icon">
+				<?php tva_get_svg_icon( 'unlock-alt_light' ); ?>
+			</div>
+			<div class="tva-status-green-text">
+				<?php echo esc_attr__( 'Unlocked', 'thrive-apprentice' ) ?>
+			</div>
+			<# if ( this.courseLocked && this.lesson.get('freemium') === 'inherit' ) { #>
+			<span class="tva-custom-tooltip tva-tooltip-inherited"><?php echo esc_attr__( 'Lesson will be unlocked when course unlock condition will be met', 'thrive-apprentice' ) ?></span>
+			<# } #>
+		</button>
+		<# } #>
+	</div>
+	<div class="tva-cc-date"><span<#= ! this.lessonStart ? ' class="no-activity"' : '' #>><#= this.lessonStart ? this.lessonStart : '-' #></span></div>
+	<div class="tva-cc-date"><span<#= ! this.lessonComplete ? ' class="no-activity"' : '' #>><#= this.lessonComplete ? this.lessonComplete : '-' #></span></div>
+</div>

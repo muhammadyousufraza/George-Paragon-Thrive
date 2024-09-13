@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+use TVA\Reporting\Main;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="apprentice-dashboard-container">
+	<div class="apprentice-top-section">
+		<div>
+			<h2 class="mt-0">
+				<?php echo esc_html__( 'Popular courses', 'thrive-apprentice' ); ?>
+			</h2>
+
+			<div class="apprentice-dashboard-wrapper no-focus">
+				<?php Main::render_report( 'tve_reporting_filter', 'users_filter' ); ?>
+				<?php Main::render_report( 'tve_reporting_filter', 'course_status_filter' ); ?>
+				<?php Main::render_report( 'tve_reporting_filter', 'date_filter' ); ?>
+			</div>
+		</div>
+	</div>
+
+	<div class="apprentice-info mb-20">
+		<span class="tva-info-icon text-blue">
+			<?php tva_get_svg_icon( 'info-circle_light' ); ?>
+		</span>
+		<span class="apprentice-info-text">
+			<?php echo esc_html__( 'Popular courses are ranked by number of enrollments. However if you want to change the sort order, click the column headings in the table below.', 'thrive-apprentice' ); ?>
+		</span>
+	</div>
+
+	<div class="apprentice-dashboard-wrapper">
+		<div class="col-8-8">
+			<?php Main::render_report( 'tve_reporting_table', 'popular_courses', 'info', [
+				'report-title'              => __( 'Details', 'thrive-apprentice' ),
+				'report-global-filters'     => 'date,user_id,course_id,course_status',
+				'report-expanded-view'      => '',
+				'has-pagination'            => 1,
+				'report-items-per-page'     => 10,
+				'report-order-by'           => 'enrollments',
+				'report-order-by-direction' => 'desc',
+				'report-has-export'         => 1,
+				'export-title'              => esc_html__( 'Popular courses', 'thrive-apprentice' ),
+			] ); ?>
+		</div>
+	</div>
+</div>

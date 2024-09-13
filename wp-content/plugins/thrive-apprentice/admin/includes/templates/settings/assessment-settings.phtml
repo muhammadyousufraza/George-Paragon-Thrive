@@ -1,0 +1,89 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+
+<h1 class="tva-main-heading"><?php esc_html_e( 'Assessments uploads', 'thrive-apprentice' ); ?></h1>
+<p class="settings-p-main mt-20 mb-10">
+	<?php esc_html_e( 'These settings will be used to allow your students to upload their assessments.', 'thrive-apprentice' ); ?>
+	<a href="https://help.thrivethemes.com/en/articles/8154726-how-to-upload-assessments-in-thrive-apprentice" target="_blank" rel="nofollow"><?php esc_html_e( 'Learn more', 'thrive-apprentice' ); ?></a>
+</p>
+
+<div class="tva-general-settings-card mb-20">
+
+	<div class="tva-settings-470-w">
+		<div class="mb-30">
+			<label for="assessment-upload-to"><?php echo esc_html__( 'Send uploaded assessment(s) to', 'thrive-apprentice' ); ?></label>
+			<select id="assessment-upload-to" data-bind="upload_connection_key">
+				<option value=""><?php echo esc_html__( 'Select upload service', 'thrive-apprentice' ); ?></option>
+			</select>
+		</div>
+
+		<div class="mb-30 service-chooser"></div>
+
+		<# if(!TVA.assessments || !TVA.assessments.upload_connections || Object.values(TVA.assessments.upload_connections).length === 0){ #>
+		<div class="tva-assessment-settings-notice" style="--tva-assessment-settings-notice-color:#ff9441; --tva-assessment-settings-notice-background: #fff5ec;">
+			<div class="tva-flex tva-flex-row">
+				<?php tva_get_svg_icon( 'exclamation-triangle' ); ?>
+				<div class="tva-flex tva-flex-column ml-15 tva-space-center">
+					<span>
+						<?php echo __( 'You have no upload service set up. To set up upload services like Google Drive or Dropbox, please go to.', 'thrive-apprentice' ); ?>
+					<a href="<?php echo admin_url( 'admin.php?page=tve_dash_api_connect' ); ?>" rel="noopener" target="_blank"><?php echo __( 'API Connections', 'thrive-apprentice' ); ?></a>
+					</span>
+					<span>
+						<a href="https://help.thrivethemes.com/en/articles/8154726-how-to-manage-assessment-upload-settings-in-thrive-apprentice" rel="noopener" target="_blank"><?php echo __( 'Learn more', 'thrive-apprentice' ); ?></a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<# }else{ #>
+		<div class="tva-assessment-settings-notice" style="--tva-assessment-settings-notice-color:rgba(20, 47, 191, 0.8); --tva-assessment-settings-notice-background: #e8ebf9;">
+			<div class="tva-flex tva-flex-row">
+				<?php tva_get_svg_icon( 'info-circle_light' ); ?>
+				<div class="tva-flex tva-flex-column ml-15 tva-space-center">
+					<span>
+						<?php echo __( 'To manage your upload services, please go to', 'thrive-apprentice' ); ?>
+					<a href="<?php echo admin_url( 'admin.php?page=tve_dash_api_connect' ); ?>" rel="noopener" target="_blank"><?php echo __( 'API Connections', 'thrive-apprentice' ); ?></a>
+					</span>
+					<span>
+						<a href="https://help.thrivethemes.com/en/articles/8154726-how-to-manage-assessment-upload-settings-in-thrive-apprentice" rel="noopener" target="_blank"><?php echo __( 'Learn more', 'thrive-apprentice' ); ?></a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<# } #>
+
+		<div class="mb-30">
+			<div class="tva-flex mb-5 tva-align-center tva-space-between tva-mega-tooltip-box">
+				<label class="mb-0" for="upload-filename"><?php echo esc_html__( 'Filename', 'thrive-apprentice' ); ?></label>
+				<div class="tva-info-icon tva-relative tva-tooltip-parent tva-mega-tooltip">
+					<?php tva_get_svg_icon( 'info-solid' ); ?>
+					<div class="tva-custom-tooltip tva-settings-filename-tooltip">
+						<p class="tva-settings-bold-text mt-0 mb-30"><?php esc_html_e( 'Specify the naming convention of the uploaded file(s)', 'thrive-apprentice' ); ?></p>
+						<p class="mb-10"><?php esc_html_e( 'File names can be static, e.g. “assessment-upload” or dynamic using the following shortcodes:-', 'thrive-apprentice' ); ?></p>
+						<p><?php esc_html_e( '{assessment} - the title of the assessment', 'thrive-apprentice' ); ?></p>
+						<p><?php esc_html_e( '{course} - the name of the course', 'thrive-apprentice' ); ?></p>
+						<p><?php esc_html_e( '{email} - the email of the student', 'thrive-apprentice' ); ?></p>
+						<p><?php esc_html_e( '{date} - the date of the submission', 'thrive-apprentice' ); ?></p>
+						<p><?php esc_html_e( '{time} - the time of the submission', 'thrive-apprentice' ); ?></p>
+						<p><?php esc_html_e( '{match} - the name of the uploaded file', 'thrive-apprentice' ); ?></p>
+						<p class="tvd-underline mt-10"><?php esc_html_e( 'Example:', 'thrive-apprentice' ); ?></p>
+						<p><?php esc_html_e( 'assessment_{course}_{assessment}_{date}_{time}', 'thrive-apprentice' ); ?></p>
+						<p class="mt-10"><?php esc_html_e( 'would create files similar to the following:-', 'thrive-apprentice' ); ?></p>
+						<p class="mt-10"><?php esc_html_e( 'assessment_Leadership101_LeadershipAssessment_06-15-2020_544693.pdf', 'thrive-apprentice' ); ?></p>
+					</div>
+				</div>
+			</div>
+			<input id="upload-filename" type="text" data-bind="upload_filename" value="<#- model.get('upload_filename') #>">
+		</div>
+
+		<button class="tva-save-btn click tva-settings-save-button" data-fn="save"><?php esc_html_e( 'Save', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>

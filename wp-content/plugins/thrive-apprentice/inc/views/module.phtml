@@ -1,0 +1,89 @@
+<?php
+
+/**
+ * @var $done   string
+ * @var $module TVA_Module
+ */
+
+$done            = tva_is_module_completed( $module ) ? 'done' : '';
+$allowed         = tva_access_manager()->has_access_to_object( $module->get_the_post() );
+$labels          = TVA_Dynamic_Labels::get( 'course_structure' );
+$template        = TVA_Setting::get( 'template' );
+$visible_lessons = $module->get_visible_lessons();
+
+if ( ( is_user_logged_in() && ! empty( $visible_lessons ) ) || ! is_user_logged_in() ) : ?>
+
+	<div class="tva-cm-module <?php echo $done; ?>">
+		<?php
+		echo tva_get_file_contents(
+			'inc/views/private-label.phtml',
+			[
+				'post'    => $module,
+				'allowed' => $allowed,
+			]
+		);
+		?>
+
+		<div class="tva-module-header">
+		<span class="tva-collapsible-pointer">
+			<?php if ( $module->get_published_chapters_count() === 0 ) : ?>
+				<?php echo $module->get_published_lessons_count() . ' ';
+				if ( 1 === $module->get_published_lessons_count() ) {
+					echo isset( $labels['course_lesson']['singular'] ) ? $labels['course_lesson']['singular'] : $template['course_lesson'];
+				} else {
+					echo isset( $labels['course_lesson']['plural'] ) ? $labels['course_lesson']['plural'] : $template['course_lessons'];
+				} ?>
+			<?php else: ?>
+				<?php echo $module->get_published_chapters_count() . ' ';
+				if ( 1 === $module->get_published_chapters_count() ) {
+					echo isset( $labels['course_chapter']['singular'] ) ? $labels['course_chapter']['singular'] : $template['course_chapter'];
+				} else {
+					echo isset( $labels['course_chapter']['plural'] ) ? $labels['course_chapter']['plural'] : $template['course_chapter'];
+				} ?>
+			<?php endif; ?>
+
+			<?php tva_get_svg_icon( 'collapsible-minus' ); ?>
+			<?php tva_get_svg_icon( 'collapsible-plus' ); ?>
+		</span>
+			<h2>
+				<a class="tva_module_headline" href="<?php echo get_permalink( $module->ID ); ?>">
+					<?php echo $module->post_title; ?>
+				</a>
+				<?php if ( $done ) : ?>
+					<span class="tva-cm-module-completed">
+					<?php echo tva_get_svg_icon( 'green-check', '', true ); ?>
+					<?php echo __( 'Completed', 'thrive-apprentice' ); ?>
+				</span>
+				<?php endif; ?>
+			</h2>
+			<?php if ( $module->post_excerpt ) : ?>
+				<div class="tva-cm-description">
+					<div class="tva_paragraph"><?php echo $module->post_excerpt; ?></div>
+				</div>
+			<?php endif; ?>
+		</div>
+		<?php if ( $module->get_visible_chapters_count() ) : ?>
+			<div class="tve-chapters-wrapper">
+				<?php foreach ( $module->get_visible_chapters() as $chapter ) : ?>
+					<?php echo tva_generate_chapter_html( $chapter, $allowed ); ?>
+				<?php endforeach; ?>
+			</div>
+		<?php elseif ( $module->get_published_lessons() ): ?>
+			<?php if ( is_user_logged_in() ) : ?>
+				<div class="tve-lessons-wrapper">
+					<?php foreach ( $visible_lessons as $lesson ): ?>
+						<?php echo tva_generate_lesson_html( $lesson, $allowed ); ?>
+					<?php endforeach; ?>
+				</div>
+			<?php else : ?>
+				<div class="tve-lessons-wrapper">
+					<?php foreach ( $module->get_published_lessons as $lesson ): ?>
+						<?php echo tva_generate_lesson_html( $lesson, $allowed ); ?>
+					<?php endforeach; ?>
+				</div>
+			<?php endif; ?>
+
+		<?php endif; ?>
+	</div>
+
+<?php endif; ?>

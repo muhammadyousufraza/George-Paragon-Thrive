@@ -1,0 +1,50 @@
+@mixin overlay {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 13;
+}
+
+/* prevent anything inside post list to be accessed or hovered while not in edit mode */
+.thrive-display-testimonials {
+  position: relative;
+
+  &:not(.tcb-compact-edit-mode) {
+
+    > article {
+      z-index: 6;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 7;
+    }
+  }
+}
+
+/* For elements added from sidebar, we need an overlay, so the user will not be able to add other text near it */
+.thrive-testimonial-title, .thrive-testimonial-author, .thrive-testimonial-role, .thrive-testimonial-content, .thrive-testimonial-website {
+  position: relative;
+
+  /* Default margins should be removed because we won't have access to inner elements because of the overlay */
+  .thrv_wrapper {
+    margin-bottom: 0;
+
+    h2 {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &:after {
+    @include overlay;
+  }
+}

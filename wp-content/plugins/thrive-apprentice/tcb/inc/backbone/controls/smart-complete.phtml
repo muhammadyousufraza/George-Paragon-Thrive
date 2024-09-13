@@ -1,0 +1,109 @@
+<hr>
+<div class="tve-advanced-controls tve-lg-autofill">
+	<div class="click dropdown-header" data-fn="toggleAutofill">
+		<span>
+			<?php echo esc_html__( 'Autofill settings', 'thrive-cb' ); ?>
+		</span>
+	</div>
+	<div class="dropdown-content">
+		<div class="tve-lg-smart-complete">
+			<div class="control-grid info full-width">
+				<span>
+					<?php echo esc_html__( 'Automatically populate fields using dynamic data.', 'thrive-cb' ) ?>
+					<a href="https://thrivethemes.com/tkb_item/how-to-use-the-smart-complete-feature-of-the-lead-generation-element/" target="_blank" class="blue-text"><?php echo esc_html__( 'Learn more', 'thrive-cb' ); ?></a>
+				</span>
+			</div>
+			<div class="control-grid tve-lg-autocomplete-type full-width mt-5">
+				<div class="input fill">
+					<select class="change tve-lg-autocomplete-select" data-fn="changeAutocompleteType">
+						<option value="" disabled selected hidden><?php echo esc_html__( 'Select Variable Type', 'thrive-cb' ) ?></option>
+						<option value="query"><?php echo esc_html__( 'URL QueryString', 'thrive-cb' ) ?></option>
+						<option value="post"><?php echo esc_html__( 'POST Variable', 'thrive-cb' ) ?></option>
+						<option value="cookie"><?php echo esc_html__( 'Cookie Data', 'thrive-cb' ) ?></option>
+						<option value="user"><?php echo esc_html__( 'User Data', 'thrive-cb' ) ?></option>
+						<option value="content"><?php echo esc_html__( 'Content', 'thrive-cb' ) ?></option>
+						<option value="source"><?php echo esc_html__( 'Source', 'thrive-cb' ) ?></option>
+						<option value="shortcode"><?php echo esc_html__( 'Shortcode', 'thrive-cb' ) ?></option>
+						<option value="time"><?php echo esc_html__( 'Time and Date', 'thrive-cb' ) ?></option>
+					</select>
+				</div>
+			</div>
+			<div class="tve-lg-variable tcb-hidden" data-key="url">
+				<div class="control-grid wrap">
+					<div class="label full-width">
+						<span class="input-label label"><?php echo esc_html__( 'Variable name', 'thrive-cb' ); ?></span>
+						<span class="click tve-input-info tcb-hidden tve-input-info-reserved" data-paneltlt-hover data-fn="openTooltip"><?php tcb_icon( 'info-circle-solid' ); ?></span>
+					</div>
+					<div class="input fill mt-5">
+						<input type="text" class="change input tve-lg-url-variable" data-fn="changeAutofillValue"/>
+					</div>
+				</div>
+			</div>
+			<div class="control-grid tve-lg-variable full-width tcb-hidden" data-key="shortcode">
+				<textarea id="tve_lg_shortcode_value" class="change input mt-5 mb-5" data-fn="changeAutofillValue" placeholder="<?php echo esc_html__( 'Insert your text and shortcodes here', 'thrive-cb' ); ?>"></textarea>
+			</div>
+			<div class="control-grid tve-lg-variable full-width tcb-hidden" data-key="time">
+				<select class="change tve-lg-autocomplete-select" data-fn="changeAutofillValue">
+					<option value="" disabled selected hidden><?php echo esc_html__( 'Select Time Format', 'thrive-cb' ) ?></option>
+					<option value="d.M.yyyy">5.8.2018 13:30:30</option>
+					<option value="yyyy-MM-dd">2018-08-05 13:30:30</option>
+					<option value="d-MMM-yyyy">5-Aug-2018 13:30:30</option>
+					<option value="d MMM yyyy">5 Aug 2018 13:30:30</option>
+					<option value="dd/MM/yyyy">05/08/2018 13:30:30</option>
+				</select>
+			</div>
+			<div class="control-grid tve-lg-variable full-width tcb-hidden" data-key="user">
+				<select class="change tve-lg-autocomplete-select" data-fn="changeAutofillValue">
+					<option value="" disabled selected hidden><?php echo esc_html__( 'Select User Data', 'thrive-cb' ) ?></option>
+					<option value="ip"><?php echo esc_html__( 'IP Address', 'thrive-cb' ) ?></option>
+					<option value="browser"><?php echo esc_html__( 'Browser', 'thrive-cb' ) ?></option>
+					<option value="wp.username"><?php echo esc_html__( 'WordPress Username', 'thrive-cb' ) ?></option>
+					<option value="wp.user_email"><?php echo esc_html__( 'WordPress User Email', 'thrive-cb' ) ?></option>
+					<option value="wp.role"><?php echo esc_html__( 'WordPress User Role', 'thrive-cb' ) ?></option>
+					<option value="wp.first_name"><?php echo esc_html__( 'WordPress User First Name', 'thrive-cb' ) ?></option>
+					<option value="wp.last_name"><?php echo esc_html__( 'WordPress User Last Name', 'thrive-cb' ) ?></option>
+					<option value="wp.nickname"><?php echo esc_html__( 'WordPress User Nickname', 'thrive-cb' ) ?></option>
+					<option value="wp.display_name"><?php echo esc_html__( 'WordPress User Public Name', 'thrive-cb' ) ?></option>
+				</select>
+			</div>
+			<div class="control-grid tve-lg-variable full-width tcb-hidden" data-key="content">
+				<select class="change tve-lg-autocomplete-select" data-fn="changeAutofillValue">
+					<option value="" disabled selected hidden><?php echo esc_html__( 'Select Content Value', 'thrive-cb' ) ?></option>
+					<option value="post_id"><?php echo esc_html__( 'Post ID', 'thrive-cb' ) ?></option>
+					<option value="post_title"><?php echo esc_html__( 'Post Title', 'thrive-cb' ) ?></option>
+					<option value="post_type"><?php echo esc_html__( 'Content Type', 'thrive-cb' ) ?></option>
+					<option value="post_url"><?php echo esc_html__( 'Post URL', 'thrive-cb' ) ?></option>
+				</select>
+			</div>
+			<div class="control-grid tve-lg-variable full-width tcb-hidden" data-key="source">
+				<select class="change tve-lg-autocomplete-select" data-fn="changeAutofillValue">
+					<option value="" disabled selected hidden><?php echo esc_html__( 'Select Source Value', 'thrive-cb' ) ?></option>
+					<option value="referrer"><?php echo esc_html__( 'Referring URL', 'thrive-cb' ) ?></option>
+				</select>
+			</div>
+			<div class="control-grid tve-smart-hide-check tcb-hidden">
+				<div class="fill">
+					<span><?php echo esc_html__( 'Hide field if value is set', 'thrive-cb' ) ?></span>
+				</div>
+				<div class="tcb-switch tcb-text-right">
+					<label>
+						<input type="checkbox" class="change tve-smart-hide" data-fn="hideOnComplete"/>
+						<span class="tcb-lever"></span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="control-grid wrap">
+			<div class="label full-width">
+				<?php echo esc_html__( 'Default value', 'thrive-cb' ); ?>
+			</div>
+			<div class="input tve-lg-value-type fill">
+				<input type="text" class="change input tve-lg-field-default-value" data-fn="changeDefaultValue"/>
+			</div>
+			<div class="label tve-lg-check-type tcb-hidden">
+				<label class="tcb-checkbox"><input type="checkbox" class="change tve-lg-field-default-check" data-fn="changeDefaultValue"/><span><?php echo esc_html__( 'Checked', 'thrive-cb' ) ?></span></label>
+			</div>
+		</div>
+	</div>
+</div>

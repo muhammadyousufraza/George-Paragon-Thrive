@@ -1,0 +1,82 @@
+<div class="tcb-cf-submit-action-wrapper">
+	<div class="tcb-cf-submit-action" data-action="reload">
+		<div><?php echo tcb_icon( 'reload1', true ) ?></div>
+		<p><?php echo __( 'Reload page', 'thrive-cb' ) ?></p>
+	</div>
+	<div class="tcb-cf-submit-action" data-action="redirect">
+		<div><?php echo tcb_icon( 'url', true ) ?></div>
+		<p><?php echo __( 'Redirect to custom URL', 'thrive-cb' ) ?></p>
+	</div>
+	<div class="tcb-cf-submit-action" data-action="notification">
+		<div><?php echo tcb_icon( 'notif', true ) ?></div>
+		<p><?php echo __( 'Show success notification', 'thrive-cb' ) ?></p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col tcb-action-form" id="tcb-action-reload"></div>
+	<div class="col tcb-action-form" id="tcb-action-redirect">
+		<p class="pb-0"><?php echo __( 'Insert the url where you want user to be redirected', 'thrive-cb' ) ?></p>
+		<div id="tcb-cf-url"></div>
+	</div>
+	<div class="col tcb-action-form" id="tcb-action-notification">
+		<p class="pb-0"><?php echo __( 'Insert the notification text which will appear when the Contact Form will be sent', 'thrive-cb' ) ?></p>
+		<input name="notification" id="tcb-cf-notification" type="text" class="change input" data-fn-change="change"
+			   data-fn-input="input" value="<#= model.get('notification') #>"
+			   placeholder="<?php echo __( 'Notification', 'thrive-cb' ) ?>">
+	</div>
+</div>
+
+<div class="tcb-switch">
+	<label for="tcb-send-confirmation-email"><?php echo __( 'Send confirmation email to user', 'thrive-cb' ) ?>
+		<input id="tcb-send-confirmation-email" name="send_confirmation_email" class="change"
+			   data-fn-change="change" type="checkbox">
+		<span class="tcb-lever"></span>
+	</label>
+
+</div>
+
+<div class="row" id="tcb-confirmation-message-wrapper">
+	<div class="col col-xs-12">
+		<input type="text" id="tcb-cf-input-subject" name="confirmation_subject" class="change input"
+			   data-fn-input="input" data-fn-change="change" value="<#= model.get('confirmation_subject') #>"
+			   placeholder="<?php echo __( 'Subject', 'thrive-cb' ) ?>">
+		<textarea name="confirmation_message" class="change input" data-fn-input="input" data-fn-change="change"><#= model.get('confirmation_message') #></textarea>
+		<div class="tcb-cf-shortcode-wrapper">
+			<div class="tcb-cf-shortcode-buttons">
+				<span><?php echo __( 'Add shortcodes:', 'thrive-cb' ) ?></span>
+			</div>
+			<div class="tcb-shortcodes"></div>
+		</div>
+	</div>
+
+	<div class="tcb-switch">
+		<label
+				for="tcb-personalize-sender"><?php echo __( 'Would you like to personalize the Sender Details?', 'thrive-cb' ) ?>
+			<input id="tcb-personalize-sender" type="checkbox" name="sender_personalized" class="change"
+				   data-fn-change="change">
+			<span class="tcb-lever"></span>
+		</label>
+	</div>
+	<div id="tcb-sender-details-wrapper">
+		<div class="input-container">
+			<label for="tcb-personalize-from-name"><?php echo __( 'From name', 'thrive-cb' ) ?></label>
+			<input id="tcb-personalize-from-name" type="text" name="from_name" class="change input"
+				   data-fn-change="change" data-fn-input="input"
+				   placeholder="<?php echo __( 'From Name:', 'thrive-cb' ) ?>"
+				   value="<#= model.get('from_name') #>">
+		</div>
+		<div class="input-container">
+			<label for="tcb-personalize-from-email"><?php echo __( 'From email', 'thrive-cb' ) ?></label>
+			<input id="tcb-personalize-from-email" type="text" name="from_email" class="change input"
+				   data-fn-change="change" data-fn-input="input"
+				   placeholder="<?php echo __( 'From Email:', 'thrive-cb' ) ?>"
+				   value="<#= model.get('from_email') #>">
+		</div>
+		<div class="input-container">
+			<label for="tcb-personalize-from-reply-to"><?php echo __( 'Reply-To', 'thrive-cb' ) ?></label>
+			<select name="reply_to" id="tcb-personalize-from-reply-to" class="change"
+					data-fn-change="change"></select>
+		</div>
+	</div>
+</div>

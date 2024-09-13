@@ -1,0 +1,20 @@
+<div class="ttd-wizard-clip clip-homepage fw step-splash">
+	<p class="ttd-wizard-desc mb-10 f-22"><?php echo esc_html__( 'What do you want to display on your homepage?', 'thrive-theme' ); ?></p>
+	<div class="ttd-d-flex mt-50">
+		<a href="#" class="home-tpl splash-option mr-15 click <#=wizard.deepGet('settings.homepage.type') === 'template' ? ' selected' : ''#>"
+		   data-fn="typeClicked" data-type="template">
+			<?php Thrive_Views::svg_icon( 'home-template', 'step-icon', 'img-' ); ?>
+			<span class="ttd-wizard-desc mt-10"><?php echo sprintf( esc_html__( 'Choose from%s ready-made homepages', 'thrive-theme' ), '<br>' ); ?></span>
+		</a>
+		<a href="#" class="home-page splash-option mr-15 click <#=wizard.deepGet('settings.homepage.type') === 'page' ? ' selected' : ''#>"
+		   data-fn="typeClicked" data-type="page">
+			<?php Thrive_Views::svg_icon( 'home-page', 'step-icon page', 'img-' ); ?>
+			<span class="ttd-wizard-desc mt-10"><?php echo sprintf( esc_html__( 'Display one of%s your existing pages', 'thrive-theme' ), '<br>' ); ?></span>
+		</a>
+		<a href="#" class="home-blog splash-option click <#=wizard.deepGet('settings.homepage.type') === 'blog' ? ' selected' : ''#>" data-fn="typeClicked"
+		   data-type="blog">
+			<?php Thrive_Views::svg_icon( 'home-blog', 'step-icon blog', 'img-' ); ?>
+			<span class="ttd-wizard-desc mt-10"><?php echo sprintf( esc_html__( 'Display your blog as%s homepage', 'thrive-theme' ), '<br>' ); ?></span>
+		</a>
+	</div>
+</div>

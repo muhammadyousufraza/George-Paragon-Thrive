@@ -1,0 +1,52 @@
+<td class="tqb-users-entry-nr">
+	<span class="tvd-normal">
+		<#= item.get( 'number' ) #>
+	</span>
+</td>
+<td class="tqb-users-entry-name">
+	<span class="tvd-normal">
+		<#= item.get( 'display_name' ) #>
+	</span>
+</td>
+<td class="tqb-users-entry-email">
+	<span class="tvd-normal">
+		<#= item.get( 'email' ) #>
+	</span>
+</td>
+<td class="tqb-users-entry-date-started">
+	<span class="tvd-normal">
+		<#= item.get( 'date_started' ) #>
+	</span>
+</td>
+<td class="tqb-users-entry-date-finished">
+	<span class="tvd-normal">
+		<#= item.get( 'date_finished' ) #>
+	</span>
+</td>
+<td class="tqb-users-entry-progress">
+	<span class="tvd-normal">
+		<# if ( item.get( 'completed_quiz' ) === '1' ) { #>
+		<?php echo __( 'Completed', 'thrive-quiz-builder' ) ?>
+		<# } else { #>
+		<?php echo __( 'In progress', 'thrive-quiz-builder' ) ?>
+		<# } #>
+	</span>
+</td>
+<td class="tqb-users-entry-nb-of-tries">
+	<span class="tvd-normal">
+		<#= item.get( 'nb_of_tries' ) #>
+	</span>
+</td>
+<td class="tqb-users-entry-error_message">
+	<span class="tvd-normal">
+		<#= item.get( 'points' ) #>
+	</span>
+</td>
+<td class="tqb-users-entry-social-badge">
+	<span class="tvd-normal">
+		<a href="<#= item.get( 'social_badge_link' ) #>" target="_blank"><#= item.get( 'social_badge_link' ) #></a>
+	</span>
+</td>
+<td class="tqb-users-entry-actions">
+	<a href="javascript:void(0);" class="tqb-view-users-answers"><?php echo __( 'View', 'thrive-quiz-builder' ) ?></a>
+</td>

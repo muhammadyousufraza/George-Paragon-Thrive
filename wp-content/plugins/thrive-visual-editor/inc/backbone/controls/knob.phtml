@@ -1,0 +1,8 @@
+<div class="control-grid tve-knob-wrapper">
+	<div class="label"><#= this.model.config.label || this.el.dataset.name#></div>
+	<div class="tve-knob"></div>
+	<div class="slider-input">
+		<span class="input-um degree">&deg;</span>
+		<input type="text" class="tve-input input change width-input has-um" data-fn="onChange" data-fn-input="onInput" value="<#= this.model.config.default #>">
+	</div>
+</div>

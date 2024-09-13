@@ -1,0 +1,56 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+$config = array(
+	'disable_submenu_item' => 'index',
+);
+
+
+?>
+<div class="tva-sidebar-wrapper">
+	<?php include dirname( __FILE__ ) . '/partial-header.php'; ?>
+
+	<div class="scrollbar-inner w-166">
+		<div class="pr-5 pl-5 mb-10">
+			<div class="tva-settings-card">
+				<div class="tva-settings-card-title">
+					<h3 class="tva-course-list-title"><?php echo __( 'Course lessons', 'thrive-apprentice' ) ?></h3>
+				</div>
+
+				<div class="tva-settings-card-content">
+					<div class="tva-settings-card-inner">
+					<div class="tva-clear">
+						<label for="tva-lessons-text" class="settings-label"><?php echo __( 'Plural', 'thrive-apprentice' ) ?></label>
+						<input type="text" data-fn="changeText"
+							   class="input settings-input <#= this.model.get('preview_option') && !available_settings.get('lessons_plural_text') ? 'tvd-tooltipped' : ''#>"
+						<#= this.model.get('preview_option') && !available_settings.get('lessons_plural_text') ? 'disabled ' + available_settings.get('tooltip') : ''#>
+						id="tva-lessons-text" name="course_lessons_plural" value="<#= template.course_lessons_plural #>"/>
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tva-settings-card">
+				<div class="tva-settings-card-title">
+					<h3><?php echo __( 'Search label', 'thrive-apprentice' ) ?></h3>
+				</div>
+
+				<div class="tva-settings-card-content">
+					<div class="tva-settings-card-inner">
+						<label for="tva-progress-bar-text" class="settings-label"><?php echo __( 'Search', 'thrive-apprentice' ); ?></label>
+						<input type="text" data-fn="changeAttribute" class="input settings-input" data-attr-name="placeholder" id="tva-search-text" name="search_text" value="<#= template.search_text #>"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<?php include dirname( __FILE__ ) . '/save-btn.php'; ?>
+</div>

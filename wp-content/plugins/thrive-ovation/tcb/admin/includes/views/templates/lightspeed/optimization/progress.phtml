@@ -1,0 +1,31 @@
+<div class="ls-optimization-wrapper">
+	<div class="page-header">
+		<?php echo __( 'Please note this optimization tool will run in the background.<b> Please don’t close the page</b> while it is running. If the migration fails before completing then you can rerun the tool and it will automatically continue from where it got to previously', 'thrive-cb' ); ?>
+	</div>
+
+	<div class="page-content white">
+		<div class="page-title"><?php echo __( 'Asset Optimization in Progress …', 'thrive-cb' ); ?></div>
+		<div class="page-text-wrapper">
+			<div class="text-main align-left">
+				<div class="text-paragraph mt-0 mb-5">
+					<span class="small-icon estimated-time-icon"></span>
+					<?php echo sprintf( __( 'Estimated time to completion:&nbsp<b>%s</b>', 'thrive-cb' ), '<span class="optimization-time"> ~ </span>' ); ?>
+				</div>
+				<div class="text-paragraph mt-0 mb-5">
+					<span class="small-icon success"></span>
+					<?php echo sprintf( __( '<b>%s of %s items</b>&nbsphave been updated to the latest version', 'thrive-cb' ), '<span class="optimized-items"> ~ </span>', '<span class="total-items"> ~ </span>' ); ?>
+				</div>
+				<div class="text-paragraph mt-0 red-color failed-optimization-wrapper">
+					<span class="small-icon fail"></span>
+					<?php echo sprintf( __( '<b>%s items</b>&nbspfailed to update', 'thrive-cb' ), '<span class="optimization-failed-items"> ~ </span>' ); ?>
+				</div>
+			</div>
+		</div>
+		<div class="currently-optimizing">
+			<?php echo __( 'Currently optimizing: ', 'thrive-cb' ); ?><span class="item-in-progress"></span>
+		</div>
+		<div class="progress-bar-wrapper"></div>
+	</div>
+
+	<div class="groups-to-optimize"></div>
+</div>

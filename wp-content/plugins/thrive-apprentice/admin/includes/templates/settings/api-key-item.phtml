@@ -1,0 +1,45 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-api-key-details">
+	<div class="tva-nk"><#= model.get('name') #></div>
+	<div class="tva-nk"><#= model.get('key') #></div>
+	<div class="tva-status ml-5">
+		<div class="tvd-switch">
+			<label class="tva-slide-checkbox">
+				<input type="checkbox" class="click" data-fn="changeField" data-field="status" <#= model.get('status') ? 'checked' : '' #>>
+				<span class="lever"></span>
+			</label>
+		</div>
+	</div>
+	<div class="buttons-box">
+		<a href="javascript:void(0)" class="tva-link-btn mr-45 click" data-fn="editToken">
+			<?php
+			tva_get_svg_icon( 'adm-edit-w-tar' );
+			_e( 'Edit', 'thrive-apprentice' );
+			?>
+		</a>
+		<a href="javascript:void(0)" class="tva-link-btn click" data-fn="deleteToken">
+			<?php
+			tva_get_svg_icon( 'trash-alt' );
+			_e( 'Delete', 'thrive-apprentice' );
+			?>
+		</a>
+	</div>
+</div>
+
+<div style="display: none;" class="tva-api-key-delete">
+	<div><?php _e( 'Are you sure you want to delete', 'thrive-apprentice' ); ?> <#= model.get('name') #> ?</div>
+	<div class="buttons">
+		<span class="click" data-fn="delete"><?php _e( 'Yes', 'thrive-apprentice' ); ?></span>
+		<span class="click" data-fn="cancel"><?php _e( 'No', 'thrive-apprentice' ); ?></span>
+	</div>
+</div>

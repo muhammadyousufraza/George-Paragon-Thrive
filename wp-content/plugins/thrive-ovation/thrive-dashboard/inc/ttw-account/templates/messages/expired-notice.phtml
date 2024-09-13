@@ -1,0 +1,24 @@
+<div class="notice notice-warning is-dismissible">
+	<p>
+		<?php
+		echo __( 'We managed to connect to your account but your membership is not active. ', 'thrive-dash' );
+		echo sprintf(
+			__( 'Please %s and %s. If you believe you have an active membership, visit our %s', 'thrive-dash' ),
+			sprintf(
+				'<a href="%s" target="_blank">%s</a>',
+				TD_TTW_Update_Manager::SUITE_URL,
+				__( 'renew your membership', 'thrive-dash' )
+			),
+			sprintf(
+				'<a href="%s" target="_blank">%s</a>',
+				TD_TTW_Connection::get_instance()->get_login_url(),
+				__( 'reconnect', 'thrive-dash' )
+			),
+			sprintf(
+				'<a href="http://help.thrivethemes.com/en/articles/4957014-having-trouble-logging-into-your-thrive-themes-account/" target="_blank">%s</a>',
+				__( 'troubleshooting guide', 'thrive-dash' )
+			)
+		);
+		?>
+	</p>
+</div>

@@ -1,0 +1,91 @@
+<div data-id="<#= model.get( 'id' ) #>" class="tva-card tva-customer-card tva-card-small tva-cc-grid mb-10 click" data-fn="viewCourse">
+	<div class="tva-cc-title tva-cc-main">
+		<# if ( this.model.get( 'cover_image' ) ) { #>
+		<div class="tva-course-img" style="background-image: url('<#= model.get('cover_image') #>')"></div>
+		<# } else { #>
+		<div class="tva-course-img"></div>
+		<# } #>
+		<#= model.get( 'name' ) #>
+		<# if ( this.model.get( 'status' ) === 'draft' ) { #>
+		<span class="tva-student-course-draft variation"><?php echo __( '(Draft)', 'thrive-apprentice' ); ?></span>
+		<# } #>
+	</div>
+	<div class="tva-cc-date">
+		<span<#= ! this.model.get( 'enrollment_date' ) ? ' class="no-activity"' : '' #>><#= this.model.get( 'enrollment_date' ) ? this.model.get( 'enrollment_date' ) : '-' #></span>
+	</div>
+	<div class="tva-cc-status">
+
+		<# if ( this.model.get( 'status' ) === 'draft' ) { #>
+		<button class="tva-cc-status-btn tva-status-draft"><?php echo esc_attr__( 'Unpublished', 'thrive-apprentice' ) ?></button>
+		<# } else if ( this.locked ) { #>
+		<div class="tva-tooltip-parent">
+			<button class="tva-drip-status-btn locked locked-inactive">
+				<div class="tva-drip-status-btn-icon"><?php tva_get_svg_icon( 'lock-alt_light' ); ?></div>
+				<div class="tva-drip-status-btn-text"><?php echo __( 'Locked', 'thrive-apprentice' ); ?></div>
+			</button>
+			<div class="tva-custom-tooltip"><?php echo __( 'This course has a drip schedule with a start date in the future', 'thrive-apprentice' ); ?></div>
+		</div>
+
+		<# } else if ( this.progress === '100%' ) { #>
+		<button class="tva-cc-status-btn tva-status-completed"><?php echo esc_attr__( 'Completed', 'thrive-apprentice' ) ?></button>
+		<# } else if ( this.activity ) { #>
+		<button class="tva-cc-status-btn tva-status-progress"><?php echo esc_attr__( 'Started', 'thrive-apprentice' ) ?></button>
+		<# } else { #>
+		<button class="tva-cc-status-btn tva-status-pending"><?php echo esc_attr__( 'Unlocked', 'thrive-apprentice' ) ?></button>
+		<# } #>
+	</div>
+	<div class="tva-cc-certificate">
+		<# if ( this.certificate && ! this.certificate.number ) { #>
+		<button class="tva-certificate-badge tva-c-badge-grey">
+			<?php tva_get_svg_icon( 'check' ); ?>
+			<?php echo esc_attr__( 'Not achieved', 'thrive-apprentice' ) ?>
+			<?php tva_get_svg_icon( 'adm-lesson-dots' ); ?>
+		</button>
+		<# } else if ( this.certificate && this.certificate.number ) { #>
+
+		<div class="tva-options-drop">
+			<button class="tva-certificate-badge">
+				<?php tva_get_svg_icon( 'check' ); ?>
+				<?php echo esc_attr__( 'Achieved', 'thrive-apprentice' ) ?>
+				<?php tva_get_svg_icon( 'adm-lesson-dots' ); ?>
+			</button>
+			<ul class="tva-options-drop-ul tva-drop-wider">
+				<li>
+					<a class="tva-view-certificate" href="<#= this.certificate.url #>" target="_blank">
+						<?php tva_get_svg_icon( 'icon-eye' ) ?>
+						<?php esc_html_e( 'View certificate', 'thrive-apprentice' ); ?>
+					</a>
+				</li>
+				<li>
+					<button class="click" data-fn="sendToStudent">
+						<?php tva_get_svg_icon( 'paper-plane' ) ?>
+						<?php esc_html_e( 'Send to student', 'thrive-apprentice' ); ?>
+					</button>
+				</li>
+				<li>
+					<button class="click" data-fn="downloadCertificate">
+						<?php tva_get_svg_icon( 'download' ) ?>
+						<?php esc_html_e( 'Download', 'thrive-apprentice' ); ?>
+					</button>
+				</li>
+			</ul>
+		</div>
+		<# } else { #>
+		<span><?php echo esc_attr__( 'Not set', 'thrive-apprentice' ) ?></span>
+		<# } #>
+	</div>
+	<div class="tva-cc-progress">
+		<div class="tva-cc-progress-inner">
+			<#= this.progress #><br>
+			<span class="tva-cc-progressbar<#=this.progress === '100%' ? ' completed' : '' #>">
+				<span style="width: <#= this.progress #>;"></span>
+			</span>
+		</div>
+	</div>
+	<div class="tva-cc-activity">
+		<span<#= ! this.activity ? ' class="no-activity"' : '' #>><#= this.activity ? this.activity : '-' #></span>
+		<div class="tva-cc-activity-arrow">
+			<button class="tva-cc-arrow-btn"><?php tva_get_svg_icon( 'circle-right' ); ?></button>
+		</div>
+	</div>
+</div>

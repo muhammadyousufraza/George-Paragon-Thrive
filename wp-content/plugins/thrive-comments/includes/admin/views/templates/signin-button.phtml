@@ -1,0 +1,7 @@
+<a type="button" class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green tcm-mt signin-<#= button.get('name') #> <# if(button.get('status') === 'set'){#> <# if(1 === api_settings[button.get('name')]){#>enabled<#}else{#>disabled<#}#> tcm-api-button<#}#>" data-label="<#if(1 === api_settings[button.get('name')]){#><?php echo __( 'Enabled', Thrive_Comments_Constants::T ); ?><#}else{#><?php echo __( 'Disabled', Thrive_Comments_Constants::T ); ?><#}#>" data-name="<#= button.get('name') #>"
+   data-status="<#= button.get('status') #>" <# if(button.get('status') == 'unset'){#> href="admin.php?page=tve_dash_api_connect" target="_blank" <# }#>>
+<#if(button.get('status') == 'unset'){#>
+<?php echo __( 'Click to set up', Thrive_Comments_Constants::T ); ?>
+<#}#>
+<!-- else{ #><#= button.get('name')#> <# } -->
+</a>

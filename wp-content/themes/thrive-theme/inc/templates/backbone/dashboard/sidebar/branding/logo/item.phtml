@@ -1,0 +1,9 @@
+<span class="logo-controls-row logo-<#=this.model.get('type')#>">
+	<label><?php echo __( '<#= this.model.getDisplayName() #>', 'thrive-theme' ); ?></label>
+
+	<span class="click ttd-logo-reset <#= this.model.shouldHideReset() ? 'ttd-hide' : '' #>" data-fn="resetLogo">
+		<?php echo __( 'Reset', 'thrive-theme' ); ?>
+	</span>
+
+</span>
+<button class="click logo-button logo-<#=this.model.get('type')#>" data-fn="openMedia"></button>

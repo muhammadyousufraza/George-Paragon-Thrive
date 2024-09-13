@@ -1,0 +1,23 @@
+<# if (this.collection.hasSplit) { #>
+<span class="tcb-left pr-5 tcb-active-element-breadcrumbs-item tcb-breadcrumb-compact-item click" data-index="compact" data-fn="expand">
+	<?php tcb_icon( 'ellipsis-h-light' ); ?>
+	<?php tcb_icon( 'chevron-down-regular', false, 'sidebar', 'drop' ); ?>
+	<span class="cont"><i></i></span>
+	<div class="tcb-compact-nav-list" style="display:none">
+		<# this.collection.collapsed.forEach(function(model, index) { #>
+		<a href="javascript:void(0)" class="tcb-left click tcb-active-element-breadcrumbs-item-compact breadcrumb-item" data-index="<#= index #>" data-fn="clicked">
+			<span class="tcb-breadcrumb-name"><#= model.get('name') #></span>
+		</a>
+		<# }) #>
+	</div>
+</span>
+<# } #>
+<# this.collection.visible.forEach(function (model) { #>
+<# let extraClass = model.get('cls') ? model.get('cls') : '' #>
+<# extraClass += model.is_last ? '' : ' tcb-active-element-breadcrumbs-item-after' #>
+<# extraClass += ! model.is_last && ! model.disabled ? ' click' : '' #>
+<span class="tcb-left pr-5 tcb-active-element-breadcrumbs-item <#= extraClass #>" data-index="<#= model.index #>" data-fn="clicked">
+	<span class="tcb-breadcrumb-name"><#= model.get('name') #></span>
+	<span class="cont"><i></i></span>
+</span>
+<# }) #>

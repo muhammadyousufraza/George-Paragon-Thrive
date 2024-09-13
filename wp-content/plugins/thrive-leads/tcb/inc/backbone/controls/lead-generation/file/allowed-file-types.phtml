@@ -1,0 +1,21 @@
+<label>
+	<?php esc_html_e( 'Allowed file types', 'thrive-cb' ); ?>
+	<span data-paneltlt-hover class="tcb-live-tooltip ml-5" data-template="controls/lead-generation/tooltips/allowed-types"><?php tcb_icon( 'info-circle-solid' ); ?></span>
+</label>
+<div class="tcb-grid halves mb-10">
+	<# _.each( this.model.groups, function(data, key) { #>
+	<div class="click file-type-group p-5 group-<#-key#>" data-value="<#-key#>" data-fn="onClick">
+		<#= TVE.icon( data.icon ) #>
+		<span class="name ml-5"><#- data.name #></span>
+	</div>
+	<# } ); #>
+</div>
+<div class="control-grid full-width custom-container">
+	<label>
+		<?php esc_html_e( 'Allow the following file extensions', 'thrive-cb' ); ?>
+		<span data-paneltlt-hover class="tcb-live-tooltip ml-5" data-template="controls/lead-generation/tooltips/custom-file-types"><?php tcb_icon( 'info-circle-solid' ); ?></span>
+	</label>
+	<input type="text" class="change custom-types" data-fn="customChanged">
+	<div class="inline-message m-warning pb-0 pt-5 err-invalid" style="display: none; font-size: .85em"><?php esc_html_e( 'For security reasons, the following extensions will not be accepted: ', 'thrive-cb' ); ?><span class="invalid-ext-list"></span></div>
+</div>
+<div class="inline-message m-error p-0 mb-10 err-missing" style="display: none"><?php esc_html_e( 'At least one file type is required', 'thrive-cb' ); ?></div>

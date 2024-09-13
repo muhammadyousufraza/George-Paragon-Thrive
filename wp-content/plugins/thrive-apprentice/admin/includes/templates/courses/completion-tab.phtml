@@ -1,0 +1,83 @@
+<div class="tva-boxed-container ta-completion-tab tva-text-center">
+	<div class="ta-completion-tab-header">
+		<div>
+			<div>
+				<h3><?php esc_html_e( 'Celebrate your members success and define course completion behaviour', 'thrive-apprentice' ); ?></h3>
+				<p><?php esc_html_e( 'Design and issue course completion certificates and define what happens when a member completes this course', 'thrive-apprentice' ); ?></p>
+			</div>
+			<img alt="Certificate Image" src="<?php echo TVA_Const::plugin_url( 'admin/includes/assets/img/certificate/course-tab.png' ); ?>" width="103">
+		</div>
+	</div>
+	<div class="ta-completion-tab-content">
+		<div class="ta-completion-tab-columns">
+			<div>
+				<div class="tva-flex tva-align-center mt-5 tvd-switch">
+					<label>
+						<h4>
+							<input type="checkbox" class="click" data-fn="hasCompletedPost" <#= this.model.get( 'has_completed_post' ) ? 'checked="checked"' : '' #>>
+							<span class="tvd-lever mr-10"></span>
+							<?php esc_html_e( 'Customize course completion behaviour ', 'thrive-apprentice' ); ?>
+						</h4>
+					</label>
+					<div class="tva-tooltip-parent">
+						<div class="ml-5 tva-flex tva-align-center"><?php tva_get_svg_icon( 'info-solid' ); ?>
+							<div class="tva-custom-tooltip tva-certificates-tooltip">
+								<?php esc_html_e( "Send your members to a course completion page when they mark all lessons complete", 'thrive-apprentice' ); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tva-completed-post-dropdown mt-20">
+					<select class="change" id="tva-completed-post-type-select" data-fn="completedPostTypeChange">
+						<option value="completed"><?php esc_html_e( 'Redirect to Apprentice course completed page', 'thrive-apprentice' ); ?></option>
+						<option value="custom"><?php esc_html_e( 'Redirect to custom page', 'thrive-apprentice' ); ?></option>
+					</select>
+					<div class="tva-completed-post-options mt-20"></div>
+					<div class="tva-completed-settings mt-20"></div>
+					<div id="tva-custom-page-warning" class="tva-completion-tab-warning">
+						<?php tva_get_svg_icon( 'completion-info-icon' ); ?>
+						<p><?php esc_html_e( 'Please note that course details will not be available on a custom page. Use this option if you plan to have a generic style of course completed page.', 'thrive-apprentice' ) ?></p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="tva-certificate-column" class="tva-flex tva-align-center mt-5 tvd-switch">
+					<label>
+						<h4>
+							<input id="tva-certificate-button" type="checkbox" class="click" data-fn="issueCompletionCertificate" <#= this.model.get( 'has_certificate' ) ? 'checked="checked"' : '' #>>
+							<span class="tvd-lever mr-10"></span>
+							<?php esc_html_e( 'Issue course completion certificate', 'thrive-apprentice' ); ?>
+						</h4>
+					</label>
+					<div class="tva-tooltip-parent">
+						<div class="ml-5 tva-flex tva-align-center"><?php tva_get_svg_icon( 'info-solid' ); ?>
+							<div class="tva-custom-tooltip tva-certificates-tooltip">
+								<?php esc_html_e( "Design a course completion certificate that your members can download as a PDF", 'thrive-apprentice' ); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tva-certificate-dropdown">
+					<div class="mt-20 tva-certificate-edit-with-tar"></div>
+					<div class="mt-20 tva-certificate-download-url"></div>
+				</div>
+				<div id="tva-tpm-active-license-warning" class="tva-completion-tab-warning tva-tooltip-parent">
+					<?php tva_get_svg_icon( 'license-warning' ); ?>
+					<p><?php esc_html_e( 'Certificate creation requires an active Thrive Apprentice license', 'thrive-apprentice' ) ?></p>
+					<div class="tva-custom-tooltip tva-certificates-tooltip">
+						<?php esc_html_e( 'Certificates creation uses Thrive Themes servers and resources to generate the PDFs and there are ongoing costs involved in providing this service. If your license expires, you’ll no longer be able to generate certificates until you purchase a new license.', 'thrive-apprentice' ); ?>
+						<br><?php esc_html_e( 'Review your license ', 'thrive-apprentice' ); ?><a href="https://thrivethemes.com/suite/" target="_blank"><?php esc_html_e( 'here', 'thrive-apprentice' ); ?></a>
+					</div>
+				</div>
+				<div id="tva-tpm-warning" class="tva-completion-tab-warning tva-tooltip-parent">
+					<?php tva_get_svg_icon( 'license-warning' ); ?>
+					<p><?php esc_html_e( 'Certificate creation requires an active thrivethemes.com account connection', 'thrive-apprentice' ) ?></p>
+					<div class="tva-custom-tooltip tva-certificates-tooltip">
+						<?php esc_html_e( 'Connection lost. In order to be able to create a certificate your thrivethemes.com account must be connected.', 'thrive-apprentice' ); ?>
+						<a rel="noopener" href="<?php echo TD_TTW_Update_Manager::get_instance()->get_admin_url() ?>" class="tva-tpm-connect-button"><?php esc_html_e( 'Connect account', 'thrive-apprentice' ) ?></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

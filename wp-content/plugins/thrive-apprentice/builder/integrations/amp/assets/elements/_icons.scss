@@ -1,0 +1,47 @@
+.tcb-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  vertical-align: middle;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  box-sizing: content-box;
+}
+
+svg.tcb-icon path, symbol[id^=tcb-icon-] path {
+  fill: inherit;
+  stroke: inherit;
+  transition: none;
+}
+
+.thrv_icon {
+  text-align: center;
+
+  .tcb-icon-inline {
+    box-sizing: content-box !important;
+    display: inline-block;
+    font-size: inherit;
+    height: auto;
+    width: auto;
+    text-align: center;
+    text-decoration: none !important;
+    background-clip: padding-box;
+  }
+}
+
+/* stolen from _thrive_default.scss */
+.thrv_icon {
+  line-height: 0;
+
+  &.tcb-icon-display {
+    display: table;
+  }
+
+  &.thrv_wrapper {
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 5px; /* risky, but data-css is applied without any prefixes on icons and they look terrible without any padding */
+  }
+}

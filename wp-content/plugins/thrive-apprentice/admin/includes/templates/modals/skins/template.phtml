@@ -1,0 +1,104 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-modal-step" data-step="0">
+	<div class="tva-template-modal-box">
+		<div class="modal-sidebar">
+			<div class="ttd-modal-sidebar-icon" data-icon="singular">
+				<?php tva_get_svg_icon( 'templates-default' ); ?>
+				<p><?php echo __( 'The custom templates you create here can be used on different types of posts, as well as various pages, or list pages.', 'thrive-apprentice' ); ?></p>
+			</div>
+		</div>
+		<div class="modal-options tva-ct">
+
+			<div class="modal-user-actions">
+				<h3>
+					<?php echo __( 'Your Template Name', 'thrive-apprentice' ); ?>
+				</h3>
+
+				<label class="default-text" for="tva-template-name"><?php echo __( 'New Template Name', 'thrive-apprentice' ); ?></label>
+				<input type="text" id="tva-template-name" placeholder="<?php echo __( 'My New Template', 'thrive-apprentice' ); ?>" class="keyup" data-fn="keyup">
+
+				<label class="default-text" for="tva-content-type"><?php echo __( 'Choose Content Type', 'thrive-apprentice' ); ?></label>
+				<select id="tva-content-type" class="change" data-fn="contentTypeChanged">
+					<option data-primary="singular" data-secondary="<?php echo TVA_Const::LESSON_POST_TYPE; ?>"><?php echo __( 'Lesson', 'thrive-apprentice' ); ?></option>
+					<option data-primary="home" data-secondary="<?php echo TVA_Const::COURSE_POST_TYPE; ?>"><?php echo __( 'School Homepage', 'thrive-apprentice' ); ?></option>
+					<option data-primary="archive" data-secondary="<?php echo TVA_Const::COURSE_TAXONOMY; ?>"><?php echo __( 'Course Overview', 'thrive-apprentice' ); ?></option>
+					<option data-primary="singular" data-secondary="<?php echo TVA_Const::MODULE_POST_TYPE; ?>"><?php echo __( 'Module', 'thrive-apprentice' ); ?></option>
+					<option data-primary="singular" data-secondary="<?php echo TVA_Const::NO_ACCESS; ?>"><?php echo __( 'Restricted Course', 'thrive-apprentice' ); ?></option>
+					<option data-primary="singular" data-secondary="<?php echo TVA_Const::NO_ACCESS_POST; ?>"><?php echo __( 'Restricted Site Content', 'thrive-apprentice' ); ?></option>
+					<option data-primary="singular" data-secondary="<?php echo TVA_Const::ASSESSMENT_POST_TYPE; ?>"><?php echo __( 'Assessment', 'thrive-apprentice' ); ?></option>
+					<option data-primary="singular" data-secondary="<?php echo TVA_Course_Completed::POST_TYPE; ?>"><?php echo __( 'Course Completion', 'thrive-apprentice' ); ?></option>
+					<option data-primary="singular" data-secondary="<?php echo TVA_Const::CERTIFICATE_VALIDATION_POST; ?>"><?php echo __( 'Certificate Verification', 'thrive-apprentice' ); ?></option>
+				</select>
+				<div id="tva-post-format-input">
+					<label class="default-text" for="tva-post-format"><?php echo __( 'Choose Post Format', 'thrive-apprentice' ); ?></label>
+					<select id="tva-post-format">
+						<option value="standard"><?php echo __( 'Standard', 'thrive-apprentice' ); ?></option>
+						<option value="video"><?php echo __( 'Video', 'thrive-apprentice' ); ?></option>
+						<option value="audio"><?php echo __( 'Audio', 'thrive-apprentice' ); ?></option>
+					</select>
+				</div>
+			</div>
+
+			<div class="modal-buttons tva-flex tva-align-center tva-space-between">
+				<button class="click font-w-regular tva-modal-btn tva-modal-btn-fill-blue" data-fn="save"><?php echo __( 'Start from Scratch', 'thrive-apprentice' ); ?></button>
+				<span class="button-divider">
+					<span>
+						<?php echo __( 'or', 'thrive-apprentice' ); ?>
+					</span>
+				</span>
+				<button class="click font-w-regular tva-modal-btn tva-modal-btn-fill-blue" data-fn="openCloudTemplatesModal"><?php echo __( 'Choose Template', 'thrive-apprentice' ); ?></button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="tva-modal-step modal-content" data-step="1">
+	<div class="modal-inner">
+		<div class="tve-c-modal-sidebar">
+
+			<div class="tve-c-modal-search">
+				<?php Thrive_Views::svg_icon( 't-search' ); ?>
+				<input class="tve-c-modal-search-input input" data-fn="onSearch" type="text" placeholder="<?php echo __( 'Search', 'thrive-apprentice' ); ?>">
+			</div>
+
+			<div class="tve-c-modal-filters">
+				<span id="dropdown-filter-label"><?php echo __( 'Filter templates', 'thrive-apprentice' ); ?></span>
+				<div class="tve-c-modal-select-filter"></div>
+				<div class="tve-c-modal-radio-filter" style="display: none !important;"></div>
+			</div>
+		</div>
+
+		<div class="tve-c-modal-content">
+
+			<div class="tve-c-modal-title">
+
+				<button class="click back" data-fn="jumpToStep" data-step="0">
+					<?php Thrive_Views::svg_icon( 'back' ); ?>
+					<?php echo __( 'BACK to previous step', 'thrive-apprentice' ); ?>
+				</button>
+
+				<button class="click refresh" data-fn="refreshItems">
+					<?php Thrive_Views::svg_icon( 'refresh' ); ?>
+					<?php echo __( 'Refresh from cloud', 'thrive-apprentice' ); ?>
+				</button>
+			</div>
+
+			<div class="tve-c-modal-items-wrapper">
+				<div class="tve-c-modal-items"></div>
+			</div>
+
+			<div class="tve-c-modal-footer">
+				<button class="click blue-modal-button" data-fn="createTemplate"><?php echo __( 'Create Template', 'thrive-apprentice' ); ?></button>
+			</div>
+		</div>
+	</div>
+</div>

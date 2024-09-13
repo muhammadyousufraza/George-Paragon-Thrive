@@ -1,0 +1,34 @@
+<div class="api-field">
+	<div class="field-description">
+		<?php echo __( 'Choose your mailing list', 'thrive-cb' ); ?>
+	</div>
+
+	<div class="control-grid">
+		<select class="api-list change" data-fn="setupChange" data-name="list">
+			<# if ( api.get('lists').length == 0 ) { #>
+				<#= TVE.tpl( 'util/option', {value:0, selected: true, text: '<?php echo __( 'No lists found', 'thrive-cb' ); ?>'}) #>
+			<# } #>
+
+			<# _.each(api.get('lists'), function(item) { #>
+				<#= TVE.tpl( 'util/option', {value:item.id, selected: (api.getConfig('list')==item.id), text: item.name}) #>
+			<# } ) #>
+		</select>
+
+		<span class="click tve-refresh-api-list" data-fn="forceGet" data-tooltip="<?php echo __( 'Refresh', 'thrive-cb' ); ?>" data-side="top"> <?php tcb_icon( 'redo-regular' ) ?></span>
+	</div>
+</div>
+<div class="api-field">
+	<div class="field-description mb-40">
+		<?php echo __( 'Tags', 'thrive-cb' ); ?>
+	</div>
+	<div class="tvd-input-field">
+		<select id="tve-lg-select-tags" multiple name="tags" tabindex="-1" class="select2-hidden-accessible tve-api-extra" aria-hidden="true">
+			<# if ( api.getConfig('tags') ) { #>
+			<# _.each( api.getConfig('tags').split(','), function( tag ) { #>
+			<option value="<#=tag#>" selected="selected"><#=tag#></option>
+			<# }, this ) #>
+			<# } #>
+		</select>
+	</div>
+
+</div>

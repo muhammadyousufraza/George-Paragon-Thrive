@@ -1,0 +1,23 @@
+<div class="fr-checkbox-line tve-top-tabs">
+	<label class="tcb-radio">
+		<input type="radio" name="static-link-type" class="fr-link-type" value="static" checked>
+		<span><?php echo __( 'Static', 'thrive-theme' ); ?></span>
+	</label>
+
+	<label class="tcb-radio">
+		<input type="radio" name="dynamic-link-type" class="fr-link-type" value="dynamic">
+		<span><?php echo __( 'Dynamic', 'thrive-theme' ); ?></span>
+	</label>
+</div>
+
+<div class="tve-inline-url-settings tve-static-inline-url-settings fr-input-line"></div>
+<div class="tve-inline-url-settings tve-dynamic-inline-url-settings fr-input-line" style="display:none">
+	<select class="dynamic-link-select">
+		<option value="thrive_the_permalink"><?php echo __( 'Post link', 'thrive-theme' ); ?></option>
+		<option value="thrive_archive_link"><?php echo __( 'Post Archive', 'thrive-theme' ); ?></option>
+		<option value="thrive_author_link"><?php echo __( 'Author Archive', 'thrive-theme' ); ?></option>
+		<option value="thrive_date_link"><?php echo __( 'Date link', 'thrive-theme' ); ?></option>
+		<option value="thrive_comments_link"><?php echo __( 'Comments link', 'thrive-theme' ); ?></option>
+	</select>
+</div>
+

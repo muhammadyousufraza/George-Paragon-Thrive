@@ -1,0 +1,17 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+
+<div class="tva-flex tva-notice-card tva-notice-woocommerce tva-flex-column">
+	<span><?php tva_get_svg_icon( 'info-circle_strong' ); ?></span>
+	<p><?php echo esc_html__( 'WooCommerce is not currently installed on your site', 'thrive-apprentice' ); ?></p>
+	<a class="text" target="_blank" href="http://help.thrivethemes.com/en/articles/5024001-thrive-apprentice-and-woocommerce-quick-start-guide"><?php echo __( 'See the Thrive Apprentice and WooCommerce quickstart guide', 'thrive-apprentice' ); ?></a>
+</div>

@@ -1,0 +1,80 @@
+<div class="thrive-display-testimonials-header thrive-display-testimonials-static-header">
+	<div class="thrive-display-testimonials-set-selector display-testimonials-select static"></div>
+</div>
+
+<div class="thrive-display-testimonials-content thrive-display-testimonials-static-content">
+	<# if ( this.dataModel.isSelectMode()) { #>
+	<div class="filter-container tcb-hidden"></div>
+	<# } #>
+
+	<div class="order-container static-order-container tcb-hidden"></div>
+
+	<div class="thrive-display-testimonials-list-container">
+		<span class="thrive-display-testimonials-options"></span>
+
+		<div class="no-results" style="display: none;">
+			<?php tcb_icon( 'no-results-cat' ); ?>
+			<?php echo esc_html__( 'No results found', 'thrive-ovation' ); ?>
+		</div>
+
+		<div class="thrive-display-testimonials-inner-container">
+			<ul class="thrive-display-testimonials-static-list">
+			</ul>
+			<# if ( this.dataModel.isReorderMode()) { #>
+			<div class="deleted-testimonials" style="display:none;">
+				<?php echo esc_html__( 'You need to have at least one', 'thrive-ovation' ); ?>
+				<button class="click" data-fn="switchToSelectionMode"><?php echo esc_html__( 'testimonial', 'thrive-ovation' ); ?></button>
+				<?php echo esc_html__( 'or', 'thrive-ovation' ); ?>
+				<button class="click" data-fn="toggleSetSelectorDropdown"><?php echo esc_html__( 'testimonial set', 'thrive-ovation' ); ?></button>
+				<?php echo esc_html__( 'selected to continue.', 'thrive-ovation' ); ?>
+			</div>
+			<# } #>
+			<div class="no-testimonials" style="display:none;">
+				<?php echo esc_html__( 'This set currently has no testimonials.', 'thrive-ovation' ); ?>
+			</div>
+			<span class="testimonials-pagination-container tcb-hidden"></span>
+		</div>
+	</div>
+</div>
+
+<div class="thrive-display-testimonials-action-buttons">
+	<div class="col-1">
+		<# if ( this.dataModel.isSelectMode() || this.dataModel.isViewMode() || this.dataModel.isEditMode() ) { #>
+		<button class="clear click" data-fn="goBackToSplash">
+			<?php tcb_icon( 'arrow-left-light' ); ?>
+			<?php echo esc_html__( 'Back to testimonial types', 'thrive-ovation' ); ?>
+		</button>
+		<# } else if ( this.dataModel.isReorderMode() ) { #>
+		<button class="clear click" data-fn="switchToSelectionMode">
+			<?php tcb_icon( 'arrow-left-light' ); ?>
+			<?php echo esc_html__( 'Back to testimonial selection', 'thrive-ovation' ); ?>
+		</button>
+		<# } #>
+	</div>
+	<div class="col-2">
+		<# if ( this.dataModel.isViewMode() ) { #>
+		<button class="ghost click" data-fn="switchToEditMode">
+			<?php echo esc_html__( 'Edit set', 'thrive-ovation' ); ?>
+		</button>
+		<# } else if ( this.dataModel.isReorderMode() ) { #>
+		<button class="ghost click" data-fn="openSetPage">
+			<?php echo esc_html__( 'Save a new testimonial set', 'thrive-ovation' ); ?>
+		</button>
+		<# } #>
+
+		<# if ( this.dataModel.isSelectMode() ) { #>
+		<button class="ghost click" data-fn="switchToReorderingMode">
+			<?php tcb_icon( 'arrow-right-light' ); ?>
+			<?php echo esc_html__( 'Set the order', 'thrive-ovation' ); ?>
+		</button>
+		<# } else if ( this.dataModel.isEditMode() ) { #>
+		<button class="filled click" data-fn="updateSet">
+			<?php echo esc_html__( 'Save', 'thrive-ovation' ); ?>
+		</button>
+		<# } else if ( this.dataModel.isReorderMode() ) { #>
+		<button class="filled click" data-fn="load">
+			<?php echo esc_html__( 'Apply', 'thrive-ovation' ); ?>
+		</button>
+		<# } #>
+	</div>
+</div>

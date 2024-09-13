@@ -1,0 +1,1123 @@
+# Copyright (C) 2024 Thrive Automator
+# This file is distributed under the same license as the Thrive Automator package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Thrive Automator\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-08-21 11:40+0000\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../inc/classes/class-tap-deactivate.php:48
+msgid "I couldn't get the plugin to work"
+msgstr ""
+
+#: ../inc/classes/class-tap-deactivate.php:52
+msgid "It's a temporary deactivation"
+msgstr ""
+
+#: ../inc/classes/class-tap-deactivate.php:56
+msgid "I found a better plugin"
+msgstr ""
+
+#: ../inc/classes/class-tap-deactivate.php:60
+msgid "I no longer need the plugin"
+msgstr ""
+
+#: ../inc/classes/class-tap-deactivate.php:64
+msgid "Other"
+msgstr ""
+
+#: ../inc/classes/class-tap-error-handler.php:52
+msgid "Last 7 days"
+msgstr ""
+
+#: ../inc/classes/class-tap-error-handler.php:56
+msgid "Last 14 days"
+msgstr ""
+
+#: ../inc/classes/class-tap-error-handler.php:60
+msgid "Last 30 days"
+msgstr ""
+
+#: ../inc/classes/class-tap-error-handler.php:64
+msgid "All entries"
+msgstr ""
+
+#: ../inc/templates/db-error.php:13
+msgid "There was an error while updating the database tables"
+msgstr ""
+
+#: ../inc/templates/db-error.php:15
+msgid "Detailed error message:"
+msgstr ""
+
+#: ../inc/templates/db-error.php:17
+msgid "Thrive Themes Support"
+msgstr ""
+
+#: ../inc/templates/missing-items.php:23
+msgid "is not installed or not activated. Some automations will not work. Please go to "
+msgstr ""
+
+#: ../inc/templates/missing-items.php:24, ../inc/templates/missing-items.php:19
+msgid "Thrive Automator dashboard"
+msgstr ""
+
+#: ../inc/templates/missing-items.php:25
+msgid " and install it."
+msgstr ""
+
+#: ../inc/templates/missing-items.php:18
+msgid "Some of your triggers/actions from Thrive Automator have been deprecated. Go to the "
+msgstr ""
+
+#: ../inc/templates/missing-items.php:20
+msgid " and replace them."
+msgstr ""
+
+#: ../inc/templates/notice-incompatible.php:16
+msgid "Warning! Thrive Automator is currently incompatible with the following Thrive plugins:"
+msgstr ""
+
+#: ../inc/templates/notice-incompatible.php:18
+msgid "Please make sure all Thrive plugins are updated to their latest versions. "
+msgstr ""
+
+#: ../inc/templates/notice-incompatible.php:19
+msgid "Manage plugins"
+msgstr ""
+
+#: ../inc/templates/reset-page.php:46
+msgid "Reset Thrive Automator"
+msgstr ""
+
+#: ../inc/templates/reset-page.php:47
+msgid "Use the button below to reset Thrive Automator to its default state."
+msgstr ""
+
+#: ../inc/templates/reset-page.php:48
+msgid "Warning: Resetting Thrive Automator will remove all automations that you've created and cannot be undone!"
+msgstr ""
+
+#: ../inc/templates/reset-page.php:50
+msgid "Are you sure you want to reset Thrive Automator?"
+msgstr ""
+
+#: ../inc/templates/reset-page.php:54
+msgid "Remove all data from Thrive Automator"
+msgstr ""
+
+#: ../inc/templates/suite-ribbon.php:17
+msgid "You haven’t enabled "
+msgstr ""
+
+#: ../inc/templates/suite-ribbon.php:17
+msgid "Thrive Automator’s free integrations"
+msgstr ""
+
+#: ../inc/templates/suite-ribbon.php:17
+msgid ", including 20+ email services, WooCommerce triggers, actions and more."
+msgstr ""
+
+#: ../inc/templates/suite-ribbon.php:18
+msgid "Start now"
+msgstr ""
+
+#: ../inc/classes/items/class-delay.php:53
+msgid "Minute(s)"
+msgstr ""
+
+#: ../inc/classes/items/class-delay.php:58
+msgid "Hour(s)"
+msgstr ""
+
+#: ../inc/classes/items/class-delay.php:63
+msgid "Day(s)"
+msgstr ""
+
+#: ../inc/classes/items/class-delay.php:68
+msgid "Week(s)"
+msgstr ""
+
+#: ../inc/classes/items/class-delay.php:73
+msgid "Month(s)"
+msgstr ""
+
+#: ../inc/classes/items/class-delay.php:78
+msgid "Year(s)"
+msgstr ""
+
+#: ../inc/classes/suite/class-plugin-handler.php:81
+msgid "There is no error, the file uploaded with success"
+msgstr ""
+
+#: ../inc/classes/suite/class-plugin-handler.php:82
+msgid "The uploaded file exceeds the upload_max_files in server settings"
+msgstr ""
+
+#: ../inc/classes/suite/class-plugin-handler.php:83
+msgid "The uploaded file exceeds the MAX_FILE_SIZE from html form"
+msgstr ""
+
+#: ../inc/classes/suite/class-plugin-handler.php:84
+msgid "The uploaded file uploaded only partially"
+msgstr ""
+
+#: ../inc/classes/suite/class-plugin-handler.php:85
+msgid "No file was uploaded"
+msgstr ""
+
+#: ../inc/classes/suite/class-plugin-handler.php:86
+msgid "Missing a temporary folder"
+msgstr ""
+
+#: ../inc/classes/suite/class-plugin-handler.php:87
+msgid "Failed to write file to disk"
+msgstr ""
+
+#: ../inc/classes/suite/class-plugin-handler.php:88
+msgid "A PHP extension stopped file to upload"
+msgstr ""
+
+#: ../inc/classes/suite/class-plugin-handler.php:147
+msgid "This does not seem to be a ZIP file"
+msgstr ""
+
+#: ../inc/classes/suite/class-plugin-handler.php:156
+msgid "Directory \"%s\" was not created"
+msgstr ""
+
+#: ../inc/classes/suite/class-plugin-handler.php:202
+msgid "Could not upload file"
+msgstr ""
+
+#: ../inc/classes/suite/class-plugin-handler.php:222
+msgid "You don't have Thrive Product Manager installed"
+msgstr ""
+
+#: ../inc/classes/suite/class-rest-controller.php:73
+msgid "Invalid email"
+msgstr ""
+
+#: ../inc/classes/suite/class-rest-controller.php:107, ../inc/classes/suite/class-rest-controller.php:137
+msgid "Invalid nonce"
+msgstr ""
+
+#: ../inc/classes/suite/class-ttw.php:165, ../inc/classes/suite/class-ttw.php:243
+msgid "TPM is not installed"
+msgstr ""
+
+#: ../inc/classes/suite/class-ttw.php:199
+msgid "Invalid response received from thrivethemes.com: "
+msgstr ""
+
+#: ../inc/classes/suite/class-ttw.php:257
+msgid "Could not activate license"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-additional-profile-fields.php:19
+msgid "Additional profile fields"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-additional-profile-fields.php:56
+msgid "Nickname"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-additional-profile-fields.php:60
+msgid "Website"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-additional-profile-fields.php:64
+msgid "Biographical Info"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-additional-profile-fields.php:76
+msgid "Facebook Page URL"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-additional-profile-fields.php:80
+msgid "Twitter Page URL"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-additional-profile-fields.php:84
+msgid "Pinterest Page URL"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-additional-profile-fields.php:88
+msgid "Linkedin Page URL"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-additional-profile-fields.php:92
+msgid "Xing Page URL"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-additional-profile-fields.php:96
+msgid "YouTube Channel URL"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-additional-profile-fields.php:100
+msgid "Instagram Page URL"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-connection-test.php:16
+msgid "Test connection"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-connection-test.php:20
+msgid "Test the connection."
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-connection-test.php:24, ../inc/classes/items/action-fields/class-fields-webhook.php:24, ../inc/classes/items/action-fields/class-webhook-headers.php:27
+msgid "Send test"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-connection-test.php:42
+msgid "Webhook sent successfully"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-connection-test.php:43
+msgid "Webhook failed with error code"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-fields-webhook.php:16
+msgid "Fields"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-fields-webhook.php:20
+msgid "List of fields to be sent to the webhook."
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-first-name.php:18, ../inc/classes/items/action-fields/class-update-profile-fields.php:30
+msgid "First name"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-first-name.php:22, ../inc/classes/items/action-fields/class-first-name.php:26
+msgid "Please enter your first name or select a dynamic value"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-first-name.php:46
+msgid "First name:"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-last-name.php:18, ../inc/classes/items/action-fields/class-update-profile-fields.php:34
+msgid "Last name"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-last-name.php:22, ../inc/classes/items/action-fields/class-last-name.php:26
+msgid "Please enter your last name or select a dynamic value"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-last-name.php:46
+msgid "Last name:"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-post-categories-field.php:18, ../inc/classes/items/action-fields/class-post-categories-field.php:26
+msgid "Post category"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-post-categories-field.php:22
+msgid "WordPress post category"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-post-categories-field.php:38
+msgid "Categories:"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-post-categories-field.php:57
+msgid "Type a category and press Enter. Use a comma to use multiple categories"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-post-tags-field.php:17, ../inc/classes/items/action-fields/class-post-tags-field.php:25
+msgid "Post tag"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-post-tags-field.php:21
+msgid "WordPress post tag"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-post-tags-field.php:37
+msgid "Tags:"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-register-role-field.php:18, ../inc/classes/items/action-fields/class-user-role-field.php:16, ../inc/classes/items/data-fields/class-user-role-data-field.php:17
+msgid "User role"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-register-role-field.php:22, ../inc/classes/items/action-fields/class-register-role-field.php:26
+msgid "What role should the new user be registered as?"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-register-role-field.php:38, ../inc/classes/items/action-fields/class-user-role-field.php:36
+msgid "Role:"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-request-format.php:16
+msgid "Request format"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-request-format.php:20
+msgid "Pick the desired request format."
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-request-format.php:24
+msgid "FORM"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-request-headers-toggle.php:16, ../inc/classes/items/action-fields/class-request-headers-toggle.php:24
+msgid "Headers"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-request-headers-toggle.php:20
+msgid "Whether you want custom headers"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-request-headers-toggle.php:47
+msgid "None"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-request-headers-toggle.php:51
+msgid "Custom"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-request-method.php:16
+msgid "Request type"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-request-method.php:20
+msgid "Pick the desired request method."
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-request-method.php:24
+msgid "Post"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-update-profile-fields.php:16
+msgid "What would you like to update"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-url-webhook.php:18
+msgid "Webhook URL"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-url-webhook.php:22
+msgid "What URL should the webhook be sent to?"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-url-webhook.php:26
+msgid "Webhook URL (requires https://)"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-url-webhook.php:46
+msgid "Webhook URL:"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-user-role-field.php:20, ../inc/classes/items/action-fields/class-user-role-field.php:24
+msgid "WordPress user role"
+msgstr ""
+
+#: ../inc/classes/items/action-fields/class-webhook-headers.php:19
+msgid "Additional headers"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-advanced-mapping.php:26
+msgid "Advanced data mapping"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-advanced-mapping.php:30
+msgid "Map available data to a new data set and define specific value pairs. Use this to transform generic data fields such as incoming webhook or form fields into dynamic data sources that can be used by downstream actions."
+msgstr ""
+
+#: ../inc/classes/items/actions/class-webhook.php:18
+msgid "Send webhook"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-webhook.php:22
+msgid "Send data in a webhook to an external service. Methods supported include POST, PUT and GET."
+msgstr ""
+
+#: ../inc/classes/items/actions/class-webhook.php:136
+msgid "Send webhook successfully executed"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-webhook.php:136
+msgid "Send webhook failed"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-webhook.php:137
+msgid "Send webhook response"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-wordpress-add-post-categories-action.php:23
+msgid "Add post categories"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-wordpress-add-post-categories-action.php:27
+msgid "Add a list of post categories to the current post, if they do not already exist they will be created"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-wordpress-add-post-tags-action.php:23
+msgid "Add post tags"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-wordpress-add-post-tags-action.php:27
+msgid "Add a list of tags to the current post"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-wordpress-add-user-role-action.php:25
+msgid "Add user role"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-wordpress-add-user-role-action.php:29
+msgid "Add new role(s) to a user"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-wordpress-new-register-action.php:31
+msgid "Find or create user"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-wordpress-new-register-action.php:35
+msgid "This action will check if the provided email address matches a user on your site. If not, a user account will be created and will be given the selected user role."
+msgstr ""
+
+#: ../inc/classes/items/actions/class-wordpress-remove-post-categories-action.php:23
+msgid "Remove post categories"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-wordpress-remove-post-categories-action.php:27
+msgid "Remove a list of post categories from the current post"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-wordpress-remove-post-tags-action.php:23
+msgid "Remove post tags"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-wordpress-remove-post-tags-action.php:27
+msgid "Remove a list of post tags from the current post"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-wordpress-remove-user-role-action.php:25
+msgid "Remove user role"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-wordpress-remove-user-role-action.php:29
+msgid "Remove role(s) from a user"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-wordpress-trash-post-action.php:21
+msgid "Move post to trash"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-wordpress-update-user-action.php:25
+msgid "Update user"
+msgstr ""
+
+#: ../inc/classes/items/actions/class-wordpress-update-user-action.php:29
+msgid "This action will find a user with the provided email address and update their account details. If there is no email match, the action will be skipped. If the user’s role does not have custom fields, their data will be ignored."
+msgstr ""
+
+#: ../inc/classes/items/apps/class-email-app.php:25
+msgid "Email related items"
+msgstr ""
+
+#: ../inc/classes/items/apps/class-general-app.php:25
+msgid "General items"
+msgstr ""
+
+#: ../inc/classes/items/apps/class-thrive-suite-app.php:22
+msgid "Thrive Suite"
+msgstr ""
+
+#: ../inc/classes/items/apps/class-wordpress-app.php:25
+msgid "WordPress related items"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-agent-data-field.php:24
+msgid "Comment author user agent"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-agent-data-field.php:28
+msgid "Target by comment author user agent"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-author-data-field.php:24
+msgid "Comment author name"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-author-data-field.php:28
+msgid "Target by comment author name"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-author-email-data-field.php:24
+msgid "Comment author email"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-author-ip-data-field.php:24
+msgid "Comment author IP address in IPv4 format"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-author-ip-data-field.php:28
+msgid "Target by comment author's IP address"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-author-url-data-field.php:24
+msgid "Comment author URL"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-author-url-data-field.php:28
+msgid "Target those that have submitted a site URL"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-data-content.php:24
+msgid "Comment content"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-data-content.php:28
+msgid "Target those that have posted a comment that includes a certain target word "
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-data-content.php:40
+msgid "This is an example comment"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-date-data-field.php:24
+msgid "Comment date"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-date-data-field.php:28
+msgid "Target by the date when the comment was submitted"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-date-gmt-data-field.php:24
+msgid "Comment date in GMT zone"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-date-gmt-data-field.php:28
+msgid "Target by the date in GMT timezone when the comment was submitted"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-parent-data-field.php:24
+msgid "Comment parent ID"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-parent-data-field.php:28
+msgid "Target by the ID of the comment parent"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-post-id-data-field.php:27
+msgid "Comment post ID"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-post-id-data-field.php:31
+msgid "Target a specific set of posts/pages on the user's site"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-type-data-field.php:24
+msgid "Comment type"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-type-data-field.php:28
+msgid "Target by the comment type (comment, pingback, trackback)"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-type-data-field.php:43, ../inc/classes/items/data-objects/class-comment-data.php:20
+msgid "Comment"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-type-data-field.php:47
+msgid "Pingback"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-comment-type-data-field.php:51
+msgid "Trackback"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-firstname-data-field.php:18
+msgid "User first name"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-firstname-data-field.php:25
+msgid "Filter by user first name"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-form-consent-data-field.php:18
+msgid "User consent"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-form-consent-data-field.php:25
+msgid "Consent from the form data submitted by the user"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-form-consent-data-field.php:32, ../inc/classes/items/data-fields/class-user-role-data-field.php:31
+msgid "Filter by user consent"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-form-email-data-field.php:25
+msgid "Email field, unique identifier for user"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-form-email-data-field.php:32
+msgid "Filter by email"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-form-name-data-field.php:18
+msgid "Name"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-form-name-data-field.php:25
+msgid "Name from the form data submitted by the user"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-form-name-data-field.php:32
+msgid "Filter by name"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-form-phone-data-field.php:18
+msgid "Phone"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-form-phone-data-field.php:25
+msgid "Phone from the form data submitted by the user"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-form-phone-data-field.php:32
+msgid "Filter by phone"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-global-date-day-field.php:17, ../inc/classes/items/data-fields/class-global-date-day-field.php:21
+msgid "Day"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-global-date-field.php:18, ../inc/classes/items/data-fields/class-global-date-field.php:25
+msgid "Date"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-global-date-month-field.php:17, ../inc/classes/items/data-fields/class-global-date-month-field.php:21
+msgid "Month"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-global-date-time-field.php:15, ../inc/classes/items/data-fields/class-global-date-time-field.php:19
+msgid "Time"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-global-date-year-field.php:15, ../inc/classes/items/data-fields/class-global-date-year-field.php:19
+msgid "Year"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-last-login-data-field.php:18
+msgid "Last logged in"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-last-login-data-field.php:25
+msgid "Filter by last login date"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-lastname-data-field.php:18
+msgid "User last name"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-lastname-data-field.php:25
+msgid "Filter by user last name"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-author-display-name-field.php:20
+msgid "Post author display name"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-author-display-name-field.php:24
+msgid "Filter by post author display name"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-author-email-field.php:20
+msgid "Post author email"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-author-email-field.php:24
+msgid "Filter by post author email"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-categories-data-field.php:25
+msgid "Post categories"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-categories-data-field.php:29
+msgid "Filter by post categories"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-content-data-field.php:24
+msgid "Post content"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-content-data-field.php:28
+msgid "Filter by post content"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-date-data-field.php:24
+msgid "Post date"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-date-data-field.php:28
+msgid "Filter by post date"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-id-data-field.php:18
+msgid "Post ID"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-id-data-field.php:25, ../inc/classes/items/data-fields/class-post-parent-data-field.php:25
+msgid "Filter by WordPress post id"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-parent-data-field.php:18
+msgid "Post parent"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-status-data-field.php:24
+msgid "Post status"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-status-data-field.php:28
+msgid "Filter by post status"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-tags-data-field.php:24
+msgid "Post tags"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-tags-data-field.php:28
+msgid "Filter by post tags"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-title-data-field.php:24
+msgid "Post title"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-title-data-field.php:28
+msgid "Filter by post title"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-type-data-field.php:20
+msgid "Post type"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-type-data-field.php:24
+msgid "Filter by post type"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-url-data-field.php:24
+msgid "Post URL"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-post-url-data-field.php:28
+msgid "Filter by post url"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-user-email-data-field.php:17
+msgid "User email"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-user-email-data-field.php:24
+msgid "Filter by WordPress user email"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-user-id-data-field.php:18
+msgid "User ID"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-user-id-data-field.php:25
+msgid "Filter by WordPress user id"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-user-registered-data-field.php:18
+msgid "Registration date"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-user-registered-data-field.php:25
+msgid "Filter by user registration date"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-user-role-data-field.php:24
+msgid "Filter by WordPress user role"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-username-data-field.php:18
+msgid "WordPress username"
+msgstr ""
+
+#: ../inc/classes/items/data-fields/class-username-data-field.php:25
+msgid "Filter by WordPress username"
+msgstr ""
+
+#: ../inc/classes/items/data-objects/class-email-data.php:24
+msgid "Email"
+msgstr ""
+
+#: ../inc/classes/items/data-objects/class-form-data.php:27
+msgid "Form data"
+msgstr ""
+
+#: ../inc/classes/items/data-objects/class-generic-data.php:28
+msgid "Generic data"
+msgstr ""
+
+#: ../inc/classes/items/data-objects/class-global-data.php:30
+msgid "Global data"
+msgstr ""
+
+#: ../inc/classes/items/data-objects/class-post-data.php:24
+msgid "WordPress post"
+msgstr ""
+
+#: ../inc/classes/items/data-objects/class-user-data.php:26
+msgid "Registered user"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-autocomplete-contains-filter.php:28
+msgid "Autocomplete contains"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-autocomplete-filter.php:28
+msgid "Autocomplete"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-autocomplete-filter.php:44, ../inc/classes/items/filters/class-checkbox-filter.php:38, ../inc/classes/items/filters/class-string-eca-filter.php:71
+msgid "is any of the following"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-autocomplete-toggle-filter.php:27
+msgid "Autocomplete toggle"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-boolean-filter.php:28
+msgid "Boolean"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-boolean-filter.php:40
+msgid "True"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-boolean-filter.php:43
+msgid "False"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-checkbox-filter.php:32
+msgid "Checkbox"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-date-filter.php:32
+msgid "Date comparison"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-date-filter.php:103, ../inc/classes/items/filters/class-number-comparison-filter.php:70
+msgid "more than"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-date-filter.php:106, ../inc/classes/items/filters/class-number-comparison-filter.php:73
+msgid "less than"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-date-filter.php:109, ../inc/classes/items/filters/class-string-ec-filter.php:74
+msgid "equals"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-date-filter.php:112
+msgid "before"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-date-filter.php:115
+msgid "after"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-dropdown-filter.php:33
+msgid "Dropdown"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-exists-filter.php:28
+msgid "Exists"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-exists-filter.php:48, ../inc/classes/items/filters/class-string-ec-filter.php:80, ../inc/classes/items/filters/class-string-eca-filter.php:77
+msgid "is empty"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-exists-filter.php:51, ../inc/classes/items/filters/class-string-ec-filter.php:83, ../inc/classes/items/filters/class-string-eca-filter.php:80
+msgid "is not empty"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-number-comparison-filter.php:30
+msgid "Number comparison"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-number-comparison-filter.php:76
+msgid "equal to"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-radio-filter.php:28
+msgid "Radio"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-radio-filter.php:38
+msgid "is one of the following"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-string-contains-filter.php:30
+msgid "String contains"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-string-contains-filter.php:40, ../inc/classes/items/filters/class-string-ec-filter.php:77, ../inc/classes/items/filters/class-string-eca-filter.php:74
+msgid "contains"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-string-ec-filter.php:32
+msgid "String equals, exists and contains"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-string-eca-filter.php:37
+msgid "String equals, exists and autocomplete"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-string-equals-filter.php:28
+msgid "String equals"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-time-date-filter.php:32
+msgid "Time and date comparison"
+msgstr ""
+
+#: ../inc/classes/items/filters/class-time-filter.php:26
+msgid "Time comparison"
+msgstr ""
+
+#: ../inc/classes/items/trigger-fields/class-post-id-field.php:18
+msgid "Select specific post(s)"
+msgstr ""
+
+#: ../inc/classes/items/trigger-fields/class-post-id-field.php:22
+msgid "You must select at least one post"
+msgstr ""
+
+#: ../inc/classes/items/trigger-fields/class-post-id-field.php:26
+msgid "Select at least one post"
+msgstr ""
+
+#: ../inc/classes/items/trigger-fields/class-post-type-field.php:17
+msgid "Select specific post type(s)"
+msgstr ""
+
+#: ../inc/classes/items/trigger-fields/class-post-type-field.php:21
+msgid "You must select at least one post type"
+msgstr ""
+
+#: ../inc/classes/items/trigger-fields/class-post-type-field.php:25
+msgid "Select at least post type"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-comment-trigger.php:32
+msgid "User leaves comment"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-comment-trigger.php:36
+msgid "This trigger will be fired whenever a user leaves a comment on the site"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-login-trigger.php:73
+msgid "User logs into account"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-login-trigger.php:82
+msgid "This trigger will be fired whenever a user logs into their account through any form on your site"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-logout-trigger.php:57
+msgid "User logs out of account"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-logout-trigger.php:66
+msgid "This trigger will be fired whenever a user logs out of their account"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-passreset-link-trigger.php:57
+msgid "Password reset link sent"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-passreset-link-trigger.php:66
+msgid "This trigger will be fired whenever the password reset link is sent for a user"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-passreset-trigger.php:56
+msgid "User resets password"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-passreset-trigger.php:65
+msgid "This trigger will be fired whenever a user successfully resets their password"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-post-publish-trigger.php:76
+msgid "Post is published"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-post-publish-trigger.php:85
+msgid "Triggers when a post is published. Any user-based actions will be performed on the author of the post."
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-post-updated-trigger.php:59
+msgid "Post is updated"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-post-updated-trigger.php:68
+msgid "Triggers when a published post is edited and the changes are saved. Any user-based actions will be performed on the author of the post"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-post-viewed-trigger.php:57
+msgid "Post is viewed"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-post-viewed-trigger.php:66
+msgid "Triggers when a post is viewed"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-profile-update-trigger.php:57
+msgid "User profile updated"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-profile-update-trigger.php:66
+msgid "This trigger will be fired whenever a user updates their profile"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-register-trigger.php:57
+msgid "User creates new account"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-register-trigger.php:66
+msgid "This trigger will be fired when a user creates a new account through any form on your site"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-role-assigned-trigger.php:57
+msgid "Role is added to a user"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-role-assigned-trigger.php:66
+msgid "Triggers when a new role is added to an existing user account"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-schedule-single-trigger.php:82
+msgid "Specific date and time"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-schedule-single-trigger.php:91
+msgid "Trigger will be fired at the specified date and time. The timezone is inherited from the WordPress “General” settings screen."
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-webhook-receive-trigger.php:126
+msgid "Incoming webhook"
+msgstr ""
+
+#: ../inc/classes/items/triggers/class-wordpress-webhook-receive-trigger.php:135
+msgid "Trigger will be fired when receiving a webhook."
+msgstr ""

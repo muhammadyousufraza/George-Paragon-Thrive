@@ -1,0 +1,9 @@
+<# var style = item.get('video_style'); #>
+<# var new_question = parseInt( item.get('new_question') ); #>
+<div class="tge-video-form tge-video-style-<#= 0 === new_question ? style.selected : TGE_Editor.default_video_style #>">
+	<div class="tqb-video-container-responsive">
+		<iframe src="//fast.wistia.net/embed/iframe/<#= item.get('video_id')#>" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed"
+		        name="wistia_embed" height="313" width="551"
+		        allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+	</div>
+</div>

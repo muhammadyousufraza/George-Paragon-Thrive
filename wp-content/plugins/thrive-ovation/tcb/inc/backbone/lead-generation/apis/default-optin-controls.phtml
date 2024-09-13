@@ -1,0 +1,10 @@
+<div class="api-field">
+	<div class="field-description">
+		<?php echo __( 'Choose the type of optin you would like for your integration', 'thrive-cb' ) ?>
+	</div>
+
+	<select class="tve-api-extra tve-api-optin-select" name="optin">
+		<#= TVE.tpl( 'util/option', {value:'s', selected: (api.getConfig('optin') === 's'), text: '<?php echo __( 'Single optin', 'thrive-cb' ) ?>'}) #>
+		<#= TVE.tpl( 'util/option', {value:'d', selected: (api.getConfig('optin') === 'd'), text: '<?php echo __( 'Double optin', 'thrive-cb' ) ?>'}) #>
+	</select>
+</div>

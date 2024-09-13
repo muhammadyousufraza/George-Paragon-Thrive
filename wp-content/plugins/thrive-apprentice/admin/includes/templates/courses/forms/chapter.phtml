@@ -1,0 +1,19 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-university
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+<h3 class="tvd-modal-title"><?php echo esc_html__( 'Add Chapter', 'thrive-apprentice' ); ?></h3>
+
+<div class="tvd-input-field mb-40">
+	<input id="tva-module-title" data-bind="post_title" value="<#= model.get('post_title') #>" type="text" placeholder="<?php echo esc_html__( 'Chapter Title', 'thrive-apprentice' ); ?>">
+	<label>&nbsp;</label>
+</div>
+
+<label for="tva-module-title"></label>

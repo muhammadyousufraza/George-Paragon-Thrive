@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+use TVA\Reporting\Main;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="apprentice-dashboard-container">
+	<div class="apprentice-top-section">
+		<div>
+			<h2 class="mt-0">
+				<?php echo esc_html__( 'New members', 'thrive-apprentice' ); ?>
+			</h2>
+
+			<div class="apprentice-dashboard-wrapper no-focus">
+				<div></div>
+				<?php Main::render_report( 'tve_reporting_filter', 'date_filter' ); ?>
+			</div>
+		</div>
+	</div>
+
+	<div class="apprentice-info mb-20">
+		<span class="tva-info-icon text-blue">
+			<?php tva_get_svg_icon( 'info-circle_light' ); ?>
+		</span>
+		<span class="apprentice-info-text">
+			<?php echo esc_html__( 'This report tracks the number of new members in Thrive Apprentice. A member can be enrolled in one or more products and courses, but will still only count once in this report.', 'thrive-apprentice' ); ?>
+		</span>
+	</div>
+
+	<div class="apprentice-dashboard-wrapper">
+		<div class="col-3-8">
+			<?php Main::render_report( 'tve_reporting_card', 'new_members', 'abacus', [
+				'has-chart'             => 0,
+				'report-size'           => 'lg',
+				'report-title'          => __( 'Count', 'thrive-apprentice' ),
+				'has-date-comparison'   => 1,
+				'report-global-filters' => 'date',
+				'report-expanded-view'  => '',
+			] ); ?>
+		</div>
+
+		<div class="col-5-8">
+			<?php Main::render_report( 'tve_reporting_chart', 'new_members', 'arrow-clock', [
+				'report-title'          => __( 'Over time', 'thrive-apprentice' ),
+				'report-global-filters' => 'date',
+				'report-expanded-view'  => '',
+				'chart-config'          => [
+					'cumulative-toggle' => 1,
+				],
+			] ); ?>
+
+		</div>
+	</div>
+
+	<div class="apprentice-dashboard-wrapper">
+		<div class="col-8-8">
+			<?php Main::render_report( 'tve_reporting_table', 'new_members', 'info', [
+				'report-title'              => __( 'Details', 'thrive-apprentice' ),
+				'report-global-filters'     => 'date',
+				'report-expanded-view'      => '',
+				'has-pagination'            => 1,
+				'report-items-per-page'     => 10,
+				'report-table-columns'      => 'date,user_id',
+				'report-order-by'           => 'date',
+				'report-order-by-direction' => 'desc',
+				'report-has-export'         => 1,
+				'export-title'              => esc_html__( 'Members', 'thrive-apprentice' ),
+			] ); ?>
+		</div>
+	</div>
+</div>

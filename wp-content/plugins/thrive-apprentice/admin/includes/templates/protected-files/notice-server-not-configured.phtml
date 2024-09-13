@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-flex tva-flex-row">
+	<span class="tva-protected-files-notice-border"></span>
+	<p class="ml-30 tva-flex tva-align-center"><?php tva_get_svg_icon( 'exclamation-triangle' ); ?></p>
+	<div class="tva-flex tva-flex-column ml-30">
+		<span class="tva-protected-files-notice-title"><?php echo __( 'Your files may not be protected', 'thrive-apprentice' ); ?></span>
+		<span><?php echo __( 'We have detected that the current server configuration does not allow Thrive Plugins to protect your files. Please read the documentation linked below to configure or to request updates from your hosting company.', 'thrive-apprentice' ); ?></span>
+		<span>
+			<a href="https://help.thrivethemes.com/en/articles/6961893-how-to-correctly-configure-your-server-to-allow-thrive-themes-products-to-protect-your-files" rel="noopener" target="_blank"><?php echo __( 'Learn more', 'thrive-apprentice' ); ?></a>
+		</span>
+	</div>
+</div>

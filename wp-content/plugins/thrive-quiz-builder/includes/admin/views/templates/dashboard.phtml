@@ -1,0 +1,55 @@
+<div class="tqb-dashboard">
+
+	<h3>
+		<?php echo __( 'Your Quizzes', 'thrive-quiz-builder' ); ?>&nbsp;&nbsp;
+		<a class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-purple tvd-btn-small tqb-add-quiz-dashboard">
+			<?php echo __( 'Add New', 'thrive-quiz-builder' ); ?>
+		</a>
+	</h3>
+
+	<div class="tqb-search-quiz"></div>
+
+	<div class="tqb-import-container">
+		<a href="javascript:void(0)" class="tqb-simple-button tqb-import-quiz">
+			<?php tqb_get_svg_icon( 'import-quiz' ); ?>
+			<?php echo __( 'Import Quiz', 'thrive-quiz-builder' ) ?>
+		</a>
+	</div>
+</div>
+<div id="tqb-no-quiz-text" class="tqb-no-quiz-wrapper">
+	<p>
+		<?php echo __( 'You have no quizzes yet. Click the Add New Quiz button to get started or', 'thrive-quiz-builder' ); ?>
+		<a data-source="<?php echo Thrive_Quiz_Builder::VIDEO_PLUGIN_DASHBOARD; ?>"
+		   class='tvd-open-video'><?php echo __( 'watch a Quick Start Tutorial.', 'thrive-quiz-builder' ); ?></a>
+	</p>
+</div>
+
+
+<div id="tqb-no-search-result" class="tqb-no-quiz-wrapper">
+	<p>
+		<?php echo __( 'Could not find any quiz.', 'thrive-quiz-builder' ); ?>
+	</p>
+</div>
+
+
+<div class="tvd-row" id="tqb-quiz-list">
+	<div class="tvd-col tvd-s6 tvd-ms6 tvd-m4 tvd-l3 tqb-add-quiz tvd-pointer">
+		<div class="tvd-card tvd-large tvd-card-new tvd-valign-wrapper">
+			<div class="tvd-card-content tvd-valign tvd-center-align">
+				<i class="tvd-icon-plus tvd-icon-rounded tvd-icon-medium"></i>
+				<h4><?php echo __( 'ADD NEW QUIZ', 'thrive-quiz-builder' ) ?></h4>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="tvd-row tqb-load-more-section">
+
+	<div class="tqb-remaining-quizzes"></div>
+	<div class="tqb-load-more tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-purple tvd-full-btn"></div>
+	<div class="tqb-load-all">
+		<svg xmlns="http://www.w3.org/2000/svg" width="6" height="9" viewBox="0 0 6 9">
+			<path fill="none" fill-rule="evenodd" stroke="#9F9F9F" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8l4-3.5L1 1"/>
+		</svg>
+		<?php echo __( ' Load all Quizzes', 'thrive-quiz-builder' ) ?>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+<div class="tva-assessment-submission tva-assessment-submission-card click" data-fn="previewSubmission" data-id="<#- ID #>">
+	<div class="tva-flex">
+		<div class="tva-assessment-author-image"><img src="<#= author_avatar #>" alt="<?php echo __( 'Author avatar', 'thrive-apprentice' ); ?>"></div>
+		<div class="tva-assessment-meta">
+			<div class="tva-assessment-author"><#- author #></div>
+			<span class="tva-assessment-date"><#- date #></span>
+			<span class="tva-assessment-attempt <#= user_submission_counter ? '' : 'tva-hide'  #>"> - <?php echo __( 'Attempt', 'thrive-apprentice' ); ?> <#- user_submission_counter #></span>
+		</div>
+		<div class="tva-assessment-status tva-assessment-<#- TVA.t.assessments.status[ status ].toLowerCase() #>"><#- TVA.t.assessments.status[ status ] #></div>
+	</div>
+	<div class="tva-assessment-title">
+		<?php tva_get_svg_icon( "assessment-<#- type #>" ); ?>
+		<#- assessment.post_title #>
+	</div>
+	<div class="tva-assessment-course"><#- TVA.Utils.getCourseLabel( assessment.course_id ) #></div>
+	<div style="display: none"><#- grade #></div>
+</div>

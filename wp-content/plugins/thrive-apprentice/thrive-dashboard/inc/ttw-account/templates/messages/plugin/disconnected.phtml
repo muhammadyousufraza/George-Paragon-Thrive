@@ -1,0 +1,78 @@
+<?php
+
+/** @var array $plugin_data */
+/** @var stdClass $state */
+
+/** @var string $slug plugin slug */
+$slug = $state->update->slug;
+
+/** @var string $version plugin version */
+$version = $state->update->version;
+
+?>
+<p class="thrv-msg thrv-deny-updates">
+	<?php
+	echo sprintf(
+		__( 'Connection lost - there is a new version of %s available but your thrivethemes.com account must be connected in order to update. ', 'thrive-dash' ),
+		$plugin_data['Name']
+	);
+	echo sprintf(
+		'<a class="thickbox open-plugin-details-modal" href="%s">%s</a>',
+		self_admin_url( 'plugin-install.php?tab=plugin-information&plugin=' . $slug . '&section=changelog&TB_iframe=true&width=772&height=877' ),
+		sprintf(
+			__( 'View version %s details', 'thrive-dash' ),
+			$version
+		)
+	);
+	?>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<?php
+	echo sprintf(
+		'<a class="ttw-connect" href="%s">%s</a>',
+		TD_TTW_Update_Manager::get_instance()->get_admin_url(),
+		__( 'Connect account', 'thrive-dash' )
+	);
+	?>
+</p>
+<style>
+    #<?php echo $slug ?>-update p:last-child {
+        display: none;
+    }
+
+    #<?php echo $slug ?>-update .thrv-msg:before {
+		content: "\f106";
+		color: #1e5496;
+		height: 28px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+    }
+
+    .ttw-connect {
+        color: #fff !important;
+        background-color: #1e5496;
+        text-decoration: none !important;
+        padding: 0 15px;
+        border-radius: 3px;
+        display: inline-block;
+        line-height: 28px;
+    }
+</style>
+<script>
+	jQuery( '#<?php echo $slug ?>-update .update-message p' )
+		.filter( function ( index, item ) {
+			return ! jQuery( item ).hasClass( 'thrv-msg' )
+		} )
+		.remove();
+
+	jQuery( 'body' ).on( 'thickbox:iframe:loaded', function () {
+		var iframe = jQuery( '#TB_iframeContent' ).contents();
+		var updateUrl = iframe.find( '#plugin_update_from_iframe' );
+
+		if ( updateUrl.data( 'slug' ) === "<?php echo $slug ?>" ) {
+			iframe
+				.find( '#plugin-information-footer' )
+				.empty();
+		}
+	} );
+</script>

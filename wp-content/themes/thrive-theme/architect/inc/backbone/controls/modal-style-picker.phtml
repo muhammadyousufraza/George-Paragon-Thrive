@@ -1,0 +1,17 @@
+<div class="tve-modal-style-picker">
+	<div class="picker-label mb-5">
+		<#=this.get_config( 'label', <?php echo json_encode( __( 'Element and style', 'thrive-cb' ) ); ?> )#>
+	</div>
+	<div class="picker-input flex-center space-between">
+		<div class="preview-item flex-center">
+		</div>
+		<div class="picker-options p-10">
+			<div class="label flex wrap">
+				<span class="element-name"></span>
+				<span class="style-name"></span>
+			</div>
+			<div class="click flex-center mb-5 mt-5" data-fn="openModal"><span class="mr-10"><?php tcb_icon( 'pen-regular' ); ?></span><span><#=this.get_config( 'label_modal', <?php echo json_encode( __( 'Choose element', 'thrive-cb' ) ); ?> )#></span></div>
+			<div class="click flex-center mb-5" data-fn="openStyle"><span class="mr-10"><?php tcb_icon( 'paint-brush-regular' ); ?></span><span><#=this.get_config( 'label_style', <?php echo json_encode( __( 'Choose style', 'thrive-cb' ) ); ?> )#></span></div>
+		</div>
+	</div>
+</div>

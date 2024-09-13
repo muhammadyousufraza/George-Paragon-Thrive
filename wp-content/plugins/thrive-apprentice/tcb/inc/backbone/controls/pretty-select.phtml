@@ -1,0 +1,26 @@
+<div>
+	<div class="label"><#= this.get_config( 'name' ) || this.get_config('label') || this.el.dataset.name #>
+		<# if ( this.model.config.info ) { #>
+		<span class="click tve-select-info" data-fn="openTooltip" <#=this.model.config.info_hover ? 'data-paneltlt-hover' : ''#> ><?php tcb_icon( 'info-circle-solid' ); ?></span>
+		<# } #>
+		<# if ( this.model.config.instructions ) { #>
+		<span class="click" data-type="<#=this.model.config.instructions.type#>" data-url="<#=this.model.config.instructions.url#>" data-link="<#=this.model.config.instructions.link#>" data-fn="openInstructionsLightbox"><#= TVE.icon( this.model.config.instructions.type + "-instructions" ) #></span>
+		<# } #>
+	</div>
+
+	<div class="tve-pretty-select">
+		<button class="tve-selected-option click" data-fn="toggleDropdown">
+			<#= this.model.config.placeholder #>
+		</button>
+		<ul class="tve-select-options">
+			<# this.getOptions().forEach( option => { #>
+			<li class="tve-select-option">
+				<button class="click" data-fn="onSelect" data-value="<#= option.value #>">
+					<#= option.icon #>
+					<#= option.name #>
+				</button>
+			</li>
+			<# }); #>
+		</ul>
+	</div>
+</div>

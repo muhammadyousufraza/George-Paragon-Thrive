@@ -1,0 +1,93 @@
+<div class="tve-modal-content">
+	<div>
+		<div class="tve-avatar-picker-title" style="text-align: center">
+			<?php echo __( 'Current avatar', 'thrive-cb' ); ?>
+		</div>
+
+		<div class="tve-avatar-image-preview"></div>
+	</div>
+
+	<div class="tve-avatar-connections-list">
+		<div class="tve-avatar-picker-title">
+			<?php echo __( 'Load a new Avatar:', 'thrive-cb' ); ?>
+		</div>
+
+		<div class="tve-google-sign-in" data-connection="google"><!-- auto generated button--></div>
+
+		<div class="tve-avatar-connection-item" data-connection="facebook">
+			<button class="tve-facebook-sign-in" data-trigger="click" data-fn="onFacebookLoginClick">
+				<svg width="16" height="17" viewBox="0 0 16 17">
+					<path d="M15.75 1.254a.827.827 0 0 0-.264-.633.873.873 0 0 0-.615-.246H.88a.857.857 0 0 0-.633.246.857.857 0 0 0-.246.633v13.992c0 .234.082.44.246.615a.827.827 0 0 0 .633.264h7.523v-6.117H6.363V7.652h2.04V5.895c0-1.008.28-1.782.843-2.32.563-.54 1.3-.81 2.215-.81.726 0 1.336.024 1.828.071V4.98h-1.266c-.445 0-.761.106-.949.317-.14.164-.21.445-.21.844v1.511h2.355l-.317 2.356h-2.039v6.117h4.008a.827.827 0 0 0 .633-.264.873.873 0 0 0 .246-.615V1.254z" fill="#1272B2"
+						  fill-rule="nonzero"/>
+				</svg>
+
+				Facebook
+			</button>
+		</div>
+
+		<div class="tve-avatar-connection-item" data-connection="gravatar" data-trigger="click" data-fn="optionSelected">
+			<button class="tve-gravatar-image">
+				<svg width="18" height="18" viewBox="0 0 18 18">
+					<path d="M9 0a1.8 1.8 0 0 0-1.8 1.8v6.3a1.8 1.8 0 0 0 3.6 0V3.908A5.403 5.403 0 0 1 14.4 9c0 2.981-2.419 5.4-5.4 5.4a5.401 5.401 0 0 1-3.818-9.218 1.8 1.8 0 1 0-2.546-2.546A9 9 0 1 0 9 0" fill="#1E8CBE" fill-rule="nonzero"/>
+				</svg>
+
+				Gravatar
+			</button>
+
+			<div class="tve-avatar-extra-options" data-trigger="click" data-fn="optionSelected">
+				<input type="email" class="tve-avatar-gravatar-email" data-trigger="onEnter" data-fn="applyGravatar">
+				<button type="button" data-trigger="click" data-fn="applyGravatar">
+					<svg width="13" height="10" viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg">
+						<path d="M11.275.732a.275.275 0 0 1 .203-.076c.085 0 .16.026.228.076l.711.737c.068.05.102.118.102.203 0 .085-.034.16-.102.228L4.8 9.518a.275.275 0 0 1-.203.076.371.371 0 0 1-.228-.076L.992 6.115a.241.241 0 0 1-.102-.203c0-.085.034-.16.102-.228l.71-.711a.316.316 0 0 1 .23-.102c.084 0 .151.034.202.102l2.463 2.463L11.275.732z" fill="#FFF" fill-rule="nonzero"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<div class="tve-avatar-connection-item" data-connection="custom" data-trigger="click" data-fn="optionSelected">
+			<button type="button" class="tve-custom-url-image">
+				<svg width="20" height="19" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
+					<g stroke="#000" stroke-width="1.5" fill="none" fill-rule="evenodd" opacity=".433" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M13.143 5.048h4.048a1.62 1.62 0 0 1 1.619 1.619v9.714A1.62 1.62 0 0 1 17.19 18H2.62A1.62 1.62 0 0 1 1 16.381V4.238A1.62 1.62 0 0 1 2.62 2.62h4.047"/>
+						<path d="m13.143 9.905-3.238 3.238-3.238-3.238M9.905 1v12.143"/>
+					</g>
+				</svg>
+
+				<?php echo __( 'Custom url', 'thrive-cb' ); ?>
+			</button>
+
+			<div class="tve-avatar-extra-options">
+				<input type="text" class="tve-avatar-custom-url-input" data-trigger="onEnter" data-fn="applyCustomUrl">
+				<button type="button" data-trigger="click" data-fn="applyCustomUrl">
+					<svg width="13" height="10" viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg">
+						<path d="M11.275.732a.275.275 0 0 1 .203-.076c.085 0 .16.026.228.076l.711.737c.068.05.102.118.102.203 0 .085-.034.16-.102.228L4.8 9.518a.275.275 0 0 1-.203.076.371.371 0 0 1-.228-.076L.992 6.115a.241.241 0 0 1-.102-.203c0-.085.034-.16.102-.228l.71-.711a.316.316 0 0 1 .23-.102c.084 0 .151.034.202.102l2.463 2.463L11.275.732z" fill="#FFF" fill-rule="nonzero"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<div class="tve-avatar-connection-item" data-trigger="click" data-fn="optionSelected">
+			<button class="tve-avatar-no-image" data-trigger="click" data-fn="resetImage">
+				<svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+					<g fill="#979797" fill-rule="nonzero">
+						<path d="M9 4.286a3 3 0 1 1 0 6 3 3 0 0 1 0-6zM9 5.57A1.714 1.714 0 1 0 9 9a1.714 1.714 0 0 0 0-3.429z"/>
+						<path d="M9 0a9 9 0 1 1 0 18A9 9 0 0 1 9 0zm0 1.286a7.714 7.714 0 1 0 0 15.428A7.714 7.714 0 0 0 9 1.286z"/>
+						<path d="M11.032 11.752a3.214 3.214 0 0 1 3.384 1.6l1.01 1.816-1.124.625-1.01-1.816a1.929 1.929 0 0 0-2.03-.96l-1.563.284c-.372.067-.753.069-1.126.004l-1.545-.27a1.814 1.814 0 0 0-2.006 1.142l-.72 1.887-1.2-.458.719-1.887a3.1 3.1 0 0 1 3.428-1.95l1.544.27c.224.038.453.037.676-.003l1.563-.284z"/>
+					</g>
+				</svg>
+
+				<?php echo __( 'No image', 'thrive-cb' ); ?>
+			</button>
+		</div>
+	</div>
+</div>
+
+<div class="tve-modal-footer">
+	<button class="tve-modal-button gray" data-dismiss="true">
+		<?php echo __( 'Cancel', 'thrive-cb' ); ?>
+	</button>
+
+	<button class="tve-modal-button green" data-trigger="click" data-fn="save">
+		<?php echo __( 'Save changes', 'thrive-cb' ); ?>
+	</button>
+</div>

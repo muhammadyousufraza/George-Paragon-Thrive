@@ -1,0 +1,46 @@
+<div class="thrive-display-testimonials-header thrive-display-testimonials-set-header">
+	<div class="thrive-display-testimonials-title">
+		<?php echo esc_html__( 'Save a new testimonial set', 'thrive-ovation' ); ?>
+	</div>
+</div>
+
+<div class="thrive-display-testimonials-content thrive-display-testimonials-set-content">
+		<span class="descriptive-text">
+			<?php echo esc_html__( 'New set', 'thrive-ovation' ); ?>
+		</span>
+
+	<div class="thrive-display-testimonials-save-set">
+		<div class="thrive-display-testimonials-save-set-inner">
+			<div class="thrive-display-testimonials-input">
+				<input type="text" placeholder="Set name" class="input" data-fn="onInputChange"/>
+			</div>
+			<div class="set-icon-wrapper">
+				<span class="set-icon <#= this.dataModel.get('type') #>"></span>
+			</div>
+			<span class="new-set-count">
+				<#= this.dataModel.getCount() #> <?php echo esc_html__( 'testimonials', 'thrive-ovation' ); ?>
+			</span>
+		</div>
+	</div>
+
+	<span class="descriptive-text existing-sets">
+		<?php echo esc_html__( 'Existing sets', 'thrive-ovation' ); ?>
+	</span>
+
+	<div class="thrive-display-testimonials-sets-container">
+		<ul class="thrive-display-testimonials-set-list"></ul>
+	</div>
+</div>
+
+<div class="thrive-display-testimonials-action-buttons">
+	<div class="col-1">
+		<button class="clear click" data-fn="goBack">
+			<?php echo esc_html__( 'Back', 'thrive-ovation' ); ?>
+		</button>
+	</div>
+	<div class="col-2">
+		<button class="filled click" data-fn="saveNewSet">
+			<?php echo esc_html__( 'Save', 'thrive-ovation' ); ?>
+		</button>
+	</div>
+</div>

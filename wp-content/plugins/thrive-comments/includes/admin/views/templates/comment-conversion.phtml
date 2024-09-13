@@ -1,0 +1,366 @@
+<p class="tcm-title-line">
+	<?php
+	echo __( 'Choose what happens after a visitor leaves a comment ', Thrive_Comments_Constants::T );
+	echo ' <strong>' . __( 'for the first time', Thrive_Comments_Constants::T ) . '</strong>'; ?>
+</p>
+
+<div class="tcm-conversion first-case">
+	<div class="tcm-cards clear-this" data-conversion-setting="first_time">
+		<div data-powertip="<?php echo __( 'After leaving a comment, the visitor will receive a thank you message.', Thrive_Comments_Constants::T ); ?>" class="tcm-card tooltips<# if ( conversionSettings.first_time.active === ThriveComments.const.tcm_live_update ) { #> current <# } #>" data-tab="tab-1" data-card="<#= ThriveComments.const.tcm_live_update #>">
+			<span class="default">
+				<?php echo tcah()->tcm_icon( 'live-update', 'conversion-card' ); ?>
+			</span>
+			<span class="second">
+				<?php echo tcah()->tcm_icon( 'live-update-hover', 'conversion-card' ); ?>
+			</span>
+			<p class="tvd-truncate">
+				<?php echo __( 'Message', Thrive_Comments_Constants::T ); ?>
+			</p>
+		</div>
+		<div data-powertip="<?php echo __( 'After leaving a comment, the visitor will be asked to share the page he just commented on.', Thrive_Comments_Constants::T ); ?>" class="tcm-card tooltips<# if ( conversionSettings.first_time.active === ThriveComments.const.tcm_social_share ) { #> current <# } #>" data-tab="tab-2" data-card="<#= ThriveComments.const.tcm_social_share #>">
+			<span class="default">
+				<?php echo tcah()->tcm_icon( 'social-share', 'conversion-card' ); ?>
+			</span>
+			<span class="second">
+				<?php echo tcah()->tcm_icon( 'social-share-hover', 'conversion-card' ); ?>
+			</span>
+			<p class="tvd-truncate"><?php echo __( 'Social Share', Thrive_Comments_Constants::T ); ?></p>
+		</div>
+		<div data-powertip="<?php echo __( 'After leaving a comment, the visitor will be recommended posts in the same categories as the one he just left the comment.', Thrive_Comments_Constants::T ); ?>" class="tcm-card tooltips<# if ( conversionSettings.first_time.active === ThriveComments.const.tcm_related_posts ) { #> current <# } #>" data-tab="tab-3" data-card="<#= ThriveComments.const.tcm_related_posts #>">
+			<span class="default">
+				<?php echo tcah()->tcm_icon( 'related-posts', 'conversion-card' ); ?>
+			</span>
+			<span class="second">
+				<?php echo tcah()->tcm_icon( 'related-posts-hover', 'conversion-card' ); ?>
+			</span>
+			<p class="tvd-truncate"><?php echo __( 'Related Posts', Thrive_Comments_Constants::T ); ?></p>
+		</div>
+		<div data-powertip="<?php echo __( 'After leaving a comment, the visitor is redirected to a page or an external URL.', Thrive_Comments_Constants::T ); ?>" class="tcm-card tooltips <# if ( conversionSettings.first_time.active === ThriveComments.const.tcm_redirect ) { #> current <# } #>" data-tab="tab-4" data-card="<#= ThriveComments.const.tcm_redirect #>">
+			<span class="default">
+				<?php echo tcah()->tcm_icon( 'redirect', 'conversion-card' ); ?>
+			</span>
+			<span class="second">
+				<?php echo tcah()->tcm_icon( 'redirect-hover', 'conversion-card' ); ?>
+			</span>
+			<p class="tvd-truncate"><?php echo __( 'Redirect', Thrive_Comments_Constants::T ); ?></p>
+		</div>
+		<div data-powertip="<?php echo __( 'After leaving a comment, the visitor is presented with a lightbox.', Thrive_Comments_Constants::T ); ?>" class="tcm-card tooltips <#if ( ! ThriveComments.leads_active ) { #> leads_inactive <# } #> <# if ( conversionSettings.first_time.active === ThriveComments.const.tcm_thrivebox ) { #> current <# } #>" data-tab="tab-5" data-card="<#= ThriveComments.const.tcm_thrivebox #>">
+			<span class="default">
+				<?php echo tcah()->tcm_icon( 'opt-in-form', 'conversion-card' ); ?>
+			</span>
+			<span class="second">
+				<?php echo tcah()->tcm_icon( 'opt-in-form-hover', 'conversion-card' ); ?>
+			</span>
+			<p class="tvd-truncate"><?php echo __( 'Opt-In Form', Thrive_Comments_Constants::T ); ?></p>
+		</div>
+	</div>
+
+	<div class="tcm-message-container">
+		<div id="tab-1" class="tcm-message-box clear-this <# if ( conversionSettings.first_time.active === ThriveComments.const.tcm_live_update ) { #> current <# } #>">
+			<div>
+				<?php echo __( 'Custom message', Thrive_Comments_Constants::T ); ?>
+			</div>
+			<div>
+				<textarea id="tcm_message_textarea" data-conversion-setting="first_time" data-card="live_update"><#= conversionSettings.tcm_live_update.first_time.custom_message #></textarea>
+
+				<ul class="dropelem">
+					<li class="icon tcm-hyperlink" data-setting="reply"></li>
+					<li class="tcm-hyperlink-dropdown"></li>
+				</ul>
+
+				<?php echo __( 'Insert commenter name: {commenter_name}', Thrive_Comments_Constants::T ); ?>
+			</div>
+		</div>
+		<div id="tab-2" class="tcm-message-box clear-this <# if ( conversionSettings.first_time.active === ThriveComments.const.tcm_social_share ) { #> current <# } #>">
+			<div>
+				<?php echo __( 'Custom message', Thrive_Comments_Constants::T ); ?>
+			</div>
+			<div>
+				<textarea id="tcm_share_textarea" data-conversion-setting="first_time" data-card="social_share"><#= conversionSettings.tcm_social_share.first_time.custom_message #></textarea>
+
+				<ul class="dropelem">
+					<li class="icon tcm-hyperlink" data-setting="reply"></li>
+					<li class="tcm-hyperlink-dropdown"></li>
+				</ul>
+
+				<?php echo __( 'Insert commenter name: {commenter_name}', Thrive_Comments_Constants::T ); ?>
+			</div>
+			<div class="social-sharing-checkboxes">
+				<p class="sharing-text"><?php echo __( 'Social sharing buttons:', Thrive_Comments_Constants::T ); ?></p>
+				<div class="sharing-div">
+                    <span>
+                        <input id="fb_share_first" class="tcm-checkbox filled-in social-share-checkbox" data-type="checkbox" data-conversion-setting="first_time" data-card="social_share" type="checkbox" name="fb_share" <# if ( conversionSettings.tcm_social_share.first_time.social_sharing_buttons.fb_share ) { #> checked <# } #>/>
+                        <label for="fb_share_first"><?php echo __( 'Facebook', Thrive_Comments_Constants::T ); ?></label>
+                    </span>
+					<span>
+                        <input id="tw_share_first" class="tcm-checkbox filled-in social-share-checkbox" data-type="checkbox" data-conversion-setting="first_time" data-card="social_share" type="checkbox" name="tw_share" <# if ( conversionSettings.tcm_social_share.first_time.social_sharing_buttons.tw_share ) { #> checked <# } #>/>
+                        <label for="tw_share_first"><?php echo __( 'Twitter', Thrive_Comments_Constants::T ); ?></label>
+                    </span>
+					<span>
+                        <input id="lk_share_first" class="tcm-checkbox filled-in social-share-checkbox" data-type="checkbox" data-conversion-setting="first_time" data-card="social_share" type="checkbox" name="lk_share"  <# if ( conversionSettings.tcm_social_share.first_time.social_sharing_buttons.lk_share ) { #> checked <# } #>/>
+                        <label for="lk_share_first"><?php echo __( 'Linkedin', Thrive_Comments_Constants::T ); ?></label>
+                    </span>
+					<span>
+                        <input id="pt_share_first" class="tcm-checkbox filled-in social-share-checkbox" data-type="checkbox" data-conversion-setting="first_time" data-card="social_share" type="checkbox" name="pt_share"  <# if ( conversionSettings.tcm_social_share.first_time.social_sharing_buttons.pt_share ) { #> checked <# } #>/>
+                        <label for="pt_share_first"><?php echo __( 'Pinterest', Thrive_Comments_Constants::T ); ?></label>
+                    </span>
+					<span>
+                        <input id="xi_share_first" class="tcm-checkbox filled-in social-share-checkbox" data-type="checkbox" data-conversion-setting="first_time" data-card="social_share" type="checkbox" name="xi_share"  <# if ( conversionSettings.tcm_social_share.first_time.social_sharing_buttons.xi_share ) { #> checked <# } #>/>
+                        <label for="xi_share_first"><?php echo __( 'Xing', Thrive_Comments_Constants::T ); ?></label>
+                    </span>
+				</div>
+			</div>
+		</div>
+		<div id="tab-3" class="tcm-message-box clear-this <# if ( conversionSettings.first_time.active === ThriveComments.const.tcm_related_posts ) { #> current <# } #>">
+			<div>
+				<?php echo __( 'Custom message', Thrive_Comments_Constants::T ); ?>
+			</div>
+			<div>
+				<textarea id="tcm_related_textarea" data-conversion-setting="first_time" data-card="related_posts"><#= conversionSettings.tcm_related_posts.first_time.custom_message #></textarea>
+
+				<ul class="dropelem">
+					<li class="icon tcm-hyperlink" data-setting="reply"></li>
+					<li class="tcm-hyperlink-dropdown"></li>
+				</ul>
+
+				<?php echo __( 'Insert commenter name: {commenter_name}', Thrive_Comments_Constants::T ); ?>
+			</div>
+			<div>
+				<label for="featured_images_first"><?php echo __( 'Show featured images with related posts', Thrive_Comments_Constants::T ); ?></label>
+				<div class="tvd-switch">
+					<label>
+						<?php echo __( 'Off', Thrive_Comments_Constants::T ); ?>
+						<input id="featured_images_first" name="featured_images_first" data-conversion-setting="first_time" data-card="related_posts" class="tcm-checkbox filled-in" data-type="checkbox" data-setting="featured_images" type="checkbox" <# if ( conversionSettings.tcm_related_posts.first_time.show_featured_image ) { #> checked <# } #> >
+						<span class="tvd-lever"></span>
+						<?php echo __( 'On', Thrive_Comments_Constants::T ); ?>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div id="tab-4" class="tcm-message-box clear-this <# if ( conversionSettings.first_time.active === ThriveComments.const.tcm_redirect ) { #> current <# } #>">
+			<div>
+				<?php echo __( 'Redirect URL', Thrive_Comments_Constants::T ); ?>
+			</div>
+			<div>
+				<input class="redirect_url tcm-autocomplete ui-autocomplete-loading small-text" id="redirect_url" placeholder="http://" type="text"/>
+				<select id="approve_post_id" class="tvo_user_approves_tvo_existing_content tvd-browser-default" style="display: none;"></select>
+				<div id="redirect-error" class="tcm-red" hidden>
+					<?php echo __( 'If the URL field is empty or invalid, your visitors can\'t be redirected to the page.', Thrive_Comments_Constants::T ); ?>
+				</div>
+			</div>
+		</div>
+		<div id="tab-5" class="tcm-message-box clear-this <# if ( conversionSettings.first_time.active === ThriveComments.const.tcm_thrivebox ) { #> current <# } #>">
+			<# if ( ThriveComments.thrive_boxes.length ) { #>
+			<div>
+				<?php echo __( 'Select or search ThriveBox', Thrive_Comments_Constants::T ); ?>
+			</div>
+			<div>
+				<select id="thrive-boxes-first-time" class="tcm-select-thrivebox tvd-select2 form-control tvd-browser-default" tabindex="-1" data-conversion-setting="first_time" data-card="<#= ThriveComments.const.tcm_thrivebox #>">
+					<option selected="selected" value="0"> <?php echo __( 'No selection', Thrive_Comments_Constants::T ); ?> </option>
+					<# ThriveComments.thrive_boxes.forEach( function ( value ) { #>
+					<option
+					<# if ( conversionSettings.tcm_thrivebox.first_time.thrivebox_id == value.ID ) { #> selected="selected" <# } #> value="<#= value.ID #>">
+					<#= value.post_title #></option>
+					<# } ) #>
+				</select>
+				<div id="thrivebox-first-no-selection" class="tcm-red"
+				<# if ( conversionSettings.tcm_thrivebox.first_time.thrivebox_id !== 0 ) { #> hidden <# } #> >
+				<?php echo __( 'Until you select a ThriveBox, the Thank you message will be displayed instead.', Thrive_Comments_Constants::T ); ?>
+			</div>
+			<span class="tcm-thrivebox"><a href="https://thrivethemes.com/tkb_item/how-to-create-and-use-a-thrivebox/" target="_blank"><?php echo __( 'How to add a new ThriveBox', Thrive_Comments_Constants::T ); ?></a></span>
+		</div>
+		<# } else { #>
+		<div class="tcm-l-text">
+			<span class="tcm-thrivebox tcm-l-text"><?php echo __( 'You have not created any ThriveBoxes yet.', Thrive_Comments_Constants::T ); ?>&nbsp;<a href="admin.php?page=thrive_leads_dashboard" target="_blank"><?php echo __( 'Click here to create one in Thrive Leads', Thrive_Comments_Constants::T ); ?></a>.</span>
+		</div>
+		<# } #>
+	</div>
+</div>
+</div>
+
+<hr class="tcm-separator"/>
+
+<p class="tcm-title-line">
+	<?php
+
+	echo __( 'Choose what happens after a visitor', Thrive_Comments_Constants::T );
+	echo ' <strong>' . __( 'returns with another comment', Thrive_Comments_Constants::T ) . '</strong> ';
+	//echo __( 'comments again', Thrive_Comments_Constants::T ); ?>
+</p>
+
+<div class="tcm-conversion second-case">
+	<div class="tcm-cards clear-this" data-conversion-setting="second_time">
+		<div data-powertip="<?php echo __( 'After leaving a comment, the visitor will receive a thank you message.', Thrive_Comments_Constants::T ); ?>" class="tcm-card tooltips <# if ( conversionSettings.second_time.active === ThriveComments.const.tcm_live_update ) { #> current <# } #>" data-tab="tab-1" data-card="<#= ThriveComments.const.tcm_live_update #>">
+			<span class="default">
+				<?php echo tcah()->tcm_icon( 'live-update', 'conversion-card' ); ?>
+			</span>
+			<span class="second">
+				<?php echo tcah()->tcm_icon( 'live-update-hover', 'conversion-card' ); ?>
+			</span>
+			<p class="tvd-truncate"><?php echo __( 'Message', Thrive_Comments_Constants::T ); ?></p>
+		</div>
+		<div data-powertip="<?php echo __( 'After leaving a comment, the visitor will be asked to share the page he just commented on.', Thrive_Comments_Constants::T ); ?>" class="tcm-card tooltips <# if ( conversionSettings.second_time.active === ThriveComments.const.tcm_social_share ) { #> current <# } #>" data-tab="tab-2" data-card="<#= ThriveComments.const.tcm_social_share #>">
+			<span class="default">
+				<?php echo tcah()->tcm_icon( 'social-share', 'conversion-card' ); ?>
+			</span>
+			<span class="second">
+				<?php echo tcah()->tcm_icon( 'social-share-hover', 'conversion-card' ); ?>
+			</span>
+			<p class="tvd-truncate"><?php echo __( 'Social Share', Thrive_Comments_Constants::T ); ?></p>
+		</div>
+		<div data-powertip="<?php echo __( 'After leaving a comment, the visitor will be recommended posts in the same categories as the one he just left the comment.', Thrive_Comments_Constants::T ); ?>" class="tcm-card tooltips <# if ( conversionSettings.second_time.active === ThriveComments.const.tcm_related_posts ) { #> current <# } #>" data-tab="tab-3" data-card="<#= ThriveComments.const.tcm_related_posts #>">
+			<span class="default">
+				<?php echo tcah()->tcm_icon( 'related-posts', 'conversion-card' ); ?>
+			</span>
+			<span class="second">
+				<?php echo tcah()->tcm_icon( 'related-posts-hover', 'conversion-card' ); ?>
+			</span>
+			<p class="tvd-truncate"><?php echo __( 'Related Posts', Thrive_Comments_Constants::T ); ?></p>
+		</div>
+		<div data-powertip="<?php echo __( 'After leaving a comment, the visitor is redirected to a page or an external URL.', Thrive_Comments_Constants::T ); ?>" class="tcm-card tooltips <# if ( conversionSettings.second_time.active === ThriveComments.const.tcm_redirect ) { #> current <# } #>" data-tab="tab-4" data-card="<#= ThriveComments.const.tcm_redirect #>">
+			<span class="default">
+				<?php echo tcah()->tcm_icon( 'redirect', 'conversion-card' ); ?>
+			</span>
+			<span class="second">
+				<?php echo tcah()->tcm_icon( 'redirect-hover', 'conversion-card' ); ?>
+			</span>
+			<p class="tvd-truncate"><?php echo __( 'Redirect', Thrive_Comments_Constants::T ); ?></p>
+		</div>
+		<div data-powertip="<?php echo __( 'After leaving a comment, the visitor is presented with a lightbox.', Thrive_Comments_Constants::T ); ?>" class="tcm-card tooltips <#if ( ! ThriveComments.leads_active ) { #> leads_inactive <# } #> <# if ( conversionSettings.second_time.active === ThriveComments.const.tcm_thrivebox ) { #> current <# } #>" data-tab="tab-5" data-card="<#= ThriveComments.const.tcm_thrivebox #>">
+			<span class="default">
+				<?php echo tcah()->tcm_icon( 'opt-in-form', 'conversion-card' ); ?>
+			</span>
+			<span class="second">
+				<?php echo tcah()->tcm_icon( 'opt-in-form-hover', 'conversion-card' ); ?>
+			</span>
+			<p class="tvd-truncate"><?php echo __( 'Opt-In Form', Thrive_Comments_Constants::T ); ?></p>
+		</div>
+	</div>
+
+	<div class="tcm-message-container">
+		<div id="tab-1" class="tcm-message-box clear-this <# if ( conversionSettings.second_time.active === ThriveComments.const.tcm_live_update ) { #> current <# } #>">
+			<div>
+				<?php echo __( 'Custom message', Thrive_Comments_Constants::T ); ?>
+			</div>
+			<div>
+				<textarea id="tcm_second_message_textarea" data-conversion-setting="second_time" data-card="live_update"><#= conversionSettings.tcm_live_update.second_time.custom_message #></textarea>
+
+				<ul class="dropelem">
+					<li class="icon tcm-hyperlink" data-setting="reply"></li>
+					<li class="tcm-hyperlink-dropdown"></li>
+				</ul>
+
+				<?php echo __( 'Insert commenter name: {commenter_name}', Thrive_Comments_Constants::T ); ?>
+			</div>
+		</div>
+		<div id="tab-2" class="tcm-message-box clear-this <# if ( conversionSettings.second_time.active === ThriveComments.const.tcm_social_share ) { #> current <# } #>">
+			<div>
+				<?php echo __( 'Custom message', Thrive_Comments_Constants::T ); ?>
+			</div>
+			<div>
+				<textarea id="tcm_second_share_textarea" data-conversion-setting="second_time" data-card="social_share"><#= conversionSettings.tcm_social_share.second_time.custom_message #></textarea>
+
+				<ul class="dropelem">
+					<li class="icon tcm-hyperlink" data-setting="reply"></li>
+					<li class="tcm-hyperlink-dropdown"></li>
+				</ul>
+
+				<?php echo __( 'Insert commenter name: {commenter_name}', Thrive_Comments_Constants::T ); ?>
+			</div>
+			<div class="social-sharing-checkboxes">
+				<p class="sharing-text"><?php echo __( 'Social sharing buttons:', Thrive_Comments_Constants::T ); ?></p>
+				<div class="sharing-div">
+                    <span>
+                        <input id="fb_share_second" class="tcm-checkbox filled-in social-share-checkbox" data-type="checkbox" data-conversion-setting="second_time" data-card="social_share" type="checkbox" name="fb_share" <# if ( conversionSettings.tcm_social_share.second_time.social_sharing_buttons.fb_share ) { #> checked <# } #> />
+                        <label for="fb_share_second"><?php echo __( 'Facebook', Thrive_Comments_Constants::T ); ?></label>
+                    </span>
+					<span>
+                        <input id="tw_share_second" class="tcm-checkbox filled-in social-share-checkbox" data-type="checkbox" data-conversion-setting="second_time" data-card="social_share" type="checkbox" name="tw_share" <# if ( conversionSettings.tcm_social_share.second_time.social_sharing_buttons.tw_share ) { #> checked <# } #> />
+                        <label for="tw_share_second"><?php echo __( 'Twitter', Thrive_Comments_Constants::T ); ?></label>
+                    </span>
+					<span>
+                        <input id="lk_share_second" class="tcm-checkbox filled-in social-share-checkbox" data-type="checkbox" data-conversion-setting="second_time" data-card="social_share" type="checkbox" name="lk_share" <# if ( conversionSettings.tcm_social_share.second_time.social_sharing_buttons.lk_share ) { #> checked <# } #> />
+                        <label for="lk_share_second"><?php echo __( 'Linkedin', Thrive_Comments_Constants::T ); ?></label>
+                    </span>
+					<span>
+                        <input id="pt_share_second" class="tcm-checkbox filled-in social-share-checkbox" data-type="checkbox" data-conversion-setting="second_time" data-card="social_share" type="checkbox" name="pt_share" <# if ( conversionSettings.tcm_social_share.second_time.social_sharing_buttons.pt_share ) { #> checked <# } #> />
+                        <label for="pt_share_second"><?php echo __( 'Pinterest', Thrive_Comments_Constants::T ); ?></label>
+                    </span>
+					<span>
+                        <input id="xi_share_second" class="tcm-checkbox filled-in social-share-checkbox" data-type="checkbox" data-conversion-setting="second_time" data-card="social_share" type="checkbox" name="xi_share" <# if ( conversionSettings.tcm_social_share.second_time.social_sharing_buttons.xi_share ) { #> checked <# } #> />
+                        <label for="xi_share_second"><?php echo __( 'Xing', Thrive_Comments_Constants::T ); ?></label>
+                    </span>
+				</div>
+			</div>
+		</div>
+		<div id="tab-3" class="tcm-message-box clear-this <# if ( conversionSettings.second_time.active === ThriveComments.const.tcm_related_posts ) { #> current <# } #>">
+			<div>
+				<?php echo __( 'Custom message', Thrive_Comments_Constants::T ); ?>
+			</div>
+			<div>
+				<textarea id="tcm_second_related_textarea" data-conversion-setting="second_time" data-card="related_posts"><#= conversionSettings.tcm_related_posts.second_time.custom_message #></textarea>
+
+				<ul class="dropelem">
+					<li class="icon tcm-hyperlink" data-setting="reply"></li>
+					<li class="tcm-hyperlink-dropdown"></li>
+				</ul>
+
+				<?php echo __( 'Insert commenter name: {commenter_name}', Thrive_Comments_Constants::T ); ?>
+			</div>
+			<div>
+				<label for="featured_images_second"><?php echo __( 'Show featured images with related posts', Thrive_Comments_Constants::T ); ?></label>
+				<div class="tvd-switch">
+					<label>
+						<?php echo __( 'Off', Thrive_Comments_Constants::T ); ?>
+						<input id="featured_images_second" name="featured_images" data-conversion-setting="second_time" data-card="related_posts" class="tcm-checkbox filled-in" data-type="checkbox" data-setting="featured_images" type="checkbox" <# if ( conversionSettings.tcm_related_posts.second_time.show_featured_image ) { #> checked <# } #> >
+						<span class="tvd-lever"></span>
+						<?php echo __( 'On', Thrive_Comments_Constants::T ); ?>
+					</label>
+				</div>
+			</div>
+
+		</div>
+		<div id="tab-4" class="tcm-message-box clear-this <# if ( conversionSettings.second_time.active === ThriveComments.const.tcm_redirect ) { #> current <# } #>">
+			<div>
+				<?php echo __( 'Redirect URL', Thrive_Comments_Constants::T ); ?>
+			</div>
+
+			<div>
+				<input class="redirect_url tcm-autocomplete2 ui-autocomplete-loading small-text" id="redirect_url2" placeholder="http://" type="text"/>
+				<select id="approve_post_id" class="tvo_user_approves_tvo_existing_content tvd-browser-default" style="display: none;"></select>
+				<div id="redirect-error2" class="tcm-red" hidden>
+					<?php echo __( 'If the URL field is empty or invalid, your visitors can\'t be redirected to the page.', Thrive_Comments_Constants::T ); ?>
+				</div>
+			</div>
+		</div>
+		<div id="tab-5" class="tcm-message-box clear-this <# if ( conversionSettings.second_time.active === ThriveComments.const.tcm_thrivebox ) { #> current <# } #>">
+			<# if ( ThriveComments.thrive_boxes.length ) { #>
+			<div>
+				<?php echo __( 'Select or search ThriveBox', Thrive_Comments_Constants::T ); ?>
+			</div>
+			<div>
+				<select id="thrive-boxes-second-time" class="tcm-select-thrivebox tvd-select2 form-control tvd-browser-default" tabindex="-1" data-conversion-setting="second_time" data-card="<#= ThriveComments.const.tcm_thrivebox #>">
+					<option selected="selected" value="0"> <?php echo __( 'No selection', Thrive_Comments_Constants::T ); ?> </option>
+					<# ThriveComments.thrive_boxes.forEach( function ( value) { #>
+					<option
+					<# if ( conversionSettings.tcm_thrivebox.second_time.thrivebox_id == value.ID ) { #> selected="selected" <# } #> value="<#= value.ID #>">
+					<#= value.post_title #>
+					</option >
+					<# } ) #>
+				</select>
+				<div id="thrivebox-second-no-selection" class="tcm-red"
+				<# if ( conversionSettings.tcm_thrivebox.second_time.thrivebox_id !== 0 ) { #> hidden <# } #> >
+				<?php echo __( 'Until you select a ThriveBox, the Thank you message will be displayed instead.', Thrive_Comments_Constants::T ); ?>
+			</div>
+			<span class="tcm-thrivebox"><a href="https://thrivethemes.com/tkb_item/how-to-create-and-use-a-thrivebox/" target="_blank"><?php echo __( 'How to add a new ThriveBox', Thrive_Comments_Constants::T ); ?></a></span>
+		</div>
+		<# } else { #>
+		<div class="tcm-thrivebox-only">
+			<span class="tcm-thrivebox"><?php echo __( 'You have not created any ThriveBoxes yet. ', Thrive_Comments_Constants::T ); ?><a href="admin.php?page=thrive_leads_dashboard" target="_blank"><?php echo __( 'Click here to create one in Thrive Leads', Thrive_Comments_Constants::T ); ?></a></span>
+		</div>
+		<# } #>
+	</div>
+</div>
+</div>
+
+

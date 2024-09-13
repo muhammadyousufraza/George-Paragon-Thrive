@@ -1,0 +1,2097 @@
+# Copyright (C) 2024 Thrive Ultimatum
+# This file is distributed under the same license as the Thrive Ultimatum package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Thrive Ultimatum\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-20 17:19+0000\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../admin/functions.php:26, ../admin/functions.php:27, ../inc/classes/class-tu-campaign-widget.php:12
+msgid "Thrive Ultimatum"
+msgstr ""
+
+#: ../admin/i18n.php:4, ../inc/classes/class-tu-product.php:31
+msgid "Ultimatum Dashboard"
+msgstr ""
+
+#: ../admin/i18n.php:5
+msgid "Name is required"
+msgstr ""
+
+#: ../admin/i18n.php:6
+msgid "Invalid Campaign"
+msgstr ""
+
+#: ../admin/i18n.php:7
+msgid "Invalid post type"
+msgstr ""
+
+#: ../admin/i18n.php:8
+msgid "Display Settings Template Loaded"
+msgstr ""
+
+#: ../admin/i18n.php:9
+msgid "Display Settings Template Saved"
+msgstr ""
+
+#: ../admin/i18n.php:10
+msgid "An unexpected error occurred. Please try again and, if this still happens, try reloading the page."
+msgstr ""
+
+#: ../admin/i18n.php:11
+msgid "Please select a name for your template !"
+msgstr ""
+
+#: ../admin/i18n.php:12, ../admin/views/template/modals/new-campaign.phtml:35, ../admin/views/template/modals/new-conversion-event.phtml:80
+msgid "Campaign name"
+msgstr ""
+
+#: ../admin/i18n.php:13
+msgid "Please choose a template"
+msgstr ""
+
+#: ../admin/i18n.php:14
+msgid "Please choose a design type"
+msgstr ""
+
+#: ../admin/i18n.php:15
+msgid "Start date is required"
+msgstr ""
+
+#: ../admin/i18n.php:16
+msgid "Start hour is required"
+msgstr ""
+
+#: ../admin/i18n.php:17
+msgid "End date is required"
+msgstr ""
+
+#: ../admin/i18n.php:18
+msgid "End hour is required"
+msgstr ""
+
+#: ../admin/i18n.php:19
+msgid "Invalid end hour"
+msgstr ""
+
+#: ../admin/i18n.php:20
+msgid "Start Date and Time need to be filled"
+msgstr ""
+
+#: ../admin/i18n.php:21
+msgid "Start date has to be in the future"
+msgstr ""
+
+#: ../admin/i18n.php:22
+msgid "End date has to be in the future"
+msgstr ""
+
+#: ../admin/i18n.php:23
+msgid "Start hour has to be in the future"
+msgstr ""
+
+#: ../admin/i18n.php:24
+msgid "End hour has to be in the future"
+msgstr ""
+
+#: ../admin/i18n.php:25, ../admin/i18n.php:26
+msgid "End date must be after start date"
+msgstr ""
+
+#: ../admin/i18n.php:27
+msgid "End hour must be after start hour"
+msgstr ""
+
+#: ../admin/i18n.php:28
+msgid "Occurrences required"
+msgstr ""
+
+#: ../admin/i18n.php:29
+msgid "Invalid occurrences"
+msgstr ""
+
+#: ../admin/i18n.php:30
+msgid "End Time cannot be before or the same as the Start Time"
+msgstr ""
+
+#: ../admin/i18n.php:31
+msgid "Duration must not be grater than %s"
+msgstr ""
+
+#: ../admin/i18n.php:32
+msgid "Please check at least one day for the campaign start"
+msgstr ""
+
+#: ../admin/i18n.php:33
+msgid "Please choose an evergreen timeframe"
+msgstr ""
+
+#: ../admin/i18n.php:34
+msgid "Evergreen timeframe must be grater than 0"
+msgstr ""
+
+#: ../admin/i18n.php:35
+msgid "Please only input numbers in the days field"
+msgstr ""
+
+#: ../admin/i18n.php:36
+msgid "Please only input numbers in the campaign end field"
+msgstr ""
+
+#: ../admin/i18n.php:37
+msgid "Expiration has to be bigger than duration days"
+msgstr ""
+
+#: ../admin/i18n.php:38
+msgid "Trigger is required"
+msgstr ""
+
+#: ../admin/i18n.php:39
+msgid "Please check at least one Leadgroup as a trigger"
+msgstr ""
+
+#: ../admin/i18n.php:40
+msgid "Please choose a post as a trigger"
+msgstr ""
+
+#: ../admin/i18n.php:41
+msgid "Runs every %s on %s"
+msgstr ""
+
+#: ../admin/i18n.php:42
+msgid "Runs every %s"
+msgstr ""
+
+#: ../admin/i18n.php:43
+msgid "Starts on %s and runs for %s"
+msgstr ""
+
+#: ../admin/i18n.php:44
+msgid "Starts on %s and runs for %s %s"
+msgstr ""
+
+#: ../admin/i18n.php:45
+msgid "Starts when incoming webhook is received from %s"
+msgstr ""
+
+#: ../admin/i18n.php:46
+msgid "Starts when a tag is applied in %s"
+msgstr ""
+
+#: ../admin/i18n.php:47
+msgid "Starts on %s and runs for %s and %s"
+msgstr ""
+
+#: ../admin/i18n.php:48
+msgid "more"
+msgstr ""
+
+#: ../admin/i18n.php:49
+msgid "Showing on"
+msgstr ""
+
+#: ../admin/i18n.php:50
+msgid "Hidden on"
+msgstr ""
+
+#: ../admin/i18n.php:51, ../admin/views/template/campaign/edit.phtml:36, ../admin/views/template/campaign/edit.phtml:80
+msgid "Not set"
+msgstr ""
+
+#: ../admin/i18n.php:52
+msgid "Action is required"
+msgstr ""
+
+#: ../admin/i18n.php:53
+msgid "A design is required"
+msgstr ""
+
+#: ../admin/i18n.php:54
+msgid "A design state is required"
+msgstr ""
+
+#: ../admin/i18n.php:55
+msgid "Invalid Action"
+msgstr ""
+
+#: ../admin/i18n.php:56
+msgid "Please select a campaign"
+msgstr ""
+
+#: ../admin/i18n.php:57
+msgid "No action set"
+msgstr ""
+
+#: ../admin/i18n.php:58
+msgid "You must display at least a design"
+msgstr ""
+
+#: ../admin/i18n.php:59
+msgid "Event is required"
+msgstr ""
+
+#: ../admin/i18n.php:60
+msgid "No trigger action was chosen"
+msgstr ""
+
+#: ../admin/i18n.php:61
+msgid "No campaign to move to was selected"
+msgstr ""
+
+#: ../admin/i18n.php:62
+msgid "Invalid duration. Only numbers allowed"
+msgstr ""
+
+#: ../admin/i18n.php:63
+msgid "Day"
+msgstr ""
+
+#: ../admin/i18n.php:64
+msgid "%s day"
+msgstr ""
+
+#: ../admin/i18n.php:65
+msgid "%s days"
+msgstr ""
+
+#: ../admin/i18n.php:66
+msgid "%s hour"
+msgstr ""
+
+#: ../admin/i18n.php:67
+msgid "%s hours"
+msgstr ""
+
+#: ../admin/i18n.php:68, ../admin/views/template/modals/edit-event.phtml:15, ../admin/views/template/campaign/type/evergreen-state.phtml:27
+msgid "Days"
+msgstr ""
+
+#: ../admin/i18n.php:69
+msgid "Hour"
+msgstr ""
+
+#: ../admin/i18n.php:70, ../admin/views/template/modals/edit-event.phtml:16, ../admin/views/template/campaign/type/evergreen-state.phtml:33
+msgid "Hours"
+msgstr ""
+
+#: ../admin/i18n.php:71, ../inc/data.php:39
+msgid "Copy of "
+msgstr ""
+
+#: ../admin/i18n.php:73
+msgid "st"
+msgstr ""
+
+#: ../admin/i18n.php:74
+msgid "nd"
+msgstr ""
+
+#: ../admin/i18n.php:75
+msgid "rd"
+msgstr ""
+
+#: ../admin/i18n.php:77
+msgid "th"
+msgstr ""
+
+#: ../admin/i18n.php:78
+msgid "priority"
+msgstr ""
+
+#: ../admin/i18n.php:79
+msgid "This value must be lower than the campaign's duration"
+msgstr ""
+
+#: ../admin/i18n.php:80
+msgid "# of impressions"
+msgstr ""
+
+#: ../admin/i18n.php:81, ../admin/views/template/campaign/archived-item.phtml:29, ../admin/views/template/campaign/item.phtml:69
+msgid "Impressions"
+msgstr ""
+
+#: ../admin/i18n.php:82, ../admin/views/template/campaign/archived-item.phtml:34, ../admin/views/template/campaign/item.phtml:74
+msgid "Conversion rate"
+msgstr ""
+
+#: ../admin/i18n.php:83
+msgid "# of conversions"
+msgstr ""
+
+#: ../admin/i18n.php:84
+msgid "Conversions"
+msgstr ""
+
+#: ../admin/i18n.php:85
+msgid "A similar action already exists"
+msgstr ""
+
+#: ../admin/i18n.php:86, ../inc/data.php:1187, ../inc/data.php:1324, ../inc/data.php:1325
+msgid "main state"
+msgstr ""
+
+#: ../admin/i18n.php:87
+msgid "Value cannot be higher than 23"
+msgstr ""
+
+#: ../admin/i18n.php:88
+msgid "You have to create at least a design before adding / editing timeline events"
+msgstr ""
+
+#: ../admin/i18n.php:89
+msgid "Select a template"
+msgstr ""
+
+#: ../admin/i18n.php:90
+msgid "Display settings saved"
+msgstr ""
+
+#: ../admin/i18n.php:91
+msgid "Template \"%s\" loaded successfully"
+msgstr ""
+
+#: ../admin/i18n.php:92
+msgid "Duration must be realistic"
+msgstr ""
+
+#: ../admin/i18n.php:93
+msgid "Total duration can't be 0"
+msgstr ""
+
+#: ../admin/i18n.php:94
+msgid "Value must be 0-23"
+msgstr ""
+
+#: ../admin/i18n.php:95
+msgid "Value must be 0-59"
+msgstr ""
+
+#: ../admin/i18n.php:96
+msgid "This must be a positive number bigger than the duration"
+msgstr ""
+
+#: ../admin/i18n.php:97
+msgid "Recurrence is required"
+msgstr ""
+
+#: ../admin/i18n.php:98
+msgid "Campaign started"
+msgstr ""
+
+#: ../admin/i18n.php:99
+msgid "Campaign paused"
+msgstr ""
+
+#: ../admin/i18n.php:100
+msgid "A conversion target (Lead Group or Shortcode) is required"
+msgstr ""
+
+#: ../admin/i18n.php:101
+msgid "A conversion target is required. Search for a post / page"
+msgstr ""
+
+#: ../admin/i18n.php:102
+msgid "Required field. Start typing to search for a post / page"
+msgstr ""
+
+#: ../admin/i18n.php:103
+msgid "Invalid hour"
+msgstr ""
+
+#: ../admin/i18n.php:104, ../admin/views/template/modals/new-campaign.phtml:5
+msgid "Choose a template"
+msgstr ""
+
+#: ../admin/i18n.php:105
+msgid "Choose a campaign type"
+msgstr ""
+
+#: ../admin/i18n.php:106
+msgid "Thrive Dashboard"
+msgstr ""
+
+#: ../admin/i18n.php:107
+msgid "A promotion URL needs to be set before generating the email link"
+msgstr ""
+
+#: ../admin/i18n.php:108
+msgid "Pre-access page URL is required"
+msgstr ""
+
+#: ../admin/i18n.php:109
+msgid "Promotion URL is required"
+msgstr ""
+
+#: ../admin/i18n.php:110
+msgid "Expired page URL is required"
+msgstr ""
+
+#: ../admin/i18n.php:111
+msgid "Please select a timezone"
+msgstr ""
+
+#: ../admin/i18n.php:112
+msgid "Loading..."
+msgstr ""
+
+#: ../admin/i18n.php:113
+msgid "%s page and %s page cannot be the same page"
+msgstr ""
+
+#: ../admin/i18n.php:114
+msgid "pre-access"
+msgstr ""
+
+#: ../admin/i18n.php:115
+msgid "promotion"
+msgstr ""
+
+#: ../admin/i18n.php:116
+msgid "expired"
+msgstr ""
+
+#: ../admin/i18n.php:117
+msgid "This will start the campaign for visitors that access the Promotion Page setup from Lockdown settings (using the generated URL)"
+msgstr ""
+
+#: ../admin/i18n.php:118
+msgid "This will start the campaign for visitors that access the page / post setup from below"
+msgstr ""
+
+#: ../admin/i18n.php:119
+msgid "This will start the campaign for first-time visitors of your site"
+msgstr ""
+
+#: ../admin/i18n.php:120
+msgid "This will start the campaign for visitors that sign up to one of the following lead generation forms"
+msgstr ""
+
+#: ../admin/i18n.php:121
+msgid "This will start the campaign when an incoming webhook is received from a third party platform (an autoresponder for example)"
+msgstr ""
+
+#: ../admin/i18n.php:122
+msgid "It seems you deactivated Thrive Leads - As a result, this campaign has been paused, and you will have to choose a new trigger"
+msgstr ""
+
+#: ../admin/i18n.php:123
+msgid "Display Countdown Design %s"
+msgstr ""
+
+#: ../admin/i18n.php:124, ../admin/views/template/campaign/archived.phtml:1
+msgid "Archived Campaigns"
+msgstr ""
+
+#: ../admin/i18n.php:125
+msgid "Campaign %s has been archived"
+msgstr ""
+
+#: ../admin/i18n.php:126
+msgid "Campaign %s has been restored"
+msgstr ""
+
+#: ../admin/i18n.php:127
+msgid "Archive this campaign"
+msgstr ""
+
+#: ../admin/i18n.php:128
+msgid "Restore this campaign"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:79
+msgid "You do not have this capability anymore"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:83
+msgid "Invalid request"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:92
+msgid "Method %s not implemented"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:149
+msgid "Error while saving: %s"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:197, ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:251, ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:280, ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:396
+msgid "Could not save"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:204, ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:403
+msgid "Could not delete"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:218, ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:294, ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:415
+msgid "Item not found"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:287
+msgid "Could not delete design"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:312
+msgid "Missing Campaign"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:363
+msgid "Invalid call"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:364
+msgid "The campaign ID is invalid"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:365
+msgid "You cannot start this campaign until you've setup the campaign type and duration"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:366
+msgid "You cannot start this campaign until you add at least a design"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:367
+msgid "You cannot start this campaign until you have at least one design that has a template selected"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:368
+msgid "You cannot start this campaign before setting up the display options"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:369
+msgid "You cannot start this campaign until you setup a start trigger type"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:370
+msgid "You cannot start this campaign because the end date is in the past"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:371
+msgid "You cannot start this campaign before setting up the lockdown options"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:372
+msgid "You cannot start this campaign with an invalid or empty trigger"
+msgstr ""
+
+#: ../admin/classes/class-tve-ult-admin-ajaxcontroller.php:373
+msgid "You cannot start this campaign with a Leads Conversion as a trigger when Thrive Leads is deactivated"
+msgstr ""
+
+#: ../admin/views/license_inactive.php:12
+msgid "You need to"
+msgstr ""
+
+#: ../admin/views/license_inactive.php:14
+msgid "activate your license"
+msgstr ""
+
+#: ../admin/views/license_inactive.php:15
+msgid "before you can use the Thrive Ultimatum plugin!"
+msgstr ""
+
+#: ../admin/views/tcb_version_incompatible.php:12
+msgid ""
+"It looks like you have Thrive Architect installed, but it's not compatible with this version of Thrive Ultimatum. Thrive Ultimatum uses Thrive Architect to edit various pieces of content.\n"
+"To be able to use this feature, please make sure you have the latest versions for both plugins by clicking on the following link and checking for updates:"
+msgstr ""
+
+#: ../admin/views/tcb_version_incompatible.php:18
+msgid "Manage plugins"
+msgstr ""
+
+#: ../admin/views/ultimatum_menu.php:5, ../admin/views/template/header.phtml:13
+msgid "Settings"
+msgstr ""
+
+#: ../admin/views/ultimatum_menu.php:14, ../admin/views/template/header.phtml:33
+msgid "Clear the cache for impressions and conversions displayed for each campaign in Ultimatum Dashboard"
+msgstr ""
+
+#: ../admin/views/ultimatum_menu.php:16, ../admin/views/template/header.phtml:35
+msgid "Purge Cache"
+msgstr ""
+
+#: ../admin/views/ultimatum_menu.php:19, ../admin/views/template/header.phtml:28
+msgid "Date & Time Settings"
+msgstr ""
+
+#: ../admin/views/template/dashboard.phtml:2
+msgid "Multi Page Campaigns"
+msgstr ""
+
+#: ../admin/views/template/dashboard.phtml:4, ../admin/views/template/campaign/conversion_events.phtml:7
+msgid "Add New"
+msgstr ""
+
+#: ../admin/views/template/dashboard.phtml:11
+msgid "You don't have any campaigns set up yet. Click %s below to start setting up your first one or %s."
+msgstr ""
+
+#: ../admin/views/template/dashboard.phtml:12, ../admin/views/template/dashboard.phtml:25
+msgid "New Campaign"
+msgstr ""
+
+#: ../admin/views/template/dashboard.phtml:13
+msgid "watch a Quick Start Tutorial"
+msgstr ""
+
+#: ../admin/views/template/dashboard.phtml:33
+msgid "Archived campaigns"
+msgstr ""
+
+#: ../admin/views/template/header.phtml:5
+msgid "Thrive Ultimatum Home"
+msgstr ""
+
+#: ../admin/views/template/textedit.phtml:2
+msgid "%s is required"
+msgstr ""
+
+#: ../admin/views/action/options/campaign_move.phtml:7, ../admin/views/action/options/campaign_move.phtml:13, ../automator/action-fields/class-start-campaign-id-field.php:32
+msgid "Choose campaign"
+msgstr ""
+
+#: ../admin/views/action/options/default.phtml:1
+msgid "No options for this action"
+msgstr ""
+
+#: ../admin/views/action/options/design_show.phtml:2
+msgid "All designs are already used"
+msgstr ""
+
+#: ../admin/views/action/options/design_show.phtml:7
+msgid "No design available"
+msgstr ""
+
+#: ../admin/views/action/options/design_show.phtml:17, ../admin/views/action/options/design_switch_state.phtml:14, ../admin/views/action/options/design_switch_state.phtml:20
+msgid "Choose design to show"
+msgstr ""
+
+#: ../admin/views/action/options/design_show.phtml:33
+msgid "Choose design state"
+msgstr ""
+
+#: ../admin/views/action/options/design_switch_state.phtml:4
+msgid "You cannot choose this action because you have not set any design yet"
+msgstr ""
+
+#: ../admin/views/action/options/design_switch_state.phtml:26, ../admin/views/action/options/design_switch_state.phtml:28
+msgid "Choose design sate"
+msgstr ""
+
+#: ../admin/views/template/campaign/archived-item.phtml:17
+msgid "Archived on"
+msgstr ""
+
+#: ../admin/views/template/campaign/archived-item.phtml:25
+msgid "Last registered results"
+msgstr ""
+
+#: ../admin/views/template/campaign/archived-item.phtml:42
+msgid "Reactivate Campaign"
+msgstr ""
+
+#: ../admin/views/template/campaign/archived.phtml:6
+msgid "No archived campaigns."
+msgstr ""
+
+#: ../admin/views/template/campaign/archived.phtml:19, ../admin/views/template/campaign/edit.phtml:130
+msgid "Back to Dashboard"
+msgstr ""
+
+#: ../admin/views/template/campaign/conversion_events.phtml:3
+msgid "Conversion Events"
+msgstr ""
+
+#: ../admin/views/template/campaign/conversion_events.phtml:7
+msgid "Add new conversion event"
+msgstr ""
+
+#: ../admin/views/template/campaign/delete-state.phtml:4
+msgid "Are you sure you want to delete this campaign?"
+msgstr ""
+
+#: ../admin/views/template/campaign/delete-state.phtml:7
+msgid "When deleting it, any relation between another campaign and this one will be lost"
+msgstr ""
+
+#: ../admin/views/template/campaign/delete-state.phtml:14, ../admin/views/template/design/delete-state.phtml:14
+msgid "Yes, delete"
+msgstr ""
+
+#: ../admin/views/template/campaign/delete-state.phtml:19, ../admin/views/template/design/delete-state.phtml:19, ../admin/views/template/campaign/lockdown/delete-state.phtml:14
+msgid "No, keep it"
+msgstr ""
+
+#: ../admin/views/template/campaign/edit.phtml:5
+msgid "Campaign name:"
+msgstr ""
+
+#: ../admin/views/template/campaign/edit.phtml:17
+msgid "Campaign status:"
+msgstr ""
+
+#: ../admin/views/template/campaign/edit.phtml:35, ../admin/views/template/campaign/lockdown/normal-state.phtml:17
+msgid "Campaign Type"
+msgstr ""
+
+#: ../admin/views/template/campaign/edit.phtml:48, ../admin/views/template/campaign/edit.phtml:93, ../admin/views/template/campaign/lockdown/normal-state.phtml:38
+msgid "Edit"
+msgstr ""
+
+#: ../admin/views/template/campaign/edit.phtml:51
+msgid "Next step: select a campaign type"
+msgstr ""
+
+#: ../admin/views/template/campaign/edit.phtml:57
+msgid "Next step: select a campaign trigger for open campaigns"
+msgstr ""
+
+#: ../admin/views/template/campaign/edit.phtml:62
+msgid "Next step: Thrive Leads was deactivated, change trigger"
+msgstr ""
+
+#: ../admin/views/template/campaign/edit.phtml:78, ../admin/views/template/modals/edit-event.phtml:39
+msgid "Display"
+msgstr ""
+
+#: ../admin/views/template/campaign/edit.phtml:96
+msgid "Next step: select a display mode"
+msgstr ""
+
+#: ../admin/views/template/campaign/edit.phtml:107
+msgid "Designs"
+msgstr ""
+
+#: ../admin/views/template/campaign/edit.phtml:113
+msgid "New Design"
+msgstr ""
+
+#: ../admin/views/template/campaign/edit.phtml:116
+msgid "Next step: create a countdown timer design"
+msgstr ""
+
+#: ../admin/views/template/campaign/item.phtml:11
+msgid "Display settings"
+msgstr ""
+
+#: ../admin/views/template/campaign/item.phtml:15
+msgid "Duplicate campaign"
+msgstr ""
+
+#: ../admin/views/template/campaign/item.phtml:20
+msgid "Delete campaign"
+msgstr ""
+
+#: ../admin/views/template/campaign/item.phtml:24
+msgid "Drag & Drop the card in order to change the campaign priority."
+msgstr ""
+
+#: ../admin/views/template/campaign/item.phtml:34
+msgid "Pause Campaign"
+msgstr ""
+
+#: ../admin/views/template/campaign/item.phtml:36
+msgid "Start Campaign"
+msgstr ""
+
+#: ../admin/views/template/campaign/item.phtml:62
+msgid "After the first few impressions / conversions are registered, the stats will be shown here"
+msgstr ""
+
+#: ../admin/views/template/campaign/item.phtml:82
+msgid "Edit Campaign"
+msgstr ""
+
+#: ../admin/views/template/campaign/timeline.phtml:5
+msgid "Timeline"
+msgstr ""
+
+#: ../admin/views/template/campaign/timeline.phtml:9
+msgid "Next step: setup timeline events"
+msgstr ""
+
+#: ../admin/views/template/conversion/event.phtml:5
+msgid "Conversion:"
+msgstr ""
+
+#: ../admin/views/template/conversion/event.phtml:20
+msgid "Ends current Campaign"
+msgstr ""
+
+#: ../admin/views/template/conversion/event.phtml:25
+msgid "Moves to campaign "
+msgstr ""
+
+#: ../admin/views/template/conversion/event.phtml:29
+msgid "Tip: Complete the setup for this campaign, to enable this conversion event."
+msgstr ""
+
+#: ../admin/views/template/conversion/event.phtml:31
+msgid "Tip: You need to start the linked campaign"
+msgstr ""
+
+#: ../admin/views/template/conversion/move-to-campaign.phtml:1
+msgid "Select a campaign to move to or create a new evergreen campaign"
+msgstr ""
+
+#: ../admin/views/template/conversion/move-to-campaign.phtml:4
+msgid "There are no Evergreen Campaigns to move to"
+msgstr ""
+
+#: ../admin/views/template/conversion/move-to-campaign.phtml:6
+msgid "+ Add New"
+msgstr ""
+
+#: ../admin/views/template/conversion/subscription.phtml:2
+msgid "No Lead Groups defined"
+msgstr ""
+
+#: ../admin/views/template/conversion/subscription.phtml:4
+msgid "User subscribes to Lead Groups"
+msgstr ""
+
+#: ../admin/views/template/conversion/subscription.phtml:10
+msgid "No ThriveBoxes defined"
+msgstr ""
+
+#: ../admin/views/template/conversion/subscription.phtml:12
+msgid "User subscribes to ThriveBoxes"
+msgstr ""
+
+#: ../admin/views/template/conversion/subscription.phtml:17
+msgid "No Shortcodes defined"
+msgstr ""
+
+#: ../admin/views/template/conversion/subscription.phtml:19
+msgid "User subscribes to Shortcodes"
+msgstr ""
+
+#: ../admin/views/template/conversion/visit-page.phtml:1, ../inc/classes/class-tu-campaign-event.php:37
+msgid "Visit to conversion page"
+msgstr ""
+
+#: ../admin/views/template/conversion/visit-page.phtml:5, ../admin/views/template/campaign/type/evergreen-specific.phtml:4, ../admin/views/template/campaign/type/evergreen-specific.phtml:23
+msgid "Search for content on site"
+msgstr ""
+
+#: ../admin/views/template/design/delete-state.phtml:4
+msgid "Are you sure you want to delete this design?"
+msgstr ""
+
+#: ../admin/views/template/design/delete-state.phtml:7
+msgid "By deleting a design you will also delete the actions related to it on the timeline."
+msgstr ""
+
+#: ../admin/views/template/design/item.phtml:22
+msgid "Choose a template for this design"
+msgstr ""
+
+#: ../admin/views/template/event/design-row.phtml:18
+msgid "Main State"
+msgstr ""
+
+#: ../admin/views/template/event/end.phtml:3
+msgid "Add new event to timeline"
+msgstr ""
+
+#: ../admin/views/template/event/end.phtml:12
+msgid "Campaign end"
+msgstr ""
+
+#: ../admin/views/template/modals/copy-campaign.phtml:2
+msgid "Copy campaign - "
+msgstr ""
+
+#: ../admin/views/template/modals/copy-campaign.phtml:13, ../admin/views/template/modals/edit-campaign.phtml:29, ../admin/views/template/modals/edit-date-settings.phtml:115, ../admin/views/template/modals/edit-event.phtml:56, ../admin/views/template/modals/edit-lockdown.phtml:102, ../admin/views/template/modals/new-campaign.phtml:14, ../admin/views/template/modals/new-conversion-event.phtml:25, ../admin/views/template/modals/new-design.phtml:35, ../admin/views/template/modals/top-ribbon.phtml:17, ../admin/views/template/campaign/settings/main.phtml:72
+msgid "Cancel"
+msgstr ""
+
+#: ../admin/views/template/modals/copy-campaign.phtml:19, ../admin/views/template/modals/get-shortcode.phtml:13, ../admin/views/template/campaign/lockdown/link-generation.phtml:6, ../admin/views/template/campaign/type/api-partials/general.phtml:10
+msgid "Copy"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-campaign.phtml:3
+msgid "Campaign settings"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-campaign.phtml:6
+msgid "Events on timeline may be affected by the campaign's duration."
+msgstr ""
+
+#: ../admin/views/template/modals/edit-campaign.phtml:35, ../admin/views/template/modals/edit-lockdown.phtml:108, ../admin/views/template/modals/new-conversion-event.phtml:67, ../admin/views/template/modals/top-ribbon.phtml:23, ../tcb-bridge/editor-lightbox/add-edit-state.php:22
+msgid "Save"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:5
+msgid "Set General Date & Time"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:9
+msgid "Date Format"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:10
+msgid "Current date format:"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:20
+msgid "Change default date format:"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:26
+msgid "Select Date Format"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:33
+msgid "Set default format date"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:41
+msgid "Time Format"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:47
+msgid "Current time format:"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:50
+msgid "hours"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:57
+msgid "Change default time format:"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:63
+msgid "Select Time Format"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:66
+msgid "24 hours"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:69
+msgid "12 hours"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:72
+msgid "Set default time format"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:83
+msgid "Time Zone Format"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:85
+msgid "Current time zone:"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:87, ../admin/views/template/campaign/type/absolute-state.phtml:33, ../admin/views/template/campaign/type/rolling-state.phtml:89
+msgid "Not Set"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:94
+msgid "Change default timezone:"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:103
+msgid "Set default time zone"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-date-settings.phtml:121
+msgid "Save Changes"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-event.phtml:2
+msgid "Timeline Event Settings"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-event.phtml:5, ../admin/views/template/modals/new-conversion-event.phtml:15
+msgid "Trigger"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-event.phtml:7
+msgid "This event starts"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-event.phtml:11
+msgid "Required field"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-event.phtml:19
+msgid "before the countdown reaches zero."
+msgstr ""
+
+#: ../admin/views/template/modals/edit-event.phtml:24
+msgid "Actions"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-event.phtml:25
+msgid "Choose the designs and states to be displayed once the countdown reaches this event"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-event.phtml:34
+msgid "Design to show"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-event.phtml:44
+msgid "Design State"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-event.phtml:62
+msgid "Save Timeline Event"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-lockdown.phtml:3
+msgid "Activate Lockdown Campaign"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-lockdown.phtml:15
+msgid "Lockdown campaigns can't be cheated because promotions are tied to an email address.  Unknown visitors aren't able to access the promotion. They are especially useful when you set up a sales page, but you don't want anyone to be able to access it before your campaign starts or you want to set up an offer that's available to subscribers exclusively."
+msgstr ""
+
+#: ../admin/views/template/modals/edit-lockdown.phtml:17
+msgid "A lockdown campaign will only allow visitors to access the promotion page on the days when the campaign is active. Before the campaign starts they will be redirected to a pre-access page and once it's over, if they try to visit the promotion page, they will be redirected to an expired page."
+msgstr ""
+
+#: ../admin/views/template/modals/edit-lockdown.phtml:19
+msgid "Learn more about the difference between open and locked campaigns"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-lockdown.phtml:25
+msgid "Lockdown promotion pages need to be excluded from your caching plugin in order to work correctly."
+msgstr ""
+
+#: ../admin/views/template/modals/edit-lockdown.phtml:26
+msgid "Learn how to do this"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-lockdown.phtml:32
+msgid "Pre-access page"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-lockdown.phtml:33
+msgid "This is what visitors see if the campaign has not yet started for them"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-lockdown.phtml:37, ../admin/views/template/modals/edit-lockdown.phtml:46
+msgid "Enter URL or search term"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-lockdown.phtml:41
+msgid "Expired page"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-lockdown.phtml:42
+msgid "This is the page that the visitors see once their countdown expires"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-lockdown.phtml:51
+msgid "Promotion pages"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-lockdown.phtml:52
+msgid "These are the pages that are only available during the campaign"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-lockdown.phtml:59, ../admin/views/template/modals/edit-lockdown.phtml:76
+msgid "Select Email Service"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-lockdown.phtml:83
+msgid "URL or search item"
+msgstr ""
+
+#: ../admin/views/template/modals/edit-lockdown.phtml:92
+msgid "Add new promotion page"
+msgstr ""
+
+#: ../admin/views/template/modals/get-shortcode.phtml:2
+msgid "Countdown Design Shortcode"
+msgstr ""
+
+#: ../admin/views/template/modals/get-shortcode.phtml:3
+msgid "Below you have the shortcode for the design created. Copy the code and insert it into any page or post."
+msgstr ""
+
+#: ../admin/views/template/modals/get-shortcode.phtml:23
+msgid "Done"
+msgstr ""
+
+#: ../admin/views/template/modals/new-campaign.phtml:3
+msgid "Create campaign from scratch or customize a template"
+msgstr ""
+
+#: ../admin/views/template/modals/new-campaign.phtml:20, ../admin/views/template/modals/new-campaign.phtml:45, ../admin/views/template/modals/new-conversion-event.phtml:29, ../admin/views/template/modals/new-design.phtml:39
+msgid "Continue"
+msgstr ""
+
+#: ../admin/views/template/modals/new-campaign.phtml:28
+msgid "Name your campaign"
+msgstr ""
+
+#: ../admin/views/template/modals/new-campaign.phtml:30
+msgid "Enter a name for your campaign. This is for internal use only - your website visitors will not see this name."
+msgstr ""
+
+#: ../admin/views/template/modals/new-campaign.phtml:35
+msgid "Campaign name is required"
+msgstr ""
+
+#: ../admin/views/template/modals/new-campaign.phtml:41, ../admin/views/template/modals/new-conversion-event.phtml:61, ../admin/views/template/modals/new-conversion-event.phtml:125
+msgid "Back"
+msgstr ""
+
+#: ../admin/views/template/modals/new-conversion-event.phtml:3, ../admin/views/template/modals/new-conversion-event.phtml:36
+msgid "Conversion Events Settings"
+msgstr ""
+
+#: ../admin/views/template/modals/new-conversion-event.phtml:4
+msgid "Step 1: Set your Trigger"
+msgstr ""
+
+#: ../admin/views/template/modals/new-conversion-event.phtml:10
+msgid "Choose Trigger"
+msgstr ""
+
+#: ../admin/views/template/modals/new-conversion-event.phtml:40
+msgid "Step 2: Set the action for the trigger, to be performed"
+msgstr ""
+
+#: ../admin/views/template/modals/new-conversion-event.phtml:46, ../admin/views/template/modals/new-conversion-event.phtml:51
+msgid "Choose action"
+msgstr ""
+
+#: ../admin/views/template/modals/new-conversion-event.phtml:75
+msgid "Add new Evergreen Campaign"
+msgstr ""
+
+#: ../admin/views/template/modals/new-conversion-event.phtml:77
+msgid "Please fill in the fields for the new campaign"
+msgstr ""
+
+#: ../admin/views/template/modals/new-conversion-event.phtml:82
+msgid "Tell us how long you would like the evergreen campaign to last for, for each user"
+msgstr ""
+
+#: ../admin/views/template/modals/new-conversion-event.phtml:87
+msgid "Duration"
+msgstr ""
+
+#: ../admin/views/template/modals/new-conversion-event.phtml:96, ../admin/views/template/campaign/type/evergreen-state.phtml:97
+msgid "Repeat this campaign?"
+msgstr ""
+
+#: ../admin/views/template/modals/new-conversion-event.phtml:101, ../admin/views/template/campaign/type/evergreen-specific.phtml:13, ../admin/views/template/campaign/type/evergreen-state.phtml:87, ../admin/views/template/campaign/type/evergreen-state.phtml:102
+msgid "NO"
+msgstr ""
+
+#: ../admin/views/template/modals/new-conversion-event.phtml:104, ../admin/views/template/campaign/type/evergreen-specific.phtml:16, ../admin/views/template/campaign/type/evergreen-state.phtml:90, ../admin/views/template/campaign/type/evergreen-state.phtml:105
+msgid "YES"
+msgstr ""
+
+#: ../admin/views/template/modals/new-conversion-event.phtml:111, ../admin/views/template/campaign/type/evergreen-state.phtml:112
+msgid "Show this campaign again after"
+msgstr ""
+
+#: ../admin/views/template/modals/new-conversion-event.phtml:117, ../admin/views/template/campaign/type/evergreen-state.phtml:119
+msgid "days."
+msgstr ""
+
+#: ../admin/views/template/modals/new-conversion-event.phtml:131
+msgid "Add Campaign"
+msgstr ""
+
+#: ../admin/views/template/modals/new-design.phtml:2
+msgid "Choose a Design Type"
+msgstr ""
+
+#: ../admin/views/template/modals/new-design.phtml:19, ../admin/views/template/modals/top-ribbon.phtml:5
+msgid "Choose how the top ribbon is displayed"
+msgstr ""
+
+#: ../admin/views/template/modals/new-design.phtml:21, ../admin/views/template/modals/top-ribbon.phtml:7
+msgid "Over content"
+msgstr ""
+
+#: ../admin/views/template/modals/new-design.phtml:22, ../admin/views/template/modals/top-ribbon.phtml:8
+msgid "Push content"
+msgstr ""
+
+#: ../admin/views/template/modals/top-ribbon.phtml:2
+msgid "Top Ribbon settings"
+msgstr ""
+
+#: ../admin/views/template/campaign/lockdown/delete-state.phtml:3
+msgid "Are you sure you want to disable Lockdown?"
+msgstr ""
+
+#: ../admin/views/template/campaign/lockdown/delete-state.phtml:9
+msgid "Yes, disable it"
+msgstr ""
+
+#: ../admin/views/template/campaign/lockdown/normal-state.phtml:13
+msgid "Open Campaign"
+msgstr ""
+
+#: ../admin/views/template/campaign/lockdown/normal-state.phtml:13
+msgid "Lockdown Campaign"
+msgstr ""
+
+#: ../admin/views/template/campaign/lockdown/normal-state.phtml:18
+msgid "Lockdown feature will become available after you setup the %s"
+msgstr ""
+
+#: ../admin/views/template/campaign/lockdown/normal-state.phtml:20
+msgid "Select the lockdown options for the campaign"
+msgstr ""
+
+#: ../admin/views/template/campaign/lockdown/normal-state.phtml:20
+msgid "Activated for "
+msgstr ""
+
+#: ../admin/views/template/campaign/lockdown/normal-state.phtml:37
+msgid "The lockdown feature requires the campaign trigger to be either 'Thrive Leads conversion', 'Visit to Promotion Page' or '3rd party event'"
+msgstr ""
+
+#: ../admin/views/template/campaign/lockdown/normal-state.phtml:38
+msgid "Activate Lockdown"
+msgstr ""
+
+#: ../admin/views/template/campaign/lockdown/normal-state.phtml:42
+msgid "Next step: select campaign pages"
+msgstr ""
+
+#: ../admin/views/template/campaign/lockdown/normal-state.phtml:49
+msgid "Disable"
+msgstr ""
+
+#: ../admin/views/template/campaign/lockdown/promotion-url.phtml:4
+msgid "Enter search term to select page"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/add_direct_url_form.phtml:5
+msgid "Add new link"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/add_direct_url_form.phtml:9
+msgid "Add Link"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/direct_url.phtml:10
+msgid "Remove Link"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/main.phtml:3
+msgid "%s - display settings"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/main.phtml:9
+msgid "Current selection"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/main.phtml:14
+msgid "Load Saved Options"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/main.phtml:22
+msgid "After saving these settings, the cache data from %s plugin will be automatically cleared (this is required each time you make a change to these settings)"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/main.phtml:23
+msgid "If you have a caching plugin installed (such as %1$sW3 Total Cache%2$s or %1$sWP Super Cache%2$s), please clear the cache after modifying these settings"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/main.phtml:30
+msgid "Display Logic"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/main.phtml:33
+msgid "Use these settings to configure where the campaign should be displayed:"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/main.phtml:37
+msgid "Exclusions"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/main.phtml:42
+msgid "Use these settings to configure where the campaign should be HIDDEN. Attention! This will override the display logic above"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/main.phtml:50
+msgid "Save as Template"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/main.phtml:51
+msgid "You can save the display configuration that you've created if you'd like a template to re-use with other campaigns."
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/main.phtml:59
+msgid "Template name is required"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/main.phtml:59
+msgid "Template name"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/main.phtml:64
+msgid "Save Display Template"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/main.phtml:73
+msgid "Save & close"
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/posts_filter.phtml:4, ../admin/views/template/campaign/settings/tags_filter.phtml:6
+msgid "Search..."
+msgstr ""
+
+#: ../admin/views/template/campaign/settings/selected_filter.phtml:2
+msgid "Taxonomy:"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/absolute-state.phtml:2
+msgid "Fixed Dates Campaign"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/absolute-state.phtml:3
+msgid "Tell us when you would like the new offer to start and end"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/absolute-state.phtml:8
+msgid "Start Date"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/absolute-state.phtml:14
+msgid "Start Hour"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/absolute-state.phtml:20
+msgid "End Date"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/absolute-state.phtml:26
+msgid "End Hour"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/absolute-state.phtml:33, ../admin/views/template/campaign/type/rolling-state.phtml:89
+msgid "Your current timezone settings are: "
+msgstr ""
+
+#: ../admin/views/template/campaign/type/absolute-state.phtml:33, ../admin/views/template/campaign/type/rolling-state.phtml:89
+msgid "Local time is "
+msgstr ""
+
+#: ../admin/views/template/campaign/type/absolute-state.phtml:34, ../admin/views/template/campaign/type/rolling-state.phtml:90
+msgid "see "
+msgstr ""
+
+#: ../admin/views/template/campaign/type/absolute-state.phtml:34, ../admin/views/template/campaign/type/rolling-state.phtml:90
+msgid " Date & Time Settings"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/checkbox.phtml:3
+msgid "<#= item.get('label') #>"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/daily-campaign.phtml:6
+msgid "Duration (hours)"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/daily-campaign.phtml:18
+msgid "Repeat every (days)"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-conversion.phtml:4
+msgid "Which forms on your site should trigger the countdown? "
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-conversion.phtml:5
+msgid "Select any form you’ve built in Thrive Leads (search by lead group, Thrivebox or shortcode) and any quiz builder quiz that contains an optin gate. You can also search for any page built in Thrive Architect on your site. Any Thrive Architect lead generation element submission on the selected page will trigger the lockdown."
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-conversion.phtml:8
+msgid "No trigger defined"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-specific.phtml:8
+msgid "Redirect when expired?"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-specific.phtml:9
+msgid "Activate this toggle to set a cookie on each visitor who lands on the promotion page for the first time. This allows you to redirect the visitors to a different page if they land on the promotion page after the cookie has expired."
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:1
+msgid "What type of evergreen countdown would you like?"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:5
+msgid "Absolute - the countdown duration is exactly the same for every user"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:8
+msgid "Minimum duration - the countdown ends at a specified time of day after the minimum duration is met"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:14
+msgid "Set minimum countdown duration"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:16
+msgid "Learn more about this option"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:20
+msgid "Set countdown duration"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:39
+msgid "Minutes"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:45
+msgid "Seconds"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:52
+msgid "What time should the countdown end after the minimum duration is met?"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:60
+msgid "o'clock. "
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:66
+msgid "Timezone:"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:74
+msgid "Universal time is: "
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:82
+msgid "Activate Lockdown?"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:83
+msgid "Lockdown campaigns are more secure and work by restricting access to email subscribers only"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:98
+msgid "Optionally restart the campaign after the initial promotion period has ended. This allows you to reopen the offer for a limited period as a final attempt to convert anyone who missed the initial promotion window"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:125
+msgid "When should the countdown start"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:131
+msgid "When a lead generation form is submitted"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:135
+msgid "Visit to promotion page"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:137
+msgid "3rd party event"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:140
+msgid "First visit to site"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:142
+msgid "Visit to a specific page"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/evergreen-state.phtml:153
+msgid "This campaign will automatically start when a conversion event of the following campaigns are met"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/monthly-campaign.phtml:5, ../admin/views/template/campaign/type/weekly-campaign.phtml:5, ../admin/views/template/campaign/type/yearly-campaign.phtml:5
+msgid "Duration (days)"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/monthly-campaign.phtml:16
+msgid "Repeat every (months)"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/monthly-campaign.phtml:24, ../admin/views/template/campaign/type/weekly-campaign.phtml:24
+msgid "Repeat On:"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/rolling-state.phtml:1
+msgid "Recurring Campaign"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/rolling-state.phtml:2
+msgid "Tell us when you would like the new offer to start and how many days the campaign should last for"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/rolling-state.phtml:7
+msgid "Start date"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/rolling-state.phtml:13
+msgid "Start hour"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/rolling-state.phtml:20
+msgid "Daily"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/rolling-state.phtml:22
+msgid "Weekly"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/rolling-state.phtml:24
+msgid "Monthly"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/rolling-state.phtml:26
+msgid "Yearly"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/rolling-state.phtml:28
+msgid "Repeats"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/rolling-state.phtml:36
+msgid "Ends:"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/rolling-state.phtml:41
+msgid "Never"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/rolling-state.phtml:55
+msgid "After (occurrences)"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/rolling-state.phtml:71
+msgid "On"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/rolling-state.phtml:79
+msgid "End hour"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/rolling-state.phtml:85
+msgid "Description"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/rolling-state.phtml:86
+msgid "This campaign will repeat every"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/weekly-campaign.phtml:16
+msgid "Repeat every (weeks)"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/yearly-campaign.phtml:16
+msgid "Repeat every (years)"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/api-partials/fluentcrm.phtml:1
+msgid "Campaign is triggered when"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/api-partials/fluentcrm.phtml:4
+msgid "Contact is added to tags"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/api-partials/fluentcrm.phtml:8
+msgid "Which tags should trigger the countdown"
+msgstr ""
+
+#: ../admin/views/template/campaign/type/api-partials/fluentcrm.phtml:14, ../admin/views/template/campaign/type/api-partials/general.phtml:15
+msgid "Click here for help with incoming webhooks"
+msgstr ""
+
+#: ../automator/action-fields/class-start-campaign-id-field.php:18
+msgid "Running campaign"
+msgstr ""
+
+#: ../automator/action-fields/class-start-campaign-id-field.php:25
+msgid "Which lockdown campaign do you want to trigger?"
+msgstr ""
+
+#: ../automator/actions/class-start-campaign-action.php:35
+msgid "Start an Ultimatum Campaign"
+msgstr ""
+
+#: ../automator/actions/class-start-campaign-action.php:42
+msgid "Trigger an Ultimatum campaign for a user on the site"
+msgstr ""
+
+#: ../automator/fields/class-campaign-event-id-data-field.php:32
+msgid "ID of the event that triggered the countdown"
+msgstr ""
+
+#: ../automator/fields/class-campaign-event-id-data-field.php:39
+msgid "User targets by the specific event ID that triggered the campaign"
+msgstr ""
+
+#: ../automator/fields/class-campaign-id-data-field.php:32
+msgid "ID of the Ultimatum campaign"
+msgstr ""
+
+#: ../automator/fields/class-campaign-id-data-field.php:39
+msgid "User targets by a specific Ultimatum campaign ID"
+msgstr ""
+
+#: ../automator/fields/class-campaign-name-data-field.php:32
+msgid "Name of the campaign"
+msgstr ""
+
+#: ../automator/fields/class-campaign-name-data-field.php:39
+msgid "User targets by one or more Ultimatum campaigns"
+msgstr ""
+
+#: ../automator/fields/class-campaign-trigger-type-data-field.php:32
+msgid "Campaign trigger type"
+msgstr ""
+
+#: ../automator/fields/class-campaign-trigger-type-data-field.php:39
+msgid "User targets by one or more trigger types of an Ultimatum campaign"
+msgstr ""
+
+#: ../automator/fields/class-campaign-type-data-field.php:32
+msgid "Campaign type"
+msgstr ""
+
+#: ../automator/fields/class-campaign-type-data-field.php:39
+msgid "User targets by one or more Ultimatum campaign types"
+msgstr ""
+
+#: ../automator/fields/class-campaign-user-email-data-field.php:29
+msgid "Email field, provided by the campaign trigger"
+msgstr ""
+
+#: ../automator/fields/class-campaign-user-email-data-field.php:36
+msgid "Filter by email from campaign data"
+msgstr ""
+
+#: ../automator/triggers/class-campaign-started-trigger.php:50
+msgid "User triggers Ultimatum evergreen campaign"
+msgstr ""
+
+#: ../automator/triggers/class-campaign-started-trigger.php:57
+msgid "This trigger will be fired when a user triggers an evergreen Ultimatum campaign by either visiting a landing page, entering their details into a lead generation form or when triggered by 3rd party events"
+msgstr ""
+
+#: ../inc/data.php:1032
+msgid "This campaign has been automatically paused because all designs have been deleted"
+msgstr ""
+
+#: ../inc/data.php:1399
+msgid "Not logging impression for logged user"
+msgstr ""
+
+#: ../inc/functions.php:579
+msgid "Close Design Editor"
+msgstr ""
+
+#: ../inc/functions.php:593
+msgid "You are currently viewing a page restricted by Thrive Ultimatum. You can only view this page because you are logged in as an admin."
+msgstr ""
+
+#: ../inc/functions.php:593
+msgid "Admin Mode"
+msgstr ""
+
+#: ../inc/functions.php:707
+msgid "Shortcode Design not found"
+msgstr ""
+
+#: ../inc/backbone/froala-ult.phtml:2
+msgid "Thrive Ultimatum Action"
+msgstr ""
+
+#: ../inc/backbone/froala-ult.phtml:17
+msgid "State"
+msgstr ""
+
+#: ../inc/backbone/froala-ult.phtml:26
+msgid "Animation"
+msgstr ""
+
+#: ../inc/classes/class-tu-campaign-event.php:33
+msgid "User subscription"
+msgstr ""
+
+#: ../inc/classes/class-tu-campaign-event.php:53, ../inc/classes/class-tu-timeline.php:32
+msgid "End Campaign"
+msgstr ""
+
+#: ../inc/classes/class-tu-campaign-event.php:56
+msgid "Move to another Campaign"
+msgstr ""
+
+#: ../inc/classes/class-tu-campaign-widget.php:100
+msgid "Choose the applicable campaigns for the widget"
+msgstr ""
+
+#: ../inc/classes/class-tu-campaign-widget.php:104
+msgid "You have no campaigns setup yet. %sSetup your campaigns first%s"
+msgstr ""
+
+#: ../inc/classes/class-tu-campaign-widget.php:110
+msgid "Select all/none"
+msgstr ""
+
+#: ../inc/classes/class-tu-event-action.php:75
+msgid "Display Countdown Design"
+msgstr ""
+
+#: ../inc/classes/class-tu-event-action.php:76
+msgid "Displays a countdown design. If the design has multiple states, you can also choose a design state"
+msgstr ""
+
+#: ../inc/classes/class-tu-product.php:26
+msgid "Ultimate scarcity plugin for WordPress"
+msgstr ""
+
+#: ../inc/classes/class-tu-product.php:47
+msgid "Support"
+msgstr ""
+
+#: ../inc/classes/class-tu-state-manager.php:237
+msgid "Design not found"
+msgstr ""
+
+#: ../inc/classes/class-tu-state-manager.php:255
+msgid "Design could not be saved"
+msgstr ""
+
+#: ../inc/classes/class-tu-template-manager.php:363
+msgid "Template saved."
+msgstr ""
+
+#: ../inc/classes/class-tu-template-manager.php:445
+msgid "No saved templates found"
+msgstr ""
+
+#: ../inc/classes/class-tu-timeline.php:28
+msgid "Campaign Start"
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-display-settings-manager.php:20, ../inc/classes/display_settings/class-thrive-display-settings-manager.php:84
+msgid "Basic Settings"
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-display-settings-manager.php:21, ../inc/classes/display_settings/class-thrive-display-settings-manager.php:85
+msgid "Categories etc."
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-display-settings-manager.php:22, ../inc/classes/display_settings/class-thrive-display-settings-manager.php:86
+msgid "Posts"
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-display-settings-manager.php:23, ../inc/classes/display_settings/class-thrive-display-settings-manager.php:87
+msgid "Pages"
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-display-settings-manager.php:24, ../inc/classes/display_settings/class-thrive-display-settings-manager.php:88
+msgid "Page Templates"
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-display-settings-manager.php:25, ../inc/classes/display_settings/class-thrive-display-settings-manager.php:89
+msgid "Post Types"
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-display-settings-manager.php:26, ../inc/classes/display_settings/class-thrive-display-settings-manager.php:90
+msgid "Archive Pages"
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-display-settings-manager.php:27, ../inc/classes/display_settings/class-thrive-display-settings-manager.php:91
+msgid "Other"
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-display-settings-manager.php:161
+msgid "Empty values"
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-ult-other-screens-tab.php:48
+msgid "Front Page"
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-ult-other-screens-tab.php:49
+msgid "All Posts"
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-ult-other-screens-tab.php:50
+msgid "All Pages"
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-ult-other-screens-tab.php:51
+msgid "Blog Index"
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-ult-other-screens-tab.php:52
+msgid "404 Error Page"
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-ult-other-screens-tab.php:53
+msgid "Search page"
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-ult-page-templates-tab.php:32
+msgid "Default"
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-ult-visitors-status-tab.php:46
+msgid "Logged in"
+msgstr ""
+
+#: ../inc/classes/display_settings/class-thrive-ult-visitors-status-tab.php:47
+msgid "Logged out"
+msgstr ""
+
+#: ../tcb-bridge/tcb_hooks.php:497
+msgid "Fetching saved templates..."
+msgstr ""
+
+#: ../tcb-bridge/tcb_hooks.php:498
+msgid "Please enter a template name, it will be easier to reload it after."
+msgstr ""
+
+#: ../tcb-bridge/tcb_hooks.php:499
+msgid "That template name already exists, please use another name"
+msgstr ""
+
+#: ../tcb-bridge/tcb_hooks.php:500
+msgid "Please enter a name for the state so you can easily identify it"
+msgstr ""
+
+#: ../tcb-bridge/tcb_hooks.php:510
+msgid "Insert template"
+msgstr ""
+
+#: ../tcb-bridge/tcb_hooks.php:539
+msgid "Invalid request."
+msgstr ""
+
+#: ../tcb-bridge/tcb_hooks.php:545
+msgid "Invalid parameter: tve_ult_shortcode."
+msgstr ""
+
+#: ../tcb-bridge/tcb_hooks.php:868
+msgid "Design cannot be empty"
+msgstr ""
+
+#: ../tcb-bridge/tcb_hooks.php:1016
+msgid "Ultimatum Template: Invalid Parameters"
+msgstr ""
+
+#: ../tcb-bridge/tcb_hooks.php:1025
+msgid "Ultimatum Template: Invalid Design"
+msgstr ""
+
+#: ../tcb-bridge/tcb_hooks.php:1042
+msgid "Ultimatum State: Invalid Parameters"
+msgstr ""
+
+#: ../tcb-bridge/tcb_hooks.php:1055
+msgid "Ultimatum State: Invalid Design"
+msgstr ""
+
+#: ../tcb-bridge/tcb_hooks.php:1226
+msgid "Invalid Parameters"
+msgstr ""
+
+#: ../tcb-bridge/tcb_hooks.php:1239
+msgid "Could not find the design you are editing... Is it possible that someone deleted it from the admin panel?"
+msgstr ""
+
+#: ../tcb-bridge/editor/states.php:21
+msgid "Current States"
+msgstr ""
+
+#: ../tcb-bridge/editor/states.php:22
+msgid "Close"
+msgstr ""
+
+#: ../tcb-bridge/editor/states.php:30
+msgid "Duplicate state"
+msgstr ""
+
+#: ../tcb-bridge/editor/states.php:35
+msgid "Delete state"
+msgstr ""
+
+#: ../tcb-bridge/editor/states.php:40
+msgid "Edit state"
+msgstr ""
+
+#: ../tcb-bridge/editor/states.php:43
+msgid "Main"
+msgstr ""
+
+#: ../tcb-bridge/editor/states.php:49
+msgid "Add new state"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-ultimatum-bar-element.php:20
+msgid "Ultimatum Ribbon"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-ultimatum-close-bar-element.php:17
+msgid "Close Ultimatum"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-ultimatum-countdown-element.php:20
+msgid "Ultimatum Countdown"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-ultimatum-shortcode-element.php:20
+msgid "Ultimatum Shortcode"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-ultimatum-widget-element.php:20
+msgid "Ultimatum Widget"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/add-edit-state.php:13
+msgid "Add / edit design state"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/add-edit-state.php:17
+msgid "State Name"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/campaign-shotcodes.php:16
+msgid "Thrive Ultimatum Campaign Shortcodes"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/campaign-shotcodes.php:19
+msgid "Select a Campaign and a Shortcode design you want to be displayed in your content. All the logic of selected Campaign will be applied on selected design too. Please make sure you do the right settings for your Campaign"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/campaign-shotcodes.php:23
+msgid "Select Campaign:"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/campaign-shotcodes.php:26
+msgid "Select campaign"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/campaign-shotcodes.php:34
+msgid "Select Shortcode:"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/campaign-shotcodes.php:37
+msgid "Select shortcode"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/campaign-shotcodes.php:44
+msgid "Save and close"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/design-cloud-templates.php:19
+msgid "Type"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/design-cloud-templates.php:28
+msgid "Warning!"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/design-cloud-templates.php:33
+msgid "Templates"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/design-cloud-templates.php:36
+msgid "Refresh from cloud"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/design-reset.php:13, ../tcb-bridge/editor-lightbox/design-reset.php:19, ../tcb-bridge/editor-layouts/element-menus/reset-settings.php:11
+msgid "Reset to default content"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/design-reset.php:15
+msgid "Are you sure you want to reset this variation to the default template? This action cannot be undone."
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/design-save.php:14
+msgid "Save Page Template"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/design-save.php:16
+msgid "You can save the current page as a template for use on another post / page on your site."
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/design-save.php:21
+msgid "Template Name"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/design-save.php:26, ../tcb-bridge/editor-layouts/element-menus/content-settings.php:8
+msgid "Save Template"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/design-templates.php:28
+msgid "Choose the %s template you would like to use for this design"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/design-templates.php:30
+msgid "If you change your the template without saving the current revision, you won't be able to revert back to it later."
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/design-templates.php:34
+msgid "Default Templates"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/design-templates.php:35
+msgid "Saved %s Templates"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/design-templates.php:61
+msgid "Choose Template"
+msgstr ""
+
+#: ../tcb-bridge/editor/campaign/ribbon.php:32
+msgid "This is a Design type called \"Footer Bar\". It is displayed on the bottom of the page and it's usually a long horizontal bar"
+msgstr ""
+
+#: ../tcb-bridge/editor/campaign/ribbon.php:28
+msgid "This is a Design type called \"Header Bar\". It is displayed on the top of the page and it's usually a long horizontal bar"
+msgstr ""
+
+#: ../tcb-bridge/editor/campaign/ribbon.php:29
+msgid "The content of the page will be scrolled down with the same amount as the ribbon's height"
+msgstr ""
+
+#: ../tcb-bridge/editor/campaign/ribbon.php:30
+msgid "The ribbon will always stay on top, even when the user scrolls the page"
+msgstr ""
+
+#: ../tcb-bridge/editor/campaign/shortcode.php:38
+msgid "This is a Design type called \"Shortcode\". It is displayed on posts that have its code in the content."
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/ultimatum-countdown.php:4
+msgid "Insert Ultimatum Countdown"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/ultimatum-countdown.php:17
+msgid "Ultimatum Countdown Options"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/ultimatum-countdown.php:24
+msgid "Change Countdown"
+msgstr ""
+
+#: ../tcb-bridge/event-manager/actions/Thrive_Ultimatum_Form_Close_Action.php:9
+msgid "Close ultimatum"
+msgstr ""

@@ -1,0 +1,19 @@
+<div class="ttd-wizard-welcome ttd-wizard-finished">
+	<img class="ttd-wizard-splash" src="<?php echo THEME_URL . '/inc/assets/images/wizard/splash.png' ?>" width="108" height="103" alt="Wizard Splash">
+	<h2 class="ttd-wizard-title mt-40"><?php echo esc_html__( 'Wizard Setup Complete', 'thrive-theme' ); ?></h2>
+	<p class="ttd-wizard-desc mt-20 mb-0"><?php echo esc_html__( "Your site has now been built using the designs you've chosen.", 'thrive-theme' ); ?></p>
+	<p class="ttd-wizard-desc mt-20 mb-0"><?php echo sprintf( esc_html__( 'You can revisit the wizard at any time by clicking on the options%s in the left panel.', 'thrive-theme' ), '<br>' ); ?></p>
+	<div class="ttd-wizard-next-steps mt-40 pt-30">
+		<button type="button" onclick="location.href='<?php echo home_url(); ?>';" class="ttd-next-option bg-white ttd-btn blue">
+			<?php Thrive_Views::svg_icon( 'icon-preview' ); ?>
+			<?php echo esc_html__( 'Preview My Site', 'thrive-theme' ); ?>
+		</button>
+		<?php /* wistia video trigger needs to be a <span> element */ ?>
+		<button class="ttd-wizard-finished-video click ttd-btn blue fill ttd-next-option tvd-open-video popover=true popoverContent=html" data-source="vJv4Kjeh0VQ">
+			<?php Thrive_Views::svg_icon( 'icon-video' ); ?><?php echo esc_html__( 'Learn what to do Next', 'thrive-theme' ); ?>
+		</button>
+	</div>
+	<a href="<#=`${TTD.CONST.baseUrl}#start`#>" class="ttd-wizard-go-to-dashboard">
+		<?php echo esc_html__( 'Go to dashboard', 'thrive-theme' ); ?>
+	</a>
+</div>

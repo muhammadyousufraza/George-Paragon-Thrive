@@ -1,0 +1,1 @@
+<a href="javascript:void(0);" class="click cb-category<#= extra_cls#>" data-fn="filter" data-source="favorites" data-item="favorites"><?php tcb_icon( 'heart-light' ); ?> <?php echo esc_html__( 'My Favorites', 'thrive-cb' ) ?></a>

@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-protected-files-upload-area-big tva-flex tva-flex-column">
+	<span><?php tva_get_svg_icon( 'protected-files-colored' ); ?></span>
+	<# if(typeof this.context !=='undefined' && this.context ==='modal'){ #>
+	<span><?php esc_html_e( 'Protect another file.', 'thrive-apprentice' ); ?></span>
+	<span><?php echo sprintf( __( 'Drag and drop file here or %s', 'thrive-apprentice' ), '<a href="#" class="tva-file-upload-control-select">' . __( 'Select File.', 'thrive-apprentice' ) . '</a>' ); ?></span>
+	<# }else{ #>
+	<span><?php esc_html_e( 'Control users access to your files.', 'thrive-apprentice' ); ?></span>
+	<span><?php echo sprintf( __( 'Drag and drop file here or %s that you want to protect.', 'thrive-apprentice' ), '<a href="#" class="tva-file-upload-control-select">' . __( 'Select File', 'thrive-apprentice' ) . '</a>' ); ?></span>
+	<# } #>
+	<span><?php echo sprintf( esc_html__( 'Maximum allowed file size is: %s.', 'thrive-apprentice' ), esc_html( size_format( wp_max_upload_size() ) ) ); ?></span>
+</div>

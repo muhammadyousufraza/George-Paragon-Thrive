@@ -1,0 +1,105 @@
+<div class="tcm-moderation-mid clear-this">
+	<div style="padding-top: 13px;" class="tcm-full">
+		<div class="tcm-bulk">
+			<input type="checkbox" id="tcm-bulk-checkbox"/>
+			<label for="tcm-bulk-checkbox"><?php echo __( 'Bulk actions', Thrive_Comments_Constants::T ); ?>:</label>
+			<div id="tcm-bulk-options" class="tcm-dropdown tcm-filter-dropdown">
+				<# if (bulklist['approve'] === 1) { #>
+				<span class="tcm-toggle-button current-bulk-option" data-status="status" data-value="<#= ThriveComments.const.moderation.approve #>" data-action="approved">
+						<?php echo __( 'Approve', Thrive_Comments_Constants::T ); ?>
+					</span>
+				<# } else if (bulklist['stop_featured'] === 1) { #>
+				<span class="tcm-toggle-button current-bulk-option" data-status="<#= ThriveComments.const.moderation.tcm_featured#>" data-value="0" data-action="stop_featuring">
+						<?php echo __( 'Stop Featuring', Thrive_Comments_Constants::T ); ?>
+					</span>
+				<# } else if (bulklist['not_spam'] === 1) { #>
+				<span class="tcm-toggle-button current-bulk-option" data-status="status" data-value="<#= ThriveComments.const.moderation.unspam #>" data-action="unspam">
+						<?php echo __( 'Not Spam', Thrive_Comments_Constants::T ); ?>
+					</span>
+				<# } else { #>
+				<span class="tcm-toggle-button current-bulk-option" data-status="status" data-value="<#= ThriveComments.const.moderation.spam #>" data-action="spam">
+						<?php echo __( 'Mark as Spam', Thrive_Comments_Constants::T ); ?>
+					</span>
+				<# } #>
+				<span class="svg-arrow-down">
+						<?php tcah()->tcm_icon( 'bulk-action-arrow', 'bulk-action-arrow-svg' ); ?>
+					</span>
+
+				<div class="tcm-dropdown-content">
+
+					<# if ( bulklist['approve'] === 1 ) { #>
+					<div class="tcm-dropdown-element tcm-bulk-action" data-status="status" data-value="<#= ThriveComments.const.moderation.approve #>" data-action="approved">
+						<?php echo __( 'Approve', Thrive_Comments_Constants::T ); ?>
+					</div>
+					<# } #>
+
+					<# if ( bulklist['unapprove'] === 1 ) { #>
+					<div class="tcm-dropdown-element tcm-bulk-action" data-status="status" data-value="<#= ThriveComments.const.moderation.unapprove#>" data-action="hold">
+						<?php echo __( 'Unapprove', Thrive_Comments_Constants::T ); ?>
+					</div>
+					<# } #>
+
+					<# if ( bulklist['stop_featured'] === 1 ) { #>
+					<div class="tcm-dropdown-element tcm-bulk-action" data-status="<#= ThriveComments.const.moderation.tcm_featured#>" data-value="0" data-action="stop_featuring">
+						<?php echo __( 'Stop Featuring', Thrive_Comments_Constants::T ); ?>
+					</div>
+					<# } #>
+
+					<# if ( bulklist['no_reply_needed'] === 1 ) { #>
+					<div class="tcm-dropdown-element tcm-bulk-action" data-status="tcm_needs_reply" data-value="2" data-action="needs_reply">
+						<?php echo __( 'No Reply Needed', Thrive_Comments_Constants::T ); ?>
+					</div>
+					<# } #>
+
+					<# if ( bulklist['featured'] === 1 ) { #>
+					<div class="tcm-dropdown-element tcm-bulk-action" data-status="<#= ThriveComments.const.moderation.tcm_featured#>" data-value="1" data-action="featured">
+						<?php echo __( 'Feature', Thrive_Comments_Constants::T ); ?>
+					</div>
+					<# } #>
+
+					<# if ( bulklist['delegate'] === 1 ) { #>
+					<div class="tcm-dropdown-element tcm-bulk-action" data-status="<#= ThriveComments.const.moderation.tcm_delegate#>" data-value="0" data-action="delegate_comment">
+						<?php echo __( 'Delegate', Thrive_Comments_Constants::T ); ?>
+					</div>
+					<# } #>
+
+					<# if ( bulklist['spam'] === 1 ) { #>
+					<div class="tcm-dropdown-element tcm-bulk-action" data-status="status" data-value="<#= ThriveComments.const.moderation.spam#>" data-action="spam">
+						<?php echo __( 'Mark as Spam', Thrive_Comments_Constants::T ); ?>
+					</div>
+					<# } #>
+
+					<# if ( bulklist['not_spam'] === 1 ) { #>
+					<div class="tcm-dropdown-element tcm-bulk-action" data-status="status" data-value="<#= ThriveComments.const.moderation.unspam#>" data-action="unspam">
+						<?php echo __( 'Not Spam', Thrive_Comments_Constants::T ); ?>
+					</div>
+					<# } #>
+
+					<# if ( bulklist['trash'] === 1 ) { #>
+					<div class="tcm-dropdown-element tcm-bulk-action" data-status="status" data-value="<#= ThriveComments.const.moderation.trash#>" data-action="trash">
+						<?php echo __( 'Mark as Trash', Thrive_Comments_Constants::T ); ?>
+					</div>
+					<# } #>
+
+					<# if ( bulklist['restore'] === 1 ) { #>
+					<div class="tcm-dropdown-element tcm-bulk-action" data-status="status" data-value="<#= ThriveComments.const.moderation.untrash#>" data-action="restore">
+						<?php echo __( 'Restore', Thrive_Comments_Constants::T ); ?>
+					</div>
+					<# } #>
+
+					<# if ( bulklist['delete'] === 1 ) { #>
+					<div class="tcm-dropdown-element tcm-bulk-action" data-status="status" data-value="delete" data-action="delete">
+						<?php echo __( 'Delete Permanently', Thrive_Comments_Constants::T ); ?>
+					</div>
+					<# } #>
+
+				</div>
+			</div>
+
+			<a href="#" class="tcm-apply-bulk tvd-waves-effect tvd-waves-light tvd-btn" hidden><?php echo __( 'Apply', Thrive_Comments_Constants::T ); ?></a>
+
+		</div>
+	</div>
+	<a class="toggle-stuff tcm-icon-arrow_drop_down" href="#"></a>
+</div>
+<input type="checkbox">

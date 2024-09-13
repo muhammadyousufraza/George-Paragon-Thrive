@@ -1,0 +1,66 @@
+<?php
+
+use TVA\Stripe\Hooks;
+
+?>
+
+<div class="tva-flex tva-flex-row tva-space-between">
+	<h1 class="tva-main-heading">
+		<span class="tva-product-subheading"><#= model.get( 'name' ) #></span>
+		<?php echo __( 'Access requirements', 'thrive-apprentice' ) ?>
+	</h1>
+
+	<div class="tva-flex tva-align-center mb-10">
+		<div class="tva-flex tva-align-center tva-product-identifier-label mr-10">
+			<?php echo __( 'Product identifier', 'thrive-apprentice' ) ?>
+			<div class="tva-tooltip-parent">
+				<div class="ml-5 tva-info-icon"><?php tva_get_svg_icon( 'info-solid' ); ?>
+					<div class="tva-custom-tooltip tva-tooltip-inherited tva-tooltip-bottom">
+						<?php esc_html_e( 'The product identifier can be used to enable communications between Thrive Automator and third party services and payment providers.', 'thrive-apprentice' ); ?>
+						<div class="tva-flex tva-align-center mt-10">
+							<?php tva_get_svg_icon( 'question-circle_solid', 'mr-10' ); ?>
+							<a href="https://help.thrivethemes.com/en/articles/6143928-using-the-product-identifier-in-thrive-apprentice" target="_blank" rel="noopener"><?php echo esc_html__( 'Show me how it works!', 'thrive-apprentice' ); ?></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tva-flex tva-align-center">
+			<input id="tva-product-id" value="<#= model.get('id') #>" disabled>
+			<span class="tva-product-or-label tva-flex tva-align-center">
+				<?php echo __( 'or', 'thrive-apprentice' ) ?>
+			</span>
+			<div class="tva-product-id-container">
+				<input placeholder="<?php esc_attr_e( 'Add another', 'thrive-apprentice' ); ?>" id="tva-product-identifier" autocomplete="off" data-bind="identifier" value="<#= model.get('identifier') #>">
+				<a href="javascript:void(0)" class="tva-input-delete-x click" data-fn="deleteIdentifier">
+					<i class="tvd-icon-close2"></i>
+				</a>
+			</div>
+		</div>
+
+	</div>
+</div>
+<# if(!TVA.visualEditingEnabled) { #>
+<?php include dirname( __FILE__ ) . '/legacy-design-warning.php'; ?>
+<# } #>
+<div class="tva-product-heading-buttons mb-45">
+	<a class="tva-back" href="#products"><?php echo esc_attr__( 'Back to dashboard', 'thrive-apprentice' ) ?></a>
+	<#= this.getBackLink() #>
+</div>
+<div class="tva-flex tva-align-center mt-45 tva-space-between">
+	<label class="course-label">
+		<?php echo esc_html__( 'How can users purchase this product?', 'thrive-apprentice' ); ?>
+	</label>
+	<div class="tva-restrictions-counter mb-10">
+		<span id="tva-rules-count-message"><?php echo esc_html__( 'Access rules currently set', 'thrive-apprentice' ); ?></span>
+	</div>
+</div>
+<?php if ( Hooks::is_legacy() ): ?>
+	<?php include __DIR__ . '/../../stripe/v1-notice.php'; ?>
+<?php endif; ?>
+<div id="tva-course-integrations-wrapper"></div>
+<div class="tva-course-save">
+	<div class="tva-boxed-container tva-flex tva-flex-row-reverse">
+		<button class="tva-save-btn click" data-fn="saveRules"><?php echo esc_html__( 'Save', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>

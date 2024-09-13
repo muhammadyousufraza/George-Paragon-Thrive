@@ -1,0 +1,61 @@
+<div class="thrive-display-testimonials-header thrive-display-testimonials-dynamic-header">
+	<div class="thrive-display-testimonials-set-selector display-testimonials-select dynamic"></div>
+</div>
+
+<div class="thrive-display-testimonials-content thrive-display-testimonials-dynamic-content">
+	<div class="thrive-display-testimonials-tags-container">
+		<span class="card-title"> <?php echo esc_html__( 'Tag', 'thrive-ovation' ); ?> </span>
+		<ul class="thrive-display-testimonials-tags-list <#= this.dataModel.isViewMode() ? 'tcb-disabled' : ''#>">
+			<div class="no-tags-message" style="display: none">
+				<?php echo esc_html__( 'No tags found. To be able to create dynamic lists, you need at least one tag assigned to your testimonials.', 'thrive-ovation' ); ?>
+			</div>
+		</ul>
+	</div>
+
+	<div class="order-container dynamic-order-container">
+		<span class="card-title"> <?php echo esc_html__( 'Order', 'thrive-ovation' ); ?> </span>
+		<div class="dynamic-order <#= this.dataModel.isViewMode() ? 'tcb-disabled' : ''#>"></div>
+	</div>
+
+	<span class="dynamic-counter-container">
+	<span class="dynamic-counter">
+		<span class="bolded">
+			<span class="dynamic-number">0</span>
+			<?php echo esc_html__( 'Testimonials', 'thrive-ovation' ); ?>
+		</span>
+		<span>
+			<?php echo esc_html__( 'currently match this dynamic query', 'thrive-ovation' ); ?>
+		</span>
+	</span>
+</span>
+</div>
+
+<div class="thrive-display-testimonials-action-buttons">
+	<div class="col-1">
+		<button class="clear click" data-fn="goBackToSplash">
+			<?php tcb_icon( 'arrow-left-light' ); ?>
+			<?php echo esc_html__( 'Back to testimonial types', 'thrive-ovation' ); ?>
+		</button>
+	</div>
+	<div class="col-2">
+		<# if ( this.dataModel.isViewMode() ) { #>
+		<button class="ghost click" data-fn="switchToEditMode">
+			<?php echo esc_html__( 'Edit set', 'thrive-ovation' ); ?>
+		</button>
+		<# } else { #>
+		<button class="ghost click" data-fn="openSetPage">
+			<?php echo esc_html__( 'Save a new testimonial set', 'thrive-ovation' ); ?>
+		</button>
+		<# } #>
+
+		<# if ( this.dataModel.isEditMode() ) { #>
+		<button class="click" data-fn="updateSet">
+			<?php echo esc_html__( 'Save', 'thrive-ovation' ); ?>
+		</button>
+		<# } else { #>
+		<button class="filled click" data-fn="load">
+			<?php echo esc_html__( 'Apply', 'thrive-ovation' ); ?>
+		</button>
+		<# } #>
+	</div>
+</div>

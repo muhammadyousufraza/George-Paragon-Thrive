@@ -1,0 +1,29 @@
+<?php $tooltip_text = __( 'If you have Thrive Theme Builder activated and this toggle is enabled, changes to your brand color will affect both Thrive Theme Builder and Thrive Apprentice. By disabling this toggle, you can set unique brand colors for your online course experience.', 'thrive-apprentice' ); ?>
+
+<div class="ttd-wizard-clip placeholder clip-logo clip-color">
+	<p class="ttd-wizard-desc mb-20 f-22"><?php echo esc_html__( 'What is the main color of your school?', 'thrive-apprentice' ); ?></p>
+
+	<div id="wizard-step-color-palette" class="ttd-brand-color">
+		<input type="text" id="ttd-skin-color-picker" style="display:none" value="<#=this.data.hsla#>">
+	</div>
+	<div id="wizard-spectrum-container"></div>
+
+	<div class="tvd-switch tvd-tooltipped" data-position="top" data-tooltip="<?php echo $tooltip_text; ?>">
+		<label class="tva-slide-checkbox<#= parseInt(TVA.theme_active) === 0 ?' tva-inactive': ''#>">
+			<span class="mr-20">
+				<?php esc_html_e( 'Share brand color with Thrive Theme Builder', 'thrive-apprentice' ); ?>
+				<?php tva_get_svg_icon( 'info-circle_light' ); ?>
+			</span>
+			<input type="checkbox" class="change" data-fn="shareThemeColor"<#= this.shareColor ? ' checked' : ''#> <#= parseInt(TVA.theme_active) === 0 ?' disabled': ''#>>
+			<span class="lever"></span>
+		</label>
+	</div>
+
+	<button class="click ttd-btn click fill blue mt-20" data-fn="clickNext">
+		<#=this.wizard.getContinueLabel()#>
+		<# if( this.wizard.hasNextStep() ) { #>
+		<?php Thrive_Views::svg_icon( 'chevron-right' ); ?>
+		<span class="step-no"><#=this.wizard.getNextAvailableStepIndex() + 1#></span>
+		<# } #>
+	</button>
+</div>

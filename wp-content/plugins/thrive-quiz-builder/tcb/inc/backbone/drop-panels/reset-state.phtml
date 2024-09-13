@@ -1,0 +1,49 @@
+<div class="drop-panel panel-light reset-state-panel">
+	<div class="popup-content">
+		<div class="reset-state center-text">
+			<span class="reset-times"><a class="click" data-fn="onCancel"><?php tcb_icon( 'times-regular' ); ?></a></span>
+			<div class="reset-state-initial">
+				<span class="reset-title center-text"> <?php echo __( 'Reset State Display', 'thrive-cb' ) ?> </span>
+				<div class="reset-text center-text">
+					<div class="reset-multiple-states">
+						<?php echo __( 'Reset this state to match', 'thrive-cb' ) ?>
+						<select class="reset-select change" data-fn="onChange">
+							<# _.each(this.states, function(v, k) { #>
+							<option value="<#= k #>">
+								<#= v #> <?php echo __( 'State', 'thrive-cb' ) ?>
+							</option>
+							<# }) #>
+						</select>
+					</div>
+					<div class="reset-to-state">
+						<?php echo __( 'This will reset the ', 'thrive-cb' ) ?>
+						<span class="reset-state-bold"><?php echo __( 'Hover ', 'thrive-cb' ) ?> </span>
+						<?php echo __( 'state display to match the ', 'thrive-cb' ) ?>
+						<span class="reset-state-bold"><?php echo __( 'Normal ', 'thrive-cb' ) ?> </span>
+						<?php echo __( 'state and cannot be undone', 'thrive-cb' ) ?>
+					</div>
+				</div>
+			</div>
+			<div class="reset-state-confirm">
+				<span class="reset-title center-text"> <?php echo __( 'Are you sure?', 'thrive-cb' ) ?> </span>
+				<span class="reset-text center-text">
+					<?php echo __( 'This will reset the ', 'thrive-cb' ) ?>
+						<span class="reset-state-bold"> <#= TVE.state_manager.getStateLabel() #> </span>
+						<?php echo __( 'state display to match the ', 'thrive-cb' ) ?>
+						<span class="reset-state-bold"> <#= this.states[this.$( '.reset-select' ).val()] #> </span>
+						<?php echo __( 'state and cannot be undone', 'thrive-cb' ) ?>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="action-buttons control-grid reset-state-initial">
+		<div data-fn="hide" class="click tve-button drop-panel-action btn-cancel"><?php echo __( 'Cancel', 'thrive-cb' ) ?></div>
+		<div data-fn="showConfirmState" class="click tve-button drop-panel-action btn-apply"><?php echo __( 'Reset', 'thrive-cb' ) ?></div>
+	</div>
+	<div class="action-buttons control-grid reset-state-confirm">
+		<div data-fn="hide" class="click tve-button drop-panel-action btn-cancel"><?php echo __( 'Cancel', 'thrive-cb' ) ?></div>
+		<div data-fn="resetStateAction" class="click tve-button drop-panel-action btn-apply"><?php echo __( 'Yes, Reset', 'thrive-cb' ) ?></div>
+	</div>
+
+	<div class="tcb-panel-arrow"></div>
+</div>

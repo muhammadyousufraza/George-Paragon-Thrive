@@ -1,0 +1,18 @@
+<div class="ttd-dropdown-select">
+	<button class="ttd-selected-value click" data-fn="toggle">
+	</button>
+	<div class="ttd-dropdown-items">
+		<# this.getItems().forEach(item => { #>
+		<button class="ttd-dropdown-item click" data-id="<#= item.id #>" data-fn="onSelect" style="order: <#=item.order#>">
+			<span class="ttd-dropdown-item-content">
+				<span class="ttd-dropdown-item-text"><#= item.text #></span>
+				<span class="ttd-dropdown-item-description">
+					<#= item.description #>
+					<?php Thrive_Views::svg_icon( 'check' ); ?>
+				</span>
+			</span>
+			<span class="ttd-dropdown-item-divider"></span>
+		</button>
+		<# }) #>
+	</div>
+</div>

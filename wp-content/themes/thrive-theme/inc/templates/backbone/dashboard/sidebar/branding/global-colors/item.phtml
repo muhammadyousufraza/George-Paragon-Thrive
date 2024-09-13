@@ -1,0 +1,11 @@
+<div class="ttd-global-color-group">
+	<button style="background-color:<#=this.model.get('color')#>" class="ttd-global-color click" data-fn="open_color_picker"></button>
+	<span class="ttd-global-color-text"><#=this.model.get('name').replace(new RegExp('\\\\', 'g'), '')#></span>
+</div>
+
+<div class="dots click" data-fn="show_tooltip">
+	<span></span>
+	<span></span>
+	<span></span>
+</div>
+<span class="checkmark click" data-fn="save_name"></span>

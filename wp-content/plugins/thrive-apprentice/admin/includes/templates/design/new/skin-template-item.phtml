@@ -1,0 +1,46 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+
+<# if ( this.model.isDefault() ) { #>
+<div class="template-top-label<#= this.model.extraItemClass() #>">
+	<# if ( this.model.isHomepage() ) { #>
+		<?php tva_get_svg_icon( 'homepage' ); ?>
+	<# } #>
+	<#= this.model.getDefaultLabel() #>
+</div>
+<# } #>
+<div class="template-upper" style="<#= this.model.hasThumbnail() ? this.model.getThumbnailCss() : '' #>">
+
+	<button class="template-edit-button">
+		<a target="_blank" href="<#= model.get('edit_url') #>">
+			<?php Thrive_Views::svg_icon( 'pen-light' ); ?>
+			<span><?php echo __( 'Edit', 'thrive-apprentice' ); ?></span>
+		</a>
+	</button>
+</div>
+<div class="template-lower">
+	<div class="template-name-container">
+		<#= this.model.icon() #>
+		<div class="template-name"><#- model.get('post_title') #></div>
+	</div>
+	<span class="ttd-dropdown-dots click" data-fn="showOptionsTooltip">
+		<?php Thrive_Views::svg_icon( 'icon-three-dots' ); ?>
+	</span>
+	<div class="template-meta">
+		<ul>
+			<li>
+				<span class="template-label"><?php echo __( 'Content Type', 'thrive-apprentice' ); ?></span>
+				<span class="template-meta-val"><#= model.getContentType() #></span>
+			</li>
+		</ul>
+	</div>
+</div>

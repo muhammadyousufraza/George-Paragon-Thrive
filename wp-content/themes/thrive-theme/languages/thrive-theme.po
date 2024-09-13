@@ -1,0 +1,3992 @@
+# Copyright (C) 2024 Thrive Theme
+# This file is distributed under the same license as the Thrive Theme package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Thrive Theme\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Econdig: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Project-Id-Version: Thrive Theme\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../inc/classes/class-thrive-breadcrumbs.php:361
+msgid "Day"
+msgstr ""
+
+#: ../inc/classes/class-thrive-breadcrumbs.php:359
+msgid "Month"
+msgstr ""
+
+#: ../inc/classes/class-thrive-breadcrumbs.php:357
+msgid "Year"
+msgstr ""
+
+#: ../inc/classes/class-thrive-breadcrumbs.php:355, ../integrations/conditional-display/fields/class-post-tag.php:30
+msgid "Tag"
+msgstr ""
+
+#: ../inc/classes/class-thrive-breadcrumbs.php:353, ../integrations/conditional-display/fields/class-post-category.php:30
+msgid "Category"
+msgstr ""
+
+#: ../inc/classes/class-thrive-breadcrumbs.php:385
+msgid "Home"
+msgstr ""
+
+#: ../inc/classes/class-thrive-breadcrumbs.php:386, ../integrations/architect/classes/class-thrive-theme-default-data.php:280
+msgid "Blog"
+msgstr ""
+
+#: ../inc/classes/class-thrive-breadcrumbs.php:387, ../inc/classes/utils/class-thrive-utils.php:360, ../inc/templates/backbone/dashboard/modals/cloud-templates/main.phtml:5, ../inc/templates/backbone/dashboard/modals/wizard/lp-templates.phtml:6, ../inc/templates/backbone/dashboard/main/wizard/top/template-selector.phtml:4, ../inc/templates/backbone/dashboard/modals/skins/cloud/main.phtml:9, ../integrations/architect/views/modals/section-templates-block.php:20, ../integrations/architect/views/backbone/theme-main/select.phtml:2, ../integrations/architect/views/backbone/theme-main/content-switch/main-archive.phtml:17, ../integrations/architect/views/backbone/theme-main/content-switch/main.phtml:19
+msgid "Search"
+msgstr ""
+
+#: ../inc/classes/class-thrive-breadcrumbs.php:388
+msgid "Author: "
+msgstr ""
+
+#: ../inc/classes/class-thrive-breadcrumbs.php:389
+msgid "Archives: "
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:40, ../inc/classes/class-thrive-defaults.php:56, ../inc/classes/class-thrive-shortcodes.php:563, ../inc/templates/admin/templates-meta-box.php:24, ../integrations/architect/views/backbone/architect-main/page-template-item.phtml:21, ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-submit-element.php:125
+msgid "Default"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:98
+msgid "Facebook Page URL"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:99
+msgid "Twitter Page URL"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:100
+msgid "Pinterest Page URL"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:101
+msgid "Linkedin Page URL"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:102
+msgid "Xing Page URL"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:103
+msgid "Youtube Channel URL"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:104
+msgid "Instagram Page URL"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:105
+msgid "TikTok Page URL"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:115
+msgid "Theme Elements"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:228
+msgid "Current Theme"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:233
+msgid "Manage Themes"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:239, ../inc/templates/backbone/dashboard/main/templates/filters.phtml:3
+msgid "Templates"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:241
+msgid "Manage your page, text post, video post, audio post, 404, archive and custom theme templates."
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:243
+msgid "Manage Templates"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:250
+msgid "Theme Wizard"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:252
+msgid "Setup the most important theme templates on your site as quickly as possible."
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:255
+msgid "Start wizard"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:260, ../inc/templates/backbone/dashboard/sidebar/branding/main.phtml:2
+msgid "Branding"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:262
+msgid "Customize your theme to inherit your brand colors, logo and favicon."
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:268, ../inc/templates/backbone/dashboard/sidebar/typography.phtml:2
+msgid "Typography"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:270
+msgid "Customize all general typography on your current theme."
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:276
+msgid "Site Speed"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:278
+msgid "A performance checklist to ensure you have a blazing fast site."
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:284, ../inc/templates/backbone/dashboard/modals/start/main.phtml:41
+msgid "Help Corner"
+msgstr ""
+
+#: ../inc/classes/class-thrive-defaults.php:286
+msgid "Build a better website."
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:315
+msgid "Custom Design"
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:427
+msgid "Top Section"
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:432
+msgid "Sidebar Section"
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:437
+msgid "Bottom Section"
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:442, ../integrations/wizard/structure.php:28, ../integrations/wizard/structure.php:30, ../integrations/architect/views/backbone/architect-main/landing-page-map.phtml:4, ../integrations/architect/views/backbone/theme-main/controls/sections-preview.phtml:4
+msgid "Header"
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:447, ../integrations/wizard/structure.php:41, ../integrations/wizard/structure.php:43, ../integrations/architect/views/backbone/architect-main/landing-page-map.phtml:18, ../integrations/architect/views/backbone/theme-main/controls/sections-preview.phtml:33
+msgid "Footer"
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:454
+msgid "Post Title"
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:459, ../integrations/architect/views/backbone/theme-main/controls/video-thumbnail-type-select.phtml:20
+msgid "Featured Image"
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:464
+msgid "Featured Video"
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:469
+msgid "Featured Audio"
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:474, ../inc/classes/class-thrive-shortcodes.php:1039, ../inc/templates/parts/author-box-element-default.php:12, ../integrations/architect/class-thrive-architect.php:1711, ../integrations/architect/classes/elements/article/class-thrive-author-box-element.php:27
+msgid "About the Author"
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:479, ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-element.php:17
+msgid "Breadcrumbs"
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:484
+msgid "Comments"
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:544
+msgid "Clone this item"
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:547
+msgid "Clone"
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:559
+msgid "Could not find the original post"
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:572
+msgid "Clone of"
+msgstr ""
+
+#: ../inc/classes/class-thrive-post.php:606
+msgid "There was an error while trying to duplicate the item"
+msgstr ""
+
+#: ../inc/classes/class-thrive-shortcodes.php:229
+msgid "Search Term"
+msgstr ""
+
+#: ../inc/classes/class-thrive-shortcodes.php:235
+msgid "Number of results"
+msgstr ""
+
+#: ../inc/classes/class-thrive-shortcodes.php:245
+msgid "Post excerpt"
+msgstr ""
+
+#: ../inc/classes/class-thrive-shortcodes.php:252
+msgid "Hide if excerpt is not set"
+msgstr ""
+
+#: ../inc/classes/class-thrive-shortcodes.php:258
+msgid "Title of the next piece of content"
+msgstr ""
+
+#: ../inc/classes/class-thrive-shortcodes.php:265, ../inc/classes/class-thrive-shortcodes.php:283
+msgid "Default Value"
+msgstr ""
+
+#: ../inc/classes/class-thrive-shortcodes.php:270, ../inc/classes/class-thrive-shortcodes.php:288
+msgid "Link to content"
+msgstr ""
+
+#: ../inc/classes/class-thrive-shortcodes.php:276
+msgid "Title of the previous piece of content"
+msgstr ""
+
+#: ../inc/classes/class-thrive-shortcodes.php:298
+msgid "Reading time remaining (in minutes)"
+msgstr ""
+
+#: ../inc/classes/class-thrive-shortcodes.php:303
+msgid "Word count"
+msgstr ""
+
+#: ../inc/classes/class-thrive-shortcodes.php:1126, ../integrations/architect/classes/elements/class-thrive-template-content-element.php:17, ../integrations/architect/views/components/theme/layout-container.php:15
+msgid "Layout Container"
+msgstr ""
+
+#: ../inc/classes/class-thrive-shortcodes.php:1287
+msgid "The archive description field doesn't exist for the current taxonomy so no content will be displayed"
+msgstr ""
+
+#: ../inc/classes/class-thrive-shortcodes.php:1321
+msgid "The archive parent doesn't exist for the current archive so no content will be displayed"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme-comments.php:282
+msgid "Comments are closed."
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme-comments.php:374
+msgid "Comment"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme-comments.php:603
+msgid "Reply"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme-comments.php:625
+msgid "Email address invalid"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme-comments.php:626
+msgid "Website address invalid"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme-comments.php:627
+msgid "Required field missing"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme-sidebar-toggle-action.php:24, ../inc/classes/class-thrive-theme-sidebar-toggle-action.php:47
+msgid "Open/close sidebar"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme-update.php:140
+msgid "An Unexpected HTTP Error occurred during the API request"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme-update.php:140
+msgid "Try again"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme.php:388
+msgid "Primary"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme.php:438
+msgid "Default Widget Area"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme.php:440, ../inc/classes/class-thrive-theme.php:453
+msgid "Add widgets here."
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme.php:642, ../inc/templates/backbone/dashboard/main/performance/main.phtml:7
+msgid "Project Lightspeed"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme.php:643, ../inc/templates/backbone/dashboard/main/performance/image.phtml:2
+msgid "Image Optimization"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme.php:644, ../inc/templates/backbone/dashboard/main/performance/main.phtml:31, ../inc/templates/backbone/dashboard/main/performance/cache/main.phtml:2
+msgid "Minification and Caching"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme.php:645, ../inc/templates/backbone/dashboard/main/performance/main.phtml:43
+msgid "Accelerated Mobile Pages"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme.php:811
+msgid "Edit Theme Template"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme.php:909
+msgid "Theme Builder Templates"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme.php:920
+msgid "Theme Builder Visibility"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme.php:898, ../integrations/dashboard/class-thrive-theme-dashboard.php:87, ../integrations/dashboard/class-thrive-theme-dashboard.php:88
+msgid "Thrive Theme Builder"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme.php:930
+msgid "Thrive Post Format Options"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme.php:939, ../inc/templates/parts/lp-custom-scripts.php:13, ../integrations/architect/views/components/editor/scripts-settings.php:17
+msgid "Custom Scripts"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme.php:1347
+msgid "No post to duplicate has been supplied!"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme.php:1396, ../inc/classes/class-thrive-theme.php:1397, ../inc/templates/backbone/dashboard/modals/skins/export.phtml:5
+msgid "Archive Name"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme.php:1401, ../inc/classes/class-thrive-theme.php:1402
+msgid "Archive Description"
+msgstr ""
+
+#: ../inc/classes/class-thrive-theme.php:1406, ../inc/classes/class-thrive-theme.php:1407
+msgid "Archive Parent Name"
+msgstr ""
+
+#: ../inc/classes/audio-post-format/class-thrive-audio-post-custom.php:18
+msgid "Audio Custom Url"
+msgstr ""
+
+#: ../inc/classes/audio-post-format/class-thrive-audio-post-custom.php:25, ../inc/classes/audio-post-format/class-thrive-audio-post-soundcloud.php:25, ../inc/classes/video-post-format/class-thrive-video-post-bunnynet.php:35, ../inc/classes/video-post-format/class-thrive-video-post-custom.php:25, ../inc/classes/video-post-format/class-thrive-video-post-vimeo.php:27, ../inc/classes/video-post-format/class-thrive-video-post-wistia.php:27, ../inc/classes/video-post-format/class-thrive-video-post-youtube.php:51
+msgid "Autoplay"
+msgstr ""
+
+#: ../inc/classes/audio-post-format/class-thrive-audio-post-custom.php:29, ../inc/classes/video-post-format/class-thrive-video-post-bunnynet.php:40, ../inc/classes/video-post-format/class-thrive-video-post-custom.php:29, ../inc/classes/video-post-format/class-thrive-video-post-vimeo.php:31, ../inc/classes/video-post-format/class-thrive-video-post-wistia.php:31, ../inc/classes/video-post-format/class-thrive-video-post-youtube.php:55
+msgid "Note: Autoplay is muted by default."
+msgstr ""
+
+#: ../inc/classes/audio-post-format/class-thrive-audio-post-custom.php:33, ../inc/classes/video-post-format/class-thrive-video-post-bunnynet.php:53, ../inc/classes/video-post-format/class-thrive-video-post-custom.php:33
+msgid "Loop"
+msgstr ""
+
+#: ../inc/classes/audio-post-format/class-thrive-audio-post-custom.php:40
+msgid "Allow Users to Download"
+msgstr ""
+
+#: ../inc/classes/audio-post-format/class-thrive-audio-post-soundcloud.php:18
+msgid "Audio Soundcloud url"
+msgstr ""
+
+#: ../inc/classes/audio-post-format/class-thrive-audio-post-soundcloud.php:33
+msgid "Hide Artwork"
+msgstr ""
+
+#: ../inc/classes/audio-post-format/class-thrive-audio-post-soundcloud.php:40
+msgid "Hide User"
+msgstr ""
+
+#: ../inc/classes/audio-post-format/class-thrive-audio-post-spotify.php:18
+msgid "Audio Spotify Url"
+msgstr ""
+
+#: ../inc/classes/transfer/class-thrive-transfer-import.php:90
+msgid "The PHP ZipArchive extension must be enabled in order to use this functionality. Please contact your hosting provider."
+msgstr ""
+
+#: ../inc/classes/transfer/class-thrive-transfer-import.php:96
+msgid "Could not open the archive file"
+msgstr ""
+
+#: ../inc/classes/utils/class-thrive-utils.php:348
+msgid "Post Types"
+msgstr ""
+
+#: ../inc/classes/utils/class-thrive-utils.php:355, ../inc/templates/backbone/dashboard/main/templates/filters.phtml:19
+msgid "Archives"
+msgstr ""
+
+#: ../inc/classes/utils/class-thrive-utils.php:374
+msgid "Date"
+msgstr ""
+
+#: ../inc/classes/utils/class-thrive-utils.php:378
+msgid "Authors"
+msgstr ""
+
+#: ../inc/classes/utils/class-thrive-utils.php:1001
+msgid "Post title"
+msgstr ""
+
+#: ../inc/classes/utils/class-thrive-utils.php:1007
+msgid "Change Featured Image"
+msgstr ""
+
+#: ../inc/classes/utils/class-thrive-utils.php:1095, ../integrations/landingpage/elements/class-thrive-landingpage-section-element.php:171, ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:174
+msgid "Visibility"
+msgstr ""
+
+#: ../inc/classes/utils/class-thrive-utils.php:1103, ../integrations/landingpage/elements/class-thrive-landingpage-section-element.php:109, ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:101
+msgid "Inherit content size from layout"
+msgstr ""
+
+#: ../inc/classes/utils/class-thrive-utils.php:1111, ../integrations/landingpage/elements/class-thrive-landingpage-section-element.php:101, ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:93
+msgid "Stretch background to full width"
+msgstr ""
+
+#: ../inc/classes/utils/class-thrive-utils.php:1121, ../integrations/landingpage/elements/class-thrive-landingpage-section-element.php:119, ../integrations/architect/classes/elements/class-thrive-template-content-element.php:87
+msgid "Content Width"
+msgstr ""
+
+#: ../inc/classes/utils/class-thrive-utils.php:1130
+msgid "Stretch content to full width"
+msgstr ""
+
+#: ../inc/classes/utils/class-thrive-utils.php:1140, ../integrations/landingpage/elements/class-thrive-landingpage-section-element.php:139
+msgid "Section Minimum Height"
+msgstr ""
+
+#: ../inc/classes/utils/class-thrive-utils.php:1149, ../integrations/landingpage/elements/class-thrive-landingpage-section-element.php:148
+msgid "Vertical Position"
+msgstr ""
+
+#: ../inc/classes/utils/class-thrive-utils.php:1176
+msgid "Push Content"
+msgstr ""
+
+#: ../inc/classes/utils/class-thrive-utils.php:1181
+msgid "Over Content"
+msgstr ""
+
+#: ../inc/classes/video-post-format/class-thrive-video-post-bunnynet.php:20, ../inc/classes/video-post-format/class-thrive-video-post-vimeo.php:20, ../inc/classes/video-post-format/class-thrive-video-post-wistia.php:20, ../inc/classes/video-post-format/class-thrive-video-post-youtube.php:21
+msgid "Video Url"
+msgstr ""
+
+#: ../inc/classes/video-post-format/class-thrive-video-post-bunnynet.php:27
+msgid "Responsive"
+msgstr ""
+
+#: ../inc/classes/video-post-format/class-thrive-video-post-bunnynet.php:45
+msgid "Preload"
+msgstr ""
+
+#: ../inc/classes/video-post-format/class-thrive-video-post-bunnynet.php:61
+msgid "Muted"
+msgstr ""
+
+#: ../inc/classes/video-post-format/class-thrive-video-post-bunnynet.php:69
+msgid "Lazy load"
+msgstr ""
+
+#: ../inc/classes/video-post-format/class-thrive-video-post-custom.php:18
+msgid "Video Custom Url or Embed Code"
+msgstr ""
+
+#: ../inc/classes/video-post-format/class-thrive-video-post-custom.php:20
+msgid "Add a video URL from the Media tab, or upload a video."
+msgstr ""
+
+#: ../inc/classes/video-post-format/class-thrive-video-post-custom.php:40
+msgid "Hide Controls"
+msgstr ""
+
+#: ../inc/classes/video-post-format/class-thrive-video-post-vimeo.php:35
+msgid "Hide the user image"
+msgstr ""
+
+#: ../inc/classes/video-post-format/class-thrive-video-post-vimeo.php:43
+msgid "Hide the \"by\" line"
+msgstr ""
+
+#: ../inc/classes/video-post-format/class-thrive-video-post-vimeo.php:51
+msgid "Hide title bar"
+msgstr ""
+
+#: ../inc/classes/video-post-format/class-thrive-video-post-wistia.php:36
+msgid "Disable the Play bar"
+msgstr ""
+
+#: ../inc/classes/video-post-format/class-thrive-video-post-wistia.php:44, ../inc/classes/video-post-format/class-thrive-video-post-youtube.php:60
+msgid "Hide full-screen button"
+msgstr ""
+
+#: ../inc/classes/video-post-format/class-thrive-video-post-youtube.php:28
+msgid "Auto-hide Youtube logo"
+msgstr ""
+
+#: ../inc/classes/video-post-format/class-thrive-video-post-youtube.php:35
+msgid "Auto-hide player controls "
+msgstr ""
+
+#: ../inc/classes/video-post-format/class-thrive-video-post-youtube.php:43
+msgid "Optimize related videos"
+msgstr ""
+
+#: ../inc/templates/admin/incompatible-architect.php:29
+msgid "It looks like you have Thrive Architect installed, but it's not compatible with this version of Thrive Theme Builder. Thrive Theme Builder uses Thrive Architect to edit various pieces of content. To be able to use these features, please make sure you have the latest versions by clicking on the following link and updating <strong>%s</strong>:"
+msgstr ""
+
+#: ../inc/templates/admin/no-template-settings-notice.php:16, ../integrations/architect/views/components/editor/post-type-template-settings.php:19, ../integrations/architect/views/components/editor/template-settings.php:5
+msgid "Template Settings"
+msgstr ""
+
+#: ../inc/templates/admin/no-template-settings-notice.php:20
+msgid "You can modify the template that this content is using directly in the Thrive Architect post settings."
+msgstr ""
+
+#: ../inc/templates/admin/no-template-settings-notice.php:24
+msgid "Show me how"
+msgstr ""
+
+#: ../inc/templates/admin/post-format-metabox.php:14
+msgid "Toggle panel: Thrive Video Post Format Options"
+msgstr ""
+
+#: ../inc/templates/admin/post-format-metabox.php:16
+msgid "Thrive Video Post Format Options"
+msgstr ""
+
+#: ../inc/templates/admin/post-format-metabox.php:47
+msgid "Toggle panel: Thrive Audio Post Format Options"
+msgstr ""
+
+#: ../inc/templates/admin/post-format-metabox.php:49
+msgid "Thrive Audio Post Format Options"
+msgstr ""
+
+#: ../inc/templates/admin/reset-page.php:46
+msgid "Reset your Theme"
+msgstr ""
+
+#: ../inc/templates/admin/reset-page.php:47
+msgid "Use the button below to reset your theme to its default state."
+msgstr ""
+
+#: ../inc/templates/admin/reset-page.php:48
+msgid "Warning: Resetting the theme will remove all custom templates that you've created and cannot be undone!"
+msgstr ""
+
+#: ../inc/templates/admin/reset-page.php:50
+msgid "Are you sure you want to reset your theme?"
+msgstr ""
+
+#: ../inc/templates/admin/reset-page.php:54
+msgid "Yes, I want to Reset the Theme"
+msgstr ""
+
+#: ../inc/templates/admin/reset-page.php:57
+msgid "Remove all data from the theme builder"
+msgstr ""
+
+#: ../inc/templates/admin/scripts-metabox.php:16
+msgid "Header scripts"
+msgstr ""
+
+#: ../inc/templates/admin/scripts-metabox.php:21, ../integrations/architect/views/components/editor/scripts-settings.php:26
+msgid "Header Scripts"
+msgstr ""
+
+#: ../inc/templates/admin/scripts-metabox.php:26
+msgid "Body (header) scripts"
+msgstr ""
+
+#: ../inc/templates/admin/scripts-metabox.php:31, ../integrations/architect/views/components/editor/scripts-settings.php:31
+msgid "Body Scripts"
+msgstr ""
+
+#: ../inc/templates/admin/scripts-metabox.php:36
+msgid "Body (footer) scripts"
+msgstr ""
+
+#: ../inc/templates/admin/scripts-metabox.php:41, ../integrations/architect/views/components/editor/scripts-settings.php:36
+msgid "Footer Scripts"
+msgstr ""
+
+#: ../inc/templates/admin/templates-meta-box.php:22, ../integrations/landingpage/elements/class-thrive-landingpage-section-element.php:94, ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:86
+msgid "Template"
+msgstr ""
+
+#: ../inc/templates/admin/templates-meta-box.php:36
+msgid "AMP Settings"
+msgstr ""
+
+#: ../inc/templates/admin/templates-meta-box.php:46, ../integrations/architect/class-thrive-architect.php:1691
+msgid "Disable AMP for this post"
+msgstr ""
+
+#: ../inc/templates/admin/user-social-url.php:1
+msgid "Thrive Social URL Settings"
+msgstr ""
+
+#: ../inc/templates/admin/user-social-url.php:14
+msgid "Add your site URL here."
+msgstr ""
+
+#: ../inc/templates/admin/visibility-meta-box.php:15
+msgid "Section Visibility"
+msgstr ""
+
+#: ../inc/templates/admin/visibility-meta-box.php:26, ../integrations/architect/class-thrive-architect.php:1624, ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-text-element.php:65, ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-text-element.php:99, ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-text-element.php:119
+msgid "Inherit"
+msgstr ""
+
+#: ../inc/templates/admin/visibility-meta-box.php:27, ../integrations/architect/class-thrive-architect.php:1628
+msgid "Show"
+msgstr ""
+
+#: ../inc/templates/admin/visibility-meta-box.php:28, ../integrations/architect/class-thrive-architect.php:1632
+msgid "Hide"
+msgstr ""
+
+#: ../inc/templates/admin/visibility-meta-box.php:36
+msgid "Element Visibility"
+msgstr ""
+
+#: ../inc/templates/content/content-audio.php:39, ../inc/templates/content/content-video.php:39, ../inc/templates/content/content.php:37
+msgid "comments"
+msgstr ""
+
+#: ../inc/templates/default/error404.php:17, ../integrations/architect/classes/class-thrive-post-list.php:285
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+
+#: ../inc/templates/default/sidebar.php:16
+msgid "Categories"
+msgstr ""
+
+#: ../inc/templates/default/sidebar.php:24
+msgid "Recent Posts"
+msgstr ""
+
+#: ../inc/templates/noop/index.php:26
+msgid "Search:"
+msgstr ""
+
+#: ../inc/templates/noop/index.php:42
+msgid "We could not find any results for your search. You can give it another try through the search form below."
+msgstr ""
+
+#: ../inc/templates/noop/index.php:33
+msgid "We found %s result for your search."
+msgid_plural "We found %s results for your search."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../inc/templates/noop/index.php:93
+msgid "search again"
+msgstr ""
+
+#: ../inc/templates/parts/author-box-element-default.php:31
+msgid "Follow me"
+msgstr ""
+
+#: ../inc/templates/parts/default-term-description.php:4
+msgid "Taxonomy Description Field not Found"
+msgstr ""
+
+#: ../inc/templates/parts/default-term-description.php:5
+msgid "The taxonomy description field doesn't exist for the current taxonomy so no content will be displayed"
+msgstr ""
+
+#: ../inc/templates/parts/extra-dynamic-links.php:13
+msgid "Next piece of content"
+msgstr ""
+
+#: ../inc/templates/parts/extra-dynamic-links.php:14
+msgid "Previous piece of content"
+msgstr ""
+
+#: ../inc/templates/parts/extra-links.php:15
+msgid "Reset template"
+msgstr ""
+
+#: ../inc/templates/parts/lp-custom-scripts.php:16
+msgid "Custom Scripts are now more easily accessibile in the left settings sidebar"
+msgstr ""
+
+#: ../inc/templates/parts/tar-light-notice.php:14
+msgid "You are using Thrive Architect Light"
+msgstr ""
+
+#: ../inc/templates/parts/tar-light-notice.php:15
+msgid "Upgrade to the full version for 30+ conversion focused elements, 150+ landing page templates and pre-built content and block templates"
+msgstr ""
+
+#: ../inc/templates/parts/tar-light-notice.php:16
+msgid "Get the Full Version"
+msgstr ""
+
+#: ../inc/templates/parts/top-content.php:32
+msgid "You are editing content"
+msgstr ""
+
+#: ../inc/templates/parts/top-content.php:36
+msgid "Edit content with Thrive Architect"
+msgstr ""
+
+#: ../inc/templates/parts/top-content.php:38
+msgid "Thrive Architect is a %sWordPress Page Builder%s, with the help of which you can edit the actual content of your posts/pages individually. Just drag & drop content elements with your mouse into the page and then customize each element directly using the left sidebar options."
+msgstr ""
+
+#: ../inc/templates/parts/top-content.php:40
+msgid "Find more about Thrive Architect"
+msgstr ""
+
+#: ../inc/templates/parts/top-content.php:17
+msgid "You are editing a template"
+msgstr ""
+
+#: ../inc/templates/parts/top-content.php:21
+msgid "Edit template with Theme Builder"
+msgstr ""
+
+#: ../inc/templates/parts/top-content.php:23
+msgid "Using Thrive Theme Builder, you are able to build a theme from scratch. This means that you can create templates for various types of content (pages/posts/lists). Once you have created and customized the templates, you can apply a single template to multiple pages or posts of your site. You can also set global settings as colors, logos and fonts."
+msgstr ""
+
+#: ../inc/templates/parts/top-content.php:25
+msgid "Find more about Theme Builder"
+msgstr ""
+
+#: ../inc/classes/transfer/items/class-thrive-transfer-images.php:204
+msgid "Could not upload the image: %s"
+msgstr ""
+
+#: ../inc/classes/transfer/items/class-thrive-transfer-template.php:193
+msgid "Invalid archive, unknown template found!"
+msgstr ""
+
+#: ../inc/templates/admin/audio-post-format/custom.php:28
+msgid "Upload Audio"
+msgstr ""
+
+#: ../inc/templates/admin/audio-post-format/custom.php:35, ../inc/templates/admin/audio-post-format/soundcloud.php:32, ../inc/templates/admin/video-post-format/bunnynet.php:33, ../inc/templates/admin/video-post-format/custom.php:36, ../inc/templates/admin/video-post-format/vimeo.php:33, ../inc/templates/admin/video-post-format/wistia.php:33, ../inc/templates/admin/video-post-format/youtube.php:33
+msgid "Options"
+msgstr ""
+
+#: ../inc/templates/admin/category/add-form.php:13, ../inc/templates/admin/category/edit-form.php:15
+msgid "Redirect Category to a Page"
+msgstr ""
+
+#: ../inc/templates/admin/category/add-form.php:15, ../inc/templates/admin/category/edit-form.php:19, ../integrations/architect/views/backbone/theme-main/dynamic-link-dropdown.phtml:3
+msgid "None"
+msgstr ""
+
+#: ../inc/templates/admin/category/add-form.php:21, ../inc/templates/admin/category/edit-form.php:24
+msgid "If set you can replace the WordPress category page with your own highly optimised landing page"
+msgstr ""
+
+#: ../inc/templates/admin/video-post-format/custom.php:29
+msgid "Upload Video"
+msgstr ""
+
+#: ../inc/templates/admin/video-post-format/vimeo.php:57, ../inc/templates/admin/video-post-format/wistia.php:56, ../inc/templates/admin/video-post-format/youtube.php:58
+msgid "Video Start Time"
+msgstr ""
+
+#: ../inc/templates/admin/video-post-format/vimeo.php:60, ../inc/templates/admin/video-post-format/wistia.php:59, ../inc/templates/admin/video-post-format/youtube.php:61
+msgid "Minutes"
+msgstr ""
+
+#: ../inc/templates/admin/video-post-format/vimeo.php:64, ../inc/templates/admin/video-post-format/wistia.php:63, ../inc/templates/admin/video-post-format/youtube.php:65
+msgid "Seconds"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/no-skin.phtml:8
+msgid "Welcome to Thrive Theme Builder"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/no-skin.phtml:11
+msgid "Download and Activate Theme"
+msgstr ""
+
+#: ../inc/templates/noop/template-parts/content.php:35
+msgid "Continue reading"
+msgstr ""
+
+#: ../inc/templates/noop/template-parts/content.php:45, ../integrations/wizard/structure.php:97, ../integrations/wizard/structure.php:98, ../integrations/architect/classes/class-thrive-theme-default-data.php:265
+msgid "Page"
+msgstr ""
+
+#: ../inc/templates/noop/template-parts/content.php:45
+msgid "Pages:"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard.phtml:5
+msgid "Close the wizard and go to Thrive Theme Builder Dashboard"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard.phtml:24
+msgid "Quick Tip"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard.phtml:28
+msgid "Don't show this again"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/preview/info.phtml:7
+msgid "Currently Previewing"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/preview/info.phtml:19
+msgid "Manage"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/preview/item.phtml:2, ../integrations/architect/views/backbone/architect-main/page-template-item.phtml:16
+msgid "Active"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/preview/item.phtml:4
+msgid "Preview Open"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/preview/item.phtml:8, ../inc/templates/backbone/dashboard/main/skins/item.phtml:25, ../inc/templates/backbone/dashboard/main/templates/options-tooltip.phtml:14, ../inc/templates/backbone/dashboard/modals/skins/cloud/item.phtml:5
+msgid "Preview"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/preview/list.phtml:2
+msgid "My Theme Library"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/preview/main.phtml:10, ../inc/templates/backbone/dashboard/main/skins/item.phtml:13, ../integrations/architect/views/backbone/architect-main/page-template-item.phtml:13
+msgid "Activate"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/preview/main.phtml:14
+msgid "Hide Toolbar"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/preview/main.phtml:15, ../inc/templates/backbone/dashboard/preview/main.phtml:21
+msgid "Close Preview"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/preview/main.phtml:20
+msgid "Show Toolbar"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/settings.phtml:2, ../integrations/architect/classes/elements/class-thrive-template-wrapper-element.php:17
+msgid "Settings"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/settings.phtml:3
+msgid "Manage theme settings"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/settings.phtml:7
+msgid "Import Settings"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/settings.phtml:8
+msgid "Export Settings"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/templates.phtml:2
+msgid "Page Templates"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/templates.phtml:3
+msgid "Manage your page, archive and custom templates"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/templates.phtml:13
+msgid "Show Template Types:"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/templates.phtml:18
+msgid "Single Content"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/templates.phtml:23
+msgid "Lists"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/typography.phtml:3
+msgid "Customize all general Typography on your current Theme"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/wizard.phtml:2
+msgid "Site Wizard"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/wizard.phtml:3
+msgid "Use this Wizard to design the site you want."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/wizard.phtml:15
+msgid "Restart Wizard"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/wizard.phtml:16
+msgid "Go to the 1st step and resume the settings"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/wizard.phtml:17
+msgid "Restart the Wizard"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image.phtml:7
+msgid "Large and inefficient images can slow down loading times significantly."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image.phtml:8
+msgid "Here are a list of recommendations, settings and integrations to ensure all images are saved and served optimally"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image.phtml:13
+msgid "Compress and serve your images across a delivery network at exactly the right dimensions (adaptive images)."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image.phtml:15
+msgid "This ensures image files are small and loaded quickly."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image.phtml:19
+msgid "Choose a solution  that's right for you."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image.phtml:22
+msgid "Fully Automated"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image.phtml:23
+msgid "No Cost"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image.phtml:28
+msgid "Fully Automated Image Optimization"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image.phtml:30
+msgid "Thrive Themes has a full integration with Optimole. Optimole handles image compression, displays images at exactly the right dimensions and includes a CDN for fast loading times."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image.phtml:31
+msgid "The service is also free up to 5,000 hits per month."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image.phtml:38
+msgid "Full Image Optimization"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image.phtml:39
+msgid "Smush allows you to compress an unlimited number of images on their free plan (good for beginners and those on a budget). You'll need to upgrade to their pro plan for adaptive images and CDN support."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image.phtml:44
+msgid "Image Optimization Activated"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image.phtml:47
+msgid "Fully Automated Image Optimization Activated"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/main.phtml:10
+msgid "Optimize assets like CSS and Javascript for a blazing fast website"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/main.phtml:19
+msgid "Image Optimization and Delivery"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/main.phtml:22
+msgid "Serve your images at the right dimensions, compression and from a CDN (servers that work together to ensure fast delivery). Your images should be fully optimized for fast performance."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/main.phtml:34
+msgid "Reduce the size of your site by compressing scripts and styles. Create static copies of your pages to bypass loading WordPress for every hit to your site resulting in notably faster load speed."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/main.phtml:46
+msgid "Activate Accelerated Mobile Pages (AMP) to create better, faster experiences for your visitors on the mobile web."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/skins/item.phtml:17, ../inc/templates/backbone/dashboard/main/skins/options-tooltip.phtml:19, ../inc/templates/backbone/dashboard/main/templates/options-tooltip.phtml:31
+msgid "Duplicate"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/skins/item.phtml:21, ../inc/templates/backbone/dashboard/modals/skins/export.phtml:15
+msgid "Export"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/skins/main.phtml:4
+msgid "Manage themes"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/skins/main.phtml:8
+msgid "+ Add theme"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/skins/options-tooltip.phtml:14, ../inc/templates/backbone/dashboard/main/templates/options-tooltip.phtml:23, ../integrations/architect/views/backbone/theme-main/template-item.phtml:9
+msgid "Rename"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/skins/options-tooltip.phtml:23, ../inc/templates/backbone/dashboard/main/templates/options-tooltip.phtml:27, ../integrations/architect/views/backbone/theme-main/template-item.phtml:10
+msgid "Delete"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/start/card.phtml:38
+msgid "Open Wizard"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/start/card.phtml:40
+msgid "Start Wizard"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/filters.phtml:10
+msgid "Core Templates"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/filters.phtml:11
+msgid "Only show the most basic templates that control your website's look."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/filters.phtml:14
+msgid "Homepage Templates"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/filters.phtml:15
+msgid "Show templates specifically for building your homepage."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/filters.phtml:20
+msgid "Only show Archives List Templates."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/filters.phtml:23
+msgid "Custom Post Templates"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/filters.phtml:24
+msgid "Only show templates for these custom posts:"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/filters.phtml:27
+msgid "All Custom Posts"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/filters.phtml:36
+msgid "All Templates"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/filters.phtml:37
+msgid "All available templates for the active theme."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/homepage-item.phtml:17
+msgid "Your homepage is currently using the"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/homepage-item.phtml:17
+msgid "template"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/homepage-item.phtml:21
+msgid "Edit existing template"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/homepage-item.phtml:24, ../inc/templates/backbone/dashboard/main/wizard/menu.phtml:49, ../inc/templates/backbone/dashboard/modals/templates/create-page.phtml:57, ../inc/templates/backbone/dashboard/main/wizard/woo/header-footer.phtml:9
+msgid "or"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/homepage-item.phtml:28
+msgid "Create new homepage template"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/homepage-item.phtml:36, ../inc/templates/backbone/dashboard/main/templates/item.phtml:15, ../inc/templates/backbone/dashboard/main/typography/item.phtml:37, ../integrations/architect/views/backbone/theme-main/section-overlay.phtml:7, ../integrations/architect/views/backbone/theme-main/controls/section-select.phtml:33
+msgid "Edit"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/homepage-item.phtml:58, ../inc/templates/backbone/dashboard/main/templates/item.phtml:31, ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-styled-list-element.php:100
+msgid "Layout"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/homepage-item.phtml:64, ../inc/templates/backbone/dashboard/main/templates/item.phtml:35
+msgid "Content Type"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/homepage-item.phtml:69
+msgid "Page Set"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/homepage-item.phtml:72, ../inc/templates/backbone/dashboard/main/templates/item.phtml:39
+msgid "Single or List"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/main.phtml:4
+msgid "Your Theme Templates"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/main.phtml:13, ../integrations/woocommerce/views/no-products-placeholder.php:34
+msgid "Add New"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/main.phtml:19
+msgid "Single Content Templates"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/main.phtml:20
+msgid "Used to display individual posts, pages etc."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/main.phtml:28
+msgid "List Templates"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/main.phtml:29
+msgid "Used to display list pages like search results, your blog feed, etc."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/options-tooltip.phtml:18
+msgid "Set as default"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/templates/options-tooltip.phtml:35, ../inc/templates/backbone/dashboard/main/typography/item.phtml:32, ../inc/templates/backbone/dashboard/sidebar/branding/logo/item.phtml:5
+msgid "Reset"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/typography/item.phtml:4
+msgid "Currently Active"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/typography/item.phtml:6
+msgid "Make Active"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/typography/item.phtml:9
+msgid "Expand"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/typography/item.phtml:27
+msgid "Remove"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/typography/main.phtml:3
+msgid "Your Theme's Basic Typography"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/typography/main.phtml:6
+msgid "Create New Set"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/typography/main.phtml:12
+msgid "Other Available Typography Sets"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/menu.phtml:3
+msgid "Which menus do you want to use in Headers and Footers?"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/menu.phtml:9
+msgid "Header Menu"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/menu.phtml:25
+msgid "Footer Menu"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/menu.phtml:40
+msgid "Activate Menus on my Site"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/menu.phtml:45
+msgid "create your first menu"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/menu.phtml:52
+msgid "Continue without Choosing a Menu"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-color.phtml:2
+msgid "What is your main brand colour?"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-finished.phtml:3
+msgid "Wizard Setup Complete"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-finished.phtml:4
+msgid "Your site has now been built using the designs you've chosen."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-finished.phtml:5
+msgid "You can revisit the wizard at any time by clicking on the options%s in the left panel."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-finished.phtml:9
+msgid "Preview My Site"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-finished.phtml:13
+msgid "Learn what to do Next"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-finished.phtml:17
+msgid "Go to dashboard"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-logo.phtml:2
+msgid "Upload a logo for your site"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-logo.phtml:14
+msgid "Preview your logo on different backgrounds"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-logo.phtml:21
+msgid "Edit dark logo"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-logo.phtml:24, ../inc/templates/backbone/dashboard/main/wizard/overlay-logo.phtml:36, ../inc/templates/backbone/dashboard/main/wizard/overlay-logo.phtml:52
+msgid "Recommended size: 250x40px"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-logo.phtml:33
+msgid "Edit light logo"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-logo.phtml:49
+msgid "Upload your own logo"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-welcome.phtml:3
+msgid "Welcome to the Theme Builder Wizard"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-welcome.phtml:5
+msgid "This wizard gives you the opportunity to setup the most important things on your site as quickly as possible."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-welcome.phtml:6
+msgid "In the wizard, we've built everything for you."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-welcome.phtml:10
+msgid "You can upload your logo, choose your favorite header and footer design, decide what should be shown on your homepage, select the look of your blog list... and so on."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-welcome.phtml:11
+msgid "Once you've been through the wizard, you can then use our visual template editor to make any further modifications you please."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-welcome.phtml:13
+msgid "Get Started!"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/overlay-welcome.phtml:14
+msgid "I'll set this up later"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/top.phtml:7
+msgid "Previous step"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/cloud-templates/main.phtml:9
+msgid "Filter templates"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/cloud-templates/main.phtml:25
+msgid "BACK to previous step"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/cloud-templates/main.phtml:30, ../inc/templates/backbone/dashboard/modals/skins/cloud/main.phtml:13
+msgid "Refresh from cloud"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/cloud-templates/main.phtml:39
+msgid "Create Template"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/create.phtml:4
+msgid "Themes define the general look of your website."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/create.phtml:15
+msgid "Create a New Theme"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/create.phtml:18
+msgid "Step 1"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/create.phtml:19
+msgid "What type of theme do you want to add ?"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/create.phtml:24
+msgid "Load from the Thrive Cloud"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/create.phtml:29
+msgid "Import From File"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/create.phtml:35
+msgid "Your Theme Name"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/create.phtml:39, ../inc/templates/backbone/dashboard/modals/skins/create.phtml:61
+msgid "Step 2"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/create.phtml:40
+msgid "Choose a name for your new theme"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/create.phtml:44
+msgid "New Theme Name"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/create.phtml:45
+msgid "My New Theme"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/create.phtml:47
+msgid "Please specify the name of your new theme."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/create.phtml:52, ../inc/templates/backbone/dashboard/modals/skins/create.phtml:65, ../inc/templates/backbone/dashboard/modals/skins/create.phtml:72, ../integrations/amp/classes/parsers/class-menu.php:216
+msgid "Back"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/create.phtml:53, ../inc/templates/backbone/dashboard/modals/templates/create-homepage.phtml:22, ../inc/templates/backbone/dashboard/modals/templates/create-post.phtml:52
+msgid "Finish"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/create.phtml:58
+msgid "Upload a Theme"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/create.phtml:62
+msgid "Choose the theme file you want to upload"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/create.phtml:66
+msgid "Upload File"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/delete.phtml:1, ../inc/templates/backbone/dashboard/modals/skins/delete.phtml:10
+msgid "Delete theme"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/delete.phtml:3
+msgid "Are you sure you want to delete the theme? "
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/delete.phtml:5, ../inc/templates/backbone/dashboard/modals/templates/delete.phtml:5, ../inc/templates/backbone/dashboard/modals/typography/delete.phtml:5
+msgid "This cannot be undone."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/delete.phtml:9, ../inc/templates/backbone/dashboard/modals/skins/export.phtml:14, ../inc/templates/backbone/dashboard/modals/templates/delete.phtml:9, ../inc/templates/backbone/dashboard/modals/templates/reset.php:9, ../inc/templates/backbone/dashboard/modals/typography/delete.phtml:9, ../inc/templates/backbone/dashboard/modals/typography/reset.php:9, ../integrations/architect/views/modals/reset-template.php:20, ../integrations/architect/views/backbone/theme-main/template-item.phtml:34
+msgid "Cancel"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/export.phtml:1
+msgid "Export theme"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/export.phtml:6
+msgid "Archive name"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/export.phtml:8
+msgid "Please specify the name of the export archive."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/start/main.phtml:17
+msgid "Knowledge Base"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/start/main.phtml:20
+msgid "Search our extensive knowledge base for “how-to” articles and instructions."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/start/main.phtml:25
+msgid "Thrive University"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/start/main.phtml:28
+msgid "Take one of our online courses on website building and online marketing."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/start/main.phtml:32
+msgid "Get Support"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/start/main.phtml:35
+msgid "Contact our friendly support team who will help you with any issues or questions."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-homepage.phtml:4
+msgid "Homepage templates allow you to create unique designs for your homepage without affecting the rest of your site."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-homepage.phtml:11, ../inc/templates/backbone/dashboard/modals/templates/create-page.phtml:11
+msgid "Your Template Name"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-homepage.phtml:14, ../inc/templates/backbone/dashboard/modals/templates/create-page.phtml:14
+msgid "New Template Name"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-homepage.phtml:15, ../inc/templates/backbone/dashboard/modals/templates/create-page.phtml:15
+msgid "My New Template"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-homepage.phtml:17, ../inc/templates/backbone/dashboard/modals/templates/create-page.phtml:17
+msgid "Please specify the name of your template."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-page.phtml:4
+msgid "The custom templates you create here can be used on different types of posts, as well as various pages, or list pages."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-page.phtml:21
+msgid "Single or List ?"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-page.phtml:27
+msgid "Single"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-page.phtml:34
+msgid "List"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-page.phtml:42
+msgid "Defined for:"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-page.phtml:54
+msgid "Start from Scratch"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-page.phtml:60
+msgid "Choose Template"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-post.phtml:4
+msgid "Blog post templates determine the design of individual blog posts."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-post.phtml:9
+msgid "List templates determine the design of post lists."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-post.phtml:16
+msgid "Enable post format template"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-post.phtml:19
+msgid "Choose the format you want this template to have"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-post.phtml:23
+msgid "Post Formats"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-post.phtml:26, ../integrations/conditional-display/fields/class-post-format.php:46
+msgid "Standard"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-post.phtml:37, ../inc/templates/backbone/dashboard/main/performance/amp/main.phtml:90
+msgid "Save"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-post.phtml:42
+msgid "Create a List Template"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/create-post.phtml:43
+msgid "What will this archive/list display?"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/delete.phtml:1, ../inc/templates/backbone/dashboard/modals/templates/delete.phtml:10
+msgid "Delete Template"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/delete.phtml:3
+msgid "Are you sure you want to delete the template"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/reset.php:1, ../inc/templates/backbone/dashboard/modals/templates/reset.php:10, ../integrations/architect/views/modals/reset-template.php:13, ../integrations/architect/views/modals/reset-template.php:21
+msgid "Reset Template"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/reset.php:3
+msgid "Are you sure you want to reset the template"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/templates/reset.php:5, ../inc/templates/backbone/dashboard/modals/typography/reset.php:5, ../integrations/architect/views/modals/reset-template.php:16
+msgid "You will lose any customizations made to it."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/typography/delete.phtml:1, ../inc/templates/backbone/dashboard/modals/typography/delete.phtml:10
+msgid "Delete set"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/typography/delete.phtml:3
+msgid "Are you sure you want to delete the typography set"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/typography/reset.php:1
+msgid "Reset typography set"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/typography/reset.php:3
+msgid "Are you sure you want to reset the typography set"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/typography/reset.php:10
+msgid "Reset set"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/wizard/lp-template.phtml:7
+msgid "Design Pack"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/wizard/lp-templates.phtml:14
+msgid "Default Templates"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/wizard/lp-templates.phtml:18
+msgid "Ready-Made Templates"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/wizard/lp-templates.phtml:25
+msgid "My Templates"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/wizard/lp-templates.phtml:29
+msgid "Saved Landing Pages"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/branding/main.phtml:3
+msgid "Customize the theme to match your brand"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/performance/main.phtml:2
+msgid "Performance"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/performance/main.phtml:3
+msgid "A performance checklist to ensure you have a blazing fast site"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/amp/main.phtml:2
+msgid "Accelerated Mobile Pages ( AMP )"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/amp/main.phtml:3
+msgid "Beta"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/amp/main.phtml:9
+msgid "AMP is a technology that's been created to help sites load blazingly fast on mobile devices"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/amp/main.phtml:10
+msgid "By enabling AMP support, visitors to your site will see a 'cached' version of your content loaded directly from Google's servers..."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/amp/main.phtml:13
+msgid "Click here to learn more about AMP"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/amp/main.phtml:23
+msgid "AMP"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/amp/main.phtml:33
+msgid "Get up and running with AMP in a Flash."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/amp/main.phtml:36
+msgid "AMP quick start guide"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/amp/main.phtml:40
+msgid "If you're unsure what AMP is, how it works and what you need to do to enable it on your site, then follow our %s"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/amp/main.phtml:50
+msgid "Enable AMP on the following post types"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/amp/main.phtml:66
+msgid "Convert all internal links to point to AMP URLs"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/amp/main.phtml:76
+msgid "Install Google Analytics on AMP content"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/amp/main.phtml:84
+msgid "For Google Analytics on AMP see"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/amp/main.phtml:85
+msgid "adding Analytics to your AMP pages"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/amp/main.phtml:87
+msgid "Paste your Google Analytics code here"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/amp/main.phtml:91
+msgid "Saved"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/cache/button.phtml:6, ../inc/templates/backbone/dashboard/main/performance/image/plugin.phtml:42
+msgid "Restore recommended settings"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/cache/main.phtml:7
+msgid "While Thrive Products are compatible with most caching plugins available, we have developed a one-click setup process with certain recommended tools."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/cache/main.phtml:8
+msgid "Once installed, click the \"Configure my site for Optimal Caching\" and the recommended settings will be automatically deployed"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/cache/main.phtml:12
+msgid "Recommended Caching Plugins with One Click Configuration"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/cache/main.phtml:16
+msgid "was Successfully Activated"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/cache/main.phtml:21
+msgid "Warning - Multiple Caching Plugins Activated"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/cache/main.phtml:23
+msgid "We found multiple caching plugins activated on your site. Multiple caching plugins may cause problems, such as conflicts, and cause your site to break while offering no additional benefit."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/cache/main.phtml:25
+msgid "plugin dashboard"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/cache/plugin.phtml:4
+msgid "Premium"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/cache/plugin.phtml:11
+msgid "Are you Sure you want to Overwrite your Existing Cache Settings?"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/cache/plugin.phtml:15
+msgid "Some features like the Built-in Image Optimization or Dynamic & Object Caching only work on sites hosted on SiteGround"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/cache/plugin.phtml:17, ../inc/templates/backbone/dashboard/main/performance/cache/plugin.phtml:31, ../inc/templates/backbone/dashboard/main/performance/image/plugin.phtml:14, ../integrations/architect/views/modals/post-content-delete.php:37
+msgid "No, cancel"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/cache/plugin.phtml:18
+msgid "Yes, configure the cache "
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/cache/plugin.phtml:21, ../inc/templates/backbone/dashboard/main/performance/image/plugin.phtml:19
+msgid "Success"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/cache/plugin.phtml:22, ../inc/templates/backbone/dashboard/main/performance/image/plugin.phtml:20
+msgid "Settings were successfully installed"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/cache/plugin.phtml:27
+msgid "Are you Sure you want to Activate"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/cache/plugin.phtml:32
+msgid "Yes, activate "
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image/plugin.phtml:5
+msgid "Recommended"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image/plugin.phtml:10
+msgid "Are you Sure you want to Overwrite your Existing Optimole Settings?"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image/plugin.phtml:16
+msgid "Yes, configure Optimole"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image/plugin.phtml:29
+msgid "Not Registered. Click here to register"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image/plugin.phtml:35
+msgid "Configure Optimole for Optimal use with Thrive"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image/plugin.phtml:40
+msgid "Configured"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image/plugin.phtml:40
+msgid "Activated"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image/plugin.phtml:48
+msgid "Activate Now"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/performance/image/plugin.phtml:52
+msgid "Install Now"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/homepage/splash.phtml:2
+msgid "What do you want to display on your homepage?"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/homepage/splash.phtml:7
+msgid "Choose from%s ready-made homepages"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/homepage/splash.phtml:12
+msgid "Display one of%s your existing pages"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/homepage/splash.phtml:17
+msgid "Display your blog as%s homepage"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/top/homepage-edit-links.phtml:3
+msgid "Edit with Thrive Architect"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/top/homepage-edit-links.phtml:4, ../inc/templates/backbone/dashboard/main/wizard/top/homepage-edit-links.phtml:11
+msgid "Edit with"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/top/homepage-edit-links.phtml:10
+msgid "Edit with Theme Builder"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/top/homepage-template-confirmation.phtml:6
+msgid "Choosing a new homepage will permanently replace the one you had before"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/top/homepage-template-confirmation.phtml:10
+msgid "Are you sure you want to continue?"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/top/homepage-template-confirmation.phtml:15
+msgid "Yes, replace my homepage"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/top/homepage-template-confirmation.phtml:19
+msgid "No, keep my initial homepage"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/top/template-selector.phtml:10
+msgid "Load More"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/top/template-selector.phtml:11
+msgid "Loading"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/top/template-selector.phtml:21
+msgid "Display demo content"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/top/template-selector.phtml:23
+msgid "Display real content"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/top/template-selector.phtml:29
+msgid "You don't have real content for this step. You can use the demo content to see how the template will look like with real content."
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/top/template-selector.phtml:46
+msgid "Selected"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/woo/header-footer.phtml:4
+msgid "Shop "
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/woo/header-footer.phtml:7
+msgid "Choose an e-commerce "
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/woo/header-footer.phtml:7
+msgid " from the dropdown"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/main/wizard/woo/header-footer.phtml:12
+msgid "Use my default "
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/cloud/item.phtml:8
+msgid "Choose"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/cloud/item.phtml:10
+msgid "Download"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/cloud/main.phtml:3
+msgid "Choose a Theme"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/modals/skins/cloud/main.phtml:5
+msgid "Add a Theme from Thrive Cloud"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/branding/favicon/main.phtml:2
+msgid "Favicon"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/branding/favicon/main.phtml:13
+msgid "Change favicon"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/branding/favicon/main.phtml:17
+msgid "Reset favicon"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/branding/global-colors/list.phtml:1
+msgid "My Saved Theme Colors"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/branding/global-colors/tooltip.phtml:2
+msgid "Rename Color"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/branding/logo/item.phtml:2
+msgid "<#= this.model.getDisplayName() #>"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/branding/logo/main.phtml:2, ../integrations/wizard/structure.php:16
+msgid "Logo"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/branding/logo/main.phtml:7
+msgid "Recommended size:- 250px x 40px"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/branding/logo/main.phtml:10
+msgid "Logo links to"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/branding/logo/main.phtml:12
+msgid "Save URL"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/branding/skin-palettes/list.phtml:2, ../integrations/architect/views/backbone/theme-main/theme-style-panel/skin-colors.phtml:3
+msgid "Theme Colors"
+msgstr ""
+
+#: ../inc/templates/backbone/dashboard/sidebar/branding/skin-palettes/other-vars-header.phtml:2
+msgid "Other Variables"
+msgstr ""
+
+#: ../integrations/architect/class-thrive-architect.php:1664
+msgid "Show all hidden modules"
+msgstr ""
+
+#: ../integrations/architect/class-thrive-architect.php:1730
+msgid "Blank Page with Header and Footer"
+msgstr ""
+
+#: ../integrations/architect/class-thrive-architect.php:1735
+msgid "Start with a blank page that  includes your header and footer."
+msgstr ""
+
+#: ../integrations/architect/class-thrive-architect.php:1736
+msgid "Use this template to design full landing pages from scratch using blocks."
+msgstr ""
+
+#: ../integrations/architect/class-thrive-architect.php:1737
+msgid "This is mostly useful if you want to build a marketing page from scratch (sales pages, lead generation pages, webinar registrations)."
+msgstr ""
+
+#: ../integrations/architect/class-thrive-architect.php:1741
+msgid "Completely Blank Page"
+msgstr ""
+
+#: ../integrations/architect/class-thrive-architect.php:1746
+msgid "Start with a completely empty canvas."
+msgstr ""
+
+#: ../integrations/architect/class-thrive-architect.php:1747
+msgid "Use our page blocks feature to build a page from nothing. Build anything you want - your imagination is your only limit."
+msgstr ""
+
+#: ../integrations/cache/class-thrive-plugins-manager.php:84
+msgid "No plugin specified."
+msgstr ""
+
+#: ../integrations/cache/class-thrive-plugins-manager.php:150
+msgid "The plugin is already active"
+msgstr ""
+
+#: ../integrations/cache/class-thrive-plugins-manager.php:180
+msgid "The plugin could not be deactivated"
+msgstr ""
+
+#: ../integrations/dashboard/class-thrive-theme-dashboard.php:116
+msgid "Your theme has successfully been activated! Next step: please validate your license by entering your email and license key here: "
+msgstr ""
+
+#: ../integrations/dashboard/class-thrive-theme-dashboard.php:153
+msgid "Logo Link"
+msgstr ""
+
+#: ../integrations/dashboard/class-thrive-theme-product.php:66
+msgid "Fully customizable, front end theme and template editing for WordPress has arrived!"
+msgstr ""
+
+#: ../integrations/landingpage/class-thrive-landingpage-section.php:234
+msgid "Insert "
+msgstr ""
+
+#: ../integrations/landingpage/class-thrive-landingpage-section.php:234
+msgid " Section "
+msgstr ""
+
+#: ../integrations/wizard/structure.php:22
+msgid "Brand Colour"
+msgstr ""
+
+#: ../integrations/wizard/structure.php:29, ../integrations/wizard/structure.php:42, ../integrations/wizard/structure.php:68, ../integrations/wizard/structure.php:83, ../integrations/wizard/structure.php:99
+msgid "- Choose a template"
+msgstr ""
+
+#: ../integrations/wizard/structure.php:34
+msgid "Select a Header"
+msgstr ""
+
+#: ../integrations/wizard/structure.php:47
+msgid "Select a Footer"
+msgstr ""
+
+#: ../integrations/wizard/structure.php:54, ../integrations/wizard/structure.php:55
+msgid "Homepage"
+msgstr ""
+
+#: ../integrations/wizard/structure.php:61
+msgid "Select a Page"
+msgstr ""
+
+#: ../integrations/wizard/structure.php:67, ../integrations/wizard/structure.php:69
+msgid "Single Blog Post"
+msgstr ""
+
+#: ../integrations/wizard/structure.php:74, ../integrations/wizard/structure.php:89, ../integrations/wizard/structure.php:104
+msgid "Select a Template"
+msgstr ""
+
+#: ../integrations/wizard/structure.php:82, ../integrations/wizard/structure.php:84
+msgid "Blog Post List"
+msgstr ""
+
+#: ../integrations/wizard/structure.php:112, ../integrations/wizard/structure.php:114
+msgid "Menu"
+msgstr ""
+
+#: ../integrations/wizard/structure.php:113
+msgid "- Choose a menu"
+msgstr ""
+
+#: ../integrations/wizard/structure.php:123
+msgid "Site Branding"
+msgstr ""
+
+#: ../integrations/wizard/structure.php:127
+msgid "Site Structure"
+msgstr ""
+
+#: ../integrations/woocommerce/class-filters.php:334, ../integrations/woocommerce/class-main.php:166, ../integrations/woocommerce/elements/class-shop-template.php:32
+msgid "Shop"
+msgstr ""
+
+#: ../integrations/woocommerce/class-helpers.php:27, ../integrations/woocommerce/class-main.php:179
+msgid "WooCommerce"
+msgstr ""
+
+#: ../integrations/woocommerce/class-wizard.php:58, ../integrations/woocommerce/class-wizard.php:59
+msgid "Shop Header"
+msgstr ""
+
+#: ../integrations/woocommerce/class-wizard.php:63
+msgid "Select a Shop Header"
+msgstr ""
+
+#: ../integrations/woocommerce/class-wizard.php:70, ../integrations/woocommerce/class-wizard.php:71
+msgid "Shop Footer"
+msgstr ""
+
+#: ../integrations/woocommerce/class-wizard.php:75
+msgid "Select a Shop Footer"
+msgstr ""
+
+#: ../integrations/woocommerce/class-wizard.php:82
+msgid "WooCommerce Shop"
+msgstr ""
+
+#: ../integrations/woocommerce/class-wizard.php:83
+msgid "Shop Homepage"
+msgstr ""
+
+#: ../integrations/woocommerce/class-wizard.php:87
+msgid "Select a Shop Template"
+msgstr ""
+
+#: ../integrations/woocommerce/class-wizard.php:93
+msgid "WooCommerce Product"
+msgstr ""
+
+#: ../integrations/woocommerce/class-wizard.php:94
+msgid "Single Product"
+msgstr ""
+
+#: ../integrations/woocommerce/class-wizard.php:98
+msgid "Select a Product Template"
+msgstr ""
+
+#: ../integrations/woocommerce/class-wizard.php:104
+msgid "WooCommerce Cart"
+msgstr ""
+
+#: ../integrations/woocommerce/class-wizard.php:105, ../integrations/woocommerce/elements/class-cart-template.php:32
+msgid "Cart"
+msgstr ""
+
+#: ../integrations/woocommerce/class-wizard.php:109
+msgid "Select a Cart Template"
+msgstr ""
+
+#: ../integrations/woocommerce/class-wizard.php:115
+msgid "WooCommerce Checkout"
+msgstr ""
+
+#: ../integrations/woocommerce/class-wizard.php:116, ../integrations/woocommerce/elements/class-checkout-template.php:32
+msgid "Checkout"
+msgstr ""
+
+#: ../integrations/woocommerce/class-wizard.php:120
+msgid "Select a Checkout Template"
+msgstr ""
+
+#: ../integrations/woocommerce/class-wizard.php:330, ../integrations/architect/classes/endpoints/class-thrive-wizard-rest.php:596
+msgid "Template could not be found"
+msgstr ""
+
+#: ../integrations/amp/classes/class-settings.php:39
+msgid "Landing Pages"
+msgstr ""
+
+#: ../integrations/architect/classes/class-tcb-pagination-infinite-scroll.php:33
+msgid "Infinite Scroll"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-demo-content.php:36
+msgid "Demo Posts"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-demo-content.php:51
+msgid "Demo Pages"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-demo-content.php:65
+msgid "Demo Categories"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-demo-content.php:76
+msgid "Demo Tags"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-dynamic-list-helper.php:372
+msgid "Comments RSS"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-dynamic-list-helper.php:407
+msgid "Log out"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-dynamic-list-helper.php:404
+msgid "Log in"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-dynamic-list-helper.php:429
+msgid "Site Admin"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-dynamic-list-helper.php:425
+msgid "Register"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-post-list.php:279
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-post-list.php:323
+msgid "Posts from the same archive type will be displayed."
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-skin-taxonomy.php:52, ../integrations/architect/classes/class-thrive-skin-taxonomy.php:62
+msgid "Skins"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-skin-taxonomy.php:53
+msgid "Skin"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-skin-taxonomy.php:54
+msgid "Search Skins"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-skin-taxonomy.php:55
+msgid "All Skins"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-skin-taxonomy.php:56, ../integrations/architect/classes/class-thrive-skin-taxonomy.php:57
+msgid "Parent Skin"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-skin-taxonomy.php:58
+msgid "Edit Skin"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-skin-taxonomy.php:59
+msgid "Update Skin"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-skin-taxonomy.php:60
+msgid "Add New Skin"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-skin-taxonomy.php:61
+msgid "New Skin Name"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-theme-default-data.php:256
+msgid "Standard Post"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-theme-default-data.php:272
+msgid "All Archives"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-theme-lightspeed.php:190
+msgid "Theme builder templates"
+msgstr ""
+
+#: ../integrations/architect/classes/class-thrive-theme-lightspeed.php:203
+msgid "Theme builder sections"
+msgstr ""
+
+#: ../integrations/conditional-display/entities/class-post.php:23
+msgid "Post or page"
+msgstr ""
+
+#: ../integrations/conditional-display/fields/class-post-author-name.php:30, ../integrations/architect/views/elements/meta-element.php:28, ../integrations/architect/views/elements/meta-element.php:33
+msgid "Author name"
+msgstr ""
+
+#: ../integrations/conditional-display/fields/class-post-author-name.php:63
+msgid "Search authors"
+msgstr ""
+
+#: ../integrations/conditional-display/fields/class-post-category.php:68
+msgid "Search categories"
+msgstr ""
+
+#: ../integrations/conditional-display/fields/class-post-comment-count.php:30
+msgid "Comment count"
+msgstr ""
+
+#: ../integrations/conditional-display/fields/class-post-format.php:30
+msgid "Post format"
+msgstr ""
+
+#: ../integrations/conditional-display/fields/class-post-has-featured-image.php:30
+msgid "Has featured image"
+msgstr ""
+
+#: ../integrations/conditional-display/fields/class-post-id.php:37, ../integrations/woocommerce/elements/class-product-template.php:97, ../integrations/woocommerce/elements/class-shop-template.php:207, ../integrations/woocommerce/sub-elements/widgets/filters/class-filter-title.php:17, ../integrations/woocommerce/sub-elements/widgets/filters/class-price-filter-title.php:17, ../integrations/woocommerce/sub-elements/widgets/filters/class-rating-filter-title.php:17
+msgid "Title"
+msgstr ""
+
+#: ../integrations/conditional-display/fields/class-post-id.php:86
+msgid "Search posts"
+msgstr ""
+
+#: ../integrations/conditional-display/fields/class-post-parent-id.php:30
+msgid "Parent title"
+msgstr ""
+
+#: ../integrations/conditional-display/fields/class-post-status.php:30
+msgid "Post status"
+msgstr ""
+
+#: ../integrations/conditional-display/fields/class-post-tag.php:72
+msgid "Search tags"
+msgstr ""
+
+#: ../integrations/conditional-display/fields/class-post-type.php:30
+msgid "Post type"
+msgstr ""
+
+#: ../integrations/conditional-display/fields/class-post-type.php:60
+msgid "Search post types"
+msgstr ""
+
+#: ../integrations/landingpage/elements/class-thrive-landingpage-section-element.php:27, ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:21
+msgid "Section"
+msgstr ""
+
+#: ../integrations/landingpage/elements/class-thrive-landingpage-section-element.php:129, ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:132
+msgid "Stretch content to fullwidth"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-account-template.php:28
+msgid "My Account"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:32
+msgid "Product"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:105, ../integrations/woocommerce/elements/class-product-template.php:199, ../integrations/woocommerce/elements/class-shop-template.php:151, ../integrations/woocommerce/elements/class-shop-template.php:223
+msgid "Price"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:113
+msgid "Short Description"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:121, ../integrations/woocommerce/elements/class-shop-template.php:231
+msgid "Add to cart"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:129
+msgid "Meta"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:137
+msgid "Review tab"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:151
+msgid "Display related products"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:161, ../integrations/woocommerce/elements/class-shop-template.php:118, ../integrations/woocommerce/sub-elements/product/class-product-gallery.php:66
+msgid "Columns"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:170
+msgid "Products to display"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:176, ../integrations/woocommerce/elements/class-shop-template.php:124
+msgid "Order by"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:179, ../integrations/woocommerce/elements/class-shop-template.php:127
+msgid "Product title"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:183, ../integrations/woocommerce/elements/class-shop-template.php:135
+msgid "Product ID"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:187, ../integrations/woocommerce/elements/class-shop-template.php:139
+msgid "Published date"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:191, ../integrations/woocommerce/elements/class-shop-template.php:143
+msgid "Last modified date"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:195, ../integrations/woocommerce/elements/class-shop-template.php:147
+msgid "Menu order"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:203, ../integrations/woocommerce/elements/class-shop-template.php:155
+msgid "Random"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:213, ../integrations/woocommerce/elements/class-shop-template.php:165
+msgid "Order"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:216, ../integrations/woocommerce/elements/class-shop-template.php:168
+msgid "ASC"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:220, ../integrations/woocommerce/elements/class-shop-template.php:172
+msgid "DESC"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:230, ../integrations/woocommerce/elements/class-shop-template.php:246, ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-element.php:86, ../integrations/architect/views/components/theme/prev-next.php:26
+msgid "Alignment"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:235, ../integrations/woocommerce/elements/class-shop-template.php:251, ../integrations/architect/classes/elements/class-thrive-prev-next-element.php:97
+msgid "Align Left"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:241, ../integrations/woocommerce/elements/class-shop-template.php:257, ../integrations/architect/classes/elements/class-thrive-prev-next-element.php:103
+msgid "Align Center"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:246, ../integrations/woocommerce/elements/class-shop-template.php:262, ../integrations/architect/classes/elements/class-thrive-prev-next-element.php:108
+msgid "Align Right"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:257, ../integrations/woocommerce/elements/class-shop-template.php:273
+msgid "Image Size"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-product-template.php:268
+msgid "Display upsell"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-shop-template.php:109
+msgid "Products per page"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-shop-template.php:131
+msgid "Popularity"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-shop-template.php:183
+msgid "Result count"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-shop-template.php:191
+msgid "Catalog ordering"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-shop-template.php:199
+msgid "Sale flash "
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-shop-template.php:215, ../integrations/woocommerce/sub-elements/widgets/filters/class-rating-filter-stars.php:17
+msgid "Rating"
+msgstr ""
+
+#: ../integrations/woocommerce/elements/class-shop-template.php:239
+msgid "Pagination"
+msgstr ""
+
+#: ../integrations/woocommerce/shortcodes/class-shop-template.php:93
+msgid "Original Shop"
+msgstr ""
+
+#: ../integrations/woocommerce/views/no-products-placeholder.php:20
+msgid "No products available"
+msgstr ""
+
+#: ../integrations/woocommerce/views/no-products-placeholder.php:24
+msgid "Open your WordPress dashboard and go to WooCommerce > "
+msgstr ""
+
+#: ../integrations/woocommerce/views/no-products-placeholder.php:26
+msgid "Products."
+msgstr ""
+
+#: ../integrations/woocommerce/views/no-products-placeholder.php:31
+msgid "Then, click the "
+msgstr ""
+
+#: ../integrations/woocommerce/views/no-products-placeholder.php:37
+msgid " button to create your first product."
+msgstr ""
+
+#: ../integrations/woocommerce/views/no-products-placeholder.php:41
+msgid "Enter the name of the product, complete the description, and press Publish to make your product live."
+msgstr ""
+
+#: ../integrations/amp/classes/parsers/class-post_list.php:128
+msgid "Read More"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-calendar-widget-element.php:17
+msgid "Calendar Widget"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-no-results-element.php:18, ../integrations/architect/views/components/theme/no-results.php:15
+msgid "No Results"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-prev-next-element.php:21
+msgid "Previous/Next Content"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-prev-next-element.php:58
+msgid "Maximum Width"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-prev-next-element.php:69, ../integrations/architect/classes/elements/class-thrive-sidebar-trigger-element.php:60, ../integrations/architect/classes/inherited-elements/class-thrive-theme-button-element.php:114, ../integrations/woocommerce/sub-elements/cart/class-cart-remove-product.php:57, ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-separator-element.php:104, ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-text-element.php:117
+msgid "Size"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-prev-next-element.php:78
+msgid "Open in new tab"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-prev-next-element.php:86
+msgid "Same category posts"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-prev-next-element.php:113, ../integrations/architect/views/components/theme/layout-container.php:31, ../integrations/architect/views/components/theme/template-wrapper.php:47
+msgid "Full Width"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-prev-next-element.php:160
+msgid "Previous/Next Buttons"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-prev-next-element.php:161
+msgid "Previous/Next Button"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-sidebar-close-icon-element.php:17
+msgid "Close Icon"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-sidebar-element.php:17, ../integrations/architect/views/components/theme/widget-area.php:16
+msgid "Widget Area"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-sidebar-element.php:42
+msgid "Insert Widget Area"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-sidebar-element.php:84
+msgid "Orientation"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-sidebar-element.php:88
+msgid "Column"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-sidebar-element.php:93
+msgid "Row"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-sidebar-element.php:102
+msgid "Source"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-sidebar-trigger-element.php:17
+msgid "Icon"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-sidebar-trigger-element.php:40
+msgid "Expanded Icon"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-sidebar-trigger-element.php:46
+msgid "Collapsed Icon"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-sidebar-trigger-element.php:52, ../integrations/architect/classes/elements/class-thrive-template-wrapper-element.php:110, ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:322, ../integrations/woocommerce/sub-elements/cart/class-cart-remove-product.php:48, ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-separator-element.php:84, ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-text-element.php:63
+msgid "Color"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-taxonomy-term-description-element.php:17
+msgid "Taxonomy Term Description"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-template-content-element.php:98
+msgid "Layout Width"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-template-wrapper-element.php:64, ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:122
+msgid "Content width"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-template-wrapper-element.php:75
+msgid "Layout width"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-template-wrapper-element.php:84
+msgid "Reading progress indicator"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-template-wrapper-element.php:93
+msgid "Progress Position"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-template-wrapper-element.php:96, ../integrations/architect/views/backbone/theme-main/controls/progress-tooltip.phtml:5
+msgid "Top of viewport"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-template-wrapper-element.php:100, ../integrations/architect/views/backbone/theme-main/controls/progress-tooltip.phtml:13
+msgid "Underneath the header"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-template-wrapper-element.php:123
+msgid "Height"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-main-container-element.php:17, ../integrations/architect/views/components/theme/content-wrapper.php:15
+msgid "Content Wrapper"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-main-container-element.php:59
+msgid "Sidebar Position"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-main-container-element.php:62, ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:184, ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-element.php:97, ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-submit-element.php:73
+msgid "Right"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-main-container-element.php:66, ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:188, ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-element.php:93, ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-submit-element.php:69
+msgid "Left"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-main-container-element.php:77
+msgid "Wrap"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-main-container-element.php:87
+msgid "Gutter Width"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-main-container-element.php:96
+msgid "Sidebar visibility"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:111
+msgid "Section minimum width"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:142
+msgid "Section minimum height"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:151
+msgid "Vertical position"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:181, ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:340
+msgid "Position"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:204
+msgid "Display sidebar"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:207
+msgid "Normal"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:212
+msgid "Off screen"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:223
+msgid "Enable sticky sidebar"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:233
+msgid "Distance from top or bottom"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:240
+msgid "Sticky until"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:243
+msgid "End of main container"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:247
+msgid "End of page"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:251
+msgid "It reaches another element"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:261
+msgid "Element ID"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:270
+msgid "Show sidebar"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:274
+msgid "Over content"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:279
+msgid "Push content"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:288
+msgid "Default state"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:291
+msgid "Collapsed"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:296
+msgid "Expanded"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:306
+msgid "View expanded sidebar in editor"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:314
+msgid "Overlay"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:332
+msgid "Quick toggle icon"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:343, ../integrations/architect/views/backbone/architect-main/landing-page-map.phtml:8, ../integrations/architect/views/backbone/theme-main/controls/sections-preview.phtml:10
+msgid "Top"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:347
+msgid "Center"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:351, ../integrations/architect/views/backbone/architect-main/landing-page-map.phtml:14, ../integrations/architect/views/backbone/theme-main/controls/sections-preview.phtml:28
+msgid "Bottom"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/class-thrive-theme-section-element.php:362
+msgid "Close icon"
+msgstr ""
+
+#: ../integrations/architect/classes/endpoints/class-thrive-amp-rest.php:59
+msgid "Couldn't update the settings."
+msgstr ""
+
+#: ../integrations/architect/classes/endpoints/class-thrive-options-rest.php:92
+msgid "Option name is not 'thrv_global_colours'."
+msgstr ""
+
+#: ../integrations/architect/classes/endpoints/class-thrive-options-rest.php:119
+msgid "Couldn't add/update the fields in the database."
+msgstr ""
+
+#: ../integrations/architect/classes/endpoints/class-thrive-plugins-rest.php:55
+msgid "Sorry, you are not allowed to install plugins"
+msgstr ""
+
+#: ../integrations/architect/classes/endpoints/class-thrive-plugins-rest.php:112
+msgid "Sorry, you are not allowed to activate the plugin"
+msgstr ""
+
+#: ../integrations/architect/classes/endpoints/class-thrive-plugins-rest.php:119
+msgid "Sorry, you need to be super admin in order to make this operation"
+msgstr ""
+
+#: ../integrations/architect/classes/endpoints/class-thrive-plugins-rest.php:164
+msgid "Sorry, you are not allowed to update plugin options"
+msgstr ""
+
+#: ../integrations/architect/classes/endpoints/class-thrive-plugins-rest.php:185
+msgid "Missing tag parameter"
+msgstr ""
+
+#: ../integrations/architect/classes/endpoints/class-thrive-plugins-rest.php:207
+msgid "Plugin Updated"
+msgstr ""
+
+#: ../integrations/architect/classes/endpoints/class-thrive-plugins-rest.php:200
+msgid "There has been an error during the update process"
+msgstr ""
+
+#: ../integrations/architect/classes/endpoints/class-thrive-section-rest.php:330
+msgid "Wrong section preview data"
+msgstr ""
+
+#: ../integrations/architect/classes/endpoints/class-thrive-templates-rest.php:359
+msgid "There was an error during the download process but the template is back to the blank theme form"
+msgstr ""
+
+#: ../integrations/architect/classes/endpoints/class-thrive-templates-rest.php:381
+msgid "Wrong template preview data"
+msgstr ""
+
+#: ../integrations/architect/classes/inherited-elements/class-thrive-theme-button-element.php:114
+msgid "Size and Alignment"
+msgstr ""
+
+#: ../integrations/architect/views/elements/author-box-element.php:4
+msgid "Insert About the Author"
+msgstr ""
+
+#: ../integrations/architect/views/elements/meta-element.php:3
+msgid "Posted in"
+msgstr ""
+
+#: ../integrations/architect/views/elements/meta-element.php:6
+msgid "Post Categories"
+msgstr ""
+
+#: ../integrations/architect/views/elements/meta-element.php:11
+msgid "Uncategorized"
+msgstr ""
+
+#: ../integrations/architect/views/elements/meta-element.php:14
+msgid "on"
+msgstr ""
+
+#: ../integrations/architect/views/elements/meta-element.php:17
+msgid "Published Date"
+msgstr ""
+
+#: ../integrations/architect/views/elements/meta-element.php:25
+msgid "by"
+msgstr ""
+
+#: ../integrations/architect/views/elements/meta-element.php:38
+msgid "Comments Number"
+msgstr ""
+
+#: ../integrations/architect/views/elements/meta-element.php:43
+msgid "No Comments"
+msgstr ""
+
+#: ../integrations/architect/views/elements/prev-next-element.php:4
+msgid "Insert Prev/Next"
+msgstr ""
+
+#: ../integrations/architect/views/elements/search-description.php:17
+msgid "Nothing Found"
+msgstr ""
+
+#: ../integrations/architect/views/elements/search-description.php:15
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../integrations/architect/views/modals/layout-templates.php:14
+msgid "Create new Layout"
+msgstr ""
+
+#: ../integrations/architect/views/modals/layout-templates.php:16
+msgid "Layout name"
+msgstr ""
+
+#: ../integrations/architect/views/modals/layout-templates.php:19
+msgid "Save Layout"
+msgstr ""
+
+#: ../integrations/architect/views/modals/post-content-delete.php:15
+msgid "Are you Sure you want to Remove the Post Content Element?"
+msgstr ""
+
+#: ../integrations/architect/views/modals/post-content-delete.php:21
+msgid "If you remove this element, it means no content will be shown in this template (this is the content you create in the WordPress editor or using Thrive Architect)."
+msgstr ""
+
+#: ../integrations/architect/views/modals/post-content-delete.php:25
+msgid "Note: you can re-add the post content element at any time from the elements list."
+msgstr ""
+
+#: ../integrations/architect/views/modals/post-content-delete.php:31, ../integrations/woocommerce/views/backbone/woo-page-notice.phtml:37, ../integrations/architect/views/backbone/theme-main/no-post-content-notice.phtml:41
+msgid "Post Content"
+msgstr ""
+
+#: ../integrations/architect/views/modals/post-content-delete.php:41
+msgid "Yes, Remove it"
+msgstr ""
+
+#: ../integrations/architect/views/modals/reset-template.php:15
+msgid "Are you sure you want to reset the template ?"
+msgstr ""
+
+#: ../integrations/architect/views/modals/section-save.php:20
+msgid "Save %s Section as:"
+msgstr ""
+
+#: ../integrations/architect/views/modals/section-save.php:27
+msgid "Save to Library"
+msgstr ""
+
+#: ../integrations/architect/views/modals/section-templates-block.php:27
+msgid "SOURCE"
+msgstr ""
+
+#: ../integrations/architect/views/modals/switch-confirmation.php:14
+msgid "Unsaved Changes"
+msgstr ""
+
+#: ../integrations/architect/views/modals/switch-confirmation.php:18
+msgid "Do you want to save your changes before exiting?"
+msgstr ""
+
+#: ../integrations/architect/views/modals/switch-confirmation.php:22
+msgid "Continue without Saving"
+msgstr ""
+
+#: ../integrations/architect/views/modals/switch-confirmation.php:23
+msgid "Save and Exit"
+msgstr ""
+
+#: ../integrations/architect/views/modals/tar-light-notice.php:24
+msgid "Architect Light is a great starting point but to maximize Thrive Theme Builder, upgrade to the full version of Thrive Architect."
+msgstr ""
+
+#: ../integrations/architect/views/modals/tar-light-notice.php:29
+msgid "When You Upgrade to The Full Version of Thrive Architect, You'll Unlock Unlimited Access To These Premium Site-Building Features:"
+msgstr ""
+
+#: ../integrations/architect/views/modals/tar-light-notice.php:32
+msgid "Professionally Designed Landing Page Templates"
+msgstr ""
+
+#: ../integrations/architect/views/modals/tar-light-notice.php:32
+msgid " - Supercharge your site with 363 high-converting landing page templates. Get lead generation templates, webinar templates, and more."
+msgstr ""
+
+#: ../integrations/architect/views/modals/tar-light-notice.php:33
+msgid "Pre-Designed Element Templates"
+msgstr ""
+
+#: ../integrations/architect/views/modals/tar-light-notice.php:33
+msgid " - Get 100s of pre-designed templates for testimonial elements, call-to-action elements, contact forms, and more"
+msgstr ""
+
+#: ../integrations/architect/views/modals/tar-light-notice.php:34
+msgid "Premium Elements"
+msgstr ""
+
+#: ../integrations/architect/views/modals/tar-light-notice.php:34
+msgid " - Pricing tables, countdown timers, content reveal elements, and so much more. Every premium site-building element you can possibly need"
+msgstr ""
+
+#: ../integrations/architect/views/modals/tar-light-notice.php:38
+msgid "Yes, I Want To Learn More About Thrive Architect!"
+msgstr ""
+
+#: ../integrations/architect/views/modals/tar-light-notice.php:39
+msgid "No, Thank You! I'm Happy With Thrive Architect Light"
+msgstr ""
+
+#: ../integrations/architect/views/modals/tar-light-notice.php:42
+msgid "Already a Thrive member? "
+msgstr ""
+
+#: ../integrations/architect/views/modals/tar-light-notice.php:43, ../integrations/woocommerce/views/backbone/woo-page-notice.phtml:29, ../integrations/architect/views/backbone/theme-main/no-post-content-notice.phtml:32
+msgid "Click here"
+msgstr ""
+
+#: ../integrations/architect/views/modals/tar-light-notice.php:44
+msgid " to learn how to activate Thrive Architect"
+msgstr ""
+
+#: ../integrations/landingpage/views/components/landingpage-section.php:14, ../integrations/architect/views/components/theme/theme-section.php:15
+msgid "Section Options"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/cart/class-cart-active-shipping.php:26
+msgid "Active Shipping Method"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/cart/class-cart-apply-coupon.php:27, ../integrations/woocommerce/sub-elements/widgets/filters/class-price-filter-button.php:17, ../integrations/architect/views/backbone/theme-main/theme-buttons/global-thrive-comment-reply-button.phtml:5, ../integrations/architect/views/backbone/theme-main/theme-buttons/global-thrive-comments-form-submit.phtml:5
+msgid "Button"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/cart/class-cart-change-address.php:26, ../integrations/woocommerce/sub-elements/cart/class-cart-details-header.php:26, ../integrations/woocommerce/sub-elements/cart/class-cart-details-row-header.php:26, ../integrations/woocommerce/sub-elements/cart/class-cart-shipping-text.php:26, ../integrations/woocommerce/sub-elements/cart/class-cart-table-headers.php:25, ../integrations/woocommerce/sub-elements/checkout/calss-additional-section.php:25, ../integrations/woocommerce/sub-elements/checkout/class-field-header.php:24, ../integrations/woocommerce/sub-elements/product-add-ons/class-product-add-on-checkbox.php:25, ../integrations/woocommerce/sub-elements/product-add-ons/class-product-add-on-description.php:25, ../integrations/woocommerce/sub-elements/product-add-ons/class-product-add-on-product-name.php:25, ../integrations/woocommerce/sub-elements/product-add-ons/class-product-add-on-product-price.php:25, ../integrations/woocommerce/sub-elements/product-add-ons/class-product-add-on-radio-button.php:25, ../integrations/woocommerce/sub-elements/product-add-ons/class-product-add-on-remaining-characters.php:25, ../integrations/woocommerce/sub-elements/product-add-ons/class-product-add-on-title.php:25, ../integrations/woocommerce/sub-elements/widgets/filters/class-filter-dropdown.php:17
+msgid "Text"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/cart/class-cart-coupon-input.php:27
+msgid "Coupon Input"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/cart/class-cart-details.php:26
+msgid "Cart Details"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/cart/class-cart-price.php:26
+msgid "Cart Price"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/cart/class-cart-product-image.php:25, ../integrations/woocommerce/sub-elements/cart/class-cart-related-product-image.php:26, ../integrations/woocommerce/sub-elements/product/class-product-image.php:25
+msgid "Product Image"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/cart/class-cart-product-list.php:26
+msgid "Product List"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/cart/class-cart-product-name.php:25, ../integrations/woocommerce/sub-elements/cart/class-cart-related-product-title.php:26, ../integrations/woocommerce/sub-elements/product/class-product-title.php:25
+msgid "Product Title"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/cart/class-cart-product-price.php:25, ../integrations/woocommerce/sub-elements/cart/class-cart-related-product-price.php:26, ../integrations/woocommerce/sub-elements/product/class-product-price.php:25
+msgid "Product Price"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/cart/class-cart-product-quantity.php:26, ../integrations/woocommerce/sub-elements/product/class-product-quantity.php:25
+msgid "Product Quantity"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/cart/class-cart-related-heading.php:26, ../integrations/woocommerce/sub-elements/product/class-product-related-heading.php:25
+msgid "Product Related Heading"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/cart/class-cart-related-product-button.php:26
+msgid "Add To Cart"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/cart/class-cart-remove-product.php:25
+msgid "Remove Product"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/cart/class-cart-shipping-address.php:26
+msgid "Address"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/cart/class-cart-shipping-method.php:26
+msgid "Shipping Method"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/cart/class-cart-to-checkout-button.php:26
+msgid "Proceed to Checkout"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/checkout/class-additional-section-anchor.php:25
+msgid "Link"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/checkout/class-checked-payment-method.php:24
+msgid "Active payment method"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/checkout/class-checked-shipping-method.php:24
+msgid "Active shipping method"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/checkout/class-dropdown.php:24
+msgid "Checkout Dropdown"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/checkout/class-final-price.php:24
+msgid "Total price"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/checkout/class-input-box.php:24
+msgid "Checkout Input"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/checkout/class-input-label.php:25
+msgid "Checkout label"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/checkout/class-order-details-header.php:24
+msgid "Order Details"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/checkout/class-ordered-product-name.php:24
+msgid "Product name"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/checkout/class-ordered-product-price.php:24
+msgid "Product price"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/checkout/class-payment-method-description.php:24
+msgid "Payment description"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/checkout/class-paypal-info.php:24
+msgid "Text element"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/checkout/class-place-order-button.php:24
+msgid "Place order button"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/checkout/class-privacy-policy.php:24
+msgid "Privacy policy"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/checkout/class-textarea-input.php:24
+msgid "Checkout Textarea"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/checkout/class-unchecked-payment-method.php:24
+msgid "Payment method"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/checkout/class-unchecked-shipping-method.php:24
+msgid "Shipping method"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/class-product-add-to-cart.php:25, ../integrations/woocommerce/sub-elements/product/class-product-main-add-to-cart.php:25
+msgid "Add to Cart"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/class-product-category-links.php:25
+msgid "Product Category Links"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/class-product-category.php:25
+msgid "Product Category"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/class-product-customer-review-count.php:25
+msgid "Product Customer Review Count"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/class-product-gallery.php:25, ../integrations/woocommerce/views/components/product-gallery.php:15
+msgid "Product Gallery"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/class-product-gallery.php:46
+msgid "Magnifier"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/class-product-gallery.php:55
+msgid "Gallery Width"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/class-product-out-of-stock.php:25
+msgid "Product Out of Stock"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/class-product-sale.php:25
+msgid "Product Sale"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/class-product-select-label.php:25
+msgid "Product Select Label"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/class-product-select.php:26
+msgid "Product Select"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/class-product-short-description.php:25
+msgid "Product Short Description"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/class-product-sku.php:25
+msgid "Product SKU"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/class-product-star-rating.php:25, ../integrations/woocommerce/sub-elements/product/tabs/review/form/class-product-review-star-rating.php:25
+msgid "Star Rating"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/class-product-tags-links.php:25
+msgid "Product Tag Links"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/class-product-tags.php:25
+msgid "Product Tags"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/class-product-upsells-heading.php:25
+msgid "Product Upsells Heading"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product-add-ons/class-product-add-on-dropdown.php:25
+msgid "Select"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product-add-ons/class-product-add-on-text-field.php:25
+msgid "Textarea"
+msgstr ""
+
+#: ../integrations/woocommerce/views/backbone/woo-page-notice.phtml:17, ../integrations/architect/views/backbone/theme-main/no-post-content-notice.phtml:17
+msgid "The Content of this page Cannot be Edited"
+msgstr ""
+
+#: ../integrations/woocommerce/views/backbone/woo-page-notice.phtml:23, ../integrations/architect/views/backbone/theme-main/no-post-content-notice.phtml:23
+msgid "Unfortunately, the content of this page cannot be edited."
+msgstr ""
+
+#: ../integrations/woocommerce/views/backbone/woo-page-notice.phtml:31
+msgid "The content of this page is generated by WooCommerce, so it can't be edited with Thrive Architect. You can customize the theme template by going to Thrive Dashboard > Thrive Theme Builder > Templates or %s"
+msgstr ""
+
+#: ../integrations/woocommerce/views/components/cart-template.php:14
+msgid "Cart Options"
+msgstr ""
+
+#: ../integrations/woocommerce/views/components/cart-template.php:19, ../integrations/woocommerce/views/components/checkout-template.php:19, ../integrations/woocommerce/views/components/product-template.php:21, ../integrations/woocommerce/views/components/shop-template.php:21, ../integrations/architect/views/components/theme/author_box.php:21, ../integrations/architect/views/components/theme/blog-list.php:21, ../integrations/architect/views/components/theme/prev-next.php:21
+msgid "Edit Design"
+msgstr ""
+
+#: ../integrations/woocommerce/views/components/checkout-template.php:14
+msgid "Checkout Options"
+msgstr ""
+
+#: ../integrations/woocommerce/views/components/checkout-template.php:25
+msgid "Display options"
+msgstr ""
+
+#: ../integrations/woocommerce/views/components/product-remove-main-options.php:15, ../integrations/architect/views/components/theme/author-follow.php:13, ../integrations/architect/views/components/theme/author-links.php:13, ../integrations/architect/views/components/theme/author_box.php:15, ../integrations/architect/views/components/theme/comment-form-submit.php:9, ../integrations/architect/views/components/theme/comment-section.php:8, ../integrations/architect/views/components/theme/header-footer.php:15, ../integrations/architect/views/components/theme/prev-next.php:15, ../integrations/architect/views/components/theme/sidebar-trigger.php:16, ../integrations/architect/views/components/theme/template-wrapper.php:15, ../integrations/architect/views/components/theme/theme-button.php:16
+msgid "Main Options"
+msgstr ""
+
+#: ../integrations/woocommerce/views/components/product-template.php:15
+msgid "Product Display Options"
+msgstr ""
+
+#: ../integrations/woocommerce/views/components/related-products.php:15
+msgid "Related Products"
+msgstr ""
+
+#: ../integrations/woocommerce/views/components/shop-template.php:15
+msgid "Product List Options"
+msgstr ""
+
+#: ../integrations/woocommerce/views/components/upsell-products.php:15
+msgid "Upsell Products"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/article/class-thrive-author-follow-element.php:54
+msgid "Author Social Links"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/article/class-thrive-author-links-element.php:22
+msgid "Business Social Links"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/article/class-thrive-author-links-element.php:72
+msgid "Change style"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/article/class-thrive-post-meta-element.php:47
+msgid "Post Meta"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-element.php:47
+msgid "Separator Type"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-element.php:77
+msgid "Item spacing"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-element.php:89
+msgid "Centered"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-element.php:101
+msgid "Space Between"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-element.php:110
+msgid "Display categories"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-leaf-element.php:17
+msgid "Breadcrumbs Leaf"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-leaf-element.php:49
+msgid "Enable truncate characters"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-leaf-element.php:55
+msgid "Truncate Characters"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-path-element.php:17
+msgid "Breadcrumbs Path"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-separator-element.php:23
+msgid "Breadcrumbs Separator"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-separator-element.php:77, ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-icon-element.php:52
+msgid "Choose Icon"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/breadcrumbs/class-thrive-breadcrumbs-separator-element.php:91
+msgid "Character"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/class-thrive-comment-author-name-element.php:17
+msgid "Comment Author Name"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/class-thrive-comment-author-picture-element.php:17
+msgid "Comment Author Picture"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/class-thrive-comment-container-element.php:17
+msgid "Comment Container"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/class-thrive-comment-list-element.php:18
+msgid "Comments List"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/class-thrive-comment-list-element.php:107
+msgid "Reply Spacing"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/class-thrive-comment-meta-element.php:17
+msgid "Comment Meta"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/class-thrive-comment-reply-button-element.php:17
+msgid "Comment Reply Button"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/class-thrive-comment-text-element.php:17
+msgid "Comment Text"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/class-thrive-comment-thread-container-element.php:17
+msgid "Comment Thread Container"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-icon-element.php:24
+msgid "Dynamic List Icon"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-icon-element.php:59
+msgid "Icon color"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-icon-element.php:67
+msgid "Icon size"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-item-element.php:20
+msgid "List Item"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-text-element.php:21
+msgid "Inline Text"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-text-element.php:66, ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-text-element.php:100, ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-text-element.php:120
+msgid "Specific"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-text-element.php:88
+msgid "Highlight"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-text-element.php:97
+msgid "Font"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-text-element.php:157
+msgid "Effect"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-text-element.php:165
+msgid "Choose link effect"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-text-element.php:173
+msgid "Effect Color"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-text-element.php:184
+msgid "Effect Speed"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-list-text-element.php:190
+msgid "Speed"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-styled-list-element.php:17, ../integrations/architect/views/components/theme/dynamic-list.php:15
+msgid "Dynamic Styled List"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-styled-list-element.php:54
+msgid "Select List Type"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-styled-list-element.php:93
+msgid "Max items to display"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-styled-list-element.php:120
+msgid "Enable Icons for List Items"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-styled-list-element.php:127
+msgid "Change all icons"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/dynamic-list/class-thrive-dynamic-styled-list-element.php:136
+msgid "List Item Spacing"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/architect-main/template-list.phtml:4
+msgid "No templates found"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-editor/no-results-default.php:4
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/architect-incompatible.phtml:22
+msgid "It looks like you have Thrive Architect installed, but it's not compatible with this version of Thrive Theme Builder. Thrive Theme Builder uses Thrive Architect to edit various pieces of content. To be able to use these features, please make sure you have the latest versions by clicking on the following link and updating"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/architect-incompatible.phtml:25
+msgid "WordPress Updates"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/breadcrumbs-categories.phtml:2
+msgid "This control shows or hides the first category in the breadcrumbs path."
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/dynamic-link-buttons.phtml:2, ../integrations/architect/views/backbone/theme-main/dynamic-link-inline.phtml:4, ../integrations/architect/views/backbone/theme-main/dynamic-link.phtml:5
+msgid "Static"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/dynamic-link-buttons.phtml:3, ../integrations/architect/views/backbone/theme-main/dynamic-link-inline.phtml:9, ../integrations/architect/views/backbone/theme-main/dynamic-link.phtml:11
+msgid "Dynamic"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/dynamic-link-dropdown.phtml:4, ../integrations/architect/views/backbone/theme-main/dynamic-link-inline.phtml:16, ../integrations/architect/views/backbone/theme-main/dynamic-link.phtml:18
+msgid "Post link"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/dynamic-link-dropdown.phtml:5, ../integrations/architect/views/backbone/theme-main/dynamic-link-inline.phtml:17, ../integrations/architect/views/backbone/theme-main/dynamic-link.phtml:19
+msgid "Post Archive"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/dynamic-link-dropdown.phtml:6, ../integrations/architect/views/backbone/theme-main/dynamic-link-inline.phtml:18, ../integrations/architect/views/backbone/theme-main/dynamic-link.phtml:20
+msgid "Author Archive"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/dynamic-link-dropdown.phtml:7, ../integrations/architect/views/backbone/theme-main/dynamic-link-inline.phtml:19, ../integrations/architect/views/backbone/theme-main/dynamic-link.phtml:21
+msgid "Date link"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/dynamic-link-dropdown.phtml:8, ../integrations/architect/views/backbone/theme-main/dynamic-link-inline.phtml:20, ../integrations/architect/views/backbone/theme-main/dynamic-link.phtml:22
+msgid "Comments link"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/dynamic-link.phtml:17
+msgid "none"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/empty-post-content-placeholder.phtml:16
+msgid "The %s you are previewing has no content"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/empty-post-content-placeholder.phtml:19
+msgid "You can preview this template with another piece of content by using the content switcher in the upper right corner of the editor."
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/lp-set-skin.phtml:1
+msgid "Matches Theme"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/lp-set-skin.phtml:2
+msgid "This landing page set matches the design and style of your theme"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/no-post-content-notice.phtml:27
+msgid "You are unable to edit the content of this page because the \"Post Content\" attached to this page’s template cannot be loaded properly. A possible cause for this can be a third party plugin, or WordPress shortcodes."
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/no-post-content-notice.phtml:35
+msgid "%s for more details and for information on how this can be escalated to our team."
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/no-sections-available.phtml:17
+msgid "You didn't save any "
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/no-sections-available.phtml:19
+msgid " sections for the current theme."
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/no-sections-available.phtml:22
+msgid "Go to "
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/no-sections-available.phtml:24
+msgid "Theme"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/no-sections-available.phtml:26
+msgid " Sections,"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/no-sections-available.phtml:28
+msgid "choose a template, start editing it and when you finish press Save."
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/off-screen-tooltip.phtml:3
+msgid "When enabled, an icon trigger will be added to your sidebar. This is a pre-designed trigger, that can be fully customized. However, you can remove it if you wish, by deactivating this option."
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/off-screen-tooltip.phtml:6
+msgid "Moreover, you can create custom triggers that will expand the sidebar (buttons/icons/etc) and spread them all around your site. This can be achieved with the use of the \"Animation&Action\" element setting. Learn more about sidebar triggers "
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/off-screen-tooltip.phtml:7
+msgid "here"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/section-overlay.phtml:3
+msgid "This is a Linked section"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/section-overlay.phtml:12, ../integrations/architect/views/backbone/theme-main/controls/section-select.phtml:38
+msgid "Unlink"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/section-overlay.phtml:18
+msgid "Choose a %sready-made%s design"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/template-editor-notice.php:16
+msgid "You can edit your site templates from the "
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/template-editor-notice.php:18
+msgid "Template Editor"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/template-item.phtml:22
+msgid "Are you sure?"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/template-item.phtml:33
+msgid "Deleting a Section will remove it from all instances on your website."
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/template-item.phtml:36
+msgid "Yes, Delete"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/toc-dynamic-info.phtml:3
+msgid "This element is dynamic"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/toc-dynamic-info.phtml:5
+msgid "You’ve added the table of contents element inside a template.  This means the list of items will change depending on the content."
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/toc-dynamic-info.phtml:7
+msgid "Learn more"
+msgstr ""
+
+#: ../integrations/architect/views/components/editor/amp-settings.php:17
+msgid "Accelerated Mobile Pages (AMP)"
+msgstr ""
+
+#: ../integrations/architect/views/components/editor/page_content_settings.php:17, ../integrations/architect/views/backbone/theme-main/controls/sections-preview.phtml:15
+msgid "Content"
+msgstr ""
+
+#: ../integrations/architect/views/components/editor/post-type-template-settings.php:25
+msgid "Currently Active Template"
+msgstr ""
+
+#: ../integrations/architect/views/components/editor/post-type-template-settings.php:29
+msgid "Load Template"
+msgstr ""
+
+#: ../integrations/architect/views/components/editor/post-type-template-settings.php:37
+msgid "No %s Templates Found"
+msgstr ""
+
+#: ../integrations/architect/views/components/editor/post-type-template-settings.php:38
+msgid "We're displaying a list of post templates above because no '%s' templates have been found."
+msgstr ""
+
+#: ../integrations/architect/views/components/editor/post-type-template-settings.php:39
+msgid "If you'd like to design a specific template for your '%s' content, you can do so from %s."
+msgstr ""
+
+#: ../integrations/architect/views/components/editor/visibility_settings.php:17
+msgid "Visibility Settings"
+msgstr ""
+
+#: ../integrations/architect/views/components/editor/visibility_settings.php:23
+msgid "Set the visibility for sections and modules for this specific post."
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/author-follow.php:28, ../integrations/architect/views/components/theme/author-links.php:28
+msgid "Social Networks"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/author-follow.php:35, ../integrations/architect/views/components/theme/author-links.php:35
+msgid "Greater Than"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/author_box.php:29
+msgid "Author details can be edited from the %s screen."
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/blog-list.php:15
+msgid "Blog List"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/blog-list.php:22
+msgid "Filter Posts"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/blog-list.php:45
+msgid "This is added after the post content, it doesn't apply to the Read More button."
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/blog-list.php:54
+msgid "This option disables all animations for this element and all child link options"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/breadcrumbs-leaf.php:16
+msgid "Breadcrumb Leaf Options"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/breadcrumbs-separator.php:16
+msgid "Separator Options"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/breadcrumbs.php:18
+msgid "Breadcrumbs Options"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/breadcrumbs.php:24
+msgid "Edit Breadcrumbs"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/breadcrumbs.php:48
+msgid "Customize labels"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/comment-form-input.php:15, ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-input-element.php:18
+msgid "Comment Form Input"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/comment-form-label.php:15
+msgid "Comment Form Label"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/comment-form-submit.php:16
+msgid "Remove Input Icon"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/comment-form.php:14
+msgid "Comment Form"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/comment-list.php:15
+msgid "Comment List"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/comment-section.php:14
+msgid "Edit Elements"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/comment-section.php:19
+msgid "Advanced"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/comment-section.php:24
+msgid "Edit error messages"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/dynamic-list.php:20
+msgid "Edit List Items"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/dynamic-list.php:21
+msgid "Filter List"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/layout-container.php:26, ../integrations/architect/views/components/theme/template-wrapper.php:42
+msgid "Boxed"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/no-results.php:22
+msgid "Add link to Content Box"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/no-results.php:32
+msgid "Background Image"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/no-results.php:36
+msgid "Replace Image"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/sidebar-settings.php:15
+msgid "Sidebar Display"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/sidebar-settings.php:30
+msgid "You can set the ID of an element from the \"HTML Attributes\" section"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/sidebar-settings.php:31
+msgid "Sidebar will be sticky until end of main container when the element set is located above or inside the sidebar."
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/template-wrapper.php:27
+msgid "Currently editing"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/template-wrapper.php:33
+msgid "Need help?"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/template-wrapper.php:34
+msgid "Open the Quick Guide"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/template-wrapper.php:58
+msgid "Progress indicator location"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/template-wrapper.php:64
+msgid "Make sure header is set to sticky for the progress indicator to display on scroll"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/theme-menu.php:23
+msgid "Theme Menu Options"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/theme-menu.php:33
+msgid "Edit Menu"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/theme-menu.php:45
+msgid "Hover Colors"
+msgstr ""
+
+#: ../integrations/architect/views/components/theme/widget-area.php:25
+msgid "Click here to edit your widget areas."
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/tabs/class-product-tab.php:25
+msgid "Product Tab"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/widgets/filters/class-filter-attribute.php:17
+msgid "Attribute"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-element.php:18
+msgid "Comments Form"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-element.php:55
+msgid "Labels"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-input-element.php:64, ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-textarea-element.php:64
+msgid "Textarea Minimum Height"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-item-element.php:17
+msgid "Comments Form Item"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-label-element.php:18
+msgid "Comments Form Label"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-reply-text-element.php:18
+msgid "Leave Reply Text"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-submit-element.php:22
+msgid "Comments Form Submit"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-submit-element.php:65
+msgid "Icon Side"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-submit-element.php:84
+msgid "Button width"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-submit-element.php:92
+msgid "Button Align"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-submit-element.php:123
+msgid "Style"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-submit-element.php:126
+msgid "Ghost"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-submit-element.php:127
+msgid "Rounded"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-submit-element.php:128
+msgid "Full Rounded"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-submit-element.php:129
+msgid "Gradient"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-submit-element.php:130
+msgid "Elevated"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-submit-element.php:131
+msgid "Border 1"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-submit-element.php:132
+msgid "Border 2"
+msgstr ""
+
+#: ../integrations/architect/classes/elements/comments/comments-form/class-thrive-comments-form-textarea-element.php:18
+msgid "Comments Form Text"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/content-switch/list-item-load-more.phtml:2
+msgid "Load more"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/content-switch/list-select-empty.phtml:1
+msgid "No results"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/content-switch/main-archive.phtml:3, ../integrations/architect/views/backbone/theme-main/content-switch/main-search.phtml:2, ../integrations/architect/views/backbone/theme-main/content-switch/main.phtml:3
+msgid "Content: "
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/content-switch/main-archive.phtml:4, ../integrations/architect/views/backbone/theme-main/content-switch/main.phtml:4
+msgid "Choose Content"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/content-switch/main-archive.phtml:10, ../integrations/architect/views/backbone/theme-main/content-switch/main.phtml:11
+msgid "Demo Content"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/content-switch/main-archive.phtml:11, ../integrations/architect/views/backbone/theme-main/content-switch/main.phtml:12
+msgid "OR"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/content-switch/main-archive.phtml:15, ../integrations/architect/views/backbone/theme-main/content-switch/main.phtml:15
+msgid "Your Website Content"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/content-switch/main.phtml:28
+msgid "No content found for this template"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/beautiful-select.phtml:3
+msgid "Load a Layout"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/business-links-panel.phtml:3
+msgid "Link to Social Global Field"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/business-links-panel.phtml:16
+msgid "Target URL"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/business-links-panel.phtml:24
+msgid "You can edit this link in the "
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/business-links-panel.phtml:26
+msgid "Smart Site Dashboard"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/edit-c-form-item.phtml:3
+msgid "Placeholder"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/edit-c-form-item.phtml:11
+msgid "Label"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/section-select.phtml:8
+msgid "Choose a design"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/section-select.phtml:10
+msgid "Choose a ready-made design"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/section-select.phtml:46
+msgid "Save and reuse"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/section-select.phtml:48
+msgid "Save current design for reuse"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/sections-preview.phtml:19
+msgid "Sticky on Scroll"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/sections-preview.phtml:22
+msgid "Sidebar"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/sections-preview.phtml:23
+msgid "Side bar"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/video-thumbnail-type-select.phtml:14
+msgid "Video Thumbnail"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/video-thumbnail-type-select.phtml:17
+msgid "Type"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/video-thumbnail-type-select.phtml:19
+msgid "Static Image"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/controls/video-thumbnail-type-select.phtml:21
+msgid "No Image"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/dynamic-list/query-rule.phtml:3
+msgid " the following "
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/layout/layout-visibility.phtml:3
+msgid "Layout and Visibility"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/layout/layout-visibility.phtml:17
+msgid "Hidden"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/layout/layout-visibility.phtml:22
+msgid "Content and Sidebar Layout"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/layout/layout-visibility.phtml:28
+msgid "Layout Options"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/layout/layout-visibility.phtml:35
+msgid "Update Layout"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/layout/layout-visibility.phtml:36
+msgid "Save New Layout"
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/layout/templates-notice.phtml:15
+msgid "You are editing a layout that's used by "
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/layout/templates-notice.phtml:19
+msgid "other templates."
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/layout/templates-notice.phtml:22
+msgid " Changes you make to this layout will be applied across all templates."
+msgstr ""
+
+#: ../integrations/architect/views/backbone/theme-main/theme-style-panel/skin-gradients.phtml:3
+msgid "Theme Gradients"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/tabs/additional-information/class-product-additional-label.php:25
+msgid "Additional Information Label"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/tabs/additional-information/class-product-additional-value.php:25
+msgid "Additional Information Text"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/tabs/description/class-product-description-content.php:25
+msgid "Description Content"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/tabs/review/class-product-review-empty-text.php:25, ../integrations/woocommerce/sub-elements/product/tabs/review/class-product-review-only-logged-in-text.php:25, ../integrations/woocommerce/sub-elements/product/tabs/review/item/class-product-review-comment.php:25
+msgid "Review Text"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/tabs/review/class-product-review-first-text.php:25
+msgid "First Review Text"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/tabs/review/form/class-product-review-label.php:25
+msgid "Review Label"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/tabs/review/form/class-product-review-submit.php:26
+msgid "Submit"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/tabs/review/form/class-product-review-textarea.php:25
+msgid "Review Textarea"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/tabs/review/item/class-product-review-author-image.php:25
+msgid "Review Author Image"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/tabs/review/item/class-product-review-author.php:25
+msgid "Review Author"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/tabs/review/item/class-product-review-container.php:25
+msgid "Review Container"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/tabs/review/item/class-product-review-date.php:25
+msgid "Review Date"
+msgstr ""
+
+#: ../integrations/woocommerce/sub-elements/product/tabs/review/item/class-product-review-star-rating.php:25
+msgid "Review Star Rating"
+msgstr ""

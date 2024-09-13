@@ -1,0 +1,12 @@
+<div class="control-grid full-width pb-0">
+	<p class="m-0">
+		<?php esc_html_e( 'Select which type of files to allow the user to upload.  Choose from one or more of our recommended groups.', 'thrive-cb' ); ?>
+	</p>
+	<p class="mt-0">
+		<?php esc_html_e( 'You can also select “Custom” to add additional allowed files.', 'thrive-cb' ); ?>
+	</p>
+	<p class="m-0">
+		<?php $link = sprintf( '<a class="blue-text" href="%s" target="_blank">%s</a>', 'https://thrivethemes.com/tkb_item/what-file-types-can-i-use-when-uploading-a-file-in-a-lead-generation-element/', __( 'here', 'thrive-cb' ) ); ?>
+		<?php echo sprintf( esc_html__( 'See a list of file types allowed in each group %s.', 'thrive-cb' ), $link ); ?>
+	</p>
+</div>

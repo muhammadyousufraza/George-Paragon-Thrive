@@ -1,0 +1,13 @@
+<div class="tvd-modal-content">
+	<h3 class="tvd-modal-title"><?php echo esc_html__( 'This content is currently locked for this member', 'thrive-apprentice' ); ?></h3>
+
+	<p><?php echo sprintf( esc_html__( '%s will automatically be unlocked for this member once they meet the required drip conditions.', 'thrive-apprentice' ),
+			'<i><#= model.get( "post_title" ) #></i>' ); ?></p>
+
+	<p><?php echo sprintf( esc_html__( 'Would you like to %s it and give the member immediate access?', 'thrive-apprentice' ),
+			'<strong>' . esc_html__( 'manually unlock', 'thrive-apprentice' ) . '</strong>' ); ?></p>
+</div>
+<div class="tva-modal-footer-outer">
+	<button type="button" class="tva-modal-btn tvd-modal-close"><?php echo esc_html__( 'Cancel', 'thrive-apprentice' ); ?></button>
+	<button type="button" class="tva-modal-btn tva-modal-btn-blue click" data-fn="unlock"><?php echo esc_html__( 'Yes, unlock this content', 'thrive-apprentice' ); ?></button>
+</div>

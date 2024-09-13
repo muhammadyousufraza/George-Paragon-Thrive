@@ -1,0 +1,459 @@
+.tap-fw {
+  width: 100%;
+}
+
+.tap-info {
+  padding: 14px 20px;
+  border-radius: 4px;
+
+  &.blue {
+    background-color: var(--td-blue) !important;
+  }
+
+  &.green {
+    background-color: var(--td-primary);
+  }
+}
+
+.green {
+  color: var(--td-primary);
+}
+
+.tap-columns {
+  flex-direction: column;
+}
+
+.tap-overflow-hidden {
+  overflow: hidden !important;
+}
+
+.tap-overflow-auto {
+  overflow: auto;
+}
+
+.tap-disabled {
+  opacity: 0.7;
+  pointer-events: none;
+  cursor: default;
+}
+
+.tap-bold {
+  font-weight: 700;
+}
+
+.tap-not-active {
+  opacity: 0.5;
+}
+
+.tap-prevent {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.tap-app-loader {
+  top: 0;
+  left: 0;
+  display: none;
+  background: rgba(255, 255, 255, .75) url('../images/loader.gif') no-repeat center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 99999999;
+
+  &.tap-loader-show {
+    display: block;
+  }
+}
+
+.tap-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--column {
+    @extend .tap-flex;
+    flex-direction: column;
+  }
+
+  &--column-start {
+    @extend .tap-flex--column;
+    align-items: flex-start;
+  }
+
+  &--between {
+    @extend .tap-flex;
+    justify-content: space-between;
+  }
+
+  &--around {
+    @extend .tap-flex;
+    justify-content: space-around;
+  }
+
+  &--start {
+    @extend .tap-flex;
+    justify-content: flex-start;
+  }
+
+  &--end {
+    @extend .tap-flex;
+    justify-content: flex-end;
+  }
+
+  &--wrap {
+    @extend .tap-flex;
+    flex-wrap: wrap;
+  }
+}
+
+/**
+ICON
+ */
+.tap-icon-wrapper {
+  @extend .tap-flex;
+  --tap-icon-size: 30px;
+  width: var(--tap-icon-size);
+  height: var(--tap-icon-size);
+  font-size: var(--tap-icon-size);
+  z-index: 9;
+  cursor: pointer;
+
+  svg {
+    @extend .tap-flex;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    vertical-align: middle;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  }
+}
+
+
+/**
+SWITCH
+ */
+.tap-switch,
+.tap-switch * {
+  user-select: none;
+}
+
+.tap-switch label {
+  cursor: pointer;
+}
+
+.tap-switch label input[type=checkbox] {
+  height: 0;
+  opacity: 0;
+  display: none;
+}
+
+.tap-switch {
+  &:hover {
+    .tap-lever {
+      background-color: #a4a9ad;
+    }
+  }
+}
+
+.tap-switch:hover label input[type=checkbox]:checked {
+  & + .tap-lever {
+    background-image: var(--tap-primary-gradient);
+
+    &:after {
+      background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%23821d51' width='10' height='10'%3E%3Cpath d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
+    }
+  }
+}
+
+.tap-switch label .tap-lever {
+  background-color: #cdd3d8;
+  border-radius: 14px;
+  display: inline-block;
+  height: 14px;
+  position: relative;
+  transition: background-color 0.1s ease;
+  vertical-align: middle;
+  width: 30px;
+
+  &:after {
+    background-color: #fff;
+    border-radius: 21px;
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.1s ease, top .1s ease, background-color .1s ease, box-shadow 0.1s ease, width .1s ease, height .1s ease;
+  }
+}
+
+.tap-switch {
+  label {
+    .tap-lever {
+      border: solid 1px #cdd3d8;
+
+      &:after {
+        left: 1px;
+      }
+
+      &:after, &:before {
+        top: 2px;
+      }
+    }
+
+    input[type=checkbox]:checked + .tap-lever:after {
+      left: 15px;
+      top: -1px;
+    }
+  }
+}
+
+input[type=checkbox]:checked:not(:disabled) ~ .tap-lever:active:after {
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(163, 37, 102, 0.1);
+}
+
+input[type=checkbox]:not(:disabled) ~ .tap-lever:active:after {
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.tap-switch label input[type=checkbox]:checked {
+  & + .tap-lever {
+    background-color: var(--tap-primary);
+
+    &:after {
+      background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%23a32566' width='10' height='10'%3E%3Cpath d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
+      box-shadow: 0 0 6px 0 rgba(80, 86, 95, 0.25);
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.tap-switch label input[type=checkbox][disabled] + .tap-lever {
+  background: #eee;
+  cursor: default;
+}
+
+.tap-switch label input[type=checkbox][disabled] + .tap-lever:after,
+.tap-switch label input[type=checkbox][disabled]:checked + .tap-lever:after {
+  background: #ccc;
+  box-shadow: none;
+}
+
+.tap-switch-disabled {
+  pointer-events: none;
+}
+
+.tap-switch-label {
+  margin-right: 15px;
+}
+
+/**
+    CHECKBOX
+*/
+.tap-checkbox-wrapper {
+  --tap-checkbox-size: 20px;
+  position: relative;
+  padding: 5px 5px 5px 0;
+  margin: 5px 5px 5px 0;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .tap-checkmark {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    height: var(--tap-checkbox-size);
+    width: var(--tap-checkbox-size);
+    margin-right: 7px;
+    border-radius: 2px;
+    border: solid 1px #c0cad1;
+    box-sizing: border-box;
+  }
+
+  /* On mouse-over, add a grey background color */
+  &:hover input ~ .tap-checkmark {
+    background-color: #ccc;
+  }
+
+  input:checked ~ .tap-checkmark {
+    background-color: var(--tap-primary);
+    border: none;
+  }
+
+  /* Show the checkmark when checked */
+  input:checked ~ .tap-checkmark:after {
+    display: block;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Style the checkmark/indicator */
+  .tap-checkmark:after {
+    background: var(--tap-primary) url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%23fff' width='10' height='10'%3E%3Cpath d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .tap-checkbox-label {
+    display: block;
+    font-size: 14px;
+    color: var(--tap-text-color-sec);
+  }
+}
+
+/**
+    RADIO
+*/
+.tap-radio-wrapper {
+  @extend .tap-checkbox-wrapper;
+  --tap-radio-size: 20px;
+  margin: 0 5px 0 0;
+  /* Create a custom checkbox */
+  .tap-checkmark {
+    border: none;
+    height: var(--tap-radio-size);
+    width: var(--tap-radio-size);
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: rgb(175, 175, 175) 0 0 0 1px;
+  }
+
+  &:hover input ~ .tap-checkmark {
+    background-color: transparent;
+    box-shadow: var(--tap-primary) 0 0 0 1px;
+  }
+
+  input:checked ~ .tap-checkmark {
+    box-shadow: var(--tap-primary) 0 0 0 1px;
+    background-color: transparent;
+  }
+
+  /* Style the checkmark/indicator */
+  .tap-checkmark:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: calc(var(--tap-radio-size) / 6) solid #fff !important;
+    background: var(--tap-primary);
+    box-sizing: inherit;
+  }
+}
+
+/**
+ INPUT
+ */
+.tap-input-container {
+  font-size: 13px !important;
+  padding: 9px 10px;
+  border-radius: 4px;
+  border: var(--tap-input-border);
+  color: var(--tap-text-color);
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  max-height: 36px;
+
+  &.tap-label-top {
+    align-items: flex-start;
+    flex-direction: column;
+    max-height: fit-content;
+  }
+
+  &:hover {
+    border-color: #99a2ab;
+  }
+
+  ::placeholder {
+    color: var(--tap-placeholder) !important;
+    font-size: 15px !important;
+  }
+
+  &.no-border {
+    border: none !important;
+
+    input {
+      padding: 9px 10px !important;
+      border-radius: 4px;
+      border: var(--tap-input-border) !important;
+      box-sizing: content-box;
+
+      &:hover {
+        border-color: #99a2ab;
+      }
+    }
+  }
+
+  &.with-dynamic {
+    padding: 0;
+
+    input {
+      margin: 10px 0 10px 9px;
+    }
+
+    &:hover {
+      .tap-vert-separator {
+        background-color: #99a2ab;
+      }
+    }
+  }
+
+  :not(#_s) & .tap-vert-separator {
+    position: absolute;
+    width: 35px;
+    right: 18px;
+    background-color: rgba(176, 185, 193, 0.8);
+  }
+
+  .tap-input-label {
+    margin-right: 10px;
+    min-width: fit-content;
+  }
+
+  input {
+    padding: 0 !important;
+    width: 100%;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    min-height: unset !important;
+    height: 16px;
+    font-size: 15px !important;
+  }
+
+  input::-webkit-inner-spin-button {
+    opacity: 1 !important;
+  }
+}
+
+.tap-textarea {
+  font-size: 15px !important;
+  padding: 9px 10px;
+  border-radius: 4px;
+  border: var(--tap-input-border) !important;
+  color: var(--tap-text-color);
+  outline: none !important;
+  box-shadow: none !important;
+  min-height: 80px;
+  overflow: hidden;
+}
+

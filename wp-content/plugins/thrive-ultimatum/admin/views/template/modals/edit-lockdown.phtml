@@ -1,0 +1,111 @@
+<div class="tvd-modal-content">
+	<h3 class="tvd-modal-title">
+		<?php echo __( 'Activate Lockdown Campaign', 'thrive-ult' ) ?>
+		<?php tve_ult_video( 'qSoYNGje8bg' ) ?>
+	</h3>
+	<div class="control-grid">
+		<div>
+			<p>
+				<img width="90" class="tvu-selected-design" src="<#= ThriveUlt.plugin_url +'admin/img/tvd-'+ model.get('type') + '-campaign.png' #>"/>
+			</p>
+		</div>
+		<div class="pl-30">
+			<p class="tvu-small-gray-text mb-10">
+				<# if(model.get('type') == ThriveUlt.util.campaignType.evergreen) { #>
+				<?php echo __( "Lockdown campaigns can't be cheated because promotions are tied to an email address.  Unknown visitors aren't able to access the promotion. They are especially useful when you set up a sales page, but you don't want anyone to be able to access it before your campaign starts or you want to set up an offer that's available to subscribers exclusively.", 'thrive-ult' ) ?></p>
+			<# } else { #>
+				<?php echo __( "A lockdown campaign will only allow visitors to access the promotion page on the days when the campaign is active. Before the campaign starts they will be redirected to a pre-access page and once it's over, if they try to visit the promotion page, they will be redirected to an expired page.", 'thrive-ult' ) ?></p>
+			<# } #>
+			<a style="font-size: 12px;" href="https://thrivethemes.com/tkb_item/thrive-ultimatum-open-campaign-vs-lockdown-campaign/"><?php echo __( 'Learn more about the difference between open and locked campaigns', 'thrive-ult' ) ?></a>
+		</div>
+	</div>
+	<div id="tve-message-container">
+		<div class="notice notice-info mr-0">
+			<span class="notice-icon">!</span>
+			<p class="tvd-small-text"><?php echo __( 'Lockdown promotion pages need to be excluded from your caching plugin in order to work correctly.', 'thrive-ult' ) ?></p>
+			<a target="_blank" href="https://thrivethemes.com/tkb_item/how-to-exclude-a-lockdown-promotion-from-your-caching-plugin/"><?php echo __( 'Learn how to do this', 'thrive-ult' ) ?></a>
+		</div>
+	</div>
+	<div class="tvu-gray-borderless-box p-10 tvu-autocomplete-limit">
+		<div class="control-grid stretch">
+			<div class="tvu-white-borderless-box mr-10">
+				<p class="tvu-bold-text-important mb-0"><?php echo __( 'Pre-access page', 'thrive-ult' ) ?></p>
+				<p class="tvu-tiny-gray-text mt-5"><?php echo __( 'This is what visitors see if the campaign has not yet started for them', 'thrive-ult' ) ?></p>
+				<div class="tvd-input-field">
+					<input id="tvu-lockdown-pre-access-url" class="tvd-no-focus" type="text" value="<#= model.get('lockdown_settings').preaccess.value #>" data-field="preaccess"
+						   data-allow-regex="^http(s)?:\/\/">
+					<label for="tvu-lockdown-pre-access-url"><?php echo __( 'Enter URL or search term', 'thrive-ult' ) ?></label>
+				</div>
+			</div>
+			<div class="tvu-white-borderless-box">
+				<p class="tvu-bold-text-important mb-0"><?php echo __( 'Expired page', 'thrive-ult' ) ?></p>
+				<p class="tvu-tiny-gray-text mt-5"><?php echo __( 'This is the page that the visitors see once their countdown expires', 'thrive-ult' ) ?></p>
+				<div class="tvd-input-field">
+					<input id="tvu-lockdown-expired-url" class="tvd-no-focus" type="text" value="<#= model.get('lockdown_settings').expired.value #>" data-field="expired"
+						   data-allow-regex="^http(s)?:\/\/">
+					<label for="tvu-lockdown-expired-url"><?php echo __( 'Enter URL or search term', 'thrive-ult' ) ?></label>
+				</div>
+			</div>
+		</div>
+		<div class="tvu-white-borderless-box pt-15">
+			<p class="tvu-bold-text-important m-0"><?php echo __( 'Promotion pages', 'thrive-ult' ) ?></p>
+			<p class="tvu-tiny-gray-text mt-5"><?php echo __( 'These are the pages that are only available during the campaign', 'thrive-ult' ) ?></p>
+			<# if(model.get('type') == ThriveUlt.util.campaignType.evergreen) { #>
+			<div class="tvd-row tvd-no-mb">
+				<div class="tvd-row tvd-collapse tvd-no-mb">
+					<div class="tvd-col tvd-s12" style="width: 30%">
+						<div class="tvd-input-field">
+							<select id="tvu-autoresponder-type">
+								<option disabled selected value="0"><?php echo __( 'Select Email Service', 'thrive-ult' ) ?></option>
+								<?php
+								$connected_apis = Thrive_List_Manager::get_available_apis(
+									false,
+									[
+										'include_types'          => [ 'autoresponder', 'integrations' ],
+										'include_3rd_party_apis' => true,
+									]
+								);
+								?>
+
+								<?php foreach ( $connected_apis as $key => $api ) : ?>
+									<?php $connection = \Thrive_Dash_List_Manager::connection_instance( $key ); ?>
+									<option data-tag="<?php echo $connection->get_email_merge_tag(); ?>"
+											value="<?php echo $key ?>"><?php echo $connection->get_title() ?></option>
+								<?php endforeach; ?>
+							</select>
+							<label for="tvu-autoresponder-type tvu-tiny-blue-text"><?php echo __( 'Select Email Service', 'thrive-ult' ) ?></label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<# } #>
+			<div>
+				<p class="tvu-tiny-blue-text mb-10"><?php echo __( 'URL or search item', 'thrive-ult' ) ?></p>
+			</div>
+			<div class="control-grid">
+				<div class="tve-ult-promotion-wrapper"></div>
+
+				<!--	Lockdown box-->
+				<div class="tvu-url-to-copy-wrapper"></div>
+			</div>
+			<div class="pb-10">
+				<a href="javascript:void(0)" class="tve_ult_add_promotion_field"><span>+</span><?php echo __( 'Add new promotion page', 'thrive-ult' ) ?></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Unchanged-->
+<div class="tvd-modal-footer control-grid">
+	<div>
+		<a href="javascript:void(0)"
+		   class="tvd-btn-flat tvd-btn-flat-secondary tvd-btn-flat-dark tvd-waves-effect tvd-modal-close">
+			<?php echo __( 'Cancel', 'thrive-ult' ) ?>
+		</a>
+	</div>
+	<div>
+		<a href="javascript:void(0)"
+		   class="tvd-btn tvd-btn-green tvd-waves-light tvd-right tvu-save-lockdown-settings tvd-modal-submit">
+			<?php echo __( 'Save', 'thrive-ult' ) ?>
+		</a>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+<div class="mt-10 connection-row">
+	<div class="api-image" data-api="<#= this.model.get('key')#>" style="background-image: url('<#= this.model.logo() #>');"></div>
+	<span class="api-name"><#= TVE.ucFirst(this.model.get('name')) #></span>
+	<div class="api-actions">
+		<# if ( ! this.model.get('preventEdit') ) { #>
+		<a type="button" class="button-link mr-10 click" data-fn="editApi" data-api="<#= this.model.get('key') #>">
+			<span>
+				<?php tcb_icon( 'pen-regular' ); ?>
+			</span>
+		</a>
+		<# } #>
+		<# if ( ! this.model.get('preventDelete') ) { #>
+		<a type="button" class="button-link click" data-fn="disconnectApi" data-api="<#= this.model.get('key') #>">
+			<span>
+				<?php tcb_icon( 'ban-solid' ); ?>
+			</span>
+		</a>
+		<# } else { #>
+		<span data-tooltip="<#= this.model.preventDeleteMessage || '<?php esc_attr_e( 'WordPress account is mandatory for registration forms because this connection is required for the account creation', 'thrive-cb' ); ?>' #>" data-position="bottom" class="tvd-tooltipped"><?php tcb_icon( 'info-circle-solid' ); ?></span>
+		<# } #>
+	</div>
+</div>
+<# if ( this.model.get('connectionData').has_error ) { #>
+<div class="mt-5 mb-5 info-text red"><#= this.model.get('connectionData').error_html #></div>
+<# } #>

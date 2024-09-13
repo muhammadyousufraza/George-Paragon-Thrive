@@ -1,0 +1,60 @@
+<#if(typeof no_item !== 'undefined' && no_item){#>
+<div class="list-no-items tcb-text-center"><?php echo __( 'None', 'thrive-cb' ) ?></div>
+<#} else {#>
+<div class="preview-list-item tcb-relative<#= (settings_icon = view.get_config( 'settings_icon', false )) ? '' : ' click'#>"
+	 data-fn="item_click" data-key="<#=item.get('key')#>" data-index="<#=item.index#>" data-label="<#=item.get('label')#>"  <#= item.get('fieldType') ? ' data-type="' + item.get('fieldType') + '"' : ''#>>
+	<a href="javascript:void(0)"  class="item-icon <#= item.get('icon_click') ? ' click' : ''#>" data-fn="iconClick" data-index="<#=item.index#>">
+		<#=item.get('icon')#>
+	</a>
+	<# if( ! item.get( 'preventOrderChange' ) ){#>
+	<div class="preview-list-sort-handle col-sep"><?php tcb_icon( 'dots2' ); ?></div>
+	<# } #>
+	<div class="item-label tcb-truncate">
+		<#=item.get('label')#>
+		<# if(item.get('dynamic_icon')) { #>
+			<?php tcb_icon( 'database-light' ); ?>
+		<# } #>
+	</div>
+
+	<# if (settings_icon = view.get_config( 'marked', false ) && item.get(view.get_config( 'marked_field', false )) ) { #>
+	<a href="javascript:void(0)" data-side="top" data-tooltip="<#= view.get_config( 'marking_text', false ) #>" class=""
+	   data-index="<#=item.index#>">
+		<#=TVE.icon( view.get_config( 'marking_icon', false ) )#>
+	</a>
+	<# } #>
+	<# if (settings_icon = view.get_config( 'settings_icon', false )) { #>
+	<a href="javascript:void(0)" data-side="left" data-tooltip="<?php esc_attr_e( 'Edit', 'thrive-cb' ) ?>" class="action-edit click" data-fn="item_click" data-index="<#=item.index#>">
+		<#=TVE.icon(settings_icon)#>
+	</a>
+	<# } #>
+	<# if (clone_icon = view.get_config( 'clone_icon', false )) { #>
+	<a href="javascript:void(0)" data-tooltip="<?php esc_attr_e( 'Duplicate', 'thrive-cb' ) ?>" class="action-clone click" data-fn="item_duplicate" data-index="<#=item.index#>">
+		<#=TVE.icon(clone_icon)#>
+	</a>
+	<# } #>
+	<# if ( !item.get('preventDelete') ) { #>
+	<a href="javascript:void(0)" data-side="right" data-tooltip="<?php esc_attr_e( 'Remove', 'thrive-cb' ) ?>" class="action-remove click" data-fn="item_remove" data-index="<#=item.index#>">
+		<?php tcb_icon( 'trash-light' ) ?>
+	</a>
+	<# } #>
+
+	<# if ( item.get('preventDelete') ) { #>
+	<a href="javascript:void(0)" data-side="right" data-tooltip="<?php esc_attr_e( 'Field cannot be deleted because you have a connection that requires it to work', 'thrive-cb' ) ?>" class="tvd-tooltipped" data-position="top" data-index="<#=item.index#>">
+		<?php tcb_icon( 'info-circle-solid' ) ?>
+	</a>
+	<# } #>
+	<# if ( item.get('toggleControl') ) { #>
+	<span data-side="right" class="visibility-control action-toggle click" data-value="<#=item.get('visible')?'show':'hide'#>">
+		<button data-side="right" data-tooltip="<?php esc_attr_e( 'Toggle visibility', 'thrive-cb' ) ?>"
+				class="full-opacity hide-icon-button visibility-control click" data-fn="toggle_item" data-visibility="hide" data-index="<#=item.index#>">
+			<?php tcb_icon( 'eye-slash-regular2' ); ?>
+		</button>
+		<button data-side="right" data-tooltip="<?php esc_attr_e( 'Toggle visibility', 'thrive-cb' ) ?>"
+				class="full-opacity show-icon-button visibility-control click" data-fn="toggle_item" data-visibility="show" data-index="<#=item.index#>">
+			<?php tcb_icon( 'eye-regular' ); ?>
+		</button>
+	</span>
+	<# } #>
+</div>
+<#=item.get('dynamic_ui')#>
+<#}#>

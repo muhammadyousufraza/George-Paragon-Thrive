@@ -1,0 +1,24 @@
+<div class="tva-new-product">
+	<div class="tva-new-product-title pl-50"><?php echo esc_html__( ' Create new product', 'thrive-apprentice' ); ?></div>
+	<div class="tva-new-product-scroll">
+		<div>
+			<label for="product_name"><?php echo esc_html__( 'Product name', 'thrive-apprentice' ); ?></label>
+			<input type="text" placeholder="<?php echo esc_html__( 'Add a product name', 'thrive-apprentice' ); ?>" name="product_name" id="product_name"/>
+		</div>
+
+		<div class="tva-flex tva-flex-column">
+			<div class="tva-new-product-subtitle mb-5"><?php echo esc_html__( 'Product content', 'thrive-apprentice' ); ?></div>
+			<div class="tva-new-product-container tva-flex tva-flex-column">
+				<div class="tva-new-product-text pl-50 pr-50">
+					<div class="pl-30 pr-30">
+						<?php echo esc_html__( 'Any content added to a product will be protected on your website until a user purchases it or meets the access restriction rules', 'thrive-apprentice' ); ?>
+					</div>
+				</div>
+				<div class="tva-product-details"></div>
+			</div>
+		</div>
+	</div>
+	<div class="pr-50 tva-flex tva-flex-end">
+		<button class="mt-20 tva-btn tva-btn-blue click tva-save-product" data-fn="createProduct"><?php echo esc_html__( 'Done', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>

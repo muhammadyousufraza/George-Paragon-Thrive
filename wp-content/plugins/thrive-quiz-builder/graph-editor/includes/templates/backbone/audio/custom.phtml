@@ -1,0 +1,8 @@
+<div class="tqb-audio-container tqb-audio-custom">
+	<audio controls playsinline controlsList="nodownload" style="width: 100%;"
+	<#= item.buildAutoplayParam() #> <#= item.buildLoopParam() #>>
+	<source src="<#= item.get('url') #>" type="<#= mime #>">
+	<source src="<#= item.get('url') #>" type="audio/ogg">
+	Your browser does not support the audio tag.
+	</audio>
+</div>

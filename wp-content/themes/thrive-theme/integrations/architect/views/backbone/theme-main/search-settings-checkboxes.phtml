@@ -1,0 +1,7 @@
+<# _.each( this.allPostTypes, function ( postType ) { #>
+<label class="tcb-checkbox">
+	<input type="checkbox" class="s-post-type change" data-fn="item_toggle" value="<#= postType.key #>"
+	<#= this.savedPostTypes.indexOf(postType.key) !== -1 ? "checked" : "" #> >
+	<span> <#= postType.label #> </span>
+</label>
+<# }, this); #>

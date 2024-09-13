@@ -1,0 +1,158 @@
+/**
+KEY PAiR
+ */
+
+.tap-key-pair-container {
+  .tap-key-pair {
+    position: relative;
+
+    > * {
+      margin-right: 10px;
+
+      &:last-of-type, &:nth-of-type(3) {
+        margin-right: 0;
+      }
+    }
+
+    .tap-pair-delete {
+      right: 0;
+      top: -12px;
+    }
+
+    .tap-key-pair-separator {
+      min-width: 36px;
+      height: 36px;
+      box-sizing: border-box;
+    }
+
+    .tap-input-container.with-dynamic {
+      min-width: 230px;
+    }
+
+    .tap-key-pair-separator {
+      border: var(--tap-input-border);
+      border-radius: 4px;
+    }
+  }
+}
+
+.tap-kp-errors {
+  display: none;
+  padding: 5px 0;
+  box-sizing: border-box;
+  color: var(--tap-delete);
+
+  .tap-kp-key-error {
+    width: 240px;
+  }
+
+  .tap-kp-field-error {
+    width: 230px;
+  }
+}
+
+.tap-pair-delete {
+  z-index: 5;
+  color: var(--tap-placeholder);
+  position: absolute;
+  right: -12px;
+  top: -4px;
+  cursor: pointer;
+  opacity: 0.5;
+
+  > .tap-icon-wrapper {
+    --tap-icon-size: 8px;
+  }
+
+  &:hover {
+    color: #444648;
+  }
+}
+
+.tap-mapping-pair {
+  gap: 5px;
+  position: relative;
+  box-sizing: border-box;
+
+  .tap-select-wrapper, .tap-input-container {
+    width: 230px !important;
+  }
+
+  .tap-pair-delete {
+    top: -1px;
+    right: 6px;
+  }
+}
+
+.tap-show-errors {
+  .tap-field-generator {
+    .tap-fg-errors {
+      display: flex;
+    }
+  }
+
+  .tap-fg-inputs, .tap-key-pair-container, .tap-mapping-pair {
+    .tap-input-container {
+      &.tap-input-error {
+        border-color: var(--tap-delete) !important;
+      }
+    }
+  }
+
+  .tap-kp-errors {
+    display: flex;
+  }
+}
+
+.tap-field-generator {
+  position: relative;
+
+  .tap-fg-inputs {
+    .tap-input-container {
+      margin-right: 10px;
+    }
+
+    .tap-select-toggle-trigger {
+      margin-right: 0 !important;
+    }
+
+    .tap-input-container, .tap-select-wrapper {
+      width: 230px !important;
+    }
+  }
+
+  .tap-pair-delete {
+    right: 8px;
+    top: 0;
+  }
+
+  .tap-fg-errors {
+    box-sizing: border-box;
+
+    > div {
+      color: var(--tap-delete);
+      width: 230px;
+    }
+  }
+
+  .tap-fg-errors {
+    display: none;
+  }
+}
+
+.tap-advanced-mapping-data {
+  align-items: flex-start !important;
+}
+
+.tap-advanced-mapping-fields {
+  .tap-matches {
+    .tap-field-generator {
+      margin-top: 5px !important;
+      padding-top: 5px !important;
+    }
+
+    .tap-fg-errors {
+      padding: 5px 0;
+    }
+  }
+}

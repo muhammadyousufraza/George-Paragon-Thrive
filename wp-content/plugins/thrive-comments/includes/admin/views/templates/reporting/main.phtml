@@ -1,0 +1,202 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-comments
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden.
+}
+?>
+<div id="tcm-header">
+	<nav id="tcm-nav">
+		<a href="#dashboard">
+			<span class="tcm-nav-svg">
+				<?php echo tcah()->tcm_icon( 'logo-dashboard', 'tc-logo-dashboard' ); ?>
+			</span>
+			<strong><?php echo __( 'Thrive', Thrive_Comments_Constants::T ); ?></strong>
+			<?php echo __( 'Comments', Thrive_Comments_Constants::T ); ?>
+		</a>
+		<?php if ( TCM_Product::has_access() ) : ?>
+			<a class="tcm-settings tcm-icon-cog tvd-right tcm-gt-reporting"
+			   href="<?php echo tcm()->tcm_settings_url() ?>"><?php echo __( 'Settings', Thrive_Comments_Constants::T ); ?></a>
+		<?php endif; ?>
+		<a class="tvd-right tcm-gt-moderation "
+		   href="<?php echo tcm()->tcm_moderation_url() ?>"><?php echo __( 'Go to Comments Moderation', Thrive_Comments_Constants::T ); ?></a>
+
+	</nav>
+</div>
+<?php echo tvd_get_individual_plugin_license_message( new TCM_Product(), true ); ?>
+<div id="tcm-reporting">
+
+	<div class="tcm-reporting-filter-section">
+		<div class="tvd-row">
+			<div class="tcm-elem tvd-col tvd-s6 tvd-m2">
+				<label for="tcm-report-type">
+					<?php echo __( 'Show report', Thrive_Comments_Constants::T ); ?>
+				</label>
+				<select class="tcm-report-select" name="report_type" id="tcm-report-type">
+					<option value="comments_graph"
+							selected><?php echo __( 'Comments Graph', Thrive_Comments_Constants::T ); ?></option>
+					<option value="vote_engagements"><?php echo __( 'Vote Engagements', Thrive_Comments_Constants::T ); ?></option>
+					<option value="most_active_commenters"><?php echo __( 'Most Active Commenters', Thrive_Comments_Constants::T ); ?></option>
+					<option value="most_popular_posts"><?php echo __( 'Most Popular Posts', Thrive_Comments_Constants::T ); ?></option>
+					<option value="most_upvoted"><?php echo __( 'Most Upvoted Comments', Thrive_Comments_Constants::T ); ?></option>
+				</select>
+			</div>
+
+			<div class="tcm-elem tvd-col tvd-s6 tvd-m2" id="tcm-reporting-autocomplete">
+				<label for="tcm_report_autocomplete">
+					<?php echo __( 'View comments on', Thrive_Comments_Constants::T ); ?>
+				</label>
+				<input class="tcm_post_autocomplete tcm-autocomplete small-text tcm-keyword-input" data-type="text"
+					   id="tcm_report_autocomplete" data-setting="value" placeholder="Entire Website" type="text"
+					   value="" data-flag="">
+				<select id="approve_post_id" class=" tvd-browser-default" style="display: none;"></select>
+				<span class="clear-post-autocomplete">x</span>
+			</div>
+
+			<div class="tcm-elem tvd-col tvd-s6 tvd-m2">
+				<label for="tcm-report-date">
+					<?php echo __( 'Date interval', Thrive_Comments_Constants::T ); ?>
+				</label>
+				<select class="tcm-report-select" name="report_date" id="tcm-report-date">
+					<option value="7 day"
+							selected><?php echo __( 'Last 7 days', Thrive_Comments_Constants::T ); ?></option>
+					<option value="30 day"><?php echo __( 'Last 30 days', Thrive_Comments_Constants::T ); ?></option>
+					<option value="this_month"><?php echo __( 'This month', Thrive_Comments_Constants::T ); ?></option>
+					<option value="last_month"><?php echo __( 'Last month', Thrive_Comments_Constants::T ); ?></option>
+					<option value="this_year"><?php echo __( 'This year', Thrive_Comments_Constants::T ); ?></option>
+					<option value="last_year"><?php echo __( 'Last year', Thrive_Comments_Constants::T ); ?></option>
+					<option value="365 day"><?php echo __( 'Last 12 months', Thrive_Comments_Constants::T ); ?></option>
+					<option value="custom_range"><?php echo __( 'Custom date range', Thrive_Comments_Constants::T ); ?></option>
+				</select>
+			</div>
+
+			<div class="tcm-elem tvd-col tvd-s6 tvd-m2 custom-range-date" hidden>
+				<div class="tvd-input-field">
+					<input type="text" name="tve-report-start-date" id="tcm-report-start-date"
+						   class="tcm-report-select"/>
+					<label for="tve-report-start-date"><?php echo __( 'Start date', Thrive_Comments_Constants::T ); ?></label>
+				</div>
+			</div>
+			<div class="tcm-elem tvd-col tvd-s6 tvd-m2 custom-range-date" hidden>
+				<div class="tvd-input-field">
+					<input type="text" name="tve-report-end-date" id="tcm-report-end-date" class="tcm-report-select"/>
+					<label for="tve-report-end-date"><?php echo __( 'End date', Thrive_Comments_Constants::T ); ?></label>
+				</div>
+			</div>
+
+			<div class="tcm-elem tvd-col tvd-s6 tvd-m2 tcm-graph-interval">
+				<label for="tcm-report-date">
+					<?php echo __( 'Graph interval', Thrive_Comments_Constants::T ); ?>
+				</label>
+				<select class="tcm-report-select" name="report_source" id="tcm-report-graph">
+					<option value="1 day" selected><?php echo __( 'Daily', Thrive_Comments_Constants::T ); ?></option>
+					<option value="1 week"><?php echo __( 'Weekly', Thrive_Comments_Constants::T ); ?></option>
+					<option value="1 month"><?php echo __( 'Monthly', Thrive_Comments_Constants::T ); ?></option>
+				</select>
+			</div>
+
+			<div class="tcm-elem tvd-col tvd-s6 tvd-m2">
+				<div class="tcm-config-field tcm-incl-excl-moderators">
+					<label for="tcm-include-moderators">
+						<?php echo __( 'Include moderator comments', Thrive_Comments_Constants::T ); ?>
+					</label>
+					<div class="tvd-switch">
+						<label>
+							<input type="checkbox" id="tcm-include-moderators" class="tcm-checkbox tcm-report-select"
+								   data-type="checkbox" checked><span class="tvd-lever"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div id="tcm-display-report-parent">
+	<div id="tcm-display-report"></div>
+	<div class="tcm-no-data-report" hidden>
+		<h3><?php echo __( 'No Data (Yet)', Thrive_Comments_Constants::T ); ?></h3>
+		<p>
+			<?php echo __( 'Currently there is no data to display.', Thrive_Comments_Constants::T ); ?>
+		</p>
+	</div>
+	<div id="active_commenters_graph" hidden>
+
+		<div class="most-header most_active_commenters_header" hidden>
+			<span><?php echo __( 'Email', Thrive_Comments_Constants::T ); ?></span>
+			<span><?php echo __( 'Name', Thrive_Comments_Constants::T ); ?></span>
+			<span><?php echo __( 'Number of comments', Thrive_Comments_Constants::T ); ?></span>
+		</div>
+		<div class="most-header most_popular_post_header" hidden>
+			<span><?php echo __( 'Post title', Thrive_Comments_Constants::T ); ?></span>
+			<span><?php echo __( 'Number of comments', Thrive_Comments_Constants::T ); ?></span>
+		</div>
+		<div class="most-header most_upvoted_comments_header" hidden>
+			<span><?php echo __( 'Comment Author', Thrive_Comments_Constants::T ); ?></span>
+			<span><?php echo __( 'Comment', Thrive_Comments_Constants::T ); ?></span>
+			<span><?php echo __( 'Number of Upvotes', Thrive_Comments_Constants::T ); ?></span>
+			<span><?php echo __( 'Number of Downvotes', Thrive_Comments_Constants::T ); ?></span>
+			<span><?php echo __( 'Posted on', Thrive_Comments_Constants::T ); ?></span>
+		</div>
+		<div id="most_active_commenters"></div>
+
+		<div id="most_upvoted"></div>
+
+		<div class="tcm-reporting-navigation">
+			<div class="tcm-reports-pagination hth-reporting">
+				<p class="">
+					<strong>
+						<?php echo __( 'Rows per page', Thrive_Comments_Constants::T ) ?>
+					</strong>
+				</p>
+				<div class="">
+					<select class="tcm-change-users" id="tcm-user-per-page">
+						<option value="5" selected>5</option>
+						<option value="10">10</option>
+						<option value="15">15</option>
+						<option value="20">20</option>
+					</select>
+				</div>
+				<span class=""></span>
+			</div>
+
+			<div class="reporting-nav-container hth-reporting">
+				<p class="">
+					<strong>
+						<?php echo __( 'Page', Thrive_Comments_Constants::T ) ?>
+						<span class="tcm-users-list-current-page"></span>
+						<?php echo __( 'of', Thrive_Comments_Constants::T ) ?>&nbsp;
+						<span class="tcm-users-list-total-pages"></span>
+					</strong>
+				</p>
+				<a class="tcm-previous-page tvd-text-gray tvd-margin-left" href="javascript:void(0)"><span
+							class="tvd-icon-chevron-left"></span></a>
+				<a class="tcm-next-page tvd-text-gray tvd-margin-left" href="javascript:void(0)"><span
+							class="tvd-icon-chevron-right2"></span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="tvd-preloader-overlay tvd-page-preloader tcm-reporting-loader" id="tvd-hide-onload" style="display: none;">
+	<div class="tvd-card-preloader">
+		<div class="tvd-preloader-wrapper tvd-bigger tvd-active">
+			<div class="tvd-spinner-layer tvd-spinner-green-only">
+				<div class="tvd-circle-clipper tvd-left">
+					<div class="tvd-circle"></div>
+				</div>
+				<div class="tvd-gap-patch">
+					<div class="tvd-circle"></div>
+				</div>
+				<div class="tvd-circle-clipper tvd-right">
+					<div class="tvd-circle"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

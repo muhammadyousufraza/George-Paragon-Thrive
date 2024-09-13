@@ -1,0 +1,101 @@
+<div class="tva-drip-width tva-boxed-container">
+	<div class="tva-view-state state-list">
+		<# if ( ! this.collection.length ) { #>
+		<div class="tva-drip-splash-container tva-text-center">
+			<div class="tva-drip-splash-top">
+				<div>
+					<div>
+						<h3><?php esc_html_e( 'Drip feed your course content and increase customer retention', 'thrive-apprentice' ); ?></h3>
+						<p><?php esc_html_e( 'Drip feeding your course content is one of the best ways to keep members active longer.', 'thrive-apprentice' ); ?></p>
+					</div>
+					<img src="<?php echo TVA_Const::plugin_url( 'admin/includes/assets/img/drip/drip-splash-secondary@2x.png' ); ?>" alt="Drip" width="97">
+				</div>
+			</div>
+
+			<div class="tva-drip-splash-btm">
+				<div>
+					<img src="<?php echo TVA_Const::plugin_url( 'admin/includes/assets/img/drip/drip-splash-main@2x.png' ); ?>" alt="Drip" width="317">
+					<div>
+						<p><?php esc_html_e( 'Unlock your course content with time delays, user actions or any other trigger you can think of.', 'thrive-apprentice' ); ?></p>
+						<p><?php esc_html_e( 'Tease your customers with new content to keep them intrigued, engaged and to keep them actively subscribed to your product.', 'thrive-apprentice' ); ?></p>
+						<# if ( ! this.model.getModulesAndLessons().length ) { #>
+
+						<div class="tva-drip-notice tva-drip-welcome mt-20">
+							<p>
+								<?php esc_html_e( "It seems this course doesn't have any published content!", 'thrive-apprentice' ); ?>
+								<?php
+								echo sprintf(
+									esc_html__( "Open the %scontent tab%s and create some lessons/modules, then you'll be able to create drip campaigns for this course.", 'thrive-apprentice' ),
+									'<a href="javascript:void(0)" class="click" data-fn="openContentTab">',
+									'</a>'
+								);
+								?>
+							</p>
+						</div>
+
+						<# } else { #>
+						<h4><?php esc_html_e( 'Get started!', 'thrive-apprentice' ); ?></h4>
+						<button class="tva-btn tva-btn-blue click" data-fn="openCampaignModal"><?php esc_html_e( 'Create first Drip Campaign', 'thrive-apprentice' ); ?></button>
+						<# } #>
+					</div>
+				</div>
+			</div>
+		</div>
+		<# } else { #>
+		<div class="tva-flex tva-drip-heading tva-space-between tva-align-center">
+			<h2><?php esc_html_e( 'Course Drip Schedules', 'thrive-apprentice' ); ?></h2>
+			<button class="tva-btn-blue-simple click" data-fn="openCampaignModal">
+				<?php tva_get_svg_icon( 'add-btn-extra' ); ?>
+				<?php esc_html_e( 'Add new', 'thrive-apprentice' ); ?>
+			</button>
+		</div>
+		<div class="mb-15 tva-flex tva-drip-assign-notice tva-align-center tva-space-center">
+			<?php tva_get_svg_icon( 'info-circle_light', 'mr-5' ); ?>
+			<p>
+				<?php echo esc_html__( 'To activate a drip schedule, assign it to a product in the Products tab.', 'thrive-apprentice' ) ?>
+				<a class="tvd-underline" href="http://help.thrivethemes.com/en/articles/5727555-creating-a-drip-schedule"
+				   target="_blank" rel="noopener"><?php echo esc_html__( 'Learn more', 'thrive-apprentice' ) ?></a>.
+			</p>
+		</div>
+		<div class="tva-drip-list">
+			<# this.collection.each( function( model ) { #>
+			<div class="tva-list-item tva-align-center">
+				<div class="tva-list-item-clickable click" data-fn="clickEditCampaign" data-id="<#- model.get('id') #>">
+					<span class="tva-drip-icon"><?php tva_get_svg_icon( 'drip-main' ); ?></span>
+					<span class="tva-drip-name"><#- model.get('post_title') #></span>
+					<div class="tva-drip-type">
+						<div class="tva-drip-schedule-list">
+							<div class="tva-summary-items">
+								<div class="tva-summary-trigger">
+									<div class="mt-10 tva-flex tva-align-center">
+										<#= model.getTriggerIcon() #>
+										<span class="tva-s-text"><#- model.getTriggerSummary() #></span>
+									</div>
+								</div>
+								<div class="tva-summary-arrow">
+									<div class="mt-10 tva-flex tva-align-center tva-arrow">
+										<div class="tva-brdr"></div>
+										<?php tva_get_svg_icon( 'caret-down_solid' ); ?>
+									</div>
+								</div>
+								<div class="tva-summary-schedule">
+									<div class="mt-10 tva-flex tva-align-center">
+										<#= model.getScheduleIcon() #>
+										<span class="tva-s-text"><#= model.getScheduleSummary() #></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tva-drip-actions">
+					<a href="javascript:void(0)" class="click" data-fn="clickEditCampaign" data-id="<#- model.get('id') #>"><?php tva_get_svg_icon( 'pen_light' ); ?></a>
+					<a href="javascript:void(0)" class="click" data-fn="deleteCampaign" data-id="<#- model.get('id') #>"><?php tva_get_svg_icon( 'trash-1' ); ?></a>
+				</div>
+			</div>
+			<# } ); #>
+		</div>
+		<# } #>
+	</div>
+	<div class="tva-view-state state-edit"></div>
+</div>

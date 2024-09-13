@@ -1,0 +1,132 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+use TVA\Reporting\Main;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="apprentice-dashboard-container">
+	<div class="apprentice-top-section">
+		<div>
+			<h2 class="m-0">
+				<?php echo esc_html__( 'Apprentice snapshot', 'thrive-apprentice' ); ?>
+			</h2>
+
+			<div class="apprentice-dashboard-wrapper no-focus main-view">
+				<div></div>
+				<?php Main::render_report( 'tve_reporting_filter', 'date_filter' ); ?>
+			</div>
+		</div>
+	</div>
+	<# if ( ! TVA.Utils.isTooltipViewed( 'reports-dismiss-welcome-notification' ) ) { #>
+	<div class="apprentice-intro mb-30">
+		<div>
+			<span class="text-blue">
+				<?php echo esc_html__( 'Welcome to your', 'thrive-apprentice' ); ?>
+			</span>
+			<span class="title text-blue">
+				<?php echo esc_html__( 'Apprentice Snapshot', 'thrive-apprentice' ); ?>
+			</span>
+			<a href="javascript:void(0)" class="click" data-fn="dismissWelcomeNotification">
+				<i class="tvd-icon-close2"></i>
+			</a>
+		</div>
+		<div>
+			<span class="description">
+				<?php echo esc_html__( 'View high level reports & trends to gauge the health and outcomes of your membership site. Click through to view more specific data and insights in each sub report.', 'thrive-apprentice' ); ?>
+			</span>
+		</div>
+	</div>
+	<# } #>
+	<div class="apprentice-dashboard-wrapper">
+		<div class="col-2-8">
+			<?php Main::render_report( 'tve_reporting_card', 'enrollments', 'arrow-in', [
+				'chart-config' => [
+					'on-click-url' => '#reports/courses/enrollments',
+				],
+			] ); ?>
+		</div>
+		<div class="col-2-8">
+			<?php Main::render_report( 'tve_reporting_card', 'course_completion', 'flag', [
+				'chart-config' => [
+					'on-click-url' => '#reports/courses/completions',
+				],
+			] ); ?>
+		</div>
+		<div class="col-2-8">
+			<?php Main::render_report( 'tve_reporting_card', 'course_progress', 'chart-grow', [
+				'chart-config' => [
+					'on-click-url' => '#reports/courses/progress',
+				],
+			] ); ?>
+		</div>
+		<div class="col-2-8">
+			<?php Main::render_report( 'tve_reporting_card', 'new_members', 'users' ); ?>
+		</div>
+	</div>
+
+	<div class="apprentice-dashboard-wrapper">
+		<div class="col-4-8">
+			<?php Main::render_report( 'tve_reporting_timeline', 'new_members', 'user-plus', [
+				'report-title'          => 'Latest members',
+				'report-data-type'      => 'latest_members',
+				'report-expanded-view'  => '#members',
+				'user-url'              => '#members/{user}/courses',
+				'report-items-per-page' => 4,
+			] ); ?>
+		</div>
+		<div class="col-4-8">
+			<?php Main::render_report( 'tve_reporting_card', 'lesson_completion', 'check', [ 'report-group-by' => 'date', 'report-title' => 'Lesson completions' ] ); ?>
+		</div>
+	</div>
+
+	<div class="apprentice-dashboard-wrapper">
+		<div class="col-3-8">
+			<?php Main::render_report( 'tve_reporting_chart', 'popular_courses', 'star', [
+				'report-data-type' => 'chart',
+				'chart-config'     => [
+					'on-click-url' => '#reports/courses/main?course_id={point}',
+				],
+			] ); ?>
+		</div>
+		<div class="col-5-8">
+			<?php Main::render_report( 'tve_reporting_table', 'popular_courses', 'star', [
+				'report-title'              => 'Popular course details',
+				'report-data-type'          => 'table',
+				'report-items-per-page'     => 6,
+				'report-order-by'           => 'enrollments',
+				'report-order-by-direction' => 'desc',
+			] ); ?>
+		</div>
+	</div>
+
+	<div class="apprentice-dashboard-wrapper">
+		<div class="col-8-8">
+			<?php Main::render_report( 'tve_reporting_chart', 'all_engagements', 'user-clock', [
+				'report-global-filters' => 'date',
+				'report-expanded-view'  => '#reports/courses/activity',
+			] ); ?>
+		</div>
+	</div>
+
+	<div class="apprentice-dashboard-wrapper">
+		<div class="col-4-8">
+			<?php Main::render_report( 'tve_reporting_table', 'top_members', 'trophy', [
+				'report-table-columns'      => 'user_id,enrollments,completed_lessons,completion_rate',
+				'report-items-per-page'     => 6,
+				'report-order-by'           => 'completed_lessons',
+				'report-order-by-direction' => 'desc',
+			] ); ?>
+		</div>
+		<div class="col-4-8">
+			<?php Main::render_report( 'tve_reporting_timeline', 'latest_activity', 'clock' ); ?>
+		</div>
+	</div>
+</div>

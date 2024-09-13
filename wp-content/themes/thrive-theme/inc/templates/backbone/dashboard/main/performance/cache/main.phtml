@@ -1,0 +1,28 @@
+<div class="ttd-cache-plugins-container ttd-performance-page">
+	<h1 class="ttd-page-title"><?php echo __( 'Minification and Caching', 'thrive-theme' ); ?></h1>
+
+	<div class="ttd-performance-card info ttd-d-flex">
+		<#= TTD.utils.icon( 'performance-cache' ) #>
+		<div class="ttd-performance-text ml-40">
+			<p class="m-0"><?php echo __( 'While Thrive Products are compatible with most caching plugins available, we have developed a one-click setup process with certain recommended tools.', 'thrive-theme' ); ?></p>
+			<p class="mt-25 mb-0"><?php echo __( 'Once installed, click the "Configure my site for Optimal Caching" and the recommended settings will be automatically deployed', 'thrive-theme' ); ?></p>
+		</div>
+	</div>
+
+	<p class="ttd-normal mt-80 mb-10 pfs-15"><?php echo __( 'Recommended Caching Plugins with One Click Configuration', 'thrive-theme' ); ?></p>
+
+	<div class="ttd-performance-notice success small">
+		<span class="click" data-fn="closeNotice"><?php Thrive_Views::svg_icon( 'close' ); ?></span>
+		<p><span class="ttd-cache-plugin-name">W3 Total Cache</span>&nbsp;<?php echo __( 'was Successfully Activated', 'thrive-theme' ); ?></p>
+	</div>
+
+	<div class="ttd-performance-notice warning">
+		<span class="click" data-fn="closeNotice"><?php Thrive_Views::svg_icon( 'close' ); ?></span>
+		<h2 class="ttd-text-center"><?php echo __( 'Warning - Multiple Caching Plugins Activated', 'thrive-theme' ); ?></h2>
+
+		<p><?php echo __( 'We found multiple caching plugins activated on your site. Multiple caching plugins may cause problems, such as conflicts, and cause your site to break while offering no additional benefit.', 'thrive-theme' ); ?>.</p>
+		<br>
+		<p><?php printf( __( "Unless you're an advanced user, consider deactivating one of the caching plugins from the %s" ), '<a target="_blank" href="' . admin_url( 'plugins.php' ) . '">' . __( 'plugin dashboard', 'thrive-theme' ) . '</a>', 'thrive-theme' ); ?>.</p>
+	</div>
+	<div class="ttd-plugins-container"></div>
+</div>

@@ -1,0 +1,66 @@
+<?php use TVA\TTB\Main; ?>
+<div class="tvd-modal-step">
+	<div class="tvd-modal-content">
+		<h3 class="tvd-modal-title"><?php echo __( 'Add course content', 'thrive-apprentice' ) ?></h3>
+		<p><?php echo __( 'Choose whether to add a module, chapter, assessment or a lesson.', 'thrive-apprentice' ) ?></p>
+		<p><?php echo __( 'Lessons contain your course content. Modules and chapters are used to organize your lessons in a logical structure. Use assessments to drive learning goals and track a student\'s learning progress.', 'thrive-apprentice' ) ?></p>
+
+		<div class="tva-modal-buttons-sp">
+			<a href="javascript:void(0)" class="tvd-modal-next-step click" data-fn="setModel" data-type="lesson">
+				<?php tva_get_svg_icon( 'plus_light' ); ?>
+				<?php echo __( 'Add Lesson', 'thrive-apprentice' ) ?></a>
+
+			<?php if ( Main::uses_builder_templates() ): ?>
+				<a href="javascript:void(0)" class="tvd-modal-next-step click" data-fn="setModel" data-type="assessment">
+					<span class="tva-new-badge"><?php echo __( 'New', 'thrive-apprentice' ) ?></span>
+					<?php tva_get_svg_icon( 'plus_light' ); ?>
+					<?php echo __( 'Add Assessment', 'thrive-apprentice' ) ?></a>
+			<?php endif; ?>
+			<a href="javascript:void(0)" class="tvd-modal-next-step click" data-fn="setModel" data-type="chapter">
+				<?php tva_get_svg_icon( 'plus_light' ); ?>
+				<?php echo __( 'Add Chapter', 'thrive-apprentice' ) ?></a>
+
+			<a href="javascript:void(0)" class="tvd-modal-next-step click" data-fn="setModel" data-type="module">
+				<?php tva_get_svg_icon( 'plus_light' ); ?>
+				<?php echo __( 'Add Module', 'thrive-apprentice' ) ?></a>
+		</div>
+
+		<div class="tva-modal-footer-inner">
+			<button type="button" class="tva-modal-btn tvd-modal-close"><?php echo __( 'Cancel', 'thrive-apprentice' ) ?></button>
+		</div>
+	</div>
+</div>
+
+<div class="tvd-modal-step" id="tvd-parent-selection-step">
+	<div class="tvd-modal-content tva-no-after">
+		<h3 class="tvd-modal-title"><?php echo __( 'Add course content', 'thrive-apprentice' ) ?></h3>
+		<p id="tva-item-description"></p>
+		<select id="tva-parent-target"></select>
+	</div>
+	<div class="tva-modal-footer-outer">
+		<button type="button" class="tva-modal-btn tvd-modal-close"><?php echo esc_html__( 'Close', 'thrive-apprentice' ); ?></button>
+		<button type="button" class="tva-modal-btn tva-modal-btn-green click" data-fn="setParent"><?php echo esc_html__( 'Continue', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>
+
+<div class="tvd-modal-step" id="tvd-form-modal-step">
+	<div class="tvd-modal-content tva-no-after">
+		<p>render form here</p>
+	</div>
+	<div class="tva-modal-footer-outer">
+		<button type="button" class="tva-modal-btn tvd-modal-close"><?php echo esc_html__( 'Close', 'thrive-apprentice' ); ?></button>
+		<button type="button" class="tva-modal-btn tva-modal-btn-green click tvd-modal-save" data-fn="save"><?php echo esc_html__( 'Save', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>
+
+<div class="tvd-modal-step">
+	<div class="tvd-modal-content tva-no-after">
+		<h3 class="tvd-modal-title"><?php echo esc_html__( 'Just to let you know...', 'thrive-apprentice' ); ?></h3>
+		<p id="tva-moving-item-text"><?php echo esc_html__( 'We will move all your existing %s inside the newly created %s. None of your %s content will be lost.', 'thrive-apprentice' ); ?></p>
+		<p><?php echo esc_html__( 'Are you sure you want to proceed?', 'thrive-apprentice' ); ?></p>
+	</div>
+	<div class="tva-modal-footer-outer">
+		<button type="button" class="tva-modal-btn tvd-modal-close"><?php echo esc_html__( 'Close', 'thrive-apprentice' ); ?></button>
+		<button type="button" class="tva-modal-btn tva-modal-btn-green click" data-fn="renderForm"><?php echo esc_html__( 'Continue', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>

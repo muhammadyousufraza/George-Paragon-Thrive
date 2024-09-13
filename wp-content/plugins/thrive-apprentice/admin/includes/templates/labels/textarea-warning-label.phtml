@@ -1,0 +1,12 @@
+<div class="tva-context-title"><#=this.contextTitle#></div>
+
+<div class="tva-texarea-warning-label">
+	<# if ( ! this.model.get('editing') ) { #>
+	<div class="tva-flex">
+		<span><?php tva_get_svg_icon( 'info-circle' ); ?></span>
+		<span class="tva-texarea-warning-label-preview click tva-flex-mid" data-fn="editing"><#-this.model.get('title')#></span>
+	</div>
+	<# } else { #>
+	<textarea rows="5" cols="5" id="tva-edit-<#=this.model.cid#>" class="tva-title-events"><#- this.model.get('title') #></textarea>
+	<# } #>
+</div>

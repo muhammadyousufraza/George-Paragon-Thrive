@@ -1,0 +1,36 @@
+<!--class added to make div show templates properly-->
+<div id="structure-lp-templates">
+	<div id="structure-lp-templates-sidebar" class="modal-sidebar">
+		<div class="lp-search">
+			<?php Thrive_Views::svg_icon( 't-search' ); ?>
+			<input type="text" class="keydown" data-fn="doSearch" placeholder="<?php echo esc_html__( 'Search', 'thrive-theme' ); ?>"/>
+			<div class="lp-search-clear click" style="display: none;" data-fn="clearSearch">
+				<?php Thrive_Views::svg_icon( 'close' ); ?>
+			</div>
+		</div>
+		<div class="lp-menu-wrapper lp-categories">
+			<div class="mt-30">
+				<div class="lp-label-wrapper">
+					<span><?php echo esc_html__( 'Default Templates', 'thrive-theme' ); ?></span>
+					<span class="separator"></span>
+				</div>
+				<a href="javascript:void(0)" class="click lp-category-filter" data-fn="onCategoryClick" data-source="cloud">
+					<span class="ttd-lp-category"><?php echo esc_html__( 'Ready-Made Templates', 'thrive-theme' ); ?></span>
+					<span class="ttd-lp-counter"></span>
+				</a>
+			</div>
+
+			<div class="mt-20">
+				<div class="lp-label-wrapper">
+					<span><?php echo esc_html__( 'My Templates', 'thrive-theme' ); ?></span>
+					<span class="separator"></span>
+				</div>
+				<a href="javascript:void(0)" class="click lp-category-filter" data-fn="onCategoryClick" data-source="saved">
+					<span class="ttd-lp-category"><?php echo esc_html__( 'Saved Landing Pages', 'thrive-theme' ); ?></span>
+					<span class="ttd-lp-counter"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div id="structure-lp-templates-list" class="do-masonry tcb-modal-content"></div>
+</div>

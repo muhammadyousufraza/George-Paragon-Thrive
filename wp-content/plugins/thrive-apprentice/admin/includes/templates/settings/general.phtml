@@ -1,0 +1,107 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div>
+	<h1 class="tva-main-heading"><?php echo __( 'General settings', 'thrive-apprentice' ); ?></h1>
+	<p class="settings-p-main mt-20 mb-10"><?php echo __( 'These settings apply to the page where your courses are displayed', 'thrive-apprentice' ); ?></p>
+</div>
+
+<div class="tva-general-settings-card mb-20">
+	<div class="tva-course-states-container"></div>
+
+	<div class="tva-flex mt-20">
+		<div class="tvd-switch">
+			<label class="tva-slide-checkbox">
+				<span class="settings-checkbox-label"><?php echo esc_html__( 'Skip courses homepage when only one course is published', 'thrive-apprentice' ); ?></span>
+				<input type="checkbox" class="click" data-fn="changeSettingCheckbox" data-field="skip_homepage_redirect" data-val-checked="0" data-val-not-checked="1" <#= parseInt( model.get('skip_homepage_redirect').value ) === 1 ? '' : 'checked' #>>
+				<span class="lever"></span>
+			</label>
+		</div>
+	</div>
+</div>
+
+<div class="tva-general-settings-card mb-20 tva-routes-setting">
+	<?php foreach ( TVA_Routes::get_labels() as $key => $label ): ?>
+		<div class="tva-flex tva-route-item mb-5">
+			<label for="tva-route-<?php echo esc_attr( $key ); ?>" class="m-0"><?php echo esc_html( $label ); ?></label>
+			<input id="tva-route-<?php echo esc_attr( $key ); ?>" class="tva-title-events change" data-fn="changeRoute" type="text" value="<?php echo TVA_Routes::get_route_for_url( $key ); ?>" data-field="<?php echo esc_attr( $key ); ?>">
+		</div>
+	<?php endforeach; ?>
+</div>
+
+<div class="tva-general-settings-card mb-20">
+	<div class="tva-flex tva-space-between<#=visualEditingEnabled ? ' tva-hide' : ' mb-20'#>">
+		<label for="tva-per-page"><?php echo __( 'Courses per page', 'thrive-apprentice' ) ?></label>
+		<input id="tva-per-page" class="input" data-fn="input" type="number" value="<#= model.get('per_page').value #>" data-field="per_page">
+	</div>
+	<div class="mb-20<#=visualEditingEnabled ? ' tva-hide' : ''#>">
+		<div class="tvd-switch">
+			<label class="tva-slide-checkbox">
+				<span class="settings-checkbox-label"><?php echo esc_html__( 'Load themes and plugins scripts and styles?', 'thrive-apprentice' ); ?></span>
+				<input type="checkbox" class="click" data-fn="changeSettingCheckbox" data-field="load_scripts" <#= model.get('load_scripts').value ? 'checked' : '' #>>
+				<span class="lever"></span>
+			</label>
+		</div>
+	</div>
+
+	<div class="tva-flex mb-20">
+		<div class="tvd-switch">
+			<label class="tva-slide-checkbox">
+				<span class="settings-checkbox-label"><?php echo esc_html__( 'Perform auto-login when creating a WordPress account?', 'thrive-apprentice' ); ?></span>
+				<input type="checkbox" class="click" data-fn="changeSettingCheckbox" data-field="auto_login" <#= model.get('auto_login').value ? 'checked' : '' #>>
+				<span class="lever"></span>
+			</label>
+		</div>
+	</div>
+
+	<div class="mb-20<#=visualEditingEnabled ? ' tva-hide' : ''#>">
+		<div class="tvd-switch">
+			<label class="tva-slide-checkbox">
+				<span class="settings-checkbox-label"><?php echo esc_html__( 'Display "Powered by Thrive Apprentice"', 'thrive-apprentice' ); ?></span>
+				<input type="checkbox" class="click" data-fn="changeSettingCheckbox" data-field="apprentice_label" <#= model.get('apprentice_label').value ? 'checked' : '' #>>
+				<span class="lever"></span>
+			</label>
+		</div>
+	</div>
+
+	<div class="tva-flex">
+		<div class="tvd-switch">
+			<label class="tva-slide-checkbox">
+				<span class="settings-checkbox-label"><?php echo esc_html__( 'Enable comments for courses', 'thrive-apprentice' ); ?></span>
+				<input type="checkbox" class="click" data-fn="changeSettingCheckbox" data-field="comment_status" data-val-checked="open" data-val-not-checked="closed" <#= model.get('comment_status').value === 'open' ? 'checked' : '' #>>
+				<span class="lever"></span>
+			</label>
+		</div>
+	</div>
+</div>
+
+<div class="tva-general-settings-card mb-20">
+	<div class="tva-flex">
+		<div class="tvd-switch">
+			<label class="tva-slide-checkbox">
+				<span class="settings-checkbox-label">
+					<?php echo esc_html__( 'Enable certificate verification', 'thrive-apprentice' ); ?>
+					<span class="tva-info-icon tva-tooltip-parent">
+					<?php tva_get_svg_icon( 'info-solid' ); ?>
+					<div class="tva-custom-tooltip tva-tooltip-inherited">
+						<?php echo esc_attr( __( 'When verification is enabled, QR codes and serial numbers of certificates can be verified on this page to confirm that the student has completed a specific course.', 'thrive-apprentice' ) ); ?>
+						<a href="//help.thrivethemes.com/en/articles/6704271-enabling-certificate-verification-for-thrive-apprentice-courses" target="_blank"><?php echo esc_html__( 'Learn more' ); ?></a>
+					</div>
+				</span>
+				</span>
+				<input type="checkbox" class="click" data-toggle-setting="#tva-clear-cache-states-container,#tva-validation-page-wrapper" data-toggle-value="<#= !!model.get('certificate_verification').value #>" data-fn="changeSettingCheckbox" data-field="certificate_verification" <#= model.get('certificate_verification').value ? 'checked' : '' #>>
+				<span class="lever"></span>
+			</label>
+		</div>
+	</div>
+	<div id="tva-validation-page-wrapper"></div>
+	<div id="tva-clear-cache-states-container" class="mt-20"></div>
+</div>

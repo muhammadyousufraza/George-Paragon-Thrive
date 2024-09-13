@@ -1,0 +1,29 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<ul>
+	<li class="<#= page == 'global_fields' ? 'tvd-selected' : '' #>">
+		<a href="#global_fields">
+			<i><?php echo dashboard_icon( 'format-align-justify' ) ?></i><?php _e( 'Global Fields', 'thrive-dash' ); ?>
+		</a>
+	</li>
+<!--    <li class="<#= page == 'dynamic_fields' ? 'tvd-selected' : '' #>">-->
+<!--        <a href="#dynamic_fields">-->
+<!--			<i>--><?php //echo dashboard_icon( 'dynamic-list' ) ?><!--</i> --><?php //_e( 'Dynamic Fields', 'thrive-dash' ); ?>
+<!--        </a>-->
+<!--    </li>-->
+<!--    <li class="<#= page == 'visitor_targeting' ? 'tvd-selected' : '' #>">-->
+<!--        <a href="#visitor_targeting">-->
+<!--			<i>--><?php //echo dashboard_icon( 'crosshairs-regular' ) ?><!--</i> --><?php //_e( 'Visitor Targeting', 'thrive-dash' ); ?>
+<!--        </a>-->
+<!--    </li>-->
+</ul>

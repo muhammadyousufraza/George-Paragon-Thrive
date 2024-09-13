@@ -1,0 +1,25 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tvd-modal-content">
+	<h3 class="tvd-modal-title"><?php echo esc_html__( 'Are you sure you want to delete this product?', 'thrive-apprentice' ); ?></h3>
+	<p>
+		<span><?php echo esc_html__( 'If you delete this product then any customers who have access to this product will no longer be able to access the content and courses that it protects.', 'thrive-apprentice' ); ?></span>
+	</p>
+	<p>
+		<span class="tva-icb"><?php tva_get_svg_icon( 'info-circle' ); ?>&nbsp;<?php echo esc_html__( 'Important: deleting a product cannot be undone!', 'thrive-apprentice' ); ?></span>
+	</p>
+	<div class="tva-flex tva-flex-row tva-space-between mt-30">
+		<button type="button" class="tva-modal-btn tva-modal-btn-fw tvd-modal-close"><?php echo esc_html__( 'No, cancel', 'thrive-apprentice' ); ?></button>
+		<button type="button" class="click tva-modal-btn tva-modal-btn-fw tva-modal-btn-fill-red" data-fn="confirm"><?php echo esc_html__( 'Yes, delete', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>
+

@@ -1,0 +1,14 @@
+<div class="control-grid">
+	<div class="label"><?php echo __( 'Link', 'thrive-cb' ); ?></div>
+	<div class="input">
+		<select name="dynamiclinks" class="tve-dynamic-link" id="tve-dynamic-link-list">
+			<# _.each(links, function(group, group_name) { #>
+			<optgroup label="<#= group_name #>">
+				<# _.each(group, function(link) { #>
+				<option value="<#= link.url #>"><#= link.name #></option>
+				<# }); #>
+			</optgroup>
+			<# }); #>
+		</select>
+	</div>
+</div>

@@ -1,0 +1,23 @@
+<?
+/** @var TPM_Connection $this */
+?>
+<div class="tpm-connect-screen">
+
+	<h1><?php echo __( 'There seems to be a problem' ) ?></h1>
+	<p>
+		<?php echo __( "We can't seem to connect to your ThriveThemes.com account. Usually this is because of some kind of restrictions with your hosting company.", Thrive_Product_Manager::T ) ?>
+	</p>
+	<p>
+		<?php echo sprintf( __( "Not to worry, %s to let us know about the issue and we'll quickly solve this problem for you", Thrive_Product_Manager::T ), '<a target="_blank" href="https://thrivethemes.com/forums/forum/account-and-presales-support/">' . __( "click here", Thrive_Product_Manager::T ) . '</a>' ); ?>
+	</p>
+
+	<a class="tpm-retry" href="<?php echo thrive_product_manager()->get_admin_url(); ?>">
+		<?php echo __( 'Try again', Thrive_Product_Manager::T ) ?>
+	</a>
+
+</div>
+
+<div id="tpm-notification-box" class="tpm-error tpm-show">
+	<h3><?php echo __( 'Ooops!', Thrive_Product_Manager::T ) ?></h3>
+	<p><?php echo __( 'Something went wrong, can’t connect to account.', Thrive_Product_Manager::T ) ?></p>
+</div>

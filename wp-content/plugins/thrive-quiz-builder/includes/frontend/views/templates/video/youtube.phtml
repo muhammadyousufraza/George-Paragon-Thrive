@@ -1,0 +1,11 @@
+<# var style = item.get('video_style'); #>
+<div class="tge-video-form tge-video-style-<#= style.selected #>">
+	<div class="tqb-video-container-responsive">
+		<iframe data-provider="youtube" src="//www.youtube.com/embed/<#= item.get( 'video_id' ) #>"
+				height="313" width="651" frameborder="0"
+				allowfullscreen="true"
+				allowtransparency="true"
+				 ></iframe>
+	</div>
+
+</div>

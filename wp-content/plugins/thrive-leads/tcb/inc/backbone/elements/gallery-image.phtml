@@ -1,0 +1,39 @@
+<div data-id="<#=image.id#>"
+	 data-caption="<#=captionLinks && captionLinks[image.id] && captionLinks[image.id].text ? captionLinks[image.id].text : image.caption || ''#>"
+	 data-position="<#=imageObj.getImagePosition(image)#>"
+	 data-index="<#=index#>" class="thrv_wrapper tve_image_caption tve-draggable tve-droppable <#=captionSettings.position ? captionSettings.position.classes : ''#> <#=image.styleClass#>"
+	 draggable="true">
+	<span class="tve_image_frame">
+	<#if(imageLinks && imageLinks[image.id] && imageLinks[image.id].hasLink){#>
+	<a href="<#=imageLinks[image.id].href#>" target="<#=imageLinks[image.id].target#>" rel="<#=imageLinks[image.id].rel#>" class="<#= imageLinks[image.id].linkClass ? imageLinks[image.id].linkClass: ''#>" data-shortcode-id = "<#=  imageLinks[image.id].shortcodeId ? imageLinks[image.id].shortcodeId: ''#>" data-dynamic-link="<#=  imageLinks[image.id].dynamicLink ? imageLinks[image.id].dynamicLink: ''#>">
+	<# } #>
+		<img class="tve_image wp-image-<#=image.id#>"
+			 alt="<#=image.alt#>"
+			 data-id="<#=image.id#>"
+			 width="<#=image.width#>"
+			 height="<#=image.height#>"
+			 title="<#=image.title#>"
+			 src="<#=image.sizes && image.sizes[imageObj.oldImageSize] ? image.sizes[imageObj.oldImageSize].url : image.url #>"
+			 data-src="<#=image.sizes && image.sizes[imageObj.getFullwidthSize()] ? image.sizes[imageObj.getFullwidthSize()].url : image.url#>"
+			 loading="lazy"
+			 draggable="false">
+	<#if(imageLinks && imageLinks[image.id] && imageLinks[image.id].hasLink){#>
+	</a>
+	<# } #>
+	</span>
+	<# if(imageObj.hasCaptions()){#>
+	<p class="thrv_wrapper wp-caption-text thrv-inline-text tve-froala fr-box fr-basic <#= captionSettings.alignment ? captionSettings.alignment.classes : '' #>"
+	<#= captionSettings.position ? captionSettings.position.attr : '' #>
+	<#= captionSettings.alignment ? captionSettings.alignment.attr : '' #>
+	>
+	<#if(captionLinks && captionLinks[image.id] && captionLinks[image.id].hasLink){#>
+	<a href="<#=captionLinks[image.id].href#>" target="<#=captionLinks[image.id].target#>" rel="<#=captionLinks[image.id].rel#>">
+		<# } #>
+		<#=captionLinks && captionLinks[image.id] && captionLinks[image.id].text ? captionLinks[image.id].text : image.caption || '&nbsp;'#>
+		<#if(captionLinks && captionLinks[image.id] && captionLinks[image.id].hasLink){#>
+	</a>
+	<# } #>
+	</p>
+	<# } #>
+
+</div>

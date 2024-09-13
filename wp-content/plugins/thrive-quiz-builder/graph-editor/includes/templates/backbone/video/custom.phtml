@@ -1,0 +1,16 @@
+<# var style = item.get('video_style'); #>
+<# var options = item.getOptions(); #>
+<# var new_question = parseInt( item.get('new_question') ); #>
+<div class="tge-video-form tge-video-style-<#= 0 === new_question ? style.selected : TGE_Editor.default_video_style #>">
+	<div class="tqb-video-container-responsive">
+		<video height="313" width="551"
+		<#= typeof options['autoplay'] !== 'undefined' && 1 === parseInt( options['autoplay']['value'] ) ? 'autoplay="true"' : '' #>
+		<#= typeof options['hide_controls'] !== 'undefined' && 1 === parseInt( options['hide_controls']['value'] ) ? '' : 'controls="true"' #>
+		<#= typeof options['loop'] !== 'undefined' && 1 === parseInt( options['loop']['value'] ) ? 'loop' : '' #>
+		allowtransparency="true"
+		frameborder="0">
+		<source src="<#= item.get( 'url' ) #>" type="<#= mime #>">
+		<#= TGE_Editor.t.not_supported_video_tag #>
+		</video>
+	</div>
+</div>

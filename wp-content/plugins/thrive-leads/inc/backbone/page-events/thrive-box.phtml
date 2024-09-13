@@ -1,0 +1,14 @@
+<span class="subtitle"><?php echo __( 'ThriveBox Settings', 'thrive-cb' ) ?></span>
+<# if ( this.get().length ) { #>
+<div class="control-grid full-width">
+	<label for="evt-lightbox"><?php echo __( 'Select the ThriveBox to be displayed', 'thrive-cb' ) ?></label>
+	<select id="evt-lightbox" class="change" data-fn="lightbox_change">
+		<# _.each( this.get(), function( lb ) { #>
+		<option value="<#=lb.id#>"
+		<#=this.model.config && this.model.config.l_id == lb.id ? ' selected="selected"' : '' #>><#=lb.title#></option>
+		<# }, this ) #>
+	</select>
+</div>
+<# } else { #>
+<p><?php echo sprintf( __( "You don't have any Thrive Boxes created yet. You can create them from %s", 'thrive-cb' ), '<a target="_blank" href="' . admin_url( 'admin.php?page=thrive_leads_dashboard' ) . '">Thrive Leads</a>' ) ?></p>
+<# } #>

@@ -1,0 +1,48 @@
+<span class="first-group">
+	<# if ( this.dataModel.isSelectMode()) { #>
+		<span class="select-all">
+			<label class="checkbox-wrapper">
+			<input type="checkbox" class="click" data-fn="onSelectAllCheckboxChange" <#= this.dataModel.get('selected_all') ? 'checked' : '' #>>
+				<span class="tap-checkmark"></span>
+				<span class="tap-checkbox-label"><?php echo esc_html__( 'Select all', 'thrive-ovation' ); ?></span>
+			</label>
+		</span>
+	<# } #>
+
+	<span class="selected-count">
+		<#= this.dataModel.getCount() #> <?php echo esc_html__( 'testimonials selected', 'thrive-ovation' ); ?>
+	</span>
+
+	<# if ( this.dataModel.isReorderMode() && ! this.dataModel.isViewMode() ) { #>
+		<span class="drag-and-drop-text">
+			<span class="a-dot">
+				•
+			</span>
+			<span>
+				<?php echo esc_html__( 'Drag and drop testimonials into the desired order below', 'thrive-ovation' ); ?>
+			</span>
+		</span>
+	<# } #>
+</span>
+<span class="second-group">
+	<# if ( ! this.dataModel.isViewMode()) { #>
+		<# if ( this.dataModel.isSelectMode()) { #>
+			<button class="filter-toggler ghost click" data-fn="toggleFilters">
+				<?php tcb_icon( 'filter' ); ?>
+				<?php echo esc_html__( 'Filters', 'thrive-ovation' ); ?>
+			</button>
+		<# } #>
+		<# if ( this.dataModel.isReorderMode()) { #>
+			<button class="order-toggler ghost click" data-fn="toggleOrderOptions">
+				<?php tcb_icon( 'control-switch' ); ?>
+				<?php echo esc_html__( 'Set order', 'thrive-ovation' ); ?>
+			</button>
+		<# } #>
+		<# if ( this.dataModel.isReorderMode()) { #>
+			<button class="add-testimonials filled click" data-fn="switchToSelectionMode">
+				<?php tcb_icon( 'plus-regular' ); ?>
+				<?php echo esc_html__( 'Add testimonials', 'thrive-ovation' ); ?>
+			</button>
+		<# } #>
+	<# } #>
+</span>

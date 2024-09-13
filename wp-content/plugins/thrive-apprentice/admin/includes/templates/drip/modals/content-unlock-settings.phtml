@@ -1,0 +1,144 @@
+<div class="tvd-modal-content">
+	<h3 class="pl-30 tvd-modal-title"><?php echo __( 'Unlock options', 'thrive-apprentice' ); ?></h3>
+	<div class="tva-sequential-info-box hidden">
+		<p><?php tva_get_svg_icon( 'alt-sequential' ); ?><?php esc_html_e( 'This ', 'thrive-apprentice' ); ?> <#= this.courseItem.get( 'post_type' ).substring(4) #> <?php esc_html_e( ' is unlocked when all content before it is completed', 'thrive-apprentice' ); ?></p>
+		<div class="tva-trigger-sep mt-25">
+			<span class="tva-trigger-sep__line"></span>
+			<span class="tva-trigger-sep__and"><?php esc_html_e( 'and', 'thrive-apprentice' ); ?></span>
+			<span class="tva-trigger-sep__line"></span>
+		</div>
+	</div>
+	<div class="tva-inherited-sequential-info-box hidden">
+		<div class="tva-content-trigger-locked">
+			<?php tva_get_svg_icon( 'lock-alt_light' ); ?>
+			<?php esc_html_e( 'This lesson is unlocked when content before it is completed and when parent module is unlocked', 'thrive-apprentice' ); ?>
+		</div>
+		<div class="tva-trigger-sep mt-25">
+			<span class="tva-trigger-sep__line"></span>
+			<span class="tva-trigger-sep__and"><?php esc_html_e( 'and', 'thrive-apprentice' ); ?></span>
+			<span class="tva-trigger-sep__line"></span>
+		</div>
+	</div>
+	<div class="tva-drip-types-container tva-drip-unlock-settings">
+		<div class="tva-inherited-info-box hidden">
+			<div class="tva-content-trigger-locked">
+				<?php tva_get_svg_icon( 'lock-alt_light' ); ?>
+				<?php esc_html_e( 'This lesson will be unlocked once the parent module has unlocked', 'thrive-apprentice' ); ?>
+			</div>
+			<div class="tva-trigger-sep mt-15 mb-15">
+				<span class="tva-trigger-sep__line"></span>
+				<span class="tva-trigger-sep__and"><?php esc_html_e( 'and', 'thrive-apprentice' ); ?></span>
+				<span class="tva-trigger-sep__line"></span>
+			</div>
+		</div>
+		<p class="tva-drip-unlock">
+			<?php esc_html_e( 'Unlock content if', 'thrive-apprentice' ); ?>
+			<select data-calculate-width="1" data-bind="condition" class="tva-drip-unlock-select tva-control-inline tva-select-compact" data-container-class="material" data-width="50px">
+				<option value="and"><?php esc_html_e( 'all', 'thrive-apprentice' ); ?></option>
+				<option value="or"><?php esc_html_e( 'any', 'thrive-apprentice' ); ?></option>
+			</select>
+			&nbsp;<?php esc_html_e( 'of the following conditions are met', 'thrive-apprentice' ); ?>
+		</p>
+
+		<div class="tva-content-triggers">
+			<# this.collection.each( function( trigger, index ) { #>
+			<div class="tva-content-trigger-item <#=trigger.canRemove() ? '' : ' tva-trigger-disabled'#>">
+				<div class="tva-trigger-row tva-flex tva-space-between">
+					<div class="tva-trigger-icon drip-trigger-icon-<#=trigger.get('id')#>"><#=TVA.Utils.icon( trigger.icon() ) #></div>
+					<div class="tva-trigger-label"><#=trigger.getLabel()#></div>
+					<div class="tva-trigger-actions">
+						<# if ( trigger.canEdit() ) { #>
+						<a href="javascript:void(0)" data-tooltip="<?php esc_attr_e( 'This is a campaign condition, it can only be changed from campaign settings', 'thrive-apprentice' ); ?>" class="click tva-trigger-edit<#=trigger.canRemove() ? '' : ' tvd-tooltipped tva-disabled'#>" data-fn="editTrigger" data-id="<#- trigger.get('id') #>"><?php tva_get_svg_icon( 'pen_light' ); ?></a>
+						&nbsp;
+						<# } #>
+						<a href="javascript:void(0)" data-tooltip="<?php esc_attr_e( 'This is a campaign condition, it can only be removed from campaign settings', 'thrive-apprentice' ); ?>" class="click tva-trigger-remove<#=trigger.canRemove() ? '' : ' tvd-tooltipped tva-disabled'#>" data-fn="removeTrigger" data-index="<#- index #>"><?php tva_get_svg_icon( 'trash-1' ); ?></a>
+					</div>
+				</div>
+			</div>
+			<# }, this ) #>
+			<# if ( ! this.collection.length ) { #>
+			<div class="tva-drip-no-triggers"><p><?php esc_html_e( 'No rules added', 'thrive-apprentice' ); ?></p></div>
+			<# } #>
+		</div>
+
+		<button class="tva-add-rule<#= this.getAvailableTriggers().length === 0 ? ' tva-rule-disabled' : ''#> click" data-fn="addRule"><span>+</span><?php esc_html_e( 'Add new rule', 'thrive-apprentice' ); ?></button>
+
+		<# if ( this.getAvailableTriggers().length ) { #>
+		<div class="tva-drip-trigger tva-new-trigger tva-hide">
+			<h4>
+				<?php esc_html_e( 'Unlock condition', 'thrive-apprentice' ); ?>
+			</h4>
+			<div class="tva-icon-trigger">
+				<select class="change" data-fn="triggerSelected">
+					<option data-icon="drip-campaign-scratch" value="" selected disabled><?php esc_html_e( 'Select a new condition', 'thrive-apprentice' ); ?>&hellip;</option>
+					<# _.each( this.getAvailableTriggers(), function( trigger ) { #>
+					<option data-icon="<#- trigger.icon #>"
+					<#=trigger.disabled ? ' disabled' : ''#> value="<#-trigger.id#>"><#-trigger.name#></option>
+					<# }, this ) #>
+				</select>
+				<div class="drip-select-icon drip-select-green"><?php tva_get_svg_icon( 'drip-campaign-scratch' ); ?></div>
+			</div>
+		</div>
+		<# } #>
+		<div class="tva-trigger-form">
+			<div class="tva-trigger-settings"></div>
+			<div class="tva-trigger-buttons" style="display: none">
+				<button class="tva-drip-cancel click" data-fn="cancelTriggerEdit"><?php tva_get_svg_icon( 'cross' ); ?></button>
+				<button class="tva-modal-btn tva-modal-btn-green click" data-fn="saveTriggerData"><?php esc_html_e( 'Add', 'thrive-apprentice' ); ?></button>
+			</div>
+		</div>
+
+		<div class="tva-drip-advanced-settings">
+			<div class="tva-advanced-settings-button click">
+				<p><?php esc_html_e( 'Advanced settings', 'thrive-apprentice' ); ?>
+				<p id="ta-arrow-down"><?php tva_get_svg_icon( 'caret-down_solid' ); ?>
+				<p id="ta-arrow-up" class="hidden"><?php tva_get_svg_icon( 'caret-up' ); ?>
+				</p>
+				<p class="tva-active-options hidden"></p>
+			</div>
+			<div class="tva-drip-content-settings tva-flex">
+				<div id="tva-drip-forced-unlock-dropdown-disabled">
+					<?php tva_get_svg_icon( 'sequential' ); ?>
+					<p><?php esc_html_e( 'This setting is disabled for the first ', 'thrive-apprentice' ) ?><#= this.courseItem.get( 'post_type' ).substring(4) #><?php esc_html_e( ' of the course.', 'thrive-apprentice' ); ?>
+						&nbsp;
+				</div>
+				<div id="tva-drip-forced-unlock-dropdown">
+					<?php tva_get_svg_icon( 'sequential' ); ?>
+					<p>
+						<?php esc_html_e( 'Users must complete all previous content to unlock', 'thrive-apprentice' ); ?>
+						&nbsp;
+					</p>
+					<select data-calculate-width="1" class="tva-drip-content-setting tva-select-compact" data-width="150px" data-bind="forced_unlock" data-container-class="material">
+						<# if ( this.campaign.get( 'force_unlock_order' ) ) { #>
+						<option value="inherited"><?php echo __( 'Inherited (Yes)', 'thrive-apprentice' ); ?></option>
+						<# } else { #>
+						<option value="inherited"><?php echo __( 'Inherited (No)', 'thrive-apprentice' ); ?></option>
+						<# } #>
+						<option value="yes"><?php esc_html_e( 'Yes', 'thrive-apprentice' ); ?></option>
+						<option value="no"><?php esc_html_e( 'No', 'thrive-apprentice' ); ?></option>
+					</select>
+				</div>
+				<div>
+					<?php tva_get_svg_icon( 'icon-eye' ); ?>
+					<p>
+						<#= this.courseItem.get( 'post_type' ).substring(4) #><?php esc_html_e( ' visibility in lesson list when content is locked', 'thrive-apprentice' ); ?>
+						&nbsp;
+					</p>
+					<select data-calculate-width="1" class="tva-drip-content-setting tva-select-compact" data-width="150px" data-bind="visibility" data-container-class="material">
+						<# if ( this.campaign.get( 'display_locked' ) ) { #>
+						<option value="inherited"><?php echo __( 'Inherited (Displayed)', 'thrive-apprentice' ); ?></option>
+						<# } else { #>
+						<option value="inherited"><?php echo __( 'Inherited (Hidden)', 'thrive-apprentice' ); ?></option>
+						<# } #>
+						<option value="hidden"><?php esc_html_e( 'Hidden', 'thrive-apprentice' ); ?></option>
+						<option value="displayed"><?php esc_html_e( 'Displayed as locked', 'thrive-apprentice' ); ?></option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tvd-modal-btm tva-flex tva-flex-row tva-space-between">
+		<button type="button" class="click tva-modal-btn tva-modal-btn-fill-gray" data-fn="close"><?php echo __( 'Cancel', 'thrive-apprentice' ); ?></button>
+		<button type="button" class="click tva-modal-btn tva-modal-btn-fill-green tva-disabled" data-fn="save"><?php echo __( 'Save', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>

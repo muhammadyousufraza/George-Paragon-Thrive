@@ -1,0 +1,12 @@
+<div class="control-grid">
+	<div class="label">
+		<#= this.model.config.label #>
+	</div>
+	<div class="input tve-datepicker-wrapper">
+		<input type="text" class="tve-input-control tve-datepicker-input change" data-fn="changed" <#= this.model.extra_attrs #> />
+		<div class="thrv-datepicker-icon click" data-fn="date_trigger_click">
+			<?php tcb_icon( 'calendar-range' ); ?>
+		</div>
+	</div>
+</div>
+

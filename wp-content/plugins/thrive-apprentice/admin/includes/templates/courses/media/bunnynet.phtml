@@ -1,0 +1,39 @@
+<div class="tvd-input-field">
+	<input name="source" data-bind="source" type="text" value="<#= model.get('source') #>" placeholder="<?php echo esc_html__( 'Direct Play Url', 'thrive-apprentice' ); ?>">
+	<label>&nbsp;</label>
+</div>
+
+<div class="tva-details-bunny mt-15">
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="responsive" type="checkbox" id="tva-bunny-option-responsive-<#= model.cid #>">
+		<label for="tva-bunny-option-responsive-<#= model.cid #>"><?php echo esc_html__( 'Responsive', 'thrive-apprentice' ) ?></label>
+	</div>
+
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="autoplay" type="checkbox" id="tva-bunny-option-autoplay-<#= model.cid #>">
+		<label for="tva-bunny-option-autoplay-<#= model.cid #>"><?php echo esc_html__( 'Autoplay', 'thrive-apprentice' ) ?></label>
+
+		<div class="tva-flex tva-flex-inline tva-align-center tva-tooltip-parent">
+			<?php tva_get_svg_icon( 'info-circle_strong' ); ?>
+			<div class="tva-custom-tooltip tva-tooltip-inherited">
+				<?php echo esc_html__( 'Autoplay is not currently supported by default on mobile devices (tablets, phones). Autoplay will also not work unless the muted option is checked for browsers like Chrome and Safari. It would work if the user changes the browser settings regarding autoplay with sound.', 'thrive-apprentice' ) ?>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="preload" type="checkbox" id="tva-bunny-option-preload-<#= model.cid #>">
+		<label for="tva-bunny-option-preload-<#= model.cid #>"><?php echo esc_html__( 'Preload', 'thrive-apprentice' ) ?></label>
+	</div>
+
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="loop" type="checkbox" id="tva-bunny-option-loop-<#= model.cid #>">
+		<label for="tva-bunny-option-loop-<#= model.cid #>"><?php echo esc_html__( 'Loop', 'thrive-apprentice' ) ?></label>
+	</div>
+
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="muted" type="checkbox" id="tva-bunny-option-muted-<#= model.cid #>">
+		<label for="tva-bunny-option-muted-<#= model.cid #>"><?php echo esc_html__( 'Muted', 'thrive-apprentice' ) ?></label>
+	</div>
+
+</div>

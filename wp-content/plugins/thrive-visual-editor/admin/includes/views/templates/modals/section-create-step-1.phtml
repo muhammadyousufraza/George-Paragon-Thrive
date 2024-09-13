@@ -1,0 +1,48 @@
+<span class="tcb-modal-title"><?php echo __( 'Choose a ', 'thrive-cb' ) ?>
+	<#= section_name #>
+</span>
+
+<div class="tcb-modal-tabs">
+	<div class="sub-header">
+		<ul class="tcb-modal-tabs-links">
+			<li data-tab="create-hf"><?php echo __( 'Create New ', 'thrive-cb' ); ?>
+				<#= section_name #>
+			</li>
+		</ul>
+		<div class="abs-r">
+			<input type="text" class='search-sections' name="search-sections" id="search-sections" placeholder="<?php echo __( 'Search ', 'thrive-cb' ); ?><#= section_name + 's' #>&nbsp;&hellip;">
+		</div>
+	</div>
+</div>
+
+<div class="tcb-modal-tab-container create-hf">
+	<div class="tcb-modal-tabs-sep">
+		<span><?php echo __( 'Start with one of our templates' ); ?></span>
+		<span class="separator"></span>
+		<span class="tcb-hf-icon" data-direction="top"></span>
+	</div>
+	<div class="tcb-tabs-templates">
+		<div class="our-templates"></div>
+	</div>
+	<div class="tcb-modal-tabs-sep">
+		<span><?php echo __( 'Or use a saved ', 'thrive-cb' ); ?>
+			<#= section_name #><?php echo __( ' as a Template' ) ?></span>
+		<span class="separator"></span>
+		<span class="tcb-hf-icon" data-direction="top"></span>
+	</div>
+	<div class="tcb-tabs-templates">
+		<div class="saved-templates">
+			<div class="tcb-modal-tab-elem click">
+				<span class="tcb-modal-tab-item-title"><?php echo __( 'Our Template', 'thrive-cb' ) ?></span>
+				<div class="tcb-modal-tab-image" style="background-image: url('');"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="tcb-modal-footer pl-0 pr-0">
+	<button type="button" class="tcb-modal-close"><?php echo __( 'Cancel', 'thrive-cb' ) ?></button>
+	<button type="button" disabled="true" class="tcb-hf-right tve-button white-text green"><span class="user-action"><?php echo __( 'Choose ', 'thrive-cb' ) ?></span>
+		<#= section_name #>
+	</button>
+</div>

@@ -1,0 +1,37 @@
+<div class="tva-drip-module">
+	<div class="tva-module-header">
+		<div class="tva-col-names">
+			<div class="tva-drip-module-title"><#- module.get( 'post_title' ) #></div>
+			<span class="tva-drip-module-item"><?php esc_html_e( 'Module', 'thrive-apprentice' ); ?> <#- currentModuleIndex #></span>
+		</div>
+		<div class="tva-col-conditions">
+			<# if ( module.isFree() ) { #>
+			<div class="tva-tooltip-parent">
+				<div class="drip-summary-item tva-drip-free-content">
+					<div class="drip-summary-icon"><?php tva_get_svg_icon( 'unlock-alt_light' ); ?></div>
+					<div class="drip-summary-text"><?php echo __( 'Free', 'thrive-apprentice' ); ?></div>
+				</div>
+				<div class="tva-custom-tooltip tva-tooltip-inherited">
+					<?php esc_html_e( "This module is set as a free preview module in the course details tab, and cannot be locked.", 'thrive-apprentice' ); ?>
+					<a href="http://help.thrivethemes.com/en/articles/5727555-creating-a-drip-schedule" target="_blank" rel="noopener"><?php echo esc_html__( 'Learn more', 'thrive-apprentice' ); ?></a>
+				</div>
+			</div>
+			<# } else { #>
+			<#= view.renderUnlockSummary( module.get( 'ID' ) ) #>
+			<# } #>
+		</div>
+		<div class="tva-col-restriction">
+			<div class="tva-drip-label mr-10 tva-tooltip-parent">
+				<?php esc_html_e( 'INHERIT', 'thrive-apprentice' ); ?>
+				<span class="tva-custom-tooltip">
+					<?php esc_attr_e( 'This feature is coming soon', 'thrive-apprentice' ); ?>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="tva-module-content">
+		<# _.each( module.get( 'lessons' ), function( lesson ) { #>
+		<#= view.renderCourseItem( lesson ) #>
+		<# }, this ) #>
+	</div>
+</div>

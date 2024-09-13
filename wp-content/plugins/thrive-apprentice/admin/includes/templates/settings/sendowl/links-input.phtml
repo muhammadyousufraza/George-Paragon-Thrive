@@ -1,0 +1,35 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-flex tva-align-center">
+	<h3><?php echo __( 'Copy your purchase links below', 'thrive-apprentice' ); ?></h3>
+</div>
+<div class="tva-flex tva-align-center mb-10">
+	<label for="tva-links-url-input"><?php tva_get_svg_icon( 'link_light' ); ?><?php echo __( 'URL', 'thrive-apprentice' ); ?></label>
+	<input type="text" id="tva-links-url-input" readonly value="<#- this.model.get('url') #>"/>
+	<button class="tva-zclip">&nbsp;
+		<span class="tva-custom-tooltip"><?php echo esc_attr( __( 'Copy', 'thrive-apprentice' ) ); ?></span>
+	</button>
+</div>
+<div class="tva-flex tva-align-center mb-10">
+	<label for="tva-links-shortcode-input"><?php tva_get_svg_icon( 'brackets_light' ); ?><?php echo __( 'Shortcode', 'thrive-apprentice' ); ?></label>
+	<input type="text" id="tva-links-shortcode-input" readonly value="<#- this.model.get('shortcode') #>"/>
+	<button class="tva-zclip">&nbsp;
+		<span class="tva-custom-tooltip"><?php echo esc_attr( __( 'Copy', 'thrive-apprentice' ) ); ?></span>
+	</button>
+</div>
+<div class="tva-flex tva-align-center">
+	<label for="tva-links-html-input"><?php tva_get_svg_icon( 'code_light' ); ?><?php echo __( 'HTML', 'thrive-apprentice' ); ?></label>
+	<input type="text" id="tva-html-url-input" readonly value="<#- this.model.get('html') #>"/>
+	<button class="tva-zclip">&nbsp;
+		<span class="tva-custom-tooltip"><?php echo esc_attr( __( 'Copy', 'thrive-apprentice' ) ); ?></span>
+	</button>
+</div>

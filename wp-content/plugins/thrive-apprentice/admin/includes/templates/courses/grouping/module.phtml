@@ -1,0 +1,45 @@
+<div class="tvd-modal-step">
+	<div class="tvd-modal-content">
+		<h3 class="tvd-modal-title"><?php echo __( 'Are you sure you want to create a new module?', 'thrive-apprentice' ); ?></h3>
+		<p class="tva-modal-no-margin-p"><?php echo __( 'You are about to group the selected items into a new module.  This action cannot be undone.', 'thrive-apprentice' ) ?></p>
+
+	</div>
+	<div class="tva-modal-footer-outer">
+		<button type="button" class="tva-modal-btn tvd-modal-close"><?php echo __( 'Cancel', 'thrive-apprentice' ); ?></button>
+		<button type="button" class="tva-modal-btn tva-modal-btn-green tvd-modal-next-step"><?php echo __( 'Continue', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>
+
+<# if ( this.orphans.length ) { #>
+<div class="tvd-modal-step">
+	<div class="tvd-modal-content tva-orphans-form">
+		<h3 class="tvd-modal-title"><?php echo __( 'Create new module', 'thrive-apprentice' ) ?></h3>
+		<p><?php echo __( 'Because you have some unselected items we will move them into a new module. Please insert the name of the new module:', 'thrive-apprentice' ) ?></p>
+
+		<div class="tva-default-module-editor tvd-input-field">
+			<input id="tva-module-title" class="mt-10" data-bind="post_title" value="" type="text" placeholder="<?php esc_attr_e( 'Module title', 'thrive-apprentice' ); ?>">
+			<label>&nbsp;</label>
+		</div>
+	</div>
+	<div class="tva-modal-footer-outer">
+		<button type="button" class="tva-modal-btn tvd-modal-close"><?php echo __( 'Cancel', 'thrive-apprentice' ); ?></button>
+		<button type="button" class="tva-modal-btn tva-modal-btn-green tvd-modal-next-step"><?php echo __( 'Continue', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>
+<# } #>
+
+<div class="tvd-modal-step">
+	<div class="tvd-modal-content tva-chapter-form">
+		<h3 class="tvd-modal-title"><?php echo __( 'Create new module', 'thrive-apprentice' ) ?></h3>
+		<p><?php echo __( 'Enter the name of the module where to place the selected items:', 'thrive-apprentice' ) ?></p>
+
+		<div class="tva-default-module-editor tvd-input-field">
+			<input id="tva-module-title" class="mt-10" data-bind="post_title" value="" type="text" placeholder="<?php esc_attr_e( 'Module title', 'thrive-apprentice' ); ?>">
+			<label>&nbsp;</label>
+		</div>
+	</div>
+	<div class="tva-modal-footer-outer">
+		<button type="button" class="tva-modal-btn tvd-modal-close"><?php echo __( 'Cancel', 'thrive-apprentice' ); ?></button>
+		<button type="button" class="tva-modal-btn tva-modal-btn-green tvd-modal-save"><?php echo __( 'Save', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>

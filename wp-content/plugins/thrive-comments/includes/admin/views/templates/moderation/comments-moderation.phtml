@@ -1,0 +1,130 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-comments
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div id="tcm-header">
+	<nav id="tcm-nav">
+		<div>
+			<span class="tcm-nav-svg">
+				<?php echo tcah()->tcm_icon( 'logo-dashboard', 'tc-logo-dashboard' ); ?>
+			</span>
+			<strong><?php echo __( 'Thrive', Thrive_Comments_Constants::T ); ?></strong>
+			<?php echo __( 'Comments', Thrive_Comments_Constants::T ); ?>
+		</div>
+		<?php if ( TCM_Product::has_access() ) : ?>
+			<a class="tcm-settings tcm-icon-cog" href="<?php echo tcm()->tcm_settings_url() ?>"><?php echo __( 'Settings', Thrive_Comments_Constants::T ); ?></a>
+		<?php endif; ?>
+		<a class="keyboard-tooltip-title"><span class="key">Ctrl</span>
+			<span class="plus">+</span> <span class="key">K</span>&nbsp;&nbsp;&nbsp;<?php echo __( 'Display Keyboard Shortcuts', Thrive_Comments_Constants::T ); ?></a>
+		<a class="tvd-right tcm-gt-reporting" href="<?php echo tcm()->tcm_settings_url() . '#reports' ?>"><i class="tvd-icon-line-graph "></i><?php echo __( 'Reports', Thrive_Comments_Constants::T ) ?></a>
+	</nav>
+</div>
+<?php echo tvd_get_individual_plugin_license_message( new TCM_Product(), true ); ?>
+<div id="tcm-holder">
+
+	<!-- Keyboard Container-->
+	<div class="tcm-moderation-header">
+		<div class="tcm-moderation-top clear-this">
+			<div style="margin-bottom: 20px;" class="clear-this">
+				<div class="tcm-half post-autocomplete">
+					<label for="tcm_post_autocomplete">
+						<?php echo __( 'View comments on', Thrive_Comments_Constants::T ); ?>
+					</label>
+					<input class="tcm_post_autocomplete tcm-autocomplete small-text tcm-keyword-input" data-type="text" id="tcm_post_autocomplete" data-setting="value" placeholder="Entire Website" type="text" value="<# if ( typeof keyword !== 'undefined') { #><#=keyword.get('value')#><# } #>" data-flag="<# if ( typeof keyword !== 'undefined' ) { #><#=keyword.get('post_id')#><# } #>">
+					<select id="approve_post_id" class=" tvd-browser-default" style="display: none;"></select>
+					<span class="clear-post-autocomplete">x</span>
+				</div>
+				<div class="tcm-half tcm-align-right">
+					<div class="tvd-input-field tvd-prefix tooltipelem">
+						<i class="tcm-reset-search tvd-icon-close2"></i>
+						<input type="text" id="tcm-keyword-search" name="tcm-keyword-search" placeholder="<?php echo __( 'Search in comments', Thrive_Comments_Constants::T ); ?>">
+						<span class="tooltiptext"><?php echo __( 'Press Enter to search for keywords', Thrive_Comments_Constants::T ); ?></span>
+
+						<span class="search"></span>
+					</div>
+					<?php if ( TCM_Product::has_access() ) : ?>
+						<a class="tcm-settings-btm tcm-icon-cog" href="<?php echo tcm()->tcm_settings_url() ?>"></a>
+					<?php endif; ?>
+
+				</div>
+			</div>
+
+			<div class="flex-on-small">
+				<div class="tcm80 tcm-filters-container"></div>
+				<div class="tcm20 tcm-align-right">
+					<span class="tcm-opc"><?php echo __( 'Sort by', Thrive_Comments_Constants::T ); ?></span>
+					<div id="tcm-sort-by" class="tcm-dropdown tcm-filter-dropdown">
+						<span class="tcm-col tcm-toggle-button current-sorting"><?php echo __( 'Newest', Thrive_Comments_Constants::T ); ?></span>
+						<span class="svg-arrow-down">
+							<?php tcah()->tcm_icon( 'bulk-action-arrow', 'bulk-action-arrow-svg' ); ?>
+						</span>
+						<div class="tcm-dropdown-content">
+							<div data-value="desc" class="tcm-dropdown-element tcm-sort-by">
+								<?php echo __( 'Newest', Thrive_Comments_Constants::T ); ?>
+							</div>
+							<div data-value="asc" class="tcm-dropdown-element tcm-sort-by">
+								<?php echo __( 'Oldest', Thrive_Comments_Constants::T ); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="bulk-section"></div>
+	</div>
+	<div class="keyboard-tooltip-container "></div>
+	<div id="tab-1" class="tcm-moderation-container active"></div>
+	<div class="keyboard-notification-container"></div>
+</div>
+
+<div id="to-top" class="to-top tcm-icon-keyboard_arrow_up"></div>
+
+<# if ( typeof ThriveOvation !== 'undefined' ) { #>
+<div id="tvo-modal-edit-testimonial" class="tvd-modal" style="max-width: inherit;">
+	<iframe width="100%" height="557px" data-source="<?php echo admin_url( 'admin-ajax.php?action=testimonial_iframe&comment_id=' ); ?>" src=""></iframe>
+</div>
+<a href="#tvo-modal-edit-testimonial" id="tvo-modal-edit-testimonial-trigger" class="modal-trigger" style="display: none"></a>
+
+<div class="tvd-modal-preloader tcm-hide">
+	<div class="tvd-preloader-wrapper tvd-big tvd-active">
+		<div class="tvd-spinner-layer tvd-spinner-blue-only">
+			<div class="tvd-circle-clipper tvd-left">
+				<div class="tvd-circle"></div>
+			</div>
+			<div class="tvd-gap-patch">
+				<div class="tvd-circle"></div>
+			</div>
+			<div class="tvd-circle-clipper tvd-right">
+				<div class="tvd-circle"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<# } #>
+
+<div class="tvd-preloader-overlay tvd-page-preloader tcm-moderation-loader" id="tvd-hide-onload" style="display: none;">
+	<div class="tvd-card-preloader">
+		<div class="tvd-preloader-wrapper tvd-bigger tvd-active">
+			<div class="tvd-spinner-layer tvd-spinner-green-only">
+				<div class="tvd-circle-clipper tvd-left">
+					<div class="tvd-circle"></div>
+				</div>
+				<div class="tvd-gap-patch">
+					<div class="tvd-circle"></div>
+				</div>
+				<div class="tvd-circle-clipper tvd-right">
+					<div class="tvd-circle"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

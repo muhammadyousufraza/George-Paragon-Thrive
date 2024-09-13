@@ -1,0 +1,31 @@
+<div class="tvd-input-field">
+	<input name="source" data-bind="source" type="text" value="<#= model.get('source') #>" placeholder="<?php echo esc_html__( 'Url', 'thrive-apprentice' ); ?>">
+	<label>&nbsp;</label>
+</div>
+
+<div class="tva-details-vimeo mt-15">
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="hide-title" type="checkbox" id="tva-vimeo-option-hide-title-<#= model.cid #>">
+		<label for="tva-vimeo-option-hide-title-<#= model.cid #>"><?php echo esc_html__( 'Hide Video Title', 'thrive-apprentice' ) ?></label>
+	</div>
+
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="hide-byline" type="checkbox" id="tva-vimeo-option-hide-byline-<#= model.cid #>">
+		<label for="tva-vimeo-option-hide-byline-<#= model.cid #>"><?php echo esc_html__( 'Hide Author Name', 'thrive-apprentice' ) ?></label>
+	</div>
+
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="hide-portrait" type="checkbox" id="tva-vimeo-option-hide-portrait-<#= model.cid #>">
+		<label for="tva-vimeo-option-hide-portrait-<#= model.cid #>"><?php echo esc_html__( 'Hide Author Portrait', 'thrive-apprentice' ) ?></label>
+	</div>
+
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="autoplay" type="checkbox" id="tva-vimeo-option-autoplay-<#= model.cid #>">
+		<label for="tva-vimeo-option-autoplay-<#= model.cid #>"><?php echo esc_html__( 'Autoplay', 'thrive-apprentice' ) ?></label>
+	</div>
+
+	<div>
+		<input class="click" data-fn="toggleMediaOption" data-prop="hide-full-screen" type="checkbox" id="tva-vimeo-option-hide-full-screen-<#= model.cid #>">
+		<label for="tva-vimeo-option-hide-full-screen-<#= model.cid #>"><?php echo esc_html__( 'Hide Full-Screen Button', 'thrive-apprentice' ) ?></label>
+	</div>
+</div>

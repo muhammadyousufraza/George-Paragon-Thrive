@@ -1,0 +1,68 @@
+<?php if ( Thrive_Product_Manager::is_debug_mode() ) : ?>
+	<h2>Debug mode: ON</h2>
+	<ul>
+		<li>
+			<label for="tpm-debug-server">Hit server</label>:
+			<select id="tpm-debug-server">
+				<?php foreach ( Thrive_Product_Manager::$ttw_urls as $name => $url ) : ?>
+					<option <?php echo $url === Thrive_Product_Manager::get_ttw_url() ? 'selected="selected"' : '' ?>
+							value="<?php echo $url ?>"><?php echo $name ?></option>
+				<?php endforeach; ?>
+			</select>
+		</li>
+	</ul>
+
+	<ul>
+		<li>
+			<b>TTW URL</b>:
+			<a href="<?php echo Thrive_Product_Manager::get_ttw_url() ?>"
+			   target="_blank"><?php echo Thrive_Product_Manager::get_ttw_url() ?></a>
+		</li>
+		<li>
+			<b>TTW
+				Licenses</b>: <?php echo var_export( TPM_License_Manager::get_instance()->get_ttw_license_instances(), true ); ?>
+		</li>
+		<li>
+			<b>CONNECTED</b>
+			as: <?php echo TPM_Connection::get_instance()->is_connected() ? var_export( TPM_Connection::get_instance()->get_data(), true ) : 'not connected' ?>
+		</li>
+		<li>
+			<b>OLD way thrive_license</b>: <?php echo var_export( get_option( 'thrive_license', array() ), true ) ?>
+		</li>
+		<li>
+			<b>NEW way tpm_licenses used</b>: <?php echo var_export( get_option( 'tpm_licenses', array() ), true ) ?>
+		</li>
+		<li>
+			<b>CACHE enabled</b>: <?php echo Thrive_Product_Manager::CACHE_ENABLED ? 'true' : 'false' ?>
+		</li>
+		<li>
+			<b>CACHE life time for products</b> <?php echo (int) TPM_Product_List::CACHE_LIFE_TIME / 86400 ?> days <br>
+		</li>
+		<li>
+			<b>CACHE life time for licenses</b> <?php echo (int) TPM_License_Manager::CACHE_LIFE_TIME / 3600 ?> hours
+		</li>
+		<li>
+			<b>TPM Token</b> <?php echo get_option( 'tpm_token', 'not_set' ) ?>
+		</li>
+		<li>
+			<b>Cron Refresh Token Scheduled on</b>:
+			<?php echo date( 'Y-m-d H:i:s', wp_next_scheduled( TPM_Cron::CRON_HOOK_NAME ) ); ?>
+		</li>
+	</ul>
+<?php endif; ?>
+
+
+<script type="text/javascript">
+
+	( function ( $ ) {
+
+		$( function () {
+			$( '#tpm-debug-server' ).change( function () {
+				window.location = TPM.tpm_url + '&tpm_action=set_url&url=' + this.value;
+			} );
+		} );
+
+
+	} )( jQuery );
+
+</script>

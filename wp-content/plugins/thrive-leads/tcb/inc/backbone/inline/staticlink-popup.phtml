@@ -1,0 +1,12 @@
+<div class="fr-static-box fr-link-box">
+	<div class="fr-input-line fr-link-url fr-with-icon"><input id="fr-link-insert-layer-url-<#= editor_id #>" data-side="top" name="href" type="text" class="fr-link-attr" placeholder="URL"><#= link_buttons #></div>
+	<div class="fr-checkbox-line fr-link-atts">
+		<span class="fr-checkbox"><input name="target" class="fr-link-attr" data-checked="_blank" type="checkbox" id="fr-link-target-<#= editor_id #>"><span><?php tcb_icon( 'froala-checkmark' ); ?></span></span><label for="fr-link-target-<#= editor_id #>"><?php echo __( 'Open in new tab', 'thrive-cb' ) ?></label>
+		<span class="fr-checkbox"><input name="rel" class="fr-link-attr" data-checked="nofollow" type="checkbox" id="fr-link-rel-<#= editor_id #>"><span><?php tcb_icon( 'froala-checkmark' ); ?></span></span><label for="fr-link-rel-<#= editor_id #>"><?php echo __( 'Nofollow', 'thrive-cb' ) ?></label>
+	</div>
+
+	<div class="fr-action-buttons row between-xs reverse">
+		<button class="fr-command fr-submit" role="button" data-cmd="linkInsert" href="#" type="button"><?php echo __( 'Insert', 'thrive-cb' ) ?></button>
+		<button class="fr-command fr-danger fr-remove fr-hidden" role="button" data-cmd="linkRemove" href="#"  type="button"><?php echo __( 'Remove', 'thrive-cb' ) ?></button>
+	</div>
+</div>

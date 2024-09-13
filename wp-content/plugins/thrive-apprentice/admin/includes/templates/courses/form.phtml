@@ -1,0 +1,30 @@
+<div class="tva-flex course-form-header tva-space-between pb-50"></div>
+<div class="tva-flex course-form-container">
+	<div class="tva-boxed-container tva-flex">
+		<div class="tva-flex course-form-dropdowns" id="tva-course-dropdowns"></div>
+		<div class="tva-flex">
+			<div>
+				<div class="tva-badge-container">
+					<div class="tva-badge-card" id="tva-course-label"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="tva-link-report-wide">
+	<div class="tva-link-report-cnt">
+		<div class="tva-link-to-report tva-page-option">
+			<a href="#reports/courses/main?course_id=<#=this.model.get('id')#>" class="click">
+				<?php tva_get_svg_icon( 'bar-stats' ); ?>
+				<?php echo esc_html__( 'View reports', 'thrive-apprentice' ); ?>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="tva-course-save">
+	<div class="tva-boxed-container tva-flex tva-flex-row-reverse">
+		<button class="tva-save-btn click" data-fn="saveCourse"><?php echo esc_html__( 'Save', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>

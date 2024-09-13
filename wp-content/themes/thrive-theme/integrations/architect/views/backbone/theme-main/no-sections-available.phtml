@@ -1,0 +1,30 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-theme
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+
+?>
+
+<div class="tth-no-templates">
+	<?php Thrive_Views::svg_icon( 'no-sections' ); ?>
+	<p>
+		<?php echo __( "You didn't save any ", 'thrive-theme' ); ?>
+		<#= modal.section.type #>
+		<?php echo __( ' sections for the current theme.', 'thrive-theme' ); ?>
+	</p>
+	<p>
+		<?php echo __( 'Go to ', 'thrive-theme' ); ?>
+		<span class="blue-text click" data-fn="renderFirstTab">
+			<?php echo __( 'Theme', 'thrive-theme' ); ?>
+				<#= modal.displayName #>
+			<?php echo __( ' Sections,', 'thrive-theme' ); ?>
+		</span>
+		<?php echo __( 'choose a template, start editing it and when you finish press Save.', 'thrive-theme' ); ?>
+	</p>
+</div>

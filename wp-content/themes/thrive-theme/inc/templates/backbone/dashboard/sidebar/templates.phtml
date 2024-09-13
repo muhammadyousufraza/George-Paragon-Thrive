@@ -1,0 +1,31 @@
+<div class="ttd-sidebar-tab">
+	<h2><?php echo __( 'Page Templates', 'thrive-theme' ); ?></h2>
+	<p class="info"><?php echo __( 'Manage your page, archive and custom templates', 'thrive-theme' ); ?>.</p>
+
+	<hr/>
+
+	<div class="ttd-sidebar-templates-filters">
+		<div class="ttd-templates-search-box">
+			<?php Thrive_Views::svg_icon( 't-search' ); ?>
+			<input type="text" id="ttd-templates-search" class="input" data-fn="filterByName" name="" placeholder="Search Template">
+		</div>
+
+		<h3><?php echo __( 'Show Template Types:', 'thrive-theme' ); ?></h3>
+
+		<ul>
+			<li class="single-templates">
+				<input type="checkbox" checked class="change" id="ttd-filter-single" data-fn="showByType" data-type="single">
+				<label for="ttd-filter-single"><?php echo __( 'Single Content', 'thrive-theme' ); ?></label>
+				<span class="templates-counter">3</span>
+			</li>
+			<li class="list-templates">
+				<input type="checkbox" checked class="change" id="ttd-filter-lists" data-fn="showByType" data-type="list">
+				<label for="ttd-filter-lists"><?php echo __( 'Lists', 'thrive-theme' ); ?></label>
+				<span class="templates-counter">2</span>
+			</li>
+		</ul>
+	</div>
+
+	<hr/>
+
+</div>

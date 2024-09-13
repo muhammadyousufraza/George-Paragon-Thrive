@@ -1,0 +1,81 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+$breadcrumbs_config = array(
+	array(
+		'title' => __( 'Quick Start Guide', 'thrive-apprentice' ),
+		'route' => 'sendowl/quick-start',
+	),
+	array(
+		'title' => __( 'Create Products in SendOwl', 'thrive-apprentice' ),
+	),
+);
+
+$items = array(
+	array(
+		'title'     => sprintf( __( 'Log into your %s account', 'thrive-apprentice' ), '<a href="https://www.sendowl.com/" target="_blank">SendOwl</a>' ),
+		'image_src' => TVA_Const::plugin_url( 'admin/img/sendowl-guide1.jpg' ),
+	),
+	array(
+		'title' => sprintf( __( 'Go to the right sidebar menu and select %s', 'thrive-apprentice' ), '<a class="ta-products" href="https://www.sendowl.com/products" target="_blank">Products</a>' ),
+	),
+	array(
+		'title' => __( 'Copy this URL', 'thrive-apprentice' ),
+		'input' => '<div class="ta-copy"><input type="text" value="' . get_site_url() . '/thrv_thankyou"  readonly /><button class="tva-zclip">&nbsp;</button></div>',
+	),
+	array(
+		'title'     => sprintf( __( 'Press %s button and choose %s', 'thrive-apprentice' ), '<strong>Add Product</strong>', '<strong>Product</strong>' ),
+		'image_src' => TVA_Const::plugin_url( 'admin/img/sendowl-guide2.jpg' ),
+	),
+	array(
+		'title'     => sprintf( __( 'Choose %s. Add product %s and %s. Paste the URL from step 3. Press %s button', 'thrive-apprentice' ),
+			'<strong>Redirect</strong>',
+			'<strong>Name</strong>',
+			'<strong>Price</strong>',
+			'<strong>Create Product</strong>'
+		),
+		'image_src' => TVA_Const::plugin_url( 'admin/img/sendowl-guide3.jpg' ),
+	),
+	array(
+		'title' => __( 'That’s it, your product is created. Repeat the process to create more products to sell', 'thrive-apprentice' ),
+		'icon'  => 'check',
+	),
+);
+
+?>
+<div class="tva-flex tva-flex-row mb-30">
+	<h1 class="tva-main-heading"><?php echo __( 'Create products in SendOwl', 'thrive-apprentice' ); ?></h1>
+</div>
+<?php include 'breadcrumbs.phtml'; ?>
+<div class="tva-so-guide-create mt-10">
+	<?php foreach ( $items as $index => $item ) : ?>
+		<?php $number = $index + 1; ?>
+		<div class="tva-so-guide-step">
+			<div class="ta-number">
+				<?php if ( empty( $item['icon'] ) ) : ?>
+					<h3><?php echo $number; ?></h3>
+				<?php else: ?>
+					<?php tva_get_svg_icon( $item['icon'] ); ?>
+				<?php endif; ?>
+			</div>
+			<div>
+				<p><?php echo $item['title']; ?></p>
+			</div>
+			<?php if ( ! empty( $item['input'] ) ) : ?>
+				<?php echo $item['input']; ?>
+			<?php endif; ?>
+		</div>
+		<?php if ( ! empty( $item['image_src'] ) ) : ?>
+			<div class="tva-flex ta-w-img">
+				<img src="<?php echo $item['image_src']; ?>" alt="SendOwl Quick Start Image"/>
+			</div>
+		<?php endif; ?>
+	<?php endforeach; ?>
+</div>

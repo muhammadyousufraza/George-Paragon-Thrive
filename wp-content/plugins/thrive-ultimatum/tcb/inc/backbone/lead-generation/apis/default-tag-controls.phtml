@@ -1,0 +1,15 @@
+<!-- Used by 3rd party APIs -->
+<div class="api-field">
+	<div class="field-description mb-40">
+		<?php echo __( 'Tags', 'thrive-cb' ); ?>
+	</div>
+	<div class="tvd-input-field">
+		<select id="tve-lg-select-tags" multiple name="tags" tabindex="-1" class="select2-hidden-accessible tve-api-extra" aria-hidden="true">
+			<# if ( api.getConfig('tags') ) { #>
+			<# _.each( api.getConfig('tags').split(','), function( tag ) { #>
+			<option value="<#=tag#>" selected="selected"><#=tag#></option>
+			<# }, this ) #>
+			<# } #>
+		</select>
+	</div>
+</div>

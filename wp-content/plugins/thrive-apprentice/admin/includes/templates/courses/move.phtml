@@ -1,0 +1,62 @@
+<div class="tvd-modal-step">
+	<div class="tvd-modal-content tva-chapter-form">
+		<h3 class="tvd-modal-title"><?php echo __( 'Move selected items to another course', 'thrive-apprentice' ) ?></h3>
+		<p><?php echo sprintf( __( "You're about to move %s from %s. Choose where these items should be placed.", 'thrive-apprentice' ), '<strong><#=this.selectionSummary()#></strong>', '<strong><#- this.course.get("name") #></strong>' ); ?></p>
+
+		<div class="tvd-row tvd-collapse mt-30">
+			<# if ( this.state.get('coursesFetched') && ! this.courses.length ) { #>
+			<div class="tvd-col tvd-s-12">
+				<em><?php esc_html_e( 'No suitable courses have been found.', 'thrive-apprentice' ); ?></em>
+			</div>
+			<# } else { #>
+			<div class="tvd-col tvd-s4 item-toggle">
+				<?php esc_html_e( 'Select course', 'thrive-apprentice' ); ?>
+				<div class="mt-5 tva-loader-courses">
+					<select name="course" class="change select-item tvd-browser-default">
+						<option value=""><?php esc_html_e( 'Choose from the list...', 'thrive-apprentice' ); ?></option>
+						<# this.courses.forEach( function(course) { #>
+						<option
+						<#=course.get('id') === this.selectedCourseId() ? ' selected' : ''#> value="<#=course.get('id')#>"><#=course.get('name')#></option>
+						<# }, this ) #>
+					</select>
+				</div>
+			</div>
+			<# } #>
+
+			<# if ( this.needsModuleSelection() && this.state.get('selectedCourse') ) { #>
+			<div class="tvd-col tvd-s4 item-toggle">
+				<?php esc_html_e( 'Select module', 'thrive-apprentice' ); ?>
+				<div class="mt-5">
+					<select name="module" class="change select-item tvd-browser-default">
+						<option value=""><?php esc_html_e( 'Choose from the list...', 'thrive-apprentice' ); ?></option>
+						<# this.getAvailableModules().forEach( function(module) { #>
+						<option
+						<#=module.get('ID') === this.selectedModuleId() ? ' selected' : ''#> value="<#=module.get('ID')#>"><#=module.get('post_title')#></option>
+						<# }, this ) #>
+					</select>
+				</div>
+			</div>
+			<# } #>
+
+			<# if ( this.needsChapterSelection() ) { #>
+			<div class="tvd-col tvd-s4 item-toggle">
+				<?php esc_html_e( 'Select chapter', 'thrive-apprentice' ); ?>
+				<div class="mt-5">
+					<select name="chapter" class="change select-item tvd-browser-default">
+						<option value=""><?php esc_html_e( 'Choose from the list...', 'thrive-apprentice' ); ?></option>
+						<# this.getAvailableChapters().forEach( function(chapter) { #>
+						<option
+						<#=chapter.get('ID') === this.selectedChapterId() ? ' selected' : ''#> value="<#=chapter.get('ID')#>"><#=chapter.get('post_title')#></option>
+						<# }, this ) #>
+					</select>
+				</div>
+			</div>
+			<# } #>
+		</div>
+	</div>
+	<div class="tva-modal-footer-outer">
+		<button type="button" class="tva-modal-btn tvd-modal-close"><?php echo __( 'Cancel', 'thrive-apprentice' ); ?></button>
+		<button type="button"
+		<#= ! this.state.get('canSave') ? ' disabled' : '' #> class="tva-modal-btn tva-modal-btn-green tvd-modal-save<#= ! this.state.get('canSave') ? ' tva-disabled' : '' #>"><?php echo __( 'Move selected items', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>

@@ -1,0 +1,81 @@
+<div class="thrive-display-testimonials-header thrive-display-testimonials-splash-header">
+	<div class="thrive-display-testimonials-title">
+		<?php echo esc_html__( 'Which testimonials do you want to display?', 'thrive-ovation' ); ?>
+	</div>
+</div>
+
+<div class="thrive-display-testimonials-content thrive-display-testimonials-splash-content">
+	<span class="descriptive-text create-text">
+		<?php echo esc_html__( 'Create a new list of testimonials', 'thrive-ovation' ); ?>
+	</span>
+
+	<div class="two-cards">
+		<div class="card-wrapper static click" data-fn="openStaticList">
+			<span class="card-icon"></span>
+			<div class="card-text-wrapper">
+				<div class="card-title">
+					<?php echo esc_html__( 'Specific testimonials', 'thrive-ovation' ); ?>
+				</div>
+				<p class="card-content">
+					<?php echo esc_html__( 'Manually select and order the testimonials that you would like to display', 'thrive-ovation' ); ?>
+				</p>
+			</div>
+		</div>
+
+		<div class="card-wrapper dynamic click" data-fn="openDynamicList">
+			<span class="card-icon"></span>
+			<div class="card-text-wrapper">
+				<div class="card-title">
+					<?php echo esc_html__( 'Dynamic list', 'thrive-ovation' ); ?>
+				</div>
+				<p class="card-content">
+					<?php echo esc_html__( 'Choose which testimonials will be displayed based on their assigned tag', 'thrive-ovation' ); ?>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<span class="descriptive-text set-text">
+		<?php echo esc_html__( 'or choose an existing testimonial set', 'thrive-ovation' ); ?>
+	</span>
+
+	<div class="thrive-display-testimonials-sets-container">
+		<div class="container-docked click" data-fn="openExistingSet">
+			<span class="card-title">
+				<?php echo esc_html__( 'Testimonial sets', 'thrive-ovation' ); ?>
+			</span>
+			<span class="set-row">
+				<span class="static-count"></span>
+				<span>
+					<?php echo esc_html__( 'Specific testimonial sets', 'thrive-ovation' ); ?>
+				</span>
+				<span class="a-dot">
+					•
+				</span>
+				<span class="dynamic-count"></span>
+				<span>
+					<?php echo esc_html__( 'Dynamic testimonial sets', 'thrive-ovation' ); ?>
+				</span>
+			</span>
+		</div>
+
+		<div class="container-undocked">
+			<ul class="thrive-display-testimonials-set-list"></ul>
+		</div>
+	</div>
+</div>
+
+<div class="thrive-display-testimonials-no-testimonials" style="display: none">
+	<?php tcb_icon( 'no-results-cat' ); ?>
+	<div class="no-testimonials-text">
+		<?php echo esc_html__( "You don't have any testimonials yet.\nTo add and manage testimonials", 'thrive-ovation' ); ?>
+		<a href="<?php echo admin_url( 'admin.php?page=tvo_admin_dashboard' )?>" target="_blank" ><?php echo esc_html__( 'go to Thrive Ovation.', 'thrive-ovation' ); ?></a>
+	</div>
+</div>
+
+<div class="thrive-display-testimonials-action-buttons">
+	<button class="clear click" data-fn="backToTemplates">
+		<?php tcb_icon( 'arrow-left-light' ); ?>
+		<?php echo esc_html__( 'Back to templates', 'thrive-ovation' ); ?>
+	</button>
+</div>

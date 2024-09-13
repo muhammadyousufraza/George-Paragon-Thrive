@@ -1,0 +1,43 @@
+<section class="fr-dropdown-list fr-text-styles fr-state" data-state="normal">
+	<div class="fr-dropdown-tabs">
+		<span data-target="default" class="fr-tab-link fr-tab-active fr-command" data-cmd="changeTab"><?php echo esc_html__( tcb_post()->is_landing_page() ? 'Landing Page' : 'Default', 'thrive-cb' ); ?></span>
+		<span data-target="custom" class="fr-tab-link fr-command" data-cmd="changeTab"><?php echo esc_html__( 'Custom', 'thrive-cb' ); ?></span>
+	</div>
+	<div class="fr-tab fr-tab-default fr-visible">
+		<# _.each( defaultStyles, function( name, tag ) { #>
+			<div class="fr-style-item fr-dropdown-item fr-command" data-tag-name="<#=tag#>" data-cmd="apply">
+				<<#=tag==='PlainText'?'div':tag#> class="fr-style-reset<#=tag==='PlainText'?' tcb-plain-text':''#>"><#=name#></<#=tag==='PlainText'?'div':tag#>>
+				<div class="fr-submenu">
+					<span class="fr-command" data-tag-name="<#=tag#>" tabIndex="-1" role="option" data-cmd="apply"><?php echo sprintf( esc_html__( 'Apply %s', 'thrive-cb' ), '<#=name#>' ); ?></span>
+					<span class="fr-command" data-tag-name="<#=tag#>" tabIndex="-1" role="option" data-cmd="updateDefault"><?php echo sprintf( esc_html__( 'Update %s to match', 'thrive-cb' ), '<#=name#>' ); ?></span>
+					<span class="fr-command" data-tag-name="<#=tag#>" tabIndex="-1" role="option" data-cmd="resetDefault"><?php echo esc_html__( 'Reset Style', 'thrive-cb' ); ?></span>
+				</div>
+			</div>
+		<# }); #>
+	</div>
+	<div class="fr-tab fr-tab-custom">
+		<# if ( ! customStyles.length ) { #>
+		<div class="fr-dropdown-item fr-inactive"><?php echo esc_html__( 'No custom styles saved', 'thrive-cb' ); ?></div>
+		<# } #>
+		<#_.each ( customStyles, function( style, _index ) { #>
+		<div class="fr-dropdown-item fr-command" data-style="<#=style.id#>" data-cmd="apply" data-tag-name="<#=style.attr.tag#>">
+			<<#=style.attr.tag==='plaintext'?'div':style.attr.tag#> class="fr-style-reset <#=style.cls#><#=style.attr.tag==='plaintext'?' tcb-plain-text':''#>"><#=style.name#></<#=style.attr.tag==='plaintext'?'div':style.attr.tag#>>
+			<span class="style-tag"><#=style.shortTag#></span>
+			<div class="fr-submenu">
+				<span class="fr-command" data-style="<#=style.id#>" tabIndex="-1" role="option" data-tag-name="<#=style.attr.tag#>" data-cmd="apply"><?php echo sprintf( esc_html__( 'Apply %s', 'thrive-cb' ), '<strong class="fr-truncate" title="<#=style.name#>"><#=style.name#></strong>' ); ?></span>
+				<span class="fr-command" data-style="<#=style.id#>" tabIndex="-1" role="option" data-cmd="update"><?php echo sprintf( esc_html__( 'Update %s to match', 'thrive-cb' ), '<strong class="fr-truncate" title="<#=style.name#>"><#=style.name#></strong>' ); ?></span>
+				<span class="fr-command fr-danger" data-style="<#=style.id#>" data-confirm="<?php echo esc_attr__( 'Are you sure you want to delete this style? All text with this custom style will be reset to default. This cannot be undone.', 'thrive-cb' ); ?>" tabIndex="-1" role="option" data-cmd="remove"><?php echo sprintf( esc_html__( 'Delete %s', 'thrive-cb' ), '<strong class="fr-truncate" title="<#=style.name#>"><#=style.name#></strong>' ); ?></span>
+			</div>
+		</div>
+		<# }) #>
+		<section class="fr-form fr-text-style-add">
+			<div class="fr-form-section fr-label fr-text-center"><strong><?php echo esc_html__( 'Save as new style', 'thrive-cb' ); ?></strong></div>
+			<div class="fr-form-section fr-inline">
+				<input type="text" class="fr-style-name" value="" placeholder="<?php echo esc_attr__( 'Enter style name...', 'thrive-cb' ); ?>">
+				&nbsp;
+				&nbsp;
+				<button class="fr-command fr-submit" role="button" data-cmd="add" type="button" tabindex="9"><?php echo esc_html__( 'Save', 'thrive-cb' ); ?></button>
+			</div>
+		</section>
+	</div>
+</section>

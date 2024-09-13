@@ -1,0 +1,52 @@
+<div class="ttd-performance-image ttd-performance-page">
+	<h1 class="ttd-page-title"><?php echo esc_html__( 'Image Optimization', 'thrive-theme' ); ?></h1>
+
+	<div class="ttd-performance-card info ttd-d-flex">
+		<#= TTD.utils.icon( 'performance-image' ) #>
+		<div class="ttd-performance-text ml-40">
+			<p class="m-0"><?php echo esc_html__( 'Large and inefficient images can slow down loading times significantly.', 'thrive-theme' ); ?></p>
+			<p class="mt-25 mb-0"><?php echo esc_html__( 'Here are a list of recommendations, settings and integrations to ensure all images are saved and served optimally', 'thrive-theme' ); ?></p>
+		</div>
+	</div>
+
+	<p class="pfs-15 mt-80">
+		<?php echo esc_html__( 'Compress and serve your images across a delivery network at exactly the right dimensions (adaptive images).', 'thrive-theme' ); ?>
+		<br>
+		<?php echo esc_html__( 'This ensures image files are small and loaded quickly.', 'thrive-theme' ); ?>
+	</p>
+
+	<# if ( ! this.hasPlugins() ) { #>
+	<p class="mt-40 mb-10 pfs-15 ttd-normal"><?php echo esc_html__( "Choose a solution  that's right for you.", 'thrive-theme' ); ?></p>
+
+	<div class="action-group">
+		<button class="ttd-perf-action click<#=this.state === 'optimole' ? ' selected' : '' #>" data-fn="optionClick" data-opt="optimole"><?php echo esc_html__( 'Fully Automated', 'thrive-theme' ); ?></button>
+		<button class="ttd-perf-action click<#=this.state === 'smush' ? ' selected' : '' #>" data-fn="optionClick" data-opt="smush"><?php echo esc_html__( 'No Cost', 'thrive-theme' ); ?></button>
+	</div>
+	<div class="action-option" id="opt--optimole"
+	<#=this.state === 'optimole' ? ' style="display: block"' : '' #>>
+	<div class="ttd-performance-card no-top-left-corner">
+		<p class="ttd-bold mt-15 mb-0"><?php echo esc_html__( 'Fully Automated Image Optimization', 'thrive-theme' ); ?></p>
+		<p class="mt-20 pfs-15 mb-15">
+			<?php echo esc_html__( 'Thrive Themes has a full integration with Optimole. Optimole handles image compression, displays images at exactly the right dimensions and includes a CDN for fast loading times.', 'thrive-theme' ); ?>
+			<br><strong><?php echo esc_html__( 'The service is also free up to 5,000 hits per month.', 'thrive-theme' ); ?></strong>
+		</p>
+	</div>
+	<#= this.renderPluginCard( 'optimole', {recommended: true} ) #>
+</div>
+<div class="action-option" id="opt--smush"<#=this.state === 'smush' ? ' style="display: block"' : '' #>>
+<div class="ttd-performance-card no-top-left-corner">
+	<p class="ttd-bold mt-15 mb-0"><?php echo esc_html__( 'Full Image Optimization', 'thrive-theme' ); ?></p>
+	<p class="mt-20 pfs-15 mb-15"><?php echo esc_html__( "Smush allows you to compress an unlimited number of images on their free plan (good for beginners and those on a budget). You'll need to upgrade to their pro plan for adaptive images and CDN support.", 'thrive-theme' ); ?></p>
+</div>
+<#= this.renderPluginCard( 'smush', {}) #>
+</div>
+<# } else if ( this.plugins.smush.active ) { #>
+<p class="ttd-normal"><?php echo esc_html__( 'Image Optimization Activated', 'thrive-theme' ); ?></p>
+<#= this.renderPluginCard( 'smush' ) #>
+<# } else if ( this.plugins.optimole.active ) { #>
+<p class="ttd-normal"><?php echo esc_html__( 'Fully Automated Image Optimization Activated', 'thrive-theme' ); ?></p>
+<#= this.renderPluginCard( 'optimole' ) #>
+<# } #>
+</div>
+
+

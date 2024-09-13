@@ -1,0 +1,7 @@
+<button class="create-category <# if ( ct_selected ) { #>sym-down<# } #>"><#= create_text #></button>
+<# if ( ct_selected ) { #>
+	<div class="sym-btn-drop sym-move">
+		<span class="new-symbol"><?php echo __( 'Symbol', 'thrive-cb' ); ?></span>
+		<span class="new-cat"><?php echo __( 'Category', 'thrive-cb' ); ?></span>
+	</div>
+<# } #>

@@ -1,0 +1,66 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-visual-editor
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="layout-options action-group">
+	<div class="dropdown-header" data-prop="docked">
+		<span>
+			<?php echo __( 'Layout & Position', 'thrive-cb' ); ?>
+		</span>
+		<i></i>
+	</div>
+
+	<div class="dropdown-content">
+		<div class="tve-control" data-view="MarginAndPadding"></div>
+
+		<hr>
+		<div class="mb-10">
+			<div class="tve-control full-width-hidden no-space" data-prop="width" data-label="<?php echo __( 'Width', 'thrive-cb' ); ?>"></div>
+			<div class="tve-control" data-prop="height" data-label="<?php echo __( 'Height', 'thrive-cb' ); ?>"></div>
+		</div>
+
+		<div class="full-width-hidden mb-10">
+			<div class="tve-control tve-alignment-control no-space" data-view="Alignment"></div>
+			<div class="tve-control no-space mt-10" data-view="Display"></div>
+		</div>
+
+		<div class="tve-advanced-controls">
+			<div class="dropdown-header" data-prop="advanced">
+				<span>
+					<?php echo __( 'Advanced', 'thrive-cb' ); ?>
+				</span>
+			</div>
+
+			<div class="dropdown-content pt-0">
+				<div class="layout-adv fluid-input no-space">
+					<div class="tve-control float full-width-hidden" data-view="Float"></div>
+					<div class="tve-control z-index" data-view="zIndex"></div>
+				</div>
+				<div class="info-text orange"><?php echo __( 'Z-Index only works for elements with "Relative" or "Absolute" positioning', 'thrive-cb' ); ?></div>
+				<div class="tve-control full-width no-space mt-10 pt-10 layout-position-toggle" data-view="Position">
+					<div class="layout-position">
+						<div class="position-auto"></div>
+						<div class="position-relative tve-control"></div>
+						<div class="position-absolute tve-control"></div>
+					</div>
+				</div>
+				<div class="tve-control full-width no-space mt-10 pt-10 layout-overflow-toggle" data-view="Overflow">
+					<div class="layout-overflow">
+						<div class="overflow-auto"></div>
+						<div class="overflow-visible tve-control"></div>
+						<div class="overflow-hidden tve-control"></div>
+						<div class="overflow-scroll tve-control"></div>
+					</div>
+				</div>
+				<div class="tve-control layout-scroll-style" data-view="ScrollStyle"></div>
+			</div>
+		</div>
+	</div>
+</div>

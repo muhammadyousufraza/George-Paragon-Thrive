@@ -1,0 +1,14 @@
+<h2 class="ttd-sidebar-branding-header click" data-fn="toggle_dropdown">
+	<span class=""><?php echo __( 'Logo', 'thrive-theme' ); ?></span>
+	<span class="dropdown-arrow"></span>
+</h2>
+
+<div class="ttd-sidebar-branding-block">
+	<span class="ttd-logo-recommended-size-text"><?php echo __( 'Recommended size:- 250px x 40px', 'thrive-theme' ); ?></span>
+	<div id="ttd-logo-preview-wrapper"></div>
+	<div class="ttd-logo-url-wrapper">
+		<label for="logo-redirect-url" class="ttd-left-align ttd-margin-top-20"><?php echo __( 'Logo links to', 'thrive-theme' ); ?></label>
+		<input id="logo-redirect-url" type="text" value="<#= TTD.CONST.branding.logo_data.redirect_url #>">
+		<button class="click logo-redirect-url-submit" data-fn="saveLogoUrl"><?php echo __( 'Save URL', 'thrive-theme' ); ?></button>
+	</div>
+</div>

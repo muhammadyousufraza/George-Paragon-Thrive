@@ -1,0 +1,9 @@
+<# var style = item.get('video_style'); #>
+<div class="tge-video-form tge-video-style-<#= style.selected #>">
+	<div class="tqb-video-container-responsive">
+		<iframe src="//fast.wistia.net/embed/iframe/<#= item.get('video_id')#>"
+		        allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed"
+		        name="wistia_embed" height="313" width="651" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen>
+		</iframe>
+	</div>
+</div>

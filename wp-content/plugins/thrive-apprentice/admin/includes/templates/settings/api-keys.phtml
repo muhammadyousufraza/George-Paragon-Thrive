@@ -1,0 +1,33 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-flex tva-flex-row tva-space-between mb-45">
+	<h1 class="tva-main-heading"><?php echo __( 'API Keys', 'thrive-apprentice' ); ?></h1>
+	<div>
+		<a href="javascript:void(0);" class="click tva-btn tva-btn-blue" data-fn="addKey">
+			<?php tva_get_svg_icon( 'add-btn' ); ?>
+			<?php echo __( 'Add API', 'thrive-apprentice' ); ?>
+		</a>
+	</div>
+</div>
+
+<div id="tva-api-keys-wrapper">
+	<div class="tva-flex tva-api-key-header mb-20">
+		<div class="tva-nk"><?php echo esc_html__( 'Name', 'thrive-apprentice' ); ?></div>
+		<div class="tva-nk"><?php echo esc_html__( 'Key', 'thrive-apprentice' ); ?></div>
+		<div class="tva-status"><?php echo esc_html__( 'Status', 'thrive-apprentice' ); ?></div>
+	</div>
+	<div id="tva-api-keys-list"></div>
+</div>
+<div id="tva-no-api-keys" class="tva-api-key-empty" style="display: none;">
+	<?php tva_get_svg_icon( 'no-api' ); ?>
+	<p><?php echo __( 'You have no API keys' , 'thrive-apprentice' ) ?></p>
+</div>

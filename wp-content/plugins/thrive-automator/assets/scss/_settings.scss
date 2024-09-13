@@ -1,0 +1,26 @@
+.tap-settings-wrapper {
+  .tap-settings-item {
+    width: 100%;
+    border-radius: 3px;
+    background-color: #fff;
+    box-sizing: border-box;
+
+    .tap-checkbox-wrapper {
+      margin-right: 0;
+    }
+
+    .tap-settings-message {
+      font-size: 14px;
+
+      a {
+        color: var(--tap-primary);
+        text-decoration: none;
+        box-shadow: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

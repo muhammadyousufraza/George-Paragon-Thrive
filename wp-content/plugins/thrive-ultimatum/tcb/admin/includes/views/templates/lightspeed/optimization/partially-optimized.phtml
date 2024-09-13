@@ -1,0 +1,23 @@
+<div class="ls-optimization-wrapper">
+	<div class="page-content grey">
+		<div class="page-title"><?php echo __( "Some of your site assets aren't fully optimized", 'thrive-cb' ); ?></div>
+		<div class="page-text-wrapper">
+			<span class="big-icon continue"></span>
+			<div class="text-title blue-color">
+				<?php echo sprintf( __( '%s of %s items have been updated to the latest version.', 'thrive-cb' ),
+					'<#= optimizedItems #>',
+					'<#= totalItems #>'
+				); ?>
+			</div>
+			<div class="text-main">
+				<div class="text-paragraph">
+					<?php echo __( 'Click the button below to continue until your site is fully optimized.', 'thrive-cb' ); ?>
+				</div>
+			</div>
+		</div>
+		<button class="lightspeed-button blue-color lightspeed-optimize">
+			<?php echo __( 'Continue optimization', 'thrive-cb' ); ?>
+		</button>
+	</div>
+	<div class="page-footer"></div>
+</div>

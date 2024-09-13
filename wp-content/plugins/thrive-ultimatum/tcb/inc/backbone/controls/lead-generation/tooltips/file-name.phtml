@@ -1,0 +1,18 @@
+<div class="control-grid full-width pb-0">
+	<p class="mt-0">
+		<?php esc_html_e( 'Specify the naming convention of the uploaded file(s)', 'thrive-cb' ); ?>
+	</p>
+	<p class="mt-0">
+		<?php esc_html_e( 'File names can be static, e.g. “cvupload” or dynamic using the following shortcodes:-', 'thrive-cb' ); ?>
+	</p>
+	<ul>
+		<li><strong>{email}</strong> - <?php esc_html_e( 'the email of the submitter', 'thrive-cb' ); ?></li>
+		<li><strong>{date}</strong> - <?php esc_html_e( 'the date of the submission', 'thrive-cb' ); ?></li>
+		<li><strong>{time}</strong> - <?php esc_html_e( 'the time of the submission', 'thrive-cb' ); ?></li>
+		<li><strong>{match}</strong> - <?php esc_html_e( 'the name of the uploaded file', 'thrive-cb' ); ?></li>
+	</ul>
+	<p class="mt-0"><strong><?php esc_html_e( 'Example', 'thrive-cb' ); ?></strong></p>
+	<p class="mt-0">CVUpload_{email}_{date}</p>
+	<p class="mt-0"><?php esc_html_e( 'would create files similar to the following:-', 'thrive-cb' ); ?></p>
+	<p class="m0">CVUpload_joe_bloggs+gmail.com_06-15-2020_544693.pdf</p>
+</div>

@@ -1,0 +1,28 @@
+<div class="tva-opt">
+	<div class="tva-label"><?php esc_html_e( 'On which day?', 'thrive-apprentice' ); ?></div>
+	<div class="tva-field">
+		<#= this.renderDropdown( 'monthly_type', <?php echo json_encode( \TVA\Drip\Schedule\Base::get_monthly_schedule_options() ); ?> ) #>
+	</div>
+</div>
+
+<# if ( this.model.get('monthly_type') === 'date' ) { #>
+<div class="tva-opt">
+	<div class="tva-label"><?php esc_html_e( 'On which date?', 'thrive-apprentice' ); ?></div>
+	<div class="tva-field">
+		<input type="number" data-field="day_of_month" value="<#=this.model.get('day_of_month')#>" oninput="validity.valid||(value='');" min="1" max="31">
+	</div>
+</div>
+<# } else if ( this.model.get('monthly_type') === 'day' ) { #>
+<div class="tva-opt">
+	<div class="tva-label"><?php esc_html_e( 'On which day of the month?', 'thrive-apprentice' ); ?></div>
+	<div class="tva-field">
+		<#= this.renderDropdown( 'monthly_day_order', <?php echo json_encode( \TVA\Drip\Schedule\Repeating::get_monthly_order_options() ); ?> ) #>
+	</div>
+</div>
+<div class="tva-opt">
+	<div class="tva-label">&nbsp;</div>
+	<div class="tva-field">
+		<#= this.renderDropdown( 'weekday', <?php echo json_encode( \TVA\Drip\Schedule\Repeating::get_weekdays() ); ?> ) #>
+	</div>
+</div>
+<# } #>

@@ -1,0 +1,179 @@
+<div class="control-grid custom-fields-state" data-state="static">
+	<label><?php echo __( 'Source', 'thrive-cb' ) ?></label>
+	<select class="v-source change input" data-fn-change="show_section" data-fn-input="video_provider_changed">
+		<option value=""><?php echo __( 'Select source', 'thrive-cb' ) ?></option>
+		<option value="youtube">YouTube</option>
+		<option value="vimeo">Vimeo</option>
+		<option value="wistia">Wistia</option>
+		<option value="external"><?php echo __( 'Externally Hosted Video', 'thrive-cb' ) ?></option>
+		<option value="custom"><?php echo __( 'Uploaded Video', 'thrive-cb' ) ?></option>
+		<option value="vooplayer"><?php echo __( 'VooPlayer/SpotLightr', 'thrive-cb' ) ?></option>
+		<option value="bunnynet"><?php echo __( 'Bunny.net Stream', 'thrive-cb' ) ?></option>
+	</select>
+</div>
+
+<div class="custom-fields-state" data-state="static">
+	<div class="v-settings" style="display:none" id="v-settings-youtube" data-view="Youtube"><?php tcb_template( 'actions/responsive-video-providers/youtube' ) ?></div>
+	<div class="v-settings mb-10" style="display:none" id="v-settings-vimeo" data-view="Vimeo"><?php tcb_template( 'actions/responsive-video-providers/vimeo' ) ?></div>
+	<div class="v-settings" style="display:none" id="v-settings-wistia" data-view="Wistia"><?php tcb_template( 'actions/responsive-video-providers/wistia' ) ?></div>
+	<div class="v-settings tve_custom_responsive_video mb-10" style="display:none" id="v-settings-external" data-view="External"><?php tcb_template( 'actions/responsive-video-providers/external' ) ?></div>
+	<div class="v-settings tve_custom_responsive_video mb-10" style="display:none" id="v-settings-custom" data-view="Custom"><?php tcb_template( 'actions/responsive-video-providers/custom' ) ?></div>
+	<div class="v-settings" style="display:none" id="v-settings-vooplayer" data-view="VooPlayer"><?php tcb_template( 'actions/responsive-video-providers/vooplayer' ) ?></div>
+	<div class="v-settings" style="display:none" id="v-settings-bunnynet" data-view="BunnyNet"><?php tcb_template( 'actions/responsive-video-providers/bunny-net' ) ?></div>
+
+	<div class="control-grid responsive-video-time-label">
+		<label>
+			<?php echo __( 'Video Start Time', 'thrive-cb' ); ?>
+		</label>
+	</div>
+
+	<div class="control-grid fluid-input responsive-video-time-settings">
+		<div class="tve-time-control" data-time="Minute"></div>
+		<div class="tve-time-control" data-time="Second"></div>
+	</div>
+
+	<div class="control-grid responsive-video-end-time-label">
+		<label>
+			<?php echo __( 'Video End Time', 'thrive-cb' ); ?>
+		</label>
+	</div>
+
+	<div class="control-grid fluid-input responsive-video-end-time-settings">
+		<div class="tve-time-control" data-time="Minute"></div>
+		<div class="tve-time-control" data-time="Second"></div>
+	</div>
+
+	<div class="tcb-voo-settings hide-tablet hide-mobile"></div>
+
+	<div class="tcb-bunnynet-settings hide-tablet hide-mobile"></div>
+
+</div>
+
+<div id="style-picker"></div>
+
+<hr>
+
+<div class="tcb-default-aspect-ratio"></div>
+<div class="tcb-default-aspect-ratio-options"></div>
+
+<div class="tcb-custom-ratio">
+	<div class="tcb-custom-ratio-button">
+		<a class="tcb-right click " data-fn="addCustomRatio">
+			<i class="mr-5">
+				<?php tcb_icon( 'plus-regular' ); ?>
+			</i>
+			<?php echo __( 'Custom ratio', 'thrive-cb' ); ?>
+		</a>
+	</div>
+	<div class="video-settings-wrapper mb-10">
+		<label class="mb-10">
+			<?php echo __( 'Custom aspect ratio', 'thrive-cb' ); ?>
+		</label>
+
+		<div class="control-grid fluid-input tcb-custom-adjust-ratio pb-0">
+			<label class="mb-10">
+				<?php echo __( 'Aspect ratio', 'thrive-cb' ); ?>
+			</label>
+			<div class="tcb-adjust-ratio-width mr-5"></div>
+			<div class="tcb-adjust-ratio-height"></div>
+		</div>
+	</div>
+</div>
+
+<div class="tcb-floating-video"></div>
+
+<div class="tcb-floating-settings-container video-settings-wrapper mb-5">
+	<div class="control-grid">
+		<label>
+			<?php echo __( 'Float Position', 'thrive-cb' ); ?>
+		</label>
+
+		<select id="tcb-float-position" class="select change white-bg" data-fn="floatChanged">
+			<# this.float.forEach( size => { #>
+			<option value="<#= size #>">
+				<#= size #>
+			</option>
+			<# }) #>
+		</select>
+	</div>
+	<div class="tcb-player-width">
+		<div class="control-grid fluid-input tcb-player-width">
+			<div class="tve-adjust-player-width no-space input-small fill" data-adjust="player-width"></div>
+		</div>
+	</div>
+
+	<div class="tcb-player-padding">
+		<div class="control-grid fluid-input tcb-player-padding1 pb-0">
+			<div class="tve-adjust-player-padding no-space input-small fill" data-adjust="player-padding"></div>
+		</div>
+
+		<div class="control-grid fluid-input tcb-player-padding2 pb-5">
+			<div class="tve-adjust-player-padding no-space input-small fill" data-adjust="player-padding"></div>
+		</div>
+	</div>
+
+	<div class="tcb-float-visibility" data-view="Devices" data-extends="ButtonGroup"></div>
+
+	<div class="tcb-float-close"></div>
+
+	<div class="tcb-float-preview"></div>
+</div>
+
+<div class="tve-lazy-load-control"></div>
+
+<div class="tcb-video-cover">
+	<div class="tcb-video-cover-control"></div>
+	<div class="tcb-video-cover-container">
+
+		<div class="tcb-video-cover-type-control"></div>
+
+		<div class="tcb-text-center mt-5 mb-5">
+			<button class="tve-button orange click" data-fn="videoCoverEditMode">
+				<?php echo __( 'Edit Video Cover', 'thrive-cb' ) ?>
+			</button>
+		</div>
+
+		<div class="control-grid full-width tcb-responsive-video-thumbnail wrap no-space">
+			<label class="label full-width pb-0">
+				<?php echo __( 'Video thumbnail', 'thrive-cb' ); ?>
+			</label>
+			<div class="tve-video-thumbnail-control full-width"></div>
+
+			<div class="tcb-player-icon-wrapper">
+				<div class="pt-5 pb-5">
+					<?php echo __( 'Configure play icon', 'thrive-cb' ) ?>
+				</div>
+				<div class="tcb-player-icon-settings mt-5 mb-5 pl-5 pr-5 pt-5">
+					<div class="tcb-player-icon-picker pb-5"></div>
+					<div class="tcb-player-icon-color pb-5"></div>
+					<div class="tcb-player-icon-size pb-5"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="tve-reporting-control sep-top"></div>
+<div class="tve-reporting-completion-rate"></div>
+
+<div class="tve-advanced-controls mt-10">
+	<div class="dropdown-header" data-prop="advanced">
+		<span>
+			<?php echo __( 'Advanced', 'thrive-cb' ); ?>
+		</span>
+	</div>
+	<div class="dropdown-content pt-0">
+		<p class="info-text tcb-hidden">
+			<?php echo sprintf( __( 'Autoplay is not currently supported by default on mobile devices (tablets, phones). More info ', 'thrive-cb' ) ) ?>
+			<a href="https://webkit.org/blog/6784/new-video-policies-for-ios/" target="_blank" rel="noopener" class="inline"><?php echo __( 'here', 'thrive-cb' ); ?></a>
+			<?php echo sprintf( __( 'Autoplay will be muted by default on Chrome and Safari.', 'thrive-cb' ) ) ?>
+		</p>
+
+		<div class="r-v-checkbox-settings" id="r-v-checkbox-settings-youtube" data-setting="youtube"
+		     style="display:none"><?php tcb_template( 'actions/responsive-video-providers/youtube-extra' ) ?></div>
+		<div class="r-v-checkbox-settings" id="r-v-checkbox-settings-vimeo" data-setting="vimeo" style="display:none"><?php tcb_template( 'actions/responsive-video-providers/vimeo-extra' ) ?></div>
+		<div class="r-v-checkbox-settings" id="r-v-checkbox-settings-wistia" data-setting="wistia" style="display:none"><?php tcb_template( 'actions/responsive-video-providers/wistia-extra' ) ?></div>
+		<div class="r-v-checkbox-settings" id="r-v-checkbox-settings-external" data-setting="external" style="display:none"><?php tcb_template( 'actions/responsive-video-providers/external-extra' ) ?></div>
+		<div class="r-v-checkbox-settings" id="r-v-checkbox-settings-custom" data-setting="custom" style="display:none"><?php tcb_template( 'actions/responsive-video-providers/custom-extra' ) ?></div>
+	</div>
+</div>

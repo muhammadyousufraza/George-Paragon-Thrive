@@ -1,0 +1,52 @@
+<div class="symbol-item modal-item" data-id="<#= item.id #>" data-type="<#= item.type #>">
+	<div class="modal-title-w-options">
+		<span class="modal-item-name"><#= item.post_title || item.label #></span>
+
+		<span class="tcb-dropdown-dots click" data-fn="openOptionsTooltip">
+			<?php tcb_icon( 'three-dots' ); ?>
+		</span>
+
+		<div class="tcb-template-options-tooltip">
+			<button class="tcb-tooltip-row click" data-fn="openRename"><?php echo __( 'Rename', 'thrive-cb' ); ?></button>
+			<button class="tcb-tooltip-row click" data-fn="openDelete"><?php echo __( 'Delete', 'thrive-cb' ); ?></button>
+		</div>
+	</div>
+
+	<div class="modal-tooltip-rename">
+		<input class="modal-item-name-input" value="<#= item.post_title || item.label #>"/>
+		<span class="modal-item-name-check click" data-fn="rename">
+			<?php tcb_icon( 'check-regular' ); ?>
+		</span>
+	</div>
+
+	<div class="card click"
+		 data-id="<#= item.id #>"
+		 data-source="<#= item.source #>"
+		 data-fn="domDownloadTpl"
+	>
+		<div class="symbol-delete-notice">
+			<span class="click" data-fn="hideDelete"><?php tcb_icon( 'close2' ); ?></span>
+
+			<div class="delete-text">
+				<?php echo __( 'Are you sure?', 'thrive-cb' ); ?>
+				<# if(item.source.includes('templates')) { #>
+				<p><?php echo __( 'Deleting a Template will mean that you can’t reuse it on your site in the future.', 'thrive-cb' ); ?></p>
+				<# } else if(item.source.includes('symbols')) {#>
+				<p><?php echo __( 'Deleting a Symbol will remove it from all instances on your website.', 'thrive-cb' ); ?></p>
+				<#} #>
+			</div>
+			<div class="delete action">
+				<button class="click" data-fn="hideDelete"><?php echo __( 'No, cancel', 'thrive-cb' ); ?></button>
+				<button class="click" data-id="<#= item.id #>" data-fn="delete">
+					<?php echo __( 'Yes, delete', 'thrive-cb' ); ?>
+				</button>
+			</div>
+		</div>
+		<div class="symbol-template-thumbnail lazy-loading">
+			<img class="tve-lazy-img"
+				 src="<?php echo tve_editor_css( 'images/loading-spinner.gif' ); ?>"
+				 data-src="<#= item.thumb && item.thumb.url ? item.thumb.url : '' #>"
+				 data-ratio="<#= item.ratio #>"/>
+		</div>
+	</div>
+</div>

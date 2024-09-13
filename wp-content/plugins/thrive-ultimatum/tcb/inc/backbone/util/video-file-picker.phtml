@@ -1,0 +1,21 @@
+<div class="">
+	<p class="m-0"><?php echo __( 'Video', 'thrive-cb' ) ?></p>
+	<#if(!this.selection||!this.selection.title){#>
+		<button class="click tve-button white mt-5 mb-5 border w-100" data-fn="open_media">
+			<#=this.labels.choose#>
+		</button>
+	<#}#>
+	<#if(this.selection&&this.selection.title){#>
+		<div class="video-picker control-grid mb-5">
+			<span class="tcb-truncate t-80"><#=this.selection.title#></span>
+			<div>
+				<a href="javascript:void(0)" class="image-edit click" data-fn="open_media" data-tooltip="<?php echo __( 'Change Thumbnail', 'thrive-cb' ) ?>">
+					<?php tcb_icon( 'exchange-regular' ) ?>
+				</a>
+				<a href="javascript:void(0)" class="click ml-10"  data-fn="remove" data-tooltip="<?php echo __( 'Remove Thumbnail', 'thrive-cb' ) ?>">
+					<?php tcb_icon( 'delete' ) ?>
+				</a>
+			</div>
+		</div>
+	<#}#>
+</div>

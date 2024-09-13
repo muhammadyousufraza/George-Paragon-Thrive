@@ -1,0 +1,29 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div class="tvd-modal-content">
+	<h3 class="tvd-modal-title"><?php echo __( 'Add new member', 'thrive-apprentice' ) ?></h3>
+
+	<div class="tvd-modal-overflow">
+		<div class="tva-flex tvd-modal-gray-box pt-30 pb-30 mb-20">
+			<div class="tvd-modal-input tva-flex tva-align-center margin-right-50">
+				<label class="margin-right-30" for="tva-customer-name"><?php echo __( 'Name', 'thrive-apprentice' ) ?></label>
+				<input id="tva-customer-name" class="input" data-fn="setField" data-field="display_name,user_login" type="text" placeholder="<?php echo __( 'Name', 'thrive-apprentice' ); ?>">
+			</div>
+			<div class="tvd-modal-input tva-flex tva-align-center">
+				<label class="margin-right-30" for="tva-customer-email"><?php echo __( 'Email' ) ?></label>
+				<input id="tva-customer-email" class="input" data-fn="setField" data-field="user_email" type="text" placeholder="<?php echo __( 'Email', 'thrive-apprentice' ) ?>">
+			</div>
+		</div>
+		<p class="tvd-modal-subtitle-text mb-10"><?php echo esc_html__( 'Give users access to the following:', 'thrive-apprentice' ); ?></p>
+		<div id="tva-add-customer-courses-list" class="tva-modal-new-box"></div>
+	</div>
+
+	<?php include dirname( dirname( __FILE__ ) ) . '/utils/customers/notify.phtml'; ?>
+	<div class="tva-flex tva-flex-row tva-flex-end">
+		<button type="button" class="click tva-modal-btn tva-modal-btn-green" data-fn="save"><?php echo __( 'Save', 'thrive-apprentice' ) ?></button>
+	</div>
+</div>

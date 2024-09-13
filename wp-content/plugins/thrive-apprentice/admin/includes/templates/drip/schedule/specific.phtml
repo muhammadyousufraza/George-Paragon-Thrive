@@ -1,0 +1,9 @@
+<# if ( ! this.options.hideLabel ) { #>
+<div class="tva-flex">
+	<?php esc_html_e( 'At what date and time? (click to change)', 'thrive-apprentice' ); ?>
+</div>
+<# } #>
+<div class="tva-schedule-specific">
+	<a href="javascript:void(0)" class="tva-drip-value tva-popup-datepicker"><#-this.model.get('datetime')#></a>
+	<div class="tva-drip-value tva-popup-timepicker"></div>
+</div>

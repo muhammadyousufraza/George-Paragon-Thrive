@@ -1,0 +1,308 @@
+.tap-step {
+  width: 510px;
+
+  .tap-step-content {
+    width: 100%;
+
+    &:hover {
+      .tap-step-actions {
+        display: flex !important;
+      }
+    }
+  }
+
+  &:first-of-type {
+    .tap-card {
+      margin-top: 18px;
+    }
+  }
+}
+
+.tap-new-step {
+  .tap-add-step {
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: var(--tap-primary);
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--tap-primary);
+      color: #fff;
+    }
+
+    .tap-icon-wrapper {
+      --tap-icon-size: 12px;
+    }
+
+    span {
+      display: none;
+    }
+
+    &.last-step {
+      width: 36px;
+      height: 36px;
+      padding: 5px;
+      background-color: var(--tap-primary);
+      color: #fff;
+      transition: all 0.05s ease-in-out;
+
+      &:hover {
+        padding: 8px 10px;
+        width: auto;
+        font-size: 14px;
+
+        .tap-icon-wrapper {
+          margin-right: 5px;
+          --tap-icon-size: 11px;
+        }
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .tap-add-step-arrow {
+    margin: -6px 0 -3px 0;
+  }
+
+  .tap-add-step-line {
+    width: 2px;
+    height: 10px;
+    background: #c0cad1;
+
+    &--arrow {
+      @extend .tap-add-step-line ;
+      height: 8.2px;
+    }
+  }
+
+  .tap-add-step-arrow {
+    .tap-icon-wrapper {
+      --tap-icon-size: 12px;
+      color: #c0cad1;
+
+    }
+  }
+}
+
+.tap-card {
+  border-radius: 4px;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 4px 9px 0 rgba(23, 28, 33, 0.1);
+  }
+
+  .tap-card-info {
+    position: absolute;
+    top: -18px;
+    left: 90px;
+    color: var(--tap-primary-light);
+    height: 18px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .tap-icon-wrapper {
+      --tap-icon-size: 12px;
+    }
+
+    &--actions {
+      @extend .tap-card-info;
+      color: var(--tap-action-color);
+    }
+  }
+
+  .tap-card-name {
+    background-color: var(--tap-primary-light);
+    color: #fff;
+    padding: 2px 15px;
+    width: 80px;
+    height: 18px;
+    border-radius: 2px 2px 0 0;
+    font-size: 12px;
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    position: absolute;
+    top: -18px;
+
+    &.tap-card-delete {
+      background-color: #e90909 !important;;
+    }
+
+    &--filters {
+      @extend .tap-card-name;
+      background-color: var(--tap-filter-color);
+    }
+
+    &--triggers {
+      @extend .tap-card-name;
+      border-radius: 2px 0 0 0;
+      cursor: pointer;
+    }
+
+    &--delay {
+      @extend .tap-card-name;
+      background-color: var(--tap-delay-color);
+    }
+
+    &--actions {
+      @extend .tap-card-name;
+      background-color: var(--tap-action-color);
+    }
+  }
+
+  .tap-card-container {
+    padding: 15px;
+    border-radius: 0 2px 2px 2px;
+    background-color: #fff;
+    position: relative;
+
+    &.tap-loader {
+      &::before {
+        background-size: auto;
+      }
+    }
+
+    .tap-container-heading {
+      width: 100%;
+      font-size: 13px;
+      color: var(--tap-text-color-sec);
+      margin-bottom: 5px;
+    }
+
+    .tap-container-message {
+      font-size: 14px;
+      color: var(--tap-text-color-sec);
+
+      .tap-preview-field {
+        margin: 5px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .tap-card-actions {
+    padding-top: 15px;
+    width: 100%;
+    border-top: solid 1px #f5f5f5;
+
+    .tap-button {
+      height: 26px;
+      width: 130px;
+      min-width: 70px;
+
+      &.tap-button--ghost {
+        padding: 10px 0;
+      }
+    }
+  }
+
+  .tap-card-saved-icon {
+    color: #434242;
+    padding: 10px 25px 15px 5px;
+    align-self: flex-start;
+
+    .tap-icon-wrapper {
+      --tap-icon-size: 30px !important;
+    }
+
+    .tap-logo-img {
+      img {
+        max-width: 30px;
+      }
+    }
+  }
+}
+
+.tap-step-actions {
+  display: none !important;
+  margin-left: auto;
+  color: var(--tap-placeholder);
+  z-index: 10;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+  .tap-vert-separator {
+    background-color: #eaefef;
+    width: 11px;
+  }
+
+  .tap-icon-trash {
+    &:hover {
+      color: var(--tap-delete) !important;
+    }
+  }
+
+  .tap-icon-wrapper {
+    cursor: pointer;
+    --tap-icon-size: 12px !important;
+    color: var(--tap-placeholder);
+    margin: 5px;
+
+    &:hover {
+      color: var(--tap-text-color-sec);
+    }
+  }
+}
+
+.tap-card-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  cursor: pointer;
+
+  &.no-pointer {
+    cursor: default;
+  }
+}
+
+.tap-step-options {
+  flex-wrap: wrap;
+  align-items: flex-start !important;
+}
+
+.tap-open-actions {
+  border-top: 1px solid rgba(192, 202, 209, 0.2);
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+.tap-view-all {
+  color: var(--tap-primary);
+  font-size: 15px;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--tap-primary-light);
+  }
+}
+
+.tap-step-preview {
+  width: 100%;
+  color: var(--tap-text-color-sec);
+
+  .tap-step-preview-data {
+    width: 100%;
+  }
+}
+
+.tap-choose-step-title {
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: var(--tap-text-color-sec);
+}

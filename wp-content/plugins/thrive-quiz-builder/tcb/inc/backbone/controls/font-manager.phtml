@@ -1,0 +1,81 @@
+<label class="block full-width">
+	<?php echo __( 'Source', 'thrive-cb' ); ?>
+	<select class="tve-font-select change" data-fn="sourceChange">
+		<# _.each(this.fonts, function(v,k) { #>
+		<option value="<#= k #>">
+			<#= v.label #>
+		</option>
+		<# }) #>
+		<option value="inherit"></option>
+	</select>
+</label>
+<div class="mt-10 info-text orange" style="display: none;">
+	<span><?php echo sprintf( __( 'You have disabled Google Fonts on your website. Click <a style="display: inline;" target="_blank" href="%s">here</a> to enable Google Fonts.', 'thrive-cb' ), add_query_arg( 'page', 'tve_dash_general_settings_section', admin_url( 'admin.php' ) ) ); ?></span>
+</div>
+
+<#_.each( this.fonts, function( v, section ) { #>
+	<# if ( section === 'google' ) { #>
+<div class="font-section" data-section="google">
+	<div class="tcb-switch">
+		<label class="control-grid pt-10">
+			<span>
+				<?php echo __( 'Show recommended fonts only', 'thrive-cb' ); ?>
+			</span>
+			<input type="checkbox" class="tve-google-font-recommeneded change tve-checkbox" data-fn="googleRecommended">
+			<span class="tcb-lever"></span>
+		</label>
+	</div>
+	<div class="control-grid">
+		<label>
+			<?php echo __( 'Font', 'thrive-cb' ); ?>
+		</label>
+		<div class="fill">
+			<input class="tve-google-font-select">
+			<select class="tve-select-google-font-select change" data-fn="googleSelectRecommended"></select>
+		</div>
+	</div>
+	<div class="control-grid">
+		<label><?php echo __( 'Regular', 'thrive-cb' ); ?></label>
+		<select class="tve-google-weigh-select change" data-fn="change" data-font="google"></select>
+	</div>
+	<div class="control-grid has-bold">
+		<label>
+			<?php echo __( 'Bold', 'thrive-cb' ); ?>
+		</label>
+		<select class="tve-google-bold-select change" data-fn="change" data-font="google"></select>
+	</div>
+	<hr>
+	<div class="has-italic">
+		<label class="tcb-checkbox">
+			<input type="checkbox" class="change tve-checkbox google-italic" data-fn="toggleItalic">
+			<span><?php echo sprintf( __( 'Also include the %sItalic%s version', 'thrive-cb' ), '<em>', '</em>' ); ?></span>
+		</label>
+		<div class="clear"></div>
+		<div class="font-if-italic pb-10">
+			<span class="info-text"><?php echo __( 'Including the Italic styles may result in slower loading', 'thrive-cb' ) ?></span>
+		</div>
+	</div>
+	<div class="control-grid pb-5">
+		<label>
+			<?php echo __( 'Charset', 'thrive-cb' ); ?>
+		</label>
+		<select class="tve-google-subsets-select change" data-fn="change" data-font="google"></select>
+	</div>
+</div>
+	<# } else { #>
+<div class="font-section" data-section="<#= section #>">
+	<label class="block full-width pt-5">
+		<?php echo __( 'Font', 'thrive-cb' ); ?>
+		<select class="font-select change" data-fn="fontChange" data-font="<#= section #>">
+			<# if ( section.includes('custom') ) { #><option selected><?php echo ''; ?></option><# } #>
+			<# _.each(this.fonts[section].fonts, function(v,k) { #>
+			<option value="<#= k #>">
+				<#= v.family #>
+			</option>
+			<# }) #>
+		</select>
+	</label>
+</div>
+	<# } #>
+<# }, this ) #>
+<div class="font-section" data-section="inherit"></div>

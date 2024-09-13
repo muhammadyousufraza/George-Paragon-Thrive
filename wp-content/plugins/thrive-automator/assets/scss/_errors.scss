@@ -1,0 +1,159 @@
+.tap-error-log {
+  width: 100%;
+  padding: 30px;
+  color: var(--tap-text-color);
+  font-size: 14px;
+  overflow: auto;
+
+  .tap-select-wrapper {
+    background-color: #fff;
+  }
+
+  .tap-input-container {
+    padding: 0;
+  }
+
+  .tap-error-header {
+    display: flex;
+    margin: 10px 0;
+    padding: 0 30px 0 20px;
+    font-size: 12px;
+    color: #626466;
+  }
+
+  .tap-error-filters {
+    display: flex;
+    margin: 25px 0;
+
+    .tap-input-container {
+      input {
+        max-width: 60px;
+      }
+    }
+
+    .tap-col {
+      &:last-of-type {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .tap-icon-wrapper {
+    --tap-icon-size: 15px;
+    color: var(--tap-placeholder);
+  }
+
+  .tap-error-sub-item {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 14px;
+
+    .tap-error-message {
+      color: var(--tap-text-color);
+    }
+
+    .tap-error-tags {
+      color: #fff;
+      margin-bottom: 10px;
+
+      .tap-error-app {
+        padding: 4px;
+        border-radius: 1px;
+        background-color: #6566a4;
+        margin-right: 10px;
+      }
+
+      .tap-error-type {
+        padding: 4px;
+        border-radius: 1px;
+        background-color: var(--tap-delete);
+
+        &.tap-error-success {
+          background-color: #43b0a7;
+        }
+      }
+    }
+  }
+
+  .tap-col {
+    align-items: flex-start;
+
+    .tap-icon-wrapper {
+      cursor: pointer;
+    }
+  }
+
+  .tap-error-item {
+    display: flex;
+    padding: 18px 30px 18px 20px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    position: relative;
+
+    .tap-inline-delete-confirmation{
+      border-radius: 4px;
+    }
+  }
+}
+
+.tap-error-modal {
+  .tap-error-content {
+    width: 100%;
+    height: 100%;
+    border: none !important;
+    box-shadow: none !important;
+    resize: none !important;
+    padding: 15px 10px;
+    color: #5b616b;
+  }
+}
+
+.tap-error-settings {
+  flex: 1;
+  font-size: 13px !important;
+  color: var(--tap-text-color);
+
+  .tap-vert-separator {
+    width: 16px;
+    background-color: var(--tap-placeholder);
+  }
+
+  .tap-button {
+    padding: 10px 0;
+  }
+
+  .tap-input-container {
+    max-width: 165px;
+  }
+}
+
+.tap-error-footer {
+  margin: 10px 0;
+
+  .tap-input-container {
+    max-width: 165px;
+  }
+}
+
+.tap-error-count {
+  color: var(--tap-text-color);
+  font-size: 14px;
+}
+
+.tap-no-logs {
+  width: 100%;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #626466;
+  height: 200px;
+
+  .tap-icon-wrapper {
+    --tap-icon-size: 45px;
+    color: #B3BBC1;
+  }
+
+  p {
+    margin: 20px 0;
+  }
+}

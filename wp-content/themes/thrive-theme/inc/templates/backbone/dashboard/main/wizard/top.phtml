@@ -1,0 +1,21 @@
+<# if ( this.model.hasActiveStep() ) { #>
+<div class="ttd-wizard-summary<# if ( this.model.hasPreviousStepLink() ) { #> with-link<# } #>">
+	<h2><#=this.model.getStepTitle() #> <span><#=this.model.getStepDescription() #></span></h2>
+	<# if ( this.model.hasPreviousStepLink() ) { #>
+	<a class="wizard-link-prev click" data-fn="previousClick" href="javascript:void(0)">
+		<?php echo Thrive_Views::svg_icon( 'chevron-left' ); ?>
+		<span class="link-text"><?php echo esc_html__( 'Previous step', 'thrive-theme' ); ?></a></span>
+	<# } #>
+	<# if (this.model.get('active') === 'homepage' && ! this.model.homepageState.isSplash() ) { #>
+	<?php include __DIR__ . '/top/homepage-type-dropdown.phtml'; ?>
+	<# } #>
+</div>
+<# } #>
+<# if ( this.model.hasTemplateSelector() ) { #>
+<div id="template-selector" class="ttd-wizard-part">
+	<?php include __DIR__ . '/top/template-selector.phtml'; ?>
+	<# if (this.model.get('active') === 'homepage' && this.model.isStepCompleted() && ! this.model.hasStepChanges()) { #>
+	<?php include __DIR__ . '/top/homepage-edit-links.phtml'; ?>
+	<# } #>
+</div>
+<# } #>

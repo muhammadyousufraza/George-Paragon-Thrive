@@ -1,0 +1,67 @@
+.thrv-page-section {
+  .tve-page-section-out {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    /*This is placed for SVG decoration not to produce the scroll bar "effect" when the height of the decoration is max
+    and the decoration should not exit the page-section-out div when the width is over 100%*/
+    overflow: hidden;
+  }
+
+  .tve-page-section-in {
+    box-sizing: border-box;
+
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+
+    &.tve-section-full-height {
+      min-height: 100vh;
+    }
+  }
+
+  &.tcb-window-width {
+    .tve-page-section-in {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &.on_hover:not(.edit_mode) {
+    .tve-bg-section-drag-down {
+      display: block;
+    }
+  }
+}
+
+.tve-page-section-in {
+  > .thrv_wrapper:first-child, > .tcb-clear:first-child > .thrv_wrapper {
+    margin-top: 0;
+  }
+
+  > .thrv_wrapper:last-child, > .tcb-clear:last-child > .thrv_wrapper {
+    margin-bottom: 0;
+  }
+
+  .tve_symbol_inside & {
+    position: static;
+  }
+}
+
+/* the '!important' club */
+:not(#s) {
+  .thrv-page-section {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
+
+    .tve-page-section-in > * {
+      margin: 0 auto;
+    }
+  }
+}

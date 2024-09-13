@@ -1,0 +1,18 @@
+<select class="fr-input-line" id="fr-dropdown-shortcode-list">
+	<option value="" disabled selected hidden><?php echo __( 'Select an option', 'thrive-cb' ); ?></option>
+	<# _.each(shortcodes, shortcode => { #>
+
+	<optgroup  label="<#= shortcode.option #>">
+		<# _.each(shortcode.input, function(input, key) { #>
+		<# _.each(input.value, function(option, option_key) { #>
+		<option  data-name="<#= shortcode.option #>" data-field-value="<#= option_key #>"
+		         data-extra-key="<#= shortcode.extra_param ? shortcode.extra_param : '' #>" value="<#= shortcode.value #>" <#= input.value_type? 'data-type="'+input.value_type[option_key]+'"':'' #>>
+		<#= input.labels && input.labels[ option ] ? input.labels[ option ] : option #>
+		</option>
+		<# }); #>
+		<# }); #>
+	</optgroup>
+	<# }); #>
+</select>
+
+

@@ -1,0 +1,22 @@
+<div class="tcb-modal-tabs step-two mt-0 mb-20">
+	<span class="tcb-modal-title m-0"><?php echo __( 'Create a new ', 'thrive-cb' ) ?><#= type #></span>
+</div>
+
+<div class="error-container"></div>
+
+<div class="tcb-modal-tab-container step-two">
+	<div class="mt-20">
+		<div class="tcb-hf-create-title">
+			<span>
+				<?php echo __( 'Give a name to your ', 'thrive-cb' ) ?><#= type #>:
+			</span>
+			<input type="text" id="item-title" name="item-title" class="item-title" placeholder="Your New <#= type.charAt(0).toUpperCase() + type.slice(1) #>'s Name">
+		</div>
+		<div class="item-create"></div>
+	</div>
+</div>
+
+<div class="tcb-modal-footer">
+	<button type="button" class="tcb-hf-back"><?php echo __( 'Back', 'thrive-cb' ) ?></button>
+	<button type="button" class="tcb-hf-right tve-button white-text green"><?php echo __( 'Add New ', 'thrive-cb' ) ?><#= type #></button>
+</div>

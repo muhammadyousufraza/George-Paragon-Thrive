@@ -1,0 +1,84 @@
+<?php
+/**
+ * This is for not to repeat this loooong code inside the template file
+ */
+$svg_icon_check = '<svg class="tcb-icon" viewBox="0 0 32 32" data-name="check"><path d="M29.333 10.267c0 0.4-0.133 0.8-0.533 1.2l-14.8 14.8c-0.267 0.267-0.667 0.4-1.067 0.4s-0.933-0.133-1.2-0.533l-2.4-2.267-6.267-6.267c-0.267-0.267-0.4-0.667-0.4-1.2s0.133-0.8 0.533-1.2l2.4-2.4c0.267-0.133 0.667-0.4 1.067-0.4s0.8 0.133 1.2 0.533l5.067 5.067 11.2-11.333c0.267-0.267 0.667-0.533 1.2-0.533 0.4 0 0.8 0.133 1.2 0.533l2.4 2.4c0.267 0.267 0.4 0.667 0.4 1.2z"></path></svg>';
+?>
+
+<div class="tcb-flex-col" data-label="">
+	<div class="tcb-col">
+		<div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tcb-pt-cb-wrapper">
+			<div class="tve-content-box-background tcb-pt-card" data-css="<#= content_box_background_data_css #>"></div>
+			<div class="tve-cb tcb-pt-card-content" data-css="<#= content_box_data_css #>">
+				<div class="thrv_wrapper thrv_heading" data-tag="h5">
+					<h5 class="tcb-pt-card-title"><?php echo __( 'New Item', 'thrive-cb' ) ?></h5>
+				</div>
+				<div class="thrv_wrapper thrv_text_element tcb-pt-card-description">
+					<p>
+						<em><?php echo __( 'Add its description', 'thrive-cb' ) ?></em>
+					</p>
+				</div>
+				<div class="tcb-pt-wrapper">
+					<div class="thrv_wrapper thrv_text_element tcb-pt-price tcb-pt-currency">
+						<p><?php echo __( '$', 'thrive-cb' ) ?></p>
+					</div>
+					<div class="thrv_wrapper thrv_text_element tcb-pt-price tcb-pt-value">
+						<p><?php echo __( '99.99', 'thrive-cb' ) ?></p>
+					</div>
+					<div class="thrv_wrapper thrv_text_element tcb-pt-price tcb-pt-period">
+						<p><?php echo __( '/mo', 'thrive-cb' ) ?></p>
+					</div>
+				</div>
+				<div class="thrv_wrapper thrv-styled_list" data-icon-code="icon-check">
+					<ul class="tcb-styled-list">
+						<li class="thrv-styled-list-item">
+							<div class="tcb-styled-list-icon">
+								<div class="thrv_wrapper thrv_icon tve_no_drag tcb-no-delete tcb-no-clone tcb-no-save tcb-icon-inherit-style">
+									<?php echo $svg_icon_check; ?>
+								</div>
+							</div>
+							<span class="thrv-advanced-inline-text tve_editable tcb-styled-list-icon-text tcb-no-delete tcb-no-save"><?php echo __( 'List item', 'thrive-cb' ) ?></span>
+						</li>
+						<li class="thrv-styled-list-item">
+							<div class="tcb-styled-list-icon">
+								<div class="thrv_wrapper thrv_icon tve_no_drag tcb-no-delete tcb-no-clone tcb-no-save tcb-icon-inherit-style">
+									<?php echo $svg_icon_check; ?>
+								</div>
+							</div>
+							<span class="thrv-advanced-inline-text tve_editable tcb-styled-list-icon-text tcb-no-delete tcb-no-save"><?php echo __( 'List item', 'thrive-cb' ) ?></span>
+						</li>
+						<li class="thrv-styled-list-item">
+							<div class="tcb-styled-list-icon">
+								<div class="thrv_wrapper thrv_icon tve_no_drag tcb-no-delete tcb-no-clone tcb-no-save tcb-icon-inherit-style">
+									<?php echo $svg_icon_check; ?>
+								</div>
+							</div>
+							<span class="thrv-advanced-inline-text tve_editable tcb-styled-list-icon-text tcb-no-delete tcb-no-save"><?php echo __( 'List item', 'thrive-cb' ) ?></span>
+						</li>
+						<li class="thrv-styled-list-item">
+							<div class="tcb-styled-list-icon">
+								<div class="thrv_wrapper thrv_icon tve_no_drag tcb-no-delete tcb-no-clone tcb-no-save tcb-icon-inherit-style">
+									<?php echo $svg_icon_check; ?>
+								</div>
+							</div>
+							<span class="thrv-advanced-inline-text tve_editable tcb-styled-list-icon-text tcb-no-delete tcb-no-save"><?php echo __( 'List item', 'thrive-cb' ) ?></span>
+						</li>
+						<li class="thrv-styled-list-item">
+							<div class="tcb-styled-list-icon">
+								<div class="thrv_wrapper thrv_icon tve_no_drag tcb-no-delete tcb-no-clone tcb-no-save tcb-icon-inherit-style">
+									<?php echo $svg_icon_check; ?>
+								</div>
+							</div>
+							<span class="thrv-advanced-inline-text tve_editable tcb-styled-list-icon-text tcb-no-delete tcb-no-save"><?php echo __( 'List item', 'thrive-cb' ) ?></span>
+						</li>
+					</ul>
+				</div>
+				<div class="thrv_wrapper thrv-button tcb-pt-button" data-css="<#= btn_data_css #>">
+					<a href="#" class="tcb-button-link tcb-pt-button-link">
+						<span class="tcb-button-texts"><span class="tcb-button-text thrv-inline-text"><?php echo __( 'Button text', 'thrive-cb' ) ?></span></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

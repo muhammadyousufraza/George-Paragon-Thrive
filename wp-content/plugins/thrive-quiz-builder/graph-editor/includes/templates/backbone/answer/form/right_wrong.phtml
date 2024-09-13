@@ -1,0 +1,5 @@
+<p>
+	<input id="tge-qf-is-right-<#= item.cid #>" name="is_right" type="checkbox" data-bind="is_right" value="1"
+	<#= item.get('is_right') == '1' ? 'checked' : '' #>>
+		<label for="tge-qf-is-right-<#= item.cid #>"><?php echo __( 'Correct answer', 'thrive-graph-editor' ) ?></label>
+</p>

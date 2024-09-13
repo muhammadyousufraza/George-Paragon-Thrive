@@ -1,0 +1,13 @@
+<h3>
+	<#= model.get('name') #>
+	<span>
+		( <#= model.get('description') #> )
+	</span>
+</h3>
+
+<span class="tpm-product-status tpm-<#= model.get('status') #>">
+	<#= typeof model.get_status === 'function' ? model.get_status() : model.get('status') #>
+</span>
+
+<div class="tpm-status-extra tpm-<#= model.get('status') #>"><#= model.get('extra') #></div>
+

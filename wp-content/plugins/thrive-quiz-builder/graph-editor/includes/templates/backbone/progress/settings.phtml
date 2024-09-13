@@ -1,0 +1,32 @@
+<div class="tqb-qs-header">
+	<h3>
+		<?php echo __( 'Quiz Settings', 'thrive-graph-editor' ) ?>
+	</h3>
+
+	<a href="javascript:void(0)" class="tqb-hide-progress-settings">
+		<i class="tvd-icon-close2"></i>
+	</a>
+</div>
+
+<div class="tqb-progress-holder">
+	<span class="tqb-pb-label">
+		<?php echo __( 'Progress bar', 'thrive-graph-editor' ) ?>
+	</span>
+	<div class="tqb-progress-display">
+		<span class="display-option <#= parseInt( model.get( 'display_progress' ) ) !== 1 ? '' : 'tqb-hide' #>">
+			<?php tqb_get_svg_icon( 'eye-dont' ); ?>
+			<?php echo __( 'Don\'t display', 'thrive-graph-editor' ) ?>
+		</span>
+
+		<span class="display-option display-option-ext <#= parseInt( model.get( 'display_progress' ) ) === 1 ? '' : 'tqb-hide' #>">
+			<?php tqb_get_svg_icon( 'eye-do' ); ?>
+			<?php echo __( 'Display', 'thrive-graph-editor' ) ?>
+		</span>
+
+		<a href="javascript:void(0)" class="tqb-open-progress-settings">
+			<?php tqb_get_svg_icon( 'arr-right' ); ?>
+		</a>
+	</div>
+</div>
+
+<div class="tqb-scroll-settings"></div>

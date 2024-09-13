@@ -1,0 +1,129 @@
+#tvu-logo {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.wp-block[data-type="thrive/ultimatum-block"] {
+  min-width: 400px;
+}
+
+.tvu-block-preview {
+  width: 100%;
+}
+
+.tvu-new-block-container {
+  border: 15px solid #fff;
+  outline: solid 1px #ebebeb;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-family: Roboto, sans-serif;
+  font-size: 16px !important;
+  color: #565a5f !important;
+  letter-spacing: -0.12px;
+
+  .tvu-block-title h2 {
+    font-size: 24px !important;
+    color: #171b1b !important;
+  }
+
+  .tvu-new-block-description {
+    margin: 20px auto;
+  }
+
+  .tvu-block-content {
+    width: 100%;
+    border-radius: 3px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .tvu-go-dash {
+    margin-top: 10px;
+    font-size: 13px !important;
+
+    a {
+      font-size: 13px !important;
+      text-decoration: underline !important;
+      box-shadow: none !important;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  * {
+    font-family: Roboto, sans-serif;
+    font-size: 16px !important;
+    color: #565a5f !important;
+  }
+
+  .tvu-block-select-wrapper {
+    select {
+      padding: 5px 0 5px 15px !important;
+    }
+
+    svg {
+      margin-right: 5px;
+    }
+  }
+}
+
+.tvu-sidebar-edit-button {
+  padding: 12px 24px 11px;
+  border-radius: 2px;
+  border: solid 1px #007cba;
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+  text-align: center;
+  color: #007cba !important;
+  background: #fff;
+  text-decoration: none !important;
+  margin-bottom: 10px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.tvu-block-select-wrapper {
+  margin-bottom: 20px;
+  max-width: fit-content;
+
+
+  &:first-of-type {
+    margin-top: 20px;
+  }
+
+  * {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  select {
+    width: 300px !important;
+    border-radius: 5px !important;
+    border: solid 1px #6a6a6a !important;
+    background-color: #fff;
+    height: 50px !important;
+    padding: 5px;
+  }
+
+  .components-panel__row & {
+    margin: 0 !important;
+
+    select {
+      margin-top: 5px;
+      width: 100% !important;
+      height: 40px !important;
+    }
+  }
+}

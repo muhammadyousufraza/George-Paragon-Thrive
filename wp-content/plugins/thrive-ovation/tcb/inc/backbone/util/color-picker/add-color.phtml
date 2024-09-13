@@ -1,0 +1,19 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Ovidiu
+ * Date: 8/22/2018
+ * Time: 1:56 PM
+ */
+?>
+<div id="active_color_details">
+	<div class="control-grid">
+		<div class="tcb-global-color-preview"></div>
+		<div class="tcb-edit-color-btn click" data-fn="add_global" data-tooltip="<#= global_tip #>">
+			<?php tcb_icon( 'globe-regular' ); ?> <?php echo __( 'Global', 'thrive-cb' ); ?>
+		</div>
+		<div class="tcb-edit-color-btn click" data-fn="add_favorite" data-tooltip="<#= favorite_tip #>">
+			<?php tcb_icon( 'star-solid' ); ?> <?php echo __( 'Favorite', 'thrive-cb' ); ?>
+		</div>
+	</div>
+</div>

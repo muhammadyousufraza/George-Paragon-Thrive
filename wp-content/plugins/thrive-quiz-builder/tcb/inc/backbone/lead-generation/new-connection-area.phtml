@@ -1,0 +1,23 @@
+<div class="tve-api-select">
+	<div class="label">
+		<?php echo __( 'Connection', 'thrive-cb' ) ?>
+	</div>
+	<div class="tcb-relative">
+		<select id="lg-api-select" class="change" data-fn="selectApiConnection"></select>
+		<span class="lg-api-select-arrow select2-arrow"><?php tcb_icon('a_down'); ?></span>
+	</div>
+	<a class="click blue-text tcb-text-right mb-10" onclick="window.open('<?php echo admin_url( 'admin.php?page=tve_dash_api_connect#tve_new_api' ); ?>//','_blank')" target="_blank" rel="nofollow">
+		<?php echo __( 'Go to the API Dashboard', 'thrive-cb' ) ?>
+	</a>
+</div>
+<div class="tve-no-apis info-text grey-text tcb-hidden">
+	<span class="strong">
+		<?php echo __( 'No API Connections found', 'thrive-cb' ); ?>
+	</span>
+	<span><?php echo __( 'Add a new API connection through the ', 'thrive-cb' ); ?><a class="click blue" onclick="window.open('<?php echo admin_url( "admin.php?page=tve_dash_api_connect#tve_new_api" ) ?>','_blank')" target="_blank" rel="nofollow"><?php echo __( 'API Dashboard', 'thrive-cb' ) ?></a></span>
+</div>
+<div class="tve-lg-no-list pb-10 tcb-hidden">
+	<span class="info-text orange grey-text"><?php echo __( 'No lists available. Add a new API from API\'s dashboard or choose another API connection.', 'thrive-cb' ) ?></span>
+</div>
+<div class="connection-setup"></div>
+<div class="top-arrow"></div>

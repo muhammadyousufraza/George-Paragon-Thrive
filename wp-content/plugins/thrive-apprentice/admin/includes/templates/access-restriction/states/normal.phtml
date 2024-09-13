@@ -1,0 +1,41 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-university
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div class="tva-create-state">
+
+	<p class="mb-10 tva-page-label mt-0"><#= labels.title #></p>
+
+	<div class="tva-login-page">
+		<span class="tva-login-name"><#= model.get( 'title' ) #></span>
+		<div class="align">
+			<a class="tva-page-option tva-view-page" href="<#- model.get( 'preview_url' ) #>" target="_blank">
+				<?php tva_get_svg_icon( 'eye_light' ); ?>
+				<?php echo __( 'View', 'thrive-apprentice' ) ?>
+			</a>
+			<# if( settings.edit_with_tar ) { #>
+			<a class="tva-page-option tva-edit-page-with-tar" href="<#- model.get( 'edit_url' ) #>" target="_blank">
+				<?php tva_get_svg_icon( 'tar-icon' ); ?>
+				<#- TVA.t.settings_tab.login_page.edit_post #>
+			</a>
+			<# } else if ( model.get( 'category' ) !== 'custom_link' ) { #>
+			<a class="tva-page-option tva-edit-page-wp" href="<#- model.get( 'edit_with_wp' ) #>" target="_blank">
+				<?php tva_get_svg_icon( 'edit-summary' ); ?>
+				<?php echo __( 'Edit', 'thrive-apprentice' ) ?>
+			</a>
+			<# } #>
+			<a class="tva-page-option click" href="javascript:void(0)" data-fn="removePage">
+				<?php tva_get_svg_icon( 'file-times_light' ); ?>
+				<?php echo __( 'Remove page', 'thrive-apprentice' ) ?>
+			</a>
+		</div>
+	</div>
+</div>

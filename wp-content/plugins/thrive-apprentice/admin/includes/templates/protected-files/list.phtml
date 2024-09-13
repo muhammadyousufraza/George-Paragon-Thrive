@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-flex tva-page-white-header">
+	<div class="tva-boxed-container">
+		<div class="tva-flex tva-space-between tva-align-center">
+			<div>
+				<div>
+					<h1 class="tva-main-heading"><?php echo __( 'Protected files', 'thrive-apprentice' ) ?></h1>
+				</div>
+				<div class="tva-flex mt-10 mb-10">
+					<p class="settings-p-main m-0 p-0">
+						<?php echo __( 'Securely protect files from download.', 'thrive-apprentice' ) ?>
+					</p>
+					<span>&nbsp;</span>
+					<span style="color:#2b43c5;"><?php tva_get_svg_icon( 'info-solid' ); ?></span>
+					<span>&nbsp;</span>
+					<p class="settings-p-main m-0 p-0">
+						<?php echo __( 'Protected files are only accessible through products or when added as resources in lessons.', 'thrive-apprentice' ) ?>
+					</p>
+				</div>
+			</div>
+			<div>
+				<button class="tva-empty-btn tva-empty-btn-blue click pl-20 pr-20 tva-flex tva-align-center" data-fn="openHelpLightbox"><span><?php echo __( 'Help', 'thrive-apprentice' ) ?></span><?php tva_get_svg_icon( 'question' ); ?></button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="tva-flex mt-20">
+	<div class="tva-boxed-container">
+		<div class="tva-flex tva-protected-files-notice mb-20"></div>
+		<div class="tva-flex tva-space-between mb-20">
+			<div class="tva-flex tva-flex-row tva-protected-files-filters"></div>
+			<div>
+				<button class="tva-btn tva-btn-blue click" data-fn="addFile">
+					<?php tva_get_svg_icon( 'add-btn' ); ?>
+					<?php echo __( 'Add file', 'thrive-apprentice' ) ?>
+				</button>
+			</div>
+		</div>
+		<div class="tva-flex tva-protected-files-auxiliary-upload-control mb-20"></div>
+		<div class="tva-flex tva-flex-column tva-protected-files-list"></div>
+		<div class="tva-flex tva-pagination tva-protected-files-pagination mt-10"></div>
+		<div class="tva-flex tva-protected-files-no-results mt-10" style="display: none;">
+			<?php include TVA_Const::plugin_path( 'admin/includes/templates/pagination-no-results.phtml' ); ?>
+		</div>
+	</div>
+</div>

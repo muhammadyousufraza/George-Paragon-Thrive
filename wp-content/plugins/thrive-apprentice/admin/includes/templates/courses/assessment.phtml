@@ -1,0 +1,122 @@
+<div class="tva_lesson-status <#= model.get('post_status') #>">&nbsp;</div>
+<div class="tva-drag-handle tvd-tooltipped" data-position="left" data-tooltip="<?php echo __( 'Change the assessment order', 'thrive-apprentice' ); ?>">
+	<?php tva_get_svg_icon( 'dnd' ); ?>
+</div>
+<div class="tva_lesson-left">
+	<div class="tva_lesson-checkbox"><input type="checkbox" class="tva-section-select" data-level="lesson" data-item-id="<#= model.get('ID') #>"></div>
+	<div class="tva-title-holder">
+		<div class="tva-items-tab-title tva-edit-title click" data-fn="editItemTitle">
+			<#= model.get('post_title') #>
+			<?php tva_get_svg_icon( 'pen_light' ); ?>
+		</div>
+	</div>
+	<div class="tva-lesson-meta">
+		<div class="tva_lesson-type tva_assessment-type">
+			<?php tva_get_svg_icon( 'icon-assessments' ); ?>
+			<#= TVA.assessmentTypes[model.get('assessment_type')] #> <?php echo __( 'assessment', 'thrive-apprentice' ); ?>
+		</div>
+		<div class="tva-resource-count"><#= model.formatResourceCount( '&bull;&nbsp;' ) #></div>
+		<div class="tva-freemium-type tva-bull"><#= this.getFreemiumLabel() #></div>
+		<div>&nbsp;&bull;&nbsp;</div>
+		<div class="tva-copy-id click" data-fn="copyID">ID: <#= model.get( 'ID' ) #> <?php tva_get_svg_icon( 'copy_light' ); ?></div>
+		<# if (model.get('post_status') === 'future') { #>
+		<div class="tva-schedule-date ml-5">
+			&bull;&nbsp;
+			<?php echo tva_get_svg_icon( 'schedule' ); ?>&nbsp;
+			<span><#- TVA.Utils.dateFormat(model.get('publish_date')) #></span>
+		</div>
+		<# } #>
+	</div>
+</div>
+<div class="tva_lesson-right">
+	<a class="tva_lesson-main mr-30" href="<#= model.get('preview_url') #>" target="_blank" rel="noopener">
+		<?php tva_get_svg_icon( 'icon-eye' ); ?>
+		<?php echo esc_html__( 'Preview', 'thrive-apprentice' ) ?>
+	</a>
+
+	<div class="tva-options-drop mr-30">
+		<a class="tva_lesson-main" href="javascript:void(0)">
+			<?php tva_get_svg_icon( 'pen_light' ); ?>
+			<?php echo __( 'Edit', 'thrive-apprentice' ); ?>
+		</a>
+		<?php tva_get_svg_icon( 'angle-down' ); ?>
+		<ul class="tva-options-drop-ul tva-drop-wider">
+			<li>
+				<a class="tva_lesson-content" href="<#= model.get('tcb_edit_url') #>" target="_blank" rel="noopener">
+					<?php tva_get_svg_icon( 'tar-icon' ); ?>
+					<#= model.get('has_tcb_content') ?
+					'<?php echo __( 'Edit content', 'thrive-apprentice' ); ?>' :
+					'<?php echo __( 'Add content', 'thrive-apprentice' ); ?>' #>
+				</a>
+			</li>
+			<li>
+				<a class="tva_lesson-summary click" data-fn="openAddItemModal" data-type="assessment" data-id="<#= model.get('id') #>" data-post-parent="<#= model.get('post_parent') #>" href="javascript:void(0)">
+					<?php tva_get_svg_icon( 'edit-summary' ); ?>
+					<?php echo esc_html__( 'Edit details', 'thrive-apprentice' ) ?>
+				</a>
+			</li>
+			<li class="w-separator">
+				<a class="click" data-fn="duplicateItem" data-id="<#= model.get('id') #>" href="javascript:void(0)">
+					<?php echo tva_get_svg_icon( 'duplicate' ); ?>
+					<?php echo esc_html__( 'Duplicate', 'thrive-apprentice' ) ?>
+				</a>
+			</li>
+			<li>
+				<a class="tva_lesson-delete click" data-fn="deleteItem" data-id="<#= model.get('id') #>" href="javascript:void(0)">
+					<?php echo tva_get_svg_icon( 'trash-1' ); ?>
+					<?php echo esc_html__( 'Delete', 'thrive-apprentice' ) ?>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="tva-options-drop mr-30">
+
+		<# if(model.get('post_status') === 'publish') { #>
+		<a class="tva_lesson-main click" href="javascript:void(0)" data-fn="updateItemStatus" data-status="draft" data-id="<#= model.get('id') #>">
+			<?php tva_get_svg_icon( 'unpublish' ); ?>
+			<?php echo __( 'Unpublish', 'thrive-apprentice' ); ?>
+		</a>
+		<# } else if (model.get('post_status') === 'future') { #>
+		<a class="tva_lesson-main tva_lesson-scheduled" href="javascript:void(0)">
+			<?php echo tva_get_svg_icon( 'schedule' ); ?>
+			<?php echo __( 'Scheduled', 'thrive-apprentice' ); ?>
+		</a>
+		<?php tva_get_svg_icon( 'angle-down' ); ?>
+		<ul class="tva-options-drop-ul">
+			<li>
+				<a class="click" data-fn="updateItemStatus" data-status="publish" data-id="<#= model.get('id') #>">
+					<?php echo tva_get_svg_icon( 'immediately' ); ?>
+					<?php echo __( 'Publish', 'thrive-apprentice' ) ?>
+				</a>
+			</li>
+			<li>
+				<a class="click" data-fn="updateItemStatus" data-status="future" data-id="<#= model.get('id') #>">
+					<?php echo tva_get_svg_icon( 'reschedule' ); ?>
+					<?php echo __( 'Reschedule', 'thrive-apprentice' ) ?>
+				</a>
+			</li>
+			<li>
+				<a class="click" data-fn="updateItemStatus" data-status="draft" data-id="<#= model.get('id') #>">
+					<?php tva_get_svg_icon( 'unpublish' ); ?>
+					<?php echo __( 'Unschedule', 'thrive-apprentice' ); ?>
+				</a>
+			</li>
+		</ul>
+		<# } else { #>
+		<a class="click tva_lesson-main" href="javascript:void(0)" data-fn="updateItemStatus" data-status="publish" data-id="<#= model.get('id') #>">
+			<?php echo tva_get_svg_icon( 'publish' ); ?>
+			<?php echo __( 'Publish', 'thrive-apprentice' ); ?>
+		</a>
+		<?php tva_get_svg_icon( 'angle-down' ); ?>
+		<ul class="tva-options-drop-ul">
+			<li>
+				<a class="click" data-fn="updateItemStatus" data-status="future" data-id="<#= model.get('id') #>">
+					<?php echo tva_get_svg_icon( 'schedule' ); ?>
+					<?php echo __( 'Schedule', 'thrive-apprentice' ) ?>
+				</a>
+			</li>
+		</ul>
+		<# } #>
+	</div>
+</div>

@@ -1,0 +1,38 @@
+<div class="tva-submission-data"></div>
+<div class="tva-current-submission">
+	<div class="tva-flex tva-space-between tva-align-center mb-15 tva-submission-header tva-submission-status-wrapper">
+		<span class="tva-assessment-submitted"><?php echo __( 'Submitted:', 'thrive-apprentice' ); ?> <span class="tva-date"></span></span>
+		<div class="tva-assessment-status"></div>
+	</div>
+	<div class="tva-assessment-submission"></div>
+	<div class="tva-assessment-grading-summary mt-20">
+		<div class="tva-flex tva-align-center tva-submission-status-wrapper">
+			<?php _e( 'Grade', 'thrive-apprentice' ) ?>:
+			<div class="tva-assessment-gs-grade"></div>
+			<div class="tva-assessment-status"></div>
+		</div>
+		<div class="tva-assessment-gs-470">
+			<?php _e( 'Feedback', 'thrive-apprentice' ) ?>:
+			<div class="tva-assessment-gs-feedback"></div>
+		</div>
+		<span class="tva-assessment-grade-button click" data-fn="toggleGrading">
+			<?php esc_html_e( 'Review Details', 'thrive-apprentice' ) ?>
+			<?php tva_get_svg_icon( 'angle-right', 'ml-20' ); ?>
+		</span>
+	</div>
+	<div id="tva-assessment-open-grading" class="tva-assessment-grade-button click" data-fn="toggleGrading">
+		<?php esc_html_e( 'Grade this assessment', 'thrive-apprentice' ) ?>
+		<?php tva_get_svg_icon( 'angle-right', 'ml-5' ); ?>
+	</div>
+
+	<div class="tva-ag-close click tva-hide" data-fn="toggleGrading"><span><?php tva_get_svg_icon( 'cross' ); ?></span></div>
+
+	<div class="tva-assessment-grade tva-hide mt-20">
+		<textarea class="tva-assessment-notes" placeholder="<?php echo __( 'Write any feedback here', 'thrive-apprentice' ); ?>"></textarea>
+		<div class="tva-assessment-grade-input"></div>
+	</div>
+</div>
+<div class="tva-assessment-history-section tva-hide">
+	<h5><?php echo __( 'History', 'thrive-apprentice' ); ?></h5>
+	<div class="tva-assessment-history-list"></div>
+</div>

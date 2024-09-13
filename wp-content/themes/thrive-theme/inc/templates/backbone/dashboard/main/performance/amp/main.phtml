@@ -1,0 +1,95 @@
+<div class="ttd-amp-settings-container ttd-performance-page">
+	<h1 class="ttd-page-title"><?php echo esc_html__( 'Accelerated Mobile Pages ( AMP )', 'thrive-theme' ); ?></h1>
+	<span class="badge-recommend ml-20"><?php echo esc_html__( 'Beta', 'thrive-theme' ); ?></span>
+
+	<div class="ttd-performance-card info ttd-d-flex">
+		<#= TTD.utils.icon( 'performance-amp' ) #>
+
+		<div class="ttd-performance-text ml-40">
+			<p class="m-0"><?php echo esc_html__( "AMP is a technology that's been created to help sites load blazingly fast on mobile devices", 'thrive-theme' ); ?></p>
+			<p class="mt-25 mb-0"><?php echo esc_html__( "By enabling AMP support, visitors to your site will see a 'cached' version of your content loaded directly from Google's servers...", 'thrive-theme' ); ?></p>
+			<p class="m-0">
+				<button class="click ttd-amp-wistia-embed tvd-open-video popover=true popoverContent=html" data-source="hLBId6dIrZU">
+					<?php echo esc_html__( 'Click here to learn more about AMP', 'thrive-theme' ); ?>
+				</button>
+			</p>
+		</div>
+	</div>
+
+	<div class="ttd-performance-card mt-80 mb-10 compact ttd-amp-enable">
+		<img src="<?php echo THEME_URL . '/inc/assets/images/performance/amp.jpg'; ?>" alt="AMP Icon">
+
+		<label class="slide-checkbox">
+			<span class="checkbox-label"><#= this.getLabelText() #> <?php echo esc_html__( 'AMP', 'thrive-theme' ); ?></span>
+			<input type="checkbox" name="amp_enable" value="1" class="blue click" data-fn="enable" <# if ( this.settings.get('enabled') ) { #>checked<# } #>>
+			<span class="lever"></span>
+		</label>
+	</div>
+
+	<div class="ttd-performance-card mt-10 ttd-amp-intro">
+		<img src="<?php echo THEME_URL . '/inc/assets/images/performance/amp-intro-icon.png'; ?>" alt="AMP intro icon">
+
+		<div class="ttd-amp-intro-block">
+			<p class="m-0"><?php echo esc_html__( 'Get up and running with AMP in a Flash.', 'thrive-theme' ); ?></p>
+
+			<p class="mt-25">
+				<?php $link_html = '<a href="https://thrivethemes.com/tkb_item/amp-quick-start-guide/" target="_blank">' . esc_html__( 'AMP quick start guide', 'thrive-theme' ) . '</a>'; ?>
+
+				<?php
+				echo sprintf(
+					esc_html__( "If you're unsure what AMP is, how it works and what you need to do to enable it on your site, then follow our %s", 'thrive-theme' ),
+					$link_html );
+				?>
+			</p>
+		</div>
+	</div>
+
+	<div class="ttd-performance-card mt-10 pt-50 mb-50 ttd-amp-settings">
+		<div class="ttd-amp-post-types">
+			<div class="amp-posts">
+				<p class="m-0"><?php echo esc_html__( 'Enable AMP on the following post types', 'thrive-theme' ); ?></p>
+				<# _.each( this.post_types, ( label, type ) => { #>
+				<label class="amp-post-type mr-60 mt-20">
+					<input type="checkbox" name="amp_post" value="1" class="blue small click" data-fn="enablePostType" data-type="<#= type #>" <# if (
+					this.settings.postTypeEnabled( type ) ) { #>checked<# } #>>
+					<#= label #>
+				</label>
+				<# } ) #>
+			</div>
+		</div>
+
+		<hr class="mt-20 mb-20">
+
+		<div class="ttd-amp-settings-list">
+			<div class="ttd-amp-settings-row">
+				<label class="slide-checkbox ttd-amp-setting-sub-row">
+					<span class="checkbox-label"><?php echo esc_html__( 'Convert all internal links to point to AMP URLs', 'thrive-theme' ); ?></span>
+					<input type="checkbox" name="internal-links-toggle" value="1" class="blue click" data-fn="toggleInternalLinking" <# if ( this.settings.get('internal_linking') ) { #>checked<# } #>>
+					<span class="lever"></span>
+				</label>
+			</div>
+
+			<hr class="mt-20 mb-20">
+
+			<div class="ttd-amp-settings-row">
+				<label class="slide-checkbox ttd-amp-setting-sub-row">
+					<span class="checkbox-label"><?php echo esc_html__( 'Install Google Analytics on AMP content', 'thrive-theme' ); ?></span>
+					<input type="checkbox" name="google-analytics-toggle" value="1" class="blue click" data-fn="toggleAnalyticsListener" <# if ( this.settings.get('analytics_enabled') ) { #>checked<# } #>>
+					<span class="lever"></span>
+				</label>
+			</div>
+		</div>
+
+		<div class="ttd-amp-analytics mt-40">
+			<p class="mt-0 mb-10"><?php echo esc_html__( 'For Google Analytics on AMP see', 'thrive-theme' ); ?>&nbsp;
+				<a href="https://developers.google.com/analytics/devguides/collection/amp-analytics" target="_blank"><?php echo esc_html__( 'adding Analytics to your AMP pages', 'thrive-theme' ); ?></a>
+			</p>
+			<textarea class="amp-analytics" name="amp-analytics" placeholder="<?php echo esc_html__( 'Paste your Google Analytics code here', 'thrive-theme' ); ?>"><#= this.settings.get( 'analytics' ) #></textarea>
+
+			<div class="amp-r-elems">
+				<button class="ttd-btn blue fill click btn-save" data-fn="analytics"><?php echo esc_html__( 'Save', 'thrive-theme' ); ?></button>
+				<span style="display:none;" class="configured-state"><?php echo esc_html__( 'Saved', 'thrive-theme' ); ?><?php Thrive_Views::svg_icon( 'check_light' ); ?></span>
+			</div>
+		</div>
+	</div>
+</div>

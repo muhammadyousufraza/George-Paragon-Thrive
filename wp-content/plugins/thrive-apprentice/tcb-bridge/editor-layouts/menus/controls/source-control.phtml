@@ -1,0 +1,17 @@
+<div class="tve-link-options flex space-between wrap">
+	<span class="label"><#= this.model.config.label #></span>
+	<div class="tve-link-tabs"></div>
+	<div class="tve-link-boxes tva-resources-panel">
+		<div data-tab="link" style="display: none;">
+			<select class="tva-resource-courses change" data-fn="selectCourse">
+				<option class="tva-option-placeholder" value="" disabled selected><?php echo esc_html__( 'Please select a course', 'thrive-apprentice' ); ?></option>
+			</select>
+			<select class="tva-resource-lessons change" data-fn="selectLesson">
+				<option class="tva-option-placeholder" value="" disabled selected><?php echo esc_html__( 'Please select a lesson', 'thrive-apprentice' ); ?></option>
+			</select>
+		</div>
+		<div data-tab="dynamic" style="display: none">
+			<p class="tcb-preview-list tva-blue"><?php echo esc_html__( 'Auto detect current lesson', 'thrive-apprentice' ); ?></p>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+<div class="tvd-modal-content tcm-keywords-delete">
+
+	<div class="tcm-modal-header">
+		<h2><?php echo __( 'Delete Linked Word', Thrive_Comments_Constants::T ); ?></h2>
+		<hr>
+	</div>
+
+	<div class="tcm-modal-body">
+
+		<h4>
+			<?php echo __( 'Are you sure you want to delete the Auto-Link ?', Thrive_Comments_Constants::T ) ?>
+			<#= keyword.get('name')#>?
+		</h4>
+
+		<p><?php echo __( 'The link is eliminated from all the comments it appears without eliminating the keyword from the content, it just becomes a simple text.', Thrive_Comments_Constants::T ) ?></p>
+
+	</div>
+
+	<div class="tcm-btm">
+		<a href="javascript:void(0)" class="tvd-btn-flat tvd-btn-flat-secondary tvd-btn-flat-dark tvd-modal-close tvd-waves-effect tcm-delete-no"><?php echo __( 'Keep it', Thrive_Comments_Constants::T ) ?></a>
+		<a href="javascript:void(0)" class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-red tvd-modal-close tvd-right tvd-modal-submit tcm-delete-yes"><?php echo __( 'Delete it', Thrive_Comments_Constants::T ) ?></a>
+	</div>
+
+</div>
+
+

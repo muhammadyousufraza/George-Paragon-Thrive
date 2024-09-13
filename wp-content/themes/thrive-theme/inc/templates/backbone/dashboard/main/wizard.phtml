@@ -1,0 +1,32 @@
+<div class="mousemove ttd-wizard-content ttd-wizard ttd-d-flex<#=' step-' + ( this.model.hasActiveStep() ? this.model.getCurrentStep().id : 'welcome' )#>" data-fn="recordMouseOver">
+	<span class="ttd-wizard-close mouseenter mouseleave click" data-fn-mouseenter="toggleSkipTooltip" data-fn-mouseleave="toggleSkipTooltip" data-fn-click="skipSetup">
+		<?php Thrive_Views::svg_icon( 'close' ); ?>
+		<div class="ttd-tooltip ttd-skip-wizard-tooltip">
+			<p><?php echo esc_html__( 'Close the wizard and go to Thrive Theme Builder Dashboard', 'thrive-theme' ); ?></p>
+		</div>
+	</span>
+	<div class="ttd-wizard-top ttd-d-flex" id="ttd-wizard-top"><!-- wizzard-top will be rendered here (append after render) --></div>
+	<div class="ttd-wizard-frame-container">
+		<iframe class="ttd-wizard-frame ttd-site-preview" id="wizard-frame" src="<#= this.model.getFrameURL() #>" title="Wizard Preview"></iframe>
+		<div class="ttd-wizard-frame-overlay"></div>
+		<button data-tooltip-side="right"
+				class="ttd-template-nav btn-next click" data-fn="onNavigationArrowClick" data-direction="next">
+			<?php Thrive_Views::svg_icon( 'chevron-right' ); ?>
+		</button>
+		<button data-tooltip-side="right"
+				class="ttd-template-nav btn-prev click" data-fn="onNavigationArrowClick" data-direction="prev">
+			<?php Thrive_Views::svg_icon( 'chevron-left' ); ?>
+		</button>
+	</div>
+</div>
+
+<div id="ttd-step-tooltip" class="ttd-wizard ttd-tooltip persistent">
+	<p class="mt-0 mb-0 tt-title"><strong><?php echo esc_html__( 'Quick Tip', 'thrive-theme' ); ?></strong></p>
+	<p class="mt-5 tt-message"></p>
+	<div class="mb-5 mt-5 ui-tooltip-action">
+		<button class="ttd-tooltip-dismiss click" data-dismiss="#ttd-step-tooltip" data-fn="tooltipNeverShow" type="button">
+			<?php echo esc_html__( "Don't show this again", 'thrive-theme' ); ?>
+		</button>
+	</div>
+	<div class="ui-tt-arrow top"></div>
+</div>

@@ -1,0 +1,11 @@
+<label><?php echo __( 'Select pattern', 'thrive-cb' ) ?></label>
+<div class="gray-box control-grid">
+	<# _.each( this.patterns, function( item, i ) {#>
+	<div class="pattern-item click" data-fn="select" data-index="<#=i#>">
+		<div class="inner">
+			<#= TVE.icon(item.icon) #>
+		</div>
+	</div>
+	<# } ) #>
+</div>
+<div class="color1 mt-10"></div>

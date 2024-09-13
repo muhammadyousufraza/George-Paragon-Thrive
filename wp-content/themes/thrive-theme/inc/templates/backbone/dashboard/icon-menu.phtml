@@ -1,0 +1,5 @@
+<a href="<#=baseUrl + '#' + icon #>" class="ttd-icon dash-tooltip <#= disabled? 'disabled':''#> <#= icon=='start' ? 'ttd-icon-blue' :'' #>" data-icon="<#= icon #>">
+	<#= TTD.utils.icon( icon + '-icon' ) #>
+	<#= TTD.utils.icon( icon + '-hover-icon' ) #>
+	<span><#= label #></span>
+</a>

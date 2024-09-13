@@ -1,0 +1,21 @@
+<div class="tqb-answer-action">
+
+	<div class="tqb-answer-image-type">
+		<div class="tqb-answer-image-container">
+			<img src="<#= item.get_image() #>" alt="" class="tqb-answer-image">
+		</div>
+		<div class="tqb-answer-text-container">
+			<div class="tqb-fancy-container">
+				<span class="tqb-fancy-icon tqb-fancy-rel">
+					<?php tqb_get_svg_icon( 'check' ); ?>
+					<?php tqb_get_svg_icon( 'times' ); ?>
+				</span>
+			</div>
+			<div class="tqb-answer-text">
+				<#= item.get('text') #>
+			</div>
+		</div>
+	</div>
+
+</div>
+<div class="tqb-answer-feedback tqb-hide"><div class="tqb-feedback-inner"></div></div>

@@ -1,0 +1,17 @@
+<?php if ( function_exists( 'wp_mail_smtp' ) ) : ?>
+	<div class="control-grid full-width pb-0">
+
+	<span>
+		<a class="blue-text" href="https://www.wpbeginner.com/plugins/how-to-set-up-wp-mail-smtp-with-any-host-ultimate-guide/" target="_blank"><?php echo __( 'WP Mail SMTP is set as the default service', 'thrive-cb' ) ?></a>
+		<?php echo __( 'to ensure better deliverability than the WordPress mailer. You can select any other service like SendGrid, Brevo, etc.', 'thrive-cb' ); ?>
+	</span>
+		<a class="blue-text" href="//help.thrivethemes.com/en/collections/2541842-general#api-connections" target="_blank"><?php echo __( 'Learn more', 'thrive-cb' ) ?></a>
+	</div>
+<?php else : ?>
+	<div class="control-grid full-width pb-0">
+	<span>
+		<?php echo __( 'You can optionally choose to integrate with an email delivery service such as PostMark or SendGrid for increased deliverability. Otherwise emails will be sent directly from your server.', 'thrive-cb' ); ?>
+	</span>
+		<a class="blue-text" href="//thrivethemes.com/tkb_item/integrating-with-an-email-delivery-service-when-setting-up-an-email-connection/" target="_blank"><?php echo __( 'Learn more about this.', 'thrive-cb' ) ?></a>
+	</div>
+<?php endif; ?>

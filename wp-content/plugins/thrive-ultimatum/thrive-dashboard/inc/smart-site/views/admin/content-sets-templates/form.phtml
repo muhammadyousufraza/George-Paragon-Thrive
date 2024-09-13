@@ -1,0 +1,30 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div>
+    <h3><?php _e( 'Add new content set', 'thrive-dash' ); ?></h3>
+</div>
+<div class="tvd-content-set-inner">
+    <div>
+        <input class="mb-30" id="tvd-content-set-name" placeholder="<?php echo __( 'Content set name', 'thrive-dash' ) ?>" type="text"
+               value="<#= model.get('post_title') #>">
+    </div>
+    <div>
+        <h4><?php _e( 'What content should be part of this set?', 'thrive-dash' ); ?></h4>
+    </div>
+    <div id="tvd-content-set-rules"></div>
+    <div id="tvd-content-set-add-rule"></div>
+</div>
+<div class="tvd-content-set-save-footer">
+	<button class="click" data-fn="saveContentSet">
+		<?php echo __( 'Save content set', 'thrive-dash' ); ?>
+	</button>
+</div>

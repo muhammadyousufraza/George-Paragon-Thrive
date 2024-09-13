@@ -1,0 +1,40 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div class="tvd-tss-modal-header">
+	<h3 class="tvd-modal-title"><?php echo __( 'Edit Group', 'thrive-dash' ) ?></h3>
+</div>
+
+<div class="tvd-modal-content tvd-tss-add">
+	<div class="tvd-tss-field-data-wrapper">
+		<div>
+			<label for="tvd-tss-group-name">
+				<?php echo __( 'Group name', 'thrive-dash' ) ?> *
+			</label>
+			<div class="tvd-input-field">
+				<input id="tvd-tss-group-name" type="text" value="<#= model.get('name') #>" data-field="name" placeholder="<?php echo __( 'Group name', 'thrive-dash' ) ?>">
+				<label></label>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="tvd-tss-modal-footer">
+	<div class="tvd-tss-flex">
+		<button class="tvd-btn-flat tvd-btn-flat-secondary tvd-btn-flat-dark tvd-waves-effect tvd-modal-close">
+			<?php echo __( 'Cancel', 'thrive-dash' ) ?>
+		</button>
+		<button class="tvd-btn tvd-btn-green tvd-waves-light tvd-right tvd-modal-submit">
+			<?php echo __( 'Save', 'thrive-dash' ) ?>
+		</button>
+	</div>
+</div>

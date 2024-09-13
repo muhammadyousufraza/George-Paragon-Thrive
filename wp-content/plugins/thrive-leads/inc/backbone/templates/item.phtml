@@ -1,0 +1,47 @@
+<div class="cloud-template-item modal-item" data-saved="<#= saved #>" data-id="<#= item.get('id')|| 0 #>">
+	<div class="modal-title-w-options">
+		<div class="cb-template-name">
+			<div class="template-name"><#= item.get('name') #></div>
+			<?php tcb_icon( 'check-light' ); ?>
+		</div>
+
+		<# if( saved ) { #>
+		<span class="tcb-dropdown-dots click" data-fn="openOptionsTooltip">
+					<?php tcb_icon( 'three-dots' ); ?>
+				</span>
+
+		<div class="tcb-template-options-tooltip">
+			<button class="tcb-tooltip-row click" data-fn="deleteConfirmation"><?php echo __( 'Delete', 'thrive-leads' ); ?></button>
+		</div>
+		<# } #>
+
+	</div>
+	<div class="cloud-item click<#= item.get('thumbnail') ? '' : ' no-thumbnail' #>" data-fn="selectTemplate" data-id="<#= item.get('id')|| 0 #>">
+		<# if( saved ) { #>
+		<div class="symbol-delete-notice " style="display: none">
+			<span class="click" data-fn="hideDelete"><?php tcb_icon( 'close2' ); ?></span>
+
+			<div class="delete-text mt-10">
+				<?php echo __( 'Are you sure?', 'thrive-leads' ); ?>
+			</div>
+			<div class="delete action mt-10 mb-10">
+				<button class="click" data-fn="hideDelete"><?php echo __( 'No, cancel', 'thrive-leads' ); ?></button>
+				<button class="click" data-id="<#= item.id #>" data-fn="deleteSavedTemplate">
+					<?php echo __( 'Yes, delete', 'thrive-leads' ); ?>
+				</button>
+			</div>
+		</div>
+		<# } #>
+		<div class="cb-template-wrapper">
+			<div class="cb-template-thumbnail">
+				<# if(item.get('thumbnail')){ #>
+				<img class='loaded'
+				     src="<#= item.get('thumbnail') #>"
+				     data-ratio="<#= item.get('thumb_sizes') ? parseFloat(parseInt(item.get('thumb_sizes').h) / parseInt(item.get('thumb_sizes').w)).toFixed(3) : '1'#>"/>
+				<# } else { #>
+				<img class='loaded' src="<?php echo plugins_url( 'thrive-leads/admin/img/no-preview-thumbnail.jpg' ) ?>" data-ratio="1"/>
+				<# } #>
+			</div>
+		</div>
+	</div>
+</div>

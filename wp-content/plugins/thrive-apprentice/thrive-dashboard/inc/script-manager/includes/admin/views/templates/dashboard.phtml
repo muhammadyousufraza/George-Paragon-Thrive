@@ -1,0 +1,36 @@
+<div class="tvd-section-title">
+	<h3><?php echo __( 'Analytics & Scripts', 'thrive-dash' ) ?>
+		<a class="tvd-add-modal tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-blue"><?php echo __( 'ADD NEW', 'thrive-dash' ) ?></a>
+	</h3>
+</div>
+
+<div id="tve-dash-scripts">
+	<h4 class="tvd-sm-row">
+		<span class="tvd-sm-row-elem-placement"><?php echo __( 'Before ', 'thrive-dash' ) ?><?php echo htmlentities( '</head>' ); ?> </span>
+		<span class="tvd-sm-enabled tvd-sm-theme-column" style="<#= !TVD_SM_CONST.is_ttb_active ? 'display:none' : '' #>"><?php echo __( 'Inserted in Thrive Themes', 'thrive-dash' ) ?></span>
+		<span class="tvd-sm-enabled tvd-sm-lp-column" style="<#= !TVD_SM_CONST.is_tar_active ? 'display:none' : '' #>"><?php echo __( 'Inserted in Landing Pages', 'thrive-dash' ) ?></span>
+		<span class="tvd-sm-empty"></span>
+	</h4>
+	<div id="tvd-sm-container-head" class="tvd-sm-script-group">
+	</div>
+
+	<h4 class="tvd-sm-row">
+		<span class="tvd-sm-row-elem tvd-sm-row-elem-placement"><?php echo __( 'After ', 'thrive-dash' ) ?><?php echo htmlentities( '<body>' ); ?> </span>
+	</h4>
+	<div id="tvd-sm-container-body-open" class="tvd-sm-script-group">
+	</div>
+
+	<h4 class="tvd-sm-row">
+		<span class="tvd-sm-row-elem tvd-sm-row-elem-placement"><?php echo __( 'Before ', 'thrive-dash' ) ?><?php echo htmlentities( '</body>' ); ?> </span>
+	</h4>
+	<div id="tvd-sm-container-body-close" class="tvd-sm-script-group">
+
+	</div>
+
+</div>
+
+<div id="tvd-back-td" class="tvd-col tvd-m6">
+	<a href="<?php echo admin_url( 'admin.php?page=tve_dash_section' ); ?>" class="tvd-waves-effect tvd-waves-light tvd-btn-small tvd-btn-gray">
+		<?php echo __( 'Back To Dashboard', 'thrive-dash' ); ?>
+	</a>
+</div>

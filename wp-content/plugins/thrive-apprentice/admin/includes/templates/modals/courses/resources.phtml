@@ -1,0 +1,18 @@
+<div class="tvd-modal-content tva-no-after tva-modal-resources">
+	<h3 class="tvd-modal-title mb-5"><?php echo __( 'Lesson resources', 'thrive-apprentice' ); ?></h3>
+	<div class="scrollbar-inner tva-styled-scrollbar">
+		<div class="tva-resources"></div>
+	</div>
+	<div class="tva-resources-start" style="display: none">
+		<?php tva_get_svg_icon( 'stars_light' ); ?>
+		<?php echo __( 'Improve course quality with resources like uploaded files, blog post/page references or external files.', 'thrive-apprentice' ); ?>
+	</div>
+	<a class="tva-add-resource click tva-flex-mid" href="javascript:void(0)" data-fn="addClicked">
+		<?php tva_get_svg_icon( 'plus_light' ); ?>
+		<?php esc_html_e( 'Add resource', 'thrive-apprentice' ); ?>
+	</a>
+</div>
+<div class="tva-modal-footer-outer pt-15 pb-0">
+	<button type="button" class="tva-modal-btn tvd-modal-close"><?php echo esc_html__( 'Close', 'thrive-apprentice' ); ?></button>
+	<button type="button" class="tva-modal-btn tva-modal-btn-green click" data-fn="save"><?php echo esc_html__( 'Save', 'thrive-apprentice' ); ?></button>
+</div>

@@ -1,0 +1,354 @@
+.tvo-sidebar-edit-button {
+  padding: 12px 24px 11px;
+  border-radius: 2px;
+  border: solid 1px #007cba;
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+  text-align: center;
+  color: #007cba !important;
+  background: #fff;
+  text-decoration: none !important;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+#tvo-display-logo, #tvo-capture-logo {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.tvo-block-preview {
+  width: 100%;
+}
+
+.tvo-new-block-container {
+  outline: solid 1px #ebebeb;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-family: Roboto, sans-serif;
+  font-size: 16px !important;
+  color: #565a5f !important;
+  letter-spacing: -0.12px;
+  border: 15px solid #fff;
+
+  * {
+    font-family: Roboto, sans-serif;
+    font-size: 16px !important;
+    color: #565a5f !important;
+    letter-spacing: -0.12px;
+  }
+
+  .tvo-go-dash {
+    margin-top: 10px;
+    font-size: 13px !important;
+
+    a {
+      font-size: 13px !important;
+      text-decoration: underline !important;
+      box-shadow: none !important;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .tvo-block-tabs {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    .tvo-block-tab {
+      border-radius: 3px;
+      border: solid 1px rgba(151, 151, 151, 0.36) !important;
+      padding: 5px 10px;
+      text-decoration: none !important;
+      border-bottom: unset !important;
+      box-shadow: none !important;
+      outline: none !important;
+      text-align: center;
+      min-width: 200px;
+
+      &:first-of-type {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .tvo-block-content {
+    width: 100%;
+
+    &.tvo-show-capture {
+      .tvo-block-tab-capture {
+        background-color: #fff;
+        border-color: #fff !important;
+        font-weight: 500;
+      }
+
+      .tvo-block-tab-display {
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .tvo-block-tabs-content-display {
+        display: none !important;
+      }
+
+      .tvo-block-tabs-content-capture {
+        animation: fadeIn ease 0.5s;
+      }
+    }
+
+    &.tvo-show-display {
+      .tvo-block-tabs-content-display {
+        animation: fadeIn ease 0.5s;
+      }
+
+      .tvo-block-tab-display {
+        background-color: #fff;
+        border-color: #fff !important;
+        font-weight: 500;
+      }
+
+      .tvo-block-tab-capture {
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .tvo-block-tabs-content-capture {
+        display: none !important;
+      }
+    }
+  }
+
+  .tvo-block-tabs-content {
+    width: 100%;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-top: -2px;
+    z-index: 999;
+    position: relative;
+  }
+
+  .tvo-block-tabs-content-display, .tvo-block-tabs-content-capture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .tvo-block-select-wrapper {
+      margin-bottom: 20px;
+      max-width: fit-content;
+
+      * {
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      select {
+        min-width: 260px;
+        border-radius: 5px !important;
+        border: solid 1px #6a6a6a !important;
+        background-color: #fff;
+        height: 50px;
+        padding: 5px 0 5px 15px;
+      }
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+
+    .tvo-block-search-container {
+      margin: 20px 0;
+      border-bottom: solid 1px rgba(151, 151, 151, 0.65) !important;
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+
+      * {
+        margin-bottom: 0 !important;
+      }
+
+      a {
+        text-decoration: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+        display: flex;
+        align-items: center;
+      }
+
+      .tvo-block-search-input {
+        * {
+          font-size: 14px !important;
+          box-shadow: none !important;
+          outline: none !important;
+          border: none !important;
+        }
+
+        input {
+          opacity: 0.6;
+
+          &:focus {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .tvo-block-number-warning {
+    font-size: 14px !important;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+
+    * {
+      font-size: 14px !important;
+      color: #007cba !important;
+    }
+
+    &.tvo-block-error {
+      color: #ed5565 !important;
+    }
+  }
+
+  .tvo-new-block-description {
+    margin-bottom: 20px;
+  }
+
+  .dashicon {
+    font-size: 16px;
+    font-family: dashicons !important;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  .tvo-block-title {
+    h2 {
+      font-size: 24px !important;
+      color: #171b1b !important;
+    }
+  }
+
+  .tvo-block-search-button {
+    &.opacity {
+      opacity: 0.7;
+    }
+
+    &:hover {
+      opacity: 1 !important;
+    }
+  }
+}
+
+.wp-block {
+  &[data-type="thrive/ovation-block"] {
+    min-width: 400px;
+  }
+}
+
+.tvo-hide {
+  display: none !important;
+}
+
+.thrive-ovation-edit-link {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  color: #fff !important;
+  padding-left: 40px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: box-shadow .15s;
+
+  &:hover {
+    box-shadow: rgb(83 83 83 / 40%) 0px 0px 12px 0px;
+  }
+
+  .thrive-ovation-admin-icon-holder {
+    position: absolute;
+    background: #434344;
+    left: 0;
+    top: 0;
+    padding: 5px 8px 5px 12px;
+    box-sizing: border-box;
+  }
+
+  .thrive-ovation-admin-icon {
+    background: url(../img/thrive-ovation-logo-white.png) no-repeat center / 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .thrive-ovation-admin-text {
+    background: #2e8c00;
+    padding: 5px 25px;
+    position: relative;
+    font-size: 14px;
+    line-height: 30px;
+    margin-left: 10px;
+    font-weight: 600;
+
+    &.thrive-ovation-admin-text:before {
+      content: '';
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 0 solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 50px solid #434344;
+    }
+  }
+}
+
+.tve-block-edit {
+  font-size: 12px !important;
+}
+
+.tvo-block-buttons-container {
+  display: flex;
+  gap: 10px;
+
+  .tvo-block-card {
+    background-color: #fff;
+    padding: 20px 15px 30px;
+    text-align: center;
+
+    h3 {
+      font-size: 24px !important;
+      font-weight: bold;
+      color: #171b1b !important;
+      margin: 0 0 20px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: normal;
+      letter-spacing: -0.12px;
+      color: #565a5f;
+    }
+
+    button {
+      height: 44px;
+      padding: 0 20px;
+      border-radius: 5px;
+      background-color: #58a245;
+      font-weight: bold;
+      color: #fff !important;
+      border: none;
+    }
+  }
+}

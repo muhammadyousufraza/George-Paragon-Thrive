@@ -1,0 +1,20 @@
+<div class="tva-list-item">
+	<div class="tva-flex tva-align-center tva-space-center">
+		<?php tva_get_svg_icon( 'book_light' ); ?>
+	</div>
+	<div><#= course.get('name') #></div>
+	<# if ( course.get('drip_campaigns').length ) { #>
+	<select class="change" data-fn="setCampaign" data-course-id="<#= course.get('id') #>">
+		<option value="0"><?php echo esc_html__( 'None', 'thrive-apprentice' ); ?></option>
+	</select>
+	<# } else { #>
+	<div class="tva-flex tva-align-center">
+		<div class="tva-drip-gray tva-flex tva-align-center">
+			<?php tva_get_svg_icon( 'ban_light', 'mr-5' ); ?>
+			<?php esc_html_e( 'No drip schedule found.', 'thrive-apprentice' ); ?>
+		</div>
+		&nbsp;&nbsp;
+		<a href="#courses/<#= course.get('id') #>/drip?product_id=<#= this.model.get('id') #>"><?php esc_html_e( 'Create new', 'thrive-apprentice' ); ?></a>
+	</div>
+	<# } #>
+</div>

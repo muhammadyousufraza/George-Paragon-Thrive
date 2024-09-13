@@ -1,0 +1,32 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tvd-content-sets-header">
+    <h3>
+        <?php _e( 'Content Sets', 'thrive-dash' ); ?>
+        <span class="tvd-tooltip-parent">
+            <?php echo dashboard_icon( 'question-circle-full' ) ?>
+            <span class="tvd-ss-tooltip">
+                <?php _e( 'Define content sets that will be used site wide to control what content your customers have access to.', 'thrive-dash' ); ?><br>
+
+                <?php echo dashboard_icon( 'question-circle-full' ) ?>
+
+                <a href="#" target="_blank">
+                    <?php _e('Show me how Content Sets work', 'thrive-dash') ?>
+                </a>
+            </span>
+        </span>
+    </h3>
+    <a href="javascript:void(0)" class="click tvd-tss-add-new-field" data-fn="addSet"><span><?php _e( 'Add Set', 'thrive-dash' ); ?></span></a>
+</div>
+<input type="text" class="tva-filter-sets input" data-fn="filterSets" placeholder="<?php esc_html_e( 'Filter content sets', 'thrive-dash' ); ?>"/>
+<div class="tvd-content-sets-list"></div>
+<div class="tvd-content-sets-list-pagination"></div>

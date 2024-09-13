@@ -1,0 +1,63 @@
+<div class="tva-col-fixed tva-col-title tva-flex tva-align-center">
+	<# if (! this.model.get('editing') ) { #>
+	<span title="<#= this.model.get('title') #>" class="tva-topic-title tvd-truncate"><#- this.model.get('title') #></span>
+	<span class="click ml-10 tva-topic-edit" data-fn="editing">
+		<?php tva_get_svg_icon( 'pencil-custom' ); ?>
+	</span>
+	<# } else { #>
+	<input id="tva-edit-<#=this.model.cid#>" type="text" value="<#- this.model.get('title') #>" class="tva-title-events">
+	<# } #>
+</div>
+
+<div class="tva-col-color tva-flex tva-align-center">
+	<span class="tva-color-preview click" data-fn="spectrum" data-field="color" style="background-color: <#=this.model.get('color') #>"></span>
+	<input type="text" value="<#= this.model.get('color') #>" class="tva-colorpicker" data-field="color"/>
+</div>
+
+<div class="tva-col-fixed tva-col-icon tva-flex tva-align-center">
+	<div class="tva-topic-types tva-flex tva-align-stretch">
+		<span data-fn="openIconPicker" class="tva-flex tva-align-center click<#=this.model.get('icon_type')==='svg_icon' ? ' tva-active' : '' #>">
+			<?php esc_html_e( 'Icon', 'thrive-apprentice' ) ?>
+		</span>
+		<span data-fn="openImagePicker" class="tva-flex tva-align-center click<#=this.model.get('icon_type')==='icon' ? ' tva-active' : '' #>">
+			<?php esc_html_e( 'Image', 'thrive-apprentice' ) ?>
+		</span>
+	</div>
+	<div class="tva-topic-icon-preview click" data-fn="<#= this.model.get('icon_type') === 'svg_icon' ? 'openIconPicker' : 'openImagePicker' #>"><#= this.model.getPreviewImage() #></div>
+</div>
+
+<div class="tva-col-fixed tva-flex tva-align-center<#=( this.model.get( 'icon_type' ) !== 'svg_icon' ) ? ' tva-not-available' : '' #>">
+	<# if ( this.model.get( 'icon_type' ) !== 'svg_icon' ) { #>
+	<span class="tva-n-available"><?php esc_html_e( 'not available', 'thrive-apprentice' ) ?>
+	<i class="tva-info-icon tvd-tooltipped" data-position="top" data-tooltip="<?php esc_attr_e( 'Topic images cannot be colored', 'thrive-apprentice' ); ?>">
+		<?php tva_get_svg_icon( 'info-circle_strong' ); ?>
+	</i></span>
+	<# } else { #>
+	<span class="tva-color-preview click" data-fn="spectrum" data-field="overview_icon_color" style="background-color: <#=this.model.get('overview_icon_color') #>"></span>
+	<input type="text" value="<#= this.model.get('overview_icon_color') #>" class="tva-colorpicker" data-field="overview_icon_color"/>
+	<# } #>
+
+	<div class="tva-topic-preview" style="background-color: <#=this.model.get('color')#>"><#= this.model.getPreviewImage('overview') #></div>
+</div>
+
+<div class="tva-col-fixed tva-flex tva-align-center<#=( this.model.get( 'icon_type' ) !== 'svg_icon' ) ? ' tva-not-available' : '' #>">
+	<# if ( this.model.get( 'icon_type' ) !== 'svg_icon' ) { #>
+	<span class="tva-n-available"><?php esc_html_e( 'not available', 'thrive-apprentice' ) ?>
+	<i class="tva-info-icon tvd-tooltipped" data-position="top" data-tooltip="<?php esc_attr_e( 'Topic images cannot be colored', 'thrive-apprentice' ); ?>">
+		<?php tva_get_svg_icon( 'info-circle_strong' ); ?>
+	</i></span>
+	<# } else { #>
+	<span class="tva-color-preview click" data-fn="spectrum" data-field="layout_icon_color" style="background-color: <#=this.model.get('layout_icon_color') #>"></span>
+	<input type="text" value="<#= this.model.get('layout_icon_color') #>" class="tva-colorpicker" data-field="layout_icon_color"/>
+	<# } #>
+
+	<div class="tva-topic-preview" style="background-color: #fff"><#= this.model.getPreviewImage('layout') #></div>
+</div>
+
+<div class="tva-col-actions tva-flex tva-align-center tva-flex-end">
+	<# if ( this.model.isDeletable() ) { #>
+	<a href="javascript:void(0)" class="tva-delete-icon click tva-inline-flex-mid" data-fn="openDeleteConfirmation">
+		<?php tva_get_svg_icon( 'trash-1' ); ?>
+	</a>
+	<# } #>
+</div>

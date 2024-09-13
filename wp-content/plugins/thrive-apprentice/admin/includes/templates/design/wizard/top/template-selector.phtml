@@ -1,0 +1,23 @@
+<div class="tva-flex ttd-wizard-selector mouseenter" data-fn="dismissTooltipOnMouseenter">
+	<# if ( this.model.hasSelectorDropdown() ) { #>
+	<a href="javascript:void(0)" class="click selector-drop" data-fn="selectorClick">
+		<span class="s-label"><#=this.model.getPreviewTemplateTitle()#></span>
+		<?php Thrive_Views::svg_icon( 'chevron-down' ); ?>
+	</a>
+	<# } #>
+	<?php /* different states for the completed steps, yey ... :( */ ?>
+	<# if ( this.model.isStepCompleted() && ! this.model.hasStepChanges() ) { #>
+	<a href="javascript:void(0)" class="selector-btn step-selected">
+		<?php Thrive_Views::svg_icon( 'check_medium' ); ?>
+		<?php echo esc_html__( 'Selected', 'thrive-apprentice' ); ?>
+	</a>
+	<# } else { #>
+	<a href="javascript:void(0)" class="selector-btn click<#=this.model.canContinue() ? '' : ' disabled' #>" data-fn="clickSaveTemplate">
+		<#= this.model.getContinueLabel() #>
+		<# if( this.model.hasNextStep() ) { #>
+		<?php Thrive_Views::svg_icon( 'chevron-right' ); ?>
+		<span class="step-no"><#=this.model.getNextAvailableStepIndex() + 1#></span>
+		<# } #>
+	</a>
+	<# } #>
+</div>

@@ -1,0 +1,94 @@
+<div class="tcb-condition-set-wrapper">
+	<div class="tcb-condition-global-during-edit edit-set-title hidden">
+		<?php echo esc_html__( 'Edit Global Conditions Set', 'thrive-cb' ); ?>
+	</div>
+	<div class="tcb-condition-global-edit-warning hidden">
+		<?php tcb_icon( 'info-circle-solid' ); ?>
+		<div class="tcb-condition-global-edit-wrapper">
+			<div class="tcb-condition-notice-title"><?php echo esc_html__( 'Edit Global Conditions Set', 'thrive-cb' ); ?></div>
+			<div class="tcb-condition-global-notice-text">
+				<?php echo esc_html__( 'You are about to edit a Global Condition Set. Any updates to the condition set will impact all the display views where you applied it. Do you want to continue?', 'thrive-cb' ); ?>
+			</div>
+			<div class="tcb-condition-global-notice-buttons">
+				<button class="tcb-condition-global-edit-cancel click" data-fn="closeEditWarning"><?php echo esc_html__( 'NO, CANCEL', 'thrive-cb' ); ?></button>
+				<button class="tcb-condition-global-edit-remove click" data-fn="editSet"><?php echo esc_html__( 'YES, EDIT AS GLOBAL SET', 'thrive-cb' ); ?></button>
+			</div>
+		</div>
+	</div>
+	<div class="tcb-condition-set-upper-row">
+		<div class="tcb-condition-set-label">
+			<span class="tcb-condition-label"><#= this.model.get( 'label' ) #></span>
+			<span class="tcb-condition-edit click" data-fn="showRename"><?php tcb_icon( 'pen-regular' ); ?></span>
+			<span class="tcb-condition-rename click" data-fn="renameSet"><?php tcb_icon( 'check-light' ); ?></span>
+		</div>
+
+		<div class="tcb-condition-set-actions">
+			<button class="tcb-condition-option-save click" data-fn="saveGlobalSet" data-tooltip="Global condition sets can be reused and updated across your website" data-position="top">
+				<?php tcb_icon( 'globe-americas-solid' ); ?>
+				<span>
+					<?php echo esc_html__( 'Save as global', 'thrive-cb' ); ?>
+				</span>
+			</button>
+			<span class="tcb-condition-set-global-icon" data-tooltip="Global condition set" data-position="top">
+				<?php tcb_icon( 'globe-americas-solid' ); ?>
+			</span>
+			<button class="tcb-condition-set-button click" data-fn="openSetTooltip">
+				<?php tcb_icon( 'three-dots' ); ?>
+			</button>
+			<div class="tcb-condition-set-tooltip hidden">
+				<button class="tcb-condition-option-unlink click" data-fn="unlinkGlobalSet">
+					<?php tcb_icon( 'unlink-light' ); ?>
+					<?php echo esc_html__( 'Unlink from global condition set', 'thrive-cb' ); ?>
+				</button>
+				<button class="tcb-condition-option-edit click" data-fn="openEditWarning">
+					<?php tcb_icon( 'pen-light' ); ?>
+					<?php echo esc_html__( 'Edit global condition set', 'thrive-cb' ); ?>
+				</button>
+				<button class="tcb-condition-option-delete click" data-fn="beforeSetDelete">
+					<?php tcb_icon( 'trash-light' ); ?>
+					<span class="tcb-delete-text">
+						<?php echo esc_html__( 'Delete condition set', 'thrive-cb' ); ?>
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="tcb-condition-set-rule-container"></div>
+
+	<button class="tcb-condition-set-add-rule-button click green-text" data-fn="addRule"><?php echo esc_html__( '+ Add rule', 'thrive-cb' ); ?></button>
+	<div class="tcb-condition-delete-overlay hidden">
+		<div class="tcb-condition-delete-overlay-wrapper">
+			<?php tcb_icon( 'exclamation-triangle' ); ?>
+			<div class="tcb-condition-delete-wrapper">
+				<div class="tcb-condition-notice-title global"><?php echo esc_html__( 'Delete Global Set', 'thrive-cb' ); ?></div>
+				<div class="tcb-condition-notice-title regular"><?php echo esc_html__( 'Delete Set', 'thrive-cb' ); ?></div>
+
+				<div class="tcb-condition-delete-text-global">
+					<?php echo esc_html__( 'You are about to delete a Global condition set. The ', 'thrive-cb' ); ?>
+					<strong class="tcb-condition-set-name"></strong>
+					<?php echo esc_html__( 'condition set will be permanently removed from everywhere. Do you want to continue?', 'thrive-cb' ); ?>
+				</div>
+				<div class="tcb-condition-delete-text-regular">
+					<?php echo esc_html__( 'You are about to delete the', 'thrive-cb' ); ?>
+					<strong class="tcb-condition-set-name"></strong>
+					<?php echo esc_html__( 'condition set. Do you want to continue?', 'thrive-cb' ); ?>
+				</div>
+
+				<div class="tcb-condition-global-notice-buttons">
+					<button class="tcb-condition-global-delete-cancel click" data-fn="closeDeleteOverlay"><?php echo esc_html__( 'NO, CANCEL', 'thrive-cb' ); ?></button>
+					<button class="tcb-condition-global-delete-remove click" data-fn="deleteSet"><?php echo esc_html__( 'YES, DELETE', 'thrive-cb' ); ?></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="tcb-condition-global-during-edit edit-set-buttons hidden">
+		<button class="tcb-condition-global-edit-cancel click" data-fn="cancelEditing"><?php echo esc_html__( 'CANCEL', 'thrive-cb' ); ?></button>
+		<button class="tcb-condition-global-edit-remove click" data-fn="saveGlobalEdit"><?php echo esc_html__( 'SAVE', 'thrive-cb' ); ?></button>
+	</div>
+</div>
+
+<div class="tcb-condition-modal-divider">
+	<?php echo esc_html__( 'or', 'thrive-cb' ); ?>
+</div>

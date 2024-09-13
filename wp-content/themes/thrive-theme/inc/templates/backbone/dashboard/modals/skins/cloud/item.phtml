@@ -1,0 +1,14 @@
+<div style='background-image: url("<#= this.model.get( 'thumb' ) #>")' class="ttd-cloud-skin-img"></div>
+<div class="ttd-csn-container">
+	<div class="ttd-cloud-skin-name"><#= this.model.get( 'name' ) #></div>
+	<div class="ttd-cloud-buttons">
+		<a target="_blank" href="<#= this.model.get( 'preview_url' ) #>" class="ttd-cloud-preview-btn"><?php echo __( 'Preview', 'thrive-theme' ); ?></a>
+		<div class="ttd-cloud-download-btn click" data-fn="<#= TTD.utils.isFreshInstall() ? 'skinSetupStep' : 'skinImportStep' #>">
+			<# if( TTD.utils.isFreshInstall() ) { #>
+			<?php echo __( 'Choose', 'thrive-theme' ); ?>
+			<# } else { #>
+			<?php echo __( 'Download', 'thrive-theme' ); ?>
+			<# } #>
+		</div>
+	</div>
+</div>

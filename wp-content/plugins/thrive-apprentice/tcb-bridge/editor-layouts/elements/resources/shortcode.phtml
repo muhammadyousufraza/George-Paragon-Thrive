@@ -1,0 +1,65 @@
+<?php
+$extra_attr = '';
+if ( isset( $data['dynamic'] ) ) {
+	$extra_attr .= ' data-dynamic="1"';
+}
+
+if ( ! empty( $data['resources'] ) ) : ?>
+	<div class="thrv_wrapper tva-lesson-resources <?php echo $data['classes']; ?>" data-ct="resources--1" data-ct-name="Default" data-lesson="<?php echo $data['lesson_id'] ?>" data-course="<?php echo $data['course_id'] ?>"<?php echo $extra_attr; ?>>
+		<div class="thrv_wrapper thrv_text_element tva-resource-label">
+			<h3>
+				<span class="thrive-inline-shortcode" contenteditable="false">
+					<span class="thrive-shortcode-content" contenteditable="false" data-extra_key="" data-option-inline="1" data-shortcode="tva_dynamic_actions_resources_label" data-shortcode-name="Resources label">
+						<?php echo esc_html( $data['resources_label'] ); ?>
+					</span>
+				</span>
+			</h3>
+		</div>
+		<?php foreach ( $data['resources'] as $resource ) : ?>
+			<?php $url = $resource->get_url(); ?>
+			<?php if ( $url ) : ?>
+				<div class="tva-resource-item tva-resource-editable <?php echo $resource->is_downloadable() ? 'tva-item-download' : ''; ?> <?php echo strlen( $resource->content ) > 0 ? '' : 'tva-item-no-description'; ?>">
+					<div class="tva-resource-icon tva-resource-editable"><?php echo $resource->icon_html(); ?></div>
+					<div class="tva-resource-details tva-resource-editable tva-resource-container">
+						<div class="tva-resource-text tva-resource-editable tva-resource-title">
+							<div class="tva-resource-title-text" contenteditable="false"><h5><?php echo $resource->title; ?></h5></div>
+						</div>
+						<div class="tva-resource-text tva-resource-editable tva-resource-description">
+							<div class="tva-resource-description-text" contenteditable="false"><p><?php echo $resource->content; ?></p></div>
+						</div>
+					</div>
+					<div class="tva-resource-get tva-resource-editable tva-resource-container ">
+						<div class="tva-resource-button tva-resource-editable tcb-local-vars-root tva-res-download">
+							<div class="thrive-colors-palette-config" style="display: none !important">__CONFIG_colors_palette__{"active_palette":0,"config":{"colors":{"f8570":{"name":"Main Accent","parent":-1}},"gradients":[]},"palettes":[{"name":"Default Palette","value":{"colors":{"f8570":{"val":"var(--tva-template-main-color, rgb(82, 209, 123))"}},"gradients":[]},"original":{"colors":{"f8570":{"val":"rgb(19, 114,
+								211)","hsl":{"h":210,"s":0.83,"l":0.45}}},"gradients":[]}}]}__CONFIG_colors_palette__
+							</div>
+							<a rel="noindex nofollow noopener" href="<?php echo esc_attr( $resource->get_download_url() ); ?>" class="tcb-button-link tva-resource-link tcb-plain-text">
+								<span class="tcb-button-texts"><span class="tcb-button-text thrv-inline-text">
+										<span class="thrive-inline-shortcode" contenteditable="false">
+											<span class="thrive-shortcode-content" contenteditable="false" data-extra_key="" data-option-inline="1" data-shortcode="tva_dynamic_actions_resources_download_label" data-shortcode-name="Resource download label" style="" contenteditable="false">
+												<?php echo esc_html( $data['download_label'] ); ?>
+											</span>
+										</span>
+									</span></span>
+							</a>
+						</div>
+						<div class="tva-resource-button tva-resource-editable tcb-local-vars-root tva-res-open">
+							<div class="thrive-colors-palette-config" style="display: none !important">__CONFIG_colors_palette__{"active_palette":0,"config":{"colors":{"f8570":{"name":"Main Accent","parent":-1}},"gradients":[]},"palettes":[{"name":"Default Palette","value":{"colors":{"f8570":{"val":"var(--tva-template-main-color, rgb(82, 209, 123))"}},"gradients":[]},"original":{"colors":{"f8570":{"val":"rgb(19, 114,
+								211)","hsl":{"h":210,"s":0.83,"l":0.45}}},"gradients":[]}}]}__CONFIG_colors_palette__
+							</div>
+							<a rel="noindex nofollow noopener" href="<?php echo esc_attr( $url ); ?>" class="tcb-button-link tva-resource-link tcb-plain-text" target="_blank">
+								<span class="tcb-button-texts"><span class="tcb-button-text thrv-inline-text">
+										<span class="thrive-inline-shortcode" contenteditable="false">
+											<span class="thrive-shortcode-content" contenteditable="false" data-extra_key="" data-option-inline="1" data-shortcode="tva_dynamic_actions_resources_open_label" data-shortcode-name="Resource open label" style="" contenteditable="false">
+												<?php echo esc_html( $data['open_label'] ); ?>
+											</span>
+										</span>
+									</span></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			<?php endif; ?>
+		<?php endforeach; ?>
+	</div>
+<?php endif;

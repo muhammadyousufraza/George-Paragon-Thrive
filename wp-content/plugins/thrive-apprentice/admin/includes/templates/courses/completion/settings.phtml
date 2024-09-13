@@ -1,0 +1,20 @@
+<label><?php esc_html_e( 'Page title', 'thrive-apprentice' ); ?>
+	<input id="tva-completed-title" class="change" data-fn="inputChanged" type="text" data-field="title">
+</label>
+<div class="tva-details-label">
+	<label><?php echo esc_html__( 'URL', 'thrive-apprentice' ); ?></label>
+	<div>
+		<label for="tva-completed-slug"><?php echo TVA_Routes::get_route_for_url( TVA_Course_Completed::POST_TYPE ); ?></label>
+		<input id="tva-completed-slug" type="text" class="change" data-fn="inputChanged" data-field="post_name">
+		<input type="hidden" data-bind="preview_url">
+		<button class="tva-zclip">&nbsp;
+			<span class="tva-custom-tooltip"><?php echo esc_attr( __( 'Copy', 'thrive-apprentice' ) ); ?></span>
+		</button>
+	</div>
+</div>
+<div class="tva-completed-comments tvd-switch mt-30">
+	<label><?php esc_html_e( 'Allow comments', 'thrive-apprentice' ); ?>
+		<input id="tva-completed-allow-comments" type="checkbox" class="click" data-fn="inputChanged" data-field="allow_comments">
+		<span class="tvd-lever mr-10"></span>
+	</label>
+</div>

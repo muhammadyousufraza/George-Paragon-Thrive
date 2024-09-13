@@ -1,0 +1,92 @@
+<div class="tvd-card tvd-white tvo-medium">
+    <# if ( shortcode.get( 'type' ) !== 'tvo_display_post' && shortcode.get( 'type' ) !== 'tvo_capture_post' ) { #>
+    <div class="tvo-deprecated-badge tvd-tooltipped"
+         data-position="top"
+         data-tooltip="<?php echo __( 'Legacy elements are now deprecated. They are still visible on your website but not accessible through the new testimonial blocks', 'thrive-ovation' ); ?>">
+		<?php echo __( 'Legacy element', 'thrive-ovation' ) ?>
+        <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.554.969c1.22 0 2.351.305 3.39.916a6.852 6.852 0 0 1 2.475 2.474c.61 1.04.916 2.17.916 3.391a6.573 6.573 0 0 1-.916 3.39 6.852 6.852 0 0 1-2.475 2.475c-1.039.61-2.17.916-3.39.916a6.573 6.573 0 0 1-3.391-.916 6.852 6.852 0 0 1-2.475-2.474A6.573 6.573 0 0 1 .772 7.75c0-1.221.306-2.352.916-3.39a6.852 6.852 0 0 1 2.475-2.475 6.573 6.573 0 0 1 3.39-.916zm0 3.008c-.31 0-.58.114-.807.341a1.103 1.103 0 0 0-.342.807c0 .31.114.579.342.807.228.228.497.341.807.341.31 0 .578-.113.806-.341.228-.228.342-.497.342-.807 0-.31-.114-.579-.342-.807a1.103 1.103 0 0 0-.806-.341zm1.53 6.945v-.656a.316.316 0 0 0-.095-.233.316.316 0 0 0-.232-.095h-.328V7.203a.316.316 0 0 0-.096-.232.316.316 0 0 0-.233-.096H6.35a.316.316 0 0 0-.232.096.316.316 0 0 0-.096.232v.656c0 .092.032.169.096.233a.316.316 0 0 0 .232.096h.329v1.75H6.35a.316.316 0 0 0-.232.095.316.316 0 0 0-.096.233v.656c0 .091.032.168.096.232a.316.316 0 0 0 .232.096h2.407a.316.316 0 0 0 .232-.096.316.316 0 0 0 .096-.232z"
+                  fill="#FFF" fill-rule="nonzero"/>
+        </svg>
+    </div>
+    <# } #>
+    <# if (shortcode.get('thumbnail') != '') { #>
+    <div class="tvd-card-image <# if ( shortcode.get('thumbnail') != '' ) { #> tvo-hover-shortcode <# } #>"
+         style="background-image: url('<#= shortcode.get('thumbnail') #>');background-size:cover;">
+        <img src="<#= shortcode.get('thumbnail') #>" alt="">
+        <a target="_blank" href="<#= shortcode.get('url') #>" class="tvo-hover-shortcode-text">
+			<?php echo __( 'PREVIEW & EDIT', 'thrive-ovation' ) ?>
+        </a>
+    </div>
+    <# } else if ( shortcode.get( 'content' ) ) { #>
+    <div class="tvd-card-image tvo-hover-shortcode"
+         style="background-image: url('<?php echo TVO_ADMIN_URL; ?>/img/shortcode_capture.jpg');background-size:cover;">
+        <img src="<?php echo TVO_ADMIN_URL; ?>/img/shortcode_capture.jpg" alt="">
+        <a target="_blank" href="<#= shortcode.get('url') #>" class="tvo-hover-shortcode-text">
+			<?php echo __( 'PREVIEW & EDIT', 'thrive-ovation' ) ?>
+        </a>
+    </div>
+    <# } else { #>
+    <div class="tvd-card-image" style="background-size:cover;">
+        <div class="tvo-choose-shortcode">
+            <a target="_blank" href="<#= shortcode.get('url') #>">
+				<?php echo __( 'CHOOSE TEMPLATE', 'thrive-ovation' ) ?>
+            </a>
+        </div>
+    </div>
+    <# } #>
+    <div class="tvd-card-action">
+        <div class="tvd-row tvd-no-mb">
+            <div class="tvd-col tvd-s12">
+                <h4 class="tvd-truncate tvo-shortcode-title">
+                    <#= shortcode.get('name') #>
+                </h4>
+                <a class="tvd-card-options tvd-dropdown-button tvd-btn-floating"
+                   data-constrainwidth="false" data-beloworigin="true" data-alignment="right"
+                   data-activates="dropdown-card-<#= shortcode.get('id') #>" href="javascript:void(0)"
+                   data-hover="false">
+                    <i class="tvd-icon-more_vert"></i>
+                </a>
+                <ul id="dropdown-card-<#= shortcode.get('id') #>" class="tvd-dropdown-content">
+                    <li>
+                        <a href="javascript:void(0)" class="tvo-edit-shortcode-title tvd-normalize">
+                            <i class="tvd-icon-pencil"></i>
+							<?php echo __( 'Edit title', 'thrive-ovation' ) ?>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="delete tvo-shortcode-icon-delete tvd-normalize" href="javascript:void(0)">
+                            <i class="tvd-icon-trash-o"></i>
+							<?php echo __( 'Delete Shortcode', 'thrive-ovation' ) ?>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tvd-v-spacer vs-half"></div>
+        <div class="tvd-row tvo-copy-input-content tvd-no-mb">
+            <# if ( shortcode.get('thumbnail') != '' || shortcode.get( 'type' ) === 'tvo_capture_post' || shortcode.get( 'type' ) === 'tvo_display_post' ) { #>
+            <div class="tvd-col tvd-s8">
+                <input class="tvo-email-shortcode-input tvo-copy" type="text"
+                       name="tvo_shortcode_input[text]" readonly="readonly"
+                       value="[tvo_shortcode id=<#= shortcode.get('id') #>]">
+            </div>
+            <div class="tvd-col tvd-s4">
+					<span class="tvo-copy-container">
+						<a class="tve-copy-to-clipboard tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green tvd-btn-small tvd-right"
+                           href="javascript:void(0)">
+		                    <span class="tvo-copy-text"><?php echo __( 'Copy', 'thrive-ovation' ) ?></span>
+						</a>
+					</span>
+            </div>
+            <# } else { #>
+            <div class="tvd-col tvd-s12 tvd-center-align">
+                <a target="_blank" class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-blue tvd-btn-small"
+                   href="<#= shortcode.get('url') #>">
+                    <span class="tvo-copy-text"><?php echo __( 'Edit', 'thrive-ovation' ) ?></span>
+                </a>
+            </div>
+            <# } #>
+        </div>
+    </div>
+</div>

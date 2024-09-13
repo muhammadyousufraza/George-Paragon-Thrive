@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="108" height="108" viewBox="0 0 108 108">
+    <defs>
+        <circle id="dqo2dfrufa" cx="54" cy="54" r="54"/>
+        <path id="biptngxb0c" d="M0 0H96V68H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g transform="translate(-374 -280) translate(278 153) translate(96 127)">
+                        <mask id="1ufvyiyz1b" fill="#fff">
+                            <use xlink:href="#dqo2dfrufa"/>
+                        </mask>
+                        <use fill="#EAEFEF" xlink:href="#dqo2dfrufa"/>
+                        <g mask="url(#1ufvyiyz1b)">
+                            <g transform="translate(10 9)">
+                                <path fill="#B7E1CC" stroke="#368A79" stroke-linejoin="round" stroke-width="2" d="M0 2.7C3.677 1.512 7.35.918 11.02.918s7.344.594 11.02 1.782V90H0V2.7z"/>
+                                <path fill="#A3D4FF" fill-opacity=".6" stroke="#368A79" stroke-linejoin="round" stroke-width="2" d="M0 65.204L22.041 65.204 22.041 74.388 0 74.388z"/>
+                                <path fill="#B7E1CC" stroke="#368A79" stroke-linejoin="round" stroke-width="2" d="M22.04 2.7C25.719 1.512 29.392.918 33.062.918c3.67 0 7.344.594 11.02 1.782V90h-22.04V2.7z"/>
+                                <path fill="#A3D4FF" fill-opacity=".6" stroke="#368A79" stroke-linejoin="round" stroke-width="2" d="M22.041 65.204L44.082 65.204 44.082 74.388 22.041 74.388z"/>
+                                <g stroke="#368A79" stroke-width="2">
+                                    <path fill="#D6ECF6" stroke-linejoin="round" d="M0 0c3.367 1.224 6.735 1.837 10.102 1.837S16.837 1.224 20.204 0v86.327c-3.367-1.225-6.735-1.837-10.102-1.837S3.367 85.102 0 86.327V0z" transform="rotate(-15 45.088 -168.677)"/>
+                                    <path stroke-linecap="round" d="M6.429 8.416L6.429 77.911M13.776 8.416L13.776 77.911" transform="rotate(-15 45.088 -168.677)"/>
+                                </g>
+                                <circle cx="11.02" cy="16.531" r="6.429" fill="#51C22C" fill-opacity=".5" stroke="#368A79" stroke-linejoin="round" stroke-width="2"/>
+                                <circle cx="33.061" cy="16.531" r="6.429" fill="#51C22C" fill-opacity=".5" stroke="#368A79" stroke-linejoin="round" stroke-width="2"/>
+                                <g stroke-linecap="round">
+                                    <path stroke="#368A79" stroke-width="2" d="M0 .918L12.857.918M0 5.51L12.857 5.51" transform="translate(4.592 30.306)"/>
+                                </g>
+                                <g stroke-linecap="round">
+                                    <path stroke="#368A79" stroke-width="2" d="M0 .918L12.857.918M0 5.51L12.857 5.51" transform="translate(26.633 30.306)"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="translate(-374 -280) translate(278 153) translate(96 127) translate(3 6)">
+                        <mask id="1d83tjbygd" fill="#fff">
+                            <use xlink:href="#biptngxb0c"/>
+                        </mask>
+                        <g mask="url(#1d83tjbygd)">
+                            <g transform="translate(7 3)">
+                                <path fill="#B7E1CC" stroke="#368A79" stroke-linejoin="round" stroke-width="2" d="M0 2.7C3.677 1.512 7.35.918 11.02.918s7.344.594 11.02 1.782V90H0V2.7z"/>
+                                <path fill="#A3D4FF" fill-opacity=".6" stroke="#368A79" stroke-linejoin="round" stroke-width="2" d="M0 65.204L22.041 65.204 22.041 74.388 0 74.388z"/>
+                                <path fill="#B7E1CC" stroke="#368A79" stroke-linejoin="round" stroke-width="2" d="M22.04 2.7C25.719 1.512 29.392.918 33.062.918c3.67 0 7.344.594 11.02 1.782V90h-22.04V2.7z"/>
+                                <path fill="#A3D4FF" fill-opacity=".6" stroke="#368A79" stroke-linejoin="round" stroke-width="2" d="M22.041 65.204L44.082 65.204 44.082 74.388 22.041 74.388z"/>
+                                <g stroke="#368A79" stroke-width="2">
+                                    <path fill="#D6ECF6" stroke-linejoin="round" d="M0 0c3.367 1.224 6.735 1.837 10.102 1.837S16.837 1.224 20.204 0v86.327c-3.367-1.225-6.735-1.837-10.102-1.837S3.367 85.102 0 86.327V0z" transform="rotate(-15 45.088 -168.677)"/>
+                                    <path stroke-linecap="round" d="M6.429 8.416L6.429 77.911M13.776 8.416L13.776 77.911" transform="rotate(-15 45.088 -168.677)"/>
+                                </g>
+                                <circle cx="11.02" cy="16.531" r="6.429" fill="#A8E095" stroke="#368A79" stroke-linejoin="round" stroke-width="2"/>
+                                <circle cx="33.061" cy="16.531" r="6.429" fill="#A8E095" stroke="#368A79" stroke-linejoin="round" stroke-width="2"/>
+                                <g stroke-linecap="round">
+                                    <path stroke="#368A79" stroke-width="2" d="M0 .918L12.857.918M0 5.51L12.857 5.51" transform="translate(4.592 30.306)"/>
+                                </g>
+                                <g stroke-linecap="round">
+                                    <path stroke="#368A79" stroke-width="2" d="M0 .918L12.857.918M0 5.51L12.857 5.51" transform="translate(26.633 30.306)"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,38 @@
+<div class="tvd-license-modal-content <#= model.license_class #>">
+	<img class="tvd-license-icon"
+		 src="<?php echo TVE_DASH_URL ?>/css/images/licensing/licensing-<#= model.product_class #>-<#= model.license_class #>@2x.webp"
+		 alt="License icon"/>
+	<div>
+		<h3>
+			<?php _e( 'Heads up! Your ', 'thrive-dash' ); ?>
+			<#= model.title #>
+			<?php _e( ' license has expired', 'thrive-dash' ); ?>
+		</h3>
+		<p><?php _e( "An active license is needed to access your software or edit your content. You’ll also get access to new features, updates, security improvements, templates and support. Your visitors will still be able to access any content you've created.", 'thrive-dash' ); ?></p>
+		<# if ( model.license_class === 'grace-period' ) { #>
+		<p>
+			<?php
+			echo sprintf(
+				esc_html__( 'You may close this lightbox and continue using your software during your grace period for another %s.', 'thrive-dash' ), '<strong> <#= model.grace_time #> ' . __( 'days', 'thrive-dash' ) . '</strong>'
+			)
+			?>
+		</p>
+		<# } #>
+
+		<p>
+			<?php echo __( "Doesn't sound right? Your license might need to be refreshed.", 'thrive-dash' ); ?>
+			<br>
+			<a href="<?php echo TD_TTW_User_Licenses::get_instance()->get_recheck_url(); ?>">
+				<?php echo __( 'Click here to refresh your license now.', 'thrive-dash' ) ?>
+			</a>
+		</p>
+
+		<div class="tvd-license-buttons">
+			<button class="tvd-button-empty"
+					onclick="window.open('https://help.thrivethemes.com/en/articles/8223498-what-happens-when-your-thrive-product-license-expires', '_blank')">
+				<?php _e( 'Learn more', 'thrive-dash' ); ?></button>
+			<button class="tvd-button-action"
+					onclick="window.open('<#= model.license_link #>', '_blank')"><?php _e( 'Renew now', 'thrive-dash' ); ?></button>
+		</div>
+	</div>
+</div>

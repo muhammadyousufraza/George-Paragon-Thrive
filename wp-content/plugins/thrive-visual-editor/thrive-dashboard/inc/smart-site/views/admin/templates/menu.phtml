@@ -1,0 +1,34 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+<ul>
+	<li class="<#= page === 'global-fields' ? 'active' : '' #>">
+		<a href="#global-fields">
+			<?php echo dashboard_icon( 'global-fields' ) ?>
+			<span>
+                <?php _e( 'Global Fields', 'thrive-dash' ); ?>
+            </span>
+		</a>
+	</li>
+	<?php if ( tvd_content_sets()->show_ui() ) : ?>
+		<li class="<#= page === 'content-sets' ? 'active' : '' #>">
+			<a href="#content-sets">
+				<?php echo dashboard_icon( 'content-sets' ) ?>
+				<span>
+                <?php _e( 'Content Sets', 'thrive-dash' ); ?>
+            </span>
+			</a>
+		</li>
+	<?php endif; ?>
+</ul>
+<a href="<?php echo admin_url( 'admin.php?page=tve_dash_section' ); ?>" class="tvd-waves-effect tvd-waves-light tvd-btn-small tvd-btn-gray tvd-tss-back">
+	<?php echo __( "Back To Dashboard", 'thrive-dash' ); ?>
+</a>

@@ -1,0 +1,19 @@
+<div class="notice error tve-dashboard-license-message tvd-license <?php echo $classes ?>">
+	<svg class="td-icon">
+		<use xlink:href="#icon-multiple"></use>
+	</svg>
+	<h4><?php echo __( 'Multiple thrive subscriptions have expired.', 'thrive-dash' ) ?></h4>
+	<p>
+		<?php echo __( "An active license is needed to access your software or edit your content. You’ll also get access to new features, updates, security improvements, templates and support. Your visitors will still be able to access any content you've created.", 'thrive-dash' ) . ' ' . $extra_text ?>
+		<?php echo __( "Doesn't sound right? Your license might need to be refreshed.", 'thrive-dash' ); ?>
+		<a href="<?php echo TD_TTW_User_Licenses::get_instance()->get_recheck_url(); ?>">
+			<?php echo __( 'Click here to refresh your license now.', 'thrive-dash' ) ?>
+		</a>
+	</p>
+	<div>
+		<a href="https://help.thrivethemes.com/en/articles/8223498-what-happens-when-your-thrive-product-license-expires"
+		   target="_blank"><?php echo __( 'Learn more', 'thrive-dash' ) ?></a>
+		<a class="tve-license-link" target="_blank"
+		   href="<?php echo tvd_get_individual_plugin_license_link() ?>"><?php echo __( 'Renew now', 'thrive-dash' ) ?></a>
+	</div>
+</div>

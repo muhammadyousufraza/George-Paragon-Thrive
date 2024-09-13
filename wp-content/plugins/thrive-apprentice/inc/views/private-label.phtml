@@ -1,0 +1,19 @@
+<?php
+
+/** @var $post TVA_Post */
+$post              = $data['post'];
+$allowed           = $data['allowed'];
+$is_parent_allowed = isset( $data['is_parent_allowed'] ) ? (bool) $data['is_parent_allowed'] : true;
+?>
+
+<?php if ( false === $allowed && $is_parent_allowed === true ) : ?>
+	<?php $term = wp_get_post_terms( $post->ID, TVA_Const::COURSE_TAXONOMY ); ?>
+	<?php if ( isset( $term[0] ) ) : ?>
+		<?php $label = TVA_Dynamic_Labels::get_course_label( $term[0] ); ?>
+		<span class="tva-cm-members-only tva_members_only-<?php echo $label['ID']; ?>"">
+			<span>
+				<?php echo ! empty( $label['title'] ) ? $label['title'] : __( 'Members Only', 'thrive-apprentice' ); ?>
+			</span>
+		</span>
+	<?php endif; ?>
+<?php endif; ?>

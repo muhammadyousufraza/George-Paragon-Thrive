@@ -1,0 +1,23 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tvd-cs-empty">
+    <?php echo dashboard_icon( 'content-sets' ) ?>
+    <p>
+        <b><?php echo esc_html__( 'No content sets added', 'thrive-dash' ); ?></b>
+        <br>
+        <?php
+        echo sprintf(
+            esc_html__( "Click %s button to create your first set", 'thrive-dash' ),
+            '<a href="javascript:void(0);" class="tva-add-button click" data-fn="addSet">+ ' . esc_html__( 'Add Set', 'thrive-dash' ) . '</a>'
+        ); ?>
+    </p>
+</div>

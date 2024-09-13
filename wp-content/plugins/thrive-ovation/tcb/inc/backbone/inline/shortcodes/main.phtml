@@ -1,0 +1,24 @@
+<div class="fr-link-insert-layer fr-layer fr-active">
+
+	<label for="fr-dropdown-categories-list"><?php echo __( 'Dynamic text', 'thrive-cb' ); ?></label>
+
+	<select class="fr-input-line" id="fr-dropdown-categories-list">
+		<option value="" disabled selected><?php echo __( 'Select source', 'thrive-cb' ); ?></option>
+		<# shortcodeCategories.forEach( category => { #>
+		<option value="<#= category #>"><#= utils.updatePostTypeLabel(category) #></option>
+		<# }); #>
+	</select>
+
+	<div class="tve-options-list-container"></div>
+
+	<div class="tve-custom-input-container"></div>
+
+	<div class="fr-action-buttons row between-xs reverse">
+		<button class="fr-command fr-submit" role="button" id="fr-shortcode-popup-action-button" data-cmd="shortcodeInsert" tabindex="5" type="button">
+			<?php echo __( 'Insert', 'thrive-cb' ); ?>
+		</button>
+		<button class="fr-command fr-danger fr-remove fr-hidden" role="button" data-cmd="shortcodeRemove" tabindex="6" type="button">
+			<?php echo __( 'Remove', 'thrive-cb' ); ?>
+		</button>
+	</div>
+</div>

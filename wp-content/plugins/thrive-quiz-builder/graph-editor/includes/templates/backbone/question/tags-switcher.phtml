@@ -1,0 +1,10 @@
+<div class="tvd-switch tvd-tooltipped" data-tooltip="" data-position="bottom">
+	<label for="tge-toggle-<#= item.get('key') #>">
+		<#= item.get('label') #>
+	</label>
+	<label>
+		<input id="tge-toggle-<#= item.get('key') #>" type="checkbox"
+		<#= item.is_checked() ? 'checked' : '' #>>
+			<span class="tvd-lever"></span>
+	</label>
+</div>

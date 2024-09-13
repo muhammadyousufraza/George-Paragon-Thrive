@@ -1,0 +1,34 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div class="tvd-tss-field-data">
+	<span><?php echo __( 'Field Name', 'thrive-dash' ) ?></span>
+	<div class="tvd-input-field">
+		<input id="tvd-tss-field-name" autocomplete="location" class="input-change <#= model.get( 'default_field' )? 'tvd-disabled tvd-no-focus' : '' #>" type="text" value="<#= model.get('name') #>"
+			   data-field="name"
+			   placeholder="<?php echo __( 'Company Location', 'thrive-dash' ) ?>">
+		<label for="tvd-tss-field-name"><?php echo __( 'Field Name', 'thrive-dash' ) ?></label>
+	</div>
+</div>
+
+<div class="tvd-tss-field-data">
+	<span><?php echo __( 'Field Value', 'thrive-dash' ) ?></span>
+	<div class="tvd-input-field">
+		<input id="tvd-tss-field-location" class="input-change" type="text" value="<#= model.get('data').location ? model.get('data').location : '' #>"
+		       data-field="data_location" placeholder="<?php echo __( 'e.g New York', 'thrive-dash' ) ?>">
+		<label for="tvd-tss-field-text"><?php echo __( 'Location', 'thrive-dash' ) ?></label>
+	</div>
+
+	<div id="tvd-tss-google-map">
+
+	</div>
+</div>

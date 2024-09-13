@@ -1,0 +1,21 @@
+<div class="panel-text">
+	<#= this.model.config.label #>
+</div>
+<style class="preview-style" type="text/css"></style>
+<div class="tve-style-options p-0 mt-0">
+	<div class="flex-mid p-5 tcb-text-center no-templates" style="flex: 0 0 100%; display: none"><?php echo __( 'This menu has no item styles. You have to choose a menu template to populate this list - each menu template comes with a default set of styled menu items.', 'thrive-cb' ); ?></div>
+	<# _.each(this.model.config.items, function(set, setIndex) { #>
+	<div class="flex-mid p-5 style-set set-<#=set.id#>" style="flex: 0 0 100%"><#=set.name#></div>
+	<div class="flex-mid wrap style-set set-<#=set.id#>">
+		<# _.each( set.styles, function( item, index ) { #>
+		<# if ( item ) { #>
+		<div class="tve-select-item split ha wa click menu-item p-5 mb-0" data-value="<#=setIndex + '::' + index #>" data-fn="select">
+			<ul class="menu-preview">
+				<li class="li-<#=index#>"><a href="javascript:void(0)"><span class="tve-disabled-text-inner"><#=item.name#></span></a></li>
+			</ul>
+		</div>
+		<# } #>
+		<#}, this ) #>
+	</div>
+	<# }, this); #>
+</div>

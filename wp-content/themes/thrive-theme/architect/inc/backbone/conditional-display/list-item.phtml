@@ -1,0 +1,51 @@
+<div class="display-item click mouseenter <#= display.isActive()? 'active':'' #>" data-key="<#= display.getKey() #>" data-fn-click="activateDisplay" data-fn-mouseenter="hoverDisplay">
+	<?php tcb_icon( 'dots2' ); ?>
+	<div class="display-name-wrapper">
+		<span class="display-name" data-key="<#= display.getKey() #>"><#= display.name() #></span>
+		<# if(!display.isDefault()) { #>
+		<span class="display-index"><#= display.get( 'order' ) + 1 #>.</span>
+		<button class="click" data-fn="editDisplayName" data-key="<#= display.getKey() #>" data-side="top" data-tooltip="Edit"><?php tcb_icon( 'pen-light' ); ?></button>
+		<# } #>
+	</div>
+
+	<div class="display-actions-wrapper">
+		<# if(!display.isDefault()) { #>
+		<button class="click" data-fn="resetDisplay" data-key="<#= display.getKey() #>" data-side="top" data-tooltip="Reset"><?php tcb_icon( 'undo-regular' ); ?></button>
+		<# } #>
+
+		<# if(display.isDefault() && hasDisplays) { #>
+		<button class="click" data-fn="toggleVisibility" data-key="<#= display.getKey() #>" data-side="top" data-tooltip="Visibility">
+			<# if(display.isVisible()) { #>
+			<?php tcb_icon( 'eye-light' ); ?>
+			<# } else { #>
+			<?php tcb_icon( 'eye-light-slash' ); ?>
+			<# } #>
+		</button>
+		<# } #>
+
+		<button class="click" data-fn="duplicateDisplay" data-key="<#= display.getKey() #>" data-side="top" data-tooltip="Duplicate"><?php tcb_icon( 'duplicate' ); ?></button>
+
+		<# if(!display.isDefault()) { #>
+		<button class="click<#= display.hasConditions() ? '':' conditions-warning'#>"
+				data-fn="openConditionsModal"
+				data-key="<#= display.getKey() #>"
+				data-side="top" data-tooltip-config='{"warning":<#= display.hasConditions() ? 0:1#>}' data-tooltip="<#= display.hasConditions() ? 'Conditions':'Display conditions are not set'#>">
+			<?php tcb_icon( 'control-switch' ); ?>
+		</button>
+		<# } #>
+
+		<# if(!display.isDefault() && !display.isActive()) { #>
+		<button class="click additional-actions" data-fn="openActionsTooltip"><?php tcb_icon( 'three-dots' ); ?></button>
+		<# } #>
+		<div class="hidden additional-actions-tooltip">
+			<div class="click additional-action" data-fn="removeDisplay" data-key="<#= display.getKey() #>">
+				<?php tcb_icon( 'trash-light' );
+				echo esc_html__( 'Delete', 'thrive-cb' ); ?>
+			</div>
+		</div>
+	</div>
+
+	<# if(!display.isDefault() && !display.hasConditions()) { #>
+	<span class="no-conditions"><?php tcb_icon( 'warning' ); ?></span>
+	<# } #>
+</div>

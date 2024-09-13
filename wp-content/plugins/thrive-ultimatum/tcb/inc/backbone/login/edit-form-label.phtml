@@ -1,0 +1,26 @@
+<div class="tcb-edit-item-category" id="text">
+	<div class="row margin-top-10 flex-mid">
+		<div class="col-xs-5">
+			<?php echo __( 'Label', 'thrive-cb' ); ?>
+		</div>
+		<div class="col-xs-7">
+			<input type="text" class="change input tcb-ce-item-label" data-fn="changeSetting" data-setting="label"/>
+		</div>
+	</div>
+	<div class="row margin-top-10 for-text-input flex-mid">
+		<div class="col-xs-5">
+			<?php echo __( 'Placeholder', 'thrive-cb' ); ?>
+		</div>
+		<div class="col-xs-7">
+			<input type="text" class="change input tcb-ce-item-placeholder" data-fn="changeSetting" data-setting="placeholder"/>
+		</div>
+	</div>
+	<div class="for-text-input mt-10">
+		<div class="tve-control tve-disabled" data-view="Switch" data-key="required" data-checked="1" data-label="<?php esc_attr_e( 'Required', 'thrive-cb' ); ?>"></div>
+		<div class="tve-control" data-view="Switch" data-key="showLabel" data-label="<?php esc_attr_e( 'Show label', 'thrive-cb' ); ?>"></div>
+	</div>
+	<div class="for-text-input">
+		<hr class="mt-10">
+		<div class="autofill"></div>
+	</div>
+</div>

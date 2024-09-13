@@ -1,0 +1,39 @@
+<div class="api-field">
+	<div class="field-description">
+		<?php echo __( 'Choose your mailing list', 'thrive-cb' ); ?>
+	</div>
+
+	<div class="control-grid">
+		<select class="api-list change" data-fn="setupChange" data-name="list">
+			<# if ( api.get('lists').length == 0 ) { #>
+			<#= TVE.tpl( 'util/option', {value:0, selected: true, text: '<?php echo __( 'No lists found', 'thrive-cb' ); ?>'}) #>
+			<# } #>
+
+			<# _.each(api.get('lists'), function(item) { #>
+			<#= TVE.tpl( 'util/option', {value:item.id, selected: (api.getConfig('list')==item.id), text: item.name}) #>
+			<# } ) #>
+		</select>
+
+		<span class="click tve-refresh-api-list" data-fn="forceGet" data-tooltip="<?php echo __( 'Refresh', 'thrive-cb' ); ?>" data-side="top"> <?php tcb_icon( 'redo-regular' ) ?></span>
+	</div>
+</div>
+
+<div class="api-field">
+	<div class="field-description">
+		<?php echo __( 'Choose the type of optin you would like for the Mailster integration', 'thrive-cb' ) ?>
+	</div>
+
+	<select class="tve-api-extra tl-api-connection-list" name="optin">
+		<#= TVE.tpl( 'util/option', {value:'s', selected: (api.getConfig('optin') === 's'), text: '<?php echo __( 'Single optin', 'thrive-cb' ) ?>'}) #>
+		<#= TVE.tpl( 'util/option', {value:'d', selected: (api.getConfig('optin') === 'd'), text: '<?php echo __( 'Double optin', 'thrive-cb' ) ?>'}) #>
+	</select>
+
+	<div class="field-description">
+		<?php
+		$url  = 'https://thrivethemes.com/tkb_item/what-is-the-difference-between-a-single-opt-in-and-a-double-opt-in/';
+
+		echo sprintf( '<a href="' . $url . '" target="_blank">%s</a>', __( 'Check what double optin means', 'thrive-cb' ) );
+		?>
+	</div>
+
+</div>

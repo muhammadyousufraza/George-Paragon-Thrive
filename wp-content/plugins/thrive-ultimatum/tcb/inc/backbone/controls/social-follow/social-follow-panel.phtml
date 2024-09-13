@@ -1,0 +1,73 @@
+<div class="drop-panel panel-light">
+	<div class="link-option-panel">
+		<div class="tcb-create-network-header">
+			<span class="label tcb-network-name-label"></span>
+			<span class="tcb-delete-network click" data-fn="showConfirm">
+				<?php tcb_icon( 'delete' ) ?>
+				<?php echo __( 'Delete', 'thrive-cb' ) ?>
+			</span>
+		</div>
+		<div class="tcb-network-separator">
+			<hr>
+		</div>
+		<div class="tcb-network-icon-picker pb-5"></div>
+		<hr>
+		<div class="tve-link-options flex space-between wrap">
+			<span class="label"><?php echo __( 'Social Link', 'thrive-cb' ) ?></span>
+			<div class="tve-link-tabs"></div>
+			<div class="tve-link-boxes">
+				<div data-tab="static" class="static-option">
+					<label><?php echo __( 'Social Name', 'thrive-cb' ) ?></label>
+					<div>
+						<input class="tcb-network-name" type="text" class="text" value="">
+					</div>
+					<label><?php echo __( 'URL', 'thrive-cb' ) ?></label>
+					<div>
+						<input class="tcb-network-url" type="text" class="text" value="">
+					</div>
+
+
+				</div>
+				<div data-tab="dynamic" class="dynamic-option">
+					<div class="tcb-dynamic-networks">
+						<div class="input mb-10">
+							<select class="change tcb-network-type" data-fn="changeNetworkType"></select>
+						</div>
+						<div class="input">
+							<select class="change tcb-networks" data-fn="changeNetwork"></select>
+						</div>
+					</div>
+					<!--TODO add a notice for author also -->
+					<div class="info-text grey-text">
+					<span>
+						<?php echo __( 'You can edit this link in the ', 'thrive-cb' ); ?>
+						<a href="<?php echo admin_url( 'admin.php?page=tve_dash_smart_site' ); ?>" target="_blank" class="blue-text">
+							<?php echo __( 'Smart Site Dashboard', 'thrive-cb' ); ?>
+						</a>
+					</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tcb-flex space-between mt-10">
+			<div class="elem-link-newtab"></div>
+			<div class="elem-link-nofollow"></div>
+		</div>
+	</div>
+	<div class="tcb-confirm-delete-network">
+		<div class="tcb-delete-title"><?php echo __( 'Delete Network', 'thrive-cb' ) ?></div>
+		<span class="tcb-delete-text"><?php echo __( 'Are you sure you want to delete the ', 'thrive-cb' ) ?></span>
+		<span class="tcb-delete-text tcb-network-name-label"></span>
+		<span class="tcb-delete-text"><?php echo __( ' network?', 'thrive-cb' ) ?></span>
+	</div>
+	<div class="action-buttons control-grid">
+		<div data-fn="onCancel" class="click tve-button drop-panel-action btn-cancel"><?php echo __( 'Cancel', 'thrive-cb' ) ?></div>
+		<div data-fn="onApply" class="click tve-button drop-panel-action btn-apply"><?php echo __( 'Apply', 'thrive-cb' ) ?></div>
+	</div>
+
+	<div class="action-buttons control-grid tcb-delete-confirm">
+		<div data-fn="hide" class="click tve-button drop-panel-action btn-cancel"><?php echo __( 'Cancel', 'thrive-cb' ) ?></div>
+		<div data-fn="deleteNetwork" class="click tve-button drop-panel-action btn-apply"><?php echo __( 'Delete', 'thrive-cb' ) ?></div>
+	</div>
+	<div class="tcb-panel-arrow"></div>
+</div>

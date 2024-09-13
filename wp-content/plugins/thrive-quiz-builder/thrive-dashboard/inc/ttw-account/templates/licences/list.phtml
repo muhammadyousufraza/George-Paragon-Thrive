@@ -1,0 +1,38 @@
+<?php /** @var $this TD_TTW_User_Licenses */ ?>
+
+<div class="td-license-cnt">
+	<h2 class="products-h2">
+		<?php echo __( 'License Details', 'thrive-dash' ) ?>
+	</h2>
+	<div class="td-refresh-license">
+		<a href="<?php echo $this->get_recheck_url() ?>">
+			<?php echo __( 'Refresh', 'thrive-dash' ) ?>
+		</a>
+	</div>
+	<?php foreach ( $this->get_licenses_details() as $license_data ) : ?>
+		<?php $license = new TD_TTW_License( $license_data ); ?>
+		<?php /** @var TD_TTW_License $license */ ?>
+		<div class="td-ttw-license-details">
+			<span> <?php echo $license->get_name() ?> </span>
+			<span class="td-badge<?php echo ! $license->is_active() ? '-expired' : '' ?>">
+				<?php echo $license->get_state(); ?>
+			</span>
+
+			<div class="td-rcnt">
+				<?php if ( ! $license->is_refunded() && ! empty( $license->get_expiration() ) ) : ?>
+					<span><?php echo __( 'Renewal date - ', 'thrive-dash' ) . $license->get_expiration(); ?></span>
+				<?php elseif ( ! empty( $license->get_refunded_date() ) ) : ?>
+					<span><?php echo __( 'Refund date - ', 'thrive-dash' ) . $license->get_refunded_date(); ?></span>
+				<?php endif; ?>
+			</div>
+
+			<?php if ( ! $license->is_active() ) : ?>
+				<div class="td-renew-license">
+					<a href="<?php echo TD_TTW_Update_Manager::SUITE_URL ?>">
+						<?php echo __( 'Renew license', 'thrive-dash' ) ?>
+					</a>
+				</div>
+			<?php endif; ?>
+		</div>
+	<?php endforeach; ?>
+</div>

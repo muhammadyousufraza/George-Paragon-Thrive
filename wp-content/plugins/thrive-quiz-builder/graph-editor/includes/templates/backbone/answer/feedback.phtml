@@ -1,0 +1,5 @@
+<?php
+$placeholder = __( 'Whatever you type here will be displayed if the user chooses this answer', 'thrive-graph-editor' );
+?>
+<p><?php echo __( 'Feedback', 'thrive-graph-editor' ) ?></p>
+<textarea id="tge-question-feedback" rows="1" data-bind="feedback" placeholder="<?php echo $placeholder ?>"><#= item.get( 'feedback' ) #></textarea>

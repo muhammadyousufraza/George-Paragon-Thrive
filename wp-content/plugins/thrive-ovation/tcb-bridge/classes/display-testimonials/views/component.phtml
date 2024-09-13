@@ -1,0 +1,50 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-ovation
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+
+<div id="tve-display_testimonials-component" class="tve-component" data-view="display_testimonials">
+	<div class="dropdown-header component-name" data-prop="docked">
+		<?php echo esc_html__( 'Display Testimonials', 'thrive-ovation' ); ?>
+	</div>
+	<div class="dropdown-content">
+		<div class="row sep-bottom tcb-text-center post-list-actions">
+			<div class="col-xs-12">
+				<button class="tve-button orange click" data-fn="editMode"><?php echo esc_html__( 'Edit Design', 'thrive-ovation' ); ?></button>
+				<button class="tve-button grey click margin-left-20" data-fn="filterTestimonialsClicked"><?php echo esc_html__( 'Filter Testimonials', 'thrive-ovation' ); ?></button>
+			</div>
+		</div>
+
+		<div class="tve-control mt-10 hide-tablet hide-mobile full-width" data-view="Type"></div>
+
+		<div class="tve-control sep-bottom no-space post-list-actions" data-view="NumberOfItems"></div>
+
+		<div class="tve-control mt-5" data-view="ColumnsNumber"></div>
+
+		<div class="tve-control sep-top" data-view="HorizontalSpace"></div>
+		<div class="tve-control mt-5 mb-5 no-space sep-bottom" data-view="VerticalSpace"></div>
+
+		<div class="tve-control hide-tablet hide-mobile" data-view="PaginationType"></div>
+
+		<div class="tve-advanced-controls extend-grey">
+			<div class="dropdown-header" data-prop="advanced">
+				<span>
+					<?php echo esc_html__( 'Advanced', 'thrive-ovation' ); ?>
+				</span>
+			</div>
+			<div class="dropdown-content pt-0">
+				<span>
+					<?php echo esc_html__( 'No results message', 'thrive-ovation' ); ?>
+					<textarea id="thrive-display-testimonials-no-results-message" class="mt-5 mb-5 change" data-fn="changeNoResultsMessage" placeholder="<?php echo esc_attr__( 'Message that appears when no testimonials are found', 'thrive-ovation' ); ?>"></textarea>
+					<div class="tve-control" data-view="MessageColor"></div>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>

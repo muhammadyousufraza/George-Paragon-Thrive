@@ -1,0 +1,24 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<# if( prev ) { #>
+<a class="tva-prev click" data-fn="previousPage" href="javascript:void(0);"></a>
+<# } else { #>
+<span class="tva-prev"></span>
+<# } #>
+
+&nbsp;&nbsp;<#= currentPage #> <?php echo esc_html__( 'out of', 'thrive-dash' ) ?> <#= totalPages #>&nbsp;&nbsp;
+
+<# if( next ) { #>
+<a class="tva-next click" data-fn="nextPage" href="javascript:void(0);"></a>
+<# } else { #>
+<span class="tva-next"></span>
+<# } #>

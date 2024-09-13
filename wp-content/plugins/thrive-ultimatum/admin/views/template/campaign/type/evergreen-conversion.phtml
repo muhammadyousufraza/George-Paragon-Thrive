@@ -1,0 +1,16 @@
+<# if( collection || shortcodes || thriveBoxes || thriveQuizzes || leadGenPages || lightBoxes) { #>
+<br>
+<div class="control-grid flex-start tvd-no-padding-bottom">
+	<span class="tvd-no-margin grey"><?php echo __( 'Which forms on your site should trigger the countdown? ', 'thrive-ult' ); ?></span>
+	<span class="tvd-icon-info-gray tvd-tooltipped" data-position="top" data-tooltip="<?php echo __( 'Select any form you’ve built in Thrive Leads (search by lead group, Thrivebox or shortcode) and any quiz builder quiz that contains an optin gate. You can also search for any page built in Thrive Architect on your site. Any Thrive Architect lead generation element submission on the selected page will trigger the lockdown.', 'thrive-ult' ) ?>"></span>
+</div>
+<# if((collection && collection.length == 0) && (shortcodes && shortcodes.length == 0) && (thriveBoxes && thriveBoxes.length == 0) && (thriveQuizzes && thriveQuizzes.length == 0)&& (leadGenPages && leadGenPages.length == 0)&& (lightBoxes && lightBoxes.length == 0) ) { #>
+<div class="tvu-no-conversion-posts tvd-small-text grey"><?php echo __( 'No trigger defined', 'thrive-ult' ); ?></div>
+<# } else { #>
+<div class="tvu-evergreen-leads-checkboxes tvd-row">
+	<select id="tvu-trigger-form-ids" class="tvd-browser-default" multiple="multiple"></select>
+</div>
+<# } #>
+
+<div class="tvd-v-spacer"></div>
+<# } #>

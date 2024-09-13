@@ -1,0 +1,78 @@
+<# if(this.model.isDefault()) { #>
+<div class="template-top-label"><#= this.model.label() #></div>
+<# } #>
+
+<div class="template-upper" style="<#= this.model.hasThumbnail() ? this.model.getThumbnailCss() : ''  #>">
+
+	<# if ( ! this.model.hasThumbnail() ) { #>
+	<div class="template-icon">
+		<#= this.model.icon() #>
+	</div>
+	<# } #>
+
+	<# if(this.model.inheritsTemplate() && !this.model.isLandingPage()) { #>
+
+	<div class="template-actions">
+
+		<div><?php echo __( 'Your homepage is currently using the', 'thrive-theme' ); ?> "<#= this.model.title() #>" <?php echo __( 'template', 'thrive-theme' ); ?></div>
+
+		<a target="_blank" href="<#= this.model.get('edit_url') #>">
+			<?php Thrive_Views::svg_icon( 'pen-light' ); ?>
+			<?php echo __( 'Edit existing template', 'thrive-theme' ); ?>
+		</a>
+
+		<div><?php echo __( 'or', 'thrive-theme' ); ?></div>
+
+		<button class="click" data-fn="newHomepage">
+			<?php Thrive_Views::svg_icon( 'new-homepage' ); ?>
+			<?php echo __( 'Create new homepage template', 'thrive-theme' ); ?>
+		</button>
+	</div>
+
+	<# } else { #>
+	<button class="template-edit-button">
+		<a target="_blank" href="<#= this.model.get('edit_url') #>">
+			<?php Thrive_Views::svg_icon( 'pen-light' ); ?>
+			<span><?php echo __( 'Edit', 'thrive-theme' ); ?> <#= this.model.isLandingPage() ? ' Landing Page':'' #></span>
+		</a>
+	</button>
+	<# } #>
+</div>
+
+<div class="template-lower">
+	<div class="template-name-container">
+		<#= this.model.icon() #>
+		<span class="template-name"><#= this.model.name() #></span>
+	</div>
+
+	<# if(!this.model.isLandingPage()) { #>
+	<span class="ttd-dropdown-dots click" data-fn="showOptionsTooltip">
+			<?php Thrive_Views::svg_icon( 'icon-three-dots' ); ?>
+		</span>
+	<# } #>
+
+	<div class="template-meta">
+		<ul>
+			<# if(!this.model.isLandingPage()) { #>
+			<li>
+				<span class="template-label"><?php echo __( 'Layout', 'thrive-theme' ); ?></span>
+				<span class="template-meta-val"><#= this.model.getLayoutName() #></span>
+			</li>
+			<# } #>
+
+			<li>
+				<span class="template-label"><?php echo __( 'Content Type', 'thrive-theme' ); ?></span>
+				<span class="template-meta-val"><#= this.model.getContentType() #></span>
+			</li>
+			<li>
+				<# if(this.model.isLandingPage()) { #>
+				<span class="template-label"><?php echo __( 'Page Set', 'thrive-theme' ); ?></span>
+				<span class="template-meta-val"><#= TTD.CONST.options.landing_page_set #></span>
+				<# } else { #>
+				<span class="template-label"><?php echo __( 'Single or List', 'thrive-theme' ); ?></span>
+				<span class="template-meta-val"><#= this.model.getType() #></span>
+				<# } #>
+			</li>
+		</ul>
+	</div>
+</div>

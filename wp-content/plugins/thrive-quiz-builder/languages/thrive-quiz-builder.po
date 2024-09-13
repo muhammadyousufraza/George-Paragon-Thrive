@@ -1,0 +1,2652 @@
+# Copyright (C) 2024 Thrive Quiz Builder
+# This file is distributed under the same license as the Thrive Quiz Builder package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Thrive Quiz Builder\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Econdig: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Project-Id-Version: Thrive Quiz Builder\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../includes/class-tqb-db.php:1932
+msgid "Copy of "
+msgstr ""
+
+#: ../includes/class-tqb-frontend-ajax-controller.php:85, ../includes/admin/classes/class-tqb-admin-ajax-controller.php:104
+msgid "Method %s not implemented"
+msgstr ""
+
+#: ../includes/class-tqb-frontend-ajax-controller.php:109
+msgid "Share Badge not available"
+msgstr ""
+
+#: ../includes/class-tqb-frontend-ajax-controller.php:123
+msgid "Badge could not be generated"
+msgstr ""
+
+#: ../includes/class-tqb-frontend-ajax-controller.php:202
+msgid "You have nothing"
+msgstr ""
+
+#: ../includes/class-tqb-privacy.php:57, ../includes/class-tqb-privacy.php:73, ../includes/admin/class-tqb-admin.php:72, ../includes/admin/class-tqb-admin.php:73, ../tcb-bridge/editor-elements/class-tcb-dynamic-content-element.php:89, ../tcb-bridge/editor-elements/class-tcb-social-share-badge-element.php:105
+msgid "Thrive Quiz Builder"
+msgstr ""
+
+#: ../includes/class-tqb-privacy.php:97, ../includes/frontend/views/templates/powered-by-thrive-themes.phtml:10
+msgid "Quiz Builder"
+msgstr ""
+
+#: ../includes/class-tqb-privacy.php:108
+msgid "Email"
+msgstr ""
+
+#: ../includes/class-tqb-privacy.php:112
+msgid "Date and Start Time"
+msgstr ""
+
+#: ../includes/class-tqb-privacy.php:116, ../includes/admin/views/templates/reporting/users-list.phtml:62
+msgid "Result"
+msgstr ""
+
+#: ../includes/class-tqb-privacy.php:120
+msgid "Generated Social Badge"
+msgstr ""
+
+#: ../includes/class-tqb-privacy.php:125, ../includes/class-tqb-privacy.php:137
+msgid "Question"
+msgstr ""
+
+#: ../includes/class-tqb-privacy.php:128, ../includes/admin/views/templates/reporting/questions-question.phtml:30, ../includes/admin/views/templates/reporting/questions-question.phtml:32
+msgid "Answer"
+msgstr ""
+
+#: ../includes/class-tqb-progress-settings.php:99
+msgid "COMPLETED"
+msgstr ""
+
+#: ../includes/class-tqb-template-manager.php:327
+msgid "Template saved."
+msgstr ""
+
+#: ../includes/class-tqb-template-manager.php:409
+msgid "No saved templates found"
+msgstr ""
+
+#: ../includes/tqb-data-functions.php:477
+msgid "The quiz is no longer available!"
+msgstr ""
+
+#: ../includes/tqb-global-functions.php:358
+msgid "Conversion rate over time"
+msgstr ""
+
+#: ../includes/tqb-global-functions.php:361, ../includes/admin/views/templates/tests/view.phtml:65, ../includes/admin/views/templates/tests/view.phtml:67, ../includes/admin/views/templates/variations/list.phtml:10
+msgid "Conversion Rate"
+msgstr ""
+
+#: ../includes/tqb-global-functions.php:412
+msgid "Error:"
+msgstr ""
+
+#: ../includes/admin/i18n.php:4
+msgid "Thrive Dashboard"
+msgstr ""
+
+#: ../includes/admin/i18n.php:5, ../includes/admin/classes/class-tqb-product.php:68
+msgid "Quiz Builder Dashboard"
+msgstr ""
+
+#: ../includes/admin/i18n.php:6
+msgid "Reporting"
+msgstr ""
+
+#: ../includes/admin/i18n.php:7
+msgid "Quiz missing template"
+msgstr ""
+
+#: ../includes/admin/i18n.php:8
+msgid "Quiz missing type"
+msgstr ""
+
+#: ../includes/admin/i18n.php:9
+msgid "There was an error while saving the quiz. Please contact the support team."
+msgstr ""
+
+#: ../includes/admin/i18n.php:10, ../includes/admin/views/templates/modals/new-quiz.phtml:35, ../tcb-bridge/tqb-class-hooks.php:431
+msgid "Quiz name"
+msgstr ""
+
+#: ../includes/admin/i18n.php:11
+msgid "Quiz title was modified! "
+msgstr ""
+
+#: ../includes/admin/i18n.php:12
+msgid "There was an error while saving the quiz title. Please contact the support team."
+msgstr ""
+
+#: ../includes/admin/i18n.php:13
+msgid "# of impressions"
+msgstr ""
+
+#: ../includes/admin/i18n.php:14
+msgid "Impressions"
+msgstr ""
+
+#: ../includes/admin/i18n.php:15
+msgid "# of conversions"
+msgstr ""
+
+#: ../includes/admin/i18n.php:16, ../includes/admin/views/templates/modals/stop-variation-test.phtml:14, ../includes/admin/views/templates/modals/stop-variation-test.phtml:16, ../includes/admin/views/templates/tests/view.phtml:58, ../includes/admin/views/templates/tests/view.phtml:60, ../includes/admin/views/templates/variations/list.phtml:9
+msgid "Conversions"
+msgstr ""
+
+#: ../includes/admin/i18n.php:17
+msgid "Your quiz was deleted"
+msgstr ""
+
+#: ../includes/admin/i18n.php:18
+msgid "Quiz Badge was deleted"
+msgstr ""
+
+#: ../includes/admin/i18n.php:19
+msgid "There was an error while deleting your quiz. Please contact the support team."
+msgstr ""
+
+#: ../includes/admin/i18n.php:20
+msgid "There was an error while deleting the badge. Please contact the support team."
+msgstr ""
+
+#: ../includes/admin/i18n.php:21
+msgid "Name is required"
+msgstr ""
+
+#: ../includes/admin/i18n.php:22
+msgid "The visitor will be given one of the categories you've set in this card, based on how they responded to the questions in the quiz. e.g \"You are an Introvert\""
+msgstr ""
+
+#: ../includes/admin/i18n.php:23
+msgid "The visitor will be given a percentage score based on how they responded to the questions in the quiz.  e.g \"You are 35% likely to survive a zombie attack\"."
+msgstr ""
+
+#: ../includes/admin/i18n.php:24
+msgid "The visitor will receive 1 point for each correct answer he guesses."
+msgstr ""
+
+#: ../includes/admin/i18n.php:25
+msgid "The visitor will be given a number score based on how they responded to the questions in the quiz.  e.g \"Your score is 200 points\"."
+msgstr ""
+
+#: ../includes/admin/i18n.php:26
+msgid "The participant in this quiz type doesn't receive a specific result. Instead the results page contains the same content for everyone."
+msgstr ""
+
+#: ../includes/admin/i18n.php:27
+msgid "Not set"
+msgstr ""
+
+#: ../includes/admin/i18n.php:28
+msgid "Choose quiz type"
+msgstr ""
+
+#: ../includes/admin/i18n.php:29
+msgid "Choose a Quiz Style"
+msgstr ""
+
+#: ../includes/admin/i18n.php:30
+msgid "Create a social share badge"
+msgstr ""
+
+#: ../includes/admin/i18n.php:31
+msgid "You need to set up at least 2 possible results for this type of quiz."
+msgstr ""
+
+#: ../includes/admin/i18n.php:32
+msgid "Please select style first!"
+msgstr ""
+
+#: ../includes/admin/i18n.php:33, ../includes/admin/views/templates/modals/edit-quiz-type.phtml:37, ../includes/admin/views/templates/modals/edit-quiz-type.phtml:69, ../includes/admin/views/templates/modals/edit-quiz-type.phtml:97, ../includes/admin/views/templates/modals/edit-quiz-type.phtml:124, ../includes/admin/views/templates/modals/filter-reports.phtml:68, ../includes/admin/views/templates/modals/settings.phtml:32, ../includes/admin/views/templates/results-links/form.phtml:21, ../includes/admin/views/templates/modals/quiz/settings.phtml:34
+msgid "Save"
+msgstr ""
+
+#: ../includes/admin/i18n.php:34, ../includes/admin/views/templates/modals/add-variation.phtml:18, ../includes/admin/views/templates/modals/edit-quiz-type.phtml:32, ../includes/admin/views/templates/modals/new-quiz.phtml:20, ../includes/admin/views/templates/modals/new-quiz.phtml:49, ../tcb-bridge/editor-lightbox/save-validation.php:14
+msgid "Continue"
+msgstr ""
+
+#: ../includes/admin/i18n.php:35
+msgid "Badge could not be created"
+msgstr ""
+
+#: ../includes/admin/i18n.php:36, ../includes/admin/views/templates/reporting/flow-section.phtml:8
+msgid "Splash Page"
+msgstr ""
+
+#: ../includes/admin/i18n.php:37
+msgid "Q&A"
+msgstr ""
+
+#: ../includes/admin/i18n.php:38
+msgid "Opt-in Gate"
+msgstr ""
+
+#: ../includes/admin/i18n.php:39, ../includes/admin/i18n.php:100, ../includes/admin/classes/class-tqb-results-page.php:125, ../includes/admin/views/templates/reporting/flow-section.phtml:25
+msgid "Results Page"
+msgstr ""
+
+#: ../includes/admin/i18n.php:40
+msgid "Variation name"
+msgstr ""
+
+#: ../includes/admin/i18n.php:41
+msgid "Variation title was modified!"
+msgstr ""
+
+#: ../includes/admin/i18n.php:42
+msgid "There was an error while saving the variation title. Please contact the support team."
+msgstr ""
+
+#: ../includes/admin/i18n.php:43
+msgid "Variation was archived!"
+msgstr ""
+
+#: ../includes/admin/i18n.php:44
+msgid "There was an error while archiving the variation. Please contact the support team."
+msgstr ""
+
+#: ../includes/admin/i18n.php:45
+msgid "Variation was deleted!"
+msgstr ""
+
+#: ../includes/admin/i18n.php:46
+msgid "There was an error while deleting the variation. Please contact the support team."
+msgstr ""
+
+#: ../includes/admin/i18n.php:47
+msgid "There was an error while creating the quiz structure. Please contact the support team."
+msgstr ""
+
+#: ../includes/admin/i18n.php:48, ../includes/admin/views/templates/modals/variation-start-test.phtml:4
+msgid "Start New A/B Test"
+msgstr ""
+
+#: ../includes/admin/i18n.php:49, ../includes/admin/views/templates/modals/variation-start-test.phtml:13
+msgid "Test title is required"
+msgstr ""
+
+#: ../includes/admin/i18n.php:50
+msgid "You need a conversion goal for your test"
+msgstr ""
+
+#: ../includes/admin/i18n.php:51
+msgid "Auto win minimum conversions is required"
+msgstr ""
+
+#: ../includes/admin/i18n.php:52
+msgid "Auto win minimum duration is required"
+msgstr ""
+
+#: ../includes/admin/i18n.php:53
+msgid "Auto win chance to beat original is required"
+msgstr ""
+
+#: ../includes/admin/i18n.php:54
+msgid "This value must be a positive integer number!"
+msgstr ""
+
+#: ../includes/admin/i18n.php:55
+msgid "This value must be a positive value lower than 100!"
+msgstr ""
+
+#: ../includes/admin/i18n.php:56
+msgid "Choose Winner"
+msgstr ""
+
+#: ../includes/admin/i18n.php:57
+msgid "Minimum two form types are required to be selected to perform a test"
+msgstr ""
+
+#: ../includes/admin/i18n.php:58
+msgid "Reset Form Statistics"
+msgstr ""
+
+#: ../includes/admin/i18n.php:59, ../includes/admin/views/templates/modals/variation-start-test.phtml:50
+msgid "Automatic Winner Settings"
+msgstr ""
+
+#: ../includes/admin/i18n.php:60
+msgid "Stopped on "
+msgstr ""
+
+#: ../includes/admin/i18n.php:61
+msgid "Test was deleted!"
+msgstr ""
+
+#: ../includes/admin/i18n.php:62
+msgid "The variation could not be stopped!"
+msgstr ""
+
+#: ../includes/admin/i18n.php:63
+msgid "Copy of"
+msgstr ""
+
+#: ../includes/admin/i18n.php:64
+msgid "Some of the forms do not have any content. Please edit all the form designs before starting a test."
+msgstr ""
+
+#: ../includes/admin/i18n.php:65
+msgid "Please select a template first"
+msgstr ""
+
+#: ../includes/admin/i18n.php:66
+msgid "You have created some page variations and therefore you can not longer edit quiz configuration"
+msgstr ""
+
+#: ../includes/admin/i18n.php:68
+msgid "st"
+msgstr ""
+
+#: ../includes/admin/i18n.php:69
+msgid "nd"
+msgstr ""
+
+#: ../includes/admin/i18n.php:70
+msgid "rd"
+msgstr ""
+
+#: ../includes/admin/i18n.php:72
+msgid "th"
+msgstr ""
+
+#: ../includes/admin/i18n.php:73
+msgid "priority"
+msgstr ""
+
+#: ../includes/admin/i18n.php:74
+msgid "Category"
+msgstr ""
+
+#: ../includes/admin/i18n.php:75
+msgid "Numeric"
+msgstr ""
+
+#: ../includes/admin/i18n.php:76
+msgid "Percentage"
+msgstr ""
+
+#: ../includes/admin/i18n.php:77
+msgid "Right / Wrong"
+msgstr ""
+
+#: ../includes/admin/i18n.php:78
+msgid "Survey"
+msgstr ""
+
+#: ../includes/admin/i18n.php:79
+msgid "Change type"
+msgstr ""
+
+#: ../includes/admin/i18n.php:80, ../includes/admin/views/templates/modals/edit-quiz-type.phtml:47, ../includes/admin/views/templates/modals/edit-quiz-type.phtml:79, ../includes/admin/views/templates/modals/edit-quiz-type.phtml:107, ../includes/admin/views/templates/modals/quiz/settings.phtml:3
+msgid "Quiz settings"
+msgstr ""
+
+#: ../includes/admin/i18n.php:81
+msgid "You successfully set up your quiz. Now check out the optional items that you can add"
+msgstr ""
+
+#: ../includes/admin/i18n.php:82
+msgid "The maximum limit of results has been reached!"
+msgstr ""
+
+#: ../includes/admin/i18n.php:83
+msgid "Your Result Page is empty! Make sure you have at least one variation."
+msgstr ""
+
+#: ../includes/admin/i18n.php:84
+msgid "Your quiz has no start question!"
+msgstr ""
+
+#: ../includes/admin/i18n.php:85
+msgid "Changing the list of results will impact the questions flow settings and the dynamic content on the Results Page. By eliminating results from the list, all the answers that were assigned to them will be switched to the None value and you will lose the dynamic content set on the Results Page"
+msgstr ""
+
+#: ../includes/admin/i18n.php:86
+msgid "Manage results"
+msgstr ""
+
+#: ../includes/admin/i18n.php:87
+msgid "The type of the quiz cannot be changed once you've added questions or page variations."
+msgstr ""
+
+#: ../includes/admin/i18n.php:88
+msgid "You can manage how correct answers are highlighted."
+msgstr ""
+
+#: ../includes/admin/i18n.php:89
+msgid "The source was not found"
+msgstr ""
+
+#: ../includes/admin/i18n.php:90
+msgid "Quiz statistics were reset"
+msgstr ""
+
+#: ../includes/admin/i18n.php:91, ../includes/admin/views/templates/modals/add-variation.phtml:13, ../includes/admin/views/templates/modals/anonymize-quiz-results.phtml:23, ../includes/admin/views/templates/modals/archive-last-variation.phtml:12, ../includes/admin/views/templates/modals/archive-variation.phtml:9, ../includes/admin/views/templates/modals/badge-templates.phtml:14, ../includes/admin/views/templates/modals/copy-quiz-shortcode.phtml:28, ../includes/admin/views/templates/modals/delete-variation.phtml:11, ../includes/admin/views/templates/modals/edit-quiz-type.phtml:26, ../includes/admin/views/templates/modals/filter-reports.phtml:67, ../includes/admin/views/templates/modals/new-quiz.phtml:14, ../includes/admin/views/templates/modals/reset-quiz-stats.phtml:16, ../includes/admin/views/templates/modals/reset-variation.phtml:15, ../includes/admin/views/templates/modals/stop-variation-test.phtml:51, ../includes/admin/views/templates/modals/variation-start-test.phtml:98, ../includes/admin/views/templates/results-links/form.phtml:20, ../includes/admin/views/templates/tests/delete-test.phtml:13, ../includes/admin/views/templates/modals/quiz/settings.phtml:28
+msgid "Cancel"
+msgstr ""
+
+#: ../includes/admin/i18n.php:92
+msgid "The quiz was cloned"
+msgstr ""
+
+#: ../includes/admin/i18n.php:93
+msgid "The quiz could not be duplicated"
+msgstr ""
+
+#: ../includes/admin/i18n.php:94, ../includes/managers/class-tqb-quiz-manager.php:1379, ../includes/admin/views/templates/modals/copy-quiz-shortcode.phtml:17, ../includes/admin/views/templates/quiz/edit.phtml:19
+msgid "Copy"
+msgstr ""
+
+#: ../includes/admin/i18n.php:95
+msgid "More Quizzes"
+msgstr ""
+
+#: ../includes/admin/i18n.php:96
+msgid "Load %d More"
+msgstr ""
+
+#: ../includes/admin/i18n.php:97
+msgid "Search Quizzes"
+msgstr ""
+
+#: ../includes/admin/i18n.php:98, ../includes/admin/views/templates/quiz/settings/feedback.phtml:5
+msgid "How long should the highlight and feedback be displayed for?"
+msgstr ""
+
+#: ../includes/admin/i18n.php:99, ../includes/admin/views/templates/quiz/settings/feedback.phtml:7
+msgid "How long should the highlight be displayed for?"
+msgstr ""
+
+#: ../includes/admin/i18n.php:101, ../includes/admin/views/templates/redirect-settings.phtml:5
+msgid "Redirect Settings"
+msgstr ""
+
+#: ../includes/admin/i18n.php:103, ../includes/admin/views/templates/results-links/form.phtml:19
+msgid "Search content"
+msgstr ""
+
+#: ../includes/admin/i18n.php:104
+msgid "Add URL"
+msgstr ""
+
+#: ../includes/admin/i18n.php:105, ../includes/admin/views/templates/results-links/category-item.phtml:7, ../includes/admin/views/templates/results-links/item.phtml:14
+msgid "Redirect to content on site"
+msgstr ""
+
+#: ../includes/admin/i18n.php:106, ../includes/admin/views/templates/results-links/category-item.phtml:8, ../includes/admin/views/templates/results-links/item.phtml:15
+msgid "Redirect to external URL"
+msgstr ""
+
+#: ../includes/admin/i18n.php:108
+msgid "Invalid Lower Bound"
+msgstr ""
+
+#: ../includes/admin/i18n.php:109
+msgid "Lower Bound cannot be lower than Minimum Result"
+msgstr ""
+
+#: ../includes/admin/i18n.php:110
+msgid "Lower Bound cannot be greater than Maximum Result"
+msgstr ""
+
+#: ../includes/admin/i18n.php:111
+msgid "Lower Bound cannot be greater than Upper Bound"
+msgstr ""
+
+#: ../includes/admin/i18n.php:112
+msgid "Invalid Upper Bound"
+msgstr ""
+
+#: ../includes/admin/i18n.php:113
+msgid "Upper Bound cannot be lower than Minimum Result"
+msgstr ""
+
+#: ../includes/admin/i18n.php:114
+msgid "Upper Bound cannot be greater than Maximum Result"
+msgstr ""
+
+#: ../includes/admin/i18n.php:115
+msgid "Upper bound cannot be lower than Lower Bound"
+msgstr ""
+
+#: ../includes/admin/i18n.php:116
+msgid "URL not set"
+msgstr ""
+
+#: ../includes/admin/i18n.php:117
+msgid "Invalid URL. It should be something like this: https://www.thrivethemes.com"
+msgstr ""
+
+#: ../includes/admin/i18n.php:118
+msgid "No content set as target"
+msgstr ""
+
+#: ../includes/admin/i18n.php:122
+msgid "Quiz Completed!"
+msgstr ""
+
+#: ../includes/admin/i18n.php:123
+msgid "Redirecting you to the best result"
+msgstr ""
+
+#: ../includes/admin/i18n.php:125
+msgid "Invalid message title"
+msgstr ""
+
+#: ../includes/admin/i18n.php:126
+msgid "Invalid message text"
+msgstr ""
+
+#: ../includes/admin/i18n.php:127
+msgid "Invalid duration! Please enter a value between 1 and 10 seconds."
+msgstr ""
+
+#: ../includes/admin/i18n.php:130, ../includes/admin/views/templates/quiz/structure-item-qna.phtml:28, ../includes/admin/views/templates/quiz/structure-item.phtml:28
+msgid "Step 4/4: Create a result page."
+msgstr ""
+
+#: ../includes/admin/i18n.php:131
+msgid "Step 4/4: Create at least one redirect link."
+msgstr ""
+
+#: ../includes/admin/i18n.php:132, ../includes/frontend/views/templates/video/custom.phtml:12
+msgid "Not supported video tag"
+msgstr ""
+
+#: ../includes/admin/i18n.php:133
+msgid "Category title is required!"
+msgstr ""
+
+#: ../includes/admin/i18n.php:134
+msgid "Category title must not exceed 255 characters!"
+msgstr ""
+
+#: ../includes/admin/i18n.php:135
+msgid "Exporting Quiz"
+msgstr ""
+
+#: ../includes/admin/i18n.php:136
+msgid "Please choose a zip file"
+msgstr ""
+
+#: ../includes/admin/i18n.php:137
+msgid "Social share functionality disabled."
+msgstr ""
+
+#: ../includes/admin/i18n.php:138
+msgid "Users don't receive a specific result in a survey quiz so social sharing for this quiz type is disabled"
+msgstr ""
+
+#: ../includes/admin/i18n.php:139
+msgid "There was an error fetching quizzes. Please check error.logs with your host!"
+msgstr ""
+
+#: ../includes/admin/i18n.php:140
+msgid "Pages"
+msgstr ""
+
+#: ../includes/admin/i18n.php:141
+msgid "Lessons"
+msgstr ""
+
+#: ../includes/admin/i18n.php:142
+msgid "Modules"
+msgstr ""
+
+#: ../includes/admin/i18n.php:143
+msgid "Posts"
+msgstr ""
+
+#: ../includes/admin/i18n.php:144
+msgid "Course overviews"
+msgstr ""
+
+#: ../includes/admin/i18n.php:145
+msgid "Products"
+msgstr ""
+
+#: ../includes/admin/i18n.php:146
+msgid "At least one option must be selected"
+msgstr ""
+
+#: ../includes/admin/i18n.php:147
+msgid "At least one quiz category needs to be selected"
+msgstr ""
+
+#: ../includes/admin/i18n.php:148
+msgid "Values must be a number higher than the minimum and lower than the maximum result!"
+msgstr ""
+
+#: ../includes/admin/i18n.php:149
+msgid "Please select a date!"
+msgstr ""
+
+#: ../includes/admin/i18n.php:150
+msgid "Please provide a valid date interval!"
+msgstr ""
+
+#: ../includes/admin/i18n.php:151
+msgid "Location filter can be used per specific quiz."
+msgstr ""
+
+#: ../includes/database/class-tqb-database-manager.php:209
+msgid "There was an error while updating the database tables needed by Thrive Quiz Builder. Detailed error message: %s. If you continue seeing this message, please contact %s"
+msgstr ""
+
+#: ../includes/database/class-tqb-database-manager.php:211
+msgid "Thrive Themes Support"
+msgstr ""
+
+#: ../includes/managers/class-tqb-quiz-manager.php:412
+msgid "The shortcode is broken"
+msgstr ""
+
+#: ../includes/managers/class-tqb-quiz-manager.php:627
+msgid "There is an error in the quiz structure"
+msgstr ""
+
+#: ../includes/managers/class-tqb-reporting-manager.php:78, ../includes/admin/views/templates/reporting/completion-table.phtml:20, ../includes/admin/views/templates/reporting/completion-table.phtml:22
+msgid "Completions"
+msgstr ""
+
+#: ../includes/managers/class-tqb-reporting-manager.php:322, ../includes/managers/class-tqb-reporting-manager.php:347
+msgid "Data collected since latest reset: "
+msgstr ""
+
+#: ../includes/managers/class-tqb-reporting-manager.php:319
+msgid "Data collected since: "
+msgstr ""
+
+#: ../includes/managers/class-tqb-reporting-manager.php:340
+msgid "Data collected since latest saved quiz structure: "
+msgstr ""
+
+#: ../includes/managers/class-tqb-reporting-manager.php:350
+msgid "Data collected since latest  saved quiz structure: "
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:149
+msgid "First %s"
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:174
+msgid "Control"
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:374
+msgid "Your Splash Page is empty! Make sure you have at least one variation for it."
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:394
+msgid "Your Opt-in Page is empty! Make sure you have at least one variation."
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:427
+msgid "Your Results Page has not been set!"
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:481
+msgid "Something when wrong!"
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:485
+msgid "splash editor"
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:488
+msgid "This Quiz doesn't have a Splash Page"
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:488
+msgid "Please create a design for your splash page in the %s."
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:492
+msgid "optin gate editor"
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:494
+msgid "This Quiz doesn't have an Optin Gate"
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:494
+msgid "Please create a design for your optin gate in the %s."
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:498
+msgid "questions editor"
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:500
+msgid "This Quiz doesn't have a Start Question"
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:500
+msgid "Please add a start question in the %s."
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:504
+msgid "redirect manager"
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:506
+msgid "This Quiz doesn't have a Redirect"
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:506
+msgid "Please ensure your redirects are setup for each possible result in the %s."
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:510
+msgid "results page editor"
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:512
+msgid "This Quiz doesn't have a Results Page"
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:512
+msgid "Please create a design for your results page in the %s."
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:515
+msgid "quiz type"
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:518
+msgid "This Quiz doesn't have a type set."
+msgstr ""
+
+#: ../includes/managers/class-tqb-structure-manager.php:518
+msgid "Please choose %s."
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:91
+msgid "You do not have this capability"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:95
+msgid "This page has expired. Please reload and try again"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:154
+msgid "Could not reset quiz statistics"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:173
+msgid "Could not save"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:196
+msgid "Could not delete"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:206
+msgid "Quiz not found"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:234
+msgid "Style could not be saved"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:322, ../includes/admin/classes/class-tqb-admin-ajax-controller.php:350, ../includes/admin/classes/class-tqb-admin-ajax-controller.php:378, ../includes/admin/classes/class-tqb-admin-ajax-controller.php:1064, ../includes/admin/classes/class-tqb-admin-ajax-controller.php:1091
+msgid "Something went wrong"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:413
+msgid "Structure could not be saved"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:483
+msgid "Type could not be saved. There was an error while saving the quiz type. Please contact the support team."
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:477
+msgid "Changes were saved!"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:475
+msgid "The list of results has changed. Your questions flow and results page might be affected by this change."
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:528
+msgid "An error occurred. The page id provided was invalid! Please contact Thrive Support!"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:539
+msgid "The setting was saved for this quiz page!"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:567, ../includes/admin/classes/class-tqb-admin-ajax-controller.php:564
+msgid "Item not found"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:676
+msgid "Error while inserting a new variation"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:684
+msgid "Error while deleting the variation"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:769
+msgid "Test not found"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:1056
+msgid "Step executed with success"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-admin-ajax-controller.php:1083
+msgid "Quiz Imported Successfully"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-export-manager.php:39
+msgid "Could not find a specific implementation for step: %s"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-export-manager.php:77
+msgid "Quiz folder was not created"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-export-manager.php:81
+msgid "Could not create zip archive"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-export-manager.php:89
+msgid "Could not write the zip file"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-import-manager.php:91
+msgid "Could not extract the archive file"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-import-manager.php:98
+msgid "Invalid zip file"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-import-manager.php:117
+msgid "Could not determine uploads folder (%s)"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-import-manager.php:154
+msgid "Invalid File"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-import-manager.php:244
+msgid "Could not import quiz details"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-product.php:63
+msgid "Engage your visitors with a fun quiz and find out more about them."
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-product.php:77
+msgid "Tutorials"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-product.php:84
+msgid "Support"
+msgstr ""
+
+#: ../includes/admin/classes/class-tqb-results-page.php:129
+msgid "URL Redirect"
+msgstr ""
+
+#: ../includes/admin/views/header.phtml:4
+msgid "Thrive Quiz Builder Home"
+msgstr ""
+
+#: ../includes/admin/views/header.phtml:13
+msgid "Reports"
+msgstr ""
+
+#: ../includes/admin/views/header.phtml:19, ../includes/admin/views/templates/modals/settings.phtml:5
+msgid "Settings"
+msgstr ""
+
+#: ../includes/admin/views/license-inactive.phtml:15
+msgid "You need to"
+msgstr ""
+
+#: ../includes/admin/views/license-inactive.phtml:17
+msgid "activate your license"
+msgstr ""
+
+#: ../includes/admin/views/license-inactive.phtml:18
+msgid "before you can use the Thrive Quiz Builder plugin!"
+msgstr ""
+
+#: ../includes/admin/views/tcb_version_incompatible.phtml:19
+msgid ""
+"It looks like you have Thrive Architect installed, but it's not compatible with this version of Thrive Quiz Builder. Thrive Quiz Builder uses Thrive Architect to edit various pieces of content.\n"
+"To be able to use this feature, please make sure you have the latest versions for both plugins by clicking on the following link and checking for updates:"
+msgstr ""
+
+#: ../includes/admin/views/tcb_version_incompatible.phtml:25
+msgid "Manage plugins"
+msgstr ""
+
+#: ../includes/reporting/event-fields/class-quiz-id.php:22
+msgid "Quiz id"
+msgstr ""
+
+#: ../includes/reporting/event-fields/class-quiz-score.php:19
+msgid "Quiz score"
+msgstr ""
+
+#: ../includes/reporting/events/class-quiz-completed.php:24
+msgid "Quiz Completed"
+msgstr ""
+
+#: ../includes/admin/classes/export/class-tqb-export-step-abstract.php:64
+msgid "No quiz has been provided to step %s be exported."
+msgstr ""
+
+#: ../includes/admin/classes/export/class-tqb-export-step-abstract.php:71
+msgid "Step %s data could not be written to file."
+msgstr ""
+
+#: ../includes/admin/classes/export/class-tqb-export-step-abstract.php:150
+msgid "Undefined type for upload dir"
+msgstr ""
+
+#: ../includes/admin/views/templates/dashboard.phtml:4
+msgid "Your Quizzes"
+msgstr ""
+
+#: ../includes/admin/views/templates/dashboard.phtml:6, ../includes/admin/views/templates/redirect-settings.phtml:6
+msgid "Add New"
+msgstr ""
+
+#: ../includes/admin/views/templates/dashboard.phtml:15, ../includes/admin/views/templates/modals/quiz/import.phtml:3, ../includes/admin/views/templates/modals/quiz/import.phtml:26
+msgid "Import Quiz"
+msgstr ""
+
+#: ../includes/admin/views/templates/dashboard.phtml:21
+msgid "You have no quizzes yet. Click the Add New Quiz button to get started or"
+msgstr ""
+
+#: ../includes/admin/views/templates/dashboard.phtml:23
+msgid "watch a Quick Start Tutorial."
+msgstr ""
+
+#: ../includes/admin/views/templates/dashboard.phtml:30
+msgid "Could not find any quiz."
+msgstr ""
+
+#: ../includes/admin/views/templates/dashboard.phtml:40
+msgid "ADD NEW QUIZ"
+msgstr ""
+
+#: ../includes/admin/views/templates/dashboard.phtml:53
+msgid " Load all Quizzes"
+msgstr ""
+
+#: ../includes/admin/views/templates/new-category-item.phtml:2
+msgid "What result categories do you want to add to your quiz?"
+msgstr ""
+
+#: ../includes/admin/views/templates/new-category-item.phtml:4
+msgid "Changing the list of results will impact the questions flow settings and the dynamic content on the Results Page. By eliminating results from the list, all the answers that were assigned to them will be switched to the None value and will lose the dynamic content set on the Results Page"
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:11
+msgid "Redirect status:"
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:13
+msgid "Quiz Ready"
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:16
+msgid "Quiz Not Ready"
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:17
+msgid "Some results that the user can receive don't have a redirect set. Make sure all possible results contain a redirect."
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:18
+msgid "Some categories don't have a redirect URL specified."
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:34
+msgid "Lower Bound"
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:35
+msgid "Upper Bound"
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:36
+msgid "Action"
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:37
+msgid "Target"
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:46, ../includes/admin/views/templates/quiz/settings/feedback.phtml:29
+msgid "Learn more"
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:56
+msgid "Display redirect Message"
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:64
+msgid "Forward results to URL"
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:69
+msgid "The following URL parameters will be forwarded."
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:71
+msgid "What does this mean?"
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:75
+msgid "Name"
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:76
+msgid "Email address"
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:77
+msgid "The obtained quiz result"
+msgstr ""
+
+#: ../includes/admin/views/templates/redirect-settings.phtml:87
+msgid "Back to Quiz"
+msgstr ""
+
+#: ../includes/admin/views/templates/result-item.phtml:3
+msgid "Category:"
+msgstr ""
+
+#: ../includes/admin/views/templates/textedit.phtml:2
+msgid "%s is required"
+msgstr ""
+
+#: ../includes/frontend/views/templates/answer-open.phtml:4
+msgid "Characters"
+msgstr ""
+
+#: ../includes/frontend/views/templates/powered-by-thrive-themes.phtml:4
+msgid "powered by"
+msgstr ""
+
+#: ../includes/frontend/views/templates/powered-by-thrive-themes.phtml:7
+msgid "Thrive"
+msgstr ""
+
+#: ../includes/frontend/views/templates/question-answer.php:61
+msgid "Write your response here"
+msgstr ""
+
+#: ../includes/admin/views/templates/badge/add.phtml:2
+msgid "Optional: Create a customizable image that will lead to more shares"
+msgstr ""
+
+#: ../includes/admin/views/templates/badge/add.phtml:7
+msgid "Create a Social Share Badge"
+msgstr ""
+
+#: ../includes/admin/views/templates/badge/card.phtml:4
+msgid "Social Badge Created"
+msgstr ""
+
+#: ../includes/admin/views/templates/badge/card.phtml:8, ../tcb-bridge/editor-lightbox/remove-interval.php:13
+msgid "Remove"
+msgstr ""
+
+#: ../includes/admin/views/templates/badge/card.phtml:11
+msgid "Edit"
+msgstr ""
+
+#: ../includes/admin/views/templates/badge/delete.phtml:4
+msgid "Are you sure you want to delete the badge?"
+msgstr ""
+
+#: ../includes/admin/views/templates/badge/delete.phtml:11, ../includes/admin/views/templates/quiz/delete-state.phtml:11
+msgid "Yes, delete"
+msgstr ""
+
+#: ../includes/admin/views/templates/badge/delete.phtml:16, ../includes/admin/views/templates/quiz/delete-state.phtml:16
+msgid "No, keep it"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/add-variation.phtml:2
+msgid "Add A/B Test Variation for %s"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/add-variation.phtml:3
+msgid "Give your variation a name. This can be used to describe the design of the specific %s Variation that you are going to build, for example \"Orange Variation\""
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/add-variation.phtml:6
+msgid "Variation Name"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/anonymize-quiz-results.phtml:12
+msgid "Anonymize results for quiz %s"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/anonymize-quiz-results.phtml:15
+msgid "By anonymizing results you will no longer be able to associate answers and results to an email address. All the user profiles will appear anonymous."
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/anonymize-quiz-results.phtml:29
+msgid "Anonymize Results"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/archive-last-variation.phtml:2
+msgid "Sorry, the last variation cannot be archived."
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/archive-last-variation.phtml:4
+msgid "If you want to archive the page element, please create another one first."
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/archive-last-variation.phtml:6
+msgid "If you want to remove the page element, please remove it from the Quiz Dashboard."
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/archive-last-variation.phtml:16
+msgid "Quiz Dashboard"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/archive-variation.phtml:2
+msgid "Are you sure you want to archive this variation?"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/archive-variation.phtml:4
+msgid "This will move the form to the archive."
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/archive-variation.phtml:12
+msgid "Move to Archive"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/badge-templates.phtml:4
+msgid "Social Share Badge Template you would like to use"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/badge-templates.phtml:20, ../tcb-bridge/editor-lightbox/social-share-badge-template.php:29
+msgid "Choose Template"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/copy-quiz-shortcode.phtml:6
+msgid "Quiz shortcode "
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/copy-quiz-shortcode.phtml:8
+msgid "Copy and paste this shortcode in your content to display the quiz."
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/copy-quiz-shortcode.phtml:34
+msgid "Done"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/delete-redirect-link.phtml:4, ../includes/admin/views/templates/modals/delete-structure-item.phtml:4
+msgid "Delete "
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/delete-redirect-link.phtml:8
+msgid "Are you sure you want to delete Redirect between %s?"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/delete-redirect-link.phtml:16, ../includes/admin/views/templates/modals/delete-structure-item.phtml:17
+msgid "NO, DON'T DELETE"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/delete-redirect-link.phtml:22, ../includes/admin/views/templates/modals/delete-structure-item.phtml:23
+msgid "YES, DELETE"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/delete-structure-item.phtml:8
+msgid "Warning! You are about to delete the %s of your quiz!"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/delete-structure-item.phtml:9
+msgid "This will delete all forms and statistics and cannot be reversed."
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/delete-variation.phtml:2
+msgid "Warning: You are about to delete Form: "
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/delete-variation.phtml:6
+msgid "You will lose the design and all conversion data associated with this form. This can't be undone. "
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/delete-variation.phtml:15
+msgid "Delete Form"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/edit-quiz-style.phtml:4
+msgid "Quiz Style"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/edit-quiz-style.phtml:7
+msgid "Choose a style for your quiz"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/edit-quiz-style.phtml:17, ../includes/admin/views/templates/modals/edit-quiz-type.phtml:63, ../includes/admin/views/templates/modals/edit-quiz-type.phtml:91, ../includes/admin/views/templates/modals/edit-quiz-type.phtml:118, ../includes/admin/views/templates/modals/new-quiz.phtml:43
+msgid "Back"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/edit-quiz-style.phtml:23
+msgid "Choose Style"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/edit-quiz-type.phtml:3
+msgid "Quiz Evaluation Type"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/edit-quiz-type.phtml:4
+msgid "Choose what the result would look like"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/edit-variation-test.phtml:2, ../includes/admin/views/templates/modals/variation-start-test.phtml:55
+msgid "Here you can set the conditions by which a form will be considered the winner. When a form is considered the winner, the remaining forms will be archived and all traffic will be sent to the winner"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/edit-variation-test.phtml:8, ../includes/admin/views/templates/modals/variation-start-test.phtml:59
+msgid "Enabled"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/edit-variation-test.phtml:16, ../includes/admin/views/templates/modals/variation-start-test.phtml:69
+msgid "Minimum conversions"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/edit-variation-test.phtml:22, ../includes/admin/views/templates/modals/variation-start-test.phtml:77
+msgid "Minimum duration (days)"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/edit-variation-test.phtml:28, ../includes/admin/views/templates/modals/variation-start-test.phtml:85
+msgid "Chance to beat original (%)"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/edit-variation-test.phtml:41
+msgid "Save Settings"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/filter-reports.phtml:4, ../includes/admin/views/templates/reporting/users-list.phtml:16
+msgid "Filter reports"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/filter-reports.phtml:9
+msgid "Quiz started between"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/filter-reports.phtml:11
+msgid "From"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/filter-reports.phtml:15
+msgid "To"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/filter-reports.phtml:23
+msgid "Quiz progress"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/filter-reports.phtml:26, ../includes/admin/views/templates/reporting/all-source.phtml:1
+msgid "All"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/filter-reports.phtml:29, ../includes/admin/views/templates/reporting/users-item.phtml:31
+msgid "In progress"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/filter-reports.phtml:32, ../includes/admin/views/templates/reporting/users-item.phtml:29
+msgid "Completed"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/filter-reports.phtml:39, ../tcb-bridge/tqb-class-hooks.php:439
+msgid "Quiz result"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/filter-reports.phtml:43
+msgid "Between"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/filter-reports.phtml:48, ../includes/admin/views/templates/results-links/form.phtml:7
+msgid "and"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/new-quiz.phtml:3
+msgid "Create a quiz from scratch or customize a template"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/new-quiz.phtml:4
+msgid "Choose a template"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/new-quiz.phtml:29
+msgid "Label your quiz"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/new-quiz.phtml:31
+msgid "Enter a name for your quiz. This is for internal use only - your website visitors will not see this name."
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/new-quiz.phtml:35
+msgid "Quiz name is required"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/reset-quiz-stats.phtml:4
+msgid "Reset "
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/reset-quiz-stats.phtml:7
+msgid "Warning! You are about to reset all statistics for %s!"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/reset-quiz-stats.phtml:8
+msgid "The reports for %s will display the data since the last reset. Your variations statistics won't be affected by this. Do you want to continue?"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/reset-quiz-stats.phtml:22, ../includes/admin/views/templates/modals/reset-variation.phtml:18
+msgid "Reset stats"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/reset-variation.phtml:2
+msgid "Warning! You are about to reset all statistics for"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/reset-variation.phtml:8
+msgid ""
+"This will delete all statistics (form impressions, conversions, conversion rates etc) that were recorded for this form.\n"
+"        The data will also be removed from the reporting section. Do you want to continue?"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/settings.phtml:12
+msgid "Display \"Powered by Quiz Builder\""
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/settings.phtml:17
+msgid "Off"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/settings.phtml:23
+msgid "On"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/stop-variation-test.phtml:7, ../includes/admin/views/templates/modals/stop-variation-test.phtml:9, ../includes/admin/views/templates/tests/view.phtml:51, ../includes/admin/views/templates/tests/view.phtml:53
+msgid "Form Impressions"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/stop-variation-test.phtml:21, ../includes/admin/views/templates/modals/stop-variation-test.phtml:23
+msgid "Conversions Rate"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/stop-variation-test.phtml:28, ../includes/admin/views/templates/modals/stop-variation-test.phtml:30, ../includes/admin/views/templates/tests/view.phtml:79, ../includes/admin/views/templates/tests/view.phtml:81
+msgid "Percentage Improvement"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/stop-variation-test.phtml:35, ../includes/admin/views/templates/modals/stop-variation-test.phtml:37, ../includes/admin/views/templates/tests/view.phtml:86, ../includes/admin/views/templates/tests/view.phtml:88
+msgid "Chance To Beat Original"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/stop-variation.phtml:6
+msgid "Are you sure you want to stop showing the variation:"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/stop-variation.phtml:17
+msgid "KEEP IT RUNNING"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/stop-variation.phtml:23
+msgid "STOP"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/variation-start-test.phtml:13, ../includes/admin/views/templates/results-links/message.phtml:2
+msgid "Title"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/variation-start-test.phtml:21
+msgid "Test Notes"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/variation-start-test.phtml:29
+msgid "Choose conversion goal: "
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/variation-start-test.phtml:34, ../includes/admin/views/templates/modals/variation-start-test.phtml:40
+msgid "You need a conversion goal for your test."
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/variation-start-test.phtml:34, ../includes/admin/views/templates/variations/list.phtml:12
+msgid "Opt-Ins"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/variation-start-test.phtml:40, ../includes/admin/views/templates/quiz/item.phtml:83, ../includes/admin/views/templates/variations/list.phtml:16
+msgid "Social Shares"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/variation-start-test.phtml:102
+msgid "Start Test"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/variation-winner-test-notice.phtml:4
+msgid "Note: the lower you set the conversions number, the more likely it is that a test will end prematurely, without finding the true winning variation."
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/variation-winner-test-notice.phtml:7
+msgid "The shorter the test duration, the less reliable the results. We recommend running tests for at least one full week (duration = 7)."
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/variation-winner-test-notice.phtml:10
+msgid "Note: the lower you set this number, the more likely false positives become. We recommend choosing a value of above 90%."
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/view-user-answers.phtml:12, ../includes/admin/views/templates/modals/quiz/import.phtml:20
+msgid "Close"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/edit.phtml:3
+msgid "Quiz name:"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/edit.phtml:25
+msgid "For export, the quiz must have at least one question."
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/edit.phtml:44
+msgid "Quiz Type:"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/edit.phtml:51
+msgid "Choose the type of evaluation you want for your quiz"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/edit.phtml:62
+msgid "Step 1/4: Select a quiz type."
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/edit.phtml:79, ../includes/admin/views/templates/variations/dashboard.phtml:53
+msgid "Back to Dashboard"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/item.phtml:6
+msgid "Drag & Drop the card in order to change the quiz order."
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/item.phtml:14
+msgid "Delete quiz"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/item.phtml:19
+msgid "Clone quiz"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/item.phtml:26
+msgid "Shortcode"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/item.phtml:51
+msgid "quiz"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/item.phtml:68, ../includes/admin/views/templates/reporting/users-list.phtml:42
+msgid "Started"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/item.phtml:69
+msgid "Finished"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/item.phtml:81, ../includes/admin/views/templates/reporting/flow-section.phtml:17, ../includes/admin/views/templates/reporting/flow-section.phtml:30
+msgid "Subscribers"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/item.phtml:84
+msgid "Full report"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/item.phtml:89
+msgid "Edit Quiz"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/structure-button.phtml:3
+msgid "Optional: Create a page that will help you to gather visitors emails"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/structure-button.phtml:5
+msgid "Optional: Create a page that will get people to start the quiz"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/structure-item-qna.phtml:21, ../includes/admin/views/templates/quiz/structure-item.phtml:21
+msgid "Step 3/4: Define questions and answers."
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/structure-item-qna.phtml:35, ../includes/admin/views/templates/quiz/structure-item.phtml:35, ../includes/admin/views/templates/reporting/main.phtml:19
+msgid "Questions"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/structure-item-qna.phtml:43, ../includes/admin/views/templates/quiz/structure-item-qna.phtml:45, ../includes/admin/views/templates/quiz/structure-item.phtml:43, ../includes/admin/views/templates/quiz/structure-item.phtml:45, ../includes/admin/views/templates/quiz/structure-results-item.phtml:37
+msgid "Manage"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/structure-item-qna.phtml:49, ../includes/admin/views/templates/quiz/structure-item.phtml:49, ../includes/admin/views/templates/quiz/structure-results-item.phtml:41, ../includes/admin/views/templates/tests/completed-item.phtml:35
+msgid "View Test"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/structure.phtml:4
+msgid "Quiz Structure"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/structure.phtml:17
+msgid "Add more pages"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/completion-pagination.phtml:3
+msgid "Showing"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/completion-pagination.phtml:5
+msgid "to"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/completion-pagination.phtml:7
+msgid "from a total of"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/completion-pagination.phtml:9
+msgid "records"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/completion-pagination.phtml:15
+msgid "First Page"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/completion-pagination.phtml:28
+msgid "Last Page"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/completion-report.phtml:4
+msgid "Completion Report"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/completion-report.phtml:22, ../includes/admin/views/templates/tests/view.phtml:29
+msgid "No Test Data (Yet)"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/completion-report.phtml:24, ../includes/admin/views/templates/tests/view.phtml:31
+msgid "Here you will see a graph of conversion data as the test progresses.<br/> Currently there is no data to display."
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/completion-table.phtml:6, ../includes/admin/views/templates/reporting/completion-table.phtml:8, ../includes/admin/views/templates/reporting/main.phtml:58
+msgid "Date interval"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/completion-table.phtml:13, ../includes/admin/views/templates/reporting/completion-table.phtml:15
+msgid "Quiz Name"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/flow-report.phtml:4
+msgid "Flow Report"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/flow-report.phtml:25
+msgid "Summary"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/flow-report.phtml:34, ../includes/admin/views/templates/reporting/main.phtml:17
+msgid "Quiz Completions"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/flow-report.phtml:37, ../includes/admin/views/templates/reporting/flow-report.phtml:48, ../includes/admin/views/templates/reporting/flow-report.phtml:58
+msgid "of Visitors"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/flow-report.phtml:45
+msgid "Social shares"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/flow-report.phtml:56
+msgid "Subscriptions"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/flow-section.phtml:11
+msgid "Quiz Questions"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/flow-section.phtml:14
+msgid "Opt-In-Gate"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/flow-section.phtml:23
+msgid "Redirect"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/flow-section.phtml:36
+msgid "Shares"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/flow-section.phtml:63
+msgid "visitors"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/flow-section.phtml:78
+msgid "Dropped Off"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/flow-section.phtml:82
+msgid "skipped this step"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/flow-section.phtml:90
+msgid "No data"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/location-options.phtml:2
+msgid "All locations"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/location-options.phtml:4
+msgid "Location"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:18
+msgid "Flow"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:20
+msgid "Users"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:22
+msgid "Show report"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:41
+msgid "Last 7 days"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:43
+msgid "Last 30 days"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:45
+msgid "This month"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:47
+msgid "Last month"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:49
+msgid "This year"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:51
+msgid "Last year"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:53
+msgid "Last 12 months"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:55
+msgid "Custom date range"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:67
+msgid "Start date"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:76
+msgid "End date"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:88, ../includes/admin/views/templates/tests/view.phtml:15
+msgid "Daily"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:89, ../includes/admin/views/templates/tests/view.phtml:16
+msgid "Weekly"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:90, ../includes/admin/views/templates/tests/view.phtml:17
+msgid "Monthly"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:92, ../includes/admin/views/templates/tests/view.phtml:19
+msgid "Graph interval"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:99
+msgid "Reset results"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:101
+msgid "Export results"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:103
+msgid "Anonymize results"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/main.phtml:114, ../includes/admin/views/templates/reporting/main.phtml:115
+msgid "Back to Quiz Dashboard"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/pagination.phtml:39
+msgid "All answers"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/pagination.phtml:41
+msgid "Show"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/questions-open-question.phtml:26
+msgid "Download to CSV"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/questions-open-question.phtml:31, ../includes/admin/views/templates/reporting/questions-open-question.phtml:33, ../includes/admin/views/templates/reporting/questions-question.phtml:62, ../includes/admin/views/templates/reporting/questions-question.phtml:64
+msgid "Visitors"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/questions-open-question.phtml:38, ../includes/admin/views/templates/reporting/questions-open-question.phtml:40, ../includes/admin/views/templates/reporting/questions-question.phtml:69, ../includes/admin/views/templates/reporting/questions-question.phtml:71, ../includes/admin/views/templates/reporting/users-list.phtml:72
+msgid "Answers"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/questions-open-question.phtml:45, ../includes/admin/views/templates/reporting/questions-open-question.phtml:47, ../includes/admin/views/templates/reporting/questions-question.phtml:76, ../includes/admin/views/templates/reporting/questions-question.phtml:78
+msgid "Drop Offs"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/questions-question.phtml:11
+msgid "No Data (Yet)"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/questions-question.phtml:23, ../includes/admin/views/templates/reporting/questions-question.phtml:25
+msgid "Color"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/questions-question.phtml:37, ../includes/admin/views/templates/reporting/questions-question.phtml:39
+msgid "Count"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/questions-question.phtml:44, ../includes/admin/views/templates/reporting/questions-question.phtml:46
+msgid "Percent"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/questions-report.phtml:4
+msgid "Questions Report"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/questions-report.phtml:19
+msgid "No data recorded for this quiz"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/source-options.phtml:8
+msgid "Source"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-item.phtml:51
+msgid "View"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-list.phtml:3
+msgid "Users report"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-list.phtml:19
+msgid "Reset filters"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-list.phtml:27
+msgid "Item"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-list.phtml:32
+msgid "User name"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-list.phtml:37
+msgid "E-mail address"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-list.phtml:47
+msgid "Ended"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-list.phtml:52
+msgid "Progress"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-list.phtml:57
+msgid "Tries"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-list.phtml:67
+msgid "Badge"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-list.phtml:87
+msgid "No user reports found"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-list.phtml:100
+msgid "items"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-list.phtml:109
+msgid "Jump to page"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-list.phtml:114
+msgid "Page doesn't exist"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-list.phtml:118
+msgid "Go"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-list.phtml:126
+msgid "Page"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-list.phtml:128
+msgid "of"
+msgstr ""
+
+#: ../includes/admin/views/templates/reporting/users-list.phtml:142
+msgid "Rows per page"
+msgstr ""
+
+#: ../includes/admin/views/templates/results-links/form.phtml:3
+msgid "If the visitor scores between"
+msgstr ""
+
+#: ../includes/admin/views/templates/results-links/item.phtml:4
+msgid "The range for this redirect has been overwritten by another redirect. Set a new range or delete this redirect."
+msgstr ""
+
+#: ../includes/admin/views/templates/results-links/item.phtml:29, ../includes/admin/views/templates/tests/completed-item.phtml:37, ../includes/admin/views/templates/variations/item-archived.phtml:31, ../includes/admin/views/templates/variations/item-archived.phtml:33
+msgid "Delete"
+msgstr ""
+
+#: ../includes/admin/views/templates/results-links/message.phtml:6
+msgid "Message"
+msgstr ""
+
+#: ../includes/admin/views/templates/results-links/message.phtml:10
+msgid "Duration"
+msgstr ""
+
+#: ../includes/admin/views/templates/results-links/message.phtml:12
+msgid "Seconds"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/completed-tests.phtml:2, ../includes/admin/views/templates/variations/dashboard.phtml:41
+msgid "Click to expand"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/completed-tests.phtml:4
+msgid "Completed Tests"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/completed-tests.phtml:13
+msgid "Test Name"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/completed-tests.phtml:25
+msgid "Test Description"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/completed-tests.phtml:32
+msgid "Start Date"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/completed-tests.phtml:39
+msgid "End Date"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/delete-test.phtml:2
+msgid "Warning! You are about to delete Test "
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/delete-test.phtml:7
+msgid "This will delete the test and cannot be reversed"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/delete-test.phtml:17
+msgid "Delete Test"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/options.phtml:3, ../includes/admin/views/templates/tests/options.phtml:3
+msgid "Stop Test And Choose Winner"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/stopped-item.phtml:22, ../includes/admin/views/templates/tests/test-item.phtml:22
+msgid "This is the control"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/stopped-item.phtml:40, ../includes/admin/views/templates/tests/stopped-item.phtml:41, ../includes/admin/views/templates/tests/test-item.phtml:41, ../includes/admin/views/templates/tests/test-item.phtml:42, ../includes/admin/views/templates/variations/item-archived.phtml:23, ../includes/admin/views/templates/variations/item-archived.phtml:25
+msgid "View Form"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/test-item.phtml:47, ../includes/admin/views/templates/tests/test-item.phtml:48
+msgid "Stop variation"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/test-item.phtml:56, ../includes/admin/views/templates/tests/test-item.phtml:58
+msgid "Set as Winner"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/test-total.phtml:23
+msgid "Automatic winner settings are enabled"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/test-total.phtml:25
+msgid "Automatic winner settings are disabled"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/test-total.phtml:27, ../includes/admin/views/templates/quiz/style/card.phtml:14
+msgid "Change"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/view.phtml:4, ../includes/admin/views/templates/tests/view.phtml:44
+msgid "Test Charts"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/view.phtml:72, ../includes/admin/views/templates/tests/view.phtml:74
+msgid "Chart"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/view.phtml:107
+msgid "Back To Dashboard"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/view.phtml:114
+msgid "Back to page"
+msgstr ""
+
+#: ../includes/admin/views/templates/tests/view.phtml:120
+msgid "Back to running test"
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/dashboard.phtml:9
+msgid "Add A/B Test Variation"
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/dashboard.phtml:25, ../includes/admin/views/templates/variations/dashboard.phtml:26
+msgid "Start A/B Test"
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/dashboard.phtml:31
+msgid "You don't have any active variations"
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/dashboard.phtml:33
+msgid "click here to create one"
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/dashboard.phtml:43
+msgid "Archived Forms"
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/gdpr-user-consent.phtml:13
+msgid "Creating user profiles in the Reporting Area by matching the answers and result to the email address entered by the user in this step."
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/gdpr-user-consent.phtml:14
+msgid "Find out more about profiling in this article."
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/item-archived.phtml:27, ../includes/admin/views/templates/variations/item-archived.phtml:29
+msgid "Re-add"
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/item.phtml:7
+msgid "control"
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/item.phtml:13
+msgid "No traffic is currently being sent to this form. Start an A/B Test to start tracking statistics"
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/item.phtml:41
+msgid "This is your default content. Click here to edit the design."
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/item.phtml:46, ../includes/admin/views/templates/quiz/style/card.phtml:9
+msgid "Edit Design"
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/item.phtml:50
+msgid "Clone"
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/item.phtml:53
+msgid "Reset Stats"
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/item.phtml:56
+msgid "Archive"
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/list.phtml:7
+msgid "Page Impressions"
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/list.phtml:13
+msgid "Opt-In Conversion Rate"
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/list.phtml:17
+msgid "Social Sharing Conversion Rate"
+msgstr ""
+
+#: ../includes/admin/views/templates/variations/skip-optin.phtml:16
+msgid "Skip this opt-in gate for logged in users"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/quiz/export.phtml:3
+msgid "Exporting process has started... please wait..."
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/quiz/export.phtml:10
+msgid "Cancel export process"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/quiz/export.phtml:15
+msgid "Download export"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/quiz/import.phtml:5
+msgid "Import a previously exported quiz below"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/quiz/import.phtml:8
+msgid "Add file"
+msgstr ""
+
+#: ../includes/admin/views/templates/modals/quiz/import.phtml:9
+msgid "or drop files here"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/settings/feedback-extended.phtml:4
+msgid "How long should the feedback be displayed for?"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/settings/feedback-extended.phtml:11
+msgid "Don't display feedback"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/settings/feedback-extended.phtml:20, ../includes/admin/views/templates/quiz/settings/feedback.phtml:17
+msgid " seconds"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/settings/feedback-extended.phtml:26, ../includes/admin/views/templates/quiz/settings/feedback.phtml:22
+msgid "Until the user presses the Next button"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/settings/feedback-extended.phtml:31, ../includes/admin/views/templates/quiz/settings/feedback.phtml:33
+msgid "Allow users to go back and revisit previous questions?"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/settings/feedback-extended.phtml:41, ../includes/admin/views/templates/quiz/settings/feedback.phtml:43
+msgid "Display navigation buttons"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/settings/feedback-preview.phtml:3
+msgid "Preview"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/settings/feedback-preview.phtml:5
+msgid "Lorem ipsum dolor"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/settings/feedback-preview.phtml:8
+msgid "A message is displayed if the quiz participant chooses the right answer."
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/settings/feedback-preview.phtml:9
+msgid "This is how feedback is displayed after the participant answers a question."
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/settings/feedback.phtml:28
+msgid "Quiz navigation is not available when answers given by the user are highlighted."
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/settings/highlight-answer.phtml:3
+msgid "After the visitor has responded to the question, what should happen?"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/settings/highlight-answer.phtml:10
+msgid "Load next question"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/settings/highlight-answer.phtml:16
+msgid "Highlight correct answer"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/settings/highlight-answer.phtml:22
+msgid "Highlight and provide feedback on answer"
+msgstr ""
+
+#: ../includes/admin/views/templates/quiz/style/new-button.phtml:9
+msgid "Step 2/4: Select a quiz style."
+msgstr ""
+
+#: ../tcb-bridge/class-tqb-next-step-event.php:12
+msgid "Next Step in Quiz"
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:401
+msgid "Result of quiz"
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:435
+msgid "List all the questions and answers"
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:475
+msgid "Someone completed the quiz: [quiz_name]"
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:476
+msgid ""
+"Someone completed the quiz called [quiz_name] on this page: [page_url] \n"
+"\n"
+"<b>The user's details:</b>\n"
+"[all_form_fields] \n"
+"<b>The answers that the user gave:</b> \n"
+"\n"
+"[quiz_answers] \n"
+"<b>The result that the user got:</b>\n"
+"\n"
+"[quiz_result]"
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:477
+msgid "Thank you for completing the quiz"
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:478
+msgid ""
+"Thank you for taking the time to complete the quiz. \n"
+"\n"
+"<b>Here are the answers you gave:</b> \n"
+"\n"
+"[quiz_answers] \n"
+"<b>Your result is:</b>\n"
+"\n"
+"[quiz_result]"
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:537
+msgid "Please choose a template"
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:538
+msgid "Please enter a template name, it will be easier to reload it after."
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:539
+msgid "Fetching saved templates..."
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:540
+msgid "The minimum value cannot be changed!"
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:541
+msgid "The maximum value cannot be changed!"
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:542
+msgid "The minimum value cannot be less than "
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:543
+msgid "The maximum value cannot be greater than "
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:1264
+msgid "Invalid Parameters"
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:1278
+msgid "Could not find the variation you are editing... Is it possible that someone deleted it from the admin panel?"
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:1479
+msgid "Variation cannot be empty"
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:1702
+msgid "Send quiz result as tag"
+msgstr ""
+
+#: ../tcb-bridge/tqb-class-hooks.php:1703
+msgid "Scroll settings saved for the quiz"
+msgstr ""
+
+#: ../tcb-bridge/editor-backbone/autofill-info.php:4
+msgid "The hidden field will be automatically populated with the result that the user obtains in the quiz"
+msgstr ""
+
+#: ../tcb-bridge/editor-backbone/autofill-info.php:9
+msgid "Learn More"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-dynamic-content-element.php:20
+msgid "Dynamic Content"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-quiz-element.php:35
+msgid "Quiz"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-quiz-element.php:91
+msgid "Change quiz"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-quiz-element.php:100
+msgid "Enable quiz scroll"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-quiz-element.php:110
+msgid "Save users quiz progress"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-quiz-element.php:113
+msgid "This will allow logged-in users to return to the same page and resume their progress or see their results."
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-social-share-badge-element.php:21
+msgid "Social Share Badge"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-answer-feedback-element.php:5
+msgid "Answer Feedback Container"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-answer-item-element.php:5
+msgid "Answer Item"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-answer-item-right-element.php:5
+msgid "Right Answer Item"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-answer-item-wrong-element.php:5
+msgid "Wrong Answer Item"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-answer-text.php:6, ../tcb-bridge/editor-elements/class-tcb-tqb-feedback-text-element.php:6
+msgid "Answer Text"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-answers-container-element.php:5
+msgid "Quiz Answers"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-label-element.php:6
+msgid "Thrive Label"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-page-element.php:20
+msgid "Thrive Quiz Builder Page"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-progress-bar-element.php:5
+msgid "Quiz Progress bar"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-progress-bar-element.php:28
+msgid "Progress Bar Position"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-progress-bar-element.php:33
+msgid "position_top"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-progress-bar-element.php:37
+msgid "position_bottom"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-progress-bar-element.php:48
+msgid "Progress Type"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-progress-bar-element.php:53
+msgid "percentage_completed"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-progress-bar-element.php:57
+msgid "percentage_remaining"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-progress-bar-element.php:68, ../tcb-bridge/editor-layouts/menus/qna/tqb-progress-bar.php:19
+msgid "Progress bar Label"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-progress-bar-label-element.php:6
+msgid "Progress bar label"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-qna-text-element.php:11
+msgid "QNA Text"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-question-container-element.php:5
+msgid "Question Container"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-question-description-element.php:6
+msgid "Quiz Question Description"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-question-element.php:22
+msgid "Quiz Builder Questions"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-question-element.php:79
+msgid "Progress Bar"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-question-element.php:110
+msgid "Grouped Answer Items"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-question-element.php:111
+msgid "-- Answer Item %s"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-question-element.php:116
+msgid "Grouped Answer Text"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-question-element.php:117
+msgid "-- Answer Text %s"
+msgstr ""
+
+#: ../tcb-bridge/editor-elements/class-tcb-tqb-question-text-element.php:6
+msgid "Quiz Question"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/delete-dynamic-content.php:7, ../tcb-bridge/editor-lightbox/equalize-intervals.php:7, ../tcb-bridge/editor-lightbox/remove-interval.php:7
+msgid "Confirmation"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/delete-dynamic-content.php:9
+msgid "By deleting the Dynamic Content Element from the page you'll loose all the settings you've made to the intervals."
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/delete-dynamic-content.php:13
+msgid "Delete Dynamic Content"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/equalize-intervals.php:9
+msgid "Are you sure you want to equalize all intervals?"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/equalize-intervals.php:13
+msgid "Equalize Sizes"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/import-content.php:11
+msgid "Import content"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/import-content.php:13
+msgid "Select the state you want to bring content from:"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/import-content.php:17
+msgid "Select an interval"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/import-content.php:29
+msgid "Import"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/remove-interval.php:9
+msgid "Are you sure you want to delete this state?"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/result-intervals.php:36
+msgid "Dynamic content intervals"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/result-intervals.php:38
+msgid "Before adding your Dynamic Content, please choose how to split your results into intervals.<br> You can create a maximum of %s intervals"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/result-intervals.php:41
+msgid "Split available results range into: "
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/result-intervals.php:43
+msgid "equal intervals"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/result-intervals.php:48
+msgid "Create new dynamic content intervals"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/result-intervals.php:70
+msgid "You can choose to import intervals from the %s."
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/result-intervals.php:73
+msgid "If you choose this, only the intervals ranges will be imported."
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/result-intervals.php:76
+msgid "Import intervals from %s"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/result-intervals.php:21
+msgid "There seems to be a problem with your quiz"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/result-intervals.php:23
+msgid "The minimum and maximum result cannot be the same! First you need to add points to the quiz answers and then add the dynamic content in your page."
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/result-intervals.php:26
+msgid "Edit Questions"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/result-intervals.php:12
+msgid "You have no questions defined"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/result-intervals.php:14
+msgid "There are no questions defined for this quiz so the dynamic content cannot be added!"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/result-intervals.php:17
+msgid "Add Questions"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/save-validation.php:7
+msgid "Links missing"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/save-validation.php:9
+msgid "Your page has neither a link to the next step in the quiz nor a form connected to the email service, so your visitors will be blocked on this step."
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/save-validation.php:10
+msgid "Learn how to add links to the next step in the quiz."
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/social-share-badge-template.php:8
+msgid "Social share badge template"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/social-share-badge-template.php:10
+msgid "Select the display template for the social share badge."
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/variation-reset.php:7, ../tcb-bridge/editor-lightbox/variation-reset.php:13, ../tcb-bridge/editor-layouts/element-menus/reset-settings.php:10
+msgid "Reset to default content"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/variation-reset.php:9
+msgid "Are you sure you want to reset this variation to the default template? This action cannot be undone."
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/variation-save.php:7
+msgid "Save Page Template"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/variation-save.php:9
+msgid "You can save the current page as a template for use on another post / page on your site."
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/variation-save.php:14
+msgid "Template Name"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/variation-save.php:19, ../tcb-bridge/editor-layouts/element-menus/content-settings.php:7
+msgid "Save Template"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/variation-templates.php:27
+msgid "Search"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/variation-templates.php:34
+msgid "Type"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/variation-templates.php:39
+msgid "Default templates"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/variation-templates.php:46
+msgid "My Templates"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/variation-templates.php:51
+msgid "Saved templates"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/variation-templates.php:59
+msgid "Choose %s Template"
+msgstr ""
+
+#: ../tcb-bridge/editor-lightbox/variation-templates.php:63
+msgid "Any changes you’ve made to the current form will be lost when you select a new template. We recommend you to save your current template first."
+msgstr ""
+
+#: ../tcb-bridge/editor/page/state-picker.php:12
+msgid "Preview Mode"
+msgstr ""
+
+#: ../tcb-bridge/editor/page/state-picker.php:14
+msgid "Choose state to preview:"
+msgstr ""
+
+#: ../tcb-bridge/editor/page/states.php:65
+msgid "Results Intervals:"
+msgstr ""
+
+#: ../tcb-bridge/editor/page/states.php:107
+msgid "Apply"
+msgstr ""
+
+#: ../tcb-bridge/editor/page/states.php:143
+msgid "Equalize sizes"
+msgstr ""
+
+#: ../tcb-bridge/editor/page/states.php:148
+msgid "Reset all"
+msgstr ""
+
+#: ../tcb-bridge/editor/page/states.php:30
+msgid "Results:"
+msgstr ""
+
+#: ../tcb-bridge/editor/page/states.php:37
+msgid "Import Content"
+msgstr ""
+
+#: ../tcb-bridge/editor/page/tqb_optin.php:12
+msgid "This is a Variation type called \"Opt-in gate\". It is displayed on posts that have its code in the content."
+msgstr ""
+
+#: ../tcb-bridge/editor/page/tqb_qna.php:13
+msgid "This is a Variation type called \"Q&A\". It is displayed on posts that have its code in the content."
+msgstr ""
+
+#: ../tcb-bridge/editor/page/tqb_results.php:13
+msgid "This is a Variation type called \"Result page\". It is displayed on posts that have its code in the content."
+msgstr ""
+
+#: ../tcb-bridge/editor/page/tqb_splash.php:13
+msgid "This is a Variation type called \"Splash page\". It is displayed on posts that have its code in the content."
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/question.php:172
+msgid "Characters: "
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/quiz.php:4
+msgid "Select a Quiz"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/elements/social-share-badge.php:3
+msgid "Insert Social Share Badge"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/quiz.php:16
+msgid "Quiz Options"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/quiz.php:25
+msgid "Redirection override"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/quiz.php:29
+msgid "Automatic redirection is disabled when saving the users quiz progress. Users will be shown a link to their results"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/social-share-badge.php:16
+msgid "Social Share Badge Options"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/social-share-badge.php:23
+msgid "Change Template"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/social-share-badge.php:38
+msgid "Social Networks"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/qna/question.php:13, ../tcb-bridge/editor-layouts/menus/qna/tqb-progress-bar.php:10
+msgid "Main Options"
+msgstr ""
+
+#: ../tcb-bridge/editor-layouts/menus/qna/question.php:20
+msgid "Reset to default layout"
+msgstr ""

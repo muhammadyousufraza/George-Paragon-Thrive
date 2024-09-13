@@ -1,0 +1,20 @@
+<div class="tvd-ct-elem">
+	<div>
+		<div class="tcb-admin-template-name">
+			<span class="tvd-card-title">
+				<#= model.get('name') #>
+			</span>
+			<span data-tooltip="<?php _e( 'Change Text', 'thrive-cb' ); ?>" data-position="top" class="tvd-tooltipped tvd-icon-pencil tvd-pointer tcb-admin-edit-template-name"></span>
+		</div>
+		<a data-tooltip="<?php _e( 'Move to another Category', 'thrive-cb' ); ?>" data-position="top" class="tvd-tooltipped">
+			<?php echo tcb_admin_icon( 'move-symbol' ); ?>
+		</a>
+		<a data-tooltip="<?php _e( 'Delete Template', 'thrive-cb' ); ?>" data-position="top" class="tvd-tooltipped tcb-admin-delete-template-item">
+			<?php echo tcb_admin_icon( 'delete' ); ?>
+		</a>
+	</div>
+	<div class="tcb-admin-image-overlay-wrapper">
+		<img src="<#= model.get('thumb') && model.get('thumb').url ? model.get('thumb').url : model.get('image_url') #>" class="sym-image" data-height="<#= model.get('thumb').h || 120 #>" data-width="<#= model.get('thumb').w || 250 #>"/>
+		<a class="tcb-admin-preview-text" href="#template/<#= model.get('id') #>"><?php echo __( 'Preview', 'thrive-cb' ); ?></a>
+	</div>
+</div>

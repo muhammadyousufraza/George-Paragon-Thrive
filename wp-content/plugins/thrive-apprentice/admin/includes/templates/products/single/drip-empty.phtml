@@ -1,0 +1,19 @@
+<div>
+	<?php tva_get_svg_icon( 'drip-courses-empty' ); ?>
+	<h4><?php echo esc_html__( 'No courses found in product', 'thrive-apprentice' ) ?></h4>
+	<p><?php echo esc_html__( 'You don\'t currently have any courses included in this product.', 'thrive-apprentice' ) ?></p>
+	<hr>
+	<div class="drip-inner">
+		<span><?php echo esc_html__( 'To get started with this feature:', 'thrive-apprentice' ) ?></span>
+		<ol>
+			<li>
+				<?php echo sprintf( esc_html__( 'Add a course in the %s tab', 'thrive-apprentice' ),
+					'<a href="#products/<#=product.get(\'id\')#>/content">' . esc_html__( 'Product content', 'thrive-apprentice' ) . '</a>' ); ?>
+			</li>
+			<li>
+				<?php echo esc_html__( 'Edit the course and create a drip schedule ', 'thrive-apprentice' ); ?>
+			</li>
+			<li><?php echo esc_html__( 'Return to this screen and attach it to the product', 'thrive-apprentice' ) ?></li>
+		</ol>
+	</div>
+</div>

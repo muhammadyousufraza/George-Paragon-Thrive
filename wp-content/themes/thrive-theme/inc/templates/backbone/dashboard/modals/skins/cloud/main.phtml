@@ -1,0 +1,15 @@
+<div class="cloud-items-content">
+	<# if( TTD.utils.isFreshInstall() ) { #>
+	<h3><?php echo __( 'Choose a Theme', 'thrive-theme' ); ?></h3>
+	<# } else { #>
+	<h3><?php echo __( 'Add a Theme from Thrive Cloud', 'thrive-theme' ); ?></h3>
+	<# } #>
+	<div class="cloud-items-counter">0</div>
+	<div class="cloud-search-container">
+		<input class="keyup" data-fn="searchCloudSkins" type="search" placeholder="<?php echo __( 'Search', 'thrive-theme' ); ?>"/>
+	</div>
+	<button class="click refresh alignright " data-fn="refreshItems">
+		<?php Thrive_Views::svg_icon( 'refresh' ); ?>
+		<?php echo __( 'Refresh from cloud', 'thrive-theme' ); ?>
+	</button>
+</div>

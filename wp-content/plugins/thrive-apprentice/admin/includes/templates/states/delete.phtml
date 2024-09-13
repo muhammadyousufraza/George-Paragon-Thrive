@@ -1,0 +1,24 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ *
+ * To be used a confirmation view for an action
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div class="tva-login-delete">
+	<div class="tva-flex tva-space-between">
+		<a href="javascript:void(0)" class="click" data-fn="cancelRemove">
+			<?php echo __( 'No, cancel it', 'thrive-apprentice' ) ?>
+		</a>
+		<a href="javascript:void(0)" class="click" data-fn="confirmRemove">
+			<?php echo __( 'Yes, I am sure', 'thrive-apprentice' ) ?>
+		</a>
+	</div>
+</div>

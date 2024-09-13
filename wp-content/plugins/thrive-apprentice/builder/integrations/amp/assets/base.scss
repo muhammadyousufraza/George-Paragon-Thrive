@@ -1,0 +1,100 @@
+/* template structure */
+@import "../../../inc/assets/sass/style/_structure";
+@import "../../../inc/assets/sass/style/_typography";
+
+/* these are styles copied selectively from normal css */
+@import 'elements/breadcrumbs.scss';
+@import "elements/button";
+@import 'elements/contentbox.scss';
+@import 'elements/comments.scss';
+@import 'elements/divider.scss';
+@import 'elements/grid.scss';
+@import "elements/headers_footers";
+@import "elements/icons";
+@import "elements/image";
+@import "elements/logo";
+@import "elements/menu";
+@import "elements/numbered_list";
+@import "elements/post_list";
+@import 'elements/section.scss';
+@import 'elements/star_rating.scss';
+@import "elements/styled_list";
+@import "elements/video";
+@import "elements/table";
+@import "elements/text";
+@import "elements/toc";
+
+/* general css */
+.thrv_wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 1px;
+
+  &.tve-elem-default-pad {
+    padding: 20px;
+  }
+}
+
+.thrv_wrapper div {
+  box-sizing: content-box;
+}
+
+.main-container {
+  margin: 0;
+}
+
+body:not(.tve_editor_page) .tve_more_tag {
+  visibility: hidden;
+  height: 1px;
+}
+
+#tve_editor {
+  ol, ul {
+    margin-left: 20px;
+
+    &.thrv_wrapper {
+      line-height: 1.4em;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  :not(#s) .tcb-desktop-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  :not(#s) .tcb-tablet-hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  :not(#s) .tcb-mobile-hidden {
+    display: none;
+  }
+}
+
+.tcb-permanently-hidden {
+  display: none;
+}
+
+.tcb-clear:after {
+  display: block;
+  height: 0;
+  content: '';
+}
+
+:not(#s) {
+  /* text alignment classes */
+  @each $dir in (left, right, center, justify) {
+    .thrive-text-#{$dir} {
+      text-align: #{$dir};
+    }
+  }
+}

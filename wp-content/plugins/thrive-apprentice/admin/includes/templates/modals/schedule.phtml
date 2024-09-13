@@ -1,0 +1,39 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+
+<div class="tvd-modal-content">
+
+	<h3 class="tvd-modal-title">
+		<?php echo __( 'Schedule ', 'thrive-apprentice' ); ?>
+		<#- this._itemName #>
+		<?php echo __( ' for publishing', 'thrive-apprentice' ); ?>
+	</h3>
+
+	<div class="tva-schedule-info">
+		<p class="">
+			<?php echo __( 'When would you like this ', 'thrive-apprentice' ); ?>
+			<#- this._itemName #>
+			<?php echo __( ' to be published?', 'thrive-apprentice' ); ?>
+		</p>
+
+		<a href="http://help.thrivethemes.com/en/articles/5206233-how-to-schedule-thrive-apprentice-content-to-publish-at-a-specific-date" target="_blank">
+			<?php echo __( 'Click here to learn more', 'thrive-apprentice' ); ?>
+		</a>
+	</div>
+
+	<div id="tva-datepicker"></div>
+
+	<div class="tva-flex tva-flex-row tva-space-between margin-top-10">
+		<button type="button" class="click tva-modal-btn tva-modal-close" data-fn="close"><?php echo __( 'Close', 'thrive-apprentice' ); ?></button>
+		<button type="button" class="click tva-modal-btn tva-modal-btn-green" data-fn="save"><?php echo __( 'Save', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>

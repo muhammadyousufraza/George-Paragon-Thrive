@@ -1,0 +1,49 @@
+<div class="tcb-link-component tcb-edit mce-comp">
+	<div class="panel-text mb-10"><?php esc_html_e( 'Typefocus Animation', 'thrive-cb' ) ?></div>
+	<div class="control-grid">
+		<label for="tf-default" class="label"><?php echo __( 'Default', 'thrive-cb' ) ?></label>
+		<input type="text" data-fn-change="default_changed" class="tcb-inline-text change input" value="<#=this.model.get('text')#>">
+	</div>
+	<# _.each( this.model.get( 'variations' ), function( item, i ) { #>
+		<div class="control-grid">
+			<label class="label"><?php echo __( 'Text', 'thrive-cb' ) ?>
+				<#=(i-0+1)#>
+			</label>
+			<div class="tcb-relative input">
+				<input type="text" class="tcb-inline-text pr-25 keyup variation-item" data-fn="edit_variation" data-index="<#=i#>" value="<#=item#>" tabindex="<#=i#>">
+				<a style="color: #ef3c3c" href="javascript:void(0)" class="click tcb-absolute tcb-delete input-remove" data-fn="remove_variation" data-index="<#=i#>">
+					<?php tcb_icon( 'exit' ) ?>
+				</a>
+			</div>
+		</div>
+	<#});#>
+	<div class="control-grid flex-end">
+		<button class="click tf-add-variation tve-button" data-fn="add_variation"><?php echo __( 'Add new', 'thrive-cb' ) ?></button>
+	</div>
+	<hr>
+
+	<div class="panel-text"><?php echo __( 'Pause between animations', 'thrive-cb' ) ?> <span id="timer-ms"><#=this.model.get('speed')#></span>ms</div>
+	<div class="flex space-between">
+		<label class="tve-slider-label"><?php echo __( 'Short', 'thrive-cb' ) ?></label>
+		<input class="tve-slider input" type="range" data-fn="speed" min="500" max="10000" step="10" value="<#=this.model.get('speed')#>">
+		<label class="tve-slider-label tcb-text-right"><?php echo __( 'Long', 'thrive-cb' ) ?></label>
+	</div>
+	<div class="control-grid no-space">
+		<label class="tcb-checkbox">
+			<input type="checkbox" <#=this.model.get('blink')?' checked' : ''#> class="change" data-fn="attr" data-field="blink">
+			<span><?php echo __( 'Blink cursor effect', 'thrive-cb' ) ?></span>
+		</label>
+		<label class="tcb-checkbox">
+			<input type="checkbox" <#=this.model.get('highlight')?' checked' : ''#> class="change" data-fn="attr" data-field="highlight">
+			<span><?php echo __( 'Highlight', 'thrive-cb' ) ?></span>
+		</label>
+	</div>
+	<# if(this.model.get('highlight')) { #>
+		<div class="control-grid">
+			<label>
+				<?php echo __( 'Highlight color', 'thrive-cb' ) ?>
+			</label>
+			<div class="tcb-text-right highlight-color no-space"></div>
+		</div>
+	<# } #>
+</div>

@@ -1,0 +1,25 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+
+?>
+<div class="tva-so-checkout-opts">
+	<div class="tva-tab-item click" data-tab="register" data-fn="click">
+		<?php tva_get_svg_icon( 'edit' ); ?>
+		<span><?php echo __( 'Registration Page', 'thrive-apprentice' ) ?></span>
+	</div>
+	<div class="tva-tab-item click" data-tab="thankyou" data-fn="click">
+		<?php tva_get_svg_icon( 'thumbs-up' ); ?>
+		<span><?php echo __( 'Thank You Page', 'thrive-apprentice' ) ?></span>
+	</div>
+</div>
+
+<div class="tva-so-checkout-tabs"></div>
+

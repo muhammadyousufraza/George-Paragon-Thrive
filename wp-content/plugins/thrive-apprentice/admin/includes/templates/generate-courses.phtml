@@ -1,0 +1,167 @@
+<div class="tva-generate">
+	<form class="tva-generate-courses">
+		<div class="mb-10">
+			<b><?php echo __( 'Select Number of courses', 'thrive-apprentice' ) ?> </b>
+			<br/>
+			<input type="number" id="course-count" name="courseCount" value="1">
+		</div>
+		<div class="mb-10">
+			<b><?php echo __( 'Select Number of modules', 'thrive-apprentice' ) ?></b>
+			<div class="tva-info-icon tva-relative tva-tooltip-parent tva-mega-tooltip">
+				<svg class="tva-icon ta-info-solid">
+					<use xlink:href="#ta-info-solid"></use>
+				</svg>
+				<div class="tva-custom-tooltip p-15 mt-50">
+					<p class="mb-0 mt-0">
+						<?php echo __( 'For each generated course, random number of modules will be generated from the interval given', 'thrive-apprentice' ) ?>
+					</p>
+				</div>
+			</div>
+			<br/>
+			<label for="min-modules"><b><?php echo __( 'From', 'thrive-apprentice' ) ?></b></label>
+			<input type="number" id="min-modules" name="minModules" value="0">
+			<label for="max-modules"><b><?php echo __( 'To', 'thrive-apprentice' ) ?></b></label>
+			<input type="number" id="max-modules" name="maxModules" value="0">
+		</div>
+		<div class="mb-10">
+			<b><?php echo __( 'Select Number of Chapters', 'thrive-apprentice' ) ?></b>
+			<div class="tva-info-icon tva-relative tva-tooltip-parent tva-mega-tooltip">
+				<svg class="tva-icon ta-info-solid">
+					<use xlink:href="#ta-info-solid"></use>
+				</svg>
+				<div class="tva-custom-tooltip p-15 mt-50">
+					<p class="mb-0 mt-0">
+						<?php echo __( 'For each generated course/module, random number of chapters will be generated from the interval given', 'thrive-apprentice' ) ?>
+					</p>
+				</div>
+			</div>
+			<br/>
+			<label for="min-chapters"><b><?php echo __( 'From', 'thrive-apprentice' ) ?></b></label>
+			<input type="number" id="min-chapters" name="minChapters" value="0">
+			<label for="max-chapters"><b><?php echo __( 'To', 'thrive-apprentice' ) ?></b></label>
+			<input type="number" id="max-chapters" name="maxChapters" value="0">
+		</div>
+		<div class="mb-10">
+			<b><?php echo __( 'Select Number of Lessons', 'thrive-apprentice' ) ?></b>
+			<div class="tva-info-icon tva-relative tva-tooltip-parent tva-mega-tooltip">
+				<svg class="tva-icon ta-info-solid">
+					<use xlink:href="#ta-info-solid"></use>
+				</svg>
+				<div class="tva-custom-tooltip p-15 mt-50">
+					<p class="mb-0 mt-0">
+						<?php echo __( 'For each generated course/module/chapter, random number of lessons will be generated from the interval given', 'thrive-apprentice' ) ?>
+					</p>
+				</div>
+			</div>
+			<br/>
+			<label for="min-lessons"><b><?php echo __( 'From', 'thrive-apprentice' ) ?></b></label>
+			<input type="number" id="min-lessons" name="minLessons" value="1">
+			<label for="max-lessons"><b><?php echo __( 'To', 'thrive-apprentice' ) ?></b></label>
+			<input type="number" id="max-lessons" name="maxLessons" value="1">
+		</div>
+		<button class="tva-btn tva-btn-blue" type="button" data-fn="tva-generate-courses"><?php echo __( 'Generate Courses', 'thrive-apprentice' ) ?></button>
+		<button class="tva-btn tva-btn-red" type="button" data-fn="tva-delete-generated-courses"><?php echo __( 'Delete Generated Courses', 'thrive-apprentice' ) ?></button>
+	</form>
+</div>
+
+<div class="tva-generate">
+	<form class="tva-generate-products">
+		<div class="mb-10">
+			<label for="products-count"><b><?php echo __( 'Select Number of Products', 'thrive-apprentice' ) ?></b></label>
+			<br/>
+			<input type="number" id="products-count" name="productsCount" value="1">
+			<br/>
+			<b><?php echo __( 'Select Course Percentage per Product', 'thrive-apprentice' ) ?></b>
+			<div class="tva-info-icon tva-relative tva-tooltip-parent tva-mega-tooltip">
+				<svg class="tva-icon ta-info-solid">
+					<use xlink:href="#ta-info-solid"></use>
+				</svg>
+				<div class="tva-custom-tooltip p-15 mt-50">
+					<p class="mb-0 mt-0">
+						<?php echo __( 'For each product, a random percentage of the existing courses will be attached', 'thrive-apprentice' ) ?>
+						<br/>
+						<?php echo __( 'If you have no courses, empty products will be generated', 'thrive-apprentice' ) ?>
+						<br/>
+						<?php echo __( 'If you have at least one course, generated products will have at least one course', 'thrive-apprentice' ) ?>
+						<br/>
+					</p>
+				</div>
+			</div>
+			<br/>
+			<label for="course-percentage-min"><b><?php echo __( 'From', 'thrive-apprentice' ) ?></b></label>
+			<input type="number" min="0" max="100" id="course-percentage-min" name="coursePercentageMin" value="30">
+			<label for="course-percentage-max"><b><?php echo __( 'To', 'thrive-apprentice' ) ?></b></label>
+			<input type="number" min="0" max="100" id="course-percentage-max" name="coursePercentageMax" value="50">
+			<br/>
+			<button class="tva-btn tva-btn-blue" data-fn="tva-generate-products" type="button"><?php echo __( 'Generate Products', 'thrive-apprentice' ) ?></button>
+			<button class="tva-btn tva-btn-red" data-fn="tva-delete-generated-products" type="button"><?php echo __( 'Delete Generated Products', 'thrive-apprentice' ) ?></button>
+		</div>
+	</form>
+</div>
+
+<div class="tva-generate">
+	<form class="tva-generate-members">
+		<div class="mb-10">
+			<label for="members-count"><b><?php echo __( 'Select Number of Members', 'thrive-apprentice' ) ?></b></label>
+			<br/>
+			<input type="number" id="members-count" name="membersCount" value="1">
+			<br/>
+			<b><?php echo __( 'Select Products Percentage per Member', 'thrive-apprentice' ) ?></b>
+			<div class="tva-info-icon tva-relative tva-tooltip-parent tva-mega-tooltip">
+				<svg class="tva-icon ta-info-solid">
+					<use xlink:href="#ta-info-solid"></use>
+				</svg>
+				<div class="tva-custom-tooltip p-15 mt-50">
+					<p class="mb-0 mt-0">
+						<?php echo __( 'Each generated member will receive access to a random percentage of products from the interval given', 'thrive-apprentice' ) ?>
+						<br/>
+						<?php echo __( 'If you have no products or you have empty products, members with access to 0 products/courses will be generated, they wont be visible in the members list, only in wordpress in the user list until they manually receive access to a course', 'thrive-apprentice' ) ?>
+						<br/>
+						<?php echo __( 'If you have at least one product, generated members will receive access to at least one product', 'thrive-apprentice' ) ?>
+						<br/>
+					</p>
+				</div>
+			</div>
+			<br/>
+			<label for="product-percentage-min"><b><?php echo __( 'From', 'thrive-apprentice' ) ?></b></label>
+			<input type="number" min="0" max="100" id="product-percentage-min" name="productPercentageMin" value="10">
+			<label for="product-percentage-max"><b><?php echo __( 'To', 'thrive-apprentice' ) ?></b></label>
+			<input type="number" min="0" max="100" id="product-percentage-max" name="productPercentageMax" value="20">
+			<br/>
+			<button class="tva-btn tva-btn-blue" type="button" data-fn="tva-generate-members"><?php echo __( 'Generate Members', 'thrive-apprentice' ) ?></button>
+			<button class="tva-btn tva-btn-red" type="button" data-fn="tva-delete-generated-members"><?php echo __( 'Delete Generated Members', 'thrive-apprentice' ) ?></button>
+		</div>
+	</form>
+</div>
+
+
+<div class="tva-generate">
+	<form class="tva-generate-completion">
+		<div class="mb-10">
+			<b><?php echo __( 'Select Completion Rate', 'thrive-apprentice' ) ?></b>
+			<div class="tva-info-icon tva-relative tva-tooltip-parent tva-mega-tooltip">
+				<svg class="tva-icon ta-info-solid">
+					<use xlink:href="#ta-info-solid"></use>
+				</svg>
+				<div class="tva-custom-tooltip p-15 mt-50">
+					<p class="mb-0 mt-0">
+						<?php echo __( 'Each generated member will receive a random progress for each course from the specified interval', 'thrive-apprentice' ) ?>
+						<br/>
+						<?php echo __( 'If there are few lessons, the interval wont be that relevant', 'thrive-apprentice' ) ?>
+						<br/>
+						<?php echo __( 'For example if there is only one lesson to a course, the lesson will be marked as completed if the interval is not the value 0', 'thrive-apprentice' ) ?>
+						<br/>
+					</p>
+				</div>
+			</div>
+			<br/>
+			<label for="completion-percentage-min"><b><?php echo __( 'From', 'thrive-apprentice' ) ?></b></label>
+			<input type="number" min="0" max="100" id="completion-percentage-min" name="completionPercentageMin" value="30">
+			<label for="completion-percentage-max"><b><?php echo __( 'To', 'thrive-apprentice' ) ?></b></label>
+			<input type="number" min="0" max="100" id="completion-percentage-max" name="completionPercentageMax" value="60">
+			<br/>
+			<button class="tva-btn tva-btn-blue" type="button" data-fn="tva-generate-completion"><?php echo __( 'Generate Completion', 'thrive-apprentice' ) ?></button>
+			<button class="tva-btn tva-btn-red" type="button" data-fn="tva-delete-generated-completion"><?php echo __( 'Delete Generated Completion', 'thrive-apprentice' ) ?></button>
+		</div>
+	</form>
+</div>

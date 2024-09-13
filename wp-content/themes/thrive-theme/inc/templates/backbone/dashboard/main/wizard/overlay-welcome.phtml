@@ -1,0 +1,16 @@
+<div class="ttd-wizard-welcome">
+	<img class="ttd-wizard-splash" src="<?php echo THEME_URL . '/inc/assets/images/wizard/splash.png' ?>" width="108" height="103" alt="Wizard Splash">
+	<h2 class="ttd-wizard-title mt-40"><?php echo esc_html__( 'Welcome to the Theme Builder Wizard', 'thrive-theme' ); ?></h2>
+	<div class="wizard-splash mt-30">
+		<p class="ttd-wizard-desc f-20 text-blue mb-0"><?php echo esc_html__( 'This wizard gives you the opportunity to setup the most important things on your site as quickly as possible.', 'thrive-theme' ); ?></p>
+		<p class="ttd-wizard-desc mt-20 f-20 text-blue mb-0"><?php echo esc_html__( "In the wizard, we've built everything for you.", 'thrive-theme' ); ?></p>
+		<div class="mt-30 flex-mid">
+			<?php Thrive_Views::svg_icon( 'img-wizard-stars', 'splash-stars' ); ?>
+		</div>
+		<p class="ttd-wizard-desc mt-30 mb-0"><?php echo esc_html__( 'You can upload your logo, choose your favorite header and footer design, decide what should be shown on your homepage, select the look of your blog list... and so on.', 'thrive-theme' ); ?></p>
+		<p class="ttd-wizard-desc mt-20 mb-0"><?php echo esc_html__( "Once you've been through the wizard, you can then use our visual template editor to make any further modifications you please.", 'thrive-theme' ); ?></p>
+		<button type="button" data-fn="start"
+				class="ttd-btn click fill blue ttd-wizard-start mt-30"><?php echo esc_html__( 'Get Started!', 'thrive-theme' ); ?></button>
+		<button data-fn="skipSetup" class="ttd-wizard-later-button click mt-30"><?php echo esc_html__( "I'll set this up later", 'thrive-theme' ); ?></button>
+	</div>
+</div>

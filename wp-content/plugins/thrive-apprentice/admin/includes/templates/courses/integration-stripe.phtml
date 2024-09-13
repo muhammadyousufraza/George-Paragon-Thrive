@@ -1,0 +1,209 @@
+<?php
+
+use TVA\Stripe\Connection_V2;
+use TVA\Stripe\Credentials;
+use TVA\Stripe\Hooks;
+
+$connection = Connection_v2::get_instance();
+$is_legacy  = Hooks::is_legacy();
+$account_id = Credentials::get_account_id();
+$has_key    = (bool) ( $connection->get_api_key() || $connection->get_test_key() );
+?>
+<div class="tva-rule-header pt-15 pb-15 click" data-fn="toggleItemsList">
+	<div class="tva-rule-img <#= model.get('slug') #> ml-15"><?php tva_get_svg_icon( 'stripe' ); ?></div>
+
+	<p class="tva-stripe-header m-0 ml-20 mr-15"><?php echo __( 'Start selling your product now!', 'thrive-apprentice' ); ?></p>
+	<div class="tva-stripe-recommend m-0"><p class="m-0"><?php echo __( 'Recommended', 'thrive-apprentice' ); ?></p></div>
+	<button class="click tva-stripe-connect mr-20" data-fn="createAccount"><?php echo __( 'Connect Stripe', 'thrive-apprentice' ); ?></button>
+	<div class="tva-course-integration-label"></div>
+	<div class="tva-stripe-mode" data-mode="test">
+		<?php if ( $is_legacy ): ?>
+			<div class="tva-stripe-connection-state mr-15">
+				<?php tva_get_svg_icon( 'exclamation-circle-orange' ); ?>
+				<p class="m-0"><?php echo __( 'Reconnection Needed', 'thrive-apprentice' ); ?></p>
+			</div>
+		<?php else: ?>
+			<div class="tva-stripe-connection-state mr-15">
+				<?php tva_get_svg_icon( 'check-circle-green' ); ?>
+				<p class="m-0"><?php echo __( 'Connected', 'thrive-apprentice' ); ?></p>
+			</div>
+		<?php endif; ?>
+		<span class="tva-stripe-selected-label"><?php echo __( 'Stripe Product Selected', 'thrive-apprentice' ); ?></span>
+		<span class="current-state"><?php echo __( 'TEST', 'thrive-apprentice' ); ?></span>
+	</div>
+	<div class="tva-stripe-mode" data-mode="live">
+		<?php if ( $is_legacy ): ?>
+			<div class="tva-stripe-connection-state mr-15">
+				<?php tva_get_svg_icon( 'exclamation-circle-orange' ); ?>
+				<p class="m-0"><?php echo __( 'Reconnection Needed', 'thrive-apprentice' ); ?></p>
+			</div>
+		<?php else: ?>
+			<div class="tva-stripe-connection-state mr-15">
+				<?php tva_get_svg_icon( 'check-circle-green' ); ?>
+				<p class="m-0"><?php echo __( 'Connected', 'thrive-apprentice' ); ?></p>
+			</div>
+		<?php endif; ?>
+		<span class="tva-stripe-selected-label"><?php echo __( 'Stripe Product Selected', 'thrive-apprentice' ); ?></span>
+		<span class="current-state"><?php echo __( 'LIVE', 'thrive-apprentice' ); ?></span>
+	</div>
+	<div class="tva-rule-status tva-integration-status"></div>
+	<div class="tva-rule-toggle">
+		<span class="tva-arrow-icon">&nbsp;</span>
+	</div>
+</div>
+<div class="tva-rule-items tva-course-integration-items-wrapper" style="display: none">
+	<div class="tva-flex tva-stripe-product-header mb-20">
+
+		<div class="tva-stripe-env-labels tva-flex">
+			<span><?php echo __( 'Environment', 'thrive-apprentice' ); ?></span>
+			<div class="tva-tooltip-parent tva-stripe-test-tooltip">
+				<div class="tva-info-icon"><?php tva_get_svg_icon( 'info-solid' ); ?>
+					<div class="tva-custom-tooltip tva-tooltip-inherited">
+						<?php echo __( "The <b>test environment</b> allows you to simulate a purchase using Stripe's testing credit card details. No money will be taken, but a user will receive product access. Use the test environment to confirm your purchase experience, then switch to the live environment when you are ready to sell your products.", 'thrive-apprentice' ); ?>
+					</div>
+				</div>
+			</div>
+			<select id="tva-stripe-mode-select" class="change" data-fn="changeTestMode">
+				<option value="test"><?php echo __( 'Test', 'thrive-apprentice' ); ?></option>
+				<option value="live"><?php echo __( 'Live', 'thrive-apprentice' ); ?></option>
+			</select>
+			<a href="<?php echo admin_url( 'admin.php?page=thrive_apprentice#settings/stripe' ) ?>" rel="noopener" target="_blank"><?php tva_get_svg_icon( 'cog' ); ?><?php echo __( 'Stripe settings' ); ?></a>
+		</div>
+		<div class="tva-flex tva-stripe-product-actions">
+			<div class="click tva-stripe-refresh" data-fn="refreshProducts">
+				<?php Thrive_Views::svg_icon( 'refresh' ); ?>
+				<span><?php echo __( 'Refresh stripe products', 'thrive-apprentice' ); ?></span>
+			</div>
+			<a href="//dashboard.stripe.com/" target="_blank" rel="nofollow" class="tva-stripe-dash-redirect">
+				<?php echo __( 'Create Stripe product', 'thrive-apprentice' ); ?>
+				<?php tva_get_svg_icon( 'external-link' ); ?>
+			</a>
+		</div>
+	</div>
+	<div class="tva-container-notice tva-container-notice-orange tva-buy-button-notice tva-hide mb-20">
+		<?php tva_get_svg_icon( 'info-circle_light' ); ?>
+		<?php echo __( 'To display the buy now button for this product you must change the action button display settings to “Buy now” > “Stripe” ', 'thrive-apprentice' ); ?> <a href="javascript:void(0)" class="click" data-fn="goToAccessRules">&nbsp;<?php echo __( 'here', 'thrive-apprentice' ); ?> </a>
+	</div>
+	<div class="tva-stripe-product-wrapper tva-flex">
+		<p class="m-0"><?php echo __( 'Stripe product', 'thrive-apprentice' ); ?></p>
+		<div class="tva-stripe-product-select ml-15 mr-10">
+			<select id="tva-stripe-products" class="change" data-fn="selectProduct"></select>
+		</div>
+		<div class="tva-stripe-price-select">
+			<select id="tva-stripe-prices" class="change" data-fn="selectPrice"></select>
+		</div>
+		<div class="tva-rule-items-clear click m-0" data-fn="clearSelectedItems">
+			<?php tva_get_svg_icon( 'times-circle_light' ); ?>
+			<a href="javascript:void(0)"><?php echo esc_html__( 'Clear selection', 'thrive-apprentice' ); ?></a>
+		</div>
+	</div>
+	<div class="tva-sub-advanced-settings-wrapper tva-collapsed mb-10">
+		<div class="tva-sub-advanced-settings-header click" data-fn="toggleSettingsExpanded">
+			<p class="m-0"><?php echo __( 'Advanced settings', 'thrive-apprentice' ); ?></p>
+			<?php tva_get_svg_icon( 'caret-down' ); ?>
+		</div>
+		<div class="tva-sub-advanced-settings">
+			<div class="tva-stripe-free-trial mb-20">
+				<div class="tvd-switch">
+					<label class="tva-slide-checkbox">
+						<input type="checkbox" class="click" data-fn="changeSettingCheckbox">
+						<span class="lever"></span>
+						<span class="settings-checkbox-label"><?php echo esc_html__( 'Product includes a free trial', 'thrive-apprentice' ); ?></span>
+					</label>
+				</div>
+				<input id="tva-stripe-trial-days" class="change" data-fn="updateRule" type="number" min="0"/>
+			</div>
+			<div class="tva-stripe-reference tva-hide mb-20">
+				<div class="tvd-switch">
+					<label class="tva-slide-checkbox">
+						<input type="checkbox" class="click" data-fn="changeSettingCheckbox">
+						<span class="lever"></span>
+						<span class="settings-checkbox-label"><?php echo esc_html__( 'Pass a client reference to checkout', 'thrive-apprentice' ); ?></span>
+					</label>
+				</div>
+				<select id="tva-stripe-client-reference">
+					<option value="user_id"><?php echo __( 'User ID' ); ?></option>
+					<option value="user_name"><?php echo __( 'User name' ); ?></option>
+				</select>
+			</div>
+			<div class="tvd-switch mb-20 tva-stripe-prepopulate-email">
+				<label class="tva-slide-checkbox">
+					<input type="checkbox" class="click" data-fn="changeSettingCheckbox">
+					<span class="lever"></span>
+					<span class="settings-checkbox-label"><?php echo esc_html__( 'Pre-populate email at checkout when user is logged in', 'thrive-apprentice' ); ?></span>
+				</label>
+			</div>
+			<div class="tvd-switch mb-20">
+				<label class="tva-slide-checkbox tva-stripe-allow-coupons">
+					<input type="checkbox" class="click" data-fn="changeSettingCheckbox">
+					<span class="lever"></span>
+					<span class="settings-checkbox-label"><?php echo esc_html__( 'Allow coupon / promotion codes at checkout', 'thrive-apprentice' ); ?></span>
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="tva-stripe-urls tva-flex tva-flex-column">
+		<div class="tva-flex tva-stripe-url mt-20 tvd-input-field">
+			<p class="m-0"><?php echo __( 'Success', 'thrive-apprentice' ); ?></p>
+			<input id="tva-stripe-success-url" class="change ml-15" data-fn="changeSuccessUrl" type="text" placeholder="<?php echo esc_html__( 'https://', 'thrive-apprentice' ); ?>">
+			<label id="tva-stripe-success-label" class="tvd-active" data-error="<?php echo esc_attr__( 'You need to add a valid URL link', 'thrive-apprentice' ) ?>">&nbsp;</label>
+		</div>
+		<div class="tva-add-stripe-page">
+			<a href="javascript:void(0)" class="tva-create-new-page click" data-fn="toggleSuccessPage">
+				<?php tva_get_svg_icon( 'plus-circle' ); ?><?php echo __( 'Create new page', 'thrive-apprentice' ) ?>
+			</a>
+			<div class="tva-login-box tva-hide tva-stripe-success-create">
+				<input placeholder="<?php echo __( 'Page title', 'thrive-apprentice' ) ?>">
+
+				<div class="tva-login-box-footer mt-0">
+					<button class="tva-empty-btn mr-10 click" data-fn="toggleSuccessPage">
+						<?php echo __( 'Cancel', 'thrive-apprentice' ) ?>
+					</button>
+					<button class="tva-save-btn click" data-fn="saveSuccessPage">
+						<?php tva_get_svg_icon( 'plus' ); ?>
+						<?php echo __( 'Add page', 'thrive-apprentice' ) ?>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="tva-flex tva-stripe-url mt-20 tvd-input-field">
+			<p class="m-0"><?php echo __( 'Cancel/failure', 'thrive-apprentice' ); ?></p>
+			<input id="tva-stripe-cancel-url" class="change ml-15" data-fn="changeCancelUrl" type="text" placeholder="<?php echo esc_html__( 'https://', 'thrive-apprentice' ); ?>">
+			<label id="tva-stripe-cancel-label" class="tvd-active" data-error="<?php echo esc_attr__( 'You need to add a valid URL link', 'thrive-apprentice' ) ?>">&nbsp;</label>
+		</div>
+		<div class="tva-add-stripe-page">
+			<a href="javascript:void(0)" class="tva-create-new-page click" data-fn="toggleCancelPage">
+				<?php tva_get_svg_icon( 'plus-circle' ); ?><?php echo __( 'Create new page', 'thrive-apprentice' ) ?>
+			</a>
+			<div class="tva-login-box tva-hide tva-stripe-cancel-create">
+				<input placeholder="<?php echo __( 'Page title', 'thrive-apprentice' ) ?>" class="tvd-save input" type="text" data-fn="onInput" data-field="title">
+
+				<div class="tva-login-box-footer mt-0">
+					<button class="tva-empty-btn mr-10 click" data-fn="toggleCancelPage">
+						<?php echo __( 'Cancel', 'thrive-apprentice' ) ?>
+					</button>
+					<button class="tva-save-btn click" data-fn="saveCancelPage">
+						<?php tva_get_svg_icon( 'plus' ); ?>
+						<?php echo __( 'Add page', 'thrive-apprentice' ) ?>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="tva-stripe-first-product tva-flex tva-flex-column p-20">
+		<p class="m-0 mt-15"><?php echo __( 'No stripe products detected in your connected Stripe account', 'thrive-apprentice' ); ?></p>
+		<p class="m-0 mt-5 mb-15"><?php echo __( 'Please create a Stripe Product from Stripe Dashboard', 'thrive-apprentice' ); ?> <a href="javascript:void(0)" class="click" data-fn="openCreateProductModal"><?php echo __( 'Learn More', 'thrive-apprentice' ); ?></a></p>
+		<a href="//dashboard.stripe.com/products/create" target="_blank" rel="nofollow" class="tva-stripe-create-first-product mb-30">
+			<?php echo __( 'Create your first Stripe product', 'thrive-apprentice' ); ?>
+			<?php tva_get_svg_icon( 'external' ); ?>
+		</a>
+		<div class="tva-or-separator">
+			<span><?php echo __( 'or', 'thrive-apprentice' ); ?></span>
+		</div>
+		<div class="click tva-stripe-refresh mt-30" data-fn="refreshProducts">
+			<?php Thrive_Views::svg_icon( 'refresh' ); ?>
+			<span><?php echo __( 'Refresh stripe products', 'thrive-apprentice' ); ?></span>
+		</div>
+	</div>
+</div>

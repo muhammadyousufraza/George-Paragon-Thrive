@@ -1,0 +1,149 @@
+@import "../../../../grid";
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../../fonts/google/Raleway.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$template-name: set2-small;
+
+$font-family: 'Arial', sans-serif;
+$custom-font-family: 'Raleway', sans-serif;
+
+$color-pallete: (
+  // Color Name : (Testimonial owner color | Quotes color | Background color | Text color | Title color)
+        'black': (#454545, #c5c5c5, #f9f8f8, #666666, #333),
+        'blue': (#3366cc, #bbc6e7, #f9f8f8, #666666, #333),
+        'green': (#469931, #bfd5ba, #f9f8f8, #666666, #333),
+        'orange': (#ea641b, #f3c5b6, #f9f8f8, #666666, #333),
+        'purple': (#9d63bb, #d7c5e1, #f9f8f8, #666666, #333),
+        'red': (#cf2525, #e9b8b8, #f9f8f8, #666666, #333),
+        'teal': (#298c95, #b9d1d4, #f9f8f8, #666666, #333),
+        'white': (#ffffff, #9b9b9b, transparent, #fff, #fff)
+);
+
+$font-size: 17px;
+$font-style: italic;
+$font-weight: 400;
+$font-line-height: 21px;
+$font-margin-bottom: 20px;
+$background_color: #f9f8f8;
+
+.tvo-set2-small-template {
+  &.tvo-testimonials-display-grid {
+    .tvo-testimonial-display-item {
+      h4 {
+        font-size: 22px;
+        font-family: $custom-font-family;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 30px;
+        margin-top: 0;
+      }
+
+      .tvo-background-wrapper {
+        padding: 22px 60px 22px 22px;
+        position: relative;
+
+        p {
+          font-size: $font-size;
+          font-weight: $font-weight;
+          font-family: $font-family;
+          font-style: $font-style;
+          line-height: $font-line-height;
+          margin-bottom: $font-margin-bottom;
+          margin-left: 100px;
+        }
+
+        .tvo-testimonial-image-cover {
+          position: absolute;
+          border-radius: 50%;
+          width: 80px;
+          height: 80px;
+          left: 25px;
+          top: 25px;
+        }
+
+        .tvo-testimonial-quote {
+          &::before {
+            display: block;
+            margin: 0 auto;
+            content: '\0201E';
+            font-family: Georgia, sans-serif;
+            font-size: 100px;
+            font-weight: 700;
+            line-height: 1em;
+            position: absolute;
+            top: -50px;
+            right: 20px;
+            width: 40px;
+          }
+        }
+
+        .tvo-testimonial-info {
+          margin-left: 100px;
+          font-size: 14px;
+          line-height: $font-line-height;
+          font-style: $font-style;
+          border: 1px solid transparent;
+
+          .tvo-testimonial-name {
+            text-transform: uppercase;
+            font-weight: 400;
+          }
+
+          .tvo-testimonial-role {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+
+@each $name, $color in $color-pallete {
+  .tvo-set2-small-template {
+    .tvo-testimonial-display-item {
+      &.tvo-apply-background {
+        background-color: #fff;
+      }
+    }
+  }
+  .tvo-set2-small-template {
+    &.tve_#{$name} {
+      h4 {
+        color: nth($color, 5);
+      }
+
+      .tvo-background-wrapper {
+        background-color: nth($color, 3);
+
+        p {
+          color: nth($color, 4);
+        }
+
+        .tvo-testimonial-quote {
+          &::before {
+            color: nth($color, 2);
+          }
+        }
+
+        .tvo-testimonial-info {
+          .tvo-testimonial-name {
+            color: nth($color, 1);
+          }
+
+          .tvo-testimonial-role {
+            color: nth($color, 4);
+
+            a {
+              color: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+}

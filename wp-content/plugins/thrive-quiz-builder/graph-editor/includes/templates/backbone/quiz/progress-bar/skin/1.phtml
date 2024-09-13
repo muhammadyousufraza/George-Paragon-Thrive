@@ -1,0 +1,11 @@
+<div class="tqb-progress-box tqb-progress-style-1">
+	<span class="tqb-progress-label">
+		<#= model.getPercentToDisplay() #>% <#= model.get( 'label_text' ) #>
+	</span>
+	<div class="tqb-progress">
+		<div class="tqb-progress-completed" style="width: calc( <#= model.get( 'percentage' ) #>% )"></div>
+		<div class="tqb-next-item" style="width: calc( <#= estimatedProgress #>% )"></div>
+		<div class="tqb-remaining-progress" style="width: calc( <#= remaining #>% )"></div>
+	</div>
+</div>
+

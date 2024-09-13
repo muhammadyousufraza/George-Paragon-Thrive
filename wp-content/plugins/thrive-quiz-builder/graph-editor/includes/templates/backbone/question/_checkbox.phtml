@@ -1,0 +1,9 @@
+<div class="<#= tooltip ? 'tvd-tooltipped' : '' #>" <#= tooltip ? 'data-tooltip="' + tooltip + '"' : '' #> <#= tooltip ? 'data-position="top"' : '' #>>
+<input class="tge-v_option-<#= item.id #> tge-display-checkbox"
+       data-id="<#= item.id #>"
+       id="tge-display-<#= item.id #>"
+       type="checkbox"
+<#= true === disabled ? 'disabled="disabled"' : '' #>
+<#= 1 === item.value ? 'checked' : '' #> />
+<label for="tge-display-<#= item.id #>"><#= item.label #></label>
+</div>

@@ -1,0 +1,31 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-visual-editor
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+
+?>
+
+<div class="tcb-logo-image-tooltip">
+	<div class="tcb-logo-image-tooltip-inner" style="background-image: url( <#= this.model.get( 'src' ) #>);"></div>
+</div>
+<div class="tcb-logo-cell">
+	<button class="tcb-logo-preview click"
+			data-id="<#= this.model.get( 'id' ) #>"
+			style="background-image: url( <#= this.model.get( 'src' ) #>);">
+	</button>
+	<span class="tcb-logo-name"><#= this.model.get( 'name' ) #></span>
+</div>
+<div class="tcb-logo-controls">
+	<div class="tcb-logo-change tcb-logo-button click" data-fn="openMediaLibrary" data-id="<#= this.model.get( 'id' ) #>">
+		<?php tcb_icon( 'exchange-regular' ); ?>
+	</div>
+	<div class="tcb-logo-dots click" data-fn="showOptionsTooltip">
+		<?php tcb_icon( 'three-dots' ); ?>
+	</div>
+</div>

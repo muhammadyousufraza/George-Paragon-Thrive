@@ -1,0 +1,73 @@
+<div class="tva-flex tva-flex-row tva-space-between">
+	<h1 class="tva-main-heading">
+		<span class="tva-product-subheading"><#= model.get( 'name' ) #></span>
+		<?php echo __( 'Access expiry', 'thrive-apprentice' ) ?>
+	</h1>
+</div>
+<div class="tva-product-heading-buttons mb-40">
+	<a class="tva-back" href="#products"><?php echo esc_attr__( 'Back to dashboard', 'thrive-apprentice' ) ?></a>
+	<#= this.getBackLink() #>
+</div>
+<p class="tva-p-text-main mt-0 mb-10">
+	<?php echo __( 'Define if and how this product access should expire.', 'thrive-apprentice' ); ?>
+	<a href="https://help.thrivethemes.com/en/articles/8267095-how-to-manage-product-access-expiry-in-thrive-apprentice" target="_blank" rel="noopener"><?php echo __( 'Learn more about this feature', 'thrive-apprentice' ); ?></a>
+</p>
+<div class="tva-general-settings-card">
+	<div class="tva-flex tva-flex-row tvd-switch">
+		<label class="tva-slide-checkbox">
+			<span class="settings-checkbox-label"><?php echo esc_html__( 'Expire access automatically', 'thrive-apprentice' ); ?></span>
+			<input type="checkbox" class="click" data-fn="toggleExpireAccess">
+			<span class="lever"></span>
+		</label>
+	</div>
+	<div id="tva-access-expiry-settings">
+		<div class="tva-flex tva-flex-row tva-access-expiry-column">
+			<div class="tva-p-text-main"><?php echo esc_attr__( 'Expire product', 'thrive-apprentice' ) ?></div>
+			<div class="tva-p-text-main tva-ae-label"><?php echo esc_attr__( 'after', 'thrive-apprentice' ) ?></div>
+		</div>
+		<div class="tva-flex tva-flex-row mt-5 tva-access-expiry-column">
+			<div class="tva-icon-trigger">
+				<select id="tva-access-expire-trigger" class="change" data-fn="expireTriggerChange"></select>
+				<div class="drip-select-icon">
+					<?php tva_get_svg_icon( 'drip-calendar', 'tva-ac-dynamic tva-specific_time' ); ?>
+					<?php tva_get_svg_icon( 'drip-trigger-purchase', 'tva-ac-dynamic tva-after_purchase' ); ?>
+				</div>
+			</div>
+			<div id="tva-access-expire-condition"></div>
+		</div>
+		<div class="tva-flex tva-flex-row tvd-switch mt-30">
+			<label class="tva-slide-checkbox mb-0">
+				<span class="settings-checkbox-label"><?php echo esc_html__( 'Send reminder notice to the user prior to expiry', 'thrive-apprentice' ); ?></span>
+				<input type="checkbox" class="click" data-fn="sendReminder">
+				<span class="lever"></span>
+			</label>
+		</div>
+		<div id="tva-access-expire-trigger-reminder"></div>
+		<div class="tva-flex tva-flex-row tvd-switch mt-30">
+			<label class="tva-slide-checkbox mb-10">
+				<span class="settings-checkbox-label">
+					<?php echo esc_html__( 'Redirect users with expired access to an expiry page', 'thrive-apprentice' ); ?>
+
+					<span class="tva-info-icon tva-tooltip-parent">
+						<?php tva_get_svg_icon( 'info-solid' ); ?>
+						<div class="tva-custom-tooltip tva-tooltip-inherited">
+							<?php esc_attr_e( 'When enabled this setting will override access restriction rules.', 'thrive-apprentice' ); ?>
+						</div>
+					</span>
+				</span>
+				<input type="checkbox" class="click" data-fn="redirectToPage">
+				<span class="lever"></span>
+			</label>
+		</div>
+		<div id="tva-access-expire-trigger-redirect"></div>
+	</div>
+</div>
+<div class="tva-container-notice tva-container-notice-red mt-15">
+	<?php tva_get_svg_icon( 'exclamation-triangle' ); ?>
+	<?php echo __( 'Updating this expiry will affect all users who have already purchased it.', 'thrive-apprentice' ); ?>
+</div>
+<div class="tva-course-save">
+	<div class="tva-boxed-container tva-flex tva-flex-row-reverse">
+		<button class="tva-save-btn click" data-fn="saveAccess"><?php echo esc_html__( 'Save', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>

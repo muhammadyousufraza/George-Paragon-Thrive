@@ -1,0 +1,46 @@
+<div class="tva-customer-top">
+	<div class="tva-students-box">
+		<div class="tva-customer-info">
+			<div class="tva-customer-avatar mr-20" style="background-image: url('<#= model.get('avatar_url') #>')"></div>
+			<div>
+				<h3><#= model.get('display_name') #></h3>
+				<span class="tva-customer-activity">
+					<?php echo __( 'online ', 'thrive-apprentice' ); ?>
+					<#= model.get('last_seen') #>
+
+					<# if ( model.get('last_seen') !== 'never') { #>
+					<?php echo __( ' ago', 'thrive-apprentice' ); ?>
+					<# } #>
+				</span><br>
+				<span class="tva-customer-details">
+					<span class="date"><#= window.moment( model.get('user_registered') ).format( 'Do MMMM YYYY' ) #></span><#= model.get('user_email') #>
+				</span>
+			</div>
+		</div>
+		<div class="tva-customer-opts">
+			<a href="<#= model.get('edit_url') #>" class="tva-link-btn" target="_blank">
+				<?php tva_get_svg_icon( 'user-1' ); ?>
+				<?php echo esc_html__( 'View WordPress user', 'thrive-apprentice' ); ?>
+			</a>
+			<a href="javascript:void(0)" class="tva-link-btn click" data-id="<#= model.get('ID') #>" data-fn="editCustomer">
+				<?php tva_get_svg_icon( 'lock-alt' ); ?>
+				<?php echo esc_html__( 'Edit access rights', 'thrive-apprentice' ); ?>
+			</a>
+
+			<a href="javascript:void(0)" class="tva-link-btn click" data-nonce="<?php echo wp_create_nonce( 'wp_rest' ); ?>" data-fn="loginAsCustomer">
+				<?php tva_get_svg_icon( 'right-arrow' ); ?>
+				<?php echo esc_html__( 'Log in as this user', 'thrive-apprentice' ); ?>
+			</a>
+			<a href="#reports/courses/main?user_id=<#=this.id#>" class="tva-link-btn click">
+				<?php tva_get_svg_icon( 'bar-stats' ); ?>
+				<?php echo esc_html__( 'View member report', 'thrive-apprentice' ); ?>
+			</a>
+		</div>
+		<div class="tva-cnt-back">
+			<a class="tva-back tva-back-students" href="#members"><?php echo esc_attr__( 'Back to members dashboard', 'thrive-apprentice' ) ?></a>
+			<a class="tva-back tva-back-courses" href="#members/<#= model.get('ID') #>/courses"><?php echo esc_attr__( 'Back to member courses list', 'thrive-apprentice' ) ?></a>
+		</div>
+	</div>
+</div>
+
+<div class="tva-cc-container"></div>

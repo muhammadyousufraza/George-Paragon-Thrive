@@ -1,0 +1,32 @@
+<# var ever_schedules = api.get( 'extra_settings' ) #>
+<div class="api-field">
+	<div class="field-description">
+		<?php echo __( 'Select webinar', 'thrive-cb' ); ?>
+	</div>
+
+	<div class="control-grid">
+		<select id="tve-everwebinar-webinar-select" class="api-list change tve-everwebinar-webinar-select" data-fn="setupChange" data-name="list">
+			<# if ( api.get( 'lists' ).length == 0 ) { #>
+				<#= TVE.tpl( 'util/option', { value:0, selected: true, text: <?php echo json_encode( __( 'No webinars found', 'thrive-cb' ) ); ?> } ) #>
+			<# } #>
+
+			<# _.each( api.get( 'lists' ), function( item ) { #>
+				<#= TVE.tpl( 'util/option', {value:item.id, selected: ( api.getConfig('list') == item.id ), text: item.name} ) #>
+			<# } ) #>
+		</select>
+
+		<span class="click tve-refresh-api-list" data-fn="forceGet" data-tooltip="<?php echo __( 'Refresh', 'thrive-cb' ); ?>" data-side="top"> <?php tcb_icon( 'redo-regular' ) ?></span>
+	</div>
+</div>
+
+<# if ( typeof ever_schedules !== 'undefined' && !! ever_schedules && !! ever_schedules.schedules ) { #>
+<div id="thrive-api-everwebinar-schedules" class="api-field tve-everwebinar-api-wrapper" style="position: relative;">
+	<div class="field-description "><?php echo __( 'Select webinar date and time:', 'thrive-cb' ) ?></div>
+	<select class="tve-api-extra" id="thrive-api-everwebinar-schedules-select" name="schedules">
+		<# _.each( ever_schedules.schedules, function( schedule ) { #>
+			<#= TVE.tpl( 'util/option', { value: schedule.schedule_id, selected: ( api.getConfig('schedule') == schedule.schedule_id ), text: schedule.date + ' ' +
+		ever_schedules.timezone} ) #>
+		<# } ) #>
+	</select>
+</div>
+<# } #>

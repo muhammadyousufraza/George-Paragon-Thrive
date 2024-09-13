@@ -1,0 +1,15 @@
+#sidebar-right .links a:not(:first-child):not([data-fn="resetDesign"]):not([data-fn="loginCloudTemplates"]) {
+    display: none;
+}
+
+#tve-cloud-templates-component {
+    display: none !important;
+}
+
+#tcb-modal-cloud-templates .warning-ct-change {
+    display: none !important;
+}
+
+#tcb-modal-reset-login-design-modal {
+    padding-bottom: 40px;
+}

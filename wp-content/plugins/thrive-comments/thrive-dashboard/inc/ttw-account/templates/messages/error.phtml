@@ -1,0 +1,85 @@
+<?php
+
+/** @var array $plugin_data */
+/** @var stdClass $state */
+
+/** @var string $slug plugin slug */
+$slug = $state->update->slug;
+
+/** @var string $version plugin version */
+$version = $state->update->version;
+
+?>
+<p class="thrv-msg">
+	<?php echo isset( $error_message ) ? esc_html( $error_message ) : ''; ?>
+	<?php
+	echo sprintf(
+		'<a class="thickbox open-plugin-details-modal" href="%s">%s</a>',
+		self_admin_url( 'plugin-install.php?tab=plugin-information&plugin=' . $slug . '&section=changelog&TB_iframe=true&width=772&height=877' ),
+		sprintf(
+			__( 'View version %s details', 'thrive-dash' ),
+			$version
+		)
+	);
+	?>
+	<?php if ( isset( $recheck_url ) ) : ?>
+		<a class="ttw-rnw" href="<?php echo $recheck_url; ?>">
+			<?php echo __( 'Try again!', 'thrive-dash' ); ?>
+		</a>
+	<?php endif; ?>
+</p>
+<style>
+    #<?php echo $slug ?>-update p:last-child {
+        display: none;
+    }
+
+    #<?php echo $slug ?>-update .thrv-msg:before {
+		content: "\f160";
+		color: #d63638;
+		height: 28px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+    }
+
+    .ttw-rnw, .ttw-cla {
+        color: #fff !important;
+        background-color: #1e5496;
+        text-decoration: none !important;
+        padding: 0 15px;
+        border-radius: 3px;
+        display: inline-block;
+        line-height: 28px;
+    }
+
+    .ttw-cla {
+        background-color: #eeeeee;
+        color: #32373c !important;
+        border: 1px solid #dfddd7;
+    }
+</style>
+<script>
+	jQuery( '#<?php echo $slug ?>-update .update-message p' )
+		.filter( function ( index, item ) {
+			return ! jQuery( item ).hasClass( 'thrv-msg' )
+		} ).remove();
+
+	jQuery( 'body' ).on( 'thickbox:iframe:loaded', function () {
+		var iframe = jQuery( '#TB_iframeContent' ).contents();
+		var updateUrl = iframe.find( '#plugin_update_from_iframe' );
+
+		if ( updateUrl.data( 'slug' ) === "<?php echo $slug ?>" ) {
+			iframe
+				.find( '#plugin-information-footer' )
+				.empty()
+				.html(
+					'<a class="button button-primary right" id="thrv-upgrade-url" href="javascript:void(0)">Buy</a>'
+				);
+
+			jQuery( iframe.find( 'body #thrv-upgrade-url' ) ).on( 'click', function ( e ) {
+				e.preventDefault();
+				window.location.href = '<?php echo TD_TTW_Update_Manager::SUITE_URL;?>>'
+			} );
+		}
+	} );
+</script>

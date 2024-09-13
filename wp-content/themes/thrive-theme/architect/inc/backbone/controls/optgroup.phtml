@@ -1,0 +1,15 @@
+<div class="control-grid<#=this.get_extra_class()#>">
+	<div class="label"><#= this.get_config( 'name' ) || this.get_config('label') || this.el.dataset.name #></div>
+	<div class="input">
+		<select class="tve-select change" data-fn="changed">
+			<# _.each( this.get_config('groups'), ( group ) => { #>
+			<optgroup label="<#= group.label #>">
+				<# _.each( this.getOptions( group ), function( option ) { #>
+				<option class="tve-option <#= option.class #>" value="<#= option.value #>"
+				<#= option.default ? ' selected':'' #>><#= option.name #></option>
+				<# }); #>
+			</optgroup>
+			<# }); #>
+		</select>
+	</div>
+</div>

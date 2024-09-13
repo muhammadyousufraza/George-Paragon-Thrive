@@ -1,0 +1,27 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-university
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div class="one-course-purchase">
+	<h3><?php echo __( 'For one course purchased', 'thrive-apprentice' ) ?></h3>
+	<p><?php echo __( 'What purchase confirmation message would you like to display to the visitor?', 'thrive-apprentice' ) ?></p>
+	<p><?php echo __( 'You can leave the field blank if you don\'t want to display a message', 'thrive-apprentice' ) ?></p>
+	<p>
+		<a href="<#-`${TVA.Utils.getPreviewUrl()}&show_welcome_msg=true`#>" target="_blank"><?php echo __( 'What does this message look like?', 'thrive-apprentice' ); ?></a>
+	</p>
+
+	<div class="textarea-box">
+		<textarea id="tva-thankyou-message"><#- model.get('message') #></textarea>
+	</div>
+
+</div>
+
+<div class="tva-thankyou-page-multiple"></div>

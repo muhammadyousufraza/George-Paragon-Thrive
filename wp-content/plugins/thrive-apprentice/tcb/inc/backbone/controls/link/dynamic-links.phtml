@@ -1,0 +1,58 @@
+<select class="change fr-dynamic-link-select" id="fr-dynamic-link-list" data-fn="dynamicLinkShortcodeChanged">
+	<# _.each(links, function(group, group_name) { #>
+	<# if(group_name){ #>
+	<optgroup label="<#= group_name #>">
+		<# _.each(group, function(link) { #>
+		<option value="<#= link.url #>" data-shortcode-id="<#= link.id #>" data-compat-id="<#= link.inserted_id #>"><#= link.name #></option>
+		<# }); #>
+	</optgroup>
+
+	<# }else{ #>
+	<# _.each(group, function(link) { #>
+	<# if ( link.show ) { #>
+	<option value="<#= link.url #>" data-shortcode-id="<#= link.id #>" data-shortcode-tag="<#= link.label || link.name #>"><#= link.label || link.name #></option>
+	<# } #>
+	<# }); #>
+	<# } #>
+	<# }); #>
+</select>
+<# if ( typeof options !== 'undefined' ) { #>
+<# _.each( options, function( item, optionId ) { #>
+<div class="dynamic-extra-opt control-grid mt-15 mb-0" style="display: none" data-show-for="<#-optionId#>">
+	<div class="label"><#-item.label#></div>
+	<div class="input">
+		<# if ( item.type === 'select' ) { #>
+		<select class="dynamic-extra-option" data-field="<#-optionId#>">
+			<# _.each( item.options, function( optLabel, optValue ) { #>
+			<option value="<#-optValue#>"><#-optLabel#></option>
+			<# } ) #>
+		</select>
+		<# } #>
+	</div>
+</div>
+<# } ) #>
+<# } #>
+<div class="dynamic-link-custom-options" style="display: none">
+	<div class="tcb-woo-product-dynamic-select-container control-grid mt-15">
+		<select id="tcb-woo-product-dynamic-select" class="tcb-woo-select"></select>
+	</div>
+	<div class="no-product-picked-error inline-message m-error p-0 mb-15 mt-5" style="display: none"><?php tcb_icon( 'close2' );
+		echo __( 'Be careful, no product selected', 'thrive-cb' ); ?></div>
+	<div class="tcb-woo-product-variation full-width" style="display: none"></div>
+	<div class="no-variation-picked-error inline-message m-error p-0 mb-15 mt-5" style="display: none"><?php tcb_icon( 'close2' );
+		echo __( 'Be careful, no product variation selected.', 'thrive-cb' ); ?></div>
+	<div class="full-width tcb-woo-product-dynamic-link-redirect"></div>
+</div>
+
+<div class="info-text orange tcb-phone-dynamic-link-info" style="display: none">
+	<?php echo esc_html__( 'This link will behave differently depending on your visitor\'s device.', 'thrive-cb' ); ?>
+	<a target="_blank" href="http://help.thrivethemes.com/en/articles/7150618-how-to-add-a-phone-or-email-dynamic-link">
+		<?php echo __( 'Learn more', 'thrive-cb' ); ?>
+	</a>
+</div>
+<div class="info-text orange tcb-email-dynamic-link-info" style="display: none">
+	<?php echo esc_html__( 'Be aware that using this type of link may lead to spam. It is recommended to use a contact form instead.', 'thrive-cb' ); ?>
+	<a target="_blank" href="http://help.thrivethemes.com/en/articles/7150618-how-to-add-a-phone-or-email-dynamic-link">
+		<?php echo __( 'Learn more', 'thrive-cb' ); ?>
+	</a>
+</div>

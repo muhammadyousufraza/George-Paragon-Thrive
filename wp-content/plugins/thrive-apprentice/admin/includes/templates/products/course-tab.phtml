@@ -1,0 +1,40 @@
+<div class="tva-course-product-outer tva-boxed-container">
+	<div class="tva-course-product">
+		<div class="tva-flex mb-40 tva-space-between">
+			<div class="tva-course-product-title m-0"><?php echo esc_html__( 'Access to this course is restricted', 'thrive-apprentice' ); ?></div>
+			<# 	if ( TVA.visualEditingEnabled ) { #>
+			<div class="tva-flex">
+				<span class="tva-course-product-title mb-0 mr-20"><?php echo esc_html__( 'Protect course overview page', 'thrive-apprentice' ); ?></span>
+				<div class="tvd-switch tva-restricted-switch">
+					<label>
+						<input class="click" data-fn="toggleCourseOverview" type="checkbox" <#= parseInt(model.get('protect_overview')) ? 'checked="checked"' : '' #>>
+						<span class="tvd-lever"></span>
+					</label>
+				</div>
+			</div>
+			<# } #>
+		</div>
+		<div class="tva-flex tva-space-between tva-align-center mb-15">
+			<div class="tva-course-product-text"><?php echo __( 'Users need to gain access to any of the following products in order to view this course:', 'thrive-apprentice' ); ?></div>
+			<div>
+				<a class="tva-btn tva-btn-dark-blue" href="#products"><?php echo __( 'Go to Products Dashboard', 'thrive-apprentice' ); ?></a>
+				<a class="tva-btn tva-btn-blue ml-15 click" href="javascript:void(0);" data-screen="course" data-fn="addNewProduct">
+					<?php tva_get_svg_icon( 'add-btn' ); ?>
+					<?php echo __( 'Add new', 'thrive-apprentice' ); ?>
+				</a>
+			</div>
+		</div>
+
+		<div class="tva-product-info-tooltip tva-ar-tooltip">
+			<h3><?php echo esc_html__( 'Success!', 'thrive-apprentice' ); ?></h3>
+			<p><?php echo esc_html__( 'Your course is now part of a product.', 'thrive-apprentice' ); ?></p>
+
+			<p><?php echo sprintf( esc_html__( "To control how users get access to the product, go to the Product's %s screen.", 'thrive-apprentice' ), '<a href="javascript:void(0)" class="click" data-fn="linkToRules">' . esc_html__( 'Access requirements', 'thrive-apprentice' ) . '</a>' ); ?></p>
+
+			<button class="tva-tooltip-dismiss click" data-fn="hideTooltip" type="button"><?php echo esc_html__( 'Got it', 'thrive-apprentice' ); ?></button>
+			<div class="ui-tt-arrow bottom right-side"></div>
+		</div>
+
+		<div class="tva-products-wrapper"></div>
+	</div>
+</div>

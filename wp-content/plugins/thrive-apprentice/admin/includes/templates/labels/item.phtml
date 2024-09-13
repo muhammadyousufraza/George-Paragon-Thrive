@@ -1,0 +1,21 @@
+<div class="tva-label-color">
+	<span class="tva-label-thumb click" data-fn="spectrum" data-field="color" style="--thumb-color: <#=this.model.get('color') #>"></span>
+	<input type="text" value="<#= this.model.get('color') #>" class="tva-colorpicker" data-field="color"/>
+</div>
+
+<div class="tva-label-content tva-flex-mid">
+	<div class="tva-label-name tva-flex tva-align-center">
+		<# if ( ! this.model.get('editing') ) { #>
+		<span title="<#= this.model.get('title') #>" class="tva-topic-title tvd-truncate"><#- this.model.get('title') #></span>
+		<# } else { #>
+		<input id="tva-edit-<#=this.model.cid#>" type="text" value="<#- this.model.get('title') #>" class="tva-title-events">
+		<# } #>
+	</div>
+	<div class="tva-label-action pr-20 pl-10 tva-flex-mid">
+		<# if ( this.model.get('ID') > 0 ) { #>
+		<a href="javascript:void(0)" class="tva-delete-icon click tva-inline-flex-mid" data-fn="openDeleteConfirmation">
+			<?php tva_get_svg_icon( 'trash-alt' ); ?>
+		</a>
+		<# } #>
+	</div>
+</div>

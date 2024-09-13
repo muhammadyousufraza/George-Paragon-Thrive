@@ -1,0 +1,18 @@
+<div class="ttd-sidebar-tab ttd-sidebar-wizard ttd-wizard scrollbar-inner">
+	<h2 class="mt-0 pt-10"><?php echo __( 'Site Wizard', 'thrive-theme' ); ?></h2>
+	<p class="info"><?php echo __( 'Use this Wizard to design the site you want.', 'thrive-theme' ); ?></p>
+	<hr>
+	<# _.each( this.model.sections, function( section ) { #>
+	<div class="wizard-section collapsible">
+		<a class="wizard-section-title toggle-collapse click" data-fn="toggleCollapse" href="javascript:void(0)">
+			<#=section.sidebarLabel#>
+			<span class="flex-mid collpse-icon"><?php echo Thrive_Views::svg_icon( 'chevron-down' ); ?></span>
+		</a>
+		<div class="section-steps" id="wizard-section-<#=section.id#>"></div>
+	</div>
+	<# }, this ) #>
+	<hr>
+	<h2 class="mb-0"><?php echo esc_html__( 'Restart Wizard', 'thrive-theme' ); ?></h2>
+	<p class="mt-10 mb-10 mr-30 ml-30"><?php echo esc_html__( 'Go to the 1st step and resume the settings', 'thrive-theme' ); ?></p>
+	<button class="ttd-btn ttd-reset click" data-fn="restart"><?php echo esc_html__( 'Restart the Wizard', 'thrive-theme' ); ?></button>
+</div>

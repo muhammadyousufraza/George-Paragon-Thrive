@@ -1,0 +1,18 @@
+<div class="input-control control-grid <#= this.model.config.name?this.model.config.name+'-input':'' #> <#= this.model.config.size? this.model.config.size:'' #>">
+	<div class="label">
+		<span class="input-label label"><#= this.model.config.name || this.model.config.label #></span>
+		<# if ( this.model.config.info ) { #>
+		<span class="click tve-input-info" data-fn="openTooltip"><?php tcb_icon( 'info-circle-solid' ); ?></span>
+		<# } #>
+	</div>
+	<div class="input tcb-relative">
+		<span class="input-um <#= this.input_class() #>"><#= this.model.config.um ? this.model.config.um:'' #></span>
+		<div data-dir="top" class="mid handle reverse <#= this.input_class() #>">
+			<div class="up click" data-fn="up"></div>
+			<div class="down click" data-fn="down"></div>
+		</div>
+		<input<#=this.model.config.maxlength ? ' maxlength="' + this.model.config.maxlength + '"' : '' #> class="tve-input change input <#= this.input_class()
+		#> <#= this.model.config.um ? 'has-um':'' #>" value="<#= this.model.config.default #>" data-fn-change="validate_and_change" data-fn-input="onInput"
+		type="text">
+	</div>
+</div>

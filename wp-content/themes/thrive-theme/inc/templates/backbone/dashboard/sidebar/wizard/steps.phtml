@@ -1,0 +1,10 @@
+<# _.each( steps, function( step, index ) { #>
+<a href="javascript:void(0)"
+   class="section-step click<#=!step.active && step.done ? ' done' : ''#><#=step.active ? ' active' : ''#><#=step.disabled ? ' disabled' : ''#>"
+<#= ! step.comingSoon ? 'data-fn="stepClick"' : '' #>
+data-step="<#=step.id#>">
+<span class="step-no"><#=baseIndex+index#></span>
+<span class="step-label"><#=step.sidebarLabel#></span>
+<span class="step-done flex-mid"><?php Thrive_Views::svg_icon( 'check_medium' ); ?></span>
+</a>
+<# }) #>

@@ -1,0 +1,126 @@
+<div class="tva-flex tva-align-center tva-space-between">
+	<h1 class="tva-main-heading"><?php esc_html_e( 'Thrive Apprentice Designs', 'thrive-apprentice' ); ?></h1>
+	<div class="items-right">
+		<?php if ( \TVA\TTB\Check::is_end_user_site() ): ?>
+			<a href="javascript:void(0)" class="click tva-btn tva-btn-blue" data-fn="openCloudModal">
+				<?php tva_get_svg_icon( 'add-btn' ); ?>
+				<?php esc_html_e( 'Add design', 'thrive-apprentice' ); ?>
+			</a>
+		<?php else: ?>
+			<a href="javascript:void(0)" class="click tva-btn tva-btn-blue mr-10" data-fn="addClicked">
+				<?php esc_html_e( 'Add new random skin (for design only)', 'thrive-apprentice' ); ?>
+			</a>
+		<?php endif; ?>
+	</div>
+</div>
+
+<# if ( activeSkin ) { #>
+<div class="tva-main-skin-parent">
+	<h2 class="tva-design-active"><?php esc_html_e( 'Active Design', 'thrive-apprentice' ); ?></h2>
+	<div class="tva-main-skin tva-flex mt-30<#=activeSkin.isLegacy() ? ' tva-skin-legacy' : ''#>">
+		<div class="tva-skin-thumb" style="background-image: url('<#=activeSkin.get('thumb')#>')">
+			<div class="tva-skin-badge tva-flex-mid">
+				<# if( activeSkin.isLegacy() ) { #>
+				<span class="tva-skin-tag"><?php esc_html_e( 'Legacy editor', 'thrive-apprentice' ); ?></span>
+				<# } else { #>
+				<span class="tva-skin-tag"><?php esc_html_e( 'Full visual editing', 'thrive-apprentice' ); ?></span>
+				<# } #>
+			</div>
+		</div>
+		<div class="tva-skin-data">
+			<div class="tva-skin-top">
+				<h4 class="tva-skin-name"><#= activeSkin.get('name') #></h4>
+				<h5><?php esc_html_e( 'Published', 'thrive-apprentice' ); ?></h5>
+				<# if (!activeSkin.isLegacy()) { #>
+				<button class="tva-skin-extra tva-flex-mid">
+					<?php tva_get_svg_icon( 'drop-dots' ); ?>
+				</button>
+				<div class="tva-skin-panel">
+					<a href="javascript:void(0)" class="click" data-fn="skinAction" data-skin-id="<#=activeSkin.getId()#>" data-action="rename"><?php esc_html_e( 'Rename', 'thrive-apprentice' ); ?></a>
+					<a href="javascript:void(0)" class="click" data-fn="skinAction" data-skin-id="<#=activeSkin.getId()#>" data-action="duplicate"><?php esc_html_e( 'Duplicate', 'thrive-apprentice' ); ?></a>
+				</div>
+				<# } #>
+			</div>
+			<div class="tva-skin-description">
+				<# if (activeSkin.isLegacy()) { #>
+				<p class="tva-skin-legacy"><?php esc_html_e( "You're using the legacy design editor to control the design of your school.", 'thrive-apprentice' ); ?>
+					<?php esc_html_e( 'We have since released a fully visual editable way to design your school.', 'thrive-apprentice' ); ?>
+					<?php $link = '<a href="javascript:void(0)" class="click" data-fn="openCloudModal">+ ' . esc_html( 'Add design', 'thrive-apprentice' ) . '</a>'; ?>
+					<?php echo sprintf( __( 'You can continue to use the legacy version for as long as you like. Switch to the full visual editing at any time by clicking the %s button.', 'thrive-apprentice' ), $link ); ?></p>
+				<# } else { #>
+				<#= activeSkin.get('description') #>
+				<# } #>
+			</div>
+			<a href="<#= activeSkin.isLegacy() ? '#design-legacy' : ('#design/' + activeSkin.getId()) #>" class="tva-skin-edit">
+				<?php tva_get_svg_icon( 'pen_light' ); ?>
+				<#= activeSkin.isLegacy() ? <?php echo json_encode( __( 'Edit design using the legacy editor', 'thrive-apprentice' ) ); ?> : <?php echo json_encode( __( 'Edit design', 'thrive-apprentice' ) ); ?> #>
+			</a>
+		</div>
+	</div>
+</div>
+<# } #>
+
+<div class="tva-separator mt-50 mb-30">
+	<h2 class="tva-separator-heading"><?php esc_html_e( 'Unpublished designs', 'thrive-apprentice' ); ?></h2>
+</div>
+
+<# if ( skins.length ) { #>
+<div class="tva-installed-skins">
+	<# skins.forEach( function( skin ) { #>
+	<div class="tva-skin-item<#=skin.isLegacy() ? ' tva-skin-legacy' : ''#><#= skin.isJustAdded() ? ' tva-skin-just-added':'' #>">
+		<div class="tva-skin-header mb-10">
+			<div class="tva-skin-name"><#= skin.get('name') #></div>
+			<div class="tva-skin-badge">
+			<span class="tva-skin-tag tva-flex-mid">
+			<# if (skin.isLegacy()) { #>
+				<?php esc_html_e( 'Legacy editor', 'thrive-apprentice' ); ?>
+			<# } else { #>
+				<?php esc_html_e( 'Full visual editing', 'thrive-apprentice' ); ?>
+			<# } #>
+			</span>
+			</div>
+		</div>
+		<div class="tva-skin-main">
+			<div class="tva-skin-thumb" style="background-image: url('<#=skin.get('thumb')#>')"></div>
+			<# if(!skin.isLegacy()){ #>
+			<div class="tva-skin-preview">
+				<a target="_blank" href="<#= TVA.indexPageModel.previewUrl({tva_skin_id: skin.getId()}) #>" class="tva-skin-preview-link dark">
+					<span><?php tva_get_svg_icon( 'eye-empty' ); ?></span>
+					<span><?php echo esc_html__( 'Preview', 'thrive-apprentice' ); ?></span>
+				</a>
+			</div>
+			<# } #>
+			<div class="tva-skin-footer">
+				<div class="tva-skin-actions tva-flex tva-align-center tva-space-between">
+					<# if(!skin.isLegacy()){ #>
+					<a href="<#= skin.isLegacy() ? '#design-legacy' : ('#design/' + skin.getId()) #>" class="tva-skin-edit"><?php esc_html_e( 'Edit design', 'thrive-apprentice' ); ?></a>
+					<# } #>
+					<a href="javascript:void(0)" class="click tva-publish-skin" data-fn="publishClicked" data-skin-id="<#=skin.getId()#>"><?php esc_html_e( 'Publish', 'thrive-apprentice' ); ?></a>
+
+					<# if(!skin.isLegacy()){ #>
+					<button class="tva-skin-extra tva-flex-mid">
+						<?php tva_get_svg_icon( 'drop-dots' ); ?>
+					</button>
+					<div class="tva-skin-panel">
+						<# if (!skin.isLegacy()) { #>
+						<a href="javascript:void(0)" class="mousedown" data-fn="skinAction" data-skin-id="<#=skin.getId()#>" data-action="rename"><?php esc_html_e( 'Rename', 'thrive-apprentice' ); ?></a>
+						<a href="javascript:void(0)" class="mousedown" data-fn="skinAction" data-skin-id="<#=skin.getId()#>" data-action="duplicate"><?php esc_html_e( 'Duplicate', 'thrive-apprentice' ); ?></a>
+						<# } #>
+						<a href="javascript:void(0)" class="mousedown tva-delete" data-fn="skinAction" data-skin-id="<#=skin.getId()#>" data-action="delete"><?php esc_html_e( 'Delete', 'thrive-apprentice' ); ?></a>
+					</div>
+					<# } #>
+				</div>
+			</div>
+		</div>
+	</div>
+	<# }, this ); #>
+</div>
+<# } else { #>
+<div class="tva-no-skins">
+	<?php esc_html_e( 'No design available.', 'thrive-apprentice' ); ?>
+	<a href="javascript:void(0)" class="click" data-fn="openCloudModal">
+		<?php tva_get_svg_icon( 'plus-circle_light' ); ?>
+		<?php esc_html_e( 'Add design', 'thrive-apprentice' ); ?>
+	</a>
+</div>
+<# } #>

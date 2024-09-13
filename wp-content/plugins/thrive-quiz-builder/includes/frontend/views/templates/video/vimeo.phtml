@@ -1,0 +1,11 @@
+<# var style = item.get('video_style'); #>
+<# var options = item.get( 'options'); #>
+<div class="tge-video-form tge-video-style-<#= style.selected #>">
+	<div class="tqb-video-container-responsive">
+		<iframe src="//player.vimeo.com/video/<#= item.get('video_id')#>"
+		        width="651" height="313"
+		        frameborder="0"
+		        title="<#= item.get('video_id')#>"
+		<#= 0 === options['hide_full_screens']['value'] ? 'webkitallowfullscreen mozallowfullscreen allowfullscreen' : '' #>></iframe>
+	</div>
+</div>

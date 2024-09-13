@@ -1,0 +1,12 @@
+<# var style = item.get('video_style'); #>
+<# var options = item.get( 'options'); #>
+<# var new_question = parseInt( item.get('new_question') ); #>
+<div class="tge-video-form tge-video-style-<#= 0 === new_question ? style.selected : TGE_Editor.default_video_style #>">
+	<div class="tqb-video-container-responsive">
+		<iframe src="//player.vimeo.com/video/<#= item.get('video_id')#>"
+		        width="551" height="313"
+		        frameborder="0"
+		        title="<#= item.get('video_id')#>"
+		<#= 0 === options['hide_full_screens']['value'] ? 'webkitallowfullscreen mozallowfullscreen allowfullscreen' : '' #>></iframe>
+	</div>
+</div>

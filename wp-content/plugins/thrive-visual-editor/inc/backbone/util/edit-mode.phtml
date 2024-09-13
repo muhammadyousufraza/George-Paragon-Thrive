@@ -1,0 +1,20 @@
+<div style="position: absolute;top: 0;" id="edit-mode-drop-panels"></div>
+<div class="tcb-em-drag">
+	<span class="em-drag-handle"></span>
+	<span class="em-drag-handle"></span>
+</div>
+<div class="tcb-element-name"></div>
+<div class="click tve-reset" data-fn="reset"><?php tcb_icon( 'sync-regular' ); ?> <span><?php echo __( 'RESET', 'thrive-cb' ); ?></span></div>
+<select class="tve-select change mouseover" data-fn="state_changed" data-fn-mouseover="mouseOverState"></select>
+<button id='add_jump' class="tve-button grey click tcb-hide" data-fn="f:jumplinks.addJumplink" disabled><?php echo __( 'Add Jumplink', 'thrive-cb' ); ?></button>
+<button id='exit_jump' class="tve-button grey click tcb-hide" data-fn="f:jumplinks.cancel"><?php echo __( 'Exit', 'thrive-cb' ); ?></button>
+<button id='exit_edit' class="tve-button orange click" data-fn="exit"><?php echo __( 'DONE', 'thrive-cb' ); ?></button>
+<div class="direction-arrow click" data-fn="scroll_to" style="display: none;">
+	<svg width="27px" height="31px" viewBox="0 0 27 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+			<g transform="translate(-1065.000000, -958.000000)" fill="#EE9374">
+				<polygon points="1077.89107 958.034843 1091.09415 988.325951 1077.89107 983.89917 1065.09415 988.325951"></polygon>
+			</g>
+		</g>
+	</svg>
+</div>

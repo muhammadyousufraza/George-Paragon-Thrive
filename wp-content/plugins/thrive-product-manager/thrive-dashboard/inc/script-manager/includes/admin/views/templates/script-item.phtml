@@ -1,0 +1,26 @@
+<span class="tvd-sm-script-elem tvd-sm-script-label">
+	<i class="tvd-icon-handle"></i>
+	<span class="<#= this.formIconClass() #>"></span>
+	<strong><#= this.model.get('label') #></strong>
+</span>
+
+<div class="tvd-sm-script-elem-switch tvd-switch" style="<#= !TVD_SM_CONST.is_ttb_active ? 'display:none' : '' #>">
+	<label>
+		<input type="checkbox" data-type="checkbox" data-location="ttb"
+		<#= this.model.get('status').ttb ? "checked" : "" #> >
+		<span class="tvd-lever"></span>
+	</label>
+</div>
+
+<div class="tvd-sm-script-elem-switch tvd-switch" style="<#= !TVD_SM_CONST.is_tar_active ? 'display:none' : '' #>">
+	<label>
+		<input type="checkbox" data-type="checkbox" data-location="lp"
+		<#= this.model.get('status').lp ? "checked" : "" #> >
+		<span class="tvd-lever"></span>
+	</label>
+</div>
+
+<span class="tvd-sm-script-elem-operations tvd-right-align">
+		<i class="tvd-edit-modal tvd-icon-pencil"></i>
+		<i class="tvd-delete-modal tvd-icon-trash-o"></i>
+</span>

@@ -1,0 +1,21 @@
+<div class="section-overlay-actions <#= view.addResponsiveClasses()#>">
+	<div class="section-overlay-wrapper">
+		<div class="section-description"><?php echo __( 'This is a Linked section', 'thrive-theme' ); ?></div>
+		<div class="buttons-wrapper">
+			<button class="tve-button ghost-button-with-icon orange-fill click" data-fn="enterEditMode">
+				<?php tcb_icon( 'pen-regular' ); ?>
+				<?php echo __( 'Edit', 'thrive-theme' ); ?>
+			</button>
+			<button class="ghost-button-with-icon grey-fill click" data-fn="unlink">
+				<?php tcb_icon( 'unlink-regular' ); ?>
+
+				<?php echo __( 'Unlink', 'thrive-theme' ); ?>
+			</button>
+		</div>
+		<div class="divider-line"></div>
+		<button class="ghost-button-with-icon grey-fill click designs-button" data-fn="openSectionModal">
+			<?php tcb_icon( 'paintbrush-solid-2' ); ?>
+			<span><?php echo sprintf( esc_html__( 'Choose a %sready-made%s design', 'thrive-theme' ), '<span class="rm">', '</span>' ); ?></span>
+		</button>
+	</div>
+</div>

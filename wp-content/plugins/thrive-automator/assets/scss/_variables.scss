@@ -1,0 +1,44 @@
+:root {
+  --tap-primary: #a32566;
+  --tap-primary-bg: rgb(163, 37, 102, 0.1);
+  --tap-primary-dark: #521333;
+  --tap-primary-darker: #821d51;
+  --tap-primary-gradient: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(var(--tap-primary), var(--tap-primary));
+  --tap-primary-light: #d02591;
+  --tap-filter-color: #fd879d;
+  --tap-action-color: #a365a4;
+  --tap-delay-color: #ffa679;
+  --tap-placeholder: #b0b9c1;
+  --tap-text-color: #50565f;
+  --tap-text-color-sec: #444648;
+  --tap-heading-color: #434343;
+  --tap-delete: #fb5c55;
+  --tap-aut-width: 1500px;
+  --tap-light-bg: rgba(241, 241, 241, 0.5);
+  --tap-input-border: solid 1px rgba(176, 185, 193, 0.8);
+  --td-primary: #4bb35e;
+  --td-error: #ed5565;
+  --td-blue: rgba(163, 212, 255, 0.2);
+}
+
+/* Used for generating margins and padding */
+$distances: '0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50';
+$positions: ('top', 't'), ('right', 'r'), ('bottom', 'b'), ('left', 'l');
+@each $distance in $distances {
+  .p-#{$distance} {
+    padding: #{$distance}px !important;
+  }
+  .m-#{$distance} {
+    margin: #{$distance}px !important;
+  }
+  @each $p in $positions {
+    $position: nth($p, 1);
+    $position-short: nth($p, 2);
+    .p#{$position-short}-#{$distance} {
+      padding-#{$position}: #{$distance}px !important;
+    }
+    .m#{$position-short}-#{$distance} {
+      margin-#{$position}: #{$distance}px !important;
+    }
+  }
+}

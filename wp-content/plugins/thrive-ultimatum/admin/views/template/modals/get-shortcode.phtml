@@ -1,0 +1,26 @@
+<div class="tvd-modal-content">
+	<h3 class="tvd-modal-title"><?php echo __( 'Countdown Design Shortcode', 'thrive-ult' ) ?></h3>
+	<p><?php echo __( 'Below you have the shortcode for the design created. Copy the code and insert it into any page or post.', 'thrive-ult' ) ?></p>
+
+	<div class="tvd-copy-row tvd-row tvd-collapse tvd-no-mb">
+		<div class="tvd-col tvd-s12 tvd-m9">
+			<div class="tvd-input-field">
+				<input id="tu-design-shortcode" readonly="readonly" class="tvd-no-focus tvu-email-link" type="text" value="<#= model.getShortcode() #>">
+			</div>
+		</div>
+		<div class="tvd-col tvd-s12 tvd-m3">
+			<a class="tve-copy-to-clipboard tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-blue" href="javascript:void(0)">
+				<span class="tvd-copy-text"><?php echo __( 'Copy', 'thrive-ult' ) ?></span>
+			</a>
+		</div>
+	</div>
+
+</div>
+<div class="tvd-modal-footer control-grid">
+	<div>
+		<a href="javascript:void(0)"
+		   class="tvd-btn tvd-btn-green tvd-waves-light tvd-right tvd-modal-close">
+			<?php echo __( 'Done', 'thrive-ult' ) ?>
+		</a>
+	</div>
+</div>

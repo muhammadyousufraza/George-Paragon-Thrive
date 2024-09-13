@@ -1,0 +1,42 @@
+<?php use TVA\TTB\Main; ?>
+<div class="tva-cm-box">
+	<div class="tva-drag-handle">
+		<?php tva_get_svg_icon( 'dnd' ); ?>
+	</div>
+	<div class="tva-cm-left">
+		<div class="tva-cm-inner">
+			<input class="tva-cm-checkbox tva-section-select" data-level="chapter" type="checkbox" data-item-id="<#= model.get('ID') #>">
+			<div class="tva-cm-status tvd-tooltipped <#= model.get('post_status') #>" data-tooltip="" data-position="top">&nbsp;</div>
+			<div class="tva-cm-number"><?php echo __( 'Chapter', 'thrive-apprentice' ); ?> <#= this.numberInList #></div>
+			<div class="tva-cm-number tva-item-count ml-5"><#= model.getCountSummary() #></div>
+		</div>
+		<div class="tva-title-holder">
+			<div class="tva-items-tab-title tva-edit-title click" data-fn="editItemTitle">
+				<#= model.get('post_title') #>
+				<?php tva_get_svg_icon( 'pen_light' ); ?>
+			</div>
+		</div>
+		<div class="tva-meta-holder">
+			<div class="tva-copy-id click tva-hover-white" data-fn="copyID">ID: <#= model.get( 'ID' ) #> <?php tva_get_svg_icon( 'copy_light' ); ?></div>
+		</div>
+	</div>
+	<div class="tva-cm-right">
+		<a class="click" data-fn="deleteItem" data-id="<#= model.get('id') #>" href="javascript:void(0)"><?php echo esc_html__( 'Delete Chapter', 'thrive-apprentice' ) ?></a>
+	</div>
+</div>
+
+<div class="tva-course-items-wrapper tva-lessons-list"></div>
+
+<div class="tva-course-item-buttons">
+	<div class="tva-add-main-btn click" data-fn="openAddItemModal" data-type="lesson" data-post-parent="<#= model.get('id') #>">
+		<?php tva_get_svg_icon( 'plus_light' ); ?>
+		<?php echo esc_html__( 'Add Lesson', 'thrive-apprentice' ); ?>
+	</div>
+	<?php if ( Main::uses_builder_templates() ): ?>
+		<div class="tva-add-main-btn click" data-fn="openAddItemModal" data-type="assessment" data-post-parent="<#= model.get('id') #>">
+			<span class="tva-new-badge"><?php echo __( 'New', 'thrive-apprentice' ) ?></span>
+			<?php tva_get_svg_icon( 'plus_light' ); ?>
+			<?php echo esc_html__( 'Add Assessment', 'thrive-apprentice' ); ?>
+		</div>
+	<?php endif; ?>
+</div>

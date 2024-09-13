@@ -1,0 +1,11 @@
+<div class="tve-c-modal-item">
+	<h4 class="tve-c-item-title" style="max-width:<#- itemWidth #>px;">
+		<#- item.title #>
+		<?php Thrive_Views::svg_icon( 'check_light' ); ?>
+	</h4>
+	<div class="tve-c-item-image-wrapper">
+		<button class="tve-c-item-image click" data-fn="selectTemplate" data-id="<#- item.id #>"
+				style="--template-image: url('<#- item.thumb.url #>'); width: <#- itemWidth #>px;height:<#- parseInt(itemWidth / item.thumb.w * item.thumb.h) #>px;">
+		</button>
+	</div>
+</div>

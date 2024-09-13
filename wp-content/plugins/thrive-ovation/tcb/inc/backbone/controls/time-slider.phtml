@@ -1,0 +1,25 @@
+<div class="grey-text mb-5">
+	<#= this.model.config.label #>
+</div>
+<div class="control-grid">
+	<div class="label mr-10">
+		<input type="range" class="tve-slider input change" data-fn="onChange" data-fn-input="onInput" min="<#= this.model.config.min #>" max="<#= this.model.config.max #>" value="<#= this.model.config.default #>"/>
+	</div>
+	<div class="input">
+		<div class="control-grid pb-0">
+			<div class="tcb-relative">
+				<div class="input">
+					<input type="text" class="with-hint tcb-input-minutes change width-input tcb-text-right" data-fn="onChange" value="<#= this.model.config.default #>" maxlength="3">
+					<span class="hint text-11"><?php echo __( 'M', 'thrive-cb' ); ?></span>
+				</div>
+			</div>
+			<div class="tcb-relative">
+				<div class="input">
+					<input type="text" class="with-hint tcb-input-seconds change width-input tcb-text-right" data-fn="onChange" value="<#= this.model.config.default #>" maxlength="2">
+					<span class="hint text-11"><?php echo __( 'S', 'thrive-cb' ); ?></span>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

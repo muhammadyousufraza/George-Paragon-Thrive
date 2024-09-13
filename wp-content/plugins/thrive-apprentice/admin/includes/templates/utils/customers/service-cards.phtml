@@ -1,0 +1,74 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+
+/**
+ * Configuration array
+ */
+$cards = TVA_Customer_Manager::get_services();
+
+?>
+
+<p class="tvd-modal-subtitle-text mb-10"><?php echo esc_html__( 'Give users access to the following:', 'thrive-apprentice' ); ?></p>
+
+<div class="tvd-modal-gray-box">
+	<?php foreach ( $cards as $key => $card ): ?>
+		<div class="tva-option-card tva-card tva-card-small <?php echo ( $card['is_available'] ) ? '' : 'disabled' ?>"
+			 data-option="<?php echo $key; ?>"
+			 data-option-label="<?php echo esc_html( $card['text'] ); ?>"
+			 data-have-options-action-label="<?php echo esc_html( __( 'Manage', 'thrive-apprentice' ) ); ?>"
+			 data-no-options-action-label="<?php echo esc_html( __( 'Add access', 'thrive-apprentice' ) ); ?>"
+		>
+			<div data-option="<?php echo $key; ?>" class="tva-flex tva-flex-row tva-option-visible <?php echo ( $card['is_available'] ) ? 'click' : '' ?>"
+				<?php if ( $card['is_available'] ) : ?>
+					data-fn="toggleOptions"
+				<?php endif; ?>>
+				<div class="mr-20">
+					<img src="<?php echo TVA_Const::plugin_url( 'admin/img/' . $card['img'] ); ?>" alt="Service Card">
+				</div>
+				<div class="title">
+					<span>
+						<?php echo $card['text']; ?>
+					</span>
+				</div>
+				<div class="tva-option-counter">
+					<?php if ( ! $card['is_available'] ) : ?>
+						<span class="no-products tvd-tooltipped" data-position="top" data-tooltip="<?php echo esc_attr( __( 'You don\'t have any products defined yet for this service.', 'thrive-apprentice' ) ); ?>"><?php echo __( 'No products defined yet', 'thrive-apprentice' ); ?>&nbsp;<?php tva_get_svg_icon( 'info_solid' ); ?></span>
+					<?php else : ?>
+						<span class="tva-product-counter"></span>
+					<?php endif; ?>
+				</div>
+				<?php if ( ! $card['is_available'] ) : ?>
+					<div class="tva-option-toggle-greyed" data-option="<?php echo $key; ?>">
+						<span><?php echo __( 'Add access', 'thrive-apprentice' ); ?></span>
+						<i><?php tva_get_svg_icon( 'angle-right' ); ?></i>
+					</div>
+				<?php else : ?>
+					<div class="tva-option-toggle" data-option="<?php echo $key; ?>">
+						<span><?php echo __( 'Manage', 'thrive-apprentice' ); ?></span>
+						<i><?php tva_get_svg_icon( 'angle-right' ); ?></i>
+					</div>
+				<?php endif; ?>
+			</div>
+			<div class="tva-service-options tva-option-box" data-option="<?php echo $key; ?>" style="display: none;">
+				<?php foreach ( $card['items'] as $item ): ?>
+					<div class="tva-flex tva-option-elem mb-15">
+						<input class="click" data-fn="selectOption" type="checkbox"
+							   data-gateway="<?php echo $card['gateway']; ?>"
+							   data-service-type="<?php echo $key; ?>"
+							   id="tva-<?php echo $key; ?>-<?php echo $item['id']; ?>"
+							   value="<?php echo $item['id']; ?>"/>
+						<label for="tva-<?php echo $key; ?>-<?php echo $item['id']; ?>"><?php echo $item['name']; ?></label>
+					</div>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	<?php endforeach; ?>
+</div>

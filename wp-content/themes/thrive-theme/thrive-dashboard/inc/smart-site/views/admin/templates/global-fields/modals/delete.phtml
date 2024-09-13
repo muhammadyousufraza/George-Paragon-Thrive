@@ -1,0 +1,33 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div class="tvd-modal-content">
+	<h3 class="tvd-modal-title"><?php echo __( 'Delete', 'thrive-dash' ) ?> <strong><#= model.get('name') #></strong> - <#= model.get('type') ? 'Field' : 'Group' #></h3>
+	<# if( model.get('type') ) {#>
+		<p><?php echo __( 'Are you sure you want to delete this field? This will affect any content on the site that contains this particular field.', 'thrive-dash' ) ?></p>
+	<# } else {#>
+		<p><?php echo __( 'Are you sure you want to delete this field group? Any fields that are part of this field group will also be deleted.', 'thrive-dash' ) ?></p>
+	<# } #>
+</div>
+<div class="tvd-modal-footer">
+	<div class="tvd-tss-flex">
+		<a href="javascript:void(0)"
+		   class="tvd-btn-flat tvd-btn-flat-secondary tvd-btn-flat-dark tvd-waves-effect tvd-modal-close">
+			<?php echo __( 'Cancel', 'thrive-dash' ) ?>
+		</a>
+		<a href="javascript:void(0)"
+		   class="tvd-btn tvd-btn-red tvd-waves-light tvd-right tvd-delete-item">
+			<?php echo __( 'Yes', 'thrive-dash' ) ?>
+		</a>
+	</div>
+</div>
+

@@ -1,0 +1,71 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-flex tva-flex-row">
+	<div class="tva-et-card">
+		<div class="mb-30">
+			<label for="tva-email-subject"><?php echo esc_html__( 'Subject', 'thrive-apprentice' ); ?></label>
+			<input data-field="subject" type="text" class="input" data-fn="changeField" id="tva-email-subject" value="<#- model.get('subject') #>">
+		</div>
+		<div class="mb-30">
+			<label for="tva-email-from_name"><?php echo esc_html__( 'From name', 'thrive-apprentice' ); ?></label>
+			<input data-field="from_name" type="text" class="input" data-fn="changeField" id="tva-email-from_name" value="<#- model.get('from_name') #>">
+		</div>
+		<div class="tva-et-textarea mb-30">
+			<label><?php echo esc_html__( 'Message', 'thrive-apprentice' ); ?></label>
+			<textarea data-field="body" id="tva-email-body" cols="30" rows="10"><#- model.get('body') #></textarea>
+		</div>
+		<div class="tva-flex tva-align-center mb-30 tva-space-between">
+			<label class="mb-0"><?php echo esc_html__( 'Add shortcode', 'thrive-apprentice' ); ?></label>
+			<div class="w-select">
+				<select id="tva-email-shortcodes">
+					<option value=""><?php echo esc_html__( 'Select shortcode', 'thrive-apprentice' ); ?></option>
+				</select>
+			</div>
+			<div>
+				<button class="tva-empty-btn tva-empty-btn-blue click" data-fn="insertShortcode">
+					<?php echo esc_html__( 'Insert shortcode', 'thrive-apprentice' ); ?>
+				</button>
+			</div>
+		</div>
+		<div class="tva-email-trigger-header">
+			<label class="mb-10"><?php echo esc_html__( 'Email triggers', 'thrive-apprentice' ); ?></label>
+		</div>
+		<div class="tva-flex tva-flex-row">
+			<ul id="tva-email-triggers-wrapper" class="mt-0 mb-0"></ul>
+		</div>
+		<div class="tva-flex tva-flex-row tva-flex-end">
+			<button class="tva-save-btn click tva-email-template-save" data-fn="save"><?php echo esc_html__( 'Save template', 'thrive-apprentice' ); ?></button>
+		</div>
+	</div>
+	<div class="tva-et-info">
+		<h3><?php echo esc_html__( 'Email details', 'thrive-apprentice' ); ?></h3>
+		<# if ( this.model.get( 'slug' ) === 'newAccount' ) { #>
+		<p><?php echo esc_html__( 'This email is sent to new customers that have either purchased a course or signed up for a free course.', 'thrive-apprentice' ); ?></p>
+		<p><?php echo esc_html__( 'The email typically includes login details that customers can use to access their account.', 'thrive-apprentice' ); ?></p>
+		<p><?php echo esc_html__( 'This email is only triggered when the account is created.  Repeat purchases through the same user account will not trigger the email.', 'thrive-apprentice' ); ?></p>
+		<p><?php echo esc_html__( 'Login Button and Login Link shortcodes will link to the page set under Apprentice &rarr; Settings &rarr; Login & access restriction &rarr; Login & registration page.', 'thrive-apprentice' ); ?></p>
+		<# } else if ( this.model.get( 'slug' ) === 'certificateIssued' ) { #>
+		<p><?php echo esc_html__( 'This email is sent to members after you have manually issued a course certificate to them.', 'thrive-apprentice' ); ?></p>
+		<p><?php echo esc_html__( 'The email typically includes a login button and a certificate download button.', 'thrive-apprentice' ); ?></p>
+		<p><?php echo esc_html__( 'This email is triggered each time the customer is issued a source certificate from the Apprentice member area.', 'thrive-apprentice' ); ?></p>
+		<p><?php echo esc_html__( 'Login Button and Login Link shortcodes will link to the page set under Apprentice &rarr; Settings &rarr; Login & access restriction &rarr; Login & registration page.', 'thrive-apprentice' ); ?></p>
+		<p><?php echo esc_html__( 'Certificate download button will link the member to the nominated certificate download page or when not available a direct download link.', 'thrive-apprentice' ); ?></p>
+		<# } else if ( this.model.get( 'slug' ) === 'assessmentMarked' ) { #>
+		<p><?php echo esc_html__( 'This email is sent to members after you have manually marked an assessment.', 'thrive-apprentice' ); ?></p>
+		<p><?php echo esc_html__( 'The email typically includes an assessment button which will redirect you to your assessment.', 'thrive-apprentice' ); ?></p>
+		<p><?php echo esc_html__( 'This email is triggered each time the customers assessment has been marked.', 'thrive-apprentice' ); ?></p>
+		<p><?php echo esc_html__( 'Assessment Button will link to the marked assessment page', 'thrive-apprentice' ); ?></p>
+		<# } else if ( this.model.get( 'slug' ) === 'productAccessExpire' ) { #>
+		<p><?php echo esc_html__( 'This email is sent to existing customers when their licence is about to expire and will encourage them to retain access to the product by subscribing again.', 'thrive-apprentice' ); ?></p>
+		<# } #>
+	</div>
+</div>

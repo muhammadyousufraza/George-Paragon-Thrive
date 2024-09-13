@@ -1,0 +1,28 @@
+<div class="api-field tve-zapier-api-wrapper">
+	<label class="tcb-checkbox">
+		<input id="zapier_send_ip" class="tve-checkbox" type="checkbox" <#= 1 == api.getConfig('send_ip') ? 'checked="checked"' : '' #> />
+		<span>
+			<?php echo __( 'Send IP Address', 'thrive-cb' ); ?>
+		</span>
+	</label>
+
+	<div class="tve-zapier-data">
+		<div class="field-description mb-40">
+		<?php echo __( 'Tags', 'thrive-cb' ); ?>
+	</div>
+		<div class="tvd-input-field">
+			<select id="tve-lg-select-tags" multiple name="tags" tabindex="-1" class="select2-hidden-accessible tve-api-extra" aria-hidden="true">
+				<# if ( api.getConfig('tags') ) { #>
+				<# _.each( api.getConfig('tags').split(','), function( tag ) { #>
+				<option value="<#=tag#>" selected="selected"><#=tag#></option>
+				<# }, this ) #>
+				<# } #>
+			</select>
+		</div>
+
+		<input id="thriveleads_group" type="hidden" class="tve-api-extra" name="thriveleads_group" value="<#= api.getConfig('thriveleads_group_id') ? api.getConfig('thriveleads_group_id') : '' #>"/>
+		<input id="thriveleads_type" type="hidden" class="tve-api-extra" name="thriveleads_type" value="<#= api.getConfig('thriveleads_type') ? api.getConfig('thriveleads_type') : '' #>"/>
+		<input id="thriveleads_name" type="hidden" class="tve-api-extra" name="thriveleads_name" value="<#= api.getConfig('thriveleads_name') ? api.getConfig('thriveleads_name') : '' #>"/>
+		<input id="source_url" type="hidden" class="tve-api-extra" name="source_url" value="<#= encodeURIComponent( window.location.href ) #>"/>
+	</div>
+</div>

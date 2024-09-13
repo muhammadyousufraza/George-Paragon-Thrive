@@ -1,0 +1,7 @@
+<div class="tcb-modal-tab-elem click <#= currentSectionTemplate == item.id ? 'active' : '' #>" data-id="<#= item.id #>" data-fn="select_item" data-type="symbol" data-cloud="<# if ( ! item.from_cloud ) { #>0<# } else { #>1<# } #>">
+	<span class="tcb-modal-tab-item-title">
+		<#= item.post_title #>
+		<?php tcb_icon( 'check-light' ); ?>
+	</span>
+	<div class="tcb-modal-tab-image" style="background-image: url('<#= item.thumb.url #>');"></div>
+</div>

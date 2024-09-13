@@ -1,0 +1,24 @@
+<div class="tva-rule-header pt-15 pb-15 click" data-fn="toggleItemsList">
+	<div class="tva-rule-img <#= model.get('slug') #>">&nbsp;</div>
+
+	<div class="tva-rule-title text"><#= model.get('label') #></div>
+	<div class="tva-course-integration-label"></div>
+
+	<div class="tva-rule-status tva-integration-status"></div>
+</div>
+<div class="tva-rule-items tva-top-border tva-course-integration-items-wrapper" style="display: none">
+	<div class="tva-flex tva-align-center tva-space-between mb-20">
+		<span class="tva-rule-label"><#= model.getText() #></span>
+	</div>
+	<div class="tva-flex tva-notice-card tva-flex-column">
+		<strong class="text"><?php echo __( 'Thrive Apprentice Course Access is handled inside your ThriveCart Account', 'thrive-apprentice' ); ?></strong>
+		<span class="text mt-10"><?php echo __( 'ThriveCart and Thrive Apprentice have teamed up to make it really easy to define course access right from within your ThriveCart Account.', 'thrive-apprentice' ); ?></span>
+		<span class="text mt-5">
+			<?php echo sprintf( __( 'Connect ThriveCart with Thrive Apprentice by creating an %s and pasting it into the Thrive Apprentice integration settings in your ThriveCart Account.', 'thrive-apprentice' ),
+				'<a href="#settings/api-keys">' . __( 'API Key', 'thrive-apprentice' ) . '</a>' ); ?>
+		</span>
+		<strong class="text mt-20"><?php echo esc_html__( 'Useful resources:', 'thrive-apprentice' ); ?></strong>
+		<a class="text mt-5" target="_blank" href="https://thrivethemes.com/tkb_item/how-to-connect-thrivecart-to-thrive-apprentice/"><?php echo __( 'How to connect ThriveCart to Thrive Apprentice', 'thrive-apprentice' ); ?></a>
+		<a class="text mt-5" target="_blank" href="https://thrivethemes.com/tkb_item/how-to-set-access-rules-for-thrivecart-in-thrive-apprentice/"><?php echo __( 'How to set Access Rules for ThriveCart in Thrive Apprentice', 'thrive-apprentice' ); ?></a>
+	</div>
+</div>

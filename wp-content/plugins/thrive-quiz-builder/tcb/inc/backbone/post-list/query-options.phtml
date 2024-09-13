@@ -1,0 +1,166 @@
+<div class="query-title margin-bottom-40">
+	<div class="query-filter-type">
+		<div><?php echo esc_html__( 'I want to display the following', 'thrive-cb' ); ?></div>
+		<div class="query-type-switch">
+			<button class="click" data-fn="q_filter" data-filter="custom"><?php echo esc_html__( 'Custom Query', 'thrive-cb' ); ?></button>
+			<button <?php echo apply_filters( 'tcb_post_list.disable_related', '' ); ?> class="click" data-fn="q_filter" data-filter="related">
+				<?php echo esc_html__( 'Related Posts', 'thrive-cb' ); ?>
+			</button>
+			<div class="related-posts-disabled-tooltip">
+				<div>
+					<?php echo esc_html__( 'The "Related Posts" section will show the content related to the post or page you\'re adding the "Post List" element to. Posts or pages are "related" if they share a common tag/category/author/format.', 'thrive-cb' ); ?>
+				</div>
+				<div>
+					<?php echo esc_html__( 'The "Related Posts" section is not available for "Blog", as there aren\'t any categories, tags, authors etc. assigned to it.', 'thrive-cb' ); ?>
+				</div>
+			</div>
+		</div>
+		<input class="query-arg" type="hidden" data-arg="filter" value="">
+	</div>
+</div>
+
+<div class="tth-query-container q-filter" data-view="custom">
+	<span class="tth-subtitle tth-items-to-display">
+		<?php echo esc_html__( 'Content to display', 'thrive-cb' ); ?>
+	</span>
+	<div class="query-post-type-select tth-dropdown-container"></div>
+	<input class="query-arg" type="hidden" data-arg="post_type" value="">
+</div>
+
+<div class="tth-query-container">
+	<div class="post-list-count loading-when-empty"></div>
+	<div class="q-filter" data-view="related" style="display: none">
+		<span class="tth-subtitle mb-20">
+			<?php echo esc_html__( 'Related', 'thrive-cb' ); ?>
+		</span>
+
+		<p>
+			<?php $text = esc_html__( 'Display results related to the current page, by the following criteria: ', 'thrive-cb' ); ?>
+			<?php echo apply_filters( 'tcb_post_list.related_text', $text ); ?>
+		</p>
+		<ul class="tth-options q-related-taxonomies"></ul>
+	</div>
+
+	<div class="q-filter" data-view="custom" style="display: none;">
+		<div class="tth-rule-container-header mb-10">
+			<span class="tth-subtitle">
+				<?php echo esc_html__( 'Filtering', 'thrive-cb' ); ?>
+			</span>
+			<div>
+				<button class="tth-add-rule click" data-fn="newRule" disabled>
+					<?php echo esc_html__( 'Add Rule', 'thrive-cb' ); ?>
+				</button>
+			</div>
+		</div>
+
+		<div class="tth-body-container q-custom-container">
+			<div class="no-rules">
+				<?php echo esc_html__( 'All posts on your website are selected to be displayed in the post list.', 'thrive-cb' ); ?>
+			</div>
+			<div class="query-rules"></div>
+
+			<div class="new-rules">
+				<span><?php echo esc_html__( 'Create a display rule based on', 'thrive-cb' ); ?></span>
+				<div class="tth-dropdown-container new-rule-taxonomies"></div>
+			</div>
+		</div>
+
+		<div class="tth-incompatible-taxonomies-container" style="display:none">
+			<span class="tth-incompatible-title">
+				<span class="tth-incompatible-title-alert">
+					<span class="tth-warning-icon"></span>
+					<?php echo esc_html__( 'WARNING', 'thrive-cb' ); ?>
+				</span>
+				<span class="tth-incompatible-title-text">
+					<?php echo esc_html__( ' - Some content types will not be displayed', 'thrive-cb' ); ?>
+				</span>
+
+				<span class="tth-show-details click" data-fn="showWarningDetails">
+					<?php echo esc_html__( '... show details', 'thrive-cb' ); ?>
+				</span>
+
+				<span class="tth-hide-details click" data-fn="hideWarningDetails" style="display:none">
+					<?php echo esc_html__( 'Hide details', 'thrive-cb' ); ?>
+				</span>
+			</span>
+
+			<div class="tth-incompatible-container" style="display:none">
+				<ul class="tth-incompatible-taxonomies-list"></ul>
+				<a href="https://thrivethemes.com/tkb_item/some-content-types-will-not-be-displayed-warning-why-does-this-occur/" target="_blank">
+					<?php echo esc_html__( 'Learn why this occurs and how to solve it', 'thrive-cb' ); ?>
+				</a>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="tth-query-container">
+	<div class="tth-subtitle tth-fe-filters">
+		<?php echo esc_html__( 'Allowed Front End Filters', 'thrive-cb' ); ?>
+		<div class="tth-info-tooltip">
+			<?php tcb_icon( 'info-circle-solid' ); ?>
+			<div class="tth-tooltip-message">
+				<?php echo esc_html__( 'Front end filters let your visitors apply the filters that they want to your post lists. Add both this post list and a filter element to your page. Filters will only affect this post list if the URL Query Key has been enabled below.', 'thrive-cb' ); ?>
+				<a href="https://help.thrivethemes.com/en/articles/6533678-how-to-use-the-post-list-filter-element#h_12dd68c67c" target="_blank" class="tth-tooltip-redirect-link">
+					<?php echo esc_html__( ' Learn more.', 'thrive-cb' ); ?>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="tth-rule-container-header mt-10 mb-10">
+		<div class="query-options-row">
+			<div class="new-filters">
+				<div class="tth-dropdown-container new-filters-dropdown"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="tth-query-container query-options">
+	<span class="tth-subtitle mb-20">
+		<?php echo esc_html__( 'Order', 'thrive-cb' ); ?>
+	</span>
+	<div class="query-options-row">
+		<div class="arrange-results">
+			<div><?php echo esc_html__( 'Arrange the results by: ', 'thrive-cb' ); ?></div>
+			<div class="tth-dropdown-container orderby-arg"></div>
+			<input type="hidden" data-arg="orderby" class="query-arg">
+			<span><?php echo esc_html__( 'and', 'thrive-cb' ); ?></span>
+		</div>
+		<span class="arrange-sort"><?php echo esc_html__( 'sort', 'thrive-cb' ); ?></span>
+		<div class="tth-dropdown-container order-arg"></div>
+		<input type="hidden" data-arg="order" class="query-arg">
+
+		<div><?php echo esc_html__( 'Display', 'thrive-cb' ); ?></div>
+		<input type="number" min="1" value="1" class="query-arg inline-input-arg" data-arg="posts_per_page">
+		<div><?php echo esc_html__( 'of the sorted results', 'thrive-cb' ); ?></div>
+
+		<div class="tth-offset-container pl-5">
+			<span><?php echo esc_html__( 'starting from item number', 'thrive-cb' ); ?></span>
+			<input type="number" min="1" value="1" class="query-arg inline-input-arg" data-arg="offset">
+		</div>
+	</div>
+
+	<div class="query-options-row bottom-settings">
+		<label>
+			<span>
+				<?php echo esc_html__( 'If there are no results show this message:', 'thrive-cb' ); ?>
+			</span>
+			<input type="text" class="query-arg" data-arg="no_posts_text">
+		</label>
+
+		<label class="exclude-items">
+			<?php if ( apply_filters( 'tcb_post_list.show_exclude', true ) ) : ?>
+				<span class="tcb-switch tcb-exclude-post-lever">
+					<label>
+						<input type="checkbox" class="tve-checkbox change query-arg" data-arg="exclude_current_post">
+						<span class="tcb-lever"></span>
+					</label>
+				</span>
+				<span><?php echo esc_html__( 'Exclude current post from the list', 'thrive-cb' ); ?></span>
+			<?php endif; ?>
+		</label>
+
+	</div>
+</div>

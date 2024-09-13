@@ -1,0 +1,125 @@
+<h3>
+	<#= test.get('title') #>
+		<a href="<?php echo '#' ?>"
+		   title="<?php echo __( 'Test Charts', 'thrive-quiz-builder' ) ?>"
+		   class="tqb-play-link ">
+			<span class="tvd-icon-play"> </span>
+		</a>
+</h3>
+<div class="tvd-v-spacer vs-2"></div>
+<div class="tvd-row">
+	<div class="tvd-col tvd-s3">
+		<div class="tve-chart-interval">
+			<div class="tvd-input-field">
+				<select autocomplete="off" id="tqb-chart-interval-select" name="tve-chart-interval">
+					<option selected value="day"><?php echo __( 'Daily', 'thrive-quiz-builder' ); ?></option>
+					<option value="week"><?php echo __( 'Weekly', 'thrive-quiz-builder' ); ?></option>
+					<option value="month"><?php echo __( 'Monthly', 'thrive-quiz-builder' ); ?></option>
+				</select>
+				<label for="tve-chart-interval-select"><?php echo __( 'Graph interval', 'thrive-quiz-builder' ); ?>:</label>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="tvd-relative">
+	<div id="tqb-chart-container"></div>
+	<div class="tve-chart-overlay" style="display: none">
+		<div class="tvd-card tvd-small tvd-white tvd-valign-wrapper">
+			<div class="tvd-card-content tvd-valign tvd-center-align">
+				<h3><?php echo __( 'No Test Data (Yet)', 'thrive-quiz-builder' ); ?></h3>
+				<p>
+					<?php echo __( 'Here you will see a graph of conversion data as the test progresses.<br/> Currently there is no data to display.', 'thrive-quiz-builder' ); ?>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="tvd-v-spacer vs-3"></div>
+<table class="tvd-collection tvd-with-header tvd-slim-table">
+	<thead>
+	<tr class="tvd-collection-header">
+		<td>
+			<h5>
+				<a href="<?php echo '#' ?>"
+				   title="<?php echo __( 'Test Charts', 'thrive-quiz-builder' ) ?>"
+				   class="tqb-play-link ">
+					<span class="tvd-icon-play"> </span>
+				</a>
+			</h5>
+		</td>
+		<td>
+			<div class="tvd-truncate-on-small" data-popup="<?php echo __( 'Form Impressions', 'thrive-quiz-builder' ) ?>">
+				<h5 class="tvd-truncate-on-small-el">
+					<?php echo __( 'Form Impressions', 'thrive-quiz-builder' ) ?>
+				</h5>
+			</div>
+		</td>
+		<td>
+			<div class="tvd-truncate-on-small" data-popup="<?php echo __( 'Conversions', 'thrive-quiz-builder' ) ?>">
+				<h5 class="tvd-truncate-on-small-el">
+					<?php echo __( 'Conversions', 'thrive-quiz-builder' ) ?>
+				</h5>
+			</div>
+		</td>
+		<td>
+			<div class="tvd-truncate-on-small" data-popup="<?php echo __( 'Conversion Rate', 'thrive-quiz-builder' ) ?>">
+				<h5 class="tvd-truncate-on-small-el">
+					<?php echo __( 'Conversion Rate', 'thrive-quiz-builder' ) ?>
+				</h5>
+			</div>
+		</td>
+		<td style="width: 200px;">
+			<div class="tvd-truncate-on-small" data-popup="<?php echo __( 'Chart', 'thrive-quiz-builder' ) ?>">
+				<h5 class="tvd-truncate-on-small-el">
+					<?php echo __( 'Chart', 'thrive-quiz-builder' ) ?>
+				</h5>
+			</div>
+		</td>
+		<td>
+			<div class="tvd-truncate-on-small" data-popup="<?php echo __( 'Percentage Improvement', 'thrive-quiz-builder' ) ?>">
+				<h5 class="tvd-truncate-on-small-el">
+					<?php echo __( 'Percentage Improvement', 'thrive-quiz-builder' ) ?>
+				</h5>
+			</div>
+		</td>
+		<td>
+			<div class="tvd-truncate-on-small" data-popup="<?php echo __( 'Chance To Beat Original', 'thrive-quiz-builder' ) ?>">
+				<h5 class="tvd-truncate-on-small-el">
+					<?php echo __( 'Chance To Beat Original', 'thrive-quiz-builder' ) ?>
+				</h5>
+			</div>
+		</td>
+		<td>&nbsp;</td>
+	</tr>
+	</thead>
+	<tbody id="tqb-form-test-items"></tbody>
+	<tbody id="tqb-test-items-total"></tbody>
+	<tbody id="tqb-form-test-stopped-items"></tbody>
+</table>
+
+<div id="tqb-test-options"></div>
+<div class="tvd-clear"></div>
+<?php include dirname( __FILE__ ) . '/completed-tests.phtml' ?>
+<div class="tvd-v-spacer vs-2"></div>
+<div class="tvd-row tvd-collapsed">
+	<div class="tvd-col tvd-s6">
+		<a class="tvd-btn-flat tvd-btn-flat-primary tvd-btn-flat-dark tvd-waves-effect" href="#dashboard/quiz/<#= test.get('quiz_id') #>">
+			&laquo; <?php echo __( 'Back To Dashboard', 'thrive-quiz-builder' ) ?>
+		</a>
+	</div>
+	<# if( ! test.get('status') ) { #>
+		<# if(! test.get('running_test') ) { #>
+			<div class="tvd-col tvd-s6">
+				<a class="tvd-btn-flat tvd-btn-flat-primary tvd-btn-flat-dark tvd-right tvd-waves-effect" href="#dashboard/page/<#= test.get('page_id') #>">
+					&laquo; <?php echo __( 'Back to page', 'thrive-quiz-builder' ) ?>
+				</a>
+			</div>
+		<# }else{ #>
+			<div class="tvd-col tvd-s6">
+				<a class="tvd-btn-flat tvd-btn-flat-primary tvd-btn-flat-dark tvd-right tvd-waves-effect" href="#dashboard/test/<#= test.get('running_test').id #>">
+					&laquo; <?php echo __( 'Back to running test', 'thrive-quiz-builder' ) ?>
+				</a>
+			</div>
+		<# } #>
+	<# } #>
+</div>

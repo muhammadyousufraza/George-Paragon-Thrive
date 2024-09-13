@@ -1,0 +1,10 @@
+<!--why isn't pl-50/ml-50 working?-->
+<div class="control-grid tve-knob-wrapper pl-40 ml-10">
+	<div class="tve-knob small"></div>
+
+	<div class="slider-input fixed-65">
+		<span class="input-um degree">&deg;</span>
+		<input type="text" class="tve-input input change width-input <#= this.model.config.um.length === 1 ? 'has-um':'' #>" data-fn="onChange" data-fn-input="onInput"
+			   value="<#= this.model.config.default #>">
+	</div>
+</div>

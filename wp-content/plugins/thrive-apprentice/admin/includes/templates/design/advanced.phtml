@@ -1,0 +1,245 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+
+$config = array(
+	'disable_submenu_item' => 'advanced',
+);
+
+?>
+<div class="tva-sidebar-wrapper">
+	<?php include dirname( __FILE__ ) . '/partial-header.php'; ?>
+	<div class="scrollbar-inner w-166">
+		<div class="pr-5 pl-5 mb-10">
+			<div class="tva-settings-card">
+				<div class="tva-settings-card-title">
+					<h3><?php echo __( 'Course name', 'thrive-apprentice' ) ?></h3>
+				</div>
+
+				<div class="tva-settings-card-content">
+					<div class="tva-settings-card-inner">
+						<div class="tva-flex tva-align-center">
+							<div class="tva-settings-card-range mr-10">
+								<label for="tva_course_title" class="settings-label"><?php echo __( 'Font size', 'thrive-apprentice' ); ?></label>
+								<input type="range" class="input settings-input" data-css-prop="font-size"
+									   data-fn="sliderInput" id="tva_course_title" name="course_title" value="<#= template.course_title #>" min="10" max="100"/>
+							</div>
+							<div class="tva-settings-card-number">
+								<label for="tva_course_title_input" class="settings-label"><?php echo __( 'px', 'thrive-apprentice' ) ?></label>
+								<input type="number" class="input settings-input" data-css-prop="font-size"
+									   data-fn="sliderInput" id="tva_course_title_input" name="course_title" value="<#= template.course_title #>"/>
+							</div>
+						</div>
+
+						<div class="tva-flex tva-align-center tva-settings-card-color">
+							<label class="settings-label mr-30"><?php echo __( 'Color', 'thrive-apprentice' ) ?></label>
+							<input id="tva-course-title-color" type="text" name="course_title_color" value="<#= template.course_title_color #>"
+								   class="settings-input color"/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tva-settings-card">
+				<div class="tva-settings-card-title">
+					<h3><?php echo __( 'Description title', 'thrive-apprentice' ) ?></h3>
+				</div>
+
+				<div class="tva-settings-card-content">
+					<div class="tva-settings-card-inner">
+						<label for="tva-page-headline-text" class="settings-label"><?php echo __( 'Text', 'thrive-apprentice' ); ?></label>
+						<input type="text" class="input settings-input" data-fn="changeText" id="tva-page-headline-text"
+							   name="page_headline_text" value="<#= template.page_headline_text #>"/>
+
+						<div class="tva-flex tva-align-center">
+							<div class="tva-settings-card-range mr-10">
+								<label for="tva_page_headline" class="settings-label"><?php echo __( 'Font size', 'thrive-apprentice' ) ?></label>
+								<input type="range" class="input settings-input" data-css-prop="font-size"
+									   data-fn="sliderInput" id="tva_page_headline" name="page_headline" value="<#= template.page_headline #>" min="10" max="100"/>
+							</div>
+							<div class="tva-settings-card-number">
+								<label for="tva_page_headline_input" class="settings-label"><?php echo __( 'px', 'thrive-apprentice' ) ?></label>
+								<input type="number" class="input settings-input" data-css-prop="font-size"
+									   data-fn="sliderInput" id="tva_page_headline_input" name="page_headline" value="<#= template.page_headline #>"/>
+							</div>
+						</div>
+
+						<div class="tva-flex tva-align-center tva-settings-card-color">
+							<label class="settings-label mr-30"><?php echo __( 'Color', 'thrive-apprentice' ); ?></label>
+							<input id="tva-headline-color" type="text" value="<#= template.page_headline_color #>" name="page_headline_color"
+								   class="settings-input color"/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tva-settings-card">
+				<div class="tva-settings-card-title">
+					<h3><?php echo __( 'Paragraphs', 'thrive-apprentice' ) ?></h3>
+				</div>
+
+				<div class="tva-settings-card-content">
+					<div class="tva-settings-card-inner">
+						<div class="tva-flex tva-align-center">
+							<div class="tva-settings-card-range mr-10">
+								<label for="tva_paragraph" class="settings-label"><?php echo __( 'Font size', 'thrive-apprentice' ) ?></label>
+								<input type="range" class="input settings-input" data-css-prop="font-size"
+									   data-fn="sliderInput" id="tva_paragraph" name="paragraph" value="<#= template.paragraph #>" min="10" max="100"/>
+							</div>
+							<div class="tva-settings-card-number">
+								<label for="tva_paragraph_input" class="settings-label"><?php echo __( 'px', 'thrive-apprentice' ) ?></label>
+								<input type="number" class="input settings-input" data-css-prop="font-size"
+									   data-fn="sliderInput" id="tva_paragraph_input" name="paragraph" value="<#= template.paragraph #>"/>
+							</div>
+						</div>
+
+						<div class="tva-flex tva-align-center tva-settings-card-color">
+							<label class="settings-label mr-30"><?php echo __( 'Color', 'thrive-apprentice' ); ?></label>
+							<input id="tva-paragraph-color" type="text" name="paragraph_color" value="<#= template.paragraph_color #>"
+								   class="settings-input color"/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tva-settings-card">
+				<div class="tva-settings-card-title">
+					<h3><?php echo __( 'Course structure', 'thrive-apprentice' ); ?></h3>
+				</div>
+
+				<div class="tva-settings-card-content">
+					<div class="tva-settings-card-inner">
+						<label for="tva-course-structure-text" class="settings-label"><?php echo __( 'Text', 'thrive-apprentice' ); ?></label>
+						<input type="text" class="input settings-input"
+							   data-fn="changeText" id="tva-course-structure-text" name="course_structure" value="<#= template.course_structure #>"/>
+
+						<div class="tva-flex tva-align-center">
+							<input type="checkbox" class="settings-cb-input change" data-fn="checkboxInput" id="tva-collapse-modules" name="collapse_modules"
+							<#= template.collapse_modules ? 'checked="checked"' : '' #>>
+							<label class="settings-cb-label" for="tva-collapse-modules"><?php echo __( 'Collapse modules', 'thrive-apprentice' ) ?></label>
+						</div>
+
+						<div class="tva-flex tva-align-center mb-5">
+							<input type="checkbox" class="settings-cb-input change" data-fn="checkboxInput" id="tva-collapse-chapters" name="collapse_chapters"
+							<#= template.collapse_chapters ? 'checked="checked"' : '' #>>
+							<label class="settings-cb-label" for="tva-collapse-chapters"><?php echo __( 'Collapse chapters', 'thrive-apprentice' ) ?></label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tva-settings-card">
+				<div class="tva-settings-card-title">
+					<h3><?php echo __( 'Title size', 'thrive-apprentice' ) ?></h3>
+				</div>
+
+				<div class="tva-settings-card-content">
+					<div class="tva-settings-card-inner <#= this.model.get('preview_option') && !available_settings.get('module_headline') ? 'tva-settings-section-disabled' : '' #>">
+						<div class="tva-flex tva-align-center">
+							<div class="tva-settings-card-range mr-10">
+								<label for="tva_module_headline" class="settings-label"><?php echo __( 'Module font size', 'thrive-apprentice' ) ?></label>
+								<input type="range" class="input settings-input" data-css-prop="font-size"
+									   data-fn="sliderInput" id="tva_module_headline" name="module_headline" value="<#= template.module_headline #>" min="10" max="100"/>
+							</div>
+							<div class="tva-settings-card-number">
+								<label for="tva_module_headline_input" class="settings-label"><?php echo __( 'px', 'thrive-apprentice' ) ?></label>
+								<input type="number" class="input settings-input" data-css-prop="font-size"
+									   data-fn="sliderInput" id="tva_module_headline_input" name="module_headline" value="<#= template.module_headline #>"/>
+							</div>
+						</div>
+					</div>
+
+					<div class="tva-settings-card-inner <#= this.model.get('preview_option') && !available_settings.get('chapter_headline') ? 'tva-settings-section-disabled' : '' #>">
+						<div class="tva-flex tva-align-center">
+							<div class="tva-settings-card-range mr-10">
+								<label for="tva_chapter_headline" class="settings-label"><?php echo __( 'Chapter font size', 'thrive-apprentice' ) ?></label>
+								<input type="range" class="input settings-input" data-css-prop="font-size"
+									   data-fn="sliderInput" id="tva_chapter_headline" name="chapter_headline" value="<#= template.chapter_headline #>" min="10" max="100"/>
+							</div>
+							<div class="tva-settings-card-number">
+								<label for="tva_chapter_headline_input" class="settings-label"><?php echo __( 'px', 'thrive-apprentice' ) ?></label>
+								<input type="number" class="input settings-input" data-css-prop="font-size"
+									   data-fn="sliderInput" id="tva_chapter_headline_input" name="chapter_headline" value="<#= template.chapter_headline #>"/>
+							</div>
+						</div>
+					</div>
+
+					<div class="tva-settings-card-inner <#= this.model.get('preview_option') && !available_settings.get('lesson_headline') ? 'tva-settings-section-disabled' : ''#>">
+						<div class="tva-flex tva-align-center">
+							<div class="tva-settings-card-range mr-10">
+								<label for="tva_lesson_headline" class="settings-label"><?php echo __( 'Lesson font size', 'thrive-apprentice' ) ?></label>
+								<input type="range" class="input settings-input" data-css-prop="font-size"
+									   data-fn="sliderInput" id="tva_lesson_headline" name="lesson_headline" value="<#= template.lesson_headline #>" min="10" max="100"/>
+							</div>
+							<div class="tva-settings-card-number">
+								<label for="tva_lesson_headline_input" class="settings-label"><?php echo __( 'px', 'thrive-apprentice' ) ?></label>
+								<input type="number" class="input settings-input" data-css-prop="font-size"
+									   data-fn="sliderInput" id="tva_lesson_headline_input" name="lesson_headline" value="<#= template.lesson_headline #>"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<# if(template.has_author) { #>
+			<div class="tva-settings-card">
+				<div class="tva-settings-card-title">
+					<h3><?php echo __( 'Author', 'thrive-apprentice' ) ?></h3>
+				</div>
+
+				<div class="tva-settings-card-content">
+					<div class="tva-settings-card-inner">
+						<label for="tva-author-text" class="settings-label"><?php echo __( 'Label', 'thrive-apprentice' ); ?></label>
+						<input type="text" class="input settings-input" data-fn="changeText" id="tva-author-text" name="author" value="<#= template.author #>"/>
+					</div>
+				</div>
+			</div>
+			<# } #>
+
+			<# if(template.has_lesson_list) { #>
+			<div class="tva-settings-card">
+				<div class="tva-settings-card-title">
+					<h3><?php echo __( 'Lesson overview', 'thrive-apprentice' ); ?></h3>
+				</div>
+
+				<div class="tva-settings-card-content">
+					<div class="tva-settings-card-inner">
+						<label for="tva-lesson-list-text" class="settings-label"><?php echo __( 'Title', 'thrive-apprentice' ); ?></label>
+						<input type="text" class="input settings-input" data-fn="changeText" id="tva-lesson-list-text" name="lesson_list" value="<#= template.lesson_list #>"/>
+
+						<label for="tva-lesson-list-not-viewed-text" class="settings-label"><?php echo __( 'Not viewed label', 'thrive-apprentice' ); ?></label>
+						<input type="text"
+							   data-fn="changeText"
+							   class="input settings-input <#= this.model.get('preview_option') && !available_settings.get('not_viewed') ? 'tvd-tooltipped' : ''#>"
+						<#= this.model.get('preview_option') && !available_settings.get('not_viewed') ? 'disabled ' + available_settings.get('tooltip') : ''#>
+						id="tva-lesson-list-not-viewed-text" name="lesson_list_not_viewed" value="<#= template.lesson_list_not_viewed #>"/>
+
+						<label for="tva-lesson-list-text" class="settings-label"><?php echo __( 'In progress label', 'thrive-apprentice' ); ?></label>
+						<input type="text"
+							   data-fn="changeText"
+							   class="input settings-input <#= this.model.get('preview_option') && !available_settings.get('lesson_progress') ? 'tvd-tooltipped' : ''#>"
+						<#= this.model.get('preview_option') && !available_settings.get('lesson_progress') ? 'disabled ' + available_settings.get('tooltip') :
+						''#> id="tva-lesson-list-progress-text" name="lesson_list_progress" value="<#= template.lesson_list_progress #>"/>
+
+						<label for="tva-lesson-list-completed-text" class="settings-label"><?php echo __( 'Completed label', 'thrive-apprentice' ); ?></label>
+						<input type="text"
+							   data-fn="changeText"
+							   class="input settings-input <#= this.model.get('preview_option') && !available_settings.get('completed') ? 'tvd-tooltipped' : ''#>"
+						<#= this.model.get('preview_option') && !available_settings.get('completed') ? 'disabled ' + available_settings.get('tooltip') : ''#>
+						id="tva-lesson-list-completed-text" name="lesson_list_completed" value="<#= template.lesson_list_completed #>"/>
+					</div>
+				</div>
+			</div>
+			<# } #>
+		</div>
+	</div>
+	<?php include dirname( __FILE__ ) . '/save-btn.php'; ?>
+</div>
+

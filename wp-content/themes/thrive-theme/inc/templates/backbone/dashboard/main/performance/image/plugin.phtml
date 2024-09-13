@@ -1,0 +1,55 @@
+<div class="ttd-performance-card mt-10 compact plugin-item state-normal">
+	<div class="ttd-d-flex ttd-align-center ttd-perf-logo">
+		<img alt="<#=plugin.slug#>" height="50" src="<?php echo THEME_URL . '/inc/assets/images/performance/<#= plugin.logo #>' ?>">
+		<# if ( plugin.recommended ) { #>
+		<span class="badge-recommend ml-20"><?php esc_html_e( 'Recommended', 'thrive-theme' ); ?></span>
+		<# } #>
+	</div>
+	<div class="state-warn state-switch ttd-settings-notice ttd-text-center">
+		<div class="confirmation">
+			<h2 class="mt-25 mb-25"><?php esc_html_e( 'Are you Sure you want to Overwrite your Existing Optimole Settings?', 'thrive-theme' ); ?></h2>
+
+			<p class="mt-0 mb-30 ttd-normal"><?php printf( esc_html__( 'If you continue, Thrive will automatically configure Optimole with the recommended settings. %sThis means that some of your existing settings may be lost.' ), '<br>', 'thrive-theme' ); ?></p>
+
+			<button class="ttd-btn blue empty click mr-30" data-fn="cancelUpdateSettings"><?php esc_html_e( 'No, cancel', 'thrive-theme' ); ?></button>
+			<button class="ttd-btn blue fill click" data-fn="updateSettings" data-plugin="optimole"
+					data-tag="optimole-wp"><?php esc_html_e( 'Yes, configure Optimole', 'thrive-theme' ); ?></button>
+		</div>
+		<div class="success" style="display:none;">
+			<h2 class="mt-25 mb-25 success-blue"><?php esc_html_e( 'Success', 'thrive-theme' ); ?></h2>
+			<p class="m-0 ttd-normal"><?php esc_html_e( 'Settings were successfully installed', 'thrive-theme' ); ?></p>
+		</div>
+	</div>
+	<div class="state-switch state-normal ttd-d-flex ttd-align-stretch">
+		<# if ( plugin.active ) { #>
+
+		<# if ( ! plugin.status.registered ) { #>
+
+		<!-- case 1: active but not registered -> can't do anything. go to settings and activate it -->
+		<a href="<#= plugin.settings_redirect #>" class="ttd-btn red empty"><?php esc_html_e( 'Not Registered. Click here to register', 'thrive-theme' ); ?></a>
+
+		<# } else if ( ! plugin.status.configured ) { #>
+
+		<!-- case 2: if registered and not configured, show config button -->
+		<button class="ttd-btn blue empty click"
+				data-fn="showConfigState"><?php esc_html_e( 'Configure Optimole for Optimal use with Thrive', 'thrive-theme' ); ?></button>
+
+		<# } else { #>
+
+		<!-- case 3: registered, configured -->
+		<span class="configured-state"><#= plugin.recommended ? '<?php echo esc_html__( 'Configured', 'thrive-theme' ); ?>' : '<?php echo esc_html__( 'Activated', 'thrive-theme' ); ?>' #><?php Thrive_Views::svg_icon( 'check_light' ); ?></span>
+		<# if ( plugin.recommended ) { #>
+		<button class="ttd-btn blue fill icon-only ttd-right ml-20 click" data-tooltip="<?php esc_html_e( 'Restore recommended settings', 'thrive-theme' ); ?>" data-fn="showConfigState"><?php Thrive_Views::svg_icon( 'reset-icon' ); ?></button>
+		<# } #>
+
+		<# } #>
+		<# } else if ( plugin.installed ) { #>
+		<a href="javascript:void(0)" class="ttd-btn blue empty click" data-fn="pluginAction" data-action="activate" data-plugin="<#= plugin.key #>"
+		   target="_blank"><?php echo esc_html__( 'Activate Now', 'thrive-theme' ); ?></a>
+		<# } else { #>
+		<a href="<#= plugin.external_link || 'javascript:void(0)' #>" class="ttd-btn empty blue click" <# if ( ! plugin.external_link ) {
+		#>data-fn="pluginAction"
+		data-action="install" <# } #> data-plugin="<#= plugin.key #>" target="_blank"><?php esc_html_e( 'Install Now', 'thrive-theme' ); ?></a>
+		<# } #>
+	</div>
+</div>

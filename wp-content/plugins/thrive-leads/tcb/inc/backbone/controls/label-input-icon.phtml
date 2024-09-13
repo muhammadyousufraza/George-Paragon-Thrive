@@ -1,0 +1,11 @@
+<div class="control-grid mb-10 <#=this.getExtraClass()#>">
+	<# if ( this.model.config.label ) { #>
+	<div class="label"><#= this.get_config('label') #></div>
+	<# } #>
+	<div class="w-90">
+		<input type="text" class="tve-input-control input change" data-fn-input="onInput" placeholder="<#= this.get_config('placeholder', '') #>" data-fn="changed" <#= this.get_config('extra_attrs', '') #>/>
+	</div>
+	<a href="javascript:void(0);" class="click" data-fn="previewMessage" <#= this.model.config.icontooltip ? 'data-tooltip="' + this.model.config.icontooltip + '"' : ''#> <#= this.model.config.iconside ? 'data-side="' + this.model.config.iconside + '"' : ''#>>
+		<?php tcb_icon( 'eye-light' ); ?>
+	</a>
+</div>

@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<a href="javascript:void(0);" class="click mb-30 tva-protected-files-help-modal-back" data-fn="jumpToStep" data-step="0"><?php tva_get_svg_icon( 'long-arrow-left_solid' ); ?><span><?php echo __( 'Back', 'thrive-apprentice' ) ?></span></a>
+
+<div class="tva-protected-files-scroll">
+	<div class="tva-flex tva-align-center" style="gap: 10px;">
+		<div class="tva-protected-files-help-icon-aura"><?php tva_get_svg_icon( 'graduation-cap' ); ?></div>
+		<span class="tva-fs-20"><?php echo esc_html__( 'How to display protected files ', 'thrive-apprentice' ) ?><strong><?php echo esc_html__( 'as lesson resources', 'thrive-apprentice' ) ?></strong></span>
+	</div>
+	<div class="tva-flex mt-40">
+		<span><?php echo esc_html__( 'Go to your Course\'s structure in Thrive Apprentice. ', 'thrive-apprentice' ) ?></span>
+	</div>
+	<div class="tva-flex mt-15">
+		<span><strong><?php echo esc_html__( 'On any lesson, choose Edit > Add resources to add your protected file.', 'thrive-apprentice' ) ?></strong></span>
+	</div>
+	<div class="tva-flex mt-25">
+		<img alt="Help Resources 1" src="<?php echo TVA_Const::plugin_url( 'admin/includes/assets/img/protected-files/help-resources-1.png' ); ?>">
+	</div>
+</div>
+
+<div class="tva-flex tva-space-around mt-20">
+	<a rel="noopener" href="https://help.thrivethemes.com/en/articles/6972728-how-to-protect-files-and-grant-access-for-customers-or-students#h_e64387ba5c" target="_blank" class="tva-btn tva-btn-blue pl-30 pr-30"><?php echo __( 'Read the full guide', 'thrive-apprentice' ) ?></a>
+</div>

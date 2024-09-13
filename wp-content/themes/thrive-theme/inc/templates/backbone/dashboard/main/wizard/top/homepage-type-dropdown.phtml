@@ -1,0 +1,8 @@
+<select class="ttd-wizard-home-opt change ttd-wizard-select2" data-dropdown-parent-identifier=".ttd-wizard-top" data-fn="homepageChangeOption">
+	<option value="template"
+	<#= this.model.deepGet( 'settings.homepage.type' ) === 'template' ? ' selected="selected"' : ''#>>Ready Made</option>
+	<option value="page"
+	<#= this.model.deepGet( 'settings.homepage.type' ) === 'page' ? ' selected="selected"' : ''#>>Existing Page</option>
+	<option value="blog"
+	<#= this.model.deepGet( 'settings.homepage.type' ) === 'blog' ? ' selected="selected"' : ''#>>Blog</option>
+</select>

@@ -1,0 +1,31 @@
+<div class="tva-boxed-container tva-flex tva-space-between">
+	<div class="title-box mr-20">
+		<h1 class="tva-main-heading" id="tva-course-title"><#= model.get('name') #></h1>
+		<span class="click" data-fn="editTitle"><?php tva_get_svg_icon( 'pen_light' ); ?></span>
+		<div style="display: none;">
+			<input placeholder="<?php echo esc_html__( 'Course name', 'thrive-apprentice' ); ?>" id="tva-course-<#= model.get('id') #>-name" type="text" data-bind="name">
+			<label for="tva-course-<#= model.get('id') #>-name"></label>
+		</div>
+		<# if (model.get('status') === 'future') { #>
+		<div class="tva-course-date">
+			<?php echo tva_get_svg_icon( 'schedule' ); ?>
+			<#- TVA.Utils.dateFormat(model.get('publish_date')) #>
+		</div>
+		<# } #>
+	</div>
+	<div class="tva-buttons-box ml-20">
+		<a id="tva-course-preview" class="tva-btn tva-btn-simple mr-40" target="_blank" style="display: <#-  model.get('preview_url') && model.get('preview_url').length ? 'inline-block' : 'none' #>" href="<#= model.get('preview_url') #>"><?php echo esc_html__( 'Preview course', 'thrive-apprentice' ); ?></a>
+
+		<div class="tva-options-drop tva-drop-publish">
+			<button id="tva-course-publish" class="tva-btn tva-btn-125">
+				<span><?php echo esc_html__( 'Unpublished', 'thrive-apprentice' ); ?></span>
+				<?php tva_get_svg_icon( 'angle-down' ); ?>
+			</button>
+			<ul class="tva-options-drop-ul tva-course-status-drop"></ul>
+		</div>
+		<i class="tvd-c-tooltip">
+			<?php tva_get_svg_icon( 'info-circle_strong' ); ?>
+			<span class="tva-custom-tooltip"><?php echo esc_attr( __( 'To publish or schedule a course, you must have 1 or more published lessons or assessments', 'thrive-apprentice' ) ); ?></span>
+		</i>
+	</div>
+</div>

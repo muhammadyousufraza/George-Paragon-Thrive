@@ -1,0 +1,42 @@
+<div class="sp-color-options">
+	<div class="sp-color-info-container">
+		<span class="sp-color-info-label">
+			<#= title #>
+		</span>
+
+		<span class="sp-info-icon click" data-paneltlt-hover data-fn="openTooltip">
+			<?php tcb_icon( 'info-circle-solid' ); ?>
+		</span>
+	</div>
+
+	<div>
+		<# if(edit) { #>
+		<# if(type == 'global') { #>
+		<div class="sp-color-action-container click" data-fn="go_to_state" data-state="31">
+			<# } else { #>
+			<div class="sp-color-action-container click" data-fn="edit_template_color">
+				<# } #>
+				<div class="sp-action-icon">
+					<# if(type == 'global') { #>
+					<?php tcb_icon( 'pencil-alt-solid' ); ?>
+					<# } else { #>
+					<?php tcb_icon( 'paintbrush-solid' ); ?>
+					<# } #>
+				</div>
+				<div class="sp-action-label">
+					<#= edit_label #>
+				</div>
+			</div>
+			<# } #>
+
+			<div class="sp-color-action-container click" data-fn="unlink_global">
+
+				<div class="sp-action-icon">
+					<?php tcb_icon( 'unlink-regular' ); ?>
+				</div>
+				<div class="sp-action-label">
+					<#= unlink_label #>
+				</div>
+			</div>
+		</div>
+	</div>

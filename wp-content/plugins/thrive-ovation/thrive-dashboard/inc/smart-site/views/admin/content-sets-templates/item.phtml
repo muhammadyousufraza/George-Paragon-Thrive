@@ -1,0 +1,16 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div data-id="<#= model.get('ID') #>">
+	<#= model.get('post_title') #>
+	<button class="tvd-content-set-edit click" data-fn="edit"><?php echo dashboard_icon( 'edit' ) ?></button>
+	<button class="tvd-content-set-delete click" data-fn="delete"><?php echo dashboard_icon( 'delete' ) ?></button>
+</div>

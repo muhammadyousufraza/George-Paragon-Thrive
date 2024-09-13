@@ -1,0 +1,3 @@
+<input title="<#=this.get_config( 'name' )#>" maxlength="<#=this.get_config( 'maxlength', '' ) #>" class="tve-input with-hint change input <#= this.input_class() #>"
+		value="<#= this.get_config( 'default' ) #>" data-fn-change="validate_and_change" data-fn-input="input" type="text">
+<span class="hint text-11"><#=this.get_config( 'name', '' ).charAt(0)#></span>

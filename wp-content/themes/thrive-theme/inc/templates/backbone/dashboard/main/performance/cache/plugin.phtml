@@ -1,0 +1,34 @@
+<div class="ttd-d-flex ttd-align-center ttd-perf-logo">
+	<img alt="<#= this.model.get('slug') #>" height="50" src="<?php echo THEME_URL . "/inc/assets/images/performance/<#= this.model.get('tag') #>.png" ?>">
+	<# if ( this.model.get('premium') ) { #>
+	<span class="badge-recommend ml-20"><?php esc_html_e( 'Premium', 'thrive-theme' ); ?></span>
+	<# } #>
+</div>
+
+<div class="ttd-plugin-btn-container"></div>
+<div class="ttd-settings-notice ttd-text-center confirm-settings" style="display:none;">
+	<div class="confirmation">
+		<h2 class="mt-25 mb-25"><?php echo __( 'Are you Sure you want to Overwrite your Existing Cache Settings?', 'thrive-theme' ); ?></h2>
+
+		<p class="mt-0 mb-30 ttd-normal"><?php printf( __( "If you continue, Thrive will automatically configure the caching plugin with the recommended settings. %sThis means that some of your existing settings may be lost" ), '<br>', 'thrive-theme' ); ?>.</p>
+		<# if ( this.model.get('tag') === 'sg-optimizer') { #>
+		<p class="mt-0 mb-30 ttd-normal"><?php echo __( "Some features like the Built-in Image Optimization or Dynamic & Object Caching only work on sites hosted on SiteGround", 'thrive-theme' ); ?>.</p>
+		<# } #>
+		<button class="ttd-btn blue empty click btn-w-250 mr-30" data-fn="cancelUpdateSettings"><?php echo __( 'No, cancel', 'thrive-theme' ); ?></button>
+		<button class="ttd-btn blue fill btn-w-250 click" data-fn="updateSettings"><?php echo __( 'Yes, configure the cache ', 'thrive-theme' ); ?></button>
+	</div>
+	<div class="success" style="display:none;">
+		<h2 class="mt-25 mb-25 success-blue"><?php echo __( 'Success', 'thrive-theme' ); ?></h2>
+		<p class="m-0 ttd-normal"><?php echo __( 'Settings were successfully installed', 'thrive-theme' ); ?></p>
+	</div>
+</div>
+<div class="ttd-settings-notice ttd-text-center confirm-activate" style="display:none;">
+	<div class="confirmation">
+		<h2 class="mt-25 mb-25"><?php echo __( 'Are you Sure you want to Activate', 'thrive-theme' ); ?>&nbsp;<#= this.model.get( 'name' ) #>?</h2>
+
+		<p class="mt-0 mb-30 ttd-normal"><?php printf( __( "It's not recommended to have multiple caching plugins activated at the same time so we will automatically %sdeactivate" ), '<br>', 'thrive-theme' ); ?> <span class="ttd-active-plugin-name"></span> <?php echo __( 'to ensure best performance' ) ?>.</p>
+
+		<button class="ttd-btn blue empty click btn-w-250 mr-30" data-fn="cancelActivate"><?php echo __( 'No, cancel', 'thrive-theme' ); ?></button>
+		<button class="ttd-btn blue fill btn-w-250 click" data-fn="confirmActivate"><?php echo __( 'Yes, activate ', 'thrive-theme' ); ?><#= this.model.get( 'name' ) #></button>
+	</div>
+</div>

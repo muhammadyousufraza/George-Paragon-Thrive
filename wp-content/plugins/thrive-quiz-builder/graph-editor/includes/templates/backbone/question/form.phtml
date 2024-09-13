@@ -1,0 +1,45 @@
+<div class="tge-question tvd-white clearfix">
+
+	<div id="tge-qf-image-loader" class="tvd-center-align"></div>
+
+	<div class="tge-question-prop">
+		<div class="clearfix">
+			<div class="clearfix">
+				<div class="tvd-input-field">
+					<input id="tge-question-text" data-bind="text" type="text" class="tvd-validate" value="<#= _.escape(item.get('text')) #>">
+					<label for="tge-question-text" class=""><?php echo __( 'Question text', 'thrive-graph-editor' ) ?></label>
+				</div>
+			</div>
+		</div>
+		<div class="tvd-no-margin tge-question-description-holder">
+			<div class="clearfix tge-question-description-field">
+				<div class="tvd-input-field">
+					<input type="text" data-bind="description" id="tge-question-description" value="<#= _.escape(item.get('description')) #>">
+					<label for="tge-question-description"><?php echo __( 'Add Description', 'thrive-graph-editor' ) ?></label>
+				</div>
+			</div>
+			<div class="clearfix tge-swither-holder">
+				<div class="tvd-no-margin tge-gray-layer">
+					<# if ( TGE_Editor.quiz.quiz_type === 'personality' && !this.model.isOpenEndedType() ) { #>
+					<div class="clearfix">
+						<div id="tge-points-switcher"></div>
+					</div>
+					<# } #>
+					<div class="clearfix">
+						<div id="tge-tags-switcher"></div>
+					</div>
+					<div class="clearfix">
+						<div id="tge-feedback-switcher"></div>
+					</div>
+					<div class="clearfix tqb-max-allowed-answers-wrapper"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="tge-question-settings"></div>
+
+<div id="tge-answers-wrapper"></div>
+
+<a id="tge-qf-add-answer" class="tvd-btn tvd-full-btn tge-purple-text" href="javascript:void(0)"><?php echo __( 'New Answer', 'thrive-graph-editor' ) ?></a>

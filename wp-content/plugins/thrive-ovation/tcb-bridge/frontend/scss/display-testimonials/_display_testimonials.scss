@@ -1,0 +1,70 @@
+.thrive-display-testimonials {
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0 !important;
+
+  &.masonry {
+    position: relative;
+
+    article {
+      flex-basis: unset;
+      position: absolute;
+
+      .tve_editor_page & {
+        /* this fixes a masonry issue that involves the items animating twice when repositioning */
+        transition: none;
+      }
+    }
+  }
+
+  article {
+    box-sizing: border-box;
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+
+    &.thrv_wrapper {
+      margin-bottom: 0;
+      margin-top: 0;
+      padding: 0;
+    }
+  }
+
+  &.empty-list {
+    min-height: 40px;
+
+    > * {
+      display: none !important;
+    }
+
+    &:not(.tve-loading) {
+      &:after {
+        content: attr(data-no_posts_text) !important;
+        display: block;
+        height: 100%;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.thrive-testimonial-title {
+  &.thrv_wrapper {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+}
+
+.thrive-testimonial-content {
+  overflow-wrap: break-word;
+
+  &.thrv_wrapper {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+}

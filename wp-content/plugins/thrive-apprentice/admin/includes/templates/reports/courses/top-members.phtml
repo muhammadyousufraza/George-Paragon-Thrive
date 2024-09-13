@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+use TVA\Reporting\Main;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="apprentice-dashboard-container">
+	<div class="apprentice-top-section">
+		<div>
+			<h2 class="mt-0">
+				<?php echo esc_html__( 'Top members', 'thrive-apprentice' ); ?>
+			</h2>
+
+			<div class="apprentice-dashboard-wrapper no-focus">
+				<?php Main::render_report( 'tve_reporting_filter', 'courses_filter' ); ?>
+				<?php Main::render_report( 'tve_reporting_filter', 'date_filter' ); ?>
+			</div>
+		</div>
+	</div>
+
+	<div class="apprentice-info mb-20">
+		<span class="tva-info-icon text-blue">
+			<?php tva_get_svg_icon( 'info-circle_light' ); ?>
+		</span>
+		<span class="apprentice-info-text">
+			<?php echo esc_html__( 'Top members are those who have completed the most lessons across all of your courses. If you want to change the sort order, click the column headings in the table below.', 'thrive-apprentice' ); ?>
+		</span>
+	</div>
+
+	<div class="apprentice-dashboard-wrapper">
+		<div class="col-8-8">
+			<?php Main::render_report( 'tve_reporting_table', 'top_members', 'info', [
+				'report-title'              => __( 'Details', 'thrive-apprentice' ),
+				'report-global-filters'     => 'date,course_id',
+				'report-expanded-view'      => '',
+				'has-pagination'            => 1,
+				'report-items-per-page'     => 10,
+				'report-order-by'           => 'completed_lessons',
+				'report-order-by-direction' => 'desc',
+				'report-has-export'         => 1,
+				'export-title'              => esc_html__( 'Top members', 'thrive-apprentice' ),
+			] ); ?>
+		</div>
+	</div>
+</div>

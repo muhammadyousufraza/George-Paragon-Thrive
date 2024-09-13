@@ -1,0 +1,83 @@
+$column-basis: 250px;
+.tcb-flex-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0;
+  padding-bottom: 15px;
+  padding-top: 15px;
+
+  &.tve-flex-start {
+    align-items: flex-start;
+  }
+
+  &.tve-flex-center {
+    align-items: center;
+  }
+
+  &.tve-flex-end {
+    align-items: flex-end;
+  }
+}
+
+.tcb-flex-col {
+  flex: 1 1 auto;
+  padding-top: 0;
+
+  .tcb-flex-row & {
+    box-sizing: border-box;
+  }
+}
+
+/* new columns - support backgrounds */
+.tcb-col {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .tcb-flex-row & {
+    box-sizing: border-box;
+  }
+}
+
+/* IE11 hack - columns look all messed up in IE11 in some cases */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .tcb-flex-col {
+    width: 100%;
+  }
+  .tcb-col {
+    display: block;
+  }
+}
+
+/* more specificity */
+:not(#s):not(#s) .tcb-flex-row {
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .tcb-flex-col {
+    width: 100%;
+    max-width: 100%;
+
+    justify-content: center;
+    flex-basis: auto;
+
+    /* center everything inside the columns */
+    .tcb-col > * {
+      margin-right: auto;
+      margin-left: auto;
+
+      &:not(.tcb-post-author-picture) {
+        min-width: 300px;
+      }
+    }
+  }
+}
+
+:not(#s) .thrv-columns .tcb-col.thrive-dynamic-source {
+  background-size: contain;
+}

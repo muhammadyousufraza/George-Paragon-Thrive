@@ -1,0 +1,10 @@
+<div class="control-grid wrap left-align">
+	<div class="mb-10">
+		<span class="mr-5"><#= this.model.config.label #></span>
+		<# if ( this.get_config('info') ) { #>
+		<span class="click tve-switch-info" data-fn="openTooltip"><?php tcb_icon( 'info-circle-solid' ); ?></span>
+		<# } #>
+	</div>
+	<textarea cols="<#= this.get_config('cols', 40) #>" rows="<#= this.get_config('rows', 5) #>"
+			placeholder="<#= this.get_config('placeholder') #>" class="tcb-scroll fill tve-input-control <#= this.get_config('keyup_listener')? 'keyup': '' #> change" data-fn-keyup="keyup" data-fn="changed" <#= this.get_config('extra_attrs', '') #>/>
+</div>

@@ -1,0 +1,144 @@
+<# var accent_color = collection.get('tcm_color_picker_value').get('value') || '#03a9f4'; #>
+<div class="tvd-modal-content">
+	<div class="tcm-modal-header">
+		<h2>
+			<?php echo __( 'Customize Notification for New Comments on Thread', Thrive_Comments_Constants::T ); ?>
+		</h2>
+	</div>
+
+	<div class="tcm-modal-body">
+		<div class="notification-left">
+			<div class="container-nl">
+				<h4>Email Subject</h4>
+				<div class="tcm-label-to-input tcmlti-one">
+					<p class="tcm-customize-label"><#= labels.post_email_subject.text#></p>
+					<textarea type="text" class="tcm_label tcm-input-label" name='tcm_label' placeholder="<#= labels.post_email_subject.default#>" data-key="post_email_subject" data-default="<#= labels.post_email_subject.default#>" hidden><#= labels.post_email_subject.text#></textarea>
+					<a class="button-link icon-pen tcm-icon-pencil tcm-customize-label" href="javascript:void(0)"> </a>
+				</div>
+			</div>
+
+			<div class="container-nl-two">
+				<h4>Email Content</h4>
+
+				<div>
+					<div class="tcm-label-to-input tcmlti-one">
+						<p class="title tcm-customize-label"><#= labels.post_content_title.text#></p>
+						<textarea type="text" class="tcm_label tcm-input-label" name='tcm_label' placeholder="<#= labels.post_content_title.default#>" data-key="post_content_title" data-default="<#= labels.post_content_title.default#>" hidden><#= labels.post_content_title.text#></textarea>
+						<a class="button-link icon-pen tcm-icon-pencil tcm-customize-label" href="javascript:void(0)"> </a>
+					</div>
+					<div class="tcm-label-to-input tcmlti-two">
+						<p class="tcm-customize-label"><#= labels.post_comment_posted.text#></p>
+						<textarea type="text" class="tcm_label tcm-input-label" name='tcm_label' placeholder="<#= labels.post_comment_posted.default#>" data-key="post_comment_posted" data-default="<#= labels.post_comment_posted.default#>" hidden><#= labels.post_comment_posted.text#></textarea>
+						<a class="button-link icon-pen tcm-icon-pencil tcm-customize-label" href="javascript:void(0)"> </a>
+					</div>
+
+					<div class="hardcoded-comment">
+						<div class="tcm-comment-author-img" style="background-image: url(<?php echo get_site_url(); ?>/wp-content/plugins/thrive-comments/assets/images/avatar_03.png)"></div>
+						<div class="comm-content">
+							<h4>Evan R</h4>
+							<span>07-06-2017</span>
+							<p>Thrive themes just keep getting better. Excellent new feature guys, keep up the good work!</p>
+							<div class="tcm-label-to-input tcmlti-three" style="background-color:<#= accent_color #>">
+
+								<p class="tcm-customize-label"><#= labels.post_reply_to.text#></p>
+								<textarea id="unsubscribe-textarea" type="text" class="tcm_label tcm-input-label" name='tcm_label' placeholder="<#= labels.post_reply_to.default#>" data-key="post_reply_to" data-default="<#= labels.post_reply_to.default#>" hidden><#= labels.post_reply_to.text#></textarea>
+
+								<a class="button-link icon-pen tcm-icon-pencil tcm-customize-label" href="javascript:void(0)"> </a>
+
+								<a class="error-icon button-error-icon tooltipelem" href="javascript:void(0)" hidden>
+									<span class="tooltiptext"><?php echo __( 'Field cannot be empty.', Thrive_Comments_Constants::T ); ?></span>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="tcm-label-to-input tcmlti-five">
+						<p class="special-p tcm-customize-label"><#= labels.post_signed_up.text#></p>
+						<textarea type="text" class="tcm_label tcm-input-label" name='tcm_label' placeholder="<#= labels.post_signed_up.default#>" data-key="post_signed_up" data-default="<#= labels.post_signed_up.default#>" hidden><#= labels.post_signed_up.text#></textarea>
+						<a class="button-link icon-pen tcm-icon-pencil tcm-customize-label" href="javascript:void(0)"> </a>
+					</div>
+
+					<div class="tcm-label-to-input special-input tcmlti-six">
+						<p class="special-p w-border tcm-customize-label"><#= labels.post_unsubscribe.text#></p>
+						<textarea id="unsubscribe-textarea" type="text" class="tcm_label tcm-input-label" name='tcm_label' placeholder="<#= labels.post_unsubscribe.default#>" data-key="post_unsubscribe" data-default="<#= labels.post_unsubscribe.default#>" hidden><#= labels.post_unsubscribe.text#></textarea>
+						<a class="button-link icon-pen tcm-icon-pencil tcm-customize-label" href="javascript:void(0)"></a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="notification-shortcodes">
+			<h4 style="margin-bottom: 8px;">Notification shortcodes:</h4>
+
+			<div class="tcm-copy-container tcm-copy-input-content">
+				<span class="tooltipelem tcm-icon-information">
+					<span class="tooltiptext">The title of the post or page that the comment was made on</span>
+				</span>
+
+				<p>{source_page}</p>
+				<div class="tcm-copy-input-content">
+					<a class="tcm-click-to-copy" href="javascript:void(0)" data-clipboard-text="{source_page}"><?php echo __( 'Copy', Thrive_Comments_Constants::T ); ?></a>
+				</div>
+			</div>
+
+			<div class="tcm-copy-container tcm-copy-input-content">
+				<span class="tooltipelem tcm-icon-information">
+					<span class="tooltiptext">The site's title, taken from the WordPress settings</span>
+				</span>
+
+				<p>{site_title}</p>
+				<div class="tcm-copy-input-content">
+					<a class="tcm-click-to-copy" href="javascript:void(0)" data-clipboard-text="{site_title}"><?php echo __( 'Copy', Thrive_Comments_Constants::T ); ?></a>
+				</div>
+			</div>
+
+			<div class="tcm-copy-container tcm-copy-input-content">
+				<span class="tooltipelem tcm-icon-information">
+					<span class="tooltiptext">The name of the person who wrote the main comment in the email</span>
+				</span>
+
+				<p>{source_commenter_name}</p>
+				<div class="tcm-copy-input-content">
+					<a href="javascript:void(0)" class="tcm-click-to-copy" data-clipboard-text="{source_commenter_name}"><?php echo __( 'Copy', Thrive_Comments_Constants::T ); ?></a>
+				</div>
+			</div>
+
+			<div class="tcm-copy-container tcm-copy-input-content">
+				<span class="tooltipelem tcm-icon-information">
+					<span class="tooltiptext">The text that the user sets up in the field below</span>
+				</span>
+
+				<p>{unsubscribe_link}</p>
+				<div class="tcm-copy-input-content">
+					<input class="tcm-hide tcm-copy" value="{unsubscribe_link}"/>
+					<a class="tcm-click-to-copy" href="javascript:void(0)" data-clipboard-text="{unsubscribe_link}"><?php echo __( 'Copy', Thrive_Comments_Constants::T ); ?></a>
+				</div>
+			</div>
+
+			<h4><?php echo __( 'Unsubscribe link text:', Thrive_Comments_Constants::T ); ?></h4>
+			<div class="tcm-label-to-input special-input">
+				<p class="tcm-single-p"><#= labels.post_unsubscribe_text.text#></p>
+				<textarea id="unsubscribe_text" type="text" class="tcm_label tcm-input-label" name='tcm_label' placeholder="<#= labels.post_unsubscribe_text.default#>" data-key="post_unsubscribe_text" data-default="<#= labels.post_unsubscribe_text.default#>" hidden><#= labels.post_unsubscribe_text.text#></textarea>
+				<a class="button-link icon-pen tcm-icon-pencil tcm-customize-label" href="javascript:void(0)"></a>
+
+				<a class="error-icon unsubscribe-error-icon tooltipelem" href="javascript:void(0)" hidden>
+					<span class="tooltiptext"><?php echo __( 'Field cannot be empty and cannot have shortcodes in it.', Thrive_Comments_Constants::T ); ?></span>
+				</a>
+			</div>
+
+			<div class="revert_notification_labels">
+				<a href="javascript:void(0)" class="tvd-btn-flat tvd-btn-flat-primary tvd-btn-flat-dark tvd-waves-effect"><?php echo __( 'Click here to revert', Thrive_Comments_Constants::T ); ?></a>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="tcm-btm">
+		<a href="javascript:void(0)" class="tvd-btn-flat tvd-btn-flat-secondary tvd-btn-flat-dark tvd-modal-close tvd-waves-effect tcm-back-btn tcm-discard-changes"><?php echo __( 'Back', Thrive_Comments_Constants::T ) ?></a>
+		<a href="javascript:void(0)" class="tvd-waves-effect tvd-waves-light tvd-btn tvd-modal-close tvd-right tvd-modal-submit tcm-save-labels"><?php echo __( 'Save', Thrive_Comments_Constants::T ) ?></a>
+	</div>
+
+</div>

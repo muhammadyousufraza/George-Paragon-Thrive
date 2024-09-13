@@ -1,0 +1,62 @@
+<div class="modal-sidebar">
+	<div class="ttd-modal-sidebar-icon" data-icon="singular">
+		<?php Thrive_Views::svg_icon( 'templates-default' ); ?>
+		<p><?php echo __( 'The custom templates you create here can be used on different types of posts, as well as various pages, or list pages.', 'thrive-theme' ); ?></p>
+	</div>
+</div>
+<div class="modal-options">
+
+	<div class="modal-user-actions">
+		<h3>
+			<?php echo __( 'Your Template Name', 'thrive-theme' ); ?>
+		</h3>
+
+		<label class="default-text" for="template-name"><?php echo __( 'New Template Name', 'thrive-theme' ); ?></label>
+		<input type="text" id="template-name" placeholder="<?php echo __( 'My New Template', 'thrive-theme' ); ?>" class="keyup" data-fn="keyup">
+		<div class="ttd-error-message" style="display: none;">
+			<?php echo __( 'Please specify the name of your template.', 'thrive-theme' ) ?>
+		</div>
+
+		<div class="ttd-modal-sol">
+			<span class="ttd-sol-label"><?php echo __( 'Single or List ?', 'thrive-theme' ) ?></span>
+			<div class="click active" data-fn="singleOrList" data-primary="single">
+				<div class="ttd-sol-check">
+					<?php Thrive_Views::svg_icon( 'check_light' ); ?>
+				</div>
+				<?php Thrive_Views::svg_icon( 'single-icon' ); ?>
+				<span><?php echo __( 'Single', 'thrive-theme' ) ?></span>
+			</div>
+			<div class="click" data-fn="singleOrList" data-primary="list">
+				<div class="ttd-sol-check">
+					<?php Thrive_Views::svg_icon( 'check_light' ); ?>
+				</div>
+				<?php Thrive_Views::svg_icon( 'group-icon' ); ?>
+				<span><?php echo __( 'List', 'thrive-theme' ) ?></span>
+			</div>
+		</div>
+
+		<div class="select-list-container" style="display: none">
+			<div class="mt-20 ttd-template-primary ttd-drop-down"></div>
+			<div class="mt-20 ttd-template-secondary ttd-drop-down"></div>
+			<div class="mt-20 ttd-template-variable ttd-drop-down" style="display: none">
+                <span class="top-label"><?php esc_html_e( 'Defined for:', 'thrive-theme' ); ?></span>
+                <select id="ttd-variable-template"></select>
+            </div>
+		</div>
+
+		<div class="select-single-container">
+			<div class="mt-20 ttd-template-content-type ttd-drop-down"></div>
+			<div class="mt-20 ttd-template-post-format ttd-drop-down"></div>
+		</div>
+	</div>
+
+	<div class="modal-buttons tve-d-flex justify-flex-between">
+		<button class="click normal-button" data-fn="save"><?php echo __( 'Start from Scratch', 'thrive-theme' ); ?></button>
+		<span class="button-divider">
+			<span>
+				<?php echo __( 'or', 'thrive-theme' ); ?>
+			</span>
+		</span>
+		<button class="click normal-button" data-fn="openCloudTemplatesModal"><?php echo __( 'Choose Template', 'thrive-theme' ); ?></button>
+	</div>
+</div>

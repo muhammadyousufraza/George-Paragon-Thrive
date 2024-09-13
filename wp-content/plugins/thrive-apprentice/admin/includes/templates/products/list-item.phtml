@@ -1,0 +1,55 @@
+<div class="tva-tooltip-dot tva-tooltip-parent">
+	<div class="tva-custom-tooltip tva-tooltip-inherited tva-tooltip-left">
+		<p><?php esc_html_e( "Some of this content is also protected by another product.", 'thrive-apprentice' ); ?></p>
+		<p><?php esc_html_e( "Restriction behavior is applied from the higher priority product.", 'thrive-apprentice' ); ?></p>
+		<p><strong><?php esc_html_e( "Drag products up in the list for higher priority.", 'thrive-apprentice' ); ?></strong></p>
+		<div class="tva-tooltip-dot-a tva-flex tva-align-center">
+			<?php tva_get_svg_icon( 'info_solid' ); ?>
+			<a href="https://help.thrivethemes.com/en/articles/5727623-what-happens-when-the-same-content-inside-a-product-is-protected-by-multiple-restriction-rules" rel="noopener" target="_blank">
+				<strong>
+					<?php esc_html_e( "Learn more", 'thrive-apprentice' ); ?>
+				</strong>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="tva-product-item">
+	<div class="tva-drag-handle">
+		<?php tva_get_svg_icon( 'dnd' ); ?>
+	</div>
+	<div class="tva-product-tooltip tva-tooltip-parent">
+		<div class="tva-custom-tooltip tva-tooltip-products"><?php echo esc_attr( __( 'Drag and drop is disabled while search is active.', 'thrive-apprentice' ) ); ?></div>
+	</div>
+
+	<?php tva_get_svg_icon( 'box-alt_light' ); ?>
+
+	<div class="tva-clickable click" data-fn="editProduct" data-id="<#= model.get('id') #>">
+		<div class="tva-product-main">
+			<div class="tva-product-name"><#= model.get('name') #></div>
+			<div class="tva-product-info">Product more info</div>
+		</div>
+
+		<# if(parseInt(model.get('customers_count')) !== 0){ #>
+		<div class="tva-product-no">
+		<span class="tva-customers-count">
+			<#= model.get('customers_count') #>
+		</span>
+			<# if(parseInt(model.get('customers_count')) === 1){ #>
+			<?php echo esc_html__( 'member', 'thrive-apprentice' ); ?>
+			<# }else{ #>
+			<?php echo esc_html__( 'members', 'thrive-apprentice' ); ?>
+			<# } #>
+		</div>
+		<# } #>
+	</div>
+	<div class="tva-product-actions">
+		<button class="tva-product-edit click" data-fn="editProduct" data-id="<#= model.get('id') #>"><?php tva_get_svg_icon( 'pen_light' ); ?></button>
+		<button class="tva-product-delete click" data-fn="deleteProduct" data-id="<#= model.get('id') #>"><?php tva_get_svg_icon( 'trash-1' ); ?></button>
+	</div>
+	<div class="tva-product-item-badge">
+		<# if(model.hasAccessExpiryEnabled()){ #>
+		<?php echo esc_html__( 'Access Expiry', 'thrive-apprentice' ); ?>
+		<# } #>
+	</div>
+</div>

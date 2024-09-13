@@ -1,0 +1,14 @@
+<div class="panel-text">
+	<#= this.model.config.label #>
+</div>
+<div class="<#=this.box_class()#>">
+	<<#=this.container_el()#> class="<#=this.container_class()#>">
+	<# if (this.hasTabSwitch() ) { #>
+	<div class="style-picker-button-group"></div>
+	<# } #>
+	<div class="tcb-element-templates global-style-preview control-grid wrap no-space <#=this.hasTabSwitch() ? 'with-tabs' : ''#>"></div>
+	<# _.each(this.model.config.items, function(label, key) { #>
+	<#= this.render_item( key, label ) #>
+	<# }, this); #>
+</<#=this.container_el()#>>
+</div>

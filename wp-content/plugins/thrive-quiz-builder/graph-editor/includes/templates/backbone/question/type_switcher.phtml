@@ -1,0 +1,11 @@
+<# var display_settings = this.model.get( 'display_settings' ) #>
+<# var selected = display_settings.get( 'display_type' ) #>
+<div id="tge-question-type-selector" class="tge-question-type-selector tge-vicon-<#= display_settings.get( 'type' ) #>"><#= this.model.get( 'display_type_labels' )[selected] #></div>
+<div id="tge-question-display-type" class="tge-question-display-type tvd-hiddendiv">
+	<div class="tge-velem-text tge-dropdown-type-item <#= 0 === parseInt( selected ) ? 'tge-selected-type' : ''#>" data-id="0">
+		<span><?php echo __( 'Text Question', 'thrive-graph-editor' ) ?></span></div>
+	<div class="tge-velem-video tge-dropdown-type-item <#= 1 === parseInt( selected ) ? 'tge-selected-type' : ''#>" data-id="1">
+		<span><?php echo __( 'Video Question', 'thrive-graph-editor' ) ?></span></div>
+		<div class="tge-velem-audio tge-dropdown-type-item <#= 2 === parseInt( selected ) ? 'tge-selected-type' : ''#>" data-id="2">
+			<span><?php echo __( 'Audio Question', 'thrive-graph-editor' ) ?></span></div>
+</div>

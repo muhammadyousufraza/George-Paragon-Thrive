@@ -1,0 +1,32 @@
+<div class="tqb-redirect-status-<#= item.get('status') #>">
+	<div class="tqb-container-parent">
+		<div class="tqb-container-med">
+			<span class="tvd-tooltipped tqb-redirect-status-icon" data-tooltip="<?php echo __( 'The range for this redirect has been overwritten by another redirect. Set a new range or delete this redirect.', 'thrive-quiz-builder' ) ?>" data-position="right">
+				<?php tqb_get_svg_icon( 'exclamation-triangle-solid' ); ?>
+			</span>
+			<input class="tqb-lower-bound" type="number" value="<#= item.get('lower_bound') #>" min="<#= this.settings.minimum_result #>" max="<#= this.settings.maximum_result #>">
+		</div>
+		<div class="tqb-container-small">
+			<input class="tqb-upper-bound" type="number" value="<#= item.get('upper_bound') #>" min="<#= this.settings.minimum_result #>" max="<#= this.settings.maximum_result #>">
+		</div>
+		<div class="tqb-container-big">
+			<select>
+				<option value="local"><?php echo __( 'Redirect to content on site', 'thrive-quiz-builder' ) ?></option>
+				<option value="external"><?php echo __( 'Redirect to external URL', 'thrive-quiz-builder' ) ?></option>
+			</select>
+		</div>
+	</div>
+
+	<div class="tqb-container-parent-sec">
+		<div class="">
+			<a class="tqb-redirect-link-target" href="<#= item.get('link') #>" target="_blank">
+				<#= item.get('type') === 'local' ? item.get('post_title') : encodeURI( item.get('link') ) #>
+			</a>
+			<a class="tqb-edit-redirect-link tvd-icon-pencil" href="javascript:void(0)">&nbsp;</a>
+			<input type="text" class="tqb-link-target" style="display: none">
+		</div>
+		<div class="">
+			<a class="tqb-delete-link" href="javascript:void(0)"><?php echo __( 'Delete', 'thrive-quiz-builder' ); ?></a>
+		</div>
+	</div>
+</div>

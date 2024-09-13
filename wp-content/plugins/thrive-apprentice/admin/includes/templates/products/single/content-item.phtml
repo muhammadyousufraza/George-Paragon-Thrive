@@ -1,0 +1,27 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-product tva-flex tva-space-between">
+	<div class="tva-product-name">
+		<#= model.get('post_title') #>
+	</div>
+	<div>
+		<span class="click tva-product-remove tva-tooltip-parent" data-fn="removeContentSet">
+
+			<span class="tva-custom-tooltip">
+				<?php esc_attr_e( 'Remove from this product', 'thrive-apprentice' ); ?>
+			</span>
+
+			<?php tva_get_svg_icon( 'times_light' ); ?>
+			<?php echo esc_html__( 'Remove', 'thrive-apprentice' ); ?>
+		</span>
+	</div>
+</div>

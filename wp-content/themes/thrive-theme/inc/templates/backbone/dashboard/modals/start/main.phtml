@@ -1,0 +1,64 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-visual-editor
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+
+/**
+ * Help cards content
+ */
+$items = array(
+	array(
+		'title'       => __( 'Knowledge Base', 'thrive-theme' ),
+		'picture'     => THEME_URL . '/inc/assets/images/start/knowledge-base.svg',
+		'picture-alt' => 'Knowledge Base Item Picture',
+		'text'        => __( 'Search our extensive knowledge base for “how-to” articles and instructions.', 'thrive-theme' ),
+		'class'       => 'knowledge-base',
+
+	),
+	array(
+		'title'       => __( 'Thrive University', 'thrive-theme' ),
+		'picture'     => THEME_URL . '/inc/assets/images/start/thrive-university.svg',
+		'picture-alt' => 'Thrive University Item Picture',
+		'text'        => __( 'Take one of our online courses on website building and online marketing.', 'thrive-theme' ),
+		'class'       => 'thrive-university',
+	),
+	array(
+		'title'       => __( 'Get Support', 'thrive-theme' ),
+		'picture'     => THEME_URL . '/inc/assets/images/start/support.svg',
+		'picture-alt' => 'Support Item Picture',
+		'text'        => __( 'Contact our friendly support team who will help you with any issues or questions.', 'thrive-theme' ),
+		'class'       => 'support',
+	),
+);
+?>
+<div class="modal-help-corner">
+	<h2><?php echo __( 'Help Corner', 'thrive-theme' ); ?></h2>
+	<div class="parent">
+		<?php foreach ( $items as $item ) : ?>
+			<div class="<?php echo $item['class']; ?> click item" data-fn="chooseLink">
+				<img src="<?php echo $item['picture']; ?>" alt="<?php echo $item['picture-alt']; ?>"/>
+				<div class="item-title">
+					<span><?php echo $item['title']; ?></span>
+				</div>
+				<div class="item-text">
+					<p><?php echo $item['text']; ?></p>
+				</div>
+				<?php if ( $item['title'] == 'Knowledge Base' ): ?>
+					<div class="kb-search">
+						<input type="text" class="kb-input-search keyup-enter" data-fn="searchKB" placeholder="Search knowledge base" autocomplete="off">
+						<span class="kb-input-search-icon click" data-fn="searchKB">
+							<?php Thrive_Views::svg_icon( 't-search-regular' ); ?>
+						</span>
+					</div>
+				<?php endif ?>
+			</div>
+		<?php endforeach; ?>
+	</div>
+
+</div>

@@ -1,0 +1,10 @@
+<div class="td-connect-screen-header">
+	<h1><span>Thrive</span> Update Manager</h1>
+	<?php $connection = TD_TTW_Connection::get_instance() ?>
+	<?php if ( $connection->is_connected() ) : ?>
+		<a class="td-disconnect-account" href="<?php echo $connection->get_disconnect_url() ?>">
+			<?php echo __( 'Disconnect Thrivethemes.com Account', 'thrive-dash' ) ?>
+			<span><?php echo $connection->get_email() ?></span>
+		</a>
+	<?php endif; ?>
+</div>

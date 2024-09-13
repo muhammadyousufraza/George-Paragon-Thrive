@@ -1,0 +1,19 @@
+<p class="tcb-condition-connector-label"><#= this.index ? 'and': 'When' #></p>
+<div class="tcb-condition-wrapper">
+	<div class="tcb-condition-entity tcb-condition-item"></div>
+	<div class="tcb-condition-field tcb-condition-item"></div>
+	<div class="tcb-condition-key tcb-condition-item"></div>
+	<div class="tcb-condition-compared-value tcb-condition-item"></div>
+	<div class="tcb-condition-comparator-extra-container hidden"></div>
+	<div class="tcb-condition-gray-overlay"></div>
+</div>
+
+<button class="tcb-condition-delete-rule click" data-fn="openRuleDeleteOverlay"><?php tcb_icon( 'trash-light' ); ?></button>
+
+<div class="tcb-condition-delete-rule-overlay hidden">
+	<span><?php echo esc_html__( 'Are you sure you want to delete this rule?', 'thrive-cb' ); ?></span>
+	<div class="tcb-delete-actions">
+		<button class="click" data-fn="closeDeleteOverlay"><?php echo esc_html__( 'No, Cancel', 'thrive-cb' ); ?></button>
+		<button class="click" data-fn="deleteRule"><?php echo esc_html__( 'Yes, Delete', 'thrive-cb' ); ?></button>
+	</div>
+</div>

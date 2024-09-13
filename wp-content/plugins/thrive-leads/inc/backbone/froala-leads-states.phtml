@@ -1,0 +1,39 @@
+<div class="tl-link-actions">
+	<div class="fr-input-line"><strong><?php echo __( 'Thrive Leads Actions', 'thrive-leads' ) ?></strong></div>
+	<# _.each( actions, function( data, key ) {#>
+	<div class="fr-checkbox-line">
+		<span class="fr-checkbox">
+			<input name="evt_action[]" data-key="<#=key#>" class="fr-extra-action" type="checkbox" id="tl-action-<#=key#>-<#=current_id#>" dir="auto">
+			<span>
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="10" viewBox="0 0 32 32"><path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"
+																																								  fill="#FFF"></path></svg>
+			</span>
+		</span>
+		<label for="tl-action-<#=key#>-<#=current_id#>">
+			<#= data.labels #>
+		</label>
+		<# if ( data.options ) { #>
+		<div class="tl-action-opts-<#=key#> tl-action-config fr-input-line" style="display: none">
+			<label class="fr-label"><?php echo __( 'State', 'thrive-leads' ) ?></label>
+			<select class="fr-select" name="s">
+				<# _.each( data.options, function ( state ) { #>
+				<option value="<#=state.id#>">
+					<#=state.title#>
+				</option>
+				<#} ); #>
+			</select>
+			<# if ( data.animations ) { #>
+			<label class="fr-label"><?php echo __( 'Animation', 'thrive-leads' ) ?></label>
+			<select class="fr-select" name="a">
+				<# _.each( data.animations, function ( name, key ) { #>
+				<option value="<#=key#>">
+					<#=name#>
+				</option>
+				<#} ); #>
+			</select>
+			<# } #>
+		</div>
+		<# } #>
+	</div>
+	<#}); #>
+</div>

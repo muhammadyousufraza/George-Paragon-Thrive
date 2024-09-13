@@ -1,0 +1,9 @@
+<div class="tcb-relative tcb-flex pt-20 <#=wrapper_class #>">
+	<span class="sp-transparent click variable-square-control" data-fn="dom_edit_css_variable" data-var="<#= css_variable #>" data-index="<#= index #>">
+		<span class="tcb-icon-inline variable-square-control" style="background-size:auto;background-image:<#= bg #>"></span>
+	</span>
+	<span class="click variable-name" data-fn="dom_edit_css_variable"><#= name #></span>
+	<# if(show_locate_control){ #>
+	<?php tcb_icon( 'crosshairs-solid', false, 'sidebar', 'click', array( 'data-fn' => 'locate_variable' ) ); ?>
+	<# } #>
+</div>

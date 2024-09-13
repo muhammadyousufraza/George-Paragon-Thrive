@@ -1,0 +1,44 @@
+<?php
+/* used also for "Remember me" functionality for the login form */
+$remember_me = isset( $data['remember_me'] ) ? $data['remember_me'] : false;
+?>
+<div class="tve_lg_input_container tve_lg_checkbox tve-new-checkbox tcb-lg-consent<?php echo $remember_me ? ' tcb-remember-me tcb-no-clone tcb-no-delete tcb-no-save' : ''; ?> tcb-excluded-from-group-item" data-columns="1">
+	<div class="tve-checkbox-grid">
+		<div class="tve_lg_checkbox_wrapper tcb-local-vars-root tve-updated-dom tcb-excluded-from-group-item" data-value="default">
+			<div class="thrive-colors-palette-config" style="display: none !important">__CONFIG_colors_palette__{"active_palette":0,"config":{"colors":{"30800":{"name":"Main Accent","parent":-1},"f2bba":{"name":"Main Light 10","parent":"30800"},"trewq":{"name":"Main Light 30","parent":"30800"},"frty6":{"name":"Main Light 45","parent":"30800"},"flktr":{"name":"Main Light 80","parent":"30800"}},"gradients":[]},"palettes":[{"name":"Default","value":{"colors":{"30800":{"val":"rgb(59, 136,
+				253)","hsl":{"h":216,"s":0.98,"l":0.61}},"f2bba":{"val":"rgba(59, 136, 253, 0.1)","hsl_parent_dependency":{"h":216,"s":0.98,"l":0.61,"a":0.1}},"trewq":{"val":"rgba(59, 136, 253, 0.3)","hsl_parent_dependency":{"h":216,"s":0.98,"l":0.61,"a":0.3}},"frty6":{"val":"rgba(59, 136, 253, 0.45)","hsl_parent_dependency":{"h":216,"s":0.98,"l":0.61,"a":0.45}},"flktr":{"val":"rgba(59, 136, 253,
+				0.8)","hsl_parent_dependency":{"h":216,"s":0.98,"l":0.61,"a":0.8}}},"gradients":[]},"original":{"colors":{"30800":{"val":"rgb(59, 136, 253)","hsl":{"h":216,"s":0.98,"l":0.61}},"f2bba":{"val":"rgba(59, 136, 253, 0.1)","hsl_parent_dependency":{"h":216,"s":0.98,"l":0.61,"a":0.1}},"trewq":{"val":"rgba(59, 136, 253, 0.3)","hsl_parent_dependency":{"h":216,"s":0.98,"l":0.61,"a":0.3}},"frty6":{"val":"rgba(59, 136, 253,
+				0.45)","hsl_parent_dependency":{"h":216,"s":0.98,"l":0.61,"a":0.45}},"flktr":{"val":"rgba(59, 136, 253, 0.8)","hsl_parent_dependency":{"h":216,"s":0.98,"l":0.61,"a":0.8}}},"gradients":[]}}]}__CONFIG_colors_palette__
+			</div>
+			<?php if ( $remember_me ) : ?>
+				<input type="checkbox" name="remember_me" id="tcb-remember-me" class="checkbox-update">
+			<?php else : ?>
+				<input id="user-consent" type="checkbox" name="user_consent" class="user_consent" value="GDPR ACCEPTED"/>
+			<?php endif; ?>
+			<label for="<?php echo $remember_me ? 'tcb-remember-me' : 'user-consent'; ?>">
+				<span class="tve-checkmark">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg>
+				</span>
+
+				<span class="tve-input-option-text tcb-plain-text tve-gdpr-text">
+					<?php if ( $remember_me ): ?>
+						<?php echo __( 'Remember me', 'thrive-cb' ); ?>
+					<?php else : ?>
+						<span>
+							<?php echo __( 'I consent to having my information processed in order to receive personalized marketing material via email or phone in accordance with the', 'thrive-cb' ); ?>
+						</span>
+						<span class="thrive-inline-shortcode" contenteditable="false">
+						<span class="thrive-shortcode-content" data-attr-id="6" data-extra_key="2" data-option-inline="1" data-shortcode="thrive_global_fields" data-shortcode-name="[Legal] Privacy policy">
+							<?php echo do_shortcode( "[thrive_global_fields id='6' inline='1']" ) ?>
+						</span>
+					</span>
+					<?php endif; ?>
+				</span>
+			</label>
+			<?php if ( ! $remember_me ) : ?>
+				<input type="hidden" name="consent_config" class="consent-config"/>
+			<?php endif; ?>
+		</div>
+	</div>
+</div>
+<?php unset( $remember_me ); ?>

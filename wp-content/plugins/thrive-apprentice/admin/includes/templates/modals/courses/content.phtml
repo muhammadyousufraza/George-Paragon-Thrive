@@ -1,0 +1,47 @@
+<div class="tvd-modal-step">
+	<div class="tvd-modal-content">
+		<h3 class="tvd-modal-title"><?php echo __( 'Add course content', 'thrive-apprentice' ) ?></h3>
+		<p><?php echo __( 'Choose whether to add a module, chapter or a lesson.', 'thrive-apprentice' ) ?></p>
+		<p><?php echo __( 'Lessons contain your course content. Modules and chapters are used to organize your lessons in a logical structure.', 'thrive-apprentice' ) ?></p>
+
+		<div class="tva-modal-buttons-sp">
+			<a href="javascript:void(0)" class="tvd-modal-next-step click" data-fn="decisionMaking" data-type="lesson">
+				<?php tva_get_svg_icon( 'plus_light' ); ?>
+				<?php echo __( 'Add Lesson', 'thrive-apprentice' ) ?></a>
+
+			<a href="javascript:void(0)" class="tvd-modal-next-step click" data-fn="decisionMaking" data-type="chapter">
+				<?php tva_get_svg_icon( 'plus_light' ); ?>
+				<?php echo __( 'Add Chapter', 'thrive-apprentice' ) ?></a>
+
+			<a href="javascript:void(0)" class="tvd-modal-next-step click" data-fn="decisionMaking" data-type="module">
+				<?php tva_get_svg_icon( 'plus_light' ); ?>
+				<?php echo __( 'Add Module', 'thrive-apprentice' ) ?></a>
+		</div>
+
+		<div class="tva-modal-footer-inner">
+			<button type="button" class="tva-modal-btn tvd-modal-close"><?php echo __( 'Cancel', 'thrive-apprentice' ) ?></button>
+		</div>
+	</div>
+</div>
+
+<div class="tvd-modal-step">
+	<div class="tvd-modal-content tva-no-after">
+		<h3 class="tvd-modal-title"><?php echo __( 'Add course content', 'thrive-apprentice' ) ?></h3>
+		<p id="tva-item-description"></p>
+		<select name="" id="tva-parent-target"></select>
+	</div>
+	<div class="tva-modal-footer-outer">
+		<button type="button" class="tva-modal-btn tvd-modal-prev-step"><?php echo esc_html__( 'Back', 'thrive-apprentice' ); ?></button>
+		<button type="button" class="tva-modal-btn tva-modal-btn-green click" data-fn="parentSet"><?php echo esc_html__( 'Continue', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>
+
+<div class="tvd-modal-step">
+	<div class="tvd-modal-content tva-no-after">
+		<p>render item form here</p>
+	</div>
+	<div class="tva-modal-footer-outer">
+		<button type="button" class="tva-modal-btn click" data-fn="backToStepZero"><?php echo esc_html__( 'Back', 'thrive-apprentice' ); ?></button>
+		<button type="button" class="tva-modal-btn tva-modal-btn-green click tvd-modal-save" data-fn="save"><?php echo esc_html__( 'Save', 'thrive-apprentice' ); ?></button>
+	</div>
+</div>

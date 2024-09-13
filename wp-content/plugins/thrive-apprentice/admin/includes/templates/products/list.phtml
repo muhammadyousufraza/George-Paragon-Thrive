@@ -1,0 +1,30 @@
+<div class="tva-hide-for-no-products">
+	<div class="tva-products-info">
+		<?php tva_get_svg_icon( 'drip-products-membership' ); ?>
+		<div>
+			<div class="tva-products-title"><?php echo __( 'Products & Membership', 'thrive-apprentice' ); ?></div>
+			<div class="tva-products-text"><?php echo __( 'Quickly build products out of your courses and website content. Control how your members get access to them.', 'thrive-apprentice' ); ?></div>
+		</div>
+	</div>
+	<div class="tva-flex tva-align-center mb-20">
+		<div id="tva-products-filters-wrapper"></div>
+		<div class="tva-line-sep ml-50 mr-25"></div>
+		<div>
+			<button class="tva-btn tva-btn-blue click" data-screen="list" data-fn="addNewProduct">
+				<?php tva_get_svg_icon( 'add-btn' ); ?>
+				<?php echo __( 'Add new', 'thrive-apprentice' ) ?>
+			</button>
+		</div>
+	</div>
+	<div class="tva-flex mt-5">
+		<div>
+			<span id="tva-products-counter"><?php echo __( 'Loading...', 'thrive-apprentice' ) ?></span>
+		</div>
+	</div>
+</div>
+<div class="tva-products-wrapper"></div>
+<div class="tva-loading-notice tva-flex tva-space-center">
+	<div>
+		<?php echo __( 'Loading more products', 'thrive-apprentice' ) ?>
+	</div>
+</div>

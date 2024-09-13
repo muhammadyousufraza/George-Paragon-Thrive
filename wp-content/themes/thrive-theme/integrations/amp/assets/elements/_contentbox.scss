@@ -1,0 +1,74 @@
+.thrv_wrapper {
+  .tve-content-box-background {
+    position: absolute;
+    width: 100%;
+    height: 100% !important; // used for Smooth Resize animation on Tabs
+    left: 0;
+    top: 0;
+    /*This is placed for SVG decoration not to produce the scroll bar "effect" when the height of the decoration is max
+    and the decoration should not exit the page-section-out div when the width is over 100%*/
+    overflow: hidden;
+  }
+
+  &.thrv-content-box {
+    box-sizing: border-box;
+    position: relative;
+    min-height: 10px;
+    // SUPP-5288 display error on Chrome on icon element
+    div:not(.thrv_icon) {
+      box-sizing: border-box;
+    }
+
+    /* Default padding for the default templates  */
+    &[data-style] {
+      padding: 30px;
+    }
+
+    &.cb_style_3 {
+      margin-bottom: 28px;
+    }
+
+    &.cb_style_9 {
+      margin-bottom: 33px;
+    }
+
+    &.cb_style_10 {
+      margin-bottom: 30px;
+    }
+
+    &.cb_style_12 {
+      margin-bottom: 40px;
+    }
+
+    &.cb_style_14 {
+      margin-top: 31px;
+      margin-bottom: 31px;
+    }
+
+    .cb_style_12-cb, .cb_style_11-cb, .cb_style_9-cb, .cb_style_8-cb, .cb_style_2-cb, .cb_style_1-cb {
+      & > .tcb-replaceable-placeholder {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.tve-cb {
+  display: inline-block;
+  vertical-align: middle;
+  clear: both;
+  overflow: visible;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  min-height: 10px;
+
+  .tve_cb_cnt {
+    padding: 20px;
+  }
+
+  .thrv-content-box.tve_symbol_inside & {
+    position: static;
+  }
+}
+

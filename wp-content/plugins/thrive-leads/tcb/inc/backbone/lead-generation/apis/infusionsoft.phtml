@@ -1,0 +1,15 @@
+<div class="api-field">
+	<div class="field-description">
+		<?php echo __( 'Choose your tag', 'thrive-cb' ); ?>:
+	</div>
+
+	<div class="control-grid">
+		<select class="api-list change" data-fn="setupChange" data-name="list">
+			<# _.each(api.get('lists'), function(item) { #>
+			<#= TVE.tpl( 'util/option', {value:item.id, selected: (api.getConfig('list')==item.id), text: item.name}) #>
+			<# } ) #>
+		</select>
+
+		<span class="click tve-refresh-api-list" data-fn="forceGet" data-tooltip="<?php echo __( 'Refresh', 'thrive-cb' ); ?>" data-side="top"> <?php tcb_icon( 'redo-regular' ) ?></span>
+	</div>
+</div>

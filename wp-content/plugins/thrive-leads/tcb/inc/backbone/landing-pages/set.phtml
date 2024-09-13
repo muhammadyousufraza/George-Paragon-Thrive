@@ -1,0 +1,55 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-visual-editor
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+
+<div class="lp-template-item modal-item lp-set-template-item <#= typeof locked !== 'undefined' ? 'locked': '' #> <#- extraClass #>" data-set="<#= set #>" data-type="<#= type #>">
+	<div class="lp-template-title mb-15">
+		<div class="lp-template-title-text">
+			<span class="lp-set-title"><#= label #></span>
+			<i></i>
+			<span class="lp-set-number"><#= templates.length #> <?php echo __( 'pages', 'thrive-cb' ); ?></span>
+		</div>
+		<div class="lp-template-icons">
+			<# if( locked ) { #>
+			<span class="lp-locked click mouseleave mouseover" data-fn="toggleTooltip" data-tooltip-type="full"><?php echo __( 'UPGRADE', 'thrive-cb' ); ?></span>
+			<# } #>
+			<?php
+			/**
+			 * Allows other plugins / themes to insert icons here
+			 */
+			do_action( 'tcb_extra_landing_page_lightbox_set_icons' );
+			?>
+			<# if( hasBlocks ) { #>
+			<?php tcb_icon( 'cubes-light', false, 'sidebar', 'click mouseleave mouseover', array(
+				'data-fn'           => 'toggleTooltip',
+				'data-tooltip-type' => 'block',
+			) ); ?>
+			<# } #>
+		</div>
+	</div>
+	<div class="lp-template-wrapper lp-set-template-wrapper click" data-fn="domViewSet" data-set="<#= set #>" data-type="<#= type #>">
+		<div class="lazy-loading">
+			<img class="tve-lazy-img" src="<?php echo tve_editor_css( 'images/loading-spinner.gif' ); ?>" data-src="<#= url #>"/>
+		</div>
+	</div>
+	<a class="tve-expand-set click" data-fn="domViewSet" data-set="<#= set #>" data-type="<#= type #>">
+		<?php tcb_icon( 'expand-arrows-alt-regular' ); ?>
+		<span>
+			<?php echo __( 'EXPAND', 'thrive-cb' ); ?>
+		</span>
+	</a>
+	<div class="lp-set-action-button lp-prev click" data-fn="prevSetTemplate">
+		<?php tcb_icon( 'chevron-left-solid' ); ?>
+	</div>
+	<div class="lp-set-action-button lp-next click" data-fn="nextSetTemplate">
+		<?php tcb_icon( 'chevron-right-solid' ); ?>
+	</div>
+</div>

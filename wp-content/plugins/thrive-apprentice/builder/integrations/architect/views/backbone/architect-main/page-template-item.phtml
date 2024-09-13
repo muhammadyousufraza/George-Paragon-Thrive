@@ -1,0 +1,23 @@
+<span class="thrive-page-template-icon <#= this.model.isDefault() ? 'default-template' : '' #>">
+	<# if(TVE.CONST.post_type === 'post' ) { #>
+		<#= TVE.icon( 'template-settings-'+this.model.get('format'), 'svg', '', this.model.get('extra_classes') ) #>
+	<# } else { #>
+	<#= TVE.icon( 'template-settings-page', 'svg', '', this.model.get('extra_classes') ) #>
+	<# } #>
+</span>
+<div class="thrive-page-template-cell">
+	<span class="thrive-page-template-title"><#= this.model.get('name') #></span>
+</div>
+<button class="thrive-page-template-activate click" data-fn="activateTemplate"  <#= this.model.get( 'selected' ) ? 'disabled' : '' #>>
+<span class="thrive-page-template-inactive-text">
+			<?php echo __( 'Activate', 'thrive-theme' ); ?>
+	</span>
+<span class="thrive-page-template-active-text">
+			<?php echo __( 'Active', 'thrive-theme' ); ?>
+	</span>
+</button>
+<# if ( this.model.isDefault() ) { #>
+<span class="tpt-default-text is-default">
+		<?php echo __( 'Default', 'thrive-theme' ); ?>
+</span>
+<# } #>

@@ -1,0 +1,36 @@
+<p>
+	<strong>
+		<?php
+		echo sprintf(
+			__( 'No license - there is a new version of %s available but no license could be found for it. %s', 'thrive-dash' ),
+			$name,
+			sprintf(
+				'<a class="%s" aria-label="%s" href="%s">' . __( 'View version %s details', 'thrive-dash' ) . '</a>.',
+				'thickbox open-plugin-details-modal',
+				$name,
+				$details_url,
+				$version
+			)
+		)
+		?>
+	</strong>
+	<a class="ttw-rnw" href="https://thrivethemes.com/themebuilder/" target="_blank" rel="noopener">
+		<?php echo __( 'Buy new license', 'thrive-dash' ) ?>
+	</a>
+	<?php if ( isset( $recheck_url ) ) : ?>
+		<a class="ttw-cla" href="<?php echo $recheck_url; ?>">
+			<?php echo __( 'Check license again', 'thrive-dash' ); ?>
+		</a>
+	<?php endif; ?>
+</p>
+<style>
+    .ttw-rnw {
+        color: #fff !important;
+        background-color: #1e5496;
+        text-decoration: none !important;
+        padding: 0 15px;
+        border-radius: 3px;
+        display: inline-block;
+        line-height: 28px;
+    }
+</style>

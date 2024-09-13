@@ -1,0 +1,13 @@
+<div class="layout-options-holder">
+    <div class="label"><#= this.model.config.label #></div>
+    <div class="radio-list pt-5">
+        <# _.each( this.model.config.options, function( option ) { #>
+        <label class="tcb-radio small">
+            <input name="<#= this.model.config.name #>" type="radio" class="change radio" data-fn="action_select"
+                   value="<#=option.value #>"<#= option.value == this.model.config.selected ? ' checked' : '' #>>
+            <span><#=option.name#></span>
+        </label>
+        <# }, this ); #>
+    </div>
+</div>
+

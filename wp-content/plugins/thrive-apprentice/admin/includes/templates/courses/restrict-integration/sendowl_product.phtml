@@ -1,0 +1,23 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-flex tva-warning-card tva-align-center">
+	<div class="tva-notice-icon"><?php tva_get_svg_icon( 'info-icon' ); ?></div>
+	<div class="tva-flex tva-flex-column pl-20">
+		<h3><?php echo __( 'Checkout Page Not Set', 'thrive-apprentice' ); ?></h3>
+		<p>
+			<?php
+			echo sprintf( __( "The checkout page hasn't been set. %s to set it.", 'thrive-apprentice' ), '<a href="#settings/sendowl/checkout">' . __( 'Click here', 'thrive-apprentice' ) . '</a>' );
+			?>
+			<?php echo __( 'Please make sure to save the current course settings in order not to lose the current progress.', 'thrive-apprentice' ) ?>
+		</p>
+	</div>
+</div>

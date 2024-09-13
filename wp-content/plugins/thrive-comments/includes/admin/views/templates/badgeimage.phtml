@@ -1,0 +1,9 @@
+<# var badge_image_url = badge_image.get('url'),
+badge_image_name = badge_image.get('name');#>
+<# if(badge_image_url.indexOf('all_badges') != -1){#>
+<svg class="icon tcm-badge-icon <# if(badge_image_name == badge.get('image')){#> selected <#}#>" data-name="<#= badge_image_name #>" data-url="<#= badge_image_url #>">
+	<use xlink:href="<#= badge_image_url #>"/>
+</svg>
+<# } else {#>
+<div style="background-image: url('<#= badge_image_url #> ')" class="tcm-badge-icon <# if(badge_image_name == badge.get('image')){#> selected <#}#>" data-name="<#= badge_image_name #>" data-url="<#= badge_image_url #>"></div>
+<# } #>

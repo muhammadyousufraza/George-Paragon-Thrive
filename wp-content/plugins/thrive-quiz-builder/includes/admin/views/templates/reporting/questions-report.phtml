@@ -1,0 +1,20 @@
+<div class="tqb-flow-report-title">
+	<div class="tvd-row tvd-collapse">
+		<div class="tvd-col tvd-s12">
+			<h3 class="tvd-title"><?php echo __( 'Questions Report', 'thrive-quiz-builder' ) ?></h3>
+
+			<# if( date ) { #>
+				<div class="tqb-flow-report-since">
+					<p class="tvd-subtitle"><#= date.text #>
+							<span><#= date.date #></span>
+					</p>
+				</div>
+			<# } #>
+
+		</div>
+	</div>
+</div>
+<div class="tqb-questions-container"></div>
+<div class="tqb-questions-report-no-data" style="display:none;">
+	<span><?php echo __( 'No data recorded for this quiz', 'thrive-quiz-builder' ) ?> </span>
+</div>

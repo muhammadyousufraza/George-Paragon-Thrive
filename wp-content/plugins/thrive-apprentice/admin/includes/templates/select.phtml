@@ -1,0 +1,16 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-university
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+<?php tva_get_svg_icon( 'caret-down_solid' ); ?>
+<div class="tva-dropdown-items">
+	<span class="title"><#= model.get('presentation')|| model.get('title') || model.get('name') || model.get('username') #></span>
+	<span class="label"><#= this.getLabel() #></span>
+</div>

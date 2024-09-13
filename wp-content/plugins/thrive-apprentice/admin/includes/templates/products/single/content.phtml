@@ -1,0 +1,34 @@
+<div class="tva-product-header mb-20">
+	<div class="tva-product-header-inner">
+		<div class="tva-product-edit">
+			<?php tva_get_svg_icon( 'drip-products-membership' ); ?>
+			<div>
+				<h2><?php echo esc_attr__( 'Editing Product:', 'thrive-apprentice' ) ?></h2>
+				<h1 class="tva-product-heading">
+					<div class="tva-product-name"><div><span><#= model.get( 'name' ) #></span></div></div>
+					<span class="click" data-fn="renameProduct"><?php tva_get_svg_icon( 'pen_light' ); ?></span>
+				</h1>
+			</div>
+		</div>
+		<# if(!TVA.visualEditingEnabled) { #>
+		<?php include dirname( __FILE__ ) . '/legacy-design-warning.php'; ?>
+		<# } #>
+		<div class="tva-product-heading-buttons mt-10">
+			<a class="tva-back" href="#products"><?php echo esc_attr__( 'Back to products dashboard', 'thrive-apprentice' ) ?></a>
+			<#= this.getBackLink() #>
+		</div>
+	</div>
+	<div class="tva-product-info-tooltip tva-product-tooltip">
+		<h3><?php echo esc_html__( 'More Product Settings', 'thrive-apprentice' ); ?></h3>
+		<p><?php echo esc_html__( 'You can control how your product is accessed by your website visitors by using the options in this menu.', 'thrive-apprentice' ); ?></p>
+		<button class="tva-tooltip-dismiss click" data-fn="hideTooltip" type="button"><?php echo esc_html__( 'Got it', 'thrive-apprentice' ); ?></button>
+		<div class="ui-tt-arrow left"></div>
+	</div>
+</div>
+
+<div class="tva-product-details-wrapper">
+	<div class="tva-product-details-info">
+		<?php echo esc_attr__( 'Purchasing this product or meeting its access restriction rules will unlock the following content:', 'thrive-apprentice' ) ?>
+	</div>
+	<div class="tva-product-details"></div>
+</div>

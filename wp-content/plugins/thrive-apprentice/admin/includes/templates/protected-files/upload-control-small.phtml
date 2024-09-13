@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-dashboard
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-protected-files-upload-area-small tva-flex tva-space-center">
+	<div><?php tva_get_svg_icon( 'protected-files-gray' ); ?></div>
+	<span><?php echo sprintf( __( 'Protect another file. Drag and drop here or %s', 'thrive-apprentice' ), '<a href="#" class="tva-file-upload-control-select">' . __( 'Select file', 'thrive-apprentice' ) . '</a>' ); ?></span>
+</div>

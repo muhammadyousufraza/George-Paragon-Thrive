@@ -1,0 +1,48 @@
+@media (max-width: 1023px) {
+  :not(#_s):not(#_s) {
+    .select2-container {
+      .select2-results__options {
+        max-height: 160px;
+      }
+    }
+  }
+
+  .tap-saved-automations {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .tap-aut-preview-container {
+    .tap-aut-saved-actions {
+      max-width: 30%;
+    }
+
+    .tap-aut-functions {
+      width: 15%;
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .tap-dashboard {
+    .tap-sidebar-container {
+      width: 170px;
+    }
+
+    body.folded & {
+      .tap-main-container {
+        width: calc(100% - 285px);
+        left: 285px;
+      }
+    }
+
+    body & {
+      .tap-main-container {
+        width: calc(100% - 410px);
+        left: 410px;
+      }
+    }
+  }
+}

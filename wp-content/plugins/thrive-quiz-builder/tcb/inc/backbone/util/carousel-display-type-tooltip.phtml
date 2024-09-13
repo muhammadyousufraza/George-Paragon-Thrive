@@ -1,0 +1,21 @@
+<div class="display-type-tooltip-wrapper tcb-tooltip tooltip-bottom">
+	<div class="icon"><?php tcb_icon( 'exclamation-triangle-light' ); ?></div>
+	<div class="tcb-tooltip-text-wrapper">
+		<span>
+			<?php echo esc_html__( 'All carousel options will be reset when switching display type. Do you want to continue?', 'thrive-cb' ); ?>
+		</span>
+		<div class="buttons-wrapper">
+			<button class="cancel-change click" data-fn="cancelChange">
+				<?php echo esc_html__( 'Cancel', 'thrive-cb' ); ?>
+			</button>
+			<button class="appply-change click" data-fn="applyChange">
+				<?php echo esc_html__( 'Continue', 'thrive-cb' ); ?>
+			</button>
+		</div>
+		<div class="tcb-checkbox">
+			<input type="checkbox" id="dismiss-<#= type #>" name="dismiss">
+			<label for="dismiss-<#= type #>">Don't show again</label>
+		</div>
+	</div>
+
+</div>

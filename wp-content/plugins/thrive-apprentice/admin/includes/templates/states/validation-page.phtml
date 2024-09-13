@@ -1,0 +1,22 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div class="tva-create-state">
+	<div class="tva-login-page mt-10">
+		<span class="tva-login-name"><#= model.get( 'title' ) #></span>
+		<div class="align">
+			<a class="tva-page-option tva-view-page" href="<#- model.get( 'preview_url' ) #>" target="_blank">
+				<?php tva_get_svg_icon( 'eye_light' ); ?>
+				<?php echo __( 'View', 'thrive-apprentice' ) ?>
+			</a>
+			<a class="tva-page-option tva-edit-page-wp" href="<#- model.get( 'edit_with_wp' ) #>" target="_blank">
+				<?php tva_get_svg_icon( 'edit-summary' ); ?>
+				<?php echo __( 'Edit WordPress page', 'thrive-apprentice' ) ?>
+			</a>
+		</div>
+	</div>
+</div>

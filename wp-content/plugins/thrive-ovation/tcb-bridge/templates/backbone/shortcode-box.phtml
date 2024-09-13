@@ -1,0 +1,16 @@
+	<div class="tvo-col tvo-s7">
+		<strong class="tvo-testimonial-title">
+			<#= this.model.get('name') #>
+		</strong>
+	</div>
+	<div class="tvo-col tvo-s5">
+		<div class="tvo-right">
+			<a class="button-link" href="#select-<#= this.model.get('testimonials')>0?'testimonials':'tags' #><#= '/'+this.model.get('id') #>">
+				<?php echo __( 'Duplicate Template', 'thrive-ovation' ); ?>
+			</a>
+
+			<button data-id="<#= this.model.get('id') #>" class="tve-button green tvo-existing-shortcode-template">
+				<?php echo __( 'Load display', 'thrive-ovation' ); ?>
+			</button>
+		</div>
+	</div>

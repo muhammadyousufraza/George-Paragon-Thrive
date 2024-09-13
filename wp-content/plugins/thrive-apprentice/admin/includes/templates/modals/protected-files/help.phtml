@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-modal-step" data-step="0">
+	<div class="tvd-modal-content">
+		<div class="tva-flex tva-space-around">
+			<span class="tva-protected-files-title"><?php echo __( 'Introducing ', 'thrive-apprentice' ) ?><strong><?php echo __( 'secure and easy file protection! ', 'thrive-apprentice' ) ?></strong></span>
+		</div>
+		<div class="tva-flex tva-space-around mt-20">
+			<iframe width="498" height="280" type="text/html" src="https://www.youtube.com/embed/yYtLPT92oTY?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"></iframe>
+		</div>
+		<div>
+			<span class="tva-flex tva-text-center mt-20 mb-20 tva-pf-500"><?php echo __( 'With the new Protected Files feature, it\'s easier than ever to limit access to your valuable files.', 'thrive-apprentice' ) ?></span>
+		</div>
+		<div class="tva-protected-files-grid">
+			<div class="tva-flex tva-space-around">
+				<div class="tva-flex">
+					<a rel="noopener" href="https://help.thrivethemes.com/en/articles/6972728-how-to-protect-files-and-grant-access-for-customers-or-students" target="_blank" class="tva-btn mr-25 tva-btn-ghost"><?php echo __( 'Read the full guide', 'thrive-apprentice' ) ?></a>
+					<a href="javascript:void(0);" class="tva-btn tva-btn-blue pl-30 pr-30 tvd-modal-close"><?php echo __( 'Let\'s go!', 'thrive-apprentice' ) ?></a>
+				</div>
+			</div>
+			<div class="tva-flex tva-space-around" data-tall="1">
+				<span><?php echo __( 'How to share your protected files', 'thrive-apprentice' ) ?></span>
+			</div>
+			<div class="tva-flex tva-space-center" data-tall="1">
+				<div class="tva-flex tva-protected-files-help-badge tva-align-center mr-25 click" data-fn="jumpToStep" data-step="1">
+					<div class="tva-protected-files-help-icon-aura"><?php tva_get_svg_icon( 'file-alt_light' ); ?></div>
+					<div class="tva-flex tva-flex-column">
+						<span><?php echo __( 'How to add protected files', 'thrive-apprentice' ) ?></span>
+						<strong><?php echo __( 'in pages or posts', 'thrive-apprentice' ) ?></strong>
+					</div>
+					<?php tva_get_svg_icon( 'angle-right' ); ?>
+				</div>
+				<div class="tva-flex tva-protected-files-help-badge tva-align-center click" data-fn="jumpToStep" data-step="2">
+					<div class="tva-protected-files-help-icon-aura"><?php tva_get_svg_icon( 'graduation-cap' ); ?></div>
+					<div class="tva-flex tva-flex-column">
+						<span><?php echo __( 'How to share protected', 'thrive-apprentice' ) ?></span>
+						<strong><?php echo __( 'files as lesson resources', 'thrive-apprentice' ) ?></strong>
+					</div>
+					<?php tva_get_svg_icon( 'angle-right' ); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="tva-modal-step" data-step="1">
+	<div class="tvd-modal-content">
+		<?php include __DIR__ . '/parts/help-part-posts.phtml'; ?>
+	</div>
+</div>
+<div class="tva-modal-step" data-step="2">
+	<div class="tvd-modal-content">
+		<?php include __DIR__ . '/parts/help-part-resources.phtml'; ?>
+	</div>
+</div>

@@ -1,0 +1,10 @@
+<div class="tvd-modal-content">
+	<h3 class="tvd-modal-title"><#=model.get('title')#></h3>
+	<# if (model.get('description')) { #>
+	<p><#= this.model.get('description') #></p>
+	<# } #>
+</div>
+<div class="tva-modal-footer-outer">
+	<button type="button" class="tva-modal-btn tvd-modal-close <#=this.model.get('noClass')#> click" data-fn="cancel"><#=this.model.get('no') || 'No' #></button>
+	<button type="button" class="tva-modal-btn <#=this.model.get('yesClass')#> click" data-fn="confirm"><#=this.model.get('yes') || 'Yes' #></button>
+</div>

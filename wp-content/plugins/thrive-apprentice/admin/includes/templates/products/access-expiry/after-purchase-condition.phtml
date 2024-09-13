@@ -1,0 +1,23 @@
+<div class="tva-flex tva-flex-row tva-ae-date-container" style="column-gap: 10px;">
+	<div class="tva-p-text-main mt-10 mb-5">
+		<?php echo esc_attr__( 'Set reminder notice', 'thrive-apprentice' ) ?>
+		<span class="tva-info-icon tva-tooltip-parent">
+			<?php tva_get_svg_icon( 'info-solid' ); ?>
+			<div class="tva-custom-tooltip tva-tooltip-inherited">
+				<?php esc_attr_e( 'Edit the reminder notice text in your Email templates settings', 'thrive-apprentice' ); ?> <a href="#settings/email-templates" target="_blank"><?php esc_html_e( 'here', 'thrive-apprentice' ); ?></a>
+			</div>
+		</span>
+	</div>
+	<div class="tva-ae-date-small">
+		<input min="1" type="number" class="change" data-fn="inputChanged"/>
+	</div>
+	<div class="tva-ae-date-long">
+		<select class="change" data-fn="selectChanged">
+			<option value="d"><?php echo esc_html__( 'Day(s)', 'thrive-apprentice' ); ?></option>
+			<option value="w"><?php echo esc_html__( 'Week(s)', 'thrive-apprentice' ); ?></option>
+			<option value="m"><?php echo esc_html__( 'Month(s)', 'thrive-apprentice' ); ?></option>
+			<option value="y"><?php echo esc_html__( 'Year(s)', 'thrive-apprentice' ); ?></option>
+		</select>
+	</div>
+	<div class="tva-p-text-main"><?php echo esc_attr__( 'Before expire', 'thrive-apprentice' ) ?></div>
+</div>

@@ -1,0 +1,82 @@
+<div id="tvd-modal-badges" class="tvd-modal-content tcm-badges-modal">
+	<div class="tcm-modal-header">
+		<h2>
+			<# if(badge.get('id') == 0){ #>
+			<?php echo __( 'Create new badge', Thrive_Comments_Constants::T ); ?>
+			<# } else { #>
+			<?php echo __( 'Edit existing badge', Thrive_Comments_Constants::T ); ?>
+			<# } #>
+		</h2>
+		<hr>
+	</div>
+	<div class="tcm-modal-body">
+		<form class="tcm-modal" id="tcm-submit-labels">
+			<div id="tcm_badge_id" data-id="<#=badge.get('id') #>"></div>
+
+			<div>
+				<label class="tcm-modal-label" for="tcm_badge_name">
+					<?php echo __( 'Badge name (displayed on hover over the badge)', Thrive_Comments_Constants::T ); ?>
+				</label>
+				<input type="text" id="tcm_badge_name" name='tcm_badge_name' placeholder="<#=badge.get('name') #>" value="<#=badge.get('name') #>" data-key="2"
+					   data-default="<#=badge.get('name') #>"/>
+			</div>
+
+			<div>
+				<div class="field-desc">
+					<?php echo __( 'Badge award rules', Thrive_Comments_Constants::T ); ?>
+				</div>
+
+				<span><?php echo __( 'The badge will be awarded when the number of', Thrive_Comments_Constants::T ); ?></span>
+				<select id="tcm_badge_awarded" name='tcm_badge_awarded' class="tcm-dropdown">
+					<option value="approvedcomments"
+					<# if(badge.get('awarded') == 'approvedcomments'){#> selected
+					<# } #>><?php echo __( 'approved comments', Thrive_Comments_Constants::T ); ?></option>
+					<option value="approvedreplies"
+					<# if(badge.get('awarded') == 'approvedreplies'){#> selected
+					<# } #>><?php echo __( 'approved replies', Thrive_Comments_Constants::T ); ?></option>
+					<option value="featuredcomments"
+					<# if(badge.get('awarded') == 'featuredcomments'){#> selected
+					<# } #>><?php echo __( 'featured comments', Thrive_Comments_Constants::T ); ?></option>
+					<option value="upvotesreceived"
+					<# if(badge.get('awarded') == 'upvotesreceived'){#> selected
+					<# } #>><?php echo __( 'upvotes received', Thrive_Comments_Constants::T ); ?></option>
+				</select>
+
+				<span><?php echo __( 'reaches', Thrive_Comments_Constants::T ); ?></span>
+
+				<input id="tcm_badge_reaches" class="tcm-input small-text" type="text" data-type="number" name="close_comments_days_old"
+					   data-setting="close_comments_days_old" value="<#=badge.get('reaches') #>">
+			</div>
+
+			<div>
+
+				<div class="field-desc">
+					<?php echo __( 'Selected badge image', Thrive_Comments_Constants::T ); ?>
+				</div>
+
+				<div class="choose-badge clear-this">
+					<div class="tcm-choose">
+						<?php echo __( 'Choose badge Image', Thrive_Comments_Constants::T ); ?>
+					</div>
+					<div class="tcm-upload-badge tcm-icon-file_upload">
+						<?php echo __( 'Upload custom badge', Thrive_Comments_Constants::T ); ?>
+					</div>
+					<div class="tcm-badges-container">
+						<div class="badges-inner">
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div style="margin: 0;" class="tvd-row">
+				<a class="tvd-waves-effect tvd-btn-flat-dark tvd-btn-flat tvd-btn-flat-secondary tvd-modal-close tcm-discard-changes" href="javascript:void(0);">
+					<?php echo __( 'Back', Thrive_Comments_Constants::T ); ?>
+				</a>
+				<button class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-green tcm-save-badges tvd-right">
+					<?php echo __( 'Save badge', Thrive_Comments_Constants::T ); ?>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>

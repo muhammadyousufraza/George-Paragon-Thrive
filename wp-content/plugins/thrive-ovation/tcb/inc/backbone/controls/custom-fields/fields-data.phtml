@@ -1,0 +1,20 @@
+<div class="tve-custom-fields-data-options flex space-between wrap">
+	<span class="label"><#= this.model.config.label #></span>
+	<div class="tve-cf-tabs"></div>
+	<div class="tve-cf-notice info-text"></div>
+	<div class="tve-cf-boxes">
+		<div data-tab="static" style="display: none;"></div>
+		<div class="mb-10" data-tab="dynamic">
+			<div class="tve-cf-type"></div>
+			<div class="tve-cf-data"></div>
+			<div class="tve-cf-value"></div>
+			<div class="tve-cf-default-value"></div>
+			<div class="tcb-flex space-between tcb-dynamic-data-buttons">
+				<div id="apply-dynamic" class="tve-button click" data-fn="setDynamicData"><?php echo __( 'Insert', 'thrive-cb' ); ?></div>
+				<div id="remove-dynamic" class="tve-button tve-remove click has-dynamic" data-fn="removeDynamicData"><?php echo __( 'Remove', 'thrive-cb' ); ?></div>
+				<div id="modify-dynamic" class="tve-button click has-dynamic" data-fn="setDynamicData"><?php echo __( 'Update', 'thrive-cb' ); ?></div>
+			</div>
+		</div>
+	</div>
+</div>
+

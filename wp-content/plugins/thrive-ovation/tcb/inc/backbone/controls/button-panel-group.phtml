@@ -1,0 +1,14 @@
+<div class="button-group-holder control-grid">
+	<# if ( this.data.label ) { #>
+		<div class="group-label label"><#=this.data.label#>:</div>
+	<# } #>
+	<div class="tve-btn-group input <#=this.data.group_class || 'grey'#>">
+		<# _.each( this.data.buttons, function( btn, key ) { #>
+
+			<div class="btn-inline tve-btn click <#=btn.class || ''#>" data-fn="tab_click" data-panel="<#=key#>" data-tooltip="<#=btn.title#>" data-side="<#=this.get('data.tooltip_side', 'bottom')#>">
+				<#=this.icon( btn )#>
+			</div>
+
+		<# }, this ); #>
+	</div>
+</div>

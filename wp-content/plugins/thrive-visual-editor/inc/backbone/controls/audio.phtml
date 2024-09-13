@@ -1,0 +1,22 @@
+<div class="control-grid mb-10 custom-fields-state" data-state="static">
+	<label class="label"><?php echo __( 'Source', 'thrive-cb' ) ?></label>
+	<select class="v-source change input" data-fn="selectSource">
+
+	</select>
+</div>
+<div class="custom-fields-state" data-state="static">
+	<div class="v-settings" id="a-settings-custom" data-view="custom"></div>
+	<div class="v-settings" style="display:none" id="a-settings-soundcloud" data-view="soundcloud"><?php tcb_template( 'actions/audio-providers/soundcloud' ) ?></div>
+	<div class="v-settings" style="display:none" id="a-settings-spotify" data-view="spotify"><?php tcb_template( 'actions/audio-providers/spotify' ) ?></div>
+</div>
+<div class="tve-advanced-controls mt-10">
+	<div class="dropdown-header" data-prop="advanced">
+		<span>
+			<?php echo __( 'Advanced', 'thrive-cb' ); ?>
+		</span>
+	</div>
+	<div class="dropdown-content clear-top">
+		<div class="a-checkbox-settings" id="a-checkbox-settings-custom" data-setting="custom" style="display:none"><?php tcb_template( 'actions/audio-providers/custom-extra' ) ?></div>
+		<div class="a-checkbox-settings" id="a-checkbox-settings-soundcloud" data-setting="soundcloud" style="display:none"><?php tcb_template( 'actions/audio-providers/soundcloud-extra' ) ?></div>
+	</div>
+</div>

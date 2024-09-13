@@ -1,0 +1,23 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+?>
+<div class="tva-no-product">
+	<?php tva_get_svg_icon( 'icon-c-group' ); ?>
+	<p>
+		<span><?php echo esc_html__( 'No content sets added', 'thrive-apprentice' ); ?></span>
+		<br>
+		<?php
+		echo sprintf(
+			esc_html__( "%s to this product", 'thrive-apprentice' ),
+			'<a href="javascript:void(0);" class="tva-add-button click" data-fn="addContentSet">' . esc_html__( 'Add a new content group', 'thrive-apprentice' ) . '</a>'
+		); ?>
+	</p>
+</div>

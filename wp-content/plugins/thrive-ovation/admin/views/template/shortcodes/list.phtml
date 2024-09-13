@@ -1,0 +1,50 @@
+<div class="tvd-container">
+	<div class="tvd-row">
+		<div class="tvd-col tvd-s12">
+			<h3 class="tvd-title tvd-left tvd-margin-right">
+                <# if ( type === 'display' ) { #>
+                <?php echo __( 'Testimonial display shortcodes', 'thrive-ovation' ); ?>
+                <# } else { #>
+                <?php echo __( 'Testimonial capture shortcodes', 'thrive-ovation' ); ?>
+                <# } #>
+            </h3>
+			<a href="javascript:void(0);"
+			   class="tvo-add-new-shortcode tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-blue tvd-left"><?php echo __( 'Add New', 'thrive-ovation' ); ?></a>
+
+		</div>
+	</div>
+	<div class="tvd-row tvo-shortcodes-notice" style="display: none">
+		<div class="tvd-col tvd-s12">
+			<p>
+                <# if ( type === 'display' ) { #>
+                <?php echo __( 'You haven\'t yet built any shortcodes to display testimonial on your site. ', 'thrive-ovation' ); ?>
+                <# } else { #>
+                <?php echo __( 'You haven\'t yet built any shortcodes to capture testimonial on your site. ', 'thrive-ovation' ); ?>
+                <# } #>
+				<a href="//fast.wistia.net/embed/iframe/<#= (type=='display'?'aphg8wwb77':'dixw38l8kz') #>?popover=true" class="wistia-popover[height=450,playerColor=2bb914,width=800]"><?php echo __( 'Watch this video to get started.', 'thrive-ovation' ); ?></a>
+			</p>
+		</div>
+	</div>
+	<div class="tvd-row tvd-no-margin tvo-shortcodes-container">
+		<div class="tvd-col tvd-s6 tvd-ms6 tvd-m4 tvd-l3 tvo-add-new-shortcode">
+			<div class="tvd-card tvo-medium tvd-card-new tvd-valign-wrapper">
+				<div class="tvd-card-content tvd-valign tvd-center-align tvd-pointer">
+					<i class="tvd-icon-plus tvd-icon-rounded tvd-icon-medium"></i>
+					<h4>
+                        <# if ( type === 'display' ) { #>
+                        <?php echo __( 'New display shortcode', 'thrive-ovation' ); ?>
+                        <# } else { #>
+                        <?php echo __( 'New capture shortcode', 'thrive-ovation' ); ?>
+                        <# } #>
+					</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="tvd-row">
+	<div class="tvd-col tvd-s6">
+		<a class="tvd-waves-effect tvd-waves-light tvd-btn tvd-btn-gray" href="#testimonials"><?php echo __( 'Back to Dashboard', 'thrive-ovation' ); ?></a>
+	</div>
+</div>
+

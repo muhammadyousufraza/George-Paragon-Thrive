@@ -1,0 +1,46 @@
+<div class="section-template-item <#= this.getCurrentSectionTemplate() == item.id.substring(1) ? 'active': '' #>" data-id="<#= item.id #>" data-type="<#= item.type #>" data-source="<#= item.source #>" data-default="<#= item.default #>">
+	<div class="template-name-section">
+		<div class="template-name"><#= item.name #></div>
+
+		<span class="ttd-dropdown-dots click" data-fn="openOptionsTooltip">
+			<?php Thrive_Views::svg_icon( 'icon-three-dots' ); ?>
+		</span>
+		<div class="tcb-template-options-tooltip">
+			<button class="ttd-tooltip-row click" data-fn="openRename"><?php echo __( 'Rename', 'thrive-theme' ); ?></button>
+			<button class="ttd-tooltip-row click" data-fn="openDelete"><?php echo __( 'Delete', 'thrive-theme' ); ?></button>
+		</div>
+	</div>
+
+	<div class="template-name-section-edit">
+		<input class="template-rename-input" value="<#= item.name #>"/>
+		<span class="template-name-check click" data-fn="renameSection">
+			<?php Thrive_Views::svg_icon( 'edit-check' ); ?>
+		</span>
+	</div>
+
+	<div class="template-name-section-delete">
+		<?php echo __( 'Are you sure?', 'thrive-theme' ); ?>
+		<span class="click" data-fn="hideDelete"><?php Thrive_Views::svg_icon( 'del-close' ); ?></span>
+	</div>
+
+	<div class="cb-template-wrapper click"
+		 data-id="<#= item.id #>"
+		 data-source="<#= item.source #>"
+		 data-version="<#= item.v ? item.v : ''#>"
+		 data-fn="load"
+	>
+		<div class="cb-template-delete-notice">
+			<p><?php echo __( 'Deleting a Section will remove it from all instances on your website.', 'thrive-theme' ); ?></p>
+			<button class="click" data-fn="hideDelete"><?php echo __( 'Cancel', 'thrive-theme' ); ?></button>
+			<button class="click" data-id="<#= item.id #>" data-fn="delete">
+				<?php echo __( 'Yes, Delete', 'thrive-theme' ); ?>
+			</button>
+		</div>
+		<div class="cb-template-thumbnail lazy-loading">
+			<img class="tve-lazy-img"
+				 src="<?php echo tve_editor_css(); ?>/images/loading-spinner.gif"
+				 data-src="<#= item.thumb && item.thumb.url ? item.thumb.url : '' #>"
+				 data-ratio="<#= item.ratio #>"/>
+		</div>
+	</div>
+</div>

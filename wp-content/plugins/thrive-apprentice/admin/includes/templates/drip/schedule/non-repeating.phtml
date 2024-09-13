@@ -1,0 +1,21 @@
+<div class="tva-opt">
+	<div class="tva-label"><?php esc_html_e( 'Unlock content after', 'thrive-apprentice' ); ?></div>
+	<div class="tva-field">
+		<input type="number" value="<#- this.getIntervalNumber( true ) #>" oninput="validity.valid||(value='');" data-field="interval_number" min="1" max="100" maxlength="3">
+	</div>
+</div>
+<div class="tva-opt">
+	<div class="tva-label">&nbsp;</div>
+	<div class="tva-field"><#= this.renderDropdown( 'interval', <?php echo json_encode( \TVA\Drip\Schedule\Non_Repeating::get_interval_options() ); ?> ) #></div>
+</div>
+<# if ( this.model.get('interval') === 'weeks' ) { #>
+<div class="tva-opt">
+	<div class="tva-label"><?php esc_html_e( 'On which day?', 'thrive-apprentice' ); ?></div>
+	<div class="tva-field">
+		<#= this.renderDropdown( 'weekday', <?php echo json_encode( \TVA\Drip\Schedule\Repeating::get_weekdays( true ) ); ?> ) #>
+	</div>
+</div>
+<# } else if ( this.model.get('interval') === 'months' ) { #>
+<?php include plugin_dir_path( __FILE__ ) . '_monthly-fields.phtml'; ?>
+<# } #>
+

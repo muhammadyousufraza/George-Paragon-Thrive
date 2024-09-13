@@ -1,0 +1,45 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-university
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden
+}
+?>
+
+<div class="tva-so-checkout">
+	<p>
+		<?php echo __( 'This is the page your customer will see after they\'ve purchased your product through SendOwl', 'thrive-apprentice' ) ?>
+	</p>
+
+	<p>
+		<a data-source="1COSF1x28y4" class="tvd-open-video">
+			<?php echo __( 'Learn more about thank you pages in SendOwl', 'thrive-apprentice' ) ?>
+		</a>
+	</p>
+
+	<div class="tva-so-checkout-ty">
+		<div class="tva-cards"></div>
+
+		<div class="tva-flex tva-warning-card tva-align-center tva-hide mt-20">
+			<div class="tva-notice-icon"><?php tva_get_svg_icon( 'info-icon' ); ?></div>
+			<div class="tva-flex tva-flex-column pl-20">
+				<h3 class="tva-notice-heading"><?php echo __( 'New Functionality Implemented ', 'thrive-apprentice' ) ?></h3>
+
+				<p>
+					<?php
+					$url  = '<a href="#sendowl_quick_start">' . __( 'Quick Start Guide', 'thrive-apprentice' ) . '</a>';
+					$text = 'Visit %s and take the Create a Product in SendOwl tutorial to see the last updates.';
+
+					echo sprintf( $text, $url );
+					?>
+				</p>
+			</div>
+		</div>
+
+		<div class="tva-thankyou-wrapper"></div>
+	</div>
+</div>

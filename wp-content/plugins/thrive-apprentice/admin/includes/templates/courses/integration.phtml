@@ -1,0 +1,23 @@
+<div class="tva-rule-header pt-15 pb-15 click" data-fn="toggleItemsList">
+	<div class="tva-rule-img <#= model.get('slug') #>">&nbsp;</div>
+
+	<div class="tva-rule-title text"><#= model.get('label') #></div>
+	<div class="tva-course-integration-label"></div>
+
+	<div class="tva-rule-status tva-integration-status"></div>
+
+	<div class="tva-rule-toggle">
+		<span class="tva-arrow-icon">&nbsp;</span>
+	</div>
+</div>
+<div class="tva-rule-items tva-top-border tva-course-integration-items-wrapper" style="display: none">
+	<div class="tva-flex tva-align-center">
+		<span class="tva-rule-label"><#= model.getText() #></span>
+		<div class="tva-rule-items-clear click" data-fn="clearSelectedItems">
+			<?php tva_get_svg_icon( 'times-circle_light' ); ?>
+			<a href="javascript:void(0)"><?php echo esc_html__( 'Clear selection', 'thrive-apprentice' ); ?></a>
+		</div>
+	</div>
+
+	<div class="tva-rule-items-wrapper"></div>
+</div>

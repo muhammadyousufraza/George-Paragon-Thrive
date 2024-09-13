@@ -1,0 +1,853 @@
+# Copyright (C) 2024 Thrive Optimize
+# This file is distributed under the same license as the Thrive Optimize package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Thrive Optimize\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-20 17:23+0000\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../includes/class-thrive-ab-admin.php:208, ../includes/class-thrive-ab.php:395
+msgid "View test details"
+msgstr ""
+
+#: ../includes/class-thrive-ab-admin.php:232, ../includes/class-thrive-ab-admin.php:233, ../includes/class-thrive-ab-product.php:69
+msgid "Thrive Optimize"
+msgstr ""
+
+#: ../includes/class-thrive-ab-admin.php:322
+msgid "A/B Test Ends"
+msgstr ""
+
+#: ../includes/class-thrive-ab-admin.php:336
+msgid "Thrive Dashboard"
+msgstr ""
+
+#: ../includes/class-thrive-ab-admin.php:337
+msgid "Optimize Dashboard"
+msgstr ""
+
+#: ../includes/class-thrive-ab-admin.php:338
+msgid "Are you sure you want to delete %s ?"
+msgstr ""
+
+#: ../includes/class-thrive-ab-admin.php:339
+msgid "Yes"
+msgstr ""
+
+#: ../includes/class-thrive-ab-admin.php:340
+msgid "No"
+msgstr ""
+
+#: ../includes/class-thrive-ab-admin.php:364
+msgid "View test"
+msgstr ""
+
+#: ../includes/class-thrive-ab-admin.php:365, ../includes/class-thrive-ab-meta-box-completed-tests-table.php:103
+msgid "View Test"
+msgstr ""
+
+#: ../includes/class-thrive-ab-dashboard.php:264
+msgid "A customer visits certain pages on my site"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-completed-tests-table.php:46
+msgid "There are no Thrive A/B Completed Tests for this page"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-completed-tests-table.php:56
+msgid "Completed Test"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-completed-tests-table.php:57
+msgid "Description"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-completed-tests-table.php:58
+msgid "Start Date"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-completed-tests-table.php:59, ../includes/views/admin/backbone/dashboard.php:149, ../includes/views/admin/backbone/dashboard.php:150
+msgid "End Date"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-completed-tests-table.php:104
+msgid "Delete"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-variations-table.php:79, ../includes/views/backbone/modals/winner/test/monetary.php:14, ../includes/views/backbone/modals/winner/test/optins.php:14, ../includes/views/backbone/modals/winner/test/visits.php:14
+msgid "Name"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-variations-table.php:80, ../includes/views/backbone/html-variation-card.php:39, ../includes/views/backbone/test/monetary-table.php:15, ../includes/views/backbone/test/optins-table.php:15, ../includes/views/backbone/test/table.php:15, ../includes/views/backbone/test/visits-table.php:15
+msgid "Traffic"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-variations-table.php:81, ../includes/views/admin/backbone/dashboard.php:98, ../includes/views/admin/backbone/dashboard.php:99, ../includes/views/backbone/test/monetary-table.php:17, ../includes/views/backbone/test/optins-table.php:17, ../includes/views/backbone/test/table.php:17, ../includes/views/backbone/test/visits-table.php:17, ../includes/views/backbone/modals/winner/test/monetary.php:16, ../includes/views/backbone/modals/winner/test/optins.php:16, ../includes/views/backbone/modals/winner/test/visits.php:16
+msgid "Unique Visitors"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-variations-table.php:82, ../includes/views/admin/backbone/dashboard.php:103, ../includes/views/admin/backbone/dashboard.php:105, ../includes/views/backbone/report/report.php:40, ../includes/views/backbone/test/visits-table.php:18, ../includes/views/backbone/modals/winner/test/visits.php:17
+msgid "Conversions"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-variations-table.php:83
+msgid "Conversions Rate"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-variations-table.php:84, ../includes/ajax/class-thrive-ab-ajax-controller.php:292, ../includes/test/class-thrive-ab-test-manager.php:234, ../includes/views/backbone/test/monetary-table.php:19, ../includes/views/backbone/test/table.php:19, ../includes/views/backbone/modals/winner/test/monetary.php:17
+msgid "Revenue"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-variations-table.php:85, ../includes/views/backbone/modals/winner/test/monetary.php:18
+msgid "Revenue per visitor"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-variations-table.php:86, ../includes/views/backbone/test/monetary-table.php:22, ../includes/views/backbone/test/optins-table.php:20, ../includes/views/backbone/test/table.php:22, ../includes/views/backbone/test/visits-table.php:20, ../includes/views/backbone/modals/winner/test/monetary.php:19, ../includes/views/backbone/modals/winner/test/optins.php:19, ../includes/views/backbone/modals/winner/test/visits.php:19
+msgid "Improvement"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-variations-table.php:87
+msgid "Chance to Beat Original"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-variations-table.php:91, ../includes/ajax/class-thrive-ab-ajax-controller.php:294, ../includes/test/class-thrive-ab-test-manager.php:244, ../includes/views/backbone/test/optins-table.php:18, ../includes/views/backbone/modals/winner/test/optins.php:17
+msgid "Subscriptions"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-variations-table.php:92
+msgid "Subscriptions Rate"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-variations-table.php:100
+msgid "There are no Thrive A/B Test variations for this page"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box-variations-table.php:354, ../includes/views/backbone/report/report-item.php:33
+msgid "This is the control"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box.php:143
+msgid "Thrive Optimize - A/B Test Overview"
+msgstr ""
+
+#: ../includes/class-thrive-ab-meta-box.php:157
+msgid "Thrive Completed A/B Tests"
+msgstr ""
+
+#: ../includes/class-thrive-ab-model.php:97
+msgid "Invalid model id"
+msgstr ""
+
+#: ../includes/class-thrive-ab-model.php:136
+msgid "Model could not be saved"
+msgstr ""
+
+#: ../includes/class-thrive-ab-model.php:154
+msgid "Invalid input for delete"
+msgstr ""
+
+#: ../includes/class-thrive-ab-page.php:29
+msgid "Provided post is not a page"
+msgstr ""
+
+#: ../includes/class-thrive-ab-page.php:183
+msgid "Variation"
+msgstr ""
+
+#: ../includes/class-thrive-ab-page.php:193
+msgid "Variation could not be saved"
+msgstr ""
+
+#: ../includes/class-thrive-ab-post-status.php:24
+msgid "TOP Variation"
+msgstr ""
+
+#: ../includes/class-thrive-ab-post-status.php:25
+msgid "TOP Variation (%s)"
+msgid_plural "TOP Variations (%s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../includes/class-thrive-ab-post.php:35
+msgid "Post not found"
+msgstr ""
+
+#: ../includes/class-thrive-ab-product.php:64
+msgid "Boost Conversion Rates by testing two or more variations of a page."
+msgstr ""
+
+#: ../includes/class-thrive-ab-product.php:78
+msgid "Tutorials"
+msgstr ""
+
+#: ../includes/class-thrive-ab-product.php:85
+msgid "Support"
+msgstr ""
+
+#: ../includes/class-thrive-ab-report-manager.php:157
+msgid "Total conversions over time"
+msgstr ""
+
+#: ../includes/class-thrive-ab-report-manager.php:160
+msgid "Total visits"
+msgstr ""
+
+#: ../includes/class-thrive-ab-report-manager.php:173
+msgid "Page conversion rate"
+msgstr ""
+
+#: ../includes/class-thrive-ab-report-manager.php:174
+msgid "Conversion rate (%)"
+msgstr ""
+
+#: ../includes/class-thrive-ab-report-manager.php:170
+msgid "Total subscriptions over time"
+msgstr ""
+
+#: ../includes/class-thrive-ab-report-manager.php:171
+msgid "Total subscriptions"
+msgstr ""
+
+#: ../includes/class-thrive-ab-report-manager.php:166
+msgid "Total revenue over time"
+msgstr ""
+
+#: ../includes/class-thrive-ab-report-manager.php:167
+msgid "Total revenue"
+msgstr ""
+
+#: ../includes/i18n.php:13
+msgid "Control"
+msgstr ""
+
+#: ../includes/i18n.php:14
+msgid "Variation Added"
+msgstr ""
+
+#: ../includes/i18n.php:15
+msgid "Yes, delete"
+msgstr ""
+
+#: ../includes/i18n.php:16
+msgid "Yes, archive"
+msgstr ""
+
+#: ../includes/i18n.php:17, ../includes/views/backbone/modals/html-change-automatic-winner.php:23, ../includes/views/backbone/modals/html-test.php:36, ../includes/views/backbone/modals/html-winner.php:24
+msgid "Cancel"
+msgstr ""
+
+#: ../includes/i18n.php:18
+msgid "Stop"
+msgstr ""
+
+#: ../includes/i18n.php:19
+msgid "Keep It Running"
+msgstr ""
+
+#: ../includes/i18n.php:20
+msgid "Error adding new variation"
+msgstr ""
+
+#: ../includes/i18n.php:21
+msgid "Variation %s"
+msgstr ""
+
+#: ../includes/i18n.php:22
+msgid "You are about to delete %s. Do you want to continue?"
+msgstr ""
+
+#: ../includes/i18n.php:23
+msgid "You are about to archive %s. Do you want to continue?"
+msgstr ""
+
+#: ../includes/i18n.php:24
+msgid "Are you sure you want to stop showing the variation: \"%s\""
+msgstr ""
+
+#: ../includes/i18n.php:25
+msgid "Invalid test title"
+msgstr ""
+
+#: ../includes/i18n.php:26
+msgid "Invalid minimum conversions"
+msgstr ""
+
+#: ../includes/i18n.php:27
+msgid "Minimum conversions is not number"
+msgstr ""
+
+#: ../includes/i18n.php:28
+msgid "Minimum conversions must be greater than zero"
+msgstr ""
+
+#: ../includes/i18n.php:29
+msgid "Minimum duration invalid"
+msgstr ""
+
+#: ../includes/i18n.php:30
+msgid "Chance to beat original invalid"
+msgstr ""
+
+#: ../includes/i18n.php:31
+msgid "Variation status could not be changed"
+msgstr ""
+
+#: ../includes/i18n.php:32
+msgid "<b>%s</b> was declared as being the winner for the current test."
+msgstr ""
+
+#: ../includes/i18n.php:33
+msgid "Choose winner variation"
+msgstr ""
+
+#: ../includes/i18n.php:34
+msgid "Automatic winner settings"
+msgstr ""
+
+#: ../includes/i18n.php:35
+msgid "Automatic winner settings enabled."
+msgstr ""
+
+#: ../includes/i18n.php:36
+msgid "Automatic winner settings disabled."
+msgstr ""
+
+#: ../includes/i18n.php:37
+msgid "Delete variation"
+msgstr ""
+
+#: ../includes/i18n.php:38, ../includes/views/backbone/html-variation-card.php:28
+msgid "Archive variation"
+msgstr ""
+
+#: ../includes/i18n.php:39
+msgid "Select a thank you page"
+msgstr ""
+
+#: ../includes/i18n.php:40
+msgid "Select a goal page"
+msgstr ""
+
+#: ../includes/i18n.php:41
+msgid "Select a measurement option"
+msgstr ""
+
+#: ../includes/ajax/class-thrive-ab-ajax-controller.php:66
+msgid "You do not have this capability anymore"
+msgstr ""
+
+#: ../includes/ajax/class-thrive-ab-ajax-controller.php:70
+msgid "Invalid request."
+msgstr ""
+
+#: ../includes/ajax/class-thrive-ab-ajax-controller.php:79
+msgid "Method %s not implemented"
+msgstr ""
+
+#: ../includes/ajax/class-thrive-ab-ajax-controller.php:293
+msgid "Goal Page Visit"
+msgstr ""
+
+#: ../includes/ajax/class-thrive-ab-ajax-controller.php:360
+msgid "There was an error in the process."
+msgstr ""
+
+#: ../includes/ajax/class-thrive-ab-ajax-controller.php:373
+msgid "The test was deleted successfully!"
+msgstr ""
+
+#: ../includes/ajax/class-thrive-ab-ajax.php:135, ../includes/ajax/class-thrive-ab-ajax.php:148
+msgid "Page could not be saved!"
+msgstr ""
+
+#: ../includes/test/class-thrive-ab-test-item.php:302
+msgid "Invalid filters"
+msgstr ""
+
+#: ../includes/test/class-thrive-ab-test-manager.php:233
+msgid "Goal one"
+msgstr ""
+
+#: ../includes/test/class-thrive-ab-test-manager.php:238
+msgid "Goal two"
+msgstr ""
+
+#: ../includes/test/class-thrive-ab-test-manager.php:239
+msgid "Visit goal page"
+msgstr ""
+
+#: ../includes/test/class-thrive-ab-test-manager.php:243
+msgid "Goal three"
+msgstr ""
+
+#: ../includes/variations/class-thrive-ab-variation.php:75
+msgid "Variation could not be deleted"
+msgstr ""
+
+#: ../includes/views/backbone/html-archived-variation-card.php:24, ../includes/views/backbone/util/page-search.php:27
+msgid "Preview"
+msgstr ""
+
+#: ../includes/views/backbone/html-archived-variation-card.php:27, ../includes/views/backbone/html-variation-card.php:29
+msgid "Permanently delete variation"
+msgstr ""
+
+#: ../includes/views/backbone/html-archived-variation-card.php:32
+msgid "Restore Variation"
+msgstr ""
+
+#: ../includes/views/backbone/html-variation-card.php:22
+msgid "Edit variation name"
+msgstr ""
+
+#: ../includes/views/backbone/html-variation-card.php:27
+msgid "Duplicate this variation"
+msgstr ""
+
+#: ../includes/views/backbone/html-variation-card.php:34
+msgid "Edit Variation"
+msgstr ""
+
+#: ../includes/views/editor/html-buttons.php:16, ../includes/views/editor/html-running-test-button.php:16
+msgid "Click here to activate Thrive Optimize before creating a new A/B test."
+msgstr ""
+
+#: ../includes/views/editor/html-buttons.php:16
+msgid "Create New Test"
+msgstr ""
+
+#: ../includes/views/editor/html-running-test-button.php:16, ../includes/views/editor/html-variation-button.php:13
+msgid "Test Dashboard"
+msgstr ""
+
+#: ../includes/views/admin/backbone/completed-test-item.php:19, ../includes/views/admin/backbone/running-test-item.php:15, ../includes/views/admin/edit-post/variations-table.php:33
+msgid "View Test Details"
+msgstr ""
+
+#: ../includes/views/admin/backbone/completed-test-item.php:20
+msgid "Delete Test"
+msgstr ""
+
+#: ../includes/views/admin/backbone/completed-test-no-item.php:10
+msgid "You have no finished tests, yet."
+msgstr ""
+
+#: ../includes/views/admin/backbone/completed-test-no-search-item.php:10
+msgid "You have no completed test with that name"
+msgstr ""
+
+#: ../includes/views/admin/backbone/dashboard.php:13
+msgid "Last 30 Days Stats"
+msgstr ""
+
+#: ../includes/views/admin/backbone/dashboard.php:28
+msgid "Total Unique Visitors"
+msgstr ""
+
+#: ../includes/views/admin/backbone/dashboard.php:38
+msgid "Total Conversions"
+msgstr ""
+
+#: ../includes/views/admin/backbone/dashboard.php:48, ../includes/views/backbone/test/monetary-table.php:21, ../includes/views/backbone/test/table.php:21, ../includes/views/backbone/test/visits-table.php:19, ../includes/views/backbone/modals/winner/test/visits.php:18
+msgid "Conversion Rate"
+msgstr ""
+
+#: ../includes/views/admin/backbone/dashboard.php:61
+msgid "Running A/B Tests Overview"
+msgstr ""
+
+#: ../includes/views/admin/backbone/dashboard.php:66, ../includes/views/admin/backbone/dashboard.php:134
+msgid "Search tests..."
+msgstr ""
+
+#: ../includes/views/admin/backbone/dashboard.php:76, ../includes/views/admin/backbone/dashboard.php:77, ../includes/views/admin/backbone/dashboard.php:144, ../includes/views/admin/backbone/dashboard.php:145
+msgid "Test Name"
+msgstr ""
+
+#: ../includes/views/admin/backbone/dashboard.php:81, ../includes/views/admin/backbone/dashboard.php:82
+msgid "Date Started"
+msgstr ""
+
+#: ../includes/views/admin/backbone/dashboard.php:86, ../includes/views/admin/backbone/dashboard.php:87, ../includes/views/admin/backbone/dashboard.php:154, ../includes/views/admin/backbone/dashboard.php:155
+msgid "On Page"
+msgstr ""
+
+#: ../includes/views/admin/backbone/dashboard.php:91, ../includes/views/admin/backbone/dashboard.php:93, ../includes/views/admin/backbone/dashboard.php:159, ../includes/views/admin/backbone/dashboard.php:161
+msgid "Test Goal"
+msgstr ""
+
+#: ../includes/views/admin/backbone/dashboard.php:110, ../includes/views/admin/backbone/dashboard.php:112, ../includes/views/admin/backbone/dashboard.php:166, ../includes/views/admin/backbone/dashboard.php:168
+msgid "Actions"
+msgstr ""
+
+#: ../includes/views/admin/backbone/dashboard.php:129
+msgid "Completed Tests"
+msgstr ""
+
+#: ../includes/views/admin/backbone/pagination.php:10
+msgid "Rows per page:"
+msgstr ""
+
+#: ../includes/views/admin/backbone/pagination.php:23
+msgid "of"
+msgstr ""
+
+#: ../includes/views/admin/backbone/running-test-no-item.php:10
+msgid "You have no running tests, yet."
+msgstr ""
+
+#: ../includes/views/admin/backbone/running-test-no-search-item.php:10
+msgid "You have no running test with that name"
+msgstr ""
+
+#: ../includes/views/admin/edit-post/variations-table.php:35, ../includes/views/backbone/dashboard/dashboard.php:27, ../includes/views/backbone/dashboard/dashboard.php:27
+msgid "Set Up & Start A/B Test"
+msgstr ""
+
+#: ../includes/views/admin/edit-post/variations-table.php:32, ../includes/views/backbone/test/table-body.php:15
+msgid "Changes occurred while a test is running can sometimes invalidate the test results."
+msgstr ""
+
+#: ../includes/views/backbone/dashboard/dashboard.php:16
+msgid "Thrive"
+msgstr ""
+
+#: ../includes/views/backbone/dashboard/dashboard.php:16
+msgid "Architect"
+msgstr ""
+
+#: ../includes/views/backbone/dashboard/dashboard.php:23
+msgid "Page Settings"
+msgstr ""
+
+#: ../includes/views/backbone/dashboard/dashboard.php:33
+msgid "Variations"
+msgstr ""
+
+#: ../includes/views/backbone/dashboard/dashboard.php:34
+msgid "Add new"
+msgstr ""
+
+#: ../includes/views/backbone/dashboard/dashboard.php:35
+msgid "You can duplicate an existing variation or create a new one from scratch. You can later edit the created variations, even though the test is running."
+msgstr ""
+
+#: ../includes/views/backbone/dashboard/dashboard.php:37
+msgid "Distribute traffic evenly"
+msgstr ""
+
+#: ../includes/views/backbone/dashboard/dashboard.php:46
+msgid "Add new variation"
+msgstr ""
+
+#: ../includes/views/backbone/dashboard/dashboard.php:54
+msgid "Archived Variations"
+msgstr ""
+
+#: ../includes/views/backbone/dashboard/dashboard.php:58
+msgid "You can un archive a variation in order to reuse it in your test."
+msgstr ""
+
+#: ../includes/views/backbone/editor-modals/reset-stats.php:18
+msgid "You are about to save changes to a page in a running test. Note that major design changes will invalidate the data gathered in this test so far. For this reason, we recommend that you reset the test data to zero (the test will continue running)."
+msgstr ""
+
+#: ../includes/views/backbone/goals/monetary-settings.php:15
+msgid "Measure revenue when..."
+msgstr ""
+
+#: ../includes/views/backbone/goals/monetary-settings.php:18
+msgid "Select how you would like to measure revenue"
+msgstr ""
+
+#: ../includes/views/backbone/goals/monetary-settings.php:25
+msgid "%s will receive revenue data automatically from SendOwl when a purchase is made."
+msgstr ""
+
+#: ../includes/views/backbone/goals/monetary-settings.php:36
+msgid "setup steps"
+msgstr ""
+
+#: ../includes/views/backbone/goals/monetary-settings.php:38
+msgid "Make sure you complete all the SendOwl %s in Thrive Apprentice for the integration to work."
+msgstr ""
+
+#: ../includes/views/backbone/goals/monetary-settings.php:45
+msgid "Select one or more pages from your website, on which the user will land, and write the corresponding value of that conversion for your business. You can also create a new page and edit later."
+msgstr ""
+
+#: ../includes/views/backbone/goals/monetary-settings.php:55
+msgid "Add new thank you page"
+msgstr ""
+
+#: ../includes/views/backbone/goals/optins-settings.php:13
+msgid "Measure the number of visitors who subscribe to your website. Please make sure you add at least one Lead Generation form on each variation for the conversions to be counted."
+msgstr ""
+
+#: ../includes/views/backbone/goals/page.php:16
+msgid "Thank You Page"
+msgstr ""
+
+#: ../includes/views/backbone/goals/page.php:18
+msgid "Goal Page"
+msgstr ""
+
+#: ../includes/views/backbone/goals/page.php:28
+msgid "Value"
+msgstr ""
+
+#: ../includes/views/backbone/goals/page.php:35
+msgid "$"
+msgstr ""
+
+#: ../includes/views/backbone/goals/switch.php:15
+msgid "One page for all variations"
+msgstr ""
+
+#: ../includes/views/backbone/goals/switch.php:23
+msgid "Use separate pages for variations"
+msgstr ""
+
+#: ../includes/views/backbone/goals/visits-settings.php:15
+msgid "Select one or more pages, from your website, on which the user will land. You can also create a new page and edit later."
+msgstr ""
+
+#: ../includes/views/backbone/goals/visits-settings.php:25
+msgid "Add new goal page"
+msgstr ""
+
+#: ../includes/views/backbone/modals/html-change-automatic-winner.php:15
+msgid "Here you can set the conditions by which a variation will be considered the winner. When a variation is considered the winner, the remaining variations will be archived and all traffic will be sent to the winner."
+msgstr ""
+
+#: ../includes/views/backbone/modals/html-change-automatic-winner.php:28
+msgid "Save Settings"
+msgstr ""
+
+#: ../includes/views/backbone/modals/html-test-automatic-winner.php:15
+msgid "Enable Automatic Winner Settings"
+msgstr ""
+
+#: ../includes/views/backbone/modals/html-test-automatic-winner.php:25
+msgid "Here you can set the conditions by which a form will be considered the winner."
+msgstr ""
+
+#: ../includes/views/backbone/modals/html-test-automatic-winner.php:31
+msgid "Minimum conversions"
+msgstr ""
+
+#: ../includes/views/backbone/modals/html-test-automatic-winner.php:38
+msgid "Minimum duration (days)"
+msgstr ""
+
+#: ../includes/views/backbone/modals/html-test-automatic-winner.php:45
+msgid "Chance to beat original (%)"
+msgstr ""
+
+#: ../includes/views/backbone/modals/html-test-steps.php:17
+msgid "1. Personalize your A/B Test"
+msgstr ""
+
+#: ../includes/views/backbone/modals/html-test-steps.php:22
+msgid "2. Set the goal of the test"
+msgstr ""
+
+#: ../includes/views/backbone/modals/html-test.php:13, ../includes/views/backbone/modals/html-test.php:49
+msgid "Starting your A/B test"
+msgstr ""
+
+#: ../includes/views/backbone/modals/html-test.php:19
+msgid "Set your test details below"
+msgstr ""
+
+#: ../includes/views/backbone/modals/html-test.php:22
+msgid "Split Test Name"
+msgstr ""
+
+#: ../includes/views/backbone/modals/html-test.php:26
+msgid "Short Description"
+msgstr ""
+
+#: ../includes/views/backbone/modals/html-test.php:42
+msgid "Next"
+msgstr ""
+
+#: ../includes/views/backbone/modals/html-test.php:66
+msgid "Back"
+msgstr ""
+
+#: ../includes/views/backbone/modals/html-test.php:72
+msgid "Start A/B Test"
+msgstr ""
+
+#: ../includes/views/backbone/modals/html-winner.php:15
+msgid "Choose Winner Landing Page"
+msgstr ""
+
+#: ../includes/views/backbone/modals/variation-winner.php:31
+msgid "Go to test report"
+msgstr ""
+
+#: ../includes/views/backbone/report/report-item.php:41, ../includes/views/backbone/test/item/view-monetary.php:69, ../includes/views/backbone/test/item/view-optins.php:63, ../includes/views/backbone/test/item/view-visits.php:63, ../includes/views/backbone/test/item/view.php:56
+msgid "Stop this variation"
+msgstr ""
+
+#: ../includes/views/backbone/report/report.php:32
+msgid "Graph type"
+msgstr ""
+
+#: ../includes/views/backbone/report/report.php:39
+msgid "Conversion rate"
+msgstr ""
+
+#: ../includes/views/backbone/report/report.php:47
+msgid "Graph interval"
+msgstr ""
+
+#: ../includes/views/backbone/report/report.php:54
+msgid "Daily"
+msgstr ""
+
+#: ../includes/views/backbone/report/report.php:55
+msgid "Weekly"
+msgstr ""
+
+#: ../includes/views/backbone/report/report.php:56
+msgid "Monthly"
+msgstr ""
+
+#: ../includes/views/backbone/report/report.php:82
+msgid "Back to Page Settings"
+msgstr ""
+
+#: ../includes/views/backbone/report/report.php:87, ../includes/views/backbone/report/report.php:87
+msgid "Stop test and choose winner"
+msgstr ""
+
+#: ../includes/views/backbone/report/report.php:96
+msgid "Page settings"
+msgstr ""
+
+#: ../includes/views/backbone/test/monetary-table.php:14, ../includes/views/backbone/test/optins-table.php:14, ../includes/views/backbone/test/table.php:14, ../includes/views/backbone/test/visits-table.php:14, ../includes/views/backbone/modals/winner/test.php:14
+msgid "Variation Name"
+msgstr ""
+
+#: ../includes/views/backbone/test/monetary-table.php:16, ../includes/views/backbone/test/optins-table.php:16, ../includes/views/backbone/test/table.php:16, ../includes/views/backbone/test/visits-table.php:16, ../includes/views/backbone/modals/winner/test/monetary.php:15, ../includes/views/backbone/modals/winner/test/optins.php:15, ../includes/views/backbone/modals/winner/test/visits.php:15
+msgid "Visitors"
+msgstr ""
+
+#: ../includes/views/backbone/test/monetary-table.php:18, ../includes/views/backbone/test/table.php:18
+msgid "Sales"
+msgstr ""
+
+#: ../includes/views/backbone/test/monetary-table.php:20, ../includes/views/backbone/test/table.php:20
+msgid "Revenue per Visitor"
+msgstr ""
+
+#: ../includes/views/backbone/test/monetary-table.php:23, ../includes/views/backbone/test/optins-table.php:21, ../includes/views/backbone/test/table.php:23, ../includes/views/backbone/test/visits-table.php:21, ../includes/views/backbone/modals/winner/test.php:19, ../includes/views/backbone/modals/winner/test/monetary.php:20, ../includes/views/backbone/modals/winner/test/optins.php:20, ../includes/views/backbone/modals/winner/test/visits.php:20
+msgid "Chance to beat Original"
+msgstr ""
+
+#: ../includes/views/backbone/test/optins-table.php:19, ../includes/views/backbone/modals/winner/test/optins.php:18
+msgid "Subscription Rate"
+msgstr ""
+
+#: ../includes/views/backbone/test/table-body.php:19
+msgid "Change"
+msgstr ""
+
+#: ../includes/views/backbone/util/page-search.php:16
+msgid "Search Thank You Page "
+msgstr ""
+
+#: ../includes/views/backbone/util/page-search.php:18
+msgid "Search Goal Page"
+msgstr ""
+
+#: ../includes/views/backbone/util/page-search.php:24
+msgid "Edit Page"
+msgstr ""
+
+#: ../includes/views/backbone/util/page-search.php:30
+msgid "Remove"
+msgstr ""
+
+#: ../includes/views/backbone/modals/goal/monetary.php:9, ../includes/views/backbone/modals/goal/sendowl.php:9, ../includes/views/backbone/test/item/goal/monetary.php:9
+msgid "Revenue Conversion Goal"
+msgstr ""
+
+#: ../includes/views/backbone/modals/goal/monetary.php:11
+msgid "Each time a customer visits any of the pages listed below, the associated revenue is recorded"
+msgstr ""
+
+#: ../includes/views/backbone/modals/goal/monetary.php:20, ../includes/views/backbone/modals/goal/optins.php:21, ../includes/views/backbone/modals/goal/sendowl.php:18, ../includes/views/backbone/modals/goal/visits.php:20
+msgid "OK"
+msgstr ""
+
+#: ../includes/views/backbone/modals/goal/optins.php:9, ../includes/views/backbone/test/item/goal/optins.php:9
+msgid "Subscription Conversion Goal"
+msgstr ""
+
+#: ../includes/views/backbone/modals/goal/optins.php:13
+msgid "A subscription to any form on your test variations is counted as a conversion"
+msgstr ""
+
+#: ../includes/views/backbone/modals/goal/page-row.php:14, ../includes/views/backbone/modals/goal/revenue-row.php:18
+msgid "View Page"
+msgstr ""
+
+#: ../includes/views/backbone/modals/goal/sendowl.php:11
+msgid "Conversions and revenues are collected whenever a customer purchases a product through SendOwl"
+msgstr ""
+
+#: ../includes/views/backbone/modals/goal/visits.php:9, ../includes/views/backbone/test/item/goal/visits.php:9
+msgid "Page Visit Conversion Goal"
+msgstr ""
+
+#: ../includes/views/backbone/modals/goal/visits.php:11
+msgid "A visit to any of the pages listed below is counted as one conversion:"
+msgstr ""
+
+#: ../includes/views/backbone/modals/winner/item.php:36, ../includes/views/backbone/modals/winner/test/item/monetary.php:37, ../includes/views/backbone/modals/winner/test/item/optins.php:37, ../includes/views/backbone/modals/winner/test/item/visits.php:37
+msgid "Set as winner"
+msgstr ""
+
+#: ../includes/views/backbone/modals/winner/test.php:15
+msgid "Content Views"
+msgstr ""
+
+#: ../includes/views/backbone/modals/winner/test.php:16
+msgid "Engagements"
+msgstr ""
+
+#: ../includes/views/backbone/modals/winner/test.php:17
+msgid "Engagement Rate"
+msgstr ""
+
+#: ../includes/views/backbone/modals/winner/test.php:18
+msgid "Percentage Improvement"
+msgstr ""
+
+#: ../includes/views/backbone/test/item/control-view-monetary.php:17, ../includes/views/backbone/test/item/control-view-optins.php:17, ../includes/views/backbone/test/item/control-view-visits.php:17, ../includes/views/backbone/test/item/view-monetary.php:17, ../includes/views/backbone/test/item/view-optins.php:17, ../includes/views/backbone/test/item/view-visits.php:17
+msgid "winner"
+msgstr ""
+
+#: ../includes/views/backbone/test/item/control-view-monetary.php:25, ../includes/views/backbone/test/item/control-view-optins.php:25, ../includes/views/backbone/test/item/control-view-visits.php:25, ../includes/views/backbone/test/item/view-monetary.php:25, ../includes/views/backbone/test/item/view-optins.php:25, ../includes/views/backbone/test/item/view-visits.php:25
+msgid "Edit variation with Architect"
+msgstr ""
+
+#: ../includes/views/backbone/test/item/control-view-monetary.php:63, ../includes/views/backbone/test/item/control-view-optins.php:57, ../includes/views/backbone/test/item/control-view-visits.php:57, ../includes/views/backbone/test/item/control-view.php:48
+msgid "[This is the Control]"
+msgstr ""
+
+#: ../includes/views/backbone/test/item/view-stopped-monetary.php:13, ../includes/views/backbone/test/item/view-stopped-optins.php:13, ../includes/views/backbone/test/item/view-stopped-visits.php:13
+msgid "Manually stopped on"
+msgstr ""

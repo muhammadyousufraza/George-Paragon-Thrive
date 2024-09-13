@@ -1,0 +1,9 @@
+<div class="tva-access-no-items">
+	<?php echo esc_html__( "You don't currently have any Thrive Apprentice products created. ", 'thrive-apprentice' ); ?>
+	<br>
+	<?php
+	echo sprintf(
+		esc_html__( "Create a new product in the %s section.", 'thrive-apprentice' ),
+		'<a class="click" data-fn="close" href="#products">' . esc_html__( 'Products', 'thrive-apprentice' ) . '</a>'
+	); ?>
+</div>

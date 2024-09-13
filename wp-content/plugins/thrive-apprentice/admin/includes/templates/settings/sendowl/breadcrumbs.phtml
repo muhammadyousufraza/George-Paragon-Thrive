@@ -1,0 +1,35 @@
+<?php
+/**
+ * Thrive Themes - https://thrivethemes.com
+ *
+ * @package thrive-apprentice
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Silence is golden!
+}
+
+if ( empty( $breadcrumbs_config ) || ! is_array( $breadcrumbs_config ) ) {
+	return;
+}
+
+$breadcrumbs_config = array_merge( array(
+	array(
+		'title' => __( 'SendOwl', 'thrive-apprentice' ),
+		'route' => 'sendowl',
+	),
+), $breadcrumbs_config );
+
+$length = count( $breadcrumbs_config ) - 1;
+?>
+<div class="tva-flex tva-so-guide-breadcrumbs">
+	<?php foreach ( $breadcrumbs_config as $index => $breadcrumb_item ) : ?>
+		<?php $active = empty( $breadcrumb_item['route'] ); ?>
+		<div>
+			<a href="<?php echo $active ? 'javascript:void(0);' : '#settings/' . $breadcrumb_item['route']; ?>" class="<?php echo $active ? 'active' : '' ?>"><?php echo $breadcrumb_item['title']; ?></a>
+			<?php if ( $index < $length ): ?>
+				<span>&rsaquo;</span>
+			<?php endif; ?>
+		</div>
+	<?php endforeach; ?>
+</div>

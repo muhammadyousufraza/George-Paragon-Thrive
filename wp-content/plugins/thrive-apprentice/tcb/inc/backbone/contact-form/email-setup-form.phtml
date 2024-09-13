@@ -1,0 +1,38 @@
+<p><?php echo __( 'Where do you want to receive your messages?', 'thrive-cb' ) ?></p>
+<div class="grey-container">
+	<div class="input-container">
+		<span><?php echo __( 'To (email):', 'thrive-cb' ) ?></span>
+		<input type="text" class="change input" data-fn-input="input" data-fn-change="change" name="to"
+			   value="<#= model.get('to') #>">
+	</div>
+
+	<div class="input-container">
+		<span><?php echo __( 'Subject:', 'thrive-cb' ) ?></span>
+		<input type="text" class="change input" data-fn-input="input" data-fn-change="change" name="subject"
+			   value="<#= model.get('subject') #>">
+	</div>
+
+	<div class="tcb-shortcodes"></div>
+
+	<div id="tcb-recipients" style="display: none;">
+		<div class="input-container">
+			<span><?php echo __( 'CC:', 'thrive-cb' )?></span>
+			<div>
+				<input type="text" class="change input" data-fn-input="input" data-fn-change="change" name="cc"
+					   value="<#= model.get('cc') #>">
+				<span><?php echo __( 'You can add multiple emails separated by commas', 'thrive-cb' ) ?></span>
+			</div>
+		</div>
+		<div class="input-container">
+			<span><?php echo __( 'BCC:', 'thrive-cb' )?></span>
+			<div>
+				<input type="text" class="change input" data-fn-input="input" data-fn-change="change" name="bcc"
+					   value="<#= model.get('bcc') #>">
+				<span><?php echo __( 'You can add multiple emails separated by commas', 'thrive-cb' ) ?></span>
+			</div>
+		</div>
+	</div>
+
+	<button id="tcb-add-more-recipients" class="click" data-fn="add_more_recipients"><span><?php echo __( 'Add more recipients', 'thrive-cb' ) ?></span></button>
+</div>
+

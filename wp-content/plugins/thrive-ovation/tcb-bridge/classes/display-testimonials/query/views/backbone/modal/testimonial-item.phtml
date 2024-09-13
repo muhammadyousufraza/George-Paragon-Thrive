@@ -1,0 +1,41 @@
+<div class="item-col action-col">
+	<# if ( this.dataModel.isSelectMode()) { #>
+	<label class="checkbox-wrapper testimonial-select">
+		<input type="checkbox" class="click" data-fn="checkboxChanged" <#= this.model.get('selected') ? 'checked' : '' #>>
+		<span class="tap-checkmark"></span>
+		<span class="tap-checkbox-label"></span>
+	</label>
+	<# } #>
+	<# if ( this.dataModel.isReorderMode() ) { #>
+	<span class="drag-icon <#= this.dataModel.isViewMode() ? 'tcb-disabled' : ''#>"></span>
+	<# } #>
+</div>
+
+<div class="item-col img-col" style="--tvo-testimonial-image:url('<#= this.model.get('image') #>')">
+	<div class="testimonial-image"></div>
+</div>
+
+<div class="item-col info-col">
+	<span class="author-name">
+	<#= this.model.get('author') #>
+	</span>
+	<span class="testimonial-date">
+	<#= this.model.get('post_date') #>
+	</span>
+</div>
+
+<div class="item-col content-col">
+	<span> <#= this.model.get('content').replace(/<[^>]*>/g, '') #> </span>
+</div>
+
+<div class="item-col tags-col">
+	<#= this.getTagList() #>
+</div>
+
+<# if ( this.dataModel.isReorderMode() && ! this.dataModel.isViewMode() ) { #>
+<div class="item-col delete-col">
+		<span class="click" data-fn="removeFromSelection">
+			<?php tcb_icon( 'trash-light' ); ?>
+		</span>
+</div>
+<# } #>

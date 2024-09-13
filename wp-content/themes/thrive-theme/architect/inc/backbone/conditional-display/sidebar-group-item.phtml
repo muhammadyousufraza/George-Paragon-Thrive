@@ -1,0 +1,13 @@
+<li class="cdg-item mb-5 mt-5 level-<#= level #><#= isVisible ? '' : ' not-visible'#>">
+	<div class="cdg-info">
+		<div class="cdg-el-icon"><#= icon #></div>
+		<div>
+			<div class="cdg-el-name"><#= name #></div>
+			<div class="cdg-displays-number">
+				<#= numberOfDisplays#>
+				<?php echo esc_html__( 'displays', 'thrive-cb' ); ?>
+			</div>
+		</div>
+	</div>
+	<ul class="cdg-displays"><#= displaysHtml #></ul>
+</li>

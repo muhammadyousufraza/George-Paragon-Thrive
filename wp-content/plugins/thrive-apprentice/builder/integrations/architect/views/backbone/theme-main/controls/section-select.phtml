@@ -1,0 +1,54 @@
+<# if( typeof section !== 'undefined') { #>
+<div class="section-type"> <#= section.type #> Section</div>
+<div class="theme-section-select <#= ['content','sidebar'].includes(section.type) ? 'vertical':'horizontal' #>-select">
+	<div class="section-designs">
+		<button class="tve-button click ghost-button-with-icon <#= this.getComponentColor() #>-border-fill" data-fn="openSectionsModal">
+			<?php tcb_icon( 'paintbrush-solid-2' ); ?>
+			<# if(['content','sidebar'].includes(section.type)) { #>
+			<?php echo __( 'Choose a design', 'thrive-theme' ); ?>
+			<# } else { #>
+			<?php echo __( 'Choose a ready-made design', 'thrive-theme' ); ?>
+			<# } #>
+		</button>
+	</div>
+	<div class="section-preview-container">
+		<div class="section-preview"
+		<#= section.isDynamic() ? ` style="background-size: contain;background-image:url('${section.preview()}')"`:'' #>>
+	</div>
+</div>
+<div class="section-actions">
+	<div class="section-actions-description">
+		<div class="section-name"><#= section.name() #></div>
+		<# if(section.isDynamic()) { #>
+		<?php tcb_icon( 'section-link-solid', false, 'sidebar', '', [ "data-tooltip" => "Linked", "data-side" => "top" ] ); ?>
+		<# } else { #>
+		<?php tcb_icon( 'section-unlink-solid', false, 'sidebar', '', [ "data-tooltip" => "Unlinked", "data-side" => "top" ] ); ?>
+		<# } #>
+	</div>
+
+	<# if(section.isDynamic()) { #>
+	<div class="section-actions-button-wrapper">
+		<button class="tve-button click ghost-button-with-icon grey-border-fill" data-fn="enterEditMode">
+			<?php tcb_icon( 'pen-regular' ); ?>
+			<?php echo __( 'Edit', 'thrive-theme' ); ?>
+		</button>
+
+		<button class="tve-button click ghost-button-with-icon grey-border-fill" data-fn="unlinkSection">
+			<?php tcb_icon( 'unlink-regular' ); ?>
+			<?php echo __( 'Unlink', 'thrive-theme' ); ?>
+		</button>
+	</div>
+
+	<# } else { #>
+	<button class="tve-button click ghost-button-with-icon grey-border-fill" data-fn="openSaveModal">
+		<?php tcb_icon( 'save-bold' ); ?>
+		<# if(['content','sidebar'].includes(section.type)) { #>
+		<?php echo __( 'Save and reuse', 'thrive-theme' ); ?>
+		<# } else { #>
+		<?php echo __( 'Save current design for reuse', 'thrive-theme' ); ?>
+		<# } #>
+	</button>
+	<# } #>
+</div>
+</div>
+<# } #>

@@ -1,0 +1,25 @@
+<?php
+/** @var TPM_Connection $this */
+/** @var string $login_url */
+$login_url = $this->get_login_url();
+?>
+	<div class="tpm-connect-screen">
+		<div>
+			<h2><?php echo __( 'Connect to ThriveThemes.com to access your product.', Thrive_Product_Manager::T ) ?></h2>
+			<p><?php echo __( 'Click on the button below to be taken to Thrive Themes and simply log into your account to install your product', Thrive_Product_Manager::T ) ?></p>
+			<p><?php echo __( 'Make sure that you use the same username and password that used when signing up at ThriveThemes.com', Thrive_Product_Manager::T ) ?></p>
+
+			<hr class="tpm-le-rule"/>
+
+			<a class="tpm-login" href="<?php echo $login_url; ?>">
+				<?php echo __( 'Log into my account', Thrive_Product_Manager::T ) ?>
+			</a>
+
+			<p>
+				<a href="https://thrivethemes.com/tkb_item/how-to-use-the-thrive-product-manager/"
+				   target="_blank"><?php echo __( 'See how it works.', Thrive_Product_Manager::T ) ?></a>
+			</p>
+
+		</div>
+	</div>
+<?php include thrive_product_manager()->path( 'inc/templates/debugger.phtml' ) ?>

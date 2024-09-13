@@ -1,0 +1,49 @@
+html, body {
+    height: auto;
+    min-height: 100vh;
+}
+
+body {
+    /* fix for collapsing margins */
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.language-switcher {
+    width: 100%;
+    border: 1px solid transparent;
+}
+
+#language-switcher {
+    display: inline-block;
+}
+
+#login {
+    /* so we can set 100vh much easier and not be affected by padding */
+    box-sizing: border-box;
+    flex-basis: 320px;
+    display: flex;
+    flex-direction: column;
+    overflow: visible !important;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* using class for login so it won't be that strong */
+.login h1 a {
+    --logo-ratio: 3;
+    --logo-size: 240px;
+    background-size: var(--logo-size);
+    background-position: center;
+    width: var(--logo-size);
+    height: calc(var(--logo-size) / var(--logo-ratio));
+}
+
+.thrv_wrapper {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
